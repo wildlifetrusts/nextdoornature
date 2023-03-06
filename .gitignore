@@ -6,6 +6,7 @@ repl-temp-*
 
 # node generated files
 node_modules
+npm-debug.log
 
 # build files
 dist
