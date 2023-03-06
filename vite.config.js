@@ -1,13 +1,10 @@
-import elmPlugin from "vite-plugin-elm"
+import { plugin as elmPlugin } from 'vite-plugin-elm'
 
-export default {
-  // identify what plugins we want to use
-  plugins: [elmPlugin()],
-  // configure our build
+const config = {
   build: {
-    // file path for the build output directory
-    outDir: "build",
-    // esbuild target
-    target: "es2020"
-  }
+    assetsInlineLimit: 24576
+  },
+  plugins: [elmPlugin()]
 }
+
+export default config

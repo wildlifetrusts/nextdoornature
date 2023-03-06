@@ -13,11 +13,11 @@
 - [nvm for macOS & Linux](https://github.com/nvm-sh/nvm) or [nvm for Windows](https://github.com/coreybutler/nvm-windows)
 
 ### Formatting
-We recommend integrating `elm-format@0.8.3` into your code editor, but if you don't...
+We recommend integrating `elm-format@0.8.6` into your code editor, but if you don't...
 - Please `npm run format` to format `.elm` files in `src` before committing code.
 
 ### Build
-- `npm start` for a hot reload server at [http://localhost:3000](http://localhost:3000)
+- `npm run dev` for a hot reload server at [http://localhost:3000](http://localhost:3000)
 - `npm run build` to generate a production build in `dist`
 
 ### Test
