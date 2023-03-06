@@ -36,7 +36,7 @@ We aim to cover any exposed API in our modules and things with potential to fail
 ## Code and configs
 
 ### What it's for
-- Static code generated with [elm](https://elm-lang.org/docs) and [cCc]()
+- Static code generated with [elm](https://elm-lang.org/docs) and [[cCc]]()
 - Deployed and hosted by [Cloudflare](https://www.cloudflare.com/)
 - `elm.json` for elm packages
 - `package.json` for node scripts and packages
