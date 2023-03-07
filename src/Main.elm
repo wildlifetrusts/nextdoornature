@@ -1,15 +1,16 @@
 module Main exposing (main)
 
 import Browser
+import Browser.Dom
+import Browser.Navigation
 import Html.Styled as Html exposing (..)
 import Html.Styled.Attributes exposing (href)
 import Html.Styled.Events exposing (onClick)
 import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (Language(..), translate)
-import Browser.Dom
-import Browser.Navigation
 import Route exposing (Route(..))
 import Url
+
 
 type alias Flags =
     ()
@@ -103,9 +104,9 @@ view model =
         t =
             translate model.language
     in
-        case model.page of
-            Index ->
-                div []
-                    [ h1 [] [ text (t IntroText) ]
-                    , button [ onClick ToggleLanguage ] [ text (t ChangeLanguage) ]
-                    ]
+    case model.page of
+        Index ->
+            div []
+                [ h1 [] [ text (t IntroText) ]
+                , button [ onClick ToggleLanguage ] [ text (t ChangeLanguage) ]
+                ]
