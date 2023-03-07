@@ -2,6 +2,7 @@ module Main exposing (main)
 
 import Browser
 import Html.Styled as Html exposing (..)
+import Theme.PageTemplate as PageTemplate
 
 type alias Flags =
     ()
@@ -48,7 +49,7 @@ subscriptions model =
 
 viewDocument : Model -> Browser.Document Msg
 viewDocument model =
-    { title = "[cCc] App title", body = [toUnstyled (view model) ] }
+    { title = "[cCc] App title", body = [toUnstyled (PageTemplate.view { content = Just(view model) }) ] }
 
 
 view : Model -> Html Msg
