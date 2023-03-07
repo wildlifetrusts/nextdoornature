@@ -6,7 +6,10 @@ import Html.Styled.Attributes exposing (href)
 import Html.Styled.Events exposing (onClick)
 import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (Language(..), translate)
-
+import Browser.Dom
+import Browser.Navigation
+import Route exposing (Route(..))
+import Url
 
 type alias Flags =
     ()
@@ -14,38 +17,65 @@ type alias Flags =
 
 main : Program Flags Model Msg
 main =
-    Browser.document
+    Browser.application
         { init = init
         , update = update
         , subscriptions = subscriptions
         , view = viewDocument
+        , onUrlRequest = LinkClicked
+        , onUrlChange = UrlChanged
         }
 
 
 type alias Model =
-    { language : Language
+    { key : Browser.Navigation.Key
+    , page : Route
+    , language : Language
     }
 
 
-init : () -> ( Model, Cmd Msg )
-init _ =
-    ( Model English
+init : Flags -> Url.Url -> Browser.Navigation.Key -> ( Model, Cmd Msg )
+init flags url key =
+    let
+        maybeRoute =
+            Route.fromUrl url
+    in
+    ( { key = key
+      , page = Maybe.withDefault Index maybeRoute
+      }
     , Cmd.none
     )
 
 
 type Msg
-    = NoOp
+    = UrlChanged Url.Url
+    | LinkClicked Browser.UrlRequest
     | ToggleLanguage
 
 
 update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
     case msg of
-        NoOp ->
-            ( model
-            , Cmd.none
-            )
+        UrlChanged url ->
+            let
+                newRoute =
+                    -- If not a valid route, go to index
+                    -- could 404 instead depends on desired behaviour
+                    Maybe.withDefault Index (Route.fromUrl url)
+            in
+            ( { model | page = newRoute }, Cmd.none )
+
+        LinkClicked urlRequest ->
+            case urlRequest of
+                Browser.Internal url ->
+                    ( model
+                    , Browser.Navigation.pushUrl model.key (Url.toString url)
+                    )
+
+                Browser.External href ->
+                    ( model
+                    , Browser.Navigation.load href
+                    )
 
         ToggleLanguage ->
             ( if model.language == English then
@@ -73,7 +103,9 @@ view model =
         t =
             translate model.language
     in
-    div []
-        [ h1 [] [ text (t IntroText) ]
-        , button [ onClick ToggleLanguage ] [ text (t ChangeLanguage) ]
-        ]
+        case model.page of
+            Index ->
+                div []
+                    [ h1 [] [ text (t IntroText) ]
+                    , button [ onClick ToggleLanguage ] [ text (t ChangeLanguage) ]
+                    ]
