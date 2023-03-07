@@ -7,6 +7,7 @@ import Html.Styled exposing (Html, h1, text, toUnstyled)
 import Route exposing (Route(..))
 import Url
 
+
 type alias Flags =
     ()
 
@@ -79,7 +80,7 @@ subscriptions model =
 
 viewDocument : Model -> Browser.Document Msg
 viewDocument model =
-    { title = "[cCc] App title", body = [toUnstyled (view model) ] }
+    { title = "[cCc] App title", body = [ toUnstyled (view model) ] }
 
 
 view : Model -> Html Msg

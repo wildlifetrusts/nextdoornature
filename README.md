@@ -11,10 +11,10 @@
 - [elm](http://elm-lang.org/) 0.19
 - [node](https://nodejs.org/)
 - [nvm for macOS & Linux](https://github.com/nvm-sh/nvm) or [nvm for Windows](https://github.com/coreybutler/nvm-windows)
+- After cloning the repo and running `npm i` you will also need to `npm run prepare` to install [husky](https://blog.typicode.com/husky-git-hooks-autoinstall/)
 
 ### Formatting
-We recommend integrating `elm-format@0.8.6` into your code editor, but if you don't...
-- Please `npm run format` to format `.elm` files in `src` before committing code.
+We recommend integrating `elm-format@0.8.6` into your code editor, but a pre-commit hook will take of this if not.
 
 ### Build
 - `npm run dev` for a hot reload server at [http://localhost:3000](http://localhost:3000)
@@ -26,6 +26,15 @@ We don't have all the time in the world, so tests will be light.
 We aim to cover any exposed API in our modules and things with potential to fail and go unnoticed.
 - `npm test` to run `elm-test`
 
+
+### Linting
+You can run [elm-review](https://github.com/jfmengels/elm-review) on your code with the following command.
+
+```sh
+npm run lint
+```
+
+We use rules provided by [jfmengels/elm-review-config/application](https://github.com/jfmengels/elm-review-config). Rules live in `review/src/ReviewConfig.elm` and can be modified if needed. These are suggestions to improve code quality but not acceptance criteria.
 
 ## Deployment
 
