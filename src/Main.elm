@@ -2,8 +2,8 @@ module Main exposing (main)
 
 import Browser
 import Html.Styled as Html exposing (..)
-import Html.Attributes exposing (href)
-import Html.Events exposing (onClick)
+import Html.Styled.Attributes exposing (href)
+import Html.Styled.Events exposing (onClick)
 import I18n.Translate exposing (Language(..), translate)
 import I18n.Keys exposing (Key(..))
 
@@ -74,7 +74,6 @@ view model =
     in
         div []
             [ h1 [ ] [ text (t IntroText) ]
-            , a [ href ""  ] [ text (t ChangeLanguage) ]
-            -- , a [onClick ToggleLanguage, href ""  ] [ text (t ChangeLanguage) ]
+            , a [onClick ToggleLanguage ] [ text (t ChangeLanguage) ]
               
             ]
