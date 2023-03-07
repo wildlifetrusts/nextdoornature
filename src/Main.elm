@@ -74,6 +74,6 @@ view model =
     in
         div []
             [ h1 [ ] [ text (t IntroText) ]
-            , a [onClick ToggleLanguage ] [ text (t ChangeLanguage) ]
+            , button [onClick ToggleLanguage ] [ text (t ChangeLanguage) ]
               
             ]
