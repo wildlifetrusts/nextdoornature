@@ -1,8 +1,7 @@
 module Main exposing (main)
 
 import Browser
-import Html exposing (Html, h1, text)
-
+import Html.Styled as Html exposing (..)
 
 type alias Flags =
     ()
@@ -49,7 +48,7 @@ subscriptions model =
 
 viewDocument : Model -> Browser.Document Msg
 viewDocument model =
-    { title = "[cCc] App title", body = [ view model ] }
+    { title = "[cCc] App title", body = [toUnstyled (view model) ] }
 
 
 view : Model -> Html Msg
