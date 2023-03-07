@@ -29,8 +29,8 @@ We aim to cover any exposed API in our modules and things with potential to fail
 
 ## Deployment
 
-- When a pull request is created against `main`, [cCc] builds a preview site
-- When code is merged into `main` it is deployed to [current release]([cCc])
+- When a pull request is created against `main`, cloudflare builds a preview site
+- When code is merged into `main` it is deployed to https://team-wilder-proto.pages.dev/
 
 
 ## Code and configs
