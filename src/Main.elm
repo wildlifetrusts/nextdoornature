@@ -3,7 +3,7 @@ module Main exposing (main)
 import Browser
 import Browser.Dom
 import Browser.Navigation
-import Html.Styled exposing (Html, h1, text)
+import Html.Styled exposing (Html, h1, text, toUnstyled)
 import Route exposing (Route(..))
 import Url
 
