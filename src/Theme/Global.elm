@@ -1,11 +1,14 @@
 module Theme.Global exposing (..)
 
-import Css exposing (Style, absolute, auto, batch, height, hidden, left, overflow,position, px, top, width)
+import Css exposing (Style, absolute, auto, batch, height, hidden, left, overflow, position, px, top, width)
 import Css.Global exposing (global, typeSelector)
 import Css.Media as Media exposing (only, screen, withMedia)
 import Html.Styled exposing (Html)
 
+
+
 -- Accessibility helpers
+
 
 screenReaderOnly : Style
 screenReaderOnly =
@@ -18,7 +21,11 @@ screenReaderOnly =
         , overflow hidden
         ]
 
+
+
 -- Breakpoints
+
+
 maxMobile : Float
 maxMobile =
     600
@@ -64,29 +71,20 @@ withMediaMediumDesktopUp =
     withMedia [ only screen [ Media.minWidth (px maxSmallDesktop) ] ]
 
 
+
 -- Brand colours
-
 -- Accent colours
-
 -- Text and background colours
-
 -- Transitions
-
 -- Buttons (components)
-
 -- Buttons (styles)
-
 -- Titles
-
 -- Page Elements
-
 -- Text styles
-
 -- Form field components
-
 -- Form field styles
-
 -- Global
+
 
 {-| Injects a <style> tag into the body, and can target element or
 class selectors anywhere, including outside the Elm app.
@@ -95,24 +93,24 @@ globalStyles : Html msg
 globalStyles =
     global
         [ typeSelector "body"
-            [ ]
+            []
         , typeSelector "h1"
-            [ ]
+            []
         , typeSelector "h2"
-            [ ]
+            []
         , typeSelector "h3"
-            [ ]
+            []
         , typeSelector "h4"
-            [ ]
+            []
         , typeSelector "b"
-            [ ]
+            []
         , typeSelector "p"
-            [ ]
+            []
         , typeSelector "blockquote"
             []
         ]
 
+
+
 -- Helpers
-
 -- Map
-

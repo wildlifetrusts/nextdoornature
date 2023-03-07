@@ -1,28 +1,19 @@
 module Theme.PageTemplate exposing (..)
 
 import Css exposing (Style, batch)
-import Html.Styled as Html exposing (div, text)
+import Html.Styled as Html exposing (Html, div)
 import Html.Styled.Attributes exposing (css)
 
-
-type alias Msg =
-    Never
-
 type alias PageUsingTemplate msg =
-    { content : Maybe (Html.Html msg) }
+    { content : Html msg }
+
 
 view : PageUsingTemplate msg -> Html.Html msg
 view pageInfo =
-    div [][ 
-        case pageInfo.content of
-            Just pageContents ->
-                div [ css [ mainStyle ] ] [ pageContents ]
-            Nothing ->
-                text "" 
-        ]
+    div [ css [ mainStyle ] ] [ pageInfo.content ]
+
 
 mainStyle : Style
 mainStyle =
     batch
-        [
-        ]
+        []
