@@ -3,10 +3,9 @@ module Main exposing (main)
 import Browser
 import Browser.Dom
 import Browser.Navigation
-import Html exposing (Html, h1, text)
+import Html.Styled exposing (Html, h1, text)
 import Route exposing (Route(..))
 import Url
-
 
 type alias Flags =
     ()
@@ -80,7 +79,7 @@ subscriptions model =
 
 viewDocument : Model -> Browser.Document Msg
 viewDocument model =
-    { title = "[cCc] App title", body = [ view model ] }
+    { title = "[cCc] App title", body = [toUnstyled (view model) ] }
 
 
 view : Model -> Html Msg
