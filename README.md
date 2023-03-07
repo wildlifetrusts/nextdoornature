@@ -27,6 +27,15 @@ We aim to cover any exposed API in our modules and things with potential to fail
 - `npm test` to run `elm-test`
 
 
+### Linting
+You can run [elm-review](https://github.com/jfmengels/elm-review) on your code with the following command.
+
+```sh
+npm run lint
+```
+
+We use rules provided by [jfmengels/elm-review-config/application](https://github.com/jfmengels/elm-review-config). Rules live in `review/src/ReviewConfig.elm` and can be modified if needed. These are suggestions to improve code quality but not acceptance criteria.
+
 ## Deployment
 
 - When a pull request is created against `main`, [cCc] builds a preview site
