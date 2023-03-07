@@ -1,0 +1,17 @@
+{
+  "name": "teamwilder",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "format": "elm-format src"
+  },
+  "devDependencies": {
+    "elm": "0.19.1-5",
+    "elm-tooling": "1.13.0",
+    "vite": "4.1.4",
+    "vite-plugin-elm": "2.8.0-beta.3"
+  }
+}
