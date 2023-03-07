@@ -2,6 +2,8 @@ module Main exposing (main)
 
 import Browser
 import Html.Styled as Html exposing (..)
+import Html.Attributes exposing (href)
+import Html.Events exposing (onClick)
 import I18n.Translate exposing (Language(..), translate)
 import I18n.Keys exposing (Key(..))
 
@@ -33,6 +35,7 @@ init _ =
 
 type Msg
     = NoOp
+    | ToggleLanguage
 
 
 update : Msg -> Model -> ( Model, Cmd Msg )
@@ -42,6 +45,15 @@ update msg model =
             ( model
             , Cmd.none
             )
+            
+        ToggleLanguage ->
+            (( if model.language == English then
+                   (Model Welsh)
+               else
+                   (Model English))
+            , Cmd.none
+            )
+                  
 
 
 subscriptions : Model -> Sub Msg
@@ -60,7 +72,9 @@ view model =
         t =
             translate model.language
     in
-    h1
-        []
-        [ text (t IntroText)
-        ]
+        div []
+            [ h1 [ ] [ text (t IntroText) ]
+            , a [ href ""  ] [ text (t ChangeLanguage) ]
+            -- , a [onClick ToggleLanguage, href ""  ] [ text (t ChangeLanguage) ]
+              
+            ]

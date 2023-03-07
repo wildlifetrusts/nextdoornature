@@ -11,3 +11,6 @@ cyStrings key =
                 
         SiteTitle ->
             "Team Wilder CY"
+                
+        ChangeLanguage ->
+            "Switch to English"

@@ -11,3 +11,6 @@ enStrings key =
                 
         SiteTitle ->
             "Team Wilder"
+                
+        ChangeLanguage ->
+            "Switch to Welsh"
