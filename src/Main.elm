@@ -4,8 +4,9 @@ import Browser
 import Html.Styled as Html exposing (..)
 import Html.Styled.Attributes exposing (href)
 import Html.Styled.Events exposing (onClick)
-import I18n.Translate exposing (Language(..), translate)
 import I18n.Keys exposing (Key(..))
+import I18n.Translate exposing (Language(..), translate)
+
 
 type alias Flags =
     ()
@@ -28,7 +29,7 @@ type alias Model =
 
 init : () -> ( Model, Cmd Msg )
 init _ =
-    ( (Model English)
+    ( Model English
     , Cmd.none
     )
 
@@ -45,15 +46,15 @@ update msg model =
             ( model
             , Cmd.none
             )
-            
+
         ToggleLanguage ->
-            (( if model.language == English then
-                   (Model Welsh)
-               else
-                   (Model English))
+            ( if model.language == English then
+                Model Welsh
+
+              else
+                Model English
             , Cmd.none
             )
-                  
 
 
 subscriptions : Model -> Sub Msg
@@ -63,7 +64,7 @@ subscriptions model =
 
 viewDocument : Model -> Browser.Document Msg
 viewDocument model =
-    { title = (translate model.language SiteTitle), body = [toUnstyled (view model) ] }
+    { title = translate model.language SiteTitle, body = [ toUnstyled (view model) ] }
 
 
 view : Model -> Html Msg
@@ -72,8 +73,7 @@ view model =
         t =
             translate model.language
     in
-        div []
-            [ h1 [ ] [ text (t IntroText) ]
-            , button [onClick ToggleLanguage ] [ text (t ChangeLanguage) ]
-              
-            ]
+    div []
+        [ h1 [] [ text (t IntroText) ]
+        , button [ onClick ToggleLanguage ] [ text (t ChangeLanguage) ]
+        ]

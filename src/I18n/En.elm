@@ -8,9 +8,9 @@ enStrings key =
     case key of
         IntroText ->
             "[cCc] Init template"
-                
+
         SiteTitle ->
             "Team Wilder"
-                
+
         ChangeLanguage ->
             "Switch to Welsh"

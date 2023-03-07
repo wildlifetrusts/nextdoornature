@@ -1,8 +1,8 @@
 module I18n.Translate exposing (Language(..), translate)
 
+import I18n.Cy exposing (cyStrings)
 import I18n.En exposing (enStrings)
 import I18n.Keys exposing (Key(..))
-import I18n.Cy exposing (cyStrings)
 
 
 type Language
