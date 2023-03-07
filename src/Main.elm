@@ -85,7 +85,6 @@ viewDocument model =
 
 view : Model -> Html Msg
 view model =
-    h1
-        []
-        [ text "[cCc] Init template"
-        ]
+    case model.page of
+        Index ->
+            h1 [] [ text "[cCc] Index template" ]
