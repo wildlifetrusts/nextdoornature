@@ -1,24 +1,24 @@
 {
-	"name": "teamwilder",
-	"private": true,
-	"version": "0.0.0",
-	"type": "module",
-	"scripts": {
-		"dev": "vite",
-		"build": "vite build",
-		"format": "elm-format src",
-		"lint": "npx elm-review",
-		"prepare": "husky install"
-	},
-	"devDependencies": {
-		"elm": "0.19.1-5",
-		"elm-tooling": "1.13.0",
-		"husky": "^8.0.3",
-		"prettier": "2.8.4",
-		"vite": "4.1.4",
-		"vite-plugin-elm": "2.8.0-beta.3"
-	},
-	"dependencies": {
-		"elm-test": "^0.19.1-revision12"
-	}
+  "name": "teamwilder",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "format": "elm-format src",
+    "lint": "npx elm-review",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "elm": "0.19.1-5",
+    "elm-tooling": "1.13.0",
+    "husky": "^8.0.3",
+    "prettier": "2.8.4",
+    "vite": "4.1.4",
+    "vite-plugin-elm": "2.8.0-beta.3"
+  },
+  "dependencies": {
+    "elm-test": "^0.19.1-revision12"
+  }
 }
