@@ -1,10 +1,10 @@
-import { plugin as elmPlugin } from 'vite-plugin-elm'
+import { plugin as elmPlugin } from "vite-plugin-elm";
 
 const config = {
   build: {
-    assetsInlineLimit: 24576
+    assetsInlineLimit: 24576,
   },
-  plugins: [elmPlugin()]
-}
+  plugins: [elmPlugin()],
+};
 
-export default config
+export default config;
