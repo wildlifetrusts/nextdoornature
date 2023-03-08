@@ -43,6 +43,7 @@ init flags url key =
     in
     ( { key = key
       , page = Maybe.withDefault Index maybeRoute
+      , language = English
       }
     , Cmd.none
     )
@@ -51,7 +52,7 @@ init flags url key =
 type Msg
     = UrlChanged Url.Url
     | LinkClicked Browser.UrlRequest
-    | ToggleLanguage
+    | LanguageChangeRequested
 
 
 update : Msg -> Model -> ( Model, Cmd Msg )
@@ -78,12 +79,12 @@ update msg model =
                     , Browser.Navigation.load href
                     )
 
-        ToggleLanguage ->
+        LanguageChangeRequested ->
             ( if model.language == English then
-                Model Welsh
+                { model | language = Welsh }
 
               else
-                Model English
+                { model | language = English }
             , Cmd.none
             )
 
@@ -107,6 +108,6 @@ view model =
     case model.page of
         Index ->
             div []
-                [ h1 [] [ text (t IntroText) ]
-                , button [ onClick ToggleLanguage ] [ text (t ChangeLanguage) ]
+                [ h1 [] [ text (t PageTitle) ]
+                , button [ onClick LanguageChangeRequested ] [ text (t ChangeLanguage) ]
                 ]

@@ -6,7 +6,7 @@ import I18n.Keys exposing (Key(..))
 cyStrings : Key -> String
 cyStrings key =
     case key of
-        IntroText ->
+        PageTitle ->
             "[cCc] Init template CY"
 
         SiteTitle ->

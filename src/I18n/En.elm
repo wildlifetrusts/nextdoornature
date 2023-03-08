@@ -6,7 +6,7 @@ import I18n.Keys exposing (Key(..))
 enStrings : Key -> String
 enStrings key =
     case key of
-        IntroText ->
+        PageTitle ->
             "[cCc] Init template"
 
         SiteTitle ->

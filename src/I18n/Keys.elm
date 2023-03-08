@@ -2,6 +2,6 @@ module I18n.Keys exposing (Key(..))
 
 
 type Key
-    = IntroText
+    = PageTitle
     | SiteTitle
     | ChangeLanguage
