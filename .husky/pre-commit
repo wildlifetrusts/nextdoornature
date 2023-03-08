@@ -3,3 +3,4 @@
 
 npx elm-format src --yes
 # npx elm-review
+npx prettier --write .
