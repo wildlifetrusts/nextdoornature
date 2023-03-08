@@ -2,13 +2,12 @@ module Main exposing (main)
 
 import Browser
 import Browser.Navigation
-import Html.Styled exposing (toUnstyled)
 import Html.Styled.Attributes exposing (href)
 import I18n.Keys exposing (Key(..))
-import I18n.Translate exposing (Language(..), translate)
+import I18n.Translate exposing (Language(..))
+import Page.Index
 import Route exposing (Route(..))
 import Shared exposing (Model, Msg(..))
-import Theme.PageTemplate as PageTemplate
 import Url
 
 
@@ -22,7 +21,7 @@ main =
         { init = init
         , update = update
         , subscriptions = subscriptions
-        , view = viewDocument
+        , view = Page.Index.view
         , onUrlRequest = LinkClicked
         , onUrlChange = UrlChanged
         }
@@ -79,8 +78,3 @@ update msg model =
 subscriptions : Model -> Sub Msg
 subscriptions model =
     Sub.none
-
-
-viewDocument : Model -> Browser.Document Msg
-viewDocument model =
-    { title = translate model.language SiteTitle, body = [ toUnstyled (PageTemplate.view model) ] }

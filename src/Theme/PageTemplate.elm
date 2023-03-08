@@ -1,43 +1,38 @@
 module Theme.PageTemplate exposing (..)
 
 import Css exposing (Style, batch)
-import Html.Styled exposing (Html, button, div, h1, main_, p, text)
+import Html.Styled exposing (Html, button, div, main_, p, text)
 import Html.Styled.Attributes exposing (css)
 import Html.Styled.Events exposing (onClick)
 import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (Language(..), translate)
 import Route exposing (Route(..))
-import Shared exposing (Model, Msg(..))
+import Shared exposing (Msg(..))
 import Theme.FooterTemplate as FooterTemplate
 import Theme.HeaderTemplate as HeaderTemplate
 
 
+type alias Title =
+    Key
+
+
 type alias PageInfo =
-    { title : String, mainContent : String }
+    { language : Language, title : Key }
 
 
-view : Model -> Html Msg
-view model =
-    div [ css [ defaultPageStyle ] ]
-        [ HeaderTemplate.view { content = "[cCc] Header" }
-        , main_ [ css [ mainStyle ] ]
-            [ languageSelector model ]
-        , FooterTemplate.view
-        ]
-
-
-languageSelector : Model -> Html Msg
-languageSelector model =
+view : PageInfo -> Html Msg
+view pageInfo =
     let
         t =
-            translate model.language
+            translate pageInfo.language
     in
-    case model.page of
-        Index ->
-            div []
-                [ p [] [ text (t PageTitle) ]
-                , button [ onClick LanguageChangeRequested ] [ text (t ChangeLanguage) ]
-                ]
+    div [ css [ defaultPageStyle ] ]
+        [ HeaderTemplate.view { content = t pageInfo.title }
+        , main_ [ css [ mainStyle ] ]
+            [ button [ onClick LanguageChangeRequested ] [ text (t ChangeLanguage) ]
+            ]
+        , FooterTemplate.view
+        ]
 
 
 mainStyle : Style
