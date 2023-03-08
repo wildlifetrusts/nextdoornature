@@ -1,8 +1,6 @@
 # Team Wilder
 
-[![Build Status]([cCc])
-
-[Current release]([cCc])
+[Current release](https://team-wilder-proto.pages.dev/)
 
 ## Development
 
@@ -42,8 +40,8 @@ We use rules provided by [jfmengels/elm-review-config/application](https://githu
 
 ## Deployment
 
-- When a pull request is created against `main`, [cCc] builds a preview site
-- When code is merged into `main` it is deployed to [current release]([cCc])
+- When a pull request is created against `main`, cloudflare builds a preview site
+- When code is merged into `main` it is deployed to https://team-wilder-proto.pages.dev/
 
 ## Code and configs
 

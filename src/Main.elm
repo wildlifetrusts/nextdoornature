@@ -3,7 +3,11 @@ module Main exposing (main)
 import Browser
 import Browser.Dom
 import Browser.Navigation
-import Html.Styled exposing (Html, h1, text, toUnstyled)
+import Html.Styled as Html exposing (..)
+import Html.Styled.Attributes exposing (href)
+import Html.Styled.Events exposing (onClick)
+import I18n.Keys exposing (Key(..))
+import I18n.Translate exposing (Language(..), translate)
 import Route exposing (Route(..))
 import Url
 
@@ -27,6 +31,7 @@ main =
 type alias Model =
     { key : Browser.Navigation.Key
     , page : Route
+    , language : Language
     }
 
 
@@ -38,6 +43,7 @@ init flags url key =
     in
     ( { key = key
       , page = Maybe.withDefault Index maybeRoute
+      , language = English
       }
     , Cmd.none
     )
@@ -46,6 +52,7 @@ init flags url key =
 type Msg
     = UrlChanged Url.Url
     | LinkClicked Browser.UrlRequest
+    | LanguageChangeRequested
 
 
 update : Msg -> Model -> ( Model, Cmd Msg )
@@ -72,6 +79,15 @@ update msg model =
                     , Browser.Navigation.load href
                     )
 
+        LanguageChangeRequested ->
+            ( if model.language == English then
+                { model | language = Welsh }
+
+              else
+                { model | language = English }
+            , Cmd.none
+            )
+
 
 subscriptions : Model -> Sub Msg
 subscriptions model =
@@ -80,11 +96,18 @@ subscriptions model =
 
 viewDocument : Model -> Browser.Document Msg
 viewDocument model =
-    { title = "[cCc] App title", body = [ toUnstyled (view model) ] }
+    { title = translate model.language SiteTitle, body = [ toUnstyled (view model) ] }
 
 
 view : Model -> Html Msg
 view model =
+    let
+        t =
+            translate model.language
+    in
     case model.page of
         Index ->
-            h1 [] [ text "[cCc] Index template" ]
+            div []
+                [ h1 [] [ text (t PageTitle) ]
+                , button [ onClick LanguageChangeRequested ] [ text (t ChangeLanguage) ]
+                ]
