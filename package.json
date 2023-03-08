@@ -15,5 +15,6 @@
     "vite-plugin-elm": "2.8.0-beta.3"
   },
   "dependencies": {
+    "elm-test": "^0.19.1-revision12"
   }
 }
