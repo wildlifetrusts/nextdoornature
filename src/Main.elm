@@ -2,8 +2,12 @@ module Main exposing (main)
 
 import Browser
 import Browser.Navigation
-import Html.Styled exposing (Html, toUnstyled)
+import Html.Styled exposing (toUnstyled)
+import Html.Styled.Attributes exposing (href)
+import I18n.Keys exposing (Key(..))
+import I18n.Translate exposing (Language(..), translate)
 import Route exposing (Route(..))
+import Shared exposing (Model, Msg(..))
 import Theme.PageTemplate as PageTemplate
 import Url
 
@@ -24,12 +28,6 @@ main =
         }
 
 
-type alias Model =
-    { key : Browser.Navigation.Key
-    , page : Route
-    }
-
-
 init : Flags -> Url.Url -> Browser.Navigation.Key -> ( Model, Cmd Msg )
 init flags url key =
     let
@@ -38,14 +36,10 @@ init flags url key =
     in
     ( { key = key
       , page = Maybe.withDefault Index maybeRoute
+      , language = English
       }
     , Cmd.none
     )
-
-
-type Msg
-    = UrlChanged Url.Url
-    | LinkClicked Browser.UrlRequest
 
 
 update : Msg -> Model -> ( Model, Cmd Msg )
@@ -72,6 +66,15 @@ update msg model =
                     , Browser.Navigation.load href
                     )
 
+        LanguageChangeRequested ->
+            ( if model.language == English then
+                { model | language = Welsh }
+
+              else
+                { model | language = English }
+            , Cmd.none
+            )
+
 
 subscriptions : Model -> Sub Msg
 subscriptions model =
@@ -80,11 +83,4 @@ subscriptions model =
 
 viewDocument : Model -> Browser.Document Msg
 viewDocument model =
-    { title = "[cCc] App title", body = [ toUnstyled (view model) ] }
-
-
-view : Model -> Html Msg
-view model =
-    case model.page of
-        Index ->
-            PageTemplate.view { title = "[cCc] Header", mainContent = "[cCc] Content" }
+    { title = translate model.language SiteTitle, body = [ toUnstyled (PageTemplate.view model) ] }
