@@ -1,8 +1,6 @@
 # Team Wilder
 
-[![Build Status]([cCc])
-
-[Current release]([cCc])
+[Current release](https://team-wilder-proto.pages.dev/)
 
 
 ## Development
