@@ -1,14 +1,14 @@
 module Main exposing (main)
 
 import Browser
-import Browser.Dom
 import Browser.Navigation
-import Html.Styled as Html exposing (..)
+import Html.Styled exposing (toUnstyled)
 import Html.Styled.Attributes exposing (href)
-import Html.Styled.Events exposing (onClick)
 import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (Language(..), translate)
 import Route exposing (Route(..))
+import Shared exposing (Model, Msg(..))
+import Theme.PageTemplate as PageTemplate
 import Url
 
 
@@ -28,13 +28,6 @@ main =
         }
 
 
-type alias Model =
-    { key : Browser.Navigation.Key
-    , page : Route
-    , language : Language
-    }
-
-
 init : Flags -> Url.Url -> Browser.Navigation.Key -> ( Model, Cmd Msg )
 init flags url key =
     let
@@ -47,12 +40,6 @@ init flags url key =
       }
     , Cmd.none
     )
-
-
-type Msg
-    = UrlChanged Url.Url
-    | LinkClicked Browser.UrlRequest
-    | LanguageChangeRequested
 
 
 update : Msg -> Model -> ( Model, Cmd Msg )
@@ -96,18 +83,4 @@ subscriptions model =
 
 viewDocument : Model -> Browser.Document Msg
 viewDocument model =
-    { title = translate model.language SiteTitle, body = [ toUnstyled (view model) ] }
-
-
-view : Model -> Html Msg
-view model =
-    let
-        t =
-            translate model.language
-    in
-    case model.page of
-        Index ->
-            div []
-                [ h1 [] [ text (t PageTitle) ]
-                , button [ onClick LanguageChangeRequested ] [ text (t ChangeLanguage) ]
-                ]
+    { title = translate model.language SiteTitle, body = [ toUnstyled (PageTemplate.view model) ] }
