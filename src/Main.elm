@@ -1,8 +1,11 @@
 module Main exposing (main)
 
 import Browser
-import Html.Styled as Html exposing (..)
+import Browser.Navigation
+import Html.Styled exposing (Html, toUnstyled)
+import Route exposing (Route(..))
 import Theme.PageTemplate as PageTemplate
+import Url
 
 
 type alias Flags =
@@ -11,36 +14,63 @@ type alias Flags =
 
 main : Program Flags Model Msg
 main =
-    Browser.document
+    Browser.application
         { init = init
         , update = update
         , subscriptions = subscriptions
         , view = viewDocument
+        , onUrlRequest = LinkClicked
+        , onUrlChange = UrlChanged
         }
 
 
 type alias Model =
-    {}
+    { key : Browser.Navigation.Key
+    , page : Route
+    }
 
 
-init : () -> ( Model, Cmd Msg )
-init _ =
-    ( {}
+init : Flags -> Url.Url -> Browser.Navigation.Key -> ( Model, Cmd Msg )
+init flags url key =
+    let
+        maybeRoute =
+            Route.fromUrl url
+    in
+    ( { key = key
+      , page = Maybe.withDefault Index maybeRoute
+      }
     , Cmd.none
     )
 
 
 type Msg
-    = NoOp
+    = UrlChanged Url.Url
+    | LinkClicked Browser.UrlRequest
 
 
 update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
     case msg of
-        NoOp ->
-            ( model
-            , Cmd.none
-            )
+        UrlChanged url ->
+            let
+                newRoute =
+                    -- If not a valid route, go to index
+                    -- could 404 instead depends on desired behaviour
+                    Maybe.withDefault Index (Route.fromUrl url)
+            in
+            ( { model | page = newRoute }, Cmd.none )
+
+        LinkClicked urlRequest ->
+            case urlRequest of
+                Browser.Internal url ->
+                    ( model
+                    , Browser.Navigation.pushUrl model.key (Url.toString url)
+                    )
+
+                Browser.External href ->
+                    ( model
+                    , Browser.Navigation.load href
+                    )
 
 
 subscriptions : Model -> Sub Msg
@@ -55,4 +85,6 @@ viewDocument model =
 
 view : Model -> Html Msg
 view model =
-    PageTemplate.view { title = "[cCc] Header", mainContent = "[cCc] Content" }
+    case model.page of
+        Index ->
+            PageTemplate.view { title = "[cCc] Header", mainContent = "[cCc] Content" }
