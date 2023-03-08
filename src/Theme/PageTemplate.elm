@@ -1,25 +1,37 @@
 module Theme.PageTemplate exposing (..)
 
 import Css exposing (Style, batch)
-import Html.Styled as Html exposing (Html, main_)
+import Html.Styled exposing (Html, div, main_, p, text)
 import Html.Styled.Attributes exposing (css)
 import Theme.FooterTemplate as FooterTemplate
 import Theme.HeaderTemplate as HeaderTemplate
 
 
-type alias PageUsingTemplate msg =
-    { headerContent : Html msg, mainContent : Html msg, footerContent : Html msg }
+type alias PageInfo =
+    { title : String, mainContent : String }
 
 
-view : PageUsingTemplate msg -> List (Html.Html msg)
+view : PageInfo -> Html msg
 view pageInfo =
-    [ HeaderTemplate.view { content = pageInfo.headerContent }
-    , main_ [ css [ mainStyle ] ] [ pageInfo.mainContent ]
-    , FooterTemplate.view { content = pageInfo.footerContent }
-    ]
+    div [ css [ defaultPageStyle ] ]
+        [ HeaderTemplate.view { content = pageInfo.title }
+        , main_ [ css [ mainStyle ] ]
+            [ p
+                []
+                [ text pageInfo.mainContent
+                ]
+            ]
+        , FooterTemplate.view
+        ]
 
 
 mainStyle : Style
 mainStyle =
+    batch
+        []
+
+
+defaultPageStyle : Style
+defaultPageStyle =
     batch
         []
