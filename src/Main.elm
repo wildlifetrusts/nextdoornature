@@ -50,12 +50,33 @@ subscriptions model =
 
 viewDocument : Model -> Browser.Document Msg
 viewDocument model =
-    { title = "[cCc] App title", body = [ toUnstyled (PageTemplate.view { content = view model }) ] }
+    { title = "[cCc] App title", body = List.map (\item -> toUnstyled item) (view model) }
 
 
-view : Model -> Html Msg
+view : Model -> List (Html Msg)
 view model =
+    PageTemplate.view { headerContent = headerView, mainContent = mainView, footerContent = footerView }
+
+
+mainView : Html Msg
+mainView =
+    p
+        []
+        [ text "[cCc] Main template"
+        ]
+
+
+footerView : Html Msg
+footerView =
+    h2
+        []
+        [ text "[cCc] Footer"
+        ]
+
+
+headerView : Html Msg
+headerView =
     h1
         []
-        [ text "[cCc] Init template"
+        [ text "[cCc] Header"
         ]
