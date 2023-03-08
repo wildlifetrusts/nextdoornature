@@ -36,7 +36,9 @@ You can run [elm-review](https://github.com/jfmengels/elm-review) on your code w
 npm run lint
 ```
 
-We use rules provided by [jfmengels/elm-review-config/application](https://github.com/jfmengels/elm-review-config). Rules live in `review/src/ReviewConfig.elm` and can be modified if needed. These are suggestions to improve code quality but not acceptance criteria.
+We use rules provided by [jfmengels/elm-review-config/application](https://github.com/jfmengels/elm-review-config).
+
+Rules live in `review/src/ReviewConfig.elm` and can be modified if needed. These are suggestions to improve code quality but not acceptance criteria.
 
 ## Deployment
 
