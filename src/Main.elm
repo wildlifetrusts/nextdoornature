@@ -11,6 +11,7 @@ import Page.Index
 import Page.Resource
 import Route exposing (Route(..))
 import Shared exposing (Model, Msg(..))
+import Theme.PageTemplate
 import Url
 
 
@@ -92,10 +93,13 @@ view : Model -> Html Msg
 view model =
     case model.page of
         Index ->
-            Page.Index.view model
+            Theme.PageTemplate.view model
+                { title = SiteTitle, content = Page.Index.view model }
 
         CaseStudy ->
-            Page.CaseStudy.view model
+            Theme.PageTemplate.view model
+                { title = CaseStudyTitle, content = Page.CaseStudy.view model }
 
         Resource ->
-            Page.Resource.view model
+            Theme.PageTemplate.view model
+                { title = ResourceTitle, content = Page.Resource.view model }

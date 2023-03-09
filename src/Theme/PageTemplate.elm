@@ -7,7 +7,7 @@ import Html.Styled.Events exposing (onClick)
 import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (Language(..), translate)
 import Route exposing (Route(..))
-import Shared exposing (Msg(..))
+import Shared exposing (Model, Msg(..))
 import Theme.FooterTemplate as FooterTemplate
 import Theme.HeaderTemplate as HeaderTemplate
 
@@ -17,22 +17,22 @@ type alias Title =
 
 
 type alias PageInfo =
-    { language : Language, title : Key }
+    { title : Key, content : Html Msg }
 
 
-view : PageInfo -> Html Msg
-view pageInfo =
+view : Model -> PageInfo -> Html Msg
+view model pageInfo =
     let
         t =
-            translate pageInfo.language
+            translate model.language
     in
     div [ css [ defaultPageStyle ] ]
         [ HeaderTemplate.view { content = t pageInfo.title }
         , main_ [ css [ mainStyle ] ]
             [ button [ onClick LanguageChangeRequested ] [ text (t ChangeLanguage) ]
-            , p [] [ text (t WelcomeP1) ]
-            , p [] [ text (t WelcomeP2) ]
-            , p [] [ text (t WelcomeP3) ]
+            , div []
+                [ pageInfo.content
+                ]
             ]
         , FooterTemplate.view
         ]
