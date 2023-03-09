@@ -34,7 +34,7 @@ view model pageInfo =
                 [ pageInfo.content
                 ]
             ]
-        , FooterTemplate.view
+        , FooterTemplate.view model
         ]
 
 
