@@ -13,6 +13,7 @@ type Language
 translate : Language -> Key -> String
 translate language key =
     let
+        translator : Key -> String
         translator =
             case language of
                 English ->

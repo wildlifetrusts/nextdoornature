@@ -18,6 +18,7 @@ type alias PageInfo =
 view : PageInfo -> Html Msg
 view pageInfo =
     let
+        t : Key -> String
         t =
             translate pageInfo.language
     in
