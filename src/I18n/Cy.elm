@@ -10,10 +10,16 @@ cyStrings key =
             "[cCc] Init template CY"
 
         SiteTitle ->
-            "Team Wilder CY"
+            "[cCc] Team Wilder CY"
+
+        CaseStudyTitle ->
+            "[cCc] Case Study CY"
+
+        ResourceTitle ->
+            "[cCc] Resource CY"
 
         ChangeLanguage ->
-            "Switch to English"
+            "[cCc] Switch to English"
 
         _ ->
             "[cCc]"

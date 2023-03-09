@@ -2,13 +2,15 @@ module Main exposing (main)
 
 import Browser
 import Browser.Navigation
-import Html.Styled exposing (toUnstyled)
+import Html.Styled exposing (Html, toUnstyled)
 import Html.Styled.Attributes exposing (href)
 import I18n.Keys exposing (Key(..))
-import I18n.Translate exposing (Language(..), translate)
+import I18n.Translate exposing (Language(..))
+import Page.CaseStudy
+import Page.Index
+import Page.Resource
 import Route exposing (Route(..))
 import Shared exposing (Model, Msg(..))
-import Theme.PageTemplate as PageTemplate
 import Url
 
 
@@ -83,4 +85,17 @@ subscriptions model =
 
 viewDocument : Model -> Browser.Document Msg
 viewDocument model =
-    { title = translate model.language SiteTitle, body = [ toUnstyled (PageTemplate.view model) ] }
+    { title = "[cCc] App title", body = [ toUnstyled (view model) ] }
+
+
+view : Model -> Html Msg
+view model =
+    case model.page of
+        Index ->
+            Page.Index.view model
+
+        CaseStudy ->
+            Page.CaseStudy.view model
+
+        Resource ->
+            Page.Resource.view model
