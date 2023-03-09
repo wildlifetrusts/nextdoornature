@@ -4,7 +4,7 @@ import Html.Styled exposing (Html, div, p, text)
 import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (translate)
 import Shared exposing (Model, Msg)
-import Svg.Styled.Attributes exposing (css)
+import Html.Styled.Attributes exposing (css)
 import Theme.Global exposing (centerContent)
 
 
