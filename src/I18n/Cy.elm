@@ -14,3 +14,6 @@ cyStrings key =
 
         ChangeLanguage ->
             "Switch to English"
+
+        _ ->
+            "[cCc]"
