@@ -10,7 +10,13 @@ enStrings key =
             "[cCc] Init template"
 
         SiteTitle ->
-            "Team Wilder"
+            "[cCc] Team Wilder"
+
+        CaseStudyTitle ->
+            "[cCc] Case Study"
+
+        ResourceTitle ->
+            "[cCc] Resource"
 
         ChangeLanguage ->
-            "Switch to Welsh"
+            "[cCc] Switch to Welsh"
