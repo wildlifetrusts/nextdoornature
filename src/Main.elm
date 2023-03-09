@@ -1,8 +1,10 @@
-module Main exposing (Flags, main)
+module Main exposing (main)
 
 import Browser
 import Browser.Navigation
 import Html.Styled exposing (Html, toUnstyled)
+import Html.Styled.Attributes exposing (href)
+import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (Language(..))
 import Page.CaseStudy
 import Page.Index
@@ -30,9 +32,8 @@ main =
 
 
 init : Flags -> Url.Url -> Browser.Navigation.Key -> ( Model, Cmd Msg )
-init _ url key =
+init flags url key =
     let
-        maybeRoute : Maybe Route
         maybeRoute =
             Route.fromUrl url
     in
@@ -49,7 +50,6 @@ update msg model =
     case msg of
         UrlChanged url ->
             let
-                newRoute : Route
                 newRoute =
                     -- If not a valid route, go to index
                     -- could 404 instead depends on desired behaviour
@@ -80,7 +80,7 @@ update msg model =
 
 
 subscriptions : Model -> Sub Msg
-subscriptions _ =
+subscriptions model =
     Sub.none
 
 
