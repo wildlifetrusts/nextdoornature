@@ -1,5 +1,7 @@
 # elm-package generated files
 elm-stuff
+elm.json
+elm-tooling.json
 
 # elm-repl generated files
 repl-temp-*
@@ -11,3 +13,4 @@ package-lock.json
 
 # build files
 dist
+
