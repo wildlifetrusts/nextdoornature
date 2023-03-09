@@ -1,7 +1,7 @@
 module Theme.FooterTemplate exposing (view)
 
 import Css exposing (Style, batch)
-import Html.Styled exposing (Html, footer, h2, text, img, p)
+import Html.Styled exposing (Html, footer, h2, img, p, text)
 import Html.Styled.Attributes exposing (css, src)
 import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (Language(..), translate)
