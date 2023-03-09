@@ -1,4 +1,4 @@
-module Theme.FooterTemplate exposing (..)
+module Theme.FooterTemplate exposing (view)
 
 import Css exposing (Style, batch)
 import Html.Styled exposing (Html, footer, h2, text)

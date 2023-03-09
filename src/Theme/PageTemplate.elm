@@ -1,19 +1,14 @@
-module Theme.PageTemplate exposing (..)
+module Theme.PageTemplate exposing (PageInfo, view)
 
 import Css exposing (Style, batch)
-import Html.Styled exposing (Html, button, div, main_, p, text)
+import Html.Styled exposing (Html, button, div, main_, text)
 import Html.Styled.Attributes exposing (css)
 import Html.Styled.Events exposing (onClick)
 import I18n.Keys exposing (Key(..))
-import I18n.Translate exposing (Language(..), translate)
-import Route exposing (Route(..))
+import I18n.Translate exposing (Language, translate)
 import Shared exposing (Msg(..))
 import Theme.FooterTemplate as FooterTemplate
 import Theme.HeaderTemplate as HeaderTemplate
-
-
-type alias Title =
-    Key
 
 
 type alias PageInfo =

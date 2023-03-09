@@ -1,4 +1,4 @@
-module Theme.HeaderTemplate exposing (..)
+module Theme.HeaderTemplate exposing (HeaderInfo, view)
 
 import Css exposing (Style, batch)
 import Html.Styled exposing (Html, h1, header, text)
