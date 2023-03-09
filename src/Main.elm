@@ -1,14 +1,17 @@
-module Main exposing (Flags, main)
+module Main exposing (main)
 
 import Browser
 import Browser.Navigation
 import Html.Styled exposing (Html, toUnstyled)
+import Html.Styled.Attributes exposing (href)
+import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (Language(..))
 import Page.CaseStudy
 import Page.Index
 import Page.Resource
 import Route exposing (Route(..))
 import Shared exposing (Model, Msg(..))
+import Theme.PageTemplate
 import Url
 
 
@@ -29,9 +32,8 @@ main =
 
 
 init : Flags -> Url.Url -> Browser.Navigation.Key -> ( Model, Cmd Msg )
-init _ url key =
+init flags url key =
     let
-        maybeRoute : Maybe Route
         maybeRoute =
             Route.fromUrl url
     in
@@ -48,7 +50,6 @@ update msg model =
     case msg of
         UrlChanged url ->
             let
-                newRoute : Route
                 newRoute =
                     -- If not a valid route, go to index
                     -- could 404 instead depends on desired behaviour
@@ -79,7 +80,7 @@ update msg model =
 
 
 subscriptions : Model -> Sub Msg
-subscriptions _ =
+subscriptions model =
     Sub.none
 
 
@@ -92,10 +93,13 @@ view : Model -> Html Msg
 view model =
     case model.page of
         Index ->
-            Page.Index.view model
+            Theme.PageTemplate.view model
+                { title = SiteTitle, content = Page.Index.view model }
 
         CaseStudy ->
-            Page.CaseStudy.view model
+            Theme.PageTemplate.view model
+                { title = CaseStudyTitle, content = Page.CaseStudy.view model }
 
         Resource ->
-            Page.Resource.view model
+            Theme.PageTemplate.view model
+                { title = ResourceTitle, content = Page.Resource.view model }

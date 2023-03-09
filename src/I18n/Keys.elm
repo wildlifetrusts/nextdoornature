@@ -7,3 +7,7 @@ type Key
     | CaseStudyTitle
     | ResourceTitle
     | ChangeLanguage
+    | WelcomeP1
+    | WelcomeP2
+    | WelcomeP3
+    | FooterText
