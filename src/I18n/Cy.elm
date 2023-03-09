@@ -20,3 +20,68 @@ cyStrings key =
 
         ChangeLanguage ->
             "[cCc] Switch to English"
+
+        FooterTitleColumnA ->
+            "[cCc] 🔎🔎🔎🔎🔎🔎"
+
+        FooterTitleColumnB ->
+            "[cCc] 📚📚📚📚📚📚📚"
+
+        FooterTitleColumnC ->
+            "[cCc] 🦾🦾🦾🦾🦾🦾"
+
+        FooterVisitWebsiteText ->
+            "[cCc] 🌳🌲🌲🌳🌳🌲🐿️🌳🌲🌳🌳"
+
+        FooterVisitWebsiteLink ->
+            --[cCc]
+            "https://www.wildlifetrusts.org/"
+
+        FooterFindOutMoreText ->
+            "[cCc] 🌳🌲🌳🌳🌳🌲🦊🌲🌳🌳🌲"
+
+        FooterFindOutMoreLink ->
+            "[cCc]"
+
+        FooterHowToText ->
+            "[cCc] 🌳🌲🌳🌳🌳🌲🦊🌲🌳🌳🌲"
+
+        FooterHowToLink ->
+            "[cCc]"
+
+        FooterExploreAlphabeticallyText ->
+            "[cCc] 🌳🌲🌳🌳🌳🌲🦊🌲🌳🌳🌲"
+
+        FooterExploreAlphabeticallyLink ->
+            "[cCc]"
+
+        FooterRegionalHighlightsText ->
+            "[cCc] 🌳🌲🌲🌳🌳🌲🐿️🌳🌲🌳🌳"
+
+        FooterRegionalHighlightsLink ->
+            "[cCc]"
+
+        FooterSiteMapText ->
+            "[cCc] 🌳🌲🌲🌳🌳🌲🐿️🌳🌲🌳🌳"
+
+        FooterSiteMapLink ->
+            "[cCc]"
+
+        FooterSubmitCaseStudyText ->
+            "[cCc] 🌳🌲🌳🌳🌳🌲🦊🌲🌳🌳🌲"
+
+        FooterSubmitCaseStudyLink ->
+            "[cCc]"
+
+        FooterShareInfoText ->
+            "[cCc] 🌳🌲🌲🌳🌳🌲🐿️🌳🌲🌳🌳"
+
+        FooterShareInfoLink ->
+            "[cCc]"
+
+        FooterFindYourLocalTrustText ->
+            "[cCc] 🌳🌲🌲🌳🌳🌲🐿️🌳🌲🌳🌳"
+
+        FooterFindYourLocalTrustLink ->
+            --[cCc]
+            "https://www.wildlifetrusts.org/wildlife-trusts"
