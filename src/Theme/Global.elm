@@ -1,4 +1,4 @@
-module Theme.Global exposing (..)
+module Theme.Global exposing (globalStyles, maxMobile, maxSmallDesktop, maxTabletLandscape, maxTabletPortrait, screenReaderOnly, withMediaMediumDesktopUp, withMediaMobileOnly, withMediaSmallDesktopUp, withMediaTabletLandscapeUp, withMediaTabletPortraitUp)
 
 import Css exposing (Style, absolute, auto, batch, height, hidden, left, overflow, position, px, top, width)
 import Css.Global exposing (global, typeSelector)

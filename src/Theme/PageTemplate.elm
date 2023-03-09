@@ -1,4 +1,4 @@
-module Theme.PageTemplate exposing (..)
+module Theme.PageTemplate exposing (PageInfo, view)
 
 import Css exposing (Style, batch)
 import Html.Styled exposing (Html, button, div, main_, p, text)
@@ -17,14 +17,16 @@ type alias Title =
 
 
 type alias PageInfo =
-    { title : Key, content : Html Msg }
+    { language : Language
+    , title : Key
+    , content : Html Msg }
 
 
-view : Model -> PageInfo -> Html Msg
-view model pageInfo =
+view : PageInfo -> Html Msg
+view pageInfo =
     let
         t =
-            translate model.language
+            translate pageInfo.language
     in
     div [ css [ defaultPageStyle ] ]
         [ HeaderTemplate.view { content = t pageInfo.title }

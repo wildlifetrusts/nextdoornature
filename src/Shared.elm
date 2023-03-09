@@ -2,8 +2,8 @@ module Shared exposing (Model, Msg(..))
 
 import Browser
 import Browser.Navigation
-import I18n.Translate exposing (Language(..))
-import Route exposing (Route(..))
+import I18n.Translate exposing (Language)
+import Route exposing (Route)
 import Url
 
 
