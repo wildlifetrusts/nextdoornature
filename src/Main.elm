@@ -1,10 +1,8 @@
-module Main exposing (main)
+module Main exposing (Flags, main)
 
 import Browser
 import Browser.Navigation
 import Html.Styled exposing (Html, toUnstyled)
-import Html.Styled.Attributes exposing (href)
-import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (Language(..))
 import Page.CaseStudy
 import Page.Index
