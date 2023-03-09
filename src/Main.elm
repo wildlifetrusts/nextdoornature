@@ -2,10 +2,13 @@ module Main exposing (main)
 
 import Browser
 import Browser.Navigation
+import Html.Styled exposing (Html, toUnstyled)
 import Html.Styled.Attributes exposing (href)
 import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (Language(..))
+import Page.CaseStudy
 import Page.Index
+import Page.Resource
 import Route exposing (Route(..))
 import Shared exposing (Model, Msg(..))
 import Url
@@ -21,7 +24,7 @@ main =
         { init = init
         , update = update
         , subscriptions = subscriptions
-        , view = Page.Index.view
+        , view = viewDocument
         , onUrlRequest = LinkClicked
         , onUrlChange = UrlChanged
         }
@@ -78,3 +81,21 @@ update msg model =
 subscriptions : Model -> Sub Msg
 subscriptions model =
     Sub.none
+
+
+viewDocument : Model -> Browser.Document Msg
+viewDocument model =
+    { title = "[cCc] App title", body = [ toUnstyled (view model) ] }
+
+
+view : Model -> Html Msg
+view model =
+    case model.page of
+        Index ->
+            Page.Index.view model
+
+        CaseStudy ->
+            Page.CaseStudy.view model
+
+        Resource ->
+            Page.Resource.view model
