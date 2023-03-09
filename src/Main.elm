@@ -94,8 +94,14 @@ view model =
         Index ->
             Page.Index.view model
 
-        CaseStudy ->
+        CaseStudyIndex ->
             Page.CaseStudy.view model
 
-        Resource ->
+        CaseStudy _ ->
+            Page.CaseStudy.view model
+
+        ResourceIndex ->
+            Page.Resource.view model
+
+        Resource _ ->
             Page.Resource.view model
