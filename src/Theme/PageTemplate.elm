@@ -30,6 +30,9 @@ view pageInfo =
         [ HeaderTemplate.view { content = t pageInfo.title }
         , main_ [ css [ mainStyle ] ]
             [ button [ onClick LanguageChangeRequested ] [ text (t ChangeLanguage) ]
+            , p [] [ text (t WelcomeP1) ]
+            , p [] [ text (t WelcomeP2) ]
+            , p [] [ text (t WelcomeP3) ]
             ]
         , FooterTemplate.view
         ]
