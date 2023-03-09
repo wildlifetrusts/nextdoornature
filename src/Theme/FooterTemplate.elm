@@ -7,6 +7,7 @@ import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (Language(..), translate)
 import Shared exposing (Model, Msg(..))
 
+
 view : Model -> Html msg
 view model =
     let
