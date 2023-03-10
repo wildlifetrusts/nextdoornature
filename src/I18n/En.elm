@@ -6,9 +6,9 @@ import I18n.Keys exposing (Key(..))
 enStrings : Key -> String
 enStrings key =
     case key of
-        PageTitle ->
-            "[cCc] Init template"
-
+        ---
+        -- Page titles
+        ---
         SiteTitle ->
             "[cCc] Team Wilder"
 
@@ -18,10 +18,18 @@ enStrings key =
         ResourceTitle ->
             "[cCc] Resource"
 
+        ---
+        -- Header
+        ---
         ChangeLanguage ->
             "[cCc] Switch to Welsh"
 
-        --- Footer
+        ---
+        -- Footer
+        ---
+        FooterProjectInfo ->
+            "[cCc] Project Info Text"
+
         FooterTitleColumnA ->
             "[cCc] Find out more"
 
@@ -38,51 +46,21 @@ enStrings key =
             --[cCc]
             "https://www.wildlifetrusts.org/"
 
-        FooterFindOutMoreText ->
-            "[cCc] Find out more about this project"
-
-        FooterFindOutMoreLink ->
-            "[cCc]"
-
-        FooterHowToText ->
-            "[cCc] How to use this website"
-
-        FooterHowToLink ->
-            "[cCc]"
-
-        FooterExploreAlphabeticallyText ->
-            "[cCc] Explore the guides alphabetically by subject"
-
-        FooterExploreAlphabeticallyLink ->
-            "[cCc]"
-
-        FooterRegionalHighlightsText ->
-            "[cCc] Regional highlights and seasonal highlights (homepage)"
-
-        FooterRegionalHighlightsLink ->
-            "[cCc]"
-
-        FooterSiteMapText ->
-            "[cCc] Full site map"
-
-        FooterSiteMapLink ->
-            "[cCc]"
-
-        FooterSubmitCaseStudyText ->
-            "[cCc] Submit your own case study"
-
-        FooterSubmitCaseStudyLink ->
-            "[cCc]"
-
-        FooterShareInfoText ->
-            "[cCc] SHare information / highlight an error"
-
-        FooterShareInfoLink ->
-            "[cCc]"
-
         FooterFindYourLocalTrustText ->
             "[cCc] Find your local trust"
 
         FooterFindYourLocalTrustLink ->
             --[cCc]
             "https://www.wildlifetrusts.org/wildlife-trusts"
+
+        ---
+        -- Index page
+        ---
+        WelcomeP1 ->
+            "[cCc] TeamWilder is an initiative launched by the Wilidlife Trusts in 2022. (Read more here) The aim of TeeamWilder is to equip everyone with the skills and knowledge they need to make a positive difference for nature - in their own area, and beyond."
+
+        WelcomeP2 ->
+            "[cCc] With the climate and environmental crisis ever worsining, it's important to recognise that there are actions all of us can take that can meaniningfully make a difference. It's easy to feel powerless, but in fact, together we are powerful!"
+
+        WelcomeP3 ->
+            "[cCc] The goal of TeamWilder is to get at least 1 in 4 people across the UK taking Action for Nature. This online library aims to support anyone who is interested in finding out what they can do, and how they can get other people involved."

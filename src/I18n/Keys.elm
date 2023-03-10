@@ -2,30 +2,21 @@ module I18n.Keys exposing (Key(..))
 
 
 type Key
-    = PageTitle
-    | SiteTitle
+    = SiteTitle
+      --- Page Titles
     | CaseStudyTitle
     | ResourceTitle
     | ChangeLanguage
       --- Footer
+    | FooterProjectInfo
     | FooterTitleColumnA
     | FooterTitleColumnB
     | FooterTitleColumnC
     | FooterVisitWebsiteText
     | FooterVisitWebsiteLink
-    | FooterFindOutMoreText
-    | FooterFindOutMoreLink
-    | FooterHowToText
-    | FooterHowToLink
-    | FooterExploreAlphabeticallyText
-    | FooterExploreAlphabeticallyLink
-    | FooterRegionalHighlightsText
-    | FooterRegionalHighlightsLink
-    | FooterSiteMapText
-    | FooterSiteMapLink
-    | FooterSubmitCaseStudyText
-    | FooterSubmitCaseStudyLink
-    | FooterShareInfoText
-    | FooterShareInfoLink
     | FooterFindYourLocalTrustText
     | FooterFindYourLocalTrustLink
+      --- Index Page
+    | WelcomeP1
+    | WelcomeP2
+    | WelcomeP3

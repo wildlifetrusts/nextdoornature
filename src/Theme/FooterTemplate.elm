@@ -1,19 +1,29 @@
 module Theme.FooterTemplate exposing (view)
 
 import Css exposing (Style, batch, column, displayFlex, em, fitContent, flexDirection, flexShrink, flexWrap, int, justifyContent, marginBottom, marginTop, minHeight, pct, px, row, spaceAround, width, wrap)
-import Html.Styled exposing (Html, a, div, footer, h3, text)
-import Html.Styled.Attributes exposing (css, href)
+import Html.Styled exposing (Html, a, div, footer, h2, h3, img, p, text)
+import Html.Styled.Attributes exposing (css, href, src)
 import I18n.Keys exposing (Key(..))
-import I18n.Translate exposing (Language, translate)
+import I18n.Translate exposing (Language(..), translate)
+import Shared exposing (Model, Msg(..))
 
 
 view : Language -> Html msg
 view language =
+    let
+        t : Key -> String
+        t =
+            translate language
+    in
     footer [ css [ footerStyle ] ]
-        [ div [ css [ navigationContainerStyle ] ]
+        [ div []
+            [ p [] [ text (t FooterProjectInfo) ]
+            , img [ src "/images/wildlife-trust-logo.png" ] []
+            ]
+        , div [ css [ navigationContainerStyle ] ]
             (List.map
                 (\column -> navigationColumn column language)
-                footerTitles
+                footerNavigationContent
             )
         ]
 
@@ -33,27 +43,19 @@ navigationColumn column language =
         ]
 
 
-footerTitles : List { title : Key, links : List { text : Key, href : Key } }
-footerTitles =
+footerNavigationContent : List { title : Key, links : List { text : Key, href : Key } }
+footerNavigationContent =
     [ { title = FooterTitleColumnA
       , links =
             [ { text = FooterVisitWebsiteText, href = FooterVisitWebsiteLink }
-            , { text = FooterFindOutMoreText, href = FooterFindOutMoreLink }
-            , { text = FooterHowToText, href = FooterHowToLink }
             ]
       }
     , { title = FooterTitleColumnB
-      , links =
-            [ { text = FooterExploreAlphabeticallyText, href = FooterExploreAlphabeticallyText }
-            , { text = FooterRegionalHighlightsText, href = FooterRegionalHighlightsLink }
-            , { text = FooterSiteMapText, href = FooterSiteMapLink }
-            ]
+      , links = []
       }
     , { title = FooterTitleColumnC
       , links =
             [ { text = FooterFindYourLocalTrustText, href = FooterFindYourLocalTrustLink }
-            , { text = FooterSubmitCaseStudyText, href = FooterSubmitCaseStudyLink }
-            , { text = FooterShareInfoText, href = FooterShareInfoLink }
             ]
       }
     ]
