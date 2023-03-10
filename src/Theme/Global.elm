@@ -1,6 +1,6 @@
-module Theme.Global exposing (globalStyles, maxMobile, maxSmallDesktop, maxTabletLandscape, maxTabletPortrait, screenReaderOnly, withMediaMediumDesktopUp, withMediaMobileOnly, withMediaSmallDesktopUp, withMediaTabletLandscapeUp, withMediaTabletPortraitUp)
+module Theme.Global exposing (centerContent, globalStyles, maxMobile, maxSmallDesktop, maxTabletLandscape, maxTabletPortrait, screenReaderOnly, withMediaMediumDesktopUp, withMediaMobileOnly, withMediaSmallDesktopUp, withMediaTabletLandscapeUp, withMediaTabletPortraitUp)
 
-import Css exposing (Style, absolute, auto, batch, height, hidden, left, overflow, position, px, top, width)
+import Css exposing (Style, absolute, alignItems, auto, batch, boxSizing, center, ch, column, contentBox, displayFlex, flexDirection, height, hidden, left, marginLeft, marginRight, maxWidth, overflow, position, px, top, width)
 import Css.Global exposing (global, typeSelector)
 import Css.Media as Media exposing (only, screen, withMedia)
 import Html.Styled exposing (Html)
@@ -113,4 +113,20 @@ globalStyles =
 
 
 -- Helpers
+
+
+centerContent : Style
+centerContent =
+    batch
+        [ boxSizing contentBox
+        , maxWidth (ch 60)
+        , marginLeft auto
+        , marginRight auto
+        , displayFlex
+        , flexDirection column
+        , alignItems center
+        ]
+
+
+
 -- Map
