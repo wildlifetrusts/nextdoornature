@@ -32,3 +32,6 @@ enStrings key =
 
         FooterText ->
             "[cCc] Footer Text"
+
+        ProjectInfo ->
+            "[cCc] Project Info Text"

@@ -11,3 +11,4 @@ type Key
     | WelcomeP2
     | WelcomeP3
     | FooterText
+    | ProjectInfo
