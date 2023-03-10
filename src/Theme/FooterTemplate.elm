@@ -15,14 +15,8 @@ view model =
             translate model.language
     in
     footer [ css [ footerStyle ] ]
-        [ img [ src "/images/dfl-logo.svg" ] []
-        , h2
-            []
-            [ text (t FooterText)
-            ]
-        , p []
-            [ text (t ProjectInfo)
-            ]
+        [ p [] [ text (t ProjectInfo) ]
+        , img [ src "/images/wildlife-trust-logo.png" ] []
         ]
 
 
