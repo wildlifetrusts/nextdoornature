@@ -44,7 +44,7 @@ footerTitles =
       }
     , { title = FooterTitleColumnB
       , links =
-            [ { text = FooterExploreAlphabeticallyText, href = FooterExploreAlphabeticallyText }
+            [ { text = FooterExploreAlphabeticallyText, href = FooterExploreAlphabeticallyLink }
             , { text = FooterRegionalHighlightsText, href = FooterRegionalHighlightsLink }
             , { text = FooterSiteMapText, href = FooterSiteMapLink }
             ]
