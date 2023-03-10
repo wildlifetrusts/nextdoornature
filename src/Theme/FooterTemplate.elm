@@ -1,11 +1,10 @@
 module Theme.FooterTemplate exposing (view)
 
-import Css exposing (Style, batch, column, displayFlex, em, fitContent, flexDirection, flexShrink, flexWrap, int, justifyContent, marginBottom, marginTop, minHeight, pct, px, row, spaceAround, width, wrap)
-import Html.Styled exposing (Html, a, div, footer, h2, h3, img, p, text)
+import Css exposing (Style, batch, column, displayFlex, em, fitContent, flexDirection, flexShrink, flexWrap, justifyContent, margin2, minHeight, pct, row, spaceAround, width, wrap, zero)
+import Html.Styled exposing (Html, a, div, footer, h3, img, p, text)
 import Html.Styled.Attributes exposing (css, href, src)
 import I18n.Keys exposing (Key(..))
-import I18n.Translate exposing (Language(..), translate)
-import Shared exposing (Model, Msg(..))
+import I18n.Translate exposing (Language, translate)
 
 
 view : Language -> Html msg
@@ -16,14 +15,14 @@ view language =
             translate language
     in
     footer [ css [ footerStyle ] ]
-        [ div []
-            [ p [] [ text (t FooterProjectInfo) ]
-            , img [ src "/images/wildlife-trust-logo.png" ] []
-            ]
-        , div [ css [ navigationContainerStyle ] ]
-            (List.map
-                (\column -> navigationColumn column language)
-                footerNavigationContent
+        [ div [ css [ footerContainerStyle ] ]
+            (div [ css [ footerColumnContentsStyle ] ]
+                [ p [] [ text (t FooterProjectInfo) ]
+                , img [ src "/images/wildlife-trust-logo.png" ] []
+                ]
+                :: List.map
+                    (\column -> navigationColumn column language)
+                    footerNavigationContent
             )
         ]
 
@@ -35,15 +34,19 @@ navigationColumn column language =
         t =
             translate language
     in
-    div [ css [ navigationColumnStyle ] ]
+    div [ css [ footerColumnContentsStyle ] ]
         [ h3 []
             [ text (t column.title)
             ]
-        , div [ css [ navigationColumnContentsStyle ] ] (List.map (\link -> a [ href (t link.href) ] [ text (t link.text) ]) column.links)
+        , div [] (List.map (\link -> a [ href (t link.href) ] [ text (t link.text) ]) column.links)
         ]
 
 
-footerNavigationContent : List { title : Key, links : List { text : Key, href : Key } }
+footerNavigationContent :
+    List
+        { title : Key
+        , links : List { text : Key, href : Key }
+        }
 footerNavigationContent =
     [ { title = FooterTitleColumnA
       , links =
@@ -61,24 +64,16 @@ footerNavigationContent =
     ]
 
 
-navigationColumnStyle : Style
-navigationColumnStyle =
-    batch
-        [ marginTop (em 2)
-        , width (px 280)
-        ]
-
-
-navigationColumnContentsStyle : Style
-navigationColumnContentsStyle =
+footerColumnContentsStyle : Style
+footerColumnContentsStyle =
     batch
         [ displayFlex
         , flexDirection column
         ]
 
 
-navigationContainerStyle : Style
-navigationContainerStyle =
+footerContainerStyle : Style
+footerContainerStyle =
     batch
         [ displayFlex
         , flexDirection row
@@ -91,7 +86,7 @@ navigationContainerStyle =
 footerStyle : Style
 footerStyle =
     batch
-        [ flexShrink (int 0)
+        [ flexShrink zero
         , width (pct 100)
-        , marginBottom (em 2)
+        , margin2 (em 2) zero
         ]

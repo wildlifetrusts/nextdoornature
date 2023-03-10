@@ -1,12 +1,11 @@
 module Theme.PageTemplate exposing (..)
 
 import Css exposing (Style, alignItems, auto, batch, center, column, displayFlex, flex2, flexBasis, flexDirection, height, int, minHeight, pct, vh)
-import Html.Styled exposing (Html, button, div, main_, p, text)
+import Html.Styled exposing (Html, button, div, main_, text)
 import Html.Styled.Attributes exposing (css)
 import Html.Styled.Events exposing (onClick)
 import I18n.Keys exposing (Key(..))
-import I18n.Translate exposing (Language(..), translate)
-import Route exposing (Route(..))
+import I18n.Translate exposing (translate)
 import Shared exposing (Model, Msg(..))
 import Theme.FooterTemplate as FooterTemplate
 import Theme.HeaderTemplate as HeaderTemplate
@@ -23,6 +22,7 @@ type alias PageInfo =
 view : Model -> PageInfo -> Html Msg
 view model pageInfo =
     let
+        t : Key -> String
         t =
             translate model.language
     in
