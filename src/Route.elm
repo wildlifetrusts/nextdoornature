@@ -1,13 +1,15 @@
 module Route exposing (Route(..), fromUrl)
 
 import Url
-import Url.Parser as Parser exposing (Parser, map, oneOf, s, top)
+import Url.Parser as Parser exposing ((</>), Parser, map, oneOf, s, string, top)
 
 
 type Route
     = Index
-    | CaseStudy
-    | Resource
+    | CaseStudyIndex
+    | CaseStudy String
+    | ResourceIndex
+    | Resource String
 
 
 fromUrl : Url.Url -> Maybe Route
@@ -16,23 +18,31 @@ fromUrl url =
         |> Parser.parse routeParser
 
 
-toString : Route -> String -> String
-toString route title =
+toString : Route -> String
+toString route =
     case route of
         Index ->
             "/"
 
-        CaseStudy ->
-            "/case-study" ++ "/" ++ title
+        CaseStudyIndex ->
+            "/case-study"
 
-        Resource ->
-            "/resource" ++ "/" ++ title
+        CaseStudy s ->
+            "/case-study" ++ "/" ++ s
+
+        ResourceIndex ->
+            "/resource"
+
+        Resource s ->
+            "/resource" ++ "/" ++ s
 
 
 routeParser : Parser (Route -> a) a
 routeParser =
     oneOf
         [ map Index top
-        , map Resource (s "resource")
-        , map CaseStudy (s "case-study")
+        , map CaseStudyIndex (s "case-study")
+        , map CaseStudy (s "case-study" </> string)
+        , map ResourceIndex (s "resource")
+        , map Resource (s "resource" </> string)
         ]
