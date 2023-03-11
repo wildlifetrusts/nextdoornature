@@ -7,7 +7,8 @@ import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (Language(..))
 import Page.CaseStudy
 import Page.Index
-import Page.Resource
+import Page.Resource.Data
+import Page.Resource.View
 import Route exposing (Route(..))
 import Shared exposing (Model, Msg(..))
 import Theme.PageTemplate
@@ -105,10 +106,9 @@ view model =
             Theme.PageTemplate.view model
                 { title = CaseStudyTitle, content = Page.CaseStudy.view model }
 
-        ResourceIndex ->
+        Resource slug ->
             Theme.PageTemplate.view model
-                { title = ResourceTitle, content = Page.Resource.view model }
-
-        Resource _ ->
-            Theme.PageTemplate.view model
-                { title = ResourceTitle, content = Page.Resource.view model }
+                { title = ResourceTitle
+                , content =
+                    Page.Resource.View.view model (Page.Resource.Data.resourceFromSlug slug)
+                }
