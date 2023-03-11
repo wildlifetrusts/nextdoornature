@@ -31,8 +31,9 @@ main =
 
 
 init : Flags -> Url.Url -> Browser.Navigation.Key -> ( Model, Cmd Msg )
-init flags url key =
+init _ url key =
     let
+        maybeRoute : Maybe Route
         maybeRoute =
             Route.fromUrl url
     in
@@ -49,6 +50,7 @@ update msg model =
     case msg of
         UrlChanged url ->
             let
+                newRoute : Route
                 newRoute =
                     -- If not a valid route, go to index
                     -- could 404 instead depends on desired behaviour
@@ -79,7 +81,7 @@ update msg model =
 
 
 subscriptions : Model -> Sub Msg
-subscriptions model =
+subscriptions _ =
     Sub.none
 
 
@@ -95,10 +97,18 @@ view model =
             Theme.PageTemplate.view model
                 { title = SiteTitle, content = Page.Index.view model }
 
-        CaseStudy ->
+        CaseStudyIndex ->
             Theme.PageTemplate.view model
                 { title = CaseStudyTitle, content = Page.CaseStudy.view model }
 
-        Resource ->
+        CaseStudy _ ->
+            Theme.PageTemplate.view model
+                { title = CaseStudyTitle, content = Page.CaseStudy.view model }
+
+        ResourceIndex ->
+            Theme.PageTemplate.view model
+                { title = ResourceTitle, content = Page.Resource.view model }
+
+        Resource _ ->
             Theme.PageTemplate.view model
                 { title = ResourceTitle, content = Page.Resource.view model }
