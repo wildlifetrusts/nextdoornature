@@ -6,9 +6,6 @@ import I18n.Keys exposing (Key(..))
 cyStrings : Key -> String
 cyStrings key =
     case key of
-        PageTitle ->
-            "[cCc] Init template CY"
-
         SiteTitle ->
             "[cCc] Team Wilder CY"
 
@@ -21,5 +18,28 @@ cyStrings key =
         ChangeLanguage ->
             "[cCc] Switch to English"
 
+        FooterTitleColumnA ->
+            "[cCc] 🔎🔎🔎🔎🔎🔎"
+
+        FooterTitleColumnB ->
+            "[cCc] 📚📚📚📚📚📚📚"
+
+        FooterTitleColumnC ->
+            "[cCc] 🦾🦾🦾🦾🦾🦾"
+
+        FooterVisitWebsiteText ->
+            "[cCc] 🌳🌲🌲🌳🌳🌲🐿️🌳🌲🌳🌳"
+
+        FooterVisitWebsiteLink ->
+            --[cCc]
+            "https://www.wildlifetrusts.org/"
+
+        FooterFindYourLocalTrustText ->
+            "[cCc] 🌳🌲🌲🌳🌳🌲🐿️🌳🌲🌳🌳"
+
+        FooterFindYourLocalTrustLink ->
+            --[cCc]
+            "https://www.wildlifetrusts.org/wildlife-trusts"
+
         _ ->
-            "[cCc]"
+            "[cCc] [fFf] to reminder to add all Welsh Keys back"

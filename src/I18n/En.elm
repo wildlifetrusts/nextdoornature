@@ -6,9 +6,9 @@ import I18n.Keys exposing (Key(..))
 enStrings : Key -> String
 enStrings key =
     case key of
-        PageTitle ->
-            "[cCc] Init template"
-
+        ---
+        -- Page titles
+        ---
         SiteTitle ->
             "[cCc] Team Wilder"
 
@@ -18,9 +18,44 @@ enStrings key =
         ResourceTitle ->
             "[cCc] Resource"
 
+        ---
+        -- Header
+        ---
         ChangeLanguage ->
             "[cCc] Switch to Welsh"
 
+        ---
+        -- Footer
+        ---
+        FooterProjectInfo ->
+            "[cCc] Project Info Text"
+
+        FooterTitleColumnA ->
+            "[cCc] Find out more"
+
+        FooterTitleColumnB ->
+            "[cCc] Explore the library"
+
+        FooterTitleColumnC ->
+            "[cCc] Get involved"
+
+        FooterVisitWebsiteText ->
+            "[cCc] Visit the Wildlife Trusts' main website"
+
+        FooterVisitWebsiteLink ->
+            --[cCc]
+            "https://www.wildlifetrusts.org/"
+
+        FooterFindYourLocalTrustText ->
+            "[cCc] Find your local trust"
+
+        FooterFindYourLocalTrustLink ->
+            --[cCc]
+            "https://www.wildlifetrusts.org/wildlife-trusts"
+
+        ---
+        -- Index page
+        ---
         WelcomeP1 ->
             "[cCc] TeamWilder is an initiative launched by the Wilidlife Trusts in 2022. (Read more here) The aim of TeeamWilder is to equip everyone with the skills and knowledge they need to make a positive difference for nature - in their own area, and beyond."
 
@@ -29,9 +64,3 @@ enStrings key =
 
         WelcomeP3 ->
             "[cCc] The goal of TeamWilder is to get at least 1 in 4 people across the UK taking Action for Nature. This online library aims to support anyone who is interested in finding out what they can do, and how they can get other people involved."
-
-        FooterText ->
-            "[cCc] Footer Text"
-
-        ProjectInfo ->
-            "[cCc] Project Info Text"
