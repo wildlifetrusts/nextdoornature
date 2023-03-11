@@ -8,10 +8,12 @@
     "build": "vite build",
     "format": "elm-format src",
     "lint": "npx elm-review",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "postinstall": "elm-tooling install"
   },
   "devDependencies": {
     "elm": "0.19.1-5",
+    "elm-review": "^2.9.1",
     "elm-tooling": "1.13.0",
     "husky": "^8.0.3",
     "prettier": "2.8.4",
