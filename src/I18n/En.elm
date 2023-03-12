@@ -25,6 +25,15 @@ enStrings key =
             "[cCc] Switch to Welsh"
 
         ---
+        -- 404 content
+        ---
+        Resource404Title ->
+            "[cCc] Sorry, we can't find that guide"
+
+        Resource404Body ->
+            "[cCc] Try searching again [home](\"\\\")"
+
+        ---
         -- Footer
         ---
         FooterProjectInfo ->

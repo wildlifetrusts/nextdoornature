@@ -1,9 +1,11 @@
 module Page.Resource.View exposing (view)
 
-import Html.Styled exposing (Html, div, h1, li, p, text, ul)
+import Html.Styled exposing (Html, a, div, h1, li, p, text, ul)
+import Html.Styled.Attributes exposing (href)
 import Page.Resource.Data
 import Page.Shared
 import Shared exposing (Model, Msg)
+import Url
 
 
 view : Model -> Page.Resource.Data.Resource -> Html Msg
@@ -41,7 +43,13 @@ viewMaybeAudio maybeAudioMeta =
 viewRelatedCaseStudyTeasers : List Page.Shared.CaseStudyTeaser -> Html Msg
 viewRelatedCaseStudyTeasers caseStudyList =
     if List.length caseStudyList > 0 then
-        ul [] [ li [] [ text "[fFf] render related case studies" ] ]
+        ul []
+            (List.map
+                (\{ title, url } ->
+                    li [] [ a [ href (Url.toString url) ] [ text title ] ]
+                )
+                caseStudyList
+            )
 
     else
         text ""
@@ -50,7 +58,13 @@ viewRelatedCaseStudyTeasers caseStudyList =
 viewRelatedResourceTeasers : List Page.Shared.ResourceTeaser -> Html Msg
 viewRelatedResourceTeasers resourceList =
     if List.length resourceList > 0 then
-        ul [] [ li [] [ text "[fFf] render related resources" ] ]
+        ul []
+            (List.map
+                (\{ title, url } ->
+                    li [] [ a [ href (Url.toString url) ] [ text title ] ]
+                )
+                resourceList
+            )
 
     else
         text ""

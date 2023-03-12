@@ -7,6 +7,9 @@ type Key
     | CaseStudyTitle
     | ResourceTitle
     | ChangeLanguage
+      --- 404 content
+    | Resource404Title
+    | Resource404Body
       --- Footer
     | FooterProjectInfo
     | FooterTitleColumnA

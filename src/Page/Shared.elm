@@ -1,7 +1,7 @@
 module Page.Shared exposing (AudioMeta, CaseStudyTeaser, ResourceTeaser, VideoMeta, viewAudio, viewVideo)
 
 import Html.Styled exposing (Html, div, iframe, text)
-import Html.Styled.Attributes exposing (attribute, src)
+import Html.Styled.Attributes exposing (attribute, autoplay, src)
 import Shared exposing (Msg)
 import Url
 
@@ -38,7 +38,7 @@ viewVideo videoMeta =
             , attribute "frameborder" "0"
             , attribute "allowfullscreen" "true"
             , attribute "gyroscope" "true"
-            , attribute "autoplay" "false"
+            , autoplay False
             , attribute "title" videoMeta.title
             ]
             []
