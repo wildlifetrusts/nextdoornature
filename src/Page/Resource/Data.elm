@@ -3,7 +3,6 @@ module Page.Resource.Data exposing (Resource, resourceFromSlug)
 import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (Language, translate)
 import Page.Shared
-import Url
 
 
 type alias Resource =

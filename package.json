@@ -8,6 +8,7 @@
     "build": "vite build",
     "format": "elm-format src",
     "lint": "npx elm-review",
+    "test": "elm-test",
     "prepare": "husky install",
     "postinstall": "elm-tooling install"
   },

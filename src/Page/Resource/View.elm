@@ -5,11 +5,10 @@ import Html.Styled.Attributes exposing (href)
 import Page.Resource.Data
 import Page.Shared
 import Shared exposing (Model, Msg)
-import Url
 
 
-view : Model -> Page.Resource.Data.Resource -> Html Msg
-view model resource =
+view : Page.Resource.Data.Resource -> Html Msg
+view resource =
     div []
         [ h1 [] [ text resource.title ]
         , p [] [ text resource.fullTextMarkdown ]
@@ -46,7 +45,7 @@ viewRelatedCaseStudyTeasers caseStudyList =
         ul []
             (List.map
                 (\{ title, url } ->
-                    li [] [ a [ href (Url.toString url) ] [ text title ] ]
+                    li [] [ a [ href url ] [ text title ] ]
                 )
                 caseStudyList
             )
@@ -61,7 +60,7 @@ viewRelatedResourceTeasers resourceList =
         ul []
             (List.map
                 (\{ title, url } ->
-                    li [] [ a [ href (Url.toString url) ] [ text title ] ]
+                    li [] [ a [ href url ] [ text title ] ]
                 )
                 resourceList
             )

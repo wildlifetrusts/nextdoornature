@@ -22,6 +22,7 @@
     },
     "test-dependencies": {
         "direct": {
+            "elm/html": "1.0.0",
             "elm-explorations/test": "2.1.1"
         },
         "indirect": {
