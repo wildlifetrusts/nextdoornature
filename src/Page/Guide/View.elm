@@ -1,13 +1,13 @@
-module Page.Resource.View exposing (view)
+module Page.Guide.View exposing (view)
 
 import Html.Styled exposing (Html, a, div, h1, li, p, text, ul)
 import Html.Styled.Attributes exposing (href)
-import Page.Resource.Data
+import Page.Guide.Data
 import Page.Shared
 import Shared exposing (Model, Msg)
 
 
-view : Page.Resource.Data.Resource -> Html Msg
+view : Page.Guide.Data.Guide -> Html Msg
 view resource =
     div []
         [ h1 [] [ text resource.title ]

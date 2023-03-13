@@ -1,11 +1,11 @@
-module Page.Resource.Data exposing (Resource, resourceFromSlug)
+module Page.Guide.Data exposing (Guide, resourceFromSlug)
 
 import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (Language, translate)
 import Page.Shared
 
 
-type alias Resource =
+type alias Guide =
     { title : String
     , fullTextMarkdown : String
     , maybeVideo : Maybe Page.Shared.VideoMeta
@@ -15,7 +15,7 @@ type alias Resource =
     }
 
 
-blankResource : Language -> Resource
+blankResource : Language -> Guide
 blankResource language =
     let
         t : Key -> String
@@ -31,7 +31,7 @@ blankResource language =
     }
 
 
-resourceFromSlug : Language -> String -> Resource
+resourceFromSlug : Language -> String -> Guide
 resourceFromSlug language slug =
     -- TODO populate from markdown
     blankResource language

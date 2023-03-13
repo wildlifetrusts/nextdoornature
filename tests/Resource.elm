@@ -5,8 +5,8 @@ import Html
 import Html.Attributes
 import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (translate)
-import Page.Resource.Data exposing (Resource)
-import Page.Resource.View exposing (view)
+import Page.Guide.Data exposing (Guide)
+import Page.Guide.View exposing (view)
 import Set
 import Test exposing (Test, describe, test)
 import Test.Html.Event as Event
@@ -18,7 +18,7 @@ import TestUtils exposing (queryFromStyledHtml)
 suite : Test
 suite =
     let
-        resourceMinimal : Resource
+        resourceMinimal : Guide
         resourceMinimal =
             { title = "A minimal test resource"
             , fullTextMarkdown = "# Some minimal test reource markdown"
@@ -28,7 +28,7 @@ suite =
             , relatedResourceList = []
             }
 
-        resourceFull : Resource
+        resourceFull : Guide
         resourceFull =
             { title = "A full test resource"
             , fullTextMarkdown = "# Some full test reource markdown"
