@@ -5,18 +5,26 @@ import Html.Styled.Attributes exposing (href)
 import Page.Resource.Data
 import Page.Shared
 import Shared exposing (Model, Msg)
+-- import I18n.Keys exposing (Key(..))
+import I18n.Translate exposing (Language(..), translate)
 
+view : Page.Resource.Data.Resource -> Language -> Html Msg
+view resource language =
+    let
+        titleText
+            = if language == Welsh then resource.titleCy else resource.title
 
-view : Page.Resource.Data.Resource -> Html Msg
-view resource =
-    div []
-        [ h1 [] [ text resource.title ]
-        , p [] [ text resource.fullTextMarkdown ]
-        , viewMaybeVideo resource.maybeVideo
-        , viewMaybeAudio resource.maybeAudio
-        , viewRelatedCaseStudyTeasers resource.relatedCaseStudyList
-        , viewRelatedResourceTeasers resource.relatedResourceList
-        ]
+        bodyText
+            = if language == Welsh then resource.fullTextMarkdownCy else resource.fullTextMarkdown
+    in
+        div []
+            [ h1 [] [ text titleText ]
+            , p [] [ text bodyText ]
+            , viewMaybeVideo resource.maybeVideo
+            , viewMaybeAudio resource.maybeAudio
+            , viewRelatedCaseStudyTeasers resource.relatedCaseStudyList
+            , viewRelatedResourceTeasers resource.relatedResourceList
+            ]
 
 
 viewMaybeVideo : Maybe Page.Shared.VideoMeta -> Html Msg

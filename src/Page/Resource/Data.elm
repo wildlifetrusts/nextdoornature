@@ -8,6 +8,8 @@ import Page.Shared
 type alias Resource =
     { title : String
     , fullTextMarkdown : String
+    , titleCy : String
+    , fullTextMarkdownCy : String
     , maybeVideo : Maybe Page.Shared.VideoMeta
     , maybeAudio : Maybe Page.Shared.AudioMeta
     , relatedCaseStudyList : List Page.Shared.CaseStudyTeaser
@@ -24,6 +26,8 @@ blankResource language =
     in
     { title = t Resource404Title
     , fullTextMarkdown = t Resource404Body
+    , titleCy = "title Cy" --t Resource404Title
+    , fullTextMarkdownCy = "body Cy" --t Resource404Body
     , maybeVideo = Nothing
     , maybeAudio = Nothing
     , relatedCaseStudyList = []

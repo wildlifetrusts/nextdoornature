@@ -110,5 +110,5 @@ view model =
             Theme.PageTemplate.view model
                 { title = ResourceTitle
                 , content =
-                    Page.Resource.View.view (Page.Resource.Data.resourceFromSlug model.language slug)
+                    Page.Resource.View.view (Page.Resource.Data.resourceFromSlug model.language slug) model.language
                 }
