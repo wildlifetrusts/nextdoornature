@@ -12,7 +12,7 @@ enStrings key =
         SiteTitle ->
             "[cCc] Team Wilder"
 
-        CaseStudyTitle ->
+        StoryTitle ->
             "[cCc] Case Study"
 
         ResourceTitle ->

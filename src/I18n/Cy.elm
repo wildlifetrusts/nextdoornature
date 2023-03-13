@@ -9,7 +9,7 @@ cyStrings key =
         SiteTitle ->
             "[cCc] Team Wilder CY"
 
-        CaseStudyTitle ->
+        StoryTitle ->
             "[cCc] Case Study CY"
 
         ResourceTitle ->

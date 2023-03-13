@@ -100,11 +100,11 @@ view model =
 
         StoryIndex ->
             Theme.PageTemplate.view model
-                { title = CaseStudyTitle, content = Page.Story.view model }
+                { title = StoryTitle, content = Page.Story.view model }
 
         Story _ ->
             Theme.PageTemplate.view model
-                { title = CaseStudyTitle, content = Page.Story.view model }
+                { title = StoryTitle, content = Page.Story.view model }
 
         Resource slug ->
             Theme.PageTemplate.view model
