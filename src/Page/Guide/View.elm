@@ -2,9 +2,10 @@ module Page.Guide.View exposing (view)
 
 import Html.Styled exposing (Html, a, div, h1, li, p, text, ul)
 import Html.Styled.Attributes exposing (href)
+import Message exposing (Msg)
 import Page.Guide.Data
 import Page.Shared.View
-import Shared exposing (Model, Msg)
+import Shared exposing (Model)
 
 
 view : Page.Guide.Data.Guide -> Html Msg

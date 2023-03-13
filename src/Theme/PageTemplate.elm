@@ -6,7 +6,8 @@ import Html.Styled.Attributes exposing (css)
 import Html.Styled.Events exposing (onClick)
 import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (translate)
-import Shared exposing (Model, Msg(..))
+import Message exposing (Msg(..))
+import Shared exposing (Model)
 import Theme.FooterTemplate as FooterTemplate
 import Theme.HeaderTemplate as HeaderTemplate
 

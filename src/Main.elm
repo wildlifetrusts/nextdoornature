@@ -6,6 +6,7 @@ import Html.Styled exposing (Html, toUnstyled)
 import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (Language(..))
 import Json.Decode
+import Message exposing (Msg(..))
 import Page.Guide.Data
 import Page.Guide.View
 import Page.Index
@@ -13,7 +14,7 @@ import Page.Shared.Data
 import Page.Stories.Data
 import Page.Stories.View
 import Route exposing (Route(..))
-import Shared exposing (Model, Msg(..))
+import Shared exposing (Model)
 import Theme.PageTemplate
 import Url
 

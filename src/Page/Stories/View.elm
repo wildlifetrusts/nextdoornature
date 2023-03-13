@@ -2,9 +2,9 @@ module Page.Stories.View exposing (view)
 
 import Html.Styled exposing (Html, a, div, h1, img, li, p, text, ul)
 import Html.Styled.Attributes exposing (alt, href, src)
+import Message exposing (Msg)
 import Page.Shared.View
 import Page.Stories.Data
-import Shared exposing (Msg)
 
 
 view : Page.Stories.Data.Story -> Html Msg

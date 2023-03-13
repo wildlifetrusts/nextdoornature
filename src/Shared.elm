@@ -1,22 +1,19 @@
-module Shared exposing (Model, Msg(..))
+module Shared exposing (Content, Model)
 
-import Browser
 import Browser.Navigation
+import Dict exposing (Dict)
 import I18n.Translate exposing (Language)
-import Page.Shared.Data
+import Page.Guide.Data
 import Route exposing (Route)
-import Url
 
 
 type alias Model =
     { key : Browser.Navigation.Key
     , page : Route
     , language : Language
-    , content : Pages.Shared.Data.Content
+    , content : Content
     }
 
 
-type Msg
-    = UrlChanged Url.Url
-    | LinkClicked Browser.UrlRequest
-    | LanguageChangeRequested
+type alias Content =
+    { guides : Dict String Page.Guide.Data.Guide }

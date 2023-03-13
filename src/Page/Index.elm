@@ -4,8 +4,9 @@ import Html.Styled exposing (Html, div, p, text)
 import Html.Styled.Attributes exposing (css)
 import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (translate)
+import Message exposing (Msg)
 import Page.Shared.View exposing (GuideTeaser)
-import Shared exposing (Model, Msg)
+import Shared exposing (Model)
 import Theme.Global exposing (centerContent)
 
 

@@ -4,7 +4,7 @@ import Html.Styled exposing (Html, a, div, iframe, li, text, ul)
 import Html.Styled.Attributes exposing (attribute, autoplay, href, src, title)
 import Json.Decode
 import List exposing (map, sortBy)
-import Shared exposing (Msg)
+import Message exposing (Msg)
 
 
 type alias AudioMeta =
