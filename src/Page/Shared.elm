@@ -1,7 +1,8 @@
-module Page.Shared exposing (AudioMeta, GuideTeaser, StoryTeaser, VideoMeta, guideTeaserList, viewAudio, viewGuideTeaserList, viewVideo)
+module Page.Shared exposing (AudioMeta, GuideTeaser, StoryTeaser, VideoMeta, guideTeaserList, viewAudio, viewGuideTeaserList, viewStoryTeasers, viewVideo)
 
-import Html.Styled exposing (Html, a, div, iframe, li, text, ul)
-import Html.Styled.Attributes exposing (attribute, autoplay, href, src, title)
+import Css exposing (Style, batch, center, column, displayFlex, flexDirection, flexWrap, height, justifyContent, maxWidth, px, wrap)
+import Html.Styled exposing (Html, a, div, iframe, img, li, p, text, ul)
+import Html.Styled.Attributes exposing (alt, attribute, autoplay, css, href, src, title)
 import List exposing (map, sortBy)
 import Shared exposing (Msg)
 
@@ -21,6 +22,8 @@ type alias VideoMeta =
 type alias StoryTeaser =
     { title : String
     , url : String
+    , image : { src : String, alt : String }
+    , description : String
     }
 
 
@@ -66,6 +69,47 @@ viewGuideTeaserList teasers =
 
     else
         text ""
+
+
+viewStoryTeasers : List StoryTeaser -> Html Msg
+viewStoryTeasers teasers =
+    if List.length teasers > 0 then
+        div [ css [ viewStoryTeasersStyle ] ]
+            (teasers
+                |> sortBy .title
+                |> map
+                    (\{ url, title, image, description } ->
+                        div [ css [ storyTeaserStyle ] ]
+                            [ img [ src image.src, alt image.alt ] []
+                            , a [ href url ] [ text title ]
+                            , p [] [ text description ]
+                            ]
+                    )
+            )
+
+    else
+        text ""
+
+
+viewStoryTeasersStyle : Style
+viewStoryTeasersStyle =
+    batch
+        [ justifyContent center
+        , displayFlex
+        , flexWrap wrap
+        , maxWidth (px 400)
+        ]
+
+
+storyTeaserStyle : Style
+storyTeaserStyle =
+    batch
+        [ justifyContent center
+        , displayFlex
+        , flexDirection column
+        , height (px 150)
+        , maxWidth (px 150)
+        ]
 
 
 

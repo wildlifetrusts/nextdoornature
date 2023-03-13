@@ -26,7 +26,13 @@ blankGuide language =
     , fullTextMarkdown = t Guide404Body
     , maybeVideo = Nothing
     , maybeAudio = Nothing
-    , relatedStoryList = []
+    , relatedStoryList =
+        --- [fFf] to be replaced
+        [ { title = "Test story teaser", url = "/", image = { src = "/images/wildlife-trust-logo.png", alt = "placeholder" }, description = "A test description" }
+        , { title = "Test story teaser", url = "/", image = { src = "/images/wildlife-trust-logo.png", alt = "placeholder" }, description = "A test description" }
+        , { title = "Test story teaser", url = "/", image = { src = "/images/wildlife-trust-logo.png", alt = "placeholder" }, description = "A test description" }
+        , { title = "Test story teaser", url = "/", image = { src = "/images/wildlife-trust-logo.png", alt = "placeholder" }, description = "A test description" }
+        ]
     , relateGuideList = []
     }
 
