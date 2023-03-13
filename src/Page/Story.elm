@@ -1,4 +1,4 @@
-module Page.CaseStudy exposing (view)
+module Page.Story exposing (view)
 
 import Html.Styled exposing (Html, div, text)
 import Shared exposing (Model, Msg)

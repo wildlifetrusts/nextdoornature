@@ -5,10 +5,10 @@ import Browser.Navigation
 import Html.Styled exposing (Html, toUnstyled)
 import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (Language(..))
-import Page.CaseStudy
 import Page.Index
 import Page.Resource.Data
 import Page.Resource.View
+import Page.Story
 import Route exposing (Route(..))
 import Shared exposing (Model, Msg(..))
 import Theme.PageTemplate
@@ -100,11 +100,11 @@ view model =
 
         CaseStudyIndex ->
             Theme.PageTemplate.view model
-                { title = CaseStudyTitle, content = Page.CaseStudy.view model }
+                { title = CaseStudyTitle, content = Page.Story.view model }
 
         CaseStudy _ ->
             Theme.PageTemplate.view model
-                { title = CaseStudyTitle, content = Page.CaseStudy.view model }
+                { title = CaseStudyTitle, content = Page.Story.view model }
 
         Resource slug ->
             Theme.PageTemplate.view model
