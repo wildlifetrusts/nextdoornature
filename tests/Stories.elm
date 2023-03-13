@@ -5,6 +5,7 @@ import Html.Attributes
 import I18n.Keys exposing (Key(..))
 import Page.Stories.Data exposing (Story)
 import Page.Stories.View exposing (view)
+import Svg.Styled exposing (metadata)
 import Test exposing (Test, describe, test)
 import Test.Html.Query as Query
 import TestUtils exposing (queryFromStyledHtml)
@@ -16,7 +17,8 @@ suite =
         storyMinimal : Story
         storyMinimal =
             { title = "A minimal test story"
-            , fullTextMarkdown = "# Some minimal test reource markdown"
+            , description = "# Some minimal test reource markdown"
+            , maybeMetadata = Nothing
             , relatedStoryList = []
             , relatedResourceList = []
             }
@@ -24,7 +26,13 @@ suite =
         storyFull : Story
         storyFull =
             { title = "A full test story"
-            , fullTextMarkdown = "# Some full test reource markdown"
+            , description = "# Some full test reource markdown"
+            , maybeMetadata =
+                Just
+                    { location = "Test location"
+                    , author = "Test author"
+                    , images = [ { src = "/images/wildlife-trust-logo.png", alt = "placeholder" } ]
+                    }
             , relatedStoryList =
                 [ { title = "A related story"
                   , url = "/a-story"
@@ -54,11 +62,11 @@ suite =
                         |> Query.contains
                             [ Html.h1 [] [ Html.text storyMinimal.title ]
                             ]
-            , test "Story view has a body" <|
+            , test "Story view has a description" <|
                 \() ->
                     queryFromStyledHtml (view storyMinimal)
                         |> Query.contains
-                            [ Html.p [] [ Html.text storyMinimal.fullTextMarkdown ]
+                            [ Html.p [] [ Html.text storyMinimal.description ]
                             ]
             , test "Story view can have related story teasers" <|
                 \() ->
@@ -78,5 +86,35 @@ suite =
                                 , Html.li [] [ Html.a [ Html.Attributes.href "/another-resource" ] [ Html.text "Another related resource" ] ]
                                 ]
                             ]
+            , test "Full story view has an author" <|
+                \() ->
+                    case storyFull.maybeMetadata of
+                        Just metadata ->
+                            queryFromStyledHtml (view storyFull)
+                                |> Query.contains
+                                    [ Html.p
+                                        []
+                                        [ Html.text metadata.author ]
+                                    ]
+
+                        Nothing ->
+                            queryFromStyledHtml (view storyFull)
+                                |> Query.contains
+                                    []
+            , test "Full story view has an image" <|
+                \() ->
+                    case storyFull.maybeMetadata of
+                        Just metadata ->
+                            queryFromStyledHtml (view storyFull)
+                                |> Query.contains
+                                    (List.map
+                                        (\image -> Html.img [ Html.Attributes.alt image.alt, Html.Attributes.src image.src ] [])
+                                        metadata.images
+                                    )
+
+                        Nothing ->
+                            queryFromStyledHtml (view storyFull)
+                                |> Query.contains
+                                    []
             ]
         ]
