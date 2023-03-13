@@ -10,7 +10,7 @@ type alias Resource =
     , fullTextMarkdown : String
     , maybeVideo : Maybe Page.Shared.VideoMeta
     , maybeAudio : Maybe Page.Shared.AudioMeta
-    , relatedCaseStudyList : List Page.Shared.StoryTeaser
+    , relatedStoryList : List Page.Shared.StoryTeaser
     , relatedResourceList : List Page.Shared.ResourceTeaser
     }
 
@@ -26,7 +26,7 @@ blankResource language =
     , fullTextMarkdown = t Resource404Body
     , maybeVideo = Nothing
     , maybeAudio = Nothing
-    , relatedCaseStudyList = []
+    , relatedStoryList = []
     , relatedResourceList = []
     }
 
