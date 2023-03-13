@@ -8,7 +8,8 @@ import I18n.Translate exposing (Language(..))
 import Page.Guide.Data
 import Page.Guide.View
 import Page.Index
-import Page.Story
+import Page.Stories.Data
+import Page.Stories.View
 import Route exposing (Route(..))
 import Shared exposing (Model, Msg(..))
 import Theme.PageTemplate
@@ -98,13 +99,12 @@ view model =
             Theme.PageTemplate.view model
                 { title = SiteTitle, content = Page.Index.view model }
 
-        StoryIndex ->
+        Story slug ->
             Theme.PageTemplate.view model
-                { title = StoryTitle, content = Page.Story.view model }
-
-        Story _ ->
-            Theme.PageTemplate.view model
-                { title = StoryTitle, content = Page.Story.view model }
+                { title = StoryTitle
+                , content =
+                    Page.Stories.View.view (Page.Stories.Data.storyFromSlug model.language slug)
+                }
 
         Guide slug ->
             Theme.PageTemplate.view model

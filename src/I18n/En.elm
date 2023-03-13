@@ -33,6 +33,12 @@ enStrings key =
         Guide404Body ->
             "[cCc] Try searching again [home](\"\\\")"
 
+        Story404Title ->
+            "[cCc] Sorry, we can't find that story"
+
+        Story404Body ->
+            "[cCc] Try searching again [home](\"\\\")"
+
         ---
         -- Footer
         ---

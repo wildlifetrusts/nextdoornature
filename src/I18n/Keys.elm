@@ -8,6 +8,8 @@ type Key
     | GuideTitle
     | ChangeLanguage
       --- 404 content
+    | Story404Title
+    | Story404Body
     | Guide404Title
     | Guide404Body
       --- Footer
