@@ -56,12 +56,16 @@ viewGuideTeaser teaser =
 
 viewGuideTeaserList : List GuideTeaser -> Html Msg
 viewGuideTeaserList teasers =
-    ul []
-        (teasers
-            |> sortBy .title
-            |> map
-                (\t -> li [] [ viewGuideTeaser t ])
-        )
+    if List.length teasers > 0 then
+        ul []
+            (teasers
+                |> sortBy .title
+                |> map
+                    (\t -> li [] [ viewGuideTeaser t ])
+            )
+
+    else
+        text ""
 
 
 
