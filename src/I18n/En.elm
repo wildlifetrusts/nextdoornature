@@ -15,8 +15,8 @@ enStrings key =
         StoryTitle ->
             "[cCc] Story"
 
-        ResourceTitle ->
-            "[cCc] Resource"
+        GuideTitle ->
+            "[cCc] Guide"
 
         ---
         -- Header
@@ -27,10 +27,10 @@ enStrings key =
         ---
         -- 404 content
         ---
-        Resource404Title ->
+        Guide404Title ->
             "[cCc] Sorry, we can't find that guide"
 
-        Resource404Body ->
+        Guide404Body ->
             "[cCc] Try searching again [home](\"\\\")"
 
         ---
