@@ -10,6 +10,8 @@ type Key
       --- 404 content
     | Resource404Title
     | Resource404Body
+    | Story404Title
+    | Story404Body
       --- Footer
     | FooterProjectInfo
     | FooterTitleColumnA

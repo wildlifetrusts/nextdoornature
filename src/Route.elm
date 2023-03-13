@@ -6,7 +6,6 @@ import Url.Parser as Parser exposing ((</>), Parser, map, oneOf, s, string, top)
 
 type Route
     = Index
-    | StoryIndex
     | Story String
     | Resource String
 
@@ -23,9 +22,6 @@ toString route =
         Index ->
             "/"
 
-        StoryIndex ->
-            "/stories"
-
         Story s ->
             "/stories" ++ "/" ++ s
 
@@ -37,7 +33,6 @@ routeParser : Parser (Route -> a) a
 routeParser =
     oneOf
         [ map Index top
-        , map StoryIndex (s "stories")
         , map Story (s "stories" </> string)
         , map Resource (s "resource" </> string)
         ]
