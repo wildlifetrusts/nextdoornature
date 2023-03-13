@@ -10,7 +10,7 @@ cyStrings key =
             "[cCc] Team Wilder CY"
 
         StoryTitle ->
-            "[cCc] Case Study CY"
+            "[cCc] Story CY"
 
         ResourceTitle ->
             "[cCc] Resource CY"

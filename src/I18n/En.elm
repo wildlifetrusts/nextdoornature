@@ -13,7 +13,7 @@ enStrings key =
             "[cCc] Team Wilder"
 
         StoryTitle ->
-            "[cCc] Case Study"
+            "[cCc] Story"
 
         ResourceTitle ->
             "[cCc] Resource"

@@ -6,4 +6,4 @@ import Shared exposing (Model, Msg)
 
 view : Model -> Html Msg
 view model =
-    div [] [ text "Case Study content" ]
+    div [] [ text "Story content" ]
