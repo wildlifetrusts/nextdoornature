@@ -14,7 +14,7 @@ view resource =
         , p [] [ text resource.fullTextMarkdown ]
         , viewMaybeVideo resource.maybeVideo
         , viewMaybeAudio resource.maybeAudio
-        , viewRelatedCaseStudyTeasers resource.relatedStoryList
+        , viewRelatedStoryTeasers resource.relatedStoryList
         , viewRelatedResourceTeasers resource.relatedResourceList
         ]
 
@@ -39,15 +39,15 @@ viewMaybeAudio maybeAudioMeta =
             text ""
 
 
-viewRelatedCaseStudyTeasers : List Page.Shared.StoryTeaser -> Html Msg
-viewRelatedCaseStudyTeasers caseStudyList =
-    if List.length caseStudyList > 0 then
+viewRelatedStoryTeasers : List Page.Shared.StoryTeaser -> Html Msg
+viewRelatedStoryTeasers storyList =
+    if List.length storyList > 0 then
         ul []
             (List.map
                 (\{ title, url } ->
                     li [] [ a [ href url ] [ text title ] ]
                 )
-                caseStudyList
+                storyList
             )
 
     else
