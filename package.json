@@ -5,7 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "npm run generate && vite build",
+    "generate": "npm run generate_guides",
+    "generate_guides": "m2j -o ./data/guides.json -c ./content/guides/*.md",
     "format": "elm-format src",
     "lint": "npx elm-review",
     "test": "elm-test",
@@ -15,13 +17,14 @@
   "devDependencies": {
     "elm": "0.19.1-5",
     "elm-review": "^2.9.1",
+    "elm-test": "^0.19.1-revision12",
     "elm-tooling": "1.13.0",
+    "markdown-to-json": "^0.5.4",
     "husky": "^8.0.3",
     "prettier": "2.8.4",
     "vite": "4.1.4",
     "vite-plugin-elm": "2.8.0-beta.3"
   },
   "dependencies": {
-    "elm-test": "^0.19.1-revision12"
   }
 }
