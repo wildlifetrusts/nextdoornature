@@ -8,7 +8,6 @@ type Route
     = Index
     | CaseStudyIndex
     | CaseStudy String
-    | ResourceIndex
     | Resource String
 
 
@@ -30,9 +29,6 @@ toString route =
         CaseStudy s ->
             "/case-study" ++ "/" ++ s
 
-        ResourceIndex ->
-            "/resource"
-
         Resource s ->
             "/resource" ++ "/" ++ s
 
@@ -43,6 +39,5 @@ routeParser =
         [ map Index top
         , map CaseStudyIndex (s "case-study")
         , map CaseStudy (s "case-study" </> string)
-        , map ResourceIndex (s "resource")
         , map Resource (s "resource" </> string)
         ]
