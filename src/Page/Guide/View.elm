@@ -3,7 +3,7 @@ module Page.Guide.View exposing (view)
 import Html.Styled exposing (Html, a, div, h1, li, p, text, ul)
 import Html.Styled.Attributes exposing (href)
 import Page.Guide.Data
-import Page.Shared
+import Page.Shared.View
 import Shared exposing (Model, Msg)
 
 
@@ -19,27 +19,27 @@ view guide =
         ]
 
 
-viewMaybeVideo : Maybe Page.Shared.VideoMeta -> Html Msg
+viewMaybeVideo : Maybe Page.Shared.View.VideoMeta -> Html Msg
 viewMaybeVideo maybeVideoMeta =
     case maybeVideoMeta of
         Just aVideo ->
-            Page.Shared.viewVideo aVideo
+            Page.Shared.View.viewVideo aVideo
 
         Nothing ->
             text ""
 
 
-viewMaybeAudio : Maybe Page.Shared.AudioMeta -> Html Msg
+viewMaybeAudio : Maybe Page.Shared.View.AudioMeta -> Html Msg
 viewMaybeAudio maybeAudioMeta =
     case maybeAudioMeta of
         Just anAudio ->
-            Page.Shared.viewAudio anAudio
+            Page.Shared.View.viewAudio anAudio
 
         Nothing ->
             text ""
 
 
-viewRelatedStoryTeasers : List Page.Shared.StoryTeaser -> Html Msg
+viewRelatedStoryTeasers : List Page.Shared.View.StoryTeaser -> Html Msg
 viewRelatedStoryTeasers storyList =
     if List.length storyList > 0 then
         ul []
@@ -54,7 +54,7 @@ viewRelatedStoryTeasers storyList =
         text ""
 
 
-viewRelatedGuideTeasers : List Page.Shared.GuideTeaser -> Html Msg
+viewRelatedGuideTeasers : List Page.Shared.View.GuideTeaser -> Html Msg
 viewRelatedGuideTeasers guideList =
     if List.length guideList > 0 then
         ul []

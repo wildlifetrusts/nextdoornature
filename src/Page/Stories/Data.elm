@@ -2,15 +2,15 @@ module Page.Stories.Data exposing (Story, storyFromSlug)
 
 import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (Language, translate)
-import Page.Shared
+import Page.Shared.View
 
 
 type alias Story =
     { title : String
     , description : String
     , maybeMetadata : Maybe StoryMetaData
-    , relatedStoryList : List Page.Shared.StoryTeaser
-    , relatedGuideList : List Page.Shared.GuideTeaser
+    , relatedStoryList : List Page.Shared.View.StoryTeaser
+    , relatedGuideList : List Page.Shared.View.GuideTeaser
     }
 
 

@@ -1,7 +1,8 @@
-module Page.Shared exposing (AudioMeta, GuideTeaser, StoryTeaser, VideoMeta, guideTeaserList, viewAudio, viewGuideTeaserList, viewVideo)
+module Page.Shared.View exposing (AudioMeta, GuideTeaser, StoryTeaser, VideoMeta, audioDecoder, guideTeaserDecoder, guideTeaserList, storyTeaserDecoder, videoDecoder, viewAudio, viewGuideTeaserList, viewVideo)
 
 import Html.Styled exposing (Html, a, div, iframe, li, text, ul)
 import Html.Styled.Attributes exposing (attribute, autoplay, href, src, title)
+import Json.Decode
 import List exposing (map, sortBy)
 import Shared exposing (Msg)
 
@@ -12,10 +13,24 @@ type alias AudioMeta =
     }
 
 
+audioDecoder : Json.Decode.Decoder AudioMeta
+audioDecoder =
+    Json.Decode.map2 AudioMeta
+        (Json.Decode.field "title" Json.Decode.string)
+        (Json.Decode.field "src" Json.Decode.string)
+
+
 type alias VideoMeta =
     { title : String
     , src : String
     }
+
+
+videoDecoder : Json.Decode.Decoder VideoMeta
+videoDecoder =
+    Json.Decode.map2 VideoMeta
+        (Json.Decode.field "title" Json.Decode.string)
+        (Json.Decode.field "src" Json.Decode.string)
 
 
 type alias StoryTeaser =
@@ -24,10 +39,24 @@ type alias StoryTeaser =
     }
 
 
+storyTeaserDecoder : Json.Decode.Decoder StoryTeaser
+storyTeaserDecoder =
+    Json.Decode.map2 StoryTeaser
+        (Json.Decode.field "title" Json.Decode.string)
+        (Json.Decode.field "url" Json.Decode.string)
+
+
 type alias GuideTeaser =
     { title : String
     , url : String
     }
+
+
+guideTeaserDecoder : Json.Decode.Decoder GuideTeaser
+guideTeaserDecoder =
+    Json.Decode.map2 GuideTeaser
+        (Json.Decode.field "title" Json.Decode.string)
+        (Json.Decode.field "url" Json.Decode.string)
 
 
 viewVideo : VideoMeta -> Html Msg

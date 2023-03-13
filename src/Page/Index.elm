@@ -4,7 +4,7 @@ import Html.Styled exposing (Html, div, p, text)
 import Html.Styled.Attributes exposing (css)
 import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (translate)
-import Page.Shared exposing (GuideTeaser)
+import Page.Shared.View exposing (GuideTeaser)
 import Shared exposing (Model, Msg)
 import Theme.Global exposing (centerContent)
 
@@ -35,7 +35,7 @@ fakeGuideTeasers =
     , "How to create a vertical garden"
     , "How to make a bog garden"
     ]
-        |> Page.Shared.guideTeaserList
+        |> Page.Shared.View.guideTeaserList
 
 
 view : Model -> Html Msg
@@ -48,5 +48,5 @@ view model =
         [ p [] [ text (t WelcomeP1) ]
         , p [] [ text (t WelcomeP2) ]
         , p [] [ text (t WelcomeP3) ]
-        , Page.Shared.viewGuideTeaserList fakeGuideTeasers
+        , Page.Shared.View.viewGuideTeaserList fakeGuideTeasers
         ]

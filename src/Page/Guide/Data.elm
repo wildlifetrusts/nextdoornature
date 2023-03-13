@@ -1,17 +1,20 @@
-module Page.Guide.Data exposing (Guide, guideFromSlug)
+module Page.Guide.Data exposing (Guide, guideDictDecoder, guideFromSlug)
 
+import Dict exposing (Dict)
 import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (Language, translate)
-import Page.Shared
+import Json.Decode
+import Json.Decode.Extra
+import Page.Shared.View
 
 
 type alias Guide =
     { title : String
     , fullTextMarkdown : String
-    , maybeVideo : Maybe Page.Shared.VideoMeta
-    , maybeAudio : Maybe Page.Shared.AudioMeta
-    , relatedStoryList : List Page.Shared.StoryTeaser
-    , relateGuideList : List Page.Shared.GuideTeaser
+    , maybeVideo : Maybe Page.Shared.View.VideoMeta
+    , maybeAudio : Maybe Page.Shared.View.AudioMeta
+    , relatedStoryList : List Page.Shared.View.StoryTeaser
+    , relateGuideList : List Page.Shared.View.GuideTeaser
     }
 
 
@@ -29,6 +32,31 @@ blankGuide language =
     , relatedStoryList = []
     , relateGuideList = []
     }
+
+
+guideDictDecoder : Json.Decode.Decoder (Dict String Guide)
+guideDictDecoder =
+    Json.Decode.dict
+        (Json.Decode.succeed Guide
+            |> Json.Decode.Extra.andMap
+                (Json.Decode.field "title" Json.Decode.string |> Json.Decode.Extra.withDefault "")
+            |> Json.Decode.Extra.andMap
+                (Json.Decode.field "fullTextMarkdown" Json.Decode.string |> Json.Decode.Extra.withDefault "")
+            |> Json.Decode.Extra.andMap
+                (Json.Decode.maybe (Json.Decode.field "maybeVideo" Page.Shared.View.videoDecoder))
+            |> Json.Decode.Extra.andMap
+                (Json.Decode.maybe (Json.Decode.field "maybeAudio" Page.Shared.View.audioDecoder))
+            |> Json.Decode.Extra.andMap
+                (Json.Decode.field "relatedStoryList"
+                    (Json.Decode.list Page.Shared.View.storyTeaserDecoder)
+                    |> Json.Decode.Extra.withDefault []
+                )
+            |> Json.Decode.Extra.andMap
+                (Json.Decode.field "relatedGuideList"
+                    (Json.Decode.list Page.Shared.View.guideTeaserDecoder)
+                    |> Json.Decode.Extra.withDefault []
+                )
+        )
 
 
 guideFromSlug : Language -> String -> Guide

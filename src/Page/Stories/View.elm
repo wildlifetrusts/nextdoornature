@@ -2,7 +2,7 @@ module Page.Stories.View exposing (view)
 
 import Html.Styled exposing (Html, a, div, h1, img, li, p, text, ul)
 import Html.Styled.Attributes exposing (alt, href, src)
-import Page.Shared
+import Page.Shared.View
 import Page.Stories.Data
 import Shared exposing (Msg)
 
@@ -28,7 +28,7 @@ view story =
         ]
 
 
-viewRelatedStoryTeasers : List Page.Shared.StoryTeaser -> Html Msg
+viewRelatedStoryTeasers : List Page.Shared.View.StoryTeaser -> Html Msg
 viewRelatedStoryTeasers storyList =
     if List.length storyList > 0 then
         ul []
@@ -43,7 +43,7 @@ viewRelatedStoryTeasers storyList =
         text ""
 
 
-viewRelatedGuideTeasers : List Page.Shared.GuideTeaser -> Html Msg
+viewRelatedGuideTeasers : List Page.Shared.View.GuideTeaser -> Html Msg
 viewRelatedGuideTeasers guideList =
     if List.length guideList > 0 then
         ul []
