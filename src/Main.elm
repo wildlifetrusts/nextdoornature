@@ -106,7 +106,7 @@ view model =
             Theme.PageTemplate.view model
                 { title = StoryTitle, content = Page.Story.view model }
 
-        Resource slug ->
+        Guide slug ->
             Theme.PageTemplate.view model
                 { title = ResourceTitle
                 , content =

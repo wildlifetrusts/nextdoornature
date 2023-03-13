@@ -8,7 +8,7 @@ type Route
     = Index
     | StoryIndex
     | Story String
-    | Resource String
+    | Guide String
 
 
 fromUrl : Url.Url -> Maybe Route
@@ -29,8 +29,8 @@ toString route =
         Story s ->
             "/stories" ++ "/" ++ s
 
-        Resource s ->
-            "/resource" ++ "/" ++ s
+        Guide s ->
+            "/guides" ++ "/" ++ s
 
 
 routeParser : Parser (Route -> a) a
@@ -39,5 +39,5 @@ routeParser =
         [ map Index top
         , map StoryIndex (s "stories")
         , map Story (s "stories" </> string)
-        , map Resource (s "resource" </> string)
+        , map Guide (s "guides" </> string)
         ]
