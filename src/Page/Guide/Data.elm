@@ -22,8 +22,8 @@ blankGuide language =
         t =
             translate language
     in
-    { title = t Resource404Title
-    , fullTextMarkdown = t Resource404Body
+    { title = t Guide404Title
+    , fullTextMarkdown = t Guide404Body
     , maybeVideo = Nothing
     , maybeAudio = Nothing
     , relatedStoryList = []
