@@ -14,7 +14,7 @@ view resource =
         , p [] [ text resource.fullTextMarkdown ]
         , viewMaybeVideo resource.maybeVideo
         , viewMaybeAudio resource.maybeAudio
-        , viewRelatedCaseStudyTeasers resource.relatedCaseStudyList
+        , viewRelatedCaseStudyTeasers resource.relatedStoryList
         , viewRelatedResourceTeasers resource.relatedResourceList
         ]
 

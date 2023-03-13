@@ -24,7 +24,7 @@ suite =
             , fullTextMarkdown = "# Some minimal test reource markdown"
             , maybeVideo = Nothing
             , maybeAudio = Nothing
-            , relatedCaseStudyList = []
+            , relatedStoryList = []
             , relatedResourceList = []
             }
 
@@ -42,7 +42,7 @@ suite =
                     { title = "An audio guide"
                     , src = "https://an.audio.guide"
                     }
-            , relatedCaseStudyList =
+            , relatedStoryList =
                 [ { title = "A related case study"
                   , url = "/a-case-study"
                   }
