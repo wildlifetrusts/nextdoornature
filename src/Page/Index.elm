@@ -9,6 +9,10 @@ import Shared exposing (Model, Msg)
 import Theme.Global exposing (centerContent)
 
 
+
+-- [fFf] replace this with real content
+
+
 fakeGuideTeasers : List GuideTeaser
 fakeGuideTeasers =
     [ "How to help wildlife at school"
