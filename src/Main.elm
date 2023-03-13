@@ -98,11 +98,11 @@ view model =
             Theme.PageTemplate.view model
                 { title = SiteTitle, content = Page.Index.view model }
 
-        CaseStudyIndex ->
+        StoryIndex ->
             Theme.PageTemplate.view model
                 { title = CaseStudyTitle, content = Page.Story.view model }
 
-        CaseStudy _ ->
+        Story _ ->
             Theme.PageTemplate.view model
                 { title = CaseStudyTitle, content = Page.Story.view model }
 

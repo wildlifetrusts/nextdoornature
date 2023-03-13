@@ -6,8 +6,8 @@ import Url.Parser as Parser exposing ((</>), Parser, map, oneOf, s, string, top)
 
 type Route
     = Index
-    | CaseStudyIndex
-    | CaseStudy String
+    | StoryIndex
+    | Story String
     | Resource String
 
 
@@ -23,11 +23,11 @@ toString route =
         Index ->
             "/"
 
-        CaseStudyIndex ->
-            "/case-study"
+        StoryIndex ->
+            "/stories"
 
-        CaseStudy s ->
-            "/case-study" ++ "/" ++ s
+        Story s ->
+            "/stories" ++ "/" ++ s
 
         Resource s ->
             "/resource" ++ "/" ++ s
@@ -37,7 +37,7 @@ routeParser : Parser (Route -> a) a
 routeParser =
     oneOf
         [ map Index top
-        , map CaseStudyIndex (s "case-study")
-        , map CaseStudy (s "case-study" </> string)
+        , map StoryIndex (s "stories")
+        , map Story (s "stories" </> string)
         , map Resource (s "resource" </> string)
         ]
