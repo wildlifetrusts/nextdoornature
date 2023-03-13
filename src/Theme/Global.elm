@@ -1,4 +1,4 @@
-module Theme.Global exposing (centerContent, globalStyles, maxMobile, maxSmallDesktop, maxTabletLandscape, maxTabletPortrait, screenReaderOnly, withMediaMediumDesktopUp, withMediaMobileOnly, withMediaSmallDesktopUp, withMediaTabletLandscapeUp, withMediaTabletPortraitUp)
+module Theme.Global exposing (centerContent)
 
 import Css exposing (Style, absolute, alignItems, auto, batch, boxSizing, center, ch, column, contentBox, displayFlex, flexDirection, height, hidden, left, marginLeft, marginRight, maxWidth, overflow, position, px, top, width)
 import Css.Global exposing (global, typeSelector)
