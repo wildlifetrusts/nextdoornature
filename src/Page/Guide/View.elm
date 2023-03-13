@@ -54,7 +54,7 @@ viewRelatedStoryTeasers storyList =
         text ""
 
 
-viewRelatedGuideTeasers : List Page.Shared.ResourceTeaser -> Html Msg
+viewRelatedGuideTeasers : List Page.Shared.GuideTeaser -> Html Msg
 viewRelatedGuideTeasers guideList =
     if List.length guideList > 0 then
         ul []

@@ -1,4 +1,4 @@
-module Page.Shared exposing (AudioMeta, ResourceTeaser, StoryTeaser, VideoMeta, viewAudio, viewVideo)
+module Page.Shared exposing (AudioMeta, GuideTeaser, StoryTeaser, VideoMeta, viewAudio, viewVideo)
 
 import Html.Styled exposing (Html, div, iframe, text)
 import Html.Styled.Attributes exposing (attribute, autoplay, src, title)
@@ -23,7 +23,7 @@ type alias StoryTeaser =
     }
 
 
-type alias ResourceTeaser =
+type alias GuideTeaser =
     { title : String
     , url : String
     }
