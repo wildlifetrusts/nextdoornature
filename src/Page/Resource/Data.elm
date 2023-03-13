@@ -10,7 +10,7 @@ type alias Resource =
     , fullTextMarkdown : String
     , maybeVideo : Maybe Page.Shared.VideoMeta
     , maybeAudio : Maybe Page.Shared.AudioMeta
-    , relatedCaseStudyList : List Page.Shared.CaseStudyTeaser
+    , relatedCaseStudyList : List Page.Shared.StoryTeaser
     , relatedResourceList : List Page.Shared.ResourceTeaser
     }
 

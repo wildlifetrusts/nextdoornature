@@ -39,7 +39,7 @@ viewMaybeAudio maybeAudioMeta =
             text ""
 
 
-viewRelatedCaseStudyTeasers : List Page.Shared.CaseStudyTeaser -> Html Msg
+viewRelatedCaseStudyTeasers : List Page.Shared.StoryTeaser -> Html Msg
 viewRelatedCaseStudyTeasers caseStudyList =
     if List.length caseStudyList > 0 then
         ul []
