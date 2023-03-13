@@ -3,9 +3,9 @@ title: Types of community group
 slug: types-of-community-group
 ---
 
-## [cCc] Types of Community Group (England and Wales)
+##[cCc] Types of Community Group (England and Wales)
 
-### An Unincorporated Association
+###An Unincorporated Association
 
 If you’re just a small group of volunteers, with no plans to employ staff or rent premises, this is the one
 for you.
@@ -13,7 +13,7 @@ for you.
 It’s the easiest group to set up. All you need is to write a “constitution” or “governing document”. This
 is a list of rules for the group. It also says what your group’s going to do, and how it’s going to do it.
 
-#### This kind of group:
+####This kind of group:
 
 - doesn’t have to be a charity (although you can set up a charity if you want to). You will need to get official advice if you want to be a charity.
 - isn’t a separate legal structure. This means the group can’t take on a contract or own property - but individual members can do.

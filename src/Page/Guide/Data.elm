@@ -41,7 +41,7 @@ guideDictDecoder =
             |> Json.Decode.Extra.andMap
                 (Json.Decode.field "title" Json.Decode.string |> Json.Decode.Extra.withDefault "")
             |> Json.Decode.Extra.andMap
-                (Json.Decode.field "fullTextMarkdown" Json.Decode.string |> Json.Decode.Extra.withDefault "")
+                (Json.Decode.field "content" Json.Decode.string |> Json.Decode.Extra.withDefault "")
             |> Json.Decode.Extra.andMap
                 (Json.Decode.maybe (Json.Decode.field "maybeVideo" Page.Shared.View.videoDecoder))
             |> Json.Decode.Extra.andMap
