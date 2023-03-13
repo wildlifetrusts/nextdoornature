@@ -24,7 +24,7 @@ view story =
             Nothing ->
                 p [] [ text story.description ]
         , viewRelatedStoryTeasers story.relatedStoryList
-        , viewRelatedResourceTeasers story.relatedResourceList
+        , viewRelatedGuideTeasers story.relatedGuideList
         ]
 
 
@@ -43,15 +43,15 @@ viewRelatedStoryTeasers storyList =
         text ""
 
 
-viewRelatedResourceTeasers : List Page.Shared.ResourceTeaser -> Html Msg
-viewRelatedResourceTeasers resourceList =
-    if List.length resourceList > 0 then
+viewRelatedGuideTeasers : List Page.Shared.GuideTeaser -> Html Msg
+viewRelatedGuideTeasers guideList =
+    if List.length guideList > 0 then
         ul []
             (List.map
                 (\{ title, url } ->
                     li [] [ a [ href url ] [ text title ] ]
                 )
-                resourceList
+                guideList
             )
 
     else

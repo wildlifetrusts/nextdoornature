@@ -1,21 +1,21 @@
-module Page.Resource.View exposing (view)
+module Page.Guide.View exposing (view)
 
 import Html.Styled exposing (Html, a, div, h1, li, p, text, ul)
 import Html.Styled.Attributes exposing (href)
-import Page.Resource.Data
+import Page.Guide.Data
 import Page.Shared
 import Shared exposing (Model, Msg)
 
 
-view : Page.Resource.Data.Resource -> Html Msg
-view resource =
+view : Page.Guide.Data.Guide -> Html Msg
+view guide =
     div []
-        [ h1 [] [ text resource.title ]
-        , p [] [ text resource.fullTextMarkdown ]
-        , viewMaybeVideo resource.maybeVideo
-        , viewMaybeAudio resource.maybeAudio
-        , viewRelatedStoryTeasers resource.relatedStoryList
-        , viewRelatedResourceTeasers resource.relatedResourceList
+        [ h1 [] [ text guide.title ]
+        , p [] [ text guide.fullTextMarkdown ]
+        , viewMaybeVideo guide.maybeVideo
+        , viewMaybeAudio guide.maybeAudio
+        , viewRelatedStoryTeasers guide.relatedStoryList
+        , viewRelatedGuideTeasers guide.relateGuideList
         ]
 
 
@@ -54,15 +54,15 @@ viewRelatedStoryTeasers storyList =
         text ""
 
 
-viewRelatedResourceTeasers : List Page.Shared.ResourceTeaser -> Html Msg
-viewRelatedResourceTeasers resourceList =
-    if List.length resourceList > 0 then
+viewRelatedGuideTeasers : List Page.Shared.GuideTeaser -> Html Msg
+viewRelatedGuideTeasers guideList =
+    if List.length guideList > 0 then
         ul []
             (List.map
                 (\{ title, url } ->
                     li [] [ a [ href url ] [ text title ] ]
                 )
-                resourceList
+                guideList
             )
 
     else

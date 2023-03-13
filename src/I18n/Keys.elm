@@ -5,13 +5,13 @@ type Key
     = SiteTitle
       --- Page Titles
     | StoryTitle
-    | ResourceTitle
+    | GuideTitle
     | ChangeLanguage
       --- 404 content
-    | Resource404Title
-    | Resource404Body
     | Story404Title
     | Story404Body
+    | Guide404Title
+    | Guide404Body
       --- Footer
     | FooterProjectInfo
     | FooterTitleColumnA

@@ -1,12 +1,12 @@
-module Resource exposing (suite)
+module Guide exposing (suite)
 
 import Expect exposing (Expectation)
 import Html
 import Html.Attributes
 import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (translate)
-import Page.Resource.Data exposing (Resource)
-import Page.Resource.View exposing (view)
+import Page.Guide.Data exposing (Guide)
+import Page.Guide.View exposing (view)
 import Set
 import Test exposing (Test, describe, test)
 import Test.Html.Event as Event
@@ -18,23 +18,23 @@ import TestUtils exposing (queryFromStyledHtml)
 suite : Test
 suite =
     let
-        resourceMinimal : Resource
-        resourceMinimal =
-            { title = "A minimal test resource"
+        guideMinimal : Guide
+        guideMinimal =
+            { title = "A minimal test guide"
             , fullTextMarkdown = "# Some minimal test reource markdown"
             , maybeVideo = Nothing
             , maybeAudio = Nothing
             , relatedStoryList = []
-            , relatedResourceList = []
+            , relateGuideList = []
             }
 
-        resourceFull : Resource
-        resourceFull =
-            { title = "A full test resource"
+        guideFull : Guide
+        guideFull =
+            { title = "A full test guide"
             , fullTextMarkdown = "# Some full test reource markdown"
             , maybeVideo =
                 Just
-                    { title = "A resource video"
+                    { title = "A guide video"
                     , src = "https://a.video.test"
                     }
             , maybeAudio =
@@ -50,59 +50,59 @@ suite =
                   , url = "/another-story"
                   }
                 ]
-            , relatedResourceList =
-                [ { title = "A related resource"
-                  , url = "/a-resource"
+            , relateGuideList =
+                [ { title = "A related guide"
+                  , url = "/a-guide"
                   }
-                , { title = "Another related resource"
-                  , url = "/another-resource"
+                , { title = "Another related guide"
+                  , url = "/another-guide"
                   }
                 ]
             }
 
         view =
-            Page.Resource.View.view
+            Page.Guide.View.view
     in
-    describe "Resource Page"
+    describe "Guide Page"
         [ describe "View tests"
-            [ test "Resource view has title" <|
+            [ test "Guide view has title" <|
                 \() ->
-                    queryFromStyledHtml (view resourceMinimal)
+                    queryFromStyledHtml (view guideMinimal)
                         |> Query.contains
-                            [ Html.h1 [] [ Html.text resourceMinimal.title ]
+                            [ Html.h1 [] [ Html.text guideMinimal.title ]
                             ]
-            , test "Resource view has a body" <|
+            , test "Guide view has a body" <|
                 \() ->
-                    queryFromStyledHtml (view resourceMinimal)
+                    queryFromStyledHtml (view guideMinimal)
                         |> Query.contains
-                            [ Html.p [] [ Html.text resourceMinimal.fullTextMarkdown ]
+                            [ Html.p [] [ Html.text guideMinimal.fullTextMarkdown ]
                             ]
-            , test "Resource view can have a video" <|
+            , test "Guide view can have a video" <|
                 \() ->
-                    queryFromStyledHtml (view resourceFull)
+                    queryFromStyledHtml (view guideFull)
                         |> Query.has
                             [ tag "iframe" ]
-            , test "Resource view can have audio" <|
+            , test "Guide view can have audio" <|
                 \() ->
-                    queryFromStyledHtml (view resourceFull)
+                    queryFromStyledHtml (view guideFull)
                         |> Query.contains
                             [ Html.text "[fFf] render audio player" ]
-            , test "Resource view can have related story teasers" <|
+            , test "Guide view can have related story teasers" <|
                 \() ->
-                    queryFromStyledHtml (view resourceFull)
+                    queryFromStyledHtml (view guideFull)
                         |> Query.contains
                             [ Html.ul []
                                 [ Html.li [] [ Html.a [ Html.Attributes.href "/a-story" ] [ Html.text "A related story" ] ]
                                 , Html.li [] [ Html.a [ Html.Attributes.href "/another-story" ] [ Html.text "Another related story" ] ]
                                 ]
                             ]
-            , test "Resource view can have related resource teasers" <|
+            , test "Guide view can have related guide teasers" <|
                 \() ->
-                    queryFromStyledHtml (view resourceFull)
+                    queryFromStyledHtml (view guideFull)
                         |> Query.contains
                             [ Html.ul []
-                                [ Html.li [] [ Html.a [ Html.Attributes.href "/a-resource" ] [ Html.text "A related resource" ] ]
-                                , Html.li [] [ Html.a [ Html.Attributes.href "/another-resource" ] [ Html.text "Another related resource" ] ]
+                                [ Html.li [] [ Html.a [ Html.Attributes.href "/a-guide" ] [ Html.text "A related guide" ] ]
+                                , Html.li [] [ Html.a [ Html.Attributes.href "/another-guide" ] [ Html.text "Another related guide" ] ]
                                 ]
                             ]
             ]

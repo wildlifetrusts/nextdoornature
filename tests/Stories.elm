@@ -20,7 +20,7 @@ suite =
             , description = "# Some minimal test reource markdown"
             , maybeMetadata = Nothing
             , relatedStoryList = []
-            , relatedResourceList = []
+            , relatedGuideList = []
             }
 
         storyFull : Story
@@ -41,12 +41,12 @@ suite =
                   , url = "/another-story"
                   }
                 ]
-            , relatedResourceList =
-                [ { title = "A related resource"
-                  , url = "/a-resource"
+            , relatedGuideList =
+                [ { title = "A related guide"
+                  , url = "/a-guide"
                   }
-                , { title = "Another related resource"
-                  , url = "/another-resource"
+                , { title = "Another related guide"
+                  , url = "/another-guide"
                   }
                 ]
             }
@@ -77,13 +77,13 @@ suite =
                                 , Html.li [] [ Html.a [ Html.Attributes.href "/another-story" ] [ Html.text "Another related story" ] ]
                                 ]
                             ]
-            , test "Story view can have related resource teasers" <|
+            , test "Story view can have related guide teasers" <|
                 \() ->
                     queryFromStyledHtml (view storyFull)
                         |> Query.contains
                             [ Html.ul []
-                                [ Html.li [] [ Html.a [ Html.Attributes.href "/a-resource" ] [ Html.text "A related resource" ] ]
-                                , Html.li [] [ Html.a [ Html.Attributes.href "/another-resource" ] [ Html.text "Another related resource" ] ]
+                                [ Html.li [] [ Html.a [ Html.Attributes.href "/a-guide" ] [ Html.text "A related guide" ] ]
+                                , Html.li [] [ Html.a [ Html.Attributes.href "/another-guide" ] [ Html.text "Another related guide" ] ]
                                 ]
                             ]
             , test "Full story view has an author" <|

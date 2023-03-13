@@ -12,8 +12,8 @@ cyStrings key =
         StoryTitle ->
             "[cCc] Story CY"
 
-        ResourceTitle ->
-            "[cCc] Resource CY"
+        GuideTitle ->
+            "[cCc] Guide CY"
 
         ChangeLanguage ->
             "[cCc] Switch to English"

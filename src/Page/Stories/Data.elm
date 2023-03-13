@@ -10,7 +10,7 @@ type alias Story =
     , description : String
     , maybeMetadata : Maybe StoryMetaData
     , relatedStoryList : List Page.Shared.StoryTeaser
-    , relatedResourceList : List Page.Shared.ResourceTeaser
+    , relatedGuideList : List Page.Shared.GuideTeaser
     }
 
 
@@ -32,7 +32,7 @@ blankStory language =
     , description = t Story404Body
     , maybeMetadata = Nothing
     , relatedStoryList = []
-    , relatedResourceList = []
+    , relatedGuideList = []
     }
 
 
@@ -47,7 +47,7 @@ testStory =
             , images = [ { src = "/images/wildlife-trust-logo.png", alt = "placeholder" } ]
             }
     , relatedStoryList = []
-    , relatedResourceList = []
+    , relatedGuideList = []
     }
 
 
