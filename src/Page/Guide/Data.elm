@@ -11,7 +11,7 @@ type alias Guide =
     , maybeVideo : Maybe Page.Shared.VideoMeta
     , maybeAudio : Maybe Page.Shared.AudioMeta
     , relatedStoryList : List Page.Shared.StoryTeaser
-    , relateGuideList : List Page.Shared.ResourceTeaser
+    , relateGuideList : List Page.Shared.GuideTeaser
     }
 
 
