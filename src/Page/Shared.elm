@@ -21,7 +21,7 @@ type alias VideoMeta =
 
 type alias StoryTeaser =
     { title : String
-    , url : String
+    , slug : String
     , image : { src : String, alt : String }
     , description : String
     }
@@ -78,10 +78,10 @@ viewStoryTeasers teasers =
             (teasers
                 |> sortBy .title
                 |> map
-                    (\{ url, title, image, description } ->
+                    (\{ description, image, slug, title } ->
                         div [ css [ storyTeaserStyle ] ]
                             [ img [ src image.src, alt image.alt ] []
-                            , a [ href url ] [ text title ]
+                            , a [ href ("/stories/" ++ slug) ] [ text title ]
                             , p [] [ text description ]
                             ]
                     )

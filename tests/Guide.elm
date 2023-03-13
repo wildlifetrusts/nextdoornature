@@ -1,17 +1,13 @@
 module Guide exposing (suite)
 
-import Expect exposing (Expectation)
 import Html
 import Html.Attributes
 import I18n.Keys exposing (Key(..))
-import I18n.Translate exposing (translate)
 import Page.Guide.Data exposing (Guide)
 import Page.Guide.View exposing (view)
-import Set
 import Test exposing (Test, describe, test)
-import Test.Html.Event as Event
 import Test.Html.Query as Query
-import Test.Html.Selector exposing (attribute, containing, tag, text)
+import Test.Html.Selector exposing (tag)
 import TestUtils exposing (queryFromStyledHtml)
 
 
@@ -44,10 +40,14 @@ suite =
                     }
             , relatedStoryList =
                 [ { title = "A related story"
-                  , url = "/a-story"
+                  , slug = "a-story"
+                  , image = { src = "/", alt = "" }
+                  , description = "test description"
                   }
                 , { title = "Another related story"
-                  , url = "/another-story"
+                  , slug = "another-story"
+                  , image = { src = "/", alt = "" }
+                  , description = "test description"
                   }
                 ]
             , relateGuideList =
@@ -91,11 +91,7 @@ suite =
                 \() ->
                     queryFromStyledHtml (view guideFull)
                         |> Query.contains
-                            [ Html.ul []
-                                [ Html.li [] [ Html.a [ Html.Attributes.href "/a-story" ] [ Html.text "A related story" ] ]
-                                , Html.li [] [ Html.a [ Html.Attributes.href "/another-story" ] [ Html.text "Another related story" ] ]
-                                ]
-                            ]
+                            [ Html.a [ Html.Attributes.href "/stories/another-story" ] [ Html.text "Another related story" ] ]
             , test "Guide view can have related guide teasers" <|
                 \() ->
                     queryFromStyledHtml (view guideFull)

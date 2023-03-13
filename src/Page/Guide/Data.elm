@@ -28,10 +28,10 @@ blankGuide language =
     , maybeAudio = Nothing
     , relatedStoryList =
         --- [fFf] to be replaced
-        [ { title = "Test story teaser", url = "/", image = { src = "/images/wildlife-trust-logo.png", alt = "placeholder" }, description = "A test description" }
-        , { title = "Test story teaser", url = "/", image = { src = "/images/wildlife-trust-logo.png", alt = "placeholder" }, description = "A test description" }
-        , { title = "Test story teaser", url = "/", image = { src = "/images/wildlife-trust-logo.png", alt = "placeholder" }, description = "A test description" }
-        , { title = "Test story teaser", url = "/", image = { src = "/images/wildlife-trust-logo.png", alt = "placeholder" }, description = "A test description" }
+        [ { title = "Test story teaser", slug = "test-story", image = { src = "/images/wildlife-trust-logo.png", alt = "placeholder" }, description = "A test description" }
+        , { title = "Test story teaser", slug = "test-story", image = { src = "/images/wildlife-trust-logo.png", alt = "placeholder" }, description = "A test description" }
+        , { title = "Test story teaser", slug = "test-story", image = { src = "/images/wildlife-trust-logo.png", alt = "placeholder" }, description = "A test description" }
+        , { title = "Test story teaser", slug = "test-story", image = { src = "/images/wildlife-trust-logo.png", alt = "placeholder" }, description = "A test description" }
         ]
     , relateGuideList = []
     }
