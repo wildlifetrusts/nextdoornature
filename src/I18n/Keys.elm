@@ -4,7 +4,7 @@ module I18n.Keys exposing (Key(..))
 type Key
     = SiteTitle
       --- Page Titles
-    | CaseStudyTitle
+    | StoryTitle
     | ResourceTitle
     | ChangeLanguage
       --- 404 content
