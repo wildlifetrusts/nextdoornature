@@ -1,4 +1,4 @@
-module Page.Guide.Data exposing (Guide, resourceFromSlug)
+module Page.Guide.Data exposing (Guide, guideFromSlug)
 
 import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (Language, translate)
@@ -11,12 +11,12 @@ type alias Guide =
     , maybeVideo : Maybe Page.Shared.VideoMeta
     , maybeAudio : Maybe Page.Shared.AudioMeta
     , relatedStoryList : List Page.Shared.StoryTeaser
-    , relatedResourceList : List Page.Shared.ResourceTeaser
+    , relateGuideList : List Page.Shared.ResourceTeaser
     }
 
 
-blankResource : Language -> Guide
-blankResource language =
+blankGuide : Language -> Guide
+blankGuide language =
     let
         t : Key -> String
         t =
@@ -27,11 +27,11 @@ blankResource language =
     , maybeVideo = Nothing
     , maybeAudio = Nothing
     , relatedStoryList = []
-    , relatedResourceList = []
+    , relateGuideList = []
     }
 
 
-resourceFromSlug : Language -> String -> Guide
-resourceFromSlug language slug =
+guideFromSlug : Language -> String -> Guide
+guideFromSlug language slug =
     -- TODO populate from markdown
-    blankResource language
+    blankGuide language
