@@ -1,5 +1,6 @@
 module Page.Stories.Data exposing (Story, storyFromSlug)
 
+import Dict
 import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (Language, translate)
 import Page.Shared
@@ -21,21 +22,6 @@ type alias StoryMetaData =
     }
 
 
-blankStory : Language -> Story
-blankStory language =
-    let
-        t : Key -> String
-        t =
-            translate language
-    in
-    { title = t Story404Title
-    , description = t Story404Body
-    , maybeMetadata = Nothing
-    , relatedStoryList = []
-    , relatedGuideList = []
-    }
-
-
 testStory : Story
 testStory =
     { title = "A test story"
@@ -51,7 +37,36 @@ testStory =
     }
 
 
+storyTable : Dict.Dict String Story
+storyTable =
+    Dict.fromList
+        [ ( "alpha", testStory )
+        , ( "beta", Story "beta title" "alpha description" Nothing [] [] )
+        , ( "cappa", Story "cappa title" "alpha description" Nothing [] [] )
+        ]
+
+
+missingStory : Language -> Story
+missingStory language =
+    let
+        t : Key -> String
+        t =
+            translate language
+    in
+    { title = t Story404Title
+    , description = t Story404Body
+    , maybeMetadata = Nothing
+    , relatedStoryList = []
+    , relatedGuideList = []
+    }
+
+
 storyFromSlug : Language -> String -> Story
 storyFromSlug language slug =
     -- TODO populate from markdown
-    testStory
+    Maybe.withDefault
+        (missingStory language)
+        (Dict.get slug storyTable)
+
+
+
