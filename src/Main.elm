@@ -5,9 +5,9 @@ import Browser.Navigation
 import Html.Styled exposing (Html, toUnstyled)
 import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (Language(..))
+import Page.Guide.Data
+import Page.Guide.View
 import Page.Index
-import Page.Resource.Data
-import Page.Resource.View
 import Page.Story
 import Route exposing (Route(..))
 import Shared exposing (Model, Msg(..))
@@ -110,5 +110,5 @@ view model =
             Theme.PageTemplate.view model
                 { title = ResourceTitle
                 , content =
-                    Page.Resource.View.view (Page.Resource.Data.resourceFromSlug model.language slug)
+                    Page.Guide.View.view (Page.Guide.Data.resourceFromSlug model.language slug)
                 }
