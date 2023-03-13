@@ -43,11 +43,11 @@ suite =
                     , src = "https://an.audio.guide"
                     }
             , relatedStoryList =
-                [ { title = "A related case study"
-                  , url = "/a-case-study"
+                [ { title = "A related story"
+                  , url = "/a-story"
                   }
-                , { title = "Another related case study"
-                  , url = "/another-case-study"
+                , { title = "Another related story"
+                  , url = "/another-story"
                   }
                 ]
             , relatedResourceList =
@@ -87,13 +87,13 @@ suite =
                     queryFromStyledHtml (view resourceFull)
                         |> Query.contains
                             [ Html.text "[fFf] render audio player" ]
-            , test "Resource view can have related case study teasers" <|
+            , test "Resource view can have related story teasers" <|
                 \() ->
                     queryFromStyledHtml (view resourceFull)
                         |> Query.contains
                             [ Html.ul []
-                                [ Html.li [] [ Html.a [ Html.Attributes.href "/a-case-study" ] [ Html.text "A related case study" ] ]
-                                , Html.li [] [ Html.a [ Html.Attributes.href "/another-case-study" ] [ Html.text "Another related case study" ] ]
+                                [ Html.li [] [ Html.a [ Html.Attributes.href "/a-story" ] [ Html.text "A related story" ] ]
+                                , Html.li [] [ Html.a [ Html.Attributes.href "/another-story" ] [ Html.text "Another related story" ] ]
                                 ]
                             ]
             , test "Resource view can have related resource teasers" <|
