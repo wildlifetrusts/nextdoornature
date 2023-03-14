@@ -2,12 +2,14 @@ module Page.Guide.Data exposing (Guide, guideFromSlug)
 
 import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (Language, translate)
+import Page.Guide.Summary exposing (Summary)
 import Page.Shared
 
 
 type alias Guide =
     { title : String
     , fullTextMarkdown : String
+    , summary : Maybe Summary
     , maybeVideo : Maybe Page.Shared.VideoMeta
     , maybeAudio : Maybe Page.Shared.AudioMeta
     , relatedStoryList : List Page.Shared.StoryTeaser
@@ -24,6 +26,7 @@ blankGuide language =
     in
     { title = t Guide404Title
     , fullTextMarkdown = t Guide404Body
+    , summary = Nothing
     , maybeVideo = Nothing
     , maybeAudio = Nothing
     , relatedStoryList = []

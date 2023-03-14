@@ -3,6 +3,7 @@ module Page.Shared exposing (AudioMeta, GuideTeaser, StoryTeaser, VideoMeta, gui
 import Html.Styled exposing (Html, a, div, iframe, img, li, p, text, ul)
 import Html.Styled.Attributes exposing (alt, attribute, autoplay, href, src, title)
 import List exposing (map, sortBy)
+import Page.Guide.Summary as Summary
 import Shared exposing (Msg)
 
 
@@ -27,7 +28,7 @@ type alias StoryTeaser =
 type alias GuideTeaser =
     { title : String
     , url : String
-    , summary : String
+    , summary : Maybe Summary.Summary
     , img : { src : String, alt : String }
     }
 
@@ -59,9 +60,14 @@ viewGuideTeaser teaser =
             [ a [ href teaser.url ]
                 [ text teaser.title ]
             ]
-        , p
-            []
-            [ text teaser.summary ]
+        , case teaser.summary of
+            Nothing ->
+                text ""
+
+            Just sum ->
+                p
+                    []
+                    [ text <| Summary.toString sum ]
         ]
 
 
@@ -81,7 +87,7 @@ viewGuideTeaserList teasers =
 
 
 -- utils
--- [fFf] replace with live content
+-- [fFf] replace img with live content
 
 
 placeHolderImg : { src : String, alt : String }
@@ -91,4 +97,4 @@ placeHolderImg =
 
 guideTeaserList : List { title : String, summary : String } -> List GuideTeaser
 guideTeaserList teaserStrings =
-    List.map (\teaser -> GuideTeaser teaser.title ("/guides/" ++ String.replace " " "-" teaser.title) teaser.summary placeHolderImg) teaserStrings
+    List.map (\teaser -> GuideTeaser teaser.title ("/guides/" ++ String.replace " " "-" teaser.title) (Summary.init teaser.summary) placeHolderImg) teaserStrings
