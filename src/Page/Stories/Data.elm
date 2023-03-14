@@ -9,7 +9,6 @@ type alias Story =
     { title : String
     , description : String
     , maybeMetadata : Maybe StoryMetaData
-    , relatedStoryList : List Page.Shared.View.StoryTeaser
     , relatedGuideList : List Page.Shared.View.GuideTeaser
     }
 
@@ -31,9 +30,12 @@ blankStory language =
     { title = t Story404Title
     , description = t Story404Body
     , maybeMetadata = Nothing
-    , relatedStoryList = []
     , relatedGuideList = []
     }
+
+
+
+--- [fFf] test story to be removed
 
 
 testStory : Story
@@ -46,7 +48,6 @@ testStory =
             , author = "Test author"
             , images = [ { src = "/images/wildlife-trust-logo.png", alt = "placeholder" } ]
             }
-    , relatedStoryList = []
     , relatedGuideList = []
     }
 

@@ -5,7 +5,6 @@ import Html.Styled.Attributes exposing (href)
 import Message exposing (Msg)
 import Page.Guide.Data
 import Page.Shared.View
-import Shared exposing (Model)
 
 
 view : Page.Guide.Data.Guide -> Html Msg
@@ -15,7 +14,7 @@ view guide =
         , p [] [ text guide.fullTextMarkdown ]
         , viewMaybeVideo guide.maybeVideo
         , viewMaybeAudio guide.maybeAudio
-        , viewRelatedStoryTeasers guide.relatedStoryList
+        , Page.Shared.View.viewStoryTeasers guide.relatedStoryList
         , viewRelatedGuideTeasers guide.relateGuideList
         ]
 
@@ -38,21 +37,6 @@ viewMaybeAudio maybeAudioMeta =
 
         Nothing ->
             text ""
-
-
-viewRelatedStoryTeasers : List Page.Shared.View.StoryTeaser -> Html Msg
-viewRelatedStoryTeasers storyList =
-    if List.length storyList > 0 then
-        ul []
-            (List.map
-                (\{ title, url } ->
-                    li [] [ a [ href url ] [ text title ] ]
-                )
-                storyList
-            )
-
-    else
-        text ""
 
 
 viewRelatedGuideTeasers : List Page.Shared.View.GuideTeaser -> Html Msg
