@@ -11,6 +11,7 @@ type Key
     | Story404Title
     | Story404Body
     | Guide404Title
+    | Guide404Slug
     | Guide404Body
       --- Footer
     | FooterProjectInfo

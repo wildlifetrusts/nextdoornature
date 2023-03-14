@@ -10,6 +10,7 @@ import Page.Shared.View
 
 type alias Guide =
     { title : String
+    , slug : String
     , fullTextMarkdown : String
     , maybeVideo : Maybe Page.Shared.View.VideoMeta
     , maybeAudio : Maybe Page.Shared.View.AudioMeta
@@ -26,6 +27,7 @@ blankGuide language =
             translate language
     in
     { title = t Guide404Title
+    , slug = t Guide404Slug
     , fullTextMarkdown = t Guide404Body
     , maybeVideo = Nothing
     , maybeAudio = Nothing
@@ -40,6 +42,8 @@ guideDictDecoder =
         (Json.Decode.succeed Guide
             |> Json.Decode.Extra.andMap
                 (Json.Decode.field "title" Json.Decode.string |> Json.Decode.Extra.withDefault "")
+            |> Json.Decode.Extra.andMap
+                (Json.Decode.field "basename" Json.Decode.string |> Json.Decode.Extra.withDefault "")
             |> Json.Decode.Extra.andMap
                 (Json.Decode.field "content" Json.Decode.string |> Json.Decode.Extra.withDefault "")
             |> Json.Decode.Extra.andMap
