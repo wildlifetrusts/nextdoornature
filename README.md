@@ -54,15 +54,14 @@ Rules live in `review/src/ReviewConfig.elm` and can be modified if needed. These
 - `elm.json` for elm packages
 - `package.json` for node scripts and packages
 - `package-lock.json` for current versions of node packages
-- `[cCc]` for build config
-- `[cCc]` for deploy config
 - `src/*` contains app source files
 
 ### Content & Pages
 
 - Pages are in `Page/`
 - Markdown content is in `content/`
-- Copy not in `content/` (e.g. UI copy) is in `Copy/Text.elm`
+- Markdown content is compiled to `.json` files with `generate` script
+- Copy not in `content/` (e.g. UI copy) is in language files like `I18n/En.elm`
 - We use `[cCc] to denote placeholder copy`
 - We use `[fFf] to denote placeholder UI feature or section`
 

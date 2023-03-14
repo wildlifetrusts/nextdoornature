@@ -5,19 +5,22 @@ import Browser.Navigation
 import Html.Styled exposing (Html, toUnstyled)
 import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (Language(..))
+import Json.Decode
+import Message exposing (Msg(..))
 import Page.Guide.Data
 import Page.Guide.View
 import Page.Index
+import Page.Shared.Data
 import Page.Stories.Data
 import Page.Stories.View
 import Route exposing (Route(..))
-import Shared exposing (Model, Msg(..))
+import Shared exposing (Model)
 import Theme.PageTemplate
 import Url
 
 
 type alias Flags =
-    ()
+    Json.Decode.Value
 
 
 main : Program Flags Model Msg
@@ -33,7 +36,7 @@ main =
 
 
 init : Flags -> Url.Url -> Browser.Navigation.Key -> ( Model, Cmd Msg )
-init _ url key =
+init flags url key =
     let
         maybeRoute : Maybe Route
         maybeRoute =
@@ -41,6 +44,7 @@ init _ url key =
     in
     ( { key = key
       , page = Maybe.withDefault Index maybeRoute
+      , content = Page.Shared.Data.contentDictDecoder flags
       , language = English
       }
     , Cmd.none
@@ -110,5 +114,5 @@ view model =
             Theme.PageTemplate.view model
                 { title = GuideTitle
                 , content =
-                    Page.Guide.View.view (Page.Guide.Data.guideFromSlug model.language slug)
+                    Page.Guide.View.view (Page.Guide.Data.guideFromSlug model.language model.content.guides slug)
                 }

@@ -30,6 +30,9 @@ enStrings key =
         Guide404Title ->
             "[cCc] Sorry, we can't find that guide"
 
+        Guide404Slug ->
+            "guide-not-found"
+
         Guide404Body ->
             "[cCc] Try searching again [home](\"\\\")"
 

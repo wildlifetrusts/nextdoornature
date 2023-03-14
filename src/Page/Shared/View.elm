@@ -1,10 +1,11 @@
-module Page.Shared exposing (AudioMeta, GuideTeaser, StoryTeaser, VideoMeta, guideTeaserList, viewAudio, viewGuideTeaserList, viewStoryTeasers, viewVideo)
+module Page.Shared.View exposing (AudioMeta, GuideTeaser, StoryTeaser, VideoMeta, audioDecoder, guideTeaserDecoder, storyTeaserDecoder, videoDecoder, viewAudio, viewGuideTeaserList, viewStoryTeasers, viewVideo)
 
 import Css exposing (Style, batch, center, column, displayFlex, flexDirection, flexWrap, height, justifyContent, maxWidth, px, wrap)
 import Html.Styled exposing (Html, a, div, iframe, img, li, p, text, ul)
 import Html.Styled.Attributes exposing (alt, attribute, autoplay, css, href, src, title)
+import Json.Decode exposing (Decoder)
 import List exposing (map, sortBy)
-import Shared exposing (Msg)
+import Message exposing (Msg)
 
 
 type alias AudioMeta =
@@ -13,24 +14,65 @@ type alias AudioMeta =
     }
 
 
+audioDecoder : Json.Decode.Decoder AudioMeta
+audioDecoder =
+    Json.Decode.map2 AudioMeta
+        (Json.Decode.field "title" Json.Decode.string)
+        (Json.Decode.field "src" Json.Decode.string)
+
+
 type alias VideoMeta =
     { title : String
     , src : String
     }
 
 
+videoDecoder : Json.Decode.Decoder VideoMeta
+videoDecoder =
+    Json.Decode.map2 VideoMeta
+        (Json.Decode.field "title" Json.Decode.string)
+        (Json.Decode.field "src" Json.Decode.string)
+
+
+type alias Image =
+    { src : String, alt : String }
+
+
 type alias StoryTeaser =
     { title : String
     , slug : String
-    , image : { src : String, alt : String }
+    , image : Image
     , description : String
     }
+
+
+storyTeaserDecoder : Json.Decode.Decoder StoryTeaser
+storyTeaserDecoder =
+    Json.Decode.map4 StoryTeaser
+        (Json.Decode.field "title" Json.Decode.string)
+        (Json.Decode.field "slug" Json.Decode.string)
+        (Json.Decode.field "image" imageDecoder)
+        (Json.Decode.field "description" Json.Decode.string)
+
+
+imageDecoder : Decoder Image
+imageDecoder =
+    Json.Decode.map2 Image
+        (Json.Decode.field "src" Json.Decode.string)
+        (Json.Decode.field "alt" Json.Decode.string)
 
 
 type alias GuideTeaser =
     { title : String
     , url : String
     }
+
+
+guideTeaserDecoder : Json.Decode.Decoder GuideTeaser
+guideTeaserDecoder =
+    Json.Decode.map2 GuideTeaser
+        (Json.Decode.field "title" Json.Decode.string)
+        (Json.Decode.field "url" Json.Decode.string)
 
 
 viewVideo : VideoMeta -> Html Msg
@@ -64,7 +106,7 @@ viewGuideTeaserList teasers =
             (teasers
                 |> sortBy .title
                 |> map
-                    (\t -> li [] [ viewGuideTeaser t ])
+                    (\teaser -> li [] [ viewGuideTeaser teaser ])
             )
 
     else
