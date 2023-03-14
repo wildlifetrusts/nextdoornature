@@ -12,7 +12,7 @@
     "lint": "npx elm-review",
     "test": "elm-test",
     "prepare": "husky install",
-    "postinstall": "elm-tooling install"
+    "postinstall": "elm-tooling install && npm run generate"
   },
   "devDependencies": {
     "elm": "0.19.1-5",
