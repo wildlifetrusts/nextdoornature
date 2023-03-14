@@ -23,24 +23,8 @@ view story =
 
             Nothing ->
                 p [] [ text story.description ]
-        , viewRelatedStoryTeasers story.relatedStoryList
         , viewRelatedGuideTeasers story.relatedGuideList
         ]
-
-
-viewRelatedStoryTeasers : List Page.Shared.StoryTeaser -> Html Msg
-viewRelatedStoryTeasers storyList =
-    if List.length storyList > 0 then
-        ul []
-            (List.map
-                (\{ title, url } ->
-                    li [] [ a [ href url ] [ text title ] ]
-                )
-                storyList
-            )
-
-    else
-        text ""
 
 
 viewRelatedGuideTeasers : List Page.Shared.GuideTeaser -> Html Msg
