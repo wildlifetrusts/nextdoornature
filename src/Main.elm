@@ -114,5 +114,5 @@ view model =
             Theme.PageTemplate.view model
                 { title = GuideTitle
                 , content =
-                    Page.Guide.View.view (Page.Guide.Data.guideFromSlug model.language slug)
+                    Page.Guide.View.view (Page.Guide.Data.guideFromSlug model.language model.content.guides slug)
                 }

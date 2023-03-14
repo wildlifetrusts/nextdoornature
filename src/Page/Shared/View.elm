@@ -2,6 +2,7 @@ module Page.Shared.View exposing (AudioMeta, GuideTeaser, StoryTeaser, VideoMeta
 
 import Html.Styled exposing (Html, a, div, iframe, li, text, ul)
 import Html.Styled.Attributes exposing (attribute, autoplay, href, src, title)
+import I18n.Translate exposing (Language)
 import Json.Decode
 import List exposing (map, sortBy)
 import Message exposing (Msg)
@@ -90,7 +91,7 @@ viewGuideTeaserList teasers =
             (teasers
                 |> sortBy .title
                 |> map
-                    (\t -> li [] [ viewGuideTeaser t ])
+                    (\teaser -> li [] [ viewGuideTeaser teaser ])
             )
 
     else

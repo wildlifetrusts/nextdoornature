@@ -1,4 +1,4 @@
-module Page.Guide.Data exposing (Guide, guideDictDecoder, guideFromSlug)
+module Page.Guide.Data exposing (Guide, guideDictDecoder, guideFromSlug, teaserListFromGuideDict)
 
 import Dict exposing (Dict)
 import I18n.Keys exposing (Key(..))
@@ -63,7 +63,30 @@ guideDictDecoder =
         )
 
 
-guideFromSlug : Language -> String -> Guide
-guideFromSlug language slug =
-    -- TODO populate from markdown
-    blankGuide language
+guideFromSlug : Language -> Dict String Guide -> String -> Guide
+guideFromSlug language guides slug =
+    case Dict.get slug guides of
+        Just aGuide ->
+            aGuide
+
+        Nothing ->
+            blankGuide language
+
+
+slugToUrl : String -> String
+slugToUrl slug =
+    "/guides/" ++ slug
+
+
+teaserListFromGuideDict :
+    Language
+    -> Dict String Guide
+    -> List Page.Shared.View.GuideTeaser
+teaserListFromGuideDict language guides =
+    Dict.toList guides
+        |> List.map
+            (\( _, guide ) ->
+                { title = guide.title
+                , url = slugToUrl guide.slug
+                }
+            )
