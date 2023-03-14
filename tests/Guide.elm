@@ -21,6 +21,7 @@ suite =
         guideMinimal : Guide
         guideMinimal =
             { title = "A minimal test guide"
+            , slug = "a-guide"
             , fullTextMarkdown = "# Some minimal test reource markdown"
             , maybeVideo = Nothing
             , maybeAudio = Nothing
@@ -31,6 +32,7 @@ suite =
         guideFull : Guide
         guideFull =
             { title = "A full test guide"
+            , slug = "a-guide"
             , fullTextMarkdown = "# Some full test reource markdown"
             , maybeVideo =
                 Just
