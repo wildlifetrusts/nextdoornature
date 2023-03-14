@@ -4,6 +4,7 @@ import Browser.Navigation
 import Dict exposing (Dict)
 import I18n.Translate exposing (Language)
 import Page.Guide.Data
+import Page.Stories.Data
 import Route exposing (Route)
 
 
@@ -16,4 +17,4 @@ type alias Model =
 
 
 type alias Content =
-    { guides : Dict String Page.Guide.Data.Guide }
+    { guides : Dict String Page.Guide.Data.Guide, stories : Dict String Page.Stories.Data.Story }

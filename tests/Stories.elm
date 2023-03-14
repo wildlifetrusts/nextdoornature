@@ -17,7 +17,8 @@ suite =
         storyMinimal : Story
         storyMinimal =
             { title = "A minimal test story"
-            , description = "# Some minimal test reource markdown"
+            , slug = "slug"
+            , fullTextMarkdown = "# Some minimal test reource markdown"
             , maybeMetadata = Nothing
             , relatedGuideList = []
             }
@@ -25,7 +26,8 @@ suite =
         storyFull : Story
         storyFull =
             { title = "A full test story"
-            , description = "# Some full test reource markdown"
+            , fullTextMarkdown = "# Some full test reource markdown"
+            , slug = "slug"
             , maybeMetadata =
                 Just
                     { location = "Test location"
@@ -57,7 +59,7 @@ suite =
                 \() ->
                     queryFromStyledHtml (view storyMinimal)
                         |> Query.contains
-                            [ Html.p [] [ Html.text storyMinimal.description ]
+                            [ Html.p [] [ Html.text storyMinimal.fullTextMarkdown ]
                             ]
             , test "Story view can have related guide teasers" <|
                 \() ->

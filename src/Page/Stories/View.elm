@@ -18,11 +18,11 @@ view story =
                     , p [] [ text metadata.author ]
                     , div []
                         (List.map (\image -> img [ src image.src, alt image.alt ] []) metadata.images)
-                    , p [] [ text story.description ]
+                    , p [] [ text story.fullTextMarkdown ]
                     ]
 
             Nothing ->
-                p [] [ text story.description ]
+                p [] [ text story.fullTextMarkdown ]
         , viewRelatedGuideTeasers story.relatedGuideList
         ]
 
