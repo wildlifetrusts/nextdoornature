@@ -1,8 +1,7 @@
-module Page.Shared.View exposing (AudioMeta, GuideTeaser, StoryTeaser, VideoMeta, audioDecoder, guideTeaserDecoder, guideTeaserList, storyTeaserDecoder, videoDecoder, viewAudio, viewGuideTeaserList, viewVideo)
+module Page.Shared.View exposing (AudioMeta, GuideTeaser, StoryTeaser, VideoMeta, audioDecoder, guideTeaserDecoder, storyTeaserDecoder, videoDecoder, viewAudio, viewGuideTeaserList, viewVideo)
 
 import Html.Styled exposing (Html, a, div, iframe, li, text, ul)
 import Html.Styled.Attributes exposing (attribute, autoplay, href, src, title)
-import I18n.Translate exposing (Language)
 import Json.Decode
 import List exposing (map, sortBy)
 import Message exposing (Msg)
@@ -96,12 +95,3 @@ viewGuideTeaserList teasers =
 
     else
         text ""
-
-
-
--- utils
-
-
-guideTeaserList : List String -> List GuideTeaser
-guideTeaserList titles =
-    List.map (\title -> GuideTeaser title <| "/guides/" ++ String.replace " " "-" title) titles
