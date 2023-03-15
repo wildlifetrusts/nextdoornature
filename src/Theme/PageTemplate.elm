@@ -1,5 +1,6 @@
 module Theme.PageTemplate exposing (PageInfo, view)
 
+import CookieBanner
 import Css exposing (Style, alignItems, auto, batch, center, column, displayFlex, flex2, flexBasis, flexDirection, height, int, minHeight, pct, vh)
 import Html.Styled exposing (Html, button, div, main_, text)
 import Html.Styled.Attributes exposing (css)
@@ -34,6 +35,7 @@ view model pageInfo =
                 ]
             ]
         , FooterTemplate.view model.language
+        , CookieBanner.viewCookieBanner model.language model.cookieState
         ]
 
 

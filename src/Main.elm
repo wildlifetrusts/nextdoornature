@@ -89,11 +89,19 @@ update msg model =
             , Cmd.none
             )
 
+        CookieSettingsButtonClicked ->
+            ( { model | cookieState = openCookieBanner model.cookieState }, Cmd.none )
+
         CookiesAccepted ->
             ( { model | cookieState = updateCookieState model.cookieState True }, Cmd.none )
 
         CookiesDeclined ->
             ( { model | cookieState = updateCookieState model.cookieState False }, Cmd.none )
+
+
+openCookieBanner : CookieState -> CookieState
+openCookieBanner oldState =
+    { oldState | cookieBannerIsOpen = True }
 
 
 updateCookieState : CookieState -> Bool -> CookieState
