@@ -5,9 +5,10 @@ import Html.Attributes
 import I18n.Keys exposing (Key(..))
 import Page.Guide.Data exposing (Guide)
 import Page.Guide.View exposing (view)
+import Page.Shared.View exposing (defaultTeaserImg)
 import Test exposing (Test, describe, test)
 import Test.Html.Query as Query
-import Test.Html.Selector exposing (tag, classes, text)
+import Test.Html.Selector exposing (classes, tag, text)
 import TestUtils exposing (queryFromStyledHtml)
 
 
@@ -19,6 +20,8 @@ suite =
             { title = "A minimal test guide"
             , slug = "a-guide"
             , fullTextMarkdown = "# Some minimal test reource markdown"
+            , summary = "Some minimal test reource markdown"
+            , maybeImage = Nothing
             , maybeVideo = Nothing
             , maybeAudio = Nothing
             , relatedStoryList = []
@@ -30,6 +33,8 @@ suite =
             { title = "A full test guide"
             , slug = "a-guide"
             , fullTextMarkdown = "# Some full test reource markdown\n\nA small paragraph."
+            , summary = "Some full test reource markdown"
+            , maybeImage = Just defaultTeaserImg
             , maybeVideo =
                 Just
                     { title = "A guide video"
@@ -55,9 +60,13 @@ suite =
             , relateGuideList =
                 [ { title = "A related guide"
                   , url = "/a-guide"
+                  , summary = "A related guide"
+                  , maybeImage = Just defaultTeaserImg
                   }
                 , { title = "Another related guide"
                   , url = "/another-guide"
+                  , summary = "A related guide"
+                  , maybeImage = Just defaultTeaserImg
                   }
                 ]
             }
@@ -77,9 +86,11 @@ suite =
                 \() ->
                     queryFromStyledHtml (view guideFull)
                         |> Query.has
-                           [ tag "h1", text "Some full test reource markdown"
-                           , tag "p", text "A small paragraph."
-                           ]
+                            [ tag "h1"
+                            , text "Some full test reource markdown"
+                            , tag "p"
+                            , text "A small paragraph."
+                            ]
             , test "Guide view can have a video" <|
                 \() ->
                     queryFromStyledHtml (view guideFull)
@@ -104,7 +115,5 @@ suite =
                                 , Html.li [] [ Html.a [ Html.Attributes.href "/another-guide" ] [ Html.text "Another related guide" ] ]
                                 ]
                             ]
-                           
             ]
-              
         ]
