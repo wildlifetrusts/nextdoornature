@@ -19,7 +19,9 @@ suite =
             { title = "A minimal test story"
             , slug = "slug"
             , fullTextMarkdown = "# Some minimal test reource markdown"
-            , maybeMetadata = Nothing
+            , maybeLocation = Nothing
+            , maybeGroupOrIndividual = Nothing
+            , maybeImages = Nothing
             , relatedGuideList = []
             }
 
@@ -28,12 +30,9 @@ suite =
             { title = "A full test story"
             , fullTextMarkdown = "# Some full test reource markdown"
             , slug = "slug"
-            , maybeMetadata =
-                Just
-                    { location = "Test location"
-                    , author = "Test author"
-                    , images = [ { src = "/images/wildlife-trust-logo.png", alt = "placeholder" } ]
-                    }
+            , maybeLocation = Just "Test location"
+            , maybeGroupOrIndividual = Just "Test group"
+            , maybeImages = Just [ { src = "/images/wildlife-trust-logo.png", alt = "placeholder" } ]
             , relatedGuideList =
                 [ { title = "A related guide"
                   , url = "/a-guide"
@@ -72,13 +71,13 @@ suite =
                             ]
             , test "Full story view has an author" <|
                 \() ->
-                    case storyFull.maybeMetadata of
-                        Just metadata ->
+                    case storyFull.maybeGroupOrIndividual of
+                        Just groupOrIndividual ->
                             queryFromStyledHtml (view storyFull)
                                 |> Query.contains
                                     [ Html.p
                                         []
-                                        [ Html.text metadata.author ]
+                                        [ Html.text groupOrIndividual ]
                                     ]
 
                         Nothing ->
@@ -87,13 +86,13 @@ suite =
                                     []
             , test "Full story view has an image" <|
                 \() ->
-                    case storyFull.maybeMetadata of
-                        Just metadata ->
+                    case storyFull.maybeImages of
+                        Just images ->
                             queryFromStyledHtml (view storyFull)
                                 |> Query.contains
                                     (List.map
                                         (\image -> Html.img [ Html.Attributes.alt image.alt, Html.Attributes.src image.src ] [])
-                                        metadata.images
+                                        images
                                     )
 
                         Nothing ->

@@ -1,11 +1,9 @@
 ---
 title: Community Fungus Study
-maybeMetadata:
-  {
-    location: Norfolk,
-    author: Test author,
-    images: [{ src: /images/wildlife-trust-logo.png, alt: "logo" }],
-  }
+location: Norfolk,
+images:
+  - alt: logo
+    src: /images/wildlife-trust-logo.png
 ---
 
 #### [cCc] A subheader
