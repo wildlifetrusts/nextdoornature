@@ -15,7 +15,7 @@ view guide =
         , viewMaybeVideo guide.maybeVideo
         , viewMaybeAudio guide.maybeAudio
         , Page.Shared.View.viewStoryTeasers guide.relatedStoryList
-        , viewRelatedGuideTeasers guide.relateGuideList
+        , viewRelatedGuideTeasers guide.relatedGuideList
         ]
 
 

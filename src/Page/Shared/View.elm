@@ -72,7 +72,7 @@ guideTeaserDecoder : Json.Decode.Decoder GuideTeaser
 guideTeaserDecoder =
     Json.Decode.map2 GuideTeaser
         (Json.Decode.field "title" Json.Decode.string)
-        (Json.Decode.field "url" Json.Decode.string)
+        (Json.Decode.field "slug" Json.Decode.string)
 
 
 viewVideo : VideoMeta -> Html Msg
