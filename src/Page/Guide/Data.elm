@@ -12,6 +12,7 @@ type alias Guide =
     { title : String
     , slug : String
     , fullTextMarkdown : String
+    , summary : String
     , maybeVideo : Maybe Page.Shared.View.VideoMeta
     , maybeAudio : Maybe Page.Shared.View.AudioMeta
     , relatedStoryList : List Page.Shared.View.StoryTeaser
@@ -29,6 +30,7 @@ blankGuide language =
     { title = t Guide404Title
     , slug = t Guide404Slug
     , fullTextMarkdown = t Guide404Body
+    , summary = t Guide404Title
     , maybeVideo = Nothing
     , maybeAudio = Nothing
     , relatedStoryList =
@@ -52,6 +54,8 @@ guideDictDecoder =
                 (Json.Decode.field "basename" Json.Decode.string |> Json.Decode.Extra.withDefault "")
             |> Json.Decode.Extra.andMap
                 (Json.Decode.field "content" Json.Decode.string |> Json.Decode.Extra.withDefault "")
+            |> Json.Decode.Extra.andMap
+                (Json.Decode.field "summary" Json.Decode.string |> Json.Decode.Extra.withDefault "")
             |> Json.Decode.Extra.andMap
                 (Json.Decode.maybe (Json.Decode.field "maybeVideo" Page.Shared.View.videoDecoder))
             |> Json.Decode.Extra.andMap
