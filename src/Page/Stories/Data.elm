@@ -1,22 +1,21 @@
-module Page.Stories.Data exposing (Story, storyFromSlug)
+module Page.Stories.Data exposing (Story, storyDictDecoder, storyFromSlug)
 
+import Dict exposing (Dict)
 import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (Language, translate)
+import Json.Decode
+import Json.Decode.Extra
 import Page.Shared.View
 
 
 type alias Story =
     { title : String
-    , description : String
-    , maybeMetadata : Maybe StoryMetaData
+    , slug : String
+    , maybeLocation : Maybe String
+    , maybeGroupOrIndividual : Maybe String
+    , maybeImages : Maybe (List Page.Shared.View.Image)
+    , fullTextMarkdown : String
     , relatedGuideList : List Page.Shared.View.GuideTeaser
-    }
-
-
-type alias StoryMetaData =
-    { location : String
-    , author : String
-    , images : List { src : String, alt : String }
     }
 
 
@@ -28,31 +27,44 @@ blankStory language =
             translate language
     in
     { title = t Story404Title
-    , description = t Story404Body
-    , maybeMetadata = Nothing
+    , slug = ""
+    , fullTextMarkdown = t Story404Body
+    , maybeLocation = Nothing
+    , maybeGroupOrIndividual = Nothing
+    , maybeImages = Nothing
     , relatedGuideList = []
     }
 
 
+storyDictDecoder : Json.Decode.Decoder (Dict String Story)
+storyDictDecoder =
+    Json.Decode.dict
+        (Json.Decode.succeed Story
+            |> Json.Decode.Extra.andMap
+                (Json.Decode.field "title" Json.Decode.string |> Json.Decode.Extra.withDefault "")
+            |> Json.Decode.Extra.andMap
+                (Json.Decode.field "basename" Json.Decode.string |> Json.Decode.Extra.withDefault "")
+            |> Json.Decode.Extra.andMap
+                (Json.Decode.maybe (Json.Decode.field "location" Json.Decode.string |> Json.Decode.Extra.withDefault ""))
+            |> Json.Decode.Extra.andMap
+                (Json.Decode.maybe (Json.Decode.field "groupOrIndividual" Json.Decode.string |> Json.Decode.Extra.withDefault ""))
+            |> Json.Decode.Extra.andMap
+                (Json.Decode.maybe (Json.Decode.field "images" (Json.Decode.list Page.Shared.View.imageDecoder)))
+            |> Json.Decode.Extra.andMap
+                (Json.Decode.field "content" Json.Decode.string |> Json.Decode.Extra.withDefault "")
+            |> Json.Decode.Extra.andMap
+                (Json.Decode.field "relatedGuideList"
+                    (Json.Decode.list Page.Shared.View.guideTeaserDecoder)
+                    |> Json.Decode.Extra.withDefault []
+                )
+        )
 
---- [fFf] test story to be removed
 
+storyFromSlug : Language -> Dict String Story -> String -> Story
+storyFromSlug language stories slug =
+    case Dict.get slug stories of
+        Just aStory ->
+            aStory
 
-testStory : Story
-testStory =
-    { title = "A test story"
-    , description = "Test description"
-    , maybeMetadata =
-        Just
-            { location = "Test location"
-            , author = "Test author"
-            , images = [ { src = "/images/wildlife-trust-logo.png", alt = "placeholder" } ]
-            }
-    , relatedGuideList = []
-    }
-
-
-storyFromSlug : Language -> String -> Story
-storyFromSlug language slug =
-    -- TODO populate from markdown
-    testStory
+        Nothing ->
+            blankStory language
