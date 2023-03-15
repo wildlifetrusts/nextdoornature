@@ -6,6 +6,7 @@ import Html.Styled.Attributes exposing (alt, attribute, autoplay, css, href, src
 import Json.Decode exposing (Decoder)
 import List exposing (map, sortBy)
 import Message exposing (Msg)
+import String exposing (length, padRight)
 
 
 type alias AudioMeta =
@@ -96,6 +97,17 @@ viewAudio audioMeta =
     text "[fFf] render audio player"
 
 
+limitContent : String -> Int -> String
+limitContent summary limit =
+    if length summary > limit then
+        summary
+            |> String.slice 0 (limit - 3)
+            |> padRight limit '.'
+
+    else
+        summary
+
+
 viewGuideTeaser : GuideTeaser -> Html Msg
 viewGuideTeaser teaser =
     div []
@@ -103,7 +115,7 @@ viewGuideTeaser teaser =
             [ a [ href teaser.url ] [ text teaser.title ] ]
         , p
             []
-            [ text teaser.summary ]
+            [ text <| limitContent teaser.summary 240 ]
         ]
 
 
