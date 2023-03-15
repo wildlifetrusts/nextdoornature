@@ -19,6 +19,7 @@ suite =
             { title = "A minimal test guide"
             , slug = "a-guide"
             , fullTextMarkdown = "# Some minimal test reource markdown"
+            , summary = "Some minimal test reource markdown"
             , maybeVideo = Nothing
             , maybeAudio = Nothing
             , relatedStoryList = []
@@ -30,6 +31,7 @@ suite =
             { title = "A full test guide"
             , slug = "a-guide"
             , fullTextMarkdown = "# Some full test reource markdown"
+            , summary = "Some full test reource markdown"
             , maybeVideo =
                 Just
                     { title = "A guide video"
@@ -55,9 +57,11 @@ suite =
             , relateGuideList =
                 [ { title = "A related guide"
                   , url = "/a-guide"
+                  , summary = "A related guide"
                   }
                 , { title = "Another related guide"
                   , url = "/another-guide"
+                  , summary = "A related guide"
                   }
                 ]
             }

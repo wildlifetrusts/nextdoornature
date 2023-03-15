@@ -36,9 +36,11 @@ suite =
             , relatedGuideList =
                 [ { title = "A related guide"
                   , url = "/a-guide"
+                  , summary = "A related guide"
                   }
                 , { title = "Another related guide"
                   , url = "/another-guide"
+                  , summary = "A related guide"
                   }
                 ]
             }
