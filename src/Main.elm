@@ -14,7 +14,7 @@ import Page.Shared.Data
 import Page.Stories.Data
 import Page.Stories.View
 import Route exposing (Route(..))
-import Shared exposing (Model)
+import Shared exposing (CookieState, Model)
 import Theme.PageTemplate
 import Url
 
@@ -44,7 +44,10 @@ init flags url key =
     in
     ( { key = key
       , page = Maybe.withDefault Index maybeRoute
-      , enableAnalytics = False
+      , cookieState =
+            { enableAnalytics = False
+            , cookieBannerIsOpen = True
+            }
       , content = Page.Shared.Data.contentDictDecoder flags
       , language = English
       }
@@ -87,7 +90,15 @@ update msg model =
             )
 
         CookiesAccepted ->
-            ( { model | enableAnalytics = True }, Cmd.none )
+            ( { model | cookieState = updateCookieState model.cookieState True }, Cmd.none )
+
+        CookiesDeclined ->
+            ( { model | cookieState = updateCookieState model.cookieState False }, Cmd.none )
+
+
+updateCookieState : CookieState -> Bool -> CookieState
+updateCookieState oldState optedIn =
+    { oldState | enableAnalytics = optedIn, cookieBannerIsOpen = False }
 
 
 subscriptions : Model -> Sub Msg

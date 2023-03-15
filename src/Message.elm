@@ -9,3 +9,4 @@ type Msg
     | LinkClicked Browser.UrlRequest
     | LanguageChangeRequested
     | CookiesAccepted
+    | CookiesDeclined
