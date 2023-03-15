@@ -5,6 +5,7 @@ import Html.Styled.Attributes exposing (alt, href, src)
 import Message exposing (Msg)
 import Page.Shared.View
 import Page.Stories.Data
+import Theme.Markdown exposing (markdownToHtml)
 
 
 view : Page.Stories.Data.Story -> Html Msg
@@ -33,7 +34,7 @@ view story =
                 Nothing ->
                     [ text "" ]
             )
-        , p [] [ text story.fullTextMarkdown ]
+        , div [] (markdownToHtml story.fullTextMarkdown)
         , viewRelatedGuideTeasers story.relatedGuideList
         ]
 
