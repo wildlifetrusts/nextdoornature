@@ -98,5 +98,6 @@ teaserListFromGuideDict language guides =
             (\( _, guide ) ->
                 { title = guide.title
                 , url = slugToUrl guide.slug
+                , summary = guide.summary
                 }
             )

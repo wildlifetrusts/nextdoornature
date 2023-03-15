@@ -65,14 +65,16 @@ imageDecoder =
 type alias GuideTeaser =
     { title : String
     , url : String
+    , summary : String
     }
 
 
 guideTeaserDecoder : Json.Decode.Decoder GuideTeaser
 guideTeaserDecoder =
-    Json.Decode.map2 GuideTeaser
+    Json.Decode.map3 GuideTeaser
         (Json.Decode.field "title" Json.Decode.string)
         (Json.Decode.field "url" Json.Decode.string)
+        (Json.Decode.field "summary" Json.Decode.string)
 
 
 viewVideo : VideoMeta -> Html Msg
@@ -96,7 +98,13 @@ viewAudio audioMeta =
 
 viewGuideTeaser : GuideTeaser -> Html Msg
 viewGuideTeaser teaser =
-    a [ href teaser.url ] [ text teaser.title ]
+    div []
+        [ p []
+            [ a [ href teaser.url ] [ text teaser.title ] ]
+        , p
+            []
+            [ text teaser.summary ]
+        ]
 
 
 viewGuideTeaserList : List GuideTeaser -> Html Msg
@@ -156,8 +164,6 @@ storyTeaserStyle =
 
 
 -- utils
-
-
-guideTeaserList : List String -> List GuideTeaser
-guideTeaserList titles =
-    List.map (\title -> GuideTeaser title <| "/guides/" ++ String.replace " " "-" title) titles
+-- guideTeaserList : List String -> List GuideTeaser
+-- guideTeaserList titles =
+--     List.map (\title -> GuideTeaser title <| "/guides/" ++ String.replace " " "-" title) titles
