@@ -6,8 +6,9 @@
   "scripts": {
     "dev": "vite",
     "build": "npm run generate && vite build",
-    "generate": "npm run generate_guides",
+    "generate": "npm run generate_guides && npm run generate_stories",
     "generate_guides": "m2j -o ./data/guides.json -c ./content/guides/*.md",
+    "generate_stories": "m2j -o ./data/stories.json -c ./content/stories/*.md",
     "format": "elm-format src",
     "lint": "npx elm-review",
     "test": "elm-test",

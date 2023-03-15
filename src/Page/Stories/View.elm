@@ -11,17 +11,28 @@ view : Page.Stories.Data.Story -> Html Msg
 view story =
     div []
         [ h1 [] [ text story.title ]
-        , case story.maybeMetadata of
-            Just metadata ->
-                div []
-                    [ p [] [ text metadata.location ]
-                    , p [] [ text metadata.author ]
-                    , div []
-                        (List.map (\image -> img [ src image.src, alt image.alt ] []) metadata.images)
-                    , p [] [ text story.description ]
-                    ]
+        , div []
+            [ case story.maybeGroupOrIndividual of
+                Just groupOrIndividual ->
+                    p [] [ text groupOrIndividual ]
 
-            Nothing ->
-                p [] [ text story.description ]
+                Nothing ->
+                    text ""
+            , case story.maybeLocation of
+                Just location ->
+                    p [] [ text location ]
+
+                Nothing ->
+                    text ""
+            ]
+        , div []
+            (case story.maybeImages of
+                Just images ->
+                    List.map (\image -> img [ src image.src, alt image.alt ] []) images
+
+                Nothing ->
+                    [ text "" ]
+            )
+        , p [] [ text story.fullTextMarkdown ]
         , Page.Shared.View.viewGuideTeaserList story.relatedGuideList
         ]
