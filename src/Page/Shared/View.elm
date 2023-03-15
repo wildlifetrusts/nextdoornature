@@ -1,12 +1,13 @@
 module Page.Shared.View exposing (AudioMeta, GuideTeaser, Image, StoryTeaser, VideoMeta, audioDecoder, guideTeaserDecoder, imageDecoder, storyTeaserDecoder, videoDecoder, viewAudio, viewGuideTeaserList, viewStoryTeasers, viewVideo)
 
 import Css exposing (Style, batch, center, column, displayFlex, flexDirection, flexWrap, height, justifyContent, maxWidth, px, wrap)
-import Html.Styled exposing (Html, a, div, iframe, img, li, p, text, ul)
+import Html.Styled exposing (Html, a, div, i, iframe, img, li, p, text, ul)
 import Html.Styled.Attributes exposing (alt, attribute, autoplay, css, href, src, title)
 import Json.Decode exposing (Decoder)
 import List exposing (map, sortBy)
 import Message exposing (Msg)
 import String exposing (length, padRight)
+import Svg.Styled exposing (image)
 
 
 type alias AudioMeta =
@@ -67,15 +68,17 @@ type alias GuideTeaser =
     { title : String
     , url : String
     , summary : String
+    , maybeImage : Maybe Image
     }
 
 
 guideTeaserDecoder : Json.Decode.Decoder GuideTeaser
 guideTeaserDecoder =
-    Json.Decode.map3 GuideTeaser
+    Json.Decode.map4 GuideTeaser
         (Json.Decode.field "title" Json.Decode.string)
         (Json.Decode.field "url" Json.Decode.string)
         (Json.Decode.field "summary" Json.Decode.string)
+        (Json.Decode.maybe (Json.Decode.field "image" imageDecoder))
 
 
 viewVideo : VideoMeta -> Html Msg
@@ -108,10 +111,28 @@ limitContent summary limit =
         summary
 
 
+defaultTeaserImg : Image
+defaultTeaserImg =
+    { src = "/images/wildlife-trust-logo.png"
+    , alt = "[cCc] back up alt text for defualt image"
+    }
+
+
 viewGuideTeaser : GuideTeaser -> Html Msg
 viewGuideTeaser teaser =
+    let
+        image : Image
+        image =
+            case teaser.maybeImage of
+                Just i ->
+                    i
+
+                Nothing ->
+                    defaultTeaserImg
+    in
     div []
-        [ p []
+        [ img [ src image.src, alt image.alt ] []
+        , p []
             [ a [ href teaser.url ] [ text teaser.title ] ]
         , p
             []

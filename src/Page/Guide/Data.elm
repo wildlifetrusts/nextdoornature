@@ -5,7 +5,7 @@ import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (Language, translate)
 import Json.Decode
 import Json.Decode.Extra
-import Page.Shared.View
+import Page.Shared.View exposing (Image)
 
 
 type alias Guide =
@@ -13,6 +13,7 @@ type alias Guide =
     , slug : String
     , fullTextMarkdown : String
     , summary : String
+    , maybeImage : Maybe Image
     , maybeVideo : Maybe Page.Shared.View.VideoMeta
     , maybeAudio : Maybe Page.Shared.View.AudioMeta
     , relatedStoryList : List Page.Shared.View.StoryTeaser
@@ -31,6 +32,7 @@ blankGuide language =
     , slug = t Guide404Slug
     , fullTextMarkdown = t Guide404Body
     , summary = t Guide404Title
+    , maybeImage = Nothing
     , maybeVideo = Nothing
     , maybeAudio = Nothing
     , relatedStoryList =
@@ -56,6 +58,8 @@ guideDictDecoder =
                 (Json.Decode.field "content" Json.Decode.string |> Json.Decode.Extra.withDefault "")
             |> Json.Decode.Extra.andMap
                 (Json.Decode.field "summary" Json.Decode.string |> Json.Decode.Extra.withDefault "")
+            |> Json.Decode.Extra.andMap
+                (Json.Decode.maybe (Json.Decode.field "image" Page.Shared.View.imageDecoder))
             |> Json.Decode.Extra.andMap
                 (Json.Decode.maybe (Json.Decode.field "maybeVideo" Page.Shared.View.videoDecoder))
             |> Json.Decode.Extra.andMap
@@ -99,5 +103,6 @@ teaserListFromGuideDict language guides =
                 { title = guide.title
                 , url = slugToUrl guide.slug
                 , summary = guide.summary
+                , maybeImage = guide.maybeImage
                 }
             )
