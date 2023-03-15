@@ -1,4 +1,4 @@
-module Page.Shared.View exposing (AudioMeta, GuideTeaser, StoryTeaser, VideoMeta, audioDecoder, guideTeaserDecoder, storyTeaserDecoder, videoDecoder, viewAudio, viewGuideTeaserList, viewStoryTeasers, viewVideo)
+module Page.Shared.View exposing (AudioMeta, GuideTeaser, Image, StoryTeaser, VideoMeta, audioDecoder, guideTeaserDecoder, imageDecoder, storyTeaserDecoder, videoDecoder, viewAudio, viewGuideTeaserList, viewStoryTeasers, viewVideo)
 
 import Css exposing (Style, batch, center, column, displayFlex, flexDirection, flexWrap, height, justifyContent, maxWidth, px, wrap)
 import Html.Styled exposing (Html, a, div, iframe, img, li, p, text, ul)
@@ -12,6 +12,10 @@ type alias AudioMeta =
     { title : String
     , src : String
     }
+
+
+type alias Image =
+    { src : String, alt : String }
 
 
 audioDecoder : Json.Decode.Decoder AudioMeta
@@ -32,10 +36,6 @@ videoDecoder =
     Json.Decode.map2 VideoMeta
         (Json.Decode.field "title" Json.Decode.string)
         (Json.Decode.field "src" Json.Decode.string)
-
-
-type alias Image =
-    { src : String, alt : String }
 
 
 type alias StoryTeaser =
