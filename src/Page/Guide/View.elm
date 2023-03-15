@@ -5,13 +5,14 @@ import Html.Styled.Attributes exposing (href)
 import Message exposing (Msg)
 import Page.Guide.Data
 import Page.Shared.View
+import Theme.Markdown exposing (markdownToHtml)
 
 
 view : Page.Guide.Data.Guide -> Html Msg
 view guide =
     div []
         [ h1 [] [ text guide.title ]
-        , p [] [ text guide.fullTextMarkdown ]
+        , div [] (markdownToHtml guide.fullTextMarkdown)
         , viewMaybeVideo guide.maybeVideo
         , viewMaybeAudio guide.maybeAudio
         , Page.Shared.View.viewStoryTeasers guide.relatedStoryList

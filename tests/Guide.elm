@@ -8,7 +8,7 @@ import Page.Guide.View exposing (view)
 import Page.Shared.View exposing (defaultTeaserImg)
 import Test exposing (Test, describe, test)
 import Test.Html.Query as Query
-import Test.Html.Selector exposing (tag)
+import Test.Html.Selector exposing (classes, tag, text)
 import TestUtils exposing (queryFromStyledHtml)
 
 
@@ -82,11 +82,14 @@ suite =
                         |> Query.contains
                             [ Html.h1 [] [ Html.text guideMinimal.title ]
                             ]
-            , test "Guide view has a body" <|
+            , test "Guide view has body that is HTML" <|
                 \() ->
-                    queryFromStyledHtml (view guideMinimal)
-                        |> Query.contains
-                            [ Html.p [] [ Html.text guideMinimal.fullTextMarkdown ]
+                    queryFromStyledHtml (view guideFull)
+                        |> Query.has
+                            [ tag "h1"
+                            , text "Some full test reource markdown"
+                            , tag "p"
+                            , text "A small paragraph."
                             ]
             , test "Guide view can have a video" <|
                 \() ->
