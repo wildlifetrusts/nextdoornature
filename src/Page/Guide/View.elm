@@ -1,6 +1,6 @@
 module Page.Guide.View exposing (view)
 
-import Html.Styled as Html exposing (a, div, fromUnstyled, h1, li, p, text, ul)
+import Html.Styled exposing (Html, a, div, h1, li, p, text, ul)
 import Html.Styled.Attributes exposing (href)
 import Message exposing (Msg)
 import Page.Guide.Data
@@ -8,7 +8,7 @@ import Page.Shared.View
 import Theme.Markdown exposing (markdownToHtml)
 
 
-view : Page.Guide.Data.Guide -> Html.Html Msg
+view : Page.Guide.Data.Guide -> Html Msg
 view guide =
     div []
         [ h1 [] [ text guide.title ]
@@ -20,7 +20,7 @@ view guide =
         ]
 
 
-viewMaybeVideo : Maybe Page.Shared.View.VideoMeta -> Html.Html Msg
+viewMaybeVideo : Maybe Page.Shared.View.VideoMeta -> Html Msg
 viewMaybeVideo maybeVideoMeta =
     case maybeVideoMeta of
         Just aVideo ->
@@ -30,7 +30,7 @@ viewMaybeVideo maybeVideoMeta =
             text ""
 
 
-viewMaybeAudio : Maybe Page.Shared.View.AudioMeta -> Html.Html Msg
+viewMaybeAudio : Maybe Page.Shared.View.AudioMeta -> Html Msg
 viewMaybeAudio maybeAudioMeta =
     case maybeAudioMeta of
         Just anAudio ->
@@ -40,7 +40,7 @@ viewMaybeAudio maybeAudioMeta =
             text ""
 
 
-viewRelatedGuideTeasers : List Page.Shared.View.GuideTeaser -> Html.Html Msg
+viewRelatedGuideTeasers : List Page.Shared.View.GuideTeaser -> Html Msg
 viewRelatedGuideTeasers guideList =
     if List.length guideList > 0 then
         ul []
