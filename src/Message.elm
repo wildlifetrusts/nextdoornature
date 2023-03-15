@@ -8,3 +8,4 @@ type Msg
     = UrlChanged Url.Url
     | LinkClicked Browser.UrlRequest
     | LanguageChangeRequested
+    | CookiesAccepted

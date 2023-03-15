@@ -10,6 +10,7 @@ import Route exposing (Route)
 type alias Model =
     { key : Browser.Navigation.Key
     , page : Route
+    , enableAnalytics : Bool
     , language : Language
     , content : Content
     }

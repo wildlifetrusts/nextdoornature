@@ -44,6 +44,7 @@ init flags url key =
     in
     ( { key = key
       , page = Maybe.withDefault Index maybeRoute
+      , enableAnalytics = False
       , content = Page.Shared.Data.contentDictDecoder flags
       , language = English
       }
@@ -84,6 +85,9 @@ update msg model =
                 { model | language = English }
             , Cmd.none
             )
+
+        CookiesAccepted ->
+            ( { model | enableAnalytics = True }, Cmd.none )
 
 
 subscriptions : Model -> Sub Msg
