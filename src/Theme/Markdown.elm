@@ -27,13 +27,13 @@ markdownToView markdownString =
         |> Result.andThen
             (\blocks ->
                 Markdown.Renderer.render
-                    transHtmlRenderer
+                    htmlRenderer
                     blocks
             )
 
 
-transHtmlRenderer : Markdown.Renderer.Renderer (Html.Html msg)
-transHtmlRenderer =
+htmlRenderer : Markdown.Renderer.Renderer (Html.Html msg)
+htmlRenderer =
     { heading =
         \{ level, children } ->
             case level of
