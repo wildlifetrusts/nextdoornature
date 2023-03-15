@@ -1,4 +1,4 @@
-module Page.Shared.View exposing (AudioMeta, GuideTeaser, Image, StoryTeaser, VideoMeta, audioDecoder, guideTeaserDecoder, imageDecoder, storyTeaserDecoder, videoDecoder, viewAudio, viewGuideTeaserList, viewStoryTeasers, viewVideo)
+module Page.Shared.View exposing (AudioMeta, GuideTeaser, Image, StoryTeaser, VideoMeta, audioDecoder, defaultTeaserImg, guideTeaserDecoder, imageDecoder, storyTeaserDecoder, videoDecoder, viewAudio, viewGuideTeaserList, viewStoryTeasers, viewVideo)
 
 import Css exposing (Style, batch, center, column, displayFlex, flexDirection, flexWrap, height, justifyContent, maxWidth, px, wrap)
 import Html.Styled exposing (Html, a, div, i, iframe, img, li, p, text, ul)

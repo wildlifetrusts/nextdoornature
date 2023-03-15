@@ -3,6 +3,7 @@ module Stories exposing (suite)
 import Html
 import Html.Attributes
 import I18n.Keys exposing (Key(..))
+import Page.Shared.View exposing (defaultTeaserImg)
 import Page.Stories.Data exposing (Story)
 import Page.Stories.View exposing (view)
 import Svg.Styled exposing (metadata)
@@ -37,10 +38,12 @@ suite =
                 [ { title = "A related guide"
                   , url = "/a-guide"
                   , summary = "A related guide"
+                  , maybeImage = Just defaultTeaserImg
                   }
                 , { title = "Another related guide"
                   , url = "/another-guide"
                   , summary = "A related guide"
+                  , maybeImage = Just defaultTeaserImg
                   }
                 ]
             }

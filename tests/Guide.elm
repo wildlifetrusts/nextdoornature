@@ -5,6 +5,7 @@ import Html.Attributes
 import I18n.Keys exposing (Key(..))
 import Page.Guide.Data exposing (Guide)
 import Page.Guide.View exposing (view)
+import Page.Shared.View exposing (defaultTeaserImg)
 import Test exposing (Test, describe, test)
 import Test.Html.Query as Query
 import Test.Html.Selector exposing (tag)
@@ -20,6 +21,7 @@ suite =
             , slug = "a-guide"
             , fullTextMarkdown = "# Some minimal test reource markdown"
             , summary = "Some minimal test reource markdown"
+            , maybeImage = Nothing
             , maybeVideo = Nothing
             , maybeAudio = Nothing
             , relatedStoryList = []
@@ -32,6 +34,7 @@ suite =
             , slug = "a-guide"
             , fullTextMarkdown = "# Some full test reource markdown"
             , summary = "Some full test reource markdown"
+            , maybeImage = Just defaultTeaserImg
             , maybeVideo =
                 Just
                     { title = "A guide video"
@@ -58,10 +61,12 @@ suite =
                 [ { title = "A related guide"
                   , url = "/a-guide"
                   , summary = "A related guide"
+                  , maybeImage = Just defaultTeaserImg
                   }
                 , { title = "Another related guide"
                   , url = "/another-guide"
                   , summary = "A related guide"
+                  , maybeImage = Just defaultTeaserImg
                   }
                 ]
             }
