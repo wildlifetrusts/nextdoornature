@@ -7,12 +7,14 @@ import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (Language(..))
 import Json.Decode
 import Message exposing (Msg(..))
+import Page.Data
 import Page.Guide.Data
 import Page.Guide.View
 import Page.Index
 import Page.Shared.Data
 import Page.Stories.Data
 import Page.Stories.View
+import Page.View
 import Route exposing (Route(..))
 import Shared exposing (Model)
 import Theme.PageTemplate
@@ -110,9 +112,30 @@ view model =
                     Page.Stories.View.view (Page.Stories.Data.storyFromSlug model.language model.content.stories slug)
                 }
 
+        StoryIndex ->
+            Theme.PageTemplate.view model
+                { title = StoryTitle
+                , content =
+                    Page.Stories.View.view (Page.Stories.Data.storyFromSlug model.language model.content.stories "")
+                }
+
         Guide slug ->
             Theme.PageTemplate.view model
                 { title = GuideTitle
                 , content =
                     Page.Guide.View.view (Page.Guide.Data.guideFromSlug model.language model.content.guides slug)
+                }
+
+        GuideIndex ->
+            Theme.PageTemplate.view model
+                { title = GuideTitle
+                , content =
+                    Page.Guide.View.view (Page.Guide.Data.guideFromSlug model.language model.content.guides "")
+                }
+
+        Page slug ->
+            Theme.PageTemplate.view model
+                { title = PageTitle slug
+                , content =
+                    Page.View.view (Page.Data.pageFromSlug model.language model.content.pages slug)
                 }

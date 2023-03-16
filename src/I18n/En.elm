@@ -1,6 +1,7 @@
 module I18n.En exposing (enStrings)
 
 import I18n.Keys exposing (Key(..))
+import String.Case exposing (convertCase)
 
 
 enStrings : Key -> String
@@ -17,6 +18,9 @@ enStrings key =
 
         GuideTitle ->
             "[cCc] Guide"
+
+        PageTitle string ->
+            "[cCc]" ++ convertCase " " True False string
 
         ---
         -- Header
@@ -40,6 +44,18 @@ enStrings key =
             "[cCc] Sorry, we can't find that story"
 
         Story404Body ->
+            "[cCc] Try searching again [home](\"\\\")"
+
+        Story404Slug ->
+            "story-not-found"
+
+        AncillaryPage404Title ->
+            "[cCc] Sorry, we can't find that page"
+
+        AncillaryPage404Slug ->
+            "page-not-found"
+
+        AncillaryPage404Body ->
             "[cCc] Try searching again [home](\"\\\")"
 
         ---
