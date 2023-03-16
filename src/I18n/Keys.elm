@@ -7,6 +7,8 @@ type Key
     | StoryTitle
     | GuideTitle
     | PageTitle String
+    | GuidesTitle
+    | StoriesTitle
     | ChangeLanguage
       --- 404 content
     | Story404Title

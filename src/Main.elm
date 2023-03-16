@@ -10,6 +10,7 @@ import Message exposing (Msg(..))
 import Page.Data
 import Page.Guide.Data
 import Page.Guide.View
+import Page.Guides
 import Page.Index
 import Page.Shared.Data
 import Page.Stories.Data
@@ -112,9 +113,9 @@ view model =
                     Page.Stories.View.view (Page.Stories.Data.storyFromSlug model.language model.content.stories slug)
                 }
 
-        StoryIndex ->
+        Stories ->
             Theme.PageTemplate.view model
-                { title = StoryTitle
+                { title = StoriesTitle
                 , content =
                     Page.Stories.View.view (Page.Stories.Data.storyFromSlug model.language model.content.stories "")
                 }
@@ -126,11 +127,11 @@ view model =
                     Page.Guide.View.view (Page.Guide.Data.guideFromSlug model.language model.content.guides slug)
                 }
 
-        GuideIndex ->
+        Guides ->
             Theme.PageTemplate.view model
-                { title = GuideTitle
+                { title = GuidesTitle
                 , content =
-                    Page.Guide.View.view (Page.Guide.Data.guideFromSlug model.language model.content.guides "")
+                    Page.Guides.view model
                 }
 
         Page slug ->

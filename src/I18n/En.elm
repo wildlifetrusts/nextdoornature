@@ -22,6 +22,12 @@ enStrings key =
         PageTitle string ->
             "[cCc]" ++ convertCase " " True False string
 
+        GuidesTitle ->
+            "[cCc] Guides"
+
+        StoriesTitle ->
+            "[cCc] Stories"
+
         ---
         -- Header
         ---
