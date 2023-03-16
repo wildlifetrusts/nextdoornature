@@ -1,4 +1,4 @@
-module Route exposing (Route(..), fromUrl)
+module Route exposing (Route(..), fromUrl, toString)
 
 import Url
 import Url.Parser as Parser exposing ((</>), Parser, map, oneOf, s, string, top)
@@ -8,6 +8,7 @@ type Route
     = Index
     | Story String
     | Guide String
+    | Guides
 
 
 fromUrl : Url.Url -> Maybe Route
@@ -28,6 +29,9 @@ toString route =
         Guide s ->
             "/guides" ++ "/" ++ s
 
+        Guides ->
+            "/guides"
+
 
 routeParser : Parser (Route -> a) a
 routeParser =
@@ -35,4 +39,5 @@ routeParser =
         [ map Index top
         , map Story (s "stories" </> string)
         , map Guide (s "guides" </> string)
+        , map Guides (s "guides")
         ]
