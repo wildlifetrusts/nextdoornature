@@ -11,6 +11,7 @@ import Json.Decode
 import Message exposing (Msg(..))
 import Page.Guide.Data
 import Page.Guide.View
+import Page.Guides
 import Page.Index
 import Page.Shared.Data
 import Page.Stories.Data
@@ -188,4 +189,11 @@ view model =
                 { title = GuideTitle
                 , content =
                     Page.Guide.View.view (Page.Guide.Data.guideFromSlug model.language model.content.guides slug)
+                }
+
+        Guides ->
+            Theme.PageTemplate.view model
+                { title = GuidesTitle
+                , content =
+                    Page.Guides.view model
                 }

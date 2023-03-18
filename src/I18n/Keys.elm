@@ -6,6 +6,7 @@ type Key
       --- Page Titles
     | StoryTitle
     | GuideTitle
+    | GuidesTitle
     | ChangeLanguage
       --- 404 content
     | Story404Title

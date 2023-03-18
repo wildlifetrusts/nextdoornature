@@ -1,5 +1,12 @@
 ---
 title: Types of community group
+image:
+  src: "/images/wildlife-trust-logo.png"
+  alt: "[cCc] some alt text"
+summary: |-
+  If you’re just a small group of volunteers, with no plans to employ staff or rent premises, this is the one for you.
+
+  It’s the easiest group to set up. All you need is to write a **constitution** or **governing document**. This is a list of rules for the group. It also says what your group’s going to do, and how it’s going to do it.
 ---
 
 ## [cCc] Types of Community Group (England and Wales)

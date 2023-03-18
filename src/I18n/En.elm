@@ -18,6 +18,9 @@ enStrings key =
         GuideTitle ->
             "[cCc] Guide"
 
+        GuidesTitle ->
+            "[cCc] Guides"
+
         ---
         -- Header
         ---
