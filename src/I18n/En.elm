@@ -79,7 +79,7 @@ enStrings key =
 
         CookieBannerP ->
             """
-            Our website uses cookies and data to make sure you have the best experience and to help us fundraise efficiently to save wildlife. Some cookies are essential to make our website work.
+            [cCc] Our website uses cookies and data to make sure you have the best experience and to help us fundraise efficiently to save wildlife. Some cookies are essential to make our website work.
             """
 
         CookieAcceptButtonText ->
