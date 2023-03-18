@@ -44,24 +44,19 @@ init flags url key =
         maybeRoute =
             Route.fromUrl url
 
+        storedConsent : String
         storedConsent =
             consentDecoder flags
 
+        hasConsented : Bool
         hasConsented =
-            if storedConsent == "true" then
-                True
+            -- for null, false & undefined, we assume no consent
+            storedConsent == "true"
 
-            else
-                -- for null, false & undefined, we assume no consent
-                False
-
+        showCookieBanner : Bool
         showCookieBanner =
-            if storedConsent == "null" then
-                True
-
-            else
-                -- user has previously stated a preference, info should be collapsed
-                False
+            -- user has previously stated a preference, info should be collapsed
+            storedConsent == "null"
     in
     ( { key = key
       , page = Maybe.withDefault Index maybeRoute
@@ -76,6 +71,7 @@ init flags url key =
     )
 
 
+consentDecoder : Flags -> String
 consentDecoder flags =
     case Json.Decode.decodeValue flagsConsentDecoder flags of
         Ok goodConsentedBool ->
@@ -85,6 +81,7 @@ consentDecoder flags =
             "null"
 
 
+flagsConsentDecoder : Json.Decode.Decoder String
 flagsConsentDecoder =
     Json.Decode.field "hasConsented" Json.Decode.string
 

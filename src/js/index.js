@@ -4,7 +4,9 @@ import { Elm } from "/src/Main.elm";
 import guides from "../../data/guides.json";
 import stories from "../../data/stories.json";
 
-const hasConsented = sessionStorage.getItem("ga-cookie-consent") ? sessionStorage.getItem("ga-cookie-consent") : "null";
+const hasConsented = sessionStorage.getItem("ga-cookie-consent")
+  ? sessionStorage.getItem("ga-cookie-consent")
+  : "null";
 
 const app = Elm.Main.init({ flags: { hasConsented, guides, stories } });
 
@@ -15,23 +17,29 @@ app.ports.saveConsent.subscribe(function (hasConsented) {
 
 // Google analytics subscribe to page changes and custom events
 app.ports.updateAnalyticsPage.subscribe(function (page) {
-    if (typeof window != undefined) {
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      // TODO this is temporarily @katjam dev account
-      gtag("config", "G-D3VTD4SBDZ", { "page_path" : page });
+  if (typeof window != undefined) {
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
     }
+    gtag("js", new Date());
+
+    // TODO this is temporarily @katjam dev account
+    gtag("config", "G-D3VTD4SBDZ", { page_path: page });
+  }
 });
 
 app.ports.updateAnalyticsEvent.subscribe(function (gaEvent) {
   if (typeof window != undefined) {
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
 
-    gtag("event", gaEvent.action, { "event_category" : gaEvent.category, "event_label" : gaEvent.label });
+    gtag("event", gaEvent.action, {
+      event_category: gaEvent.category,
+      event_label: gaEvent.label,
+    });
   }
 });
-

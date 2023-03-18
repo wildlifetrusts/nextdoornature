@@ -1,6 +1,5 @@
 port module CookieBanner exposing (saveConsent, viewCookieBanner)
 
-import Browser.Navigation exposing (back)
 import Html.Styled exposing (Html, button, div, h2, p, text)
 import Html.Styled.Events exposing (onClick)
 import I18n.Keys exposing (Key(..))
@@ -13,15 +12,15 @@ viewCookieBanner : Language -> CookieState -> Html Msg
 viewCookieBanner language cookieState =
     div []
         [ if cookieState.cookieBannerIsOpen then
-            viewCookieBannerContent language cookieState
+            viewCookieBannerContent language
 
           else
             viewCookieSettingsButton language
         ]
 
 
-viewCookieBannerContent : Language -> CookieState -> Html Msg
-viewCookieBannerContent language cookieState =
+viewCookieBannerContent : Language -> Html Msg
+viewCookieBannerContent language =
     let
         t : Key -> String
         t =
