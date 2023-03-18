@@ -1,15 +1,17 @@
-module Page.Stories.View exposing (view)
+module Page.Story.View exposing (view)
 
 import Html.Styled exposing (Html, a, div, h1, img, li, p, text, ul)
-import Html.Styled.Attributes exposing (alt, href, src)
+import Html.Styled.Attributes exposing (alt, css, href, src)
 import Message exposing (Msg)
 import Page.Shared.View
-import Page.Stories.Data
+import Page.Story.Data
+import Theme.Global exposing (centerContent)
+import Theme.Markdown exposing (markdownToHtml)
 
 
-view : Page.Stories.Data.Story -> Html Msg
+view : Page.Story.Data.Story -> Html Msg
 view story =
-    div []
+    div [ css [ centerContent ] ]
         [ h1 [] [ text story.title ]
         , div []
             [ case story.maybeGroupOrIndividual of
@@ -33,6 +35,6 @@ view story =
                 Nothing ->
                     [ text "" ]
             )
-        , p [] [ text story.fullTextMarkdown ]
+        , div [] (markdownToHtml story.fullTextMarkdown)
         , Page.Shared.View.viewGuideTeaserList story.relatedGuideList
         ]

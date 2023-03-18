@@ -15,6 +15,9 @@ cyStrings key =
         GuideTitle ->
             "[cCc] Guide CY"
 
+        GuidesTitle ->
+            "[cCc] Guides CY"
+
         ChangeLanguage ->
             "[cCc] Switch to English"
 

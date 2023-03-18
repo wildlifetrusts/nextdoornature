@@ -1,13 +1,15 @@
-module Stories exposing (suite)
+module Story exposing (suite)
 
 import Html
 import Html.Attributes
 import I18n.Keys exposing (Key(..))
-import Page.Stories.Data exposing (Story)
-import Page.Stories.View exposing (view)
+import Page.Shared.View exposing (defaultTeaserImg)
+import Page.Story.Data exposing (Story)
+import Page.Story.View exposing (view)
 import Svg.Styled exposing (metadata)
 import Test exposing (Test, describe, test)
 import Test.Html.Query as Query
+import Test.Html.Selector exposing (classes, tag, text)
 import TestUtils exposing (queryFromStyledHtml)
 
 
@@ -28,7 +30,7 @@ suite =
         storyFull : Story
         storyFull =
             { title = "A full test story"
-            , fullTextMarkdown = "# Some full test reource markdown"
+            , fullTextMarkdown = "# Some full test reource markdown\n\nA small paragraph."
             , slug = "slug"
             , maybeLocation = Just "Test location"
             , maybeGroupOrIndividual = Just "Test group"
@@ -36,15 +38,19 @@ suite =
             , relatedGuideList =
                 [ { title = "A related guide"
                   , url = "/a-guide"
+                  , summary = "A related guide"
+                  , maybeImage = Just defaultTeaserImg
                   }
                 , { title = "Another related guide"
                   , url = "/another-guide"
+                  , summary = "A related guide"
+                  , maybeImage = Just defaultTeaserImg
                   }
                 ]
             }
 
         view =
-            Page.Stories.View.view
+            Page.Story.View.view
     in
     describe "Story Page"
         [ describe "View tests"
@@ -54,11 +60,14 @@ suite =
                         |> Query.contains
                             [ Html.h1 [] [ Html.text storyMinimal.title ]
                             ]
-            , test "Story view has a description" <|
+            , test "Story view has body that is HTML" <|
                 \() ->
-                    queryFromStyledHtml (view storyMinimal)
-                        |> Query.contains
-                            [ Html.p [] [ Html.text storyMinimal.fullTextMarkdown ]
+                    queryFromStyledHtml (view storyFull)
+                        |> Query.has
+                            [ tag "h1"
+                            , text "Some full test reource markdown"
+                            , tag "p"
+                            , text "A small paragraph."
                             ]
             , test "Story view can have related guide teasers" <|
                 \() ->

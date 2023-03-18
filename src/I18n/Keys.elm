@@ -6,6 +6,7 @@ type Key
       --- Page Titles
     | StoryTitle
     | GuideTitle
+    | GuidesTitle
     | ChangeLanguage
       --- 404 content
     | Story404Title
@@ -20,6 +21,8 @@ type Key
     | FooterTitleColumnC
     | FooterVisitWebsiteText
     | FooterVisitWebsiteLink
+    | FooterGuidesLinkText
+    | FooterGuidesLink
     | FooterFindYourLocalTrustText
     | FooterFindYourLocalTrustLink
       --- Index Page

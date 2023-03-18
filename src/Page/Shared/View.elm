@@ -1,11 +1,13 @@
-module Page.Shared.View exposing (AudioMeta, GuideTeaser, Image, StoryTeaser, VideoMeta, audioDecoder, guideTeaserDecoder, imageDecoder, storyTeaserDecoder, videoDecoder, viewAudio, viewGuideTeaserList, viewStoryTeasers, viewVideo)
+module Page.Shared.View exposing (AudioMeta, GuideTeaser, Image, StoryTeaser, VideoMeta, audioDecoder, defaultTeaserImg, guideTeaserDecoder, imageDecoder, storyTeaserDecoder, videoDecoder, viewAudio, viewGuideTeaserList, viewStoryTeasers, viewVideo)
 
 import Css exposing (Style, batch, center, column, displayFlex, flexDirection, flexWrap, height, justifyContent, maxWidth, px, wrap)
-import Html.Styled exposing (Html, a, div, iframe, img, li, p, text, ul)
+import Html.Styled exposing (Html, a, div, i, iframe, img, li, p, text, ul)
 import Html.Styled.Attributes exposing (alt, attribute, autoplay, css, href, src, title)
 import Json.Decode exposing (Decoder)
 import List exposing (map, sortBy)
 import Message exposing (Msg)
+import String exposing (length, padRight)
+import Svg.Styled exposing (image)
 
 
 type alias AudioMeta =
@@ -64,15 +66,21 @@ imageDecoder =
 
 type alias GuideTeaser =
     { title : String
+
+    -- This will maybe turn into Url.Url when we include external resources
     , url : String
+    , summary : String
+    , maybeImage : Maybe Image
     }
 
 
 guideTeaserDecoder : Json.Decode.Decoder GuideTeaser
 guideTeaserDecoder =
-    Json.Decode.map2 GuideTeaser
+    Json.Decode.map4 GuideTeaser
         (Json.Decode.field "title" Json.Decode.string)
-        (Json.Decode.field "slug" Json.Decode.string)
+        (Json.Decode.field "basename" Json.Decode.string)
+        (Json.Decode.field "summary" Json.Decode.string)
+        (Json.Decode.maybe (Json.Decode.field "image" imageDecoder))
 
 
 viewVideo : VideoMeta -> Html Msg
@@ -94,9 +102,44 @@ viewAudio audioMeta =
     text "[fFf] render audio player"
 
 
+limitContent : String -> Int -> String
+limitContent summary limit =
+    if length summary > limit then
+        summary
+            |> String.slice 0 (limit - 3)
+            |> padRight limit '.'
+
+    else
+        summary
+
+
+defaultTeaserImg : Image
+defaultTeaserImg =
+    { src = "/images/wildlife-trust-logo.png"
+    , alt = "[cCc] back up alt text for defualt image"
+    }
+
+
 viewGuideTeaser : GuideTeaser -> Html Msg
 viewGuideTeaser teaser =
-    a [ href teaser.url ] [ text teaser.title ]
+    let
+        image : Image
+        image =
+            case teaser.maybeImage of
+                Just i ->
+                    i
+
+                Nothing ->
+                    defaultTeaserImg
+    in
+    div []
+        [ img [ src image.src, alt image.alt ] []
+        , p []
+            [ a [ href teaser.url ] [ text teaser.title ] ]
+        , p
+            []
+            [ text <| limitContent teaser.summary 240 ]
+        ]
 
 
 viewGuideTeaserList : List GuideTeaser -> Html Msg
@@ -152,12 +195,3 @@ storyTeaserStyle =
         , height (px 150)
         , maxWidth (px 150)
         ]
-
-
-
--- utils
-
-
-guideTeaserList : List String -> List GuideTeaser
-guideTeaserList titles =
-    List.map (\title -> GuideTeaser title <| "/guides/" ++ String.replace " " "-" title) titles

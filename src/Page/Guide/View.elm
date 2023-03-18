@@ -1,17 +1,19 @@
 module Page.Guide.View exposing (view)
 
 import Html.Styled exposing (Html, a, div, h1, li, p, text, ul)
-import Html.Styled.Attributes exposing (href)
+import Html.Styled.Attributes exposing (css, href)
 import Message exposing (Msg)
 import Page.Guide.Data
 import Page.Shared.View
+import Theme.Global exposing (centerContent)
+import Theme.Markdown exposing (markdownToHtml)
 
 
 view : Page.Guide.Data.Guide -> Html Msg
 view guide =
-    div []
+    div [ css [ centerContent ] ]
         [ h1 [] [ text guide.title ]
-        , p [] [ text guide.fullTextMarkdown ]
+        , div [] (markdownToHtml guide.fullTextMarkdown)
         , viewMaybeVideo guide.maybeVideo
         , viewMaybeAudio guide.maybeAudio
         , Page.Shared.View.viewStoryTeasers guide.relatedStoryList
