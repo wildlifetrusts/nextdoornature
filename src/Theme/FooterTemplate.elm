@@ -54,7 +54,7 @@ footerNavigationContent =
             ]
       }
     , { title = FooterTitleColumnB
-      , links = []
+      , links = [ { text = FooterGuidesLinkText, href = FooterGuidesLink } ]
       }
     , { title = FooterTitleColumnC
       , links =

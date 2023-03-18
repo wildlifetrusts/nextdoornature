@@ -1,4 +1,4 @@
-module Page.Stories.Data exposing (Story, storyDictDecoder, storyFromSlug)
+module Page.Story.Data exposing (Story, storyDictDecoder, storyFromSlug)
 
 import Dict exposing (Dict)
 import I18n.Keys exposing (Key(..))

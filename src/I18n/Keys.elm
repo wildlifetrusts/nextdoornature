@@ -27,6 +27,8 @@ type Key
     | FooterTitleColumnC
     | FooterVisitWebsiteText
     | FooterVisitWebsiteLink
+    | FooterGuidesLinkText
+    | FooterGuidesLink
     | FooterFindYourLocalTrustText
     | FooterFindYourLocalTrustLink
       --- Index Page

@@ -76,6 +76,12 @@ enStrings key =
         FooterTitleColumnB ->
             "[cCc] Explore the library"
 
+        FooterGuidesLinkText ->
+            "[cCc] Browse our guides"
+
+        FooterGuidesLink ->
+            "/guides"
+
         FooterTitleColumnC ->
             "[cCc] Get involved"
 

@@ -17,7 +17,7 @@ type alias Guide =
     , maybeVideo : Maybe Page.Shared.View.VideoMeta
     , maybeAudio : Maybe Page.Shared.View.AudioMeta
     , relatedStoryList : List Page.Shared.View.StoryTeaser
-    , relateGuideList : List Page.Shared.View.GuideTeaser
+    , relatedGuideList : List Page.Shared.View.GuideTeaser
     }
 
 
@@ -35,14 +35,8 @@ blankGuide language =
     , maybeImage = Nothing
     , maybeVideo = Nothing
     , maybeAudio = Nothing
-    , relatedStoryList =
-        --- [fFf] to be replaced
-        [ { title = "Test story teaser", slug = "test-story", image = { src = "/images/wildlife-trust-logo.png", alt = "placeholder" }, description = "A test description" }
-        , { title = "Test story teaser", slug = "test-story", image = { src = "/images/wildlife-trust-logo.png", alt = "placeholder" }, description = "A test description" }
-        , { title = "Test story teaser", slug = "test-story", image = { src = "/images/wildlife-trust-logo.png", alt = "placeholder" }, description = "A test description" }
-        , { title = "Test story teaser", slug = "test-story", image = { src = "/images/wildlife-trust-logo.png", alt = "placeholder" }, description = "A test description" }
-        ]
-    , relateGuideList = []
+    , relatedStoryList = []
+    , relatedGuideList = []
     }
 
 
@@ -61,16 +55,16 @@ guideDictDecoder =
             |> Json.Decode.Extra.andMap
                 (Json.Decode.maybe (Json.Decode.field "image" Page.Shared.View.imageDecoder))
             |> Json.Decode.Extra.andMap
-                (Json.Decode.maybe (Json.Decode.field "maybeVideo" Page.Shared.View.videoDecoder))
+                (Json.Decode.maybe (Json.Decode.field "video" Page.Shared.View.videoDecoder))
             |> Json.Decode.Extra.andMap
-                (Json.Decode.maybe (Json.Decode.field "maybeAudio" Page.Shared.View.audioDecoder))
+                (Json.Decode.maybe (Json.Decode.field "audio" Page.Shared.View.audioDecoder))
             |> Json.Decode.Extra.andMap
-                (Json.Decode.field "relatedStoryList"
+                (Json.Decode.field "relatedStories"
                     (Json.Decode.list Page.Shared.View.storyTeaserDecoder)
                     |> Json.Decode.Extra.withDefault []
                 )
             |> Json.Decode.Extra.andMap
-                (Json.Decode.field "relatedGuideList"
+                (Json.Decode.field "relatedGuides"
                     (Json.Decode.list Page.Shared.View.guideTeaserDecoder)
                     |> Json.Decode.Extra.withDefault []
                 )
