@@ -113,13 +113,6 @@ view model =
                     Page.Stories.View.view (Page.Stories.Data.storyFromSlug model.language model.content.stories slug)
                 }
 
-        Stories ->
-            Theme.PageTemplate.view model
-                { title = StoriesTitle
-                , content =
-                    Page.Stories.View.view (Page.Stories.Data.storyFromSlug model.language model.content.stories "")
-                }
-
         Guide slug ->
             Theme.PageTemplate.view model
                 { title = GuideTitle
@@ -136,7 +129,7 @@ view model =
 
         Page slug ->
             Theme.PageTemplate.view model
-                { title = PageTitle slug
+                { title = PageTitle (Page.Data.pageTitleFromSlug model.content.pages slug)
                 , content =
                     Page.View.view (Page.Data.pageFromSlug model.language model.content.pages slug)
                 }

@@ -1,4 +1,4 @@
-module Page.Data exposing (Page, pageDictDecoder, pageFromSlug)
+module Page.Data exposing (Page, pageDictDecoder, pageFromSlug, pageTitleFromSlug)
 
 import Dict exposing (Dict)
 import I18n.Keys exposing (Key(..))
@@ -48,3 +48,13 @@ pageFromSlug language pages slug =
 
         Nothing ->
             blankPage language
+
+
+pageTitleFromSlug : Dict String Page -> String -> String
+pageTitleFromSlug pages slug =
+    case Dict.get slug pages of
+        Just aPage ->
+            aPage.title
+
+        Nothing ->
+            ""

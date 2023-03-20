@@ -1,7 +1,6 @@
 module I18n.En exposing (enStrings)
 
 import I18n.Keys exposing (Key(..))
-import String.Case exposing (convertCase)
 
 
 enStrings : Key -> String
@@ -19,14 +18,11 @@ enStrings key =
         GuideTitle ->
             "[cCc] Guide"
 
-        PageTitle string ->
-            "[cCc]" ++ convertCase " " True False string
+        PageTitle title ->
+            "[cCc]" ++ title
 
         GuidesTitle ->
             "[cCc] Guides"
-
-        StoriesTitle ->
-            "[cCc] Stories"
 
         ---
         -- Header
