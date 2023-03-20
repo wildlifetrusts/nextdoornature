@@ -1,16 +1,16 @@
-module Stories exposing (suite)
+module Story exposing (suite)
 
 import Html
 import Html.Attributes
 import I18n.Keys exposing (Key(..))
 import Page.Shared.View exposing (defaultTeaserImg)
-import Page.Stories.Data exposing (Story)
-import Page.Stories.View exposing (view)
-import Svg.Styled exposing (metadata)
+import Page.Story.Data exposing (Story)
+import Page.Story.View exposing (view)
 import Test exposing (Test, describe, test)
 import Test.Html.Query as Query
-import Test.Html.Selector exposing (tag, classes, text)
+import Test.Html.Selector exposing (tag, text)
 import TestUtils exposing (queryFromStyledHtml)
+
 
 suite : Test
 suite =
@@ -49,7 +49,7 @@ suite =
             }
 
         view =
-            Page.Stories.View.view
+            Page.Story.View.view
     in
     describe "Story Page"
         [ describe "View tests"
@@ -63,17 +63,17 @@ suite =
                 \() ->
                     queryFromStyledHtml (view storyFull)
                         |> Query.has
-                           [ tag "h1", text "Some full test reource markdown"
-                           , tag "p", text "A small paragraph."
-                           ]
+                            [ tag "h1"
+                            , text "Some full test reource markdown"
+                            , tag "p"
+                            , text "A small paragraph."
+                            ]
             , test "Story view can have related guide teasers" <|
                 \() ->
                     queryFromStyledHtml (view storyFull)
                         |> Query.contains
-                            [ Html.ul []
-                                [ Html.li [] [ Html.a [ Html.Attributes.href "/a-guide" ] [ Html.text "A related guide" ] ]
-                                , Html.li [] [ Html.a [ Html.Attributes.href "/another-guide" ] [ Html.text "Another related guide" ] ]
-                                ]
+                            [ Html.p [] [ Html.a [ Html.Attributes.href "/a-guide" ] [ Html.text "A related guide" ] ]
+                            , Html.p [] [ Html.a [ Html.Attributes.href "/another-guide" ] [ Html.text "Another related guide" ] ]
                             ]
             , test "Full story view has an author" <|
                 \() ->

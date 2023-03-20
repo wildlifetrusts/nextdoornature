@@ -2,13 +2,14 @@ module Page.Guides exposing (view)
 
 import Dict
 import Html.Styled exposing (Html, a, div, h1, li, text, ul)
-import Html.Styled.Attributes exposing (class, href)
+import Html.Styled.Attributes exposing (class, css, href)
 import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (translate)
 import Message exposing (Msg)
 import Page.Guide.Data exposing (Guide)
 import Route
 import Shared exposing (Model)
+import Theme.Global exposing (centerContent)
 
 
 view : Model -> Html Msg
@@ -25,7 +26,7 @@ view model =
                     (Dict.values model.content.guides)
                 )
     in
-    div []
+    div [ css [ centerContent ] ]
         [ h1 [] [ text (t GuidesTitle) ]
         , ul [] guides
         ]

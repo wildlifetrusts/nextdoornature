@@ -4,12 +4,12 @@ import Dict exposing (Dict)
 import Json.Decode
 import Page.Data
 import Page.Guide.Data
-import Page.Stories.Data
+import Page.Story.Data
 
 
 type alias Content =
     { guides : Dict String Page.Guide.Data.Guide
-    , stories : Dict String Page.Stories.Data.Story
+    , stories : Dict String Page.Story.Data.Story
     , pages : Dict String Page.Data.Page
     }
 
@@ -31,5 +31,5 @@ flagsDictDecoder : Json.Decode.Decoder Content
 flagsDictDecoder =
     Json.Decode.map3 Content
         (Json.Decode.field "guides" Page.Guide.Data.guideDictDecoder)
-        (Json.Decode.field "stories" Page.Stories.Data.storyDictDecoder)
+        (Json.Decode.field "stories" Page.Story.Data.storyDictDecoder)
         (Json.Decode.field "pages" Page.Data.pageDictDecoder)

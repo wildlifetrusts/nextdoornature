@@ -13,8 +13,8 @@ import Page.Guide.View
 import Page.Guides
 import Page.Index
 import Page.Shared.Data
-import Page.Stories.Data
-import Page.Stories.View
+import Page.Story.Data
+import Page.Story.View
 import Page.View
 import Route exposing (Route(..))
 import Shared exposing (Model)
@@ -110,7 +110,7 @@ view model =
             Theme.PageTemplate.view model
                 { title = StoryTitle
                 , content =
-                    Page.Stories.View.view (Page.Stories.Data.storyFromSlug model.language model.content.stories slug)
+                    Page.Story.View.view (Page.Story.Data.storyFromSlug model.language model.content.stories slug)
                 }
 
         Guide slug ->
