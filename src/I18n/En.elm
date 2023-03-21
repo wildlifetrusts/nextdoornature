@@ -18,6 +18,9 @@ enStrings key =
         GuideTitle ->
             "[cCc] Guide"
 
+        PageTitle title ->
+            "[cCc]" ++ title
+
         GuidesTitle ->
             "[cCc] Guides"
 
@@ -43,6 +46,18 @@ enStrings key =
             "[cCc] Sorry, we can't find that story"
 
         Story404Body ->
+            "[cCc] Try searching again [home](\"\\\")"
+
+        Story404Slug ->
+            "story-not-found"
+
+        AncillaryPage404Title ->
+            "[cCc] Sorry, we can't find that page"
+
+        AncillaryPage404Slug ->
+            "page-not-found"
+
+        AncillaryPage404Body ->
             "[cCc] Try searching again [home](\"\\\")"
 
         ---

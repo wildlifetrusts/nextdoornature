@@ -3,6 +3,7 @@ module Shared exposing (Content, Model)
 import Browser.Navigation
 import Dict exposing (Dict)
 import I18n.Translate exposing (Language)
+import Page.Data
 import Page.Guide.Data
 import Page.Story.Data
 import Route exposing (Route)
@@ -19,4 +20,5 @@ type alias Model =
 type alias Content =
     { guides : Dict String Page.Guide.Data.Guide
     , stories : Dict String Page.Story.Data.Story
+    , pages : Dict String Page.Data.Page
     }

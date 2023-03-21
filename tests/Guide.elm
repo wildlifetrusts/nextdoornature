@@ -25,7 +25,7 @@ suite =
             , maybeVideo = Nothing
             , maybeAudio = Nothing
             , relatedStoryList = []
-            , relateGuideList = []
+            , relatedGuideList = []
             }
 
         guideFull : Guide
@@ -57,7 +57,7 @@ suite =
                   , description = "test description"
                   }
                 ]
-            , relateGuideList =
+            , relatedGuideList =
                 [ { title = "A related guide"
                   , url = "/a-guide"
                   , summary = "A related guide"

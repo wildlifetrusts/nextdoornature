@@ -9,6 +9,7 @@ type Route
     | Story String
     | Guide String
     | Guides
+    | Page String
 
 
 fromUrl : Url.Url -> Maybe Route
@@ -32,6 +33,9 @@ toString route =
         Guides ->
             "/guides"
 
+        Page s ->
+            "/" ++ s
+
 
 routeParser : Parser (Route -> a) a
 routeParser =
@@ -40,4 +44,5 @@ routeParser =
         , map Story (s "stories" </> string)
         , map Guide (s "guides" </> string)
         , map Guides (s "guides")
+        , map Page string
         ]

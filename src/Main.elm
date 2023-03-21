@@ -7,6 +7,7 @@ import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (Language(..))
 import Json.Decode
 import Message exposing (Msg(..))
+import Page.Data
 import Page.Guide.Data
 import Page.Guide.View
 import Page.Guides
@@ -14,6 +15,7 @@ import Page.Index
 import Page.Shared.Data
 import Page.Story.Data
 import Page.Story.View
+import Page.View
 import Route exposing (Route(..))
 import Shared exposing (Model)
 import Theme.PageTemplate
@@ -123,4 +125,11 @@ view model =
                 { title = GuidesTitle
                 , content =
                     Page.Guides.view model
+                }
+
+        Page slug ->
+            Theme.PageTemplate.view model
+                { title = PageTitle (Page.Data.pageTitleFromSlug model.content.pages slug)
+                , content =
+                    Page.View.view (Page.Data.pageFromSlug model.language model.content.pages slug)
                 }
