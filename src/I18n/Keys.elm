@@ -30,6 +30,12 @@ type Key
     | FooterGuidesLink
     | FooterFindYourLocalTrustText
     | FooterFindYourLocalTrustLink
+      --- Cookie banner
+    | CookieBannerH2
+    | CookieBannerP
+    | CookieAcceptButtonText
+    | CookieDeclineButtonText
+    | CookieSettingsButtonText
       --- Index Page
     | WelcomeP1
     | WelcomeP2

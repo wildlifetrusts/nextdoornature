@@ -2,6 +2,8 @@ module Main exposing (Flags, main)
 
 import Browser
 import Browser.Navigation
+import CookieBanner exposing (saveConsent)
+import GoogleAnalytics
 import Html.Styled exposing (Html, toUnstyled)
 import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (Language(..))
@@ -17,7 +19,7 @@ import Page.Story.Data
 import Page.Story.View
 import Page.View
 import Route exposing (Route(..))
-import Shared exposing (Model)
+import Shared exposing (CookieState, Model)
 import Theme.PageTemplate
 import Url
 
@@ -44,14 +46,47 @@ init flags url key =
         maybeRoute : Maybe Route
         maybeRoute =
             Route.fromUrl url
+
+        storedConsent : String
+        storedConsent =
+            consentDecoder flags
+
+        hasConsented : Bool
+        hasConsented =
+            -- for null, false & undefined, we assume no consent
+            storedConsent == "true"
+
+        showCookieBanner : Bool
+        showCookieBanner =
+            -- user has previously stated a preference, info should be collapsed
+            storedConsent == "null"
     in
     ( { key = key
       , page = Maybe.withDefault Index maybeRoute
+      , cookieState =
+            { enableAnalytics = hasConsented
+            , cookieBannerIsOpen = showCookieBanner
+            }
       , content = Page.Shared.Data.contentDictDecoder flags
       , language = English
       }
     , Cmd.none
     )
+
+
+consentDecoder : Flags -> String
+consentDecoder flags =
+    case Json.Decode.decodeValue flagsConsentDecoder flags of
+        Ok goodConsentedBool ->
+            goodConsentedBool
+
+        Err _ ->
+            "null"
+
+
+flagsConsentDecoder : Json.Decode.Decoder String
+flagsConsentDecoder =
+    Json.Decode.field "hasConsented" Json.Decode.string
 
 
 update : Msg -> Model -> ( Model, Cmd Msg )
@@ -85,8 +120,46 @@ update msg model =
 
               else
                 { model | language = English }
-            , Cmd.none
+            , GoogleAnalytics.updateAnalytics model.cookieState.enableAnalytics
+                (GoogleAnalytics.updateAnalyticsEvent
+                    { category = Route.toString model.page
+                    , action = "changed language to"
+                    , label = I18n.Translate.languageToString model.language
+                    }
+                )
             )
+
+        CookieSettingsButtonClicked ->
+            ( { model | cookieState = openCookieBanner model.cookieState }, Cmd.none )
+
+        CookiesAccepted ->
+            ( { model | cookieState = updateCookieState model.cookieState True }
+            , Cmd.batch
+                [ GoogleAnalytics.updateAnalyticsPage (Route.toString model.page)
+                , saveConsent True
+                ]
+            )
+
+        CookiesDeclined ->
+            ( { model | cookieState = updateCookieState model.cookieState False }
+            , if model.cookieState.enableAnalytics then
+                -- Have previously opted in, set to false
+                saveConsent False
+
+              else
+                -- Have never opted in store nothing
+                Cmd.none
+            )
+
+
+openCookieBanner : CookieState -> CookieState
+openCookieBanner oldState =
+    { oldState | cookieBannerIsOpen = True }
+
+
+updateCookieState : CookieState -> Bool -> CookieState
+updateCookieState oldState optedIn =
+    { oldState | enableAnalytics = optedIn, cookieBannerIsOpen = False }
 
 
 subscriptions : Model -> Sub Msg

@@ -1,4 +1,4 @@
-module Shared exposing (Content, Model)
+module Shared exposing (Content, CookieState, Model)
 
 import Browser.Navigation
 import Dict exposing (Dict)
@@ -12,8 +12,15 @@ import Route exposing (Route)
 type alias Model =
     { key : Browser.Navigation.Key
     , page : Route
+    , cookieState : CookieState
     , language : Language
     , content : Content
+    }
+
+
+type alias CookieState =
+    { enableAnalytics : Bool
+    , cookieBannerIsOpen : Bool
     }
 
 

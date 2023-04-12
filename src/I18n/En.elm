@@ -96,6 +96,26 @@ enStrings key =
             "https://www.wildlifetrusts.org/wildlife-trusts"
 
         ---
+        -- Cookie banner
+        ---
+        CookieBannerH2 ->
+            "Are you ok to proceed with all cookies and data?"
+
+        CookieBannerP ->
+            """
+            [cCc] Our website uses cookies and data to make sure you have the best experience and to help us fundraise efficiently to save wildlife. Some cookies are essential to make our website work.
+            """
+
+        CookieAcceptButtonText ->
+            "Okay, got it"
+
+        CookieDeclineButtonText ->
+            "No thanks"
+
+        CookieSettingsButtonText ->
+            "Cookie settings"
+
+        ---
         -- Index page
         ---
         WelcomeP1 ->
