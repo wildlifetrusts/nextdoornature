@@ -66,6 +66,8 @@ imageDecoder =
 
 type alias GuideTeaser =
     { title : String
+
+    -- This will maybe turn into Url.Url when we include external resources
     , url : String
     , summary : String
     , maybeImage : Maybe Image
@@ -76,7 +78,7 @@ guideTeaserDecoder : Json.Decode.Decoder GuideTeaser
 guideTeaserDecoder =
     Json.Decode.map4 GuideTeaser
         (Json.Decode.field "title" Json.Decode.string)
-        (Json.Decode.field "url" Json.Decode.string)
+        (Json.Decode.field "basename" Json.Decode.string)
         (Json.Decode.field "summary" Json.Decode.string)
         (Json.Decode.maybe (Json.Decode.field "image" imageDecoder))
 
@@ -193,10 +195,3 @@ storyTeaserStyle =
         , height (px 150)
         , maxWidth (px 150)
         ]
-
-
-
--- utils
--- guideTeaserList : List String -> List GuideTeaser
--- guideTeaserList titles =
---     List.map (\title -> GuideTeaser title <| "/guides/" ++ String.replace " " "-" title) titles

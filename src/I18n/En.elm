@@ -18,6 +18,9 @@ enStrings key =
         GuideTitle ->
             "[cCc] Guide"
 
+        PageTitle title ->
+            "[cCc]" ++ title
+
         GuidesTitle ->
             "[cCc] Guides"
 
@@ -45,6 +48,18 @@ enStrings key =
         Story404Body ->
             "[cCc] Try searching again [home](\"\\\")"
 
+        Story404Slug ->
+            "story-not-found"
+
+        AncillaryPage404Title ->
+            "[cCc] Sorry, we can't find that page"
+
+        AncillaryPage404Slug ->
+            "page-not-found"
+
+        AncillaryPage404Body ->
+            "[cCc] Try searching again [home](\"\\\")"
+
         ---
         -- Footer
         ---
@@ -56,6 +71,12 @@ enStrings key =
 
         FooterTitleColumnB ->
             "[cCc] Explore the library"
+
+        FooterGuidesLinkText ->
+            "[cCc] Browse our guides"
+
+        FooterGuidesLink ->
+            "/guides"
 
         FooterTitleColumnC ->
             "[cCc] Get involved"

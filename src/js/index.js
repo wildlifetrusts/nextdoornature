@@ -3,12 +3,13 @@ import { Elm } from "/src/Main.elm";
 
 import guides from "../../data/guides.json";
 import stories from "../../data/stories.json";
+import pages from "../../data/pages.json";
 
 const hasConsented = sessionStorage.getItem("ga-cookie-consent")
   ? sessionStorage.getItem("ga-cookie-consent")
   : "null";
 
-const app = Elm.Main.init({ flags: { hasConsented, guides, stories } });
+const app = Elm.Main.init({ flags: { hasConsented, guides, stories, pages } });
 
 app.ports.saveConsent.subscribe(function (hasConsented) {
   // User will have to re-consent every time browser is closed, but not on refresh.
