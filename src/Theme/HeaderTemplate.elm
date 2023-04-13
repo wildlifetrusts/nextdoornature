@@ -1,7 +1,7 @@
 module Theme.HeaderTemplate exposing (HeaderInfo, view)
 
 import Css exposing (Style, batch)
-import Html.Styled exposing (Html, h1, header, text)
+import Html.Styled exposing (Attribute, Html, h1, header, node, text)
 import Html.Styled.Attributes exposing (css)
 
 
@@ -16,6 +16,7 @@ view headerInfo =
             []
             [ text headerInfo.content
             ]
+        , searchInput [] []
         ]
 
 
@@ -23,3 +24,8 @@ headerStyle : Style
 headerStyle =
     batch
         []
+
+
+searchInput : List (Attribute msg) -> List (Html msg) -> Html msg
+searchInput atributes children =
+    node "search-input" atributes children
