@@ -4,6 +4,7 @@ import Css exposing (Style, batch)
 import Html.Styled exposing (Html, h1, header, node, text)
 import Html.Styled.Attributes exposing (css, property)
 import Html.Styled.Events exposing (on)
+import I18n.Translate exposing (Language(..))
 import Json.Decode
 import Json.Encode
 import Message exposing (Msg)
@@ -35,6 +36,14 @@ searchInput : Model -> Html Msg
 searchInput model =
     node "search-input"
         [ property "searchResult" <| Json.Encode.string model.search
+        , property "language" <|
+            Json.Encode.string <|
+                case model.language of
+                    English ->
+                        "English"
+
+                    Welsh ->
+                        "Welsh"
         , on "resultChanged" <| Json.Decode.map Message.SearchChanged <| Json.Decode.at [ "target", "searchResult" ] <| Json.Decode.string
         ]
         []

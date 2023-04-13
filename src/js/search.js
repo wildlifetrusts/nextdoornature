@@ -16,9 +16,21 @@ export default class extends HTMLElement {
   connectedCallback() {
     console.log("connectedCallback");
     console.log(this._input);
+    console.log(this.language);
     this._input.oninput = () => {
-      this.searchResult = this._input.value;
+      if (this.language === "English")
+        this.searchResult = this.englishSearch(this._input.value);
+      if (this.language === "Welsh")
+        this.searchResult = this.welshSearch(this._input.value);
       this.dispatchEvent(new CustomEvent("resultChanged"));
     };
+  }
+
+  englishSearch(input) {
+    return input.toUpperCase();
+  }
+
+  welshSearch(input) {
+    return input.split("").reverse().join("");
   }
 }
