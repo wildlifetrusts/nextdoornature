@@ -15,6 +15,7 @@ type alias Model =
     , cookieState : CookieState
     , language : Language
     , content : Content
+    , search : String
     }
 
 

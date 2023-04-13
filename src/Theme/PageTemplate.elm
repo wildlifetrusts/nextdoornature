@@ -26,7 +26,7 @@ view model pageInfo =
     in
     div [ css [ pageWrapperStyle ] ]
         [ div [ css [ pageStyle ] ]
-            [ HeaderTemplate.view { content = t pageInfo.title }
+            [ HeaderTemplate.view model { content = t pageInfo.title }
             , main_ [ css [ mainStyle ] ]
                 [ button [ onClick LanguageChangeRequested ] [ text (t ChangeLanguage) ]
                 , div []

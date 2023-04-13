@@ -11,3 +11,4 @@ type Msg
     | CookieSettingsButtonClicked
     | CookiesAccepted
     | CookiesDeclined
+    | SearchChanged String

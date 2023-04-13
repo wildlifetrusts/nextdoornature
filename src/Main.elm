@@ -69,6 +69,7 @@ init flags url key =
             }
       , content = Page.Shared.Data.contentDictDecoder flags
       , language = English
+      , search = ""
       }
     , Cmd.none
     )
@@ -150,6 +151,9 @@ update msg model =
                 -- Have never opted in store nothing
                 Cmd.none
             )
+
+        SearchChanged searchResult ->
+            ( { model | search = searchResult }, Cmd.none )
 
 
 openCookieBanner : CookieState -> CookieState

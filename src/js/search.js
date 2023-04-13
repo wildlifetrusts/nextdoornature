@@ -6,6 +6,7 @@ export default class extends HTMLElement {
     super();
     this._shadowRoot = this.attachShadow({ mode: "open" });
     this._shadowRoot.appendChild(template.content.cloneNode(true));
+    this.searchResult = "";
     this._input = this._shadowRoot.querySelector("input");
 
     console.log("constructor");
@@ -16,7 +17,8 @@ export default class extends HTMLElement {
     console.log("connectedCallback");
     console.log(this._input);
     this._input.oninput = () => {
-      console.log("recieved input: " + this._input.value);
+      this.searchResult = this._input.value;
+      this.dispatchEvent(new CustomEvent("resultChanged"));
     };
   }
 }
