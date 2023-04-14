@@ -4,6 +4,9 @@ title: Privacy Policy
 
 ## Privacy Policy
 
+_Please note: Our privacy policy is updated periodically, and it is advised that you check back for updates regularly. Any changes will replace all previous versions and will be in force from the date of publication.   
+Last updated: March 2023_
+
 ### 1. Who are we?
 
 The Wildlife Trusts are a movement of more than 800,000 members, 40,000 volunteers, 2,000 staff and 600 trustees, from a wide range of backgrounds and all walks of life.
