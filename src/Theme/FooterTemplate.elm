@@ -38,7 +38,7 @@ navigationColumn column language =
         [ h3 []
             [ text (t column.title)
             ]
-        , div [] (List.map (\link -> a [ href (t link.href) ] [ text (t link.text) ]) column.links)
+        , div [ css [ footerColumnListStyle ] ] (List.map (\link -> a [ href (t link.href) ] [ text (t link.text) ]) column.links)
         ]
 
 
@@ -51,6 +51,7 @@ footerNavigationContent =
     [ { title = FooterTitleColumnA
       , links =
             [ { text = FooterVisitWebsiteText, href = FooterVisitWebsiteLink }
+            , { text = FooterPrivacyPolicyText, href = FooterPrivacyPolicyLink }
             ]
       }
     , { title = FooterTitleColumnB
@@ -66,6 +67,14 @@ footerNavigationContent =
 
 footerColumnContentsStyle : Style
 footerColumnContentsStyle =
+    batch
+        [ displayFlex
+        , flexDirection column
+        ]
+
+
+footerColumnListStyle : Style
+footerColumnListStyle =
     batch
         [ displayFlex
         , flexDirection column

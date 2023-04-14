@@ -95,6 +95,12 @@ enStrings key =
             --[cCc]
             "https://www.wildlifetrusts.org/wildlife-trusts"
 
+        FooterPrivacyPolicyText ->
+            "Privacy Policy"
+
+        FooterPrivacyPolicyLink ->
+            "/privacy-policy"
+
         ---
         -- Cookie banner
         ---
