@@ -176,33 +176,28 @@ view : Model -> Html Msg
 view model =
     case model.page of
         Index ->
-            Theme.PageTemplate.view model
-                { title = SiteTitle, content = Page.Index.view model }
+            Theme.PageTemplate.view model (Page.Index.view model)
 
         Story slug ->
-            Theme.PageTemplate.view model
-                { title = StoryTitle
-                , content =
-                    Page.Story.View.view (Page.Story.Data.storyFromSlug model.language model.content.stories slug)
-                }
+            let
+                story =
+                    Page.Story.Data.storyFromSlug model.language model.content.stories slug
+            in
+            Theme.PageTemplate.view model (Page.Story.View.view story)
 
         Guide slug ->
-            Theme.PageTemplate.view model
-                { title = GuideTitle
-                , content =
-                    Page.Guide.View.view (Page.Guide.Data.guideFromSlug model.language model.content.guides slug)
-                }
+            let
+                guide =
+                    Page.Guide.Data.guideFromSlug model.language model.content.guides slug
+            in
+            Theme.PageTemplate.view model (Page.Guide.View.view guide)
 
         Guides ->
-            Theme.PageTemplate.view model
-                { title = GuidesTitle
-                , content =
-                    Page.Guides.view model
-                }
+            Theme.PageTemplate.view model (Page.Guides.view model)
 
         Page slug ->
-            Theme.PageTemplate.view model
-                { title = PageTitle (Page.Data.pageTitleFromSlug model.content.pages slug)
-                , content =
-                    Page.View.view (Page.Data.pageFromSlug model.language model.content.pages slug)
-                }
+            let
+                page =
+                    Page.Data.pageFromSlug model.language model.content.pages slug
+            in
+            Theme.PageTemplate.view model (Page.View.view page)

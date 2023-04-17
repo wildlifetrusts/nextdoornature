@@ -12,15 +12,6 @@ enStrings key =
         SiteTitle ->
             "[cCc] Team Wilder"
 
-        StoryTitle ->
-            "[cCc] Story"
-
-        GuideTitle ->
-            "[cCc] Guide"
-
-        PageTitle title ->
-            "[cCc]" ++ title
-
         GuidesTitle ->
             "[cCc] Guides"
 
