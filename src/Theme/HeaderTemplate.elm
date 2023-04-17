@@ -1,8 +1,8 @@
 module Theme.HeaderTemplate exposing (HeaderInfo, view)
 
 import Css exposing (Style, batch)
-import Html.Styled exposing (Html, h1, header, node, text)
-import Html.Styled.Attributes exposing (css, property)
+import Html.Styled exposing (Html, h1, header, input, node, text)
+import Html.Styled.Attributes exposing (attribute, css, property, type_)
 import Html.Styled.Events exposing (on)
 import I18n.Translate exposing (Language(..))
 import Json.Decode
@@ -36,14 +36,13 @@ searchInput : Model -> Html Msg
 searchInput model =
     node "search-input"
         [ property "searchResult" <| Json.Encode.string model.search
-        , property "language" <|
-            Json.Encode.string <|
-                case model.language of
-                    English ->
-                        "English"
+        , attribute "language" <|
+            case model.language of
+                English ->
+                    "English"
 
-                    Welsh ->
-                        "Welsh"
+                Welsh ->
+                    "Welsh"
         , on "resultChanged" <| Json.Decode.map Message.SearchChanged <| Json.Decode.at [ "target", "searchResult" ] <| Json.Decode.string
         ]
-        []
+        [ input [ type_ "text" ] [] ]
