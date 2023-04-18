@@ -9,7 +9,7 @@ collections:
     label: Story # Used in the UI
     folder: content/stories # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
-    slug: {{slug}} # Filename template, e.g., YYYY-MM-DD-title.md
+    slug: { { slug } } # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
       - { label: Title, name: title, widget: string }
       - { label: Location, name: location, widget: string }
@@ -24,11 +24,11 @@ collections:
     title: Guide # Used in the UI
     folder: content/guides # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
-    slug: {{slug}} # Filename template, e.g., YYYY-MM-DD-title.md
+    slug: { { slug } } # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
       - { label: Title, name: title, widget: string }
       - { label: Location, name: location, widget: string }
-      - { label: Summary, name: summary, widget: string, required: false}
+      - { label: Summary, name: summary, widget: string, required: false }
       - { label: Body, name: body, widget: markdown }
       - label: Image
         name: image
@@ -51,7 +51,12 @@ collections:
         fields:
           - { label: Title, name: title, widget: string }
           - { label: Slug, name: slug, widget: string }
-          - { label: Description, name: description, widget: string, required: false}
+          - {
+              label: Description,
+              name: description,
+              widget: string,
+              required: false,
+            }
           - label: Image
             name: image
             widget: object
@@ -66,7 +71,12 @@ collections:
         fields:
           - { label: Title, name: title, widget: string }
           - { label: Slug, name: slug, widget: string }
-          - { label: Description, name: description, widget: string, required: false}
+          - {
+              label: Description,
+              name: description,
+              widget: string,
+              required: false,
+            }
           - label: Image
             name: image
             widget: object
