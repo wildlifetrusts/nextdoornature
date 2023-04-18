@@ -18,8 +18,6 @@ i18n:
   default_locale: en
 
 collections:
-  - name: i18n_content
-    i18n: true
   - name: "stories"
     label: "Stories"
     folder: "content/stories"
