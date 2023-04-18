@@ -5,7 +5,8 @@ import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (Language, translate)
 import Json.Decode
 import Json.Decode.Extra
-import Page.Shared.View exposing (Image)
+import Page.Shared.View
+import Shared exposing (GuideTeaser, Image)
 
 
 type alias Guide =
@@ -17,7 +18,7 @@ type alias Guide =
     , maybeVideo : Maybe Page.Shared.View.VideoMeta
     , maybeAudio : Maybe Page.Shared.View.AudioMeta
     , relatedStoryList : List Page.Shared.View.StoryTeaser
-    , relatedGuideList : List Page.Shared.View.GuideTeaser
+    , relatedGuideList : List GuideTeaser
     }
 
 
@@ -89,7 +90,7 @@ slugToUrl slug =
 teaserListFromGuideDict :
     Language
     -> Dict String Guide
-    -> List Page.Shared.View.GuideTeaser
+    -> List GuideTeaser
 teaserListFromGuideDict language guides =
     Dict.toList guides
         |> List.map

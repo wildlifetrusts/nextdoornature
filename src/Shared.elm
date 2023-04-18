@@ -1,11 +1,10 @@
-module Shared exposing (Content, CookieState, Model, Request(..))
+module Shared exposing (Content, CookieState, GuideTeaser, Image, Model, Request(..))
 
 import Browser.Navigation
 import Dict exposing (Dict)
 import I18n.Translate exposing (Language)
 import Page.Data
 import Page.Guide.Data
-import Page.Shared.View exposing (GuideTeaser)
 import Page.Story.Data
 import Route exposing (Route)
 
@@ -37,3 +36,17 @@ type Request
     = Failure
     | Loading
     | Success (List GuideTeaser)
+
+
+type alias Image =
+    { src : String, alt : String }
+
+
+type alias GuideTeaser =
+    { title : String
+
+    -- This will maybe turn into Url.Url when we include external resources
+    , url : String
+    , summary : String
+    , maybeImage : Maybe Image
+    }

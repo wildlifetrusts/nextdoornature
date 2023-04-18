@@ -1,4 +1,4 @@
-module Page.Shared.View exposing (AudioMeta, GuideTeaser, Image, StoryTeaser, VideoMeta, actionTeaserDecoder, actionTeaserListDecoder, audioDecoder, defaultTeaserImg, guideTeaserDecoder, imageDecoder, storyTeaserDecoder, videoDecoder, viewAudio, viewGuideTeaserList, viewStoryTeasers, viewVideo)
+module Page.Shared.View exposing (AudioMeta, StoryTeaser, VideoMeta, actionTeaserDecoder, actionTeaserListDecoder, audioDecoder, defaultTeaserImg, guideTeaserDecoder, imageDecoder, storyTeaserDecoder, videoDecoder, viewAudio, viewGuideTeaserList, viewStoryTeasers, viewVideo)
 
 import Css exposing (Style, batch, center, column, displayFlex, flexDirection, flexWrap, height, justifyContent, maxWidth, px, wrap)
 import Html.Styled exposing (Html, a, div, i, iframe, img, li, p, text, ul)
@@ -6,6 +6,7 @@ import Html.Styled.Attributes exposing (alt, attribute, autoplay, css, href, src
 import Json.Decode exposing (Decoder)
 import List exposing (map, sortBy)
 import Message exposing (Msg)
+import Shared exposing (GuideTeaser, Image)
 import String exposing (length, padRight)
 import Svg.Styled exposing (image)
 
@@ -14,10 +15,6 @@ type alias AudioMeta =
     { title : String
     , src : String
     }
-
-
-type alias Image =
-    { src : String, alt : String }
 
 
 audioDecoder : Json.Decode.Decoder AudioMeta
@@ -62,16 +59,6 @@ imageDecoder =
     Json.Decode.map2 Image
         (Json.Decode.field "src" Json.Decode.string)
         (Json.Decode.field "alt" Json.Decode.string)
-
-
-type alias GuideTeaser =
-    { title : String
-
-    -- This will maybe turn into Url.Url when we include external resources
-    , url : String
-    , summary : String
-    , maybeImage : Maybe Image
-    }
 
 
 guideTeaserDecoder : Json.Decode.Decoder GuideTeaser
