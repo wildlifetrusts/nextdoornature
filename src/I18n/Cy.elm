@@ -9,12 +9,6 @@ cyStrings key =
         SiteTitle ->
             "[cCc] Team Wilder CY"
 
-        StoryTitle ->
-            "[cCc] Story CY"
-
-        GuideTitle ->
-            "[cCc] Guide CY"
-
         GuidesTitle ->
             "[cCc] Guides CY"
 
