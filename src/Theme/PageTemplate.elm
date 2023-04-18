@@ -10,6 +10,7 @@ import I18n.Translate exposing (translate)
 import Message exposing (Msg(..))
 import Shared exposing (Model)
 import Theme.FooterTemplate as FooterTemplate
+import Theme.Global exposing (globalStyles)
 import Theme.HeaderTemplate as HeaderTemplate
 
 
@@ -25,7 +26,8 @@ view model pageInfo =
             translate model.language
     in
     div [ css [ pageWrapperStyle ] ]
-        [ div [ css [ pageStyle ] ]
+        [ globalStyles
+        , div [ css [ pageStyle ] ]
             [ HeaderTemplate.view { content = t pageInfo.title }
             , main_ [ css [ mainStyle ] ]
                 [ button [ onClick LanguageChangeRequested ] [ text (t ChangeLanguage) ]
