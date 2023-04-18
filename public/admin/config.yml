@@ -5,12 +5,12 @@ publish_mode: editorial_workflow
 media_folder: public/images/uploads
 
 collections:
-  - name: "story" # Used in routes, e.g., /admin/collections/blog
-    label: "Story" # Used in the UI
-    folder: "content/stories" # The path to the folder where the documents are stored
+  - name: "story"
+    label: "Story"
+    folder: "content/stories"
     create: true # Allow users to create new documents in this collection
-    slug: { { "slug" } } # Filename template, e.g., YYYY-MM-DD-title.md
-    fields: # The fields for each document, usually in front matter
+    slug: "{{slug}}"
+    fields: # The fields for each document
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Location", name: "location", widget: "string" }
       - label: "Images"
@@ -20,12 +20,12 @@ collections:
           - { label: "Image", name: "src", widget: "image" }
           - { label: "Alt text", name: "alt", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
-  - name: "guide" # Used in routes, e.g., /admin/collections/blog
-    title: "Guide" # Used in the UI
-    folder: "content/guides" # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
-    slug: { { "slug" } } # Filename template, e.g., YYYY-MM-DD-title.md
-    fields: # The fields for each document, usually in front matter
+  - name: "guide"
+    label: "Guide"
+    folder: "content/guides"
+    create: true
+    slug: "{{slug}}"
+    fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Location", name: "location", widget: "string" }
       - { label: "Summary", name: sum"mary, widget: "string", required: false }
