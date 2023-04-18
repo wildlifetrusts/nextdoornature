@@ -21,3 +21,4 @@ collections:
           - { label: Image, name: src, widget: image }
           - { label: Alt text, name: alt, widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
+      
