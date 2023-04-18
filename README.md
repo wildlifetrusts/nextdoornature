@@ -1,4 +1,6 @@
-# Team Wilder
+# Nextdoor Nature
+
+This is part of the [Wildlife Trusts](https://www.wildlifetrusts.org/) larger [TeamWilder](https://www.hiwwt.org.uk/team-wilder) projects.
 
 [Current release](https://team-wilder-proto.pages.dev/)
 
