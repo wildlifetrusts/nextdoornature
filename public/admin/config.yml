@@ -5,8 +5,8 @@ publish_mode: editorial_workflow
 media_folder: public/images/uploads
 
 collections:
-  - name: "story"
-    label: "Story"
+  - name: "stories"
+    label: "Stories"
     folder: "content/stories"
     create: true # Allow users to create new documents in this collection
     slug: "{{slug}}"
@@ -20,8 +20,8 @@ collections:
           - { label: "Image", name: "src", widget: "image" }
           - { label: "Alt text", name: "alt", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
-  - name: "guide"
-    label: "Guide"
+  - name: "guides"
+    label: "Guides"
     folder: "content/guides"
     create: true
     slug: "{{slug}}"
@@ -84,3 +84,11 @@ collections:
             fields:
               - { label: "Image", name: "src", widget: "image" }
               - { label: "Alt text", name: "alt", widget: "string" }
+  - name: "pages"
+    label: "Pages"
+    folder: "content/pages"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
