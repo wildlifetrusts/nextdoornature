@@ -5,6 +5,7 @@ import Browser.Navigation
 import CookieBanner exposing (saveConsent)
 import GoogleAnalytics
 import Html.Styled exposing (Html, toUnstyled)
+import Http
 import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (Language(..))
 import Json.Decode
@@ -15,11 +16,12 @@ import Page.Guide.View
 import Page.Guides
 import Page.Index
 import Page.Shared.Data
+import Page.Shared.View exposing (actionTeaserListDecoder)
 import Page.Story.Data
 import Page.Story.View
 import Page.View
 import Route exposing (Route(..))
-import Shared exposing (CookieState, Model)
+import Shared exposing (CookieState, Model, Request(..))
 import Theme.PageTemplate
 import Url
 
@@ -69,9 +71,18 @@ init flags url key =
             }
       , content = Page.Shared.Data.contentDictDecoder flags
       , language = English
+      , externalActions = Loading
       }
-    , Cmd.none
+    , getActions
     )
+
+
+getActions : Cmd Msg
+getActions =
+    Http.get
+        { url = "https://www.wildlifetrusts.org/jsonapi/node/action"
+        , expect = Http.expectJson GotActions actionTeaserListDecoder
+        }
 
 
 consentDecoder : Flags -> String
@@ -128,6 +139,14 @@ update msg model =
                     }
                 )
             )
+
+        GotActions result ->
+            case result of
+                Ok list ->
+                    ( { model | externalActions = Success list }, Cmd.none )
+
+                Err _ ->
+                    ( { model | externalActions = Failure }, Cmd.none )
 
         CookieSettingsButtonClicked ->
             ( { model | cookieState = openCookieBanner model.cookieState }, Cmd.none )
