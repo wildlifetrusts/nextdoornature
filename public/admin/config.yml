@@ -5,82 +5,82 @@ publish_mode: editorial_workflow
 media_folder: public/images/uploads
 
 collections:
-  - name: story # Used in routes, e.g., /admin/collections/blog
-    label: Story # Used in the UI
-    folder: content/stories # The path to the folder where the documents are stored
+  - name: "story" # Used in routes, e.g., /admin/collections/blog
+    label: "Story" # Used in the UI
+    folder: "content/stories" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
-    slug: { { slug } } # Filename template, e.g., YYYY-MM-DD-title.md
+    slug: { { "slug" } } # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
-      - { label: Title, name: title, widget: string }
-      - { label: Location, name: location, widget: string }
-      - label: Images
-        name: images
-        widget: list
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Location", name: "location", widget: "string" }
+      - label: "Images"
+        name: "images"
+        widget: "list"
         fields:
-          - { label: Image, name: src, widget: image }
-          - { label: Alt text, name: alt, widget: string }
-      - { label: Body, name: body, widget: markdown }
-  - name: guide # Used in routes, e.g., /admin/collections/blog
-    title: Guide # Used in the UI
-    folder: content/guides # The path to the folder where the documents are stored
+          - { label: "Image", name: "src", widget: "image" }
+          - { label: "Alt text", name: "alt", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
+  - name: "guide" # Used in routes, e.g., /admin/collections/blog
+    title: "Guide" # Used in the UI
+    folder: "content/guides" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
-    slug: { { slug } } # Filename template, e.g., YYYY-MM-DD-title.md
+    slug: { { "slug" } } # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
-      - { label: Title, name: title, widget: string }
-      - { label: Location, name: location, widget: string }
-      - { label: Summary, name: summary, widget: string, required: false }
-      - { label: Body, name: body, widget: markdown }
-      - label: Image
-        name: image
-        widget: object
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Location", name: "location", widget: "string" }
+      - { label: "Summary", name: sum"mary, widget: "string", required: false }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - label: "Image"
+        name: "image"
+        widget: "object"
         required: false
         fields:
-          - { label: Image, name: src, widget: image }
-          - { label: Alt text, name: alt, widget: string }
-      - label: Video
-        name: video
-        widget: object
+          - { label: "Image", name: "src", widget: "image" }
+          - { label: "Alt text", name: "alt", widget: "string" }
+      - label: "Video"
+        name: "video"
+        widget: "object"
         required: false
         fields:
-          - { label: Video, name: src, widget: video }
-          - { label: Title, name: title, widget: string }
-      - label: Related Guides
-        name: relatedGuides
-        widget: list
+          - { label: "Video", name: "src", widget: "video" }
+          - { label: "Title", name: "title", widget: "string" }
+      - label: "Related Guides"
+        name: "relatedGuides"
+        widget: "list"
         required: false
         fields:
-          - { label: Title, name: title, widget: string }
-          - { label: Slug, name: slug, widget: string }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Slug", name: "slug", widget: "string" }
           - {
-              label: Description,
-              name: description,
-              widget: string,
+              label: "Description",
+              name: "description",
+              widget: "string",
               required: false,
             }
-          - label: Image
-            name: image
-            widget: object
+          - label: "Image"
+            name: "image"
+            widget: "object"
             required: false
             fields:
-              - { label: Image, name: src, widget: image }
-              - { label: Alt text, name: alt, widget: string }
-      - label: Related Stories
-        name: relatedStories
-        widget: list
+              - { label: "Image", name: "src", widget: "image" }
+              - { label: "Alt text", name: "alt", widget: "string" }
+      - label: "Related Stories"
+        name: "relatedStories"
+        widget: "list"
         required: false
         fields:
-          - { label: Title, name: title, widget: string }
-          - { label: Slug, name: slug, widget: string }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Slug", name: "slug", widget: "string" }
           - {
-              label: Description,
-              name: description,
-              widget: string,
+              label: "Description",
+              name: "description",
+              widget: "string",
               required: false,
             }
-          - label: Image
-            name: image
-            widget: object
+          - label: "Image"
+            name: "image"
+            widget: "object"
             required: false
             fields:
-              - { label: Image, name: src, widget: image }
-              - { label: Alt text, name: alt, widget: string }
+              - { label: "Image", name: "src", widget: "image" }
+              - { label: "Alt text", name: "alt", widget: "string" }
