@@ -1,4 +1,4 @@
-# NextDoorNature
+# Nextdoor Nature
 
 [Current release](https://team-wilder-proto.pages.dev/)
 

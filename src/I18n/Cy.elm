@@ -7,7 +7,7 @@ cyStrings : Key -> String
 cyStrings key =
     case key of
         SiteTitle ->
-            "[cCc] NextDoorNature CY"
+            "[cCc] Nextdoor Nature CY"
 
         StoryTitle ->
             "[cCc] Story CY"
