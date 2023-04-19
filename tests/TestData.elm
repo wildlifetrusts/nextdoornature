@@ -1,6 +1,6 @@
 module TestData exposing (..)
 
-import Page.Shared.View exposing (GuideTeaser)
+import Page.Shared exposing (GuideTeaser)
 
 
 singleActionFromAPI : String
@@ -689,7 +689,7 @@ actionsAPI =
           }
         }
       }
-    },
+    }
   ],
   "links": {
     "next": {

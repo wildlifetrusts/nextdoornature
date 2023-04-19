@@ -22,7 +22,7 @@ suite =
             \_ ->
                 case Json.Decode.decodeString actionTeaserListDecoder actionsAPI of
                     Ok list ->
-                        equal list [ teaserFromResult, teaserFromResult ]
+                        equal list [ teaserFromResult, teaserFromResult2 ]
 
                     Err err ->
                         Expect.fail (Json.Decode.errorToString err)
