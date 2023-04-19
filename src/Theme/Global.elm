@@ -1,6 +1,6 @@
-module Theme.Global exposing (centerContent)
+module Theme.Global exposing (centerContent, globalStyles)
 
-import Css exposing (Style, absolute, alignItems, auto, batch, boxSizing, center, ch, column, contentBox, displayFlex, flexDirection, height, hidden, left, marginLeft, marginRight, maxWidth, overflow, position, px, top, width)
+import Css exposing (Style, absolute, alignItems, auto, batch, boxSizing, center, ch, column, contentBox, displayFlex, flexDirection, fontFamilies, height, hidden, left, marginLeft, marginRight, maxWidth, overflow, position, px, top, width)
 import Css.Global exposing (global, typeSelector)
 import Css.Media as Media exposing (only, screen, withMedia)
 import Html.Styled exposing (Html)
@@ -93,9 +93,9 @@ globalStyles : Html msg
 globalStyles =
     global
         [ typeSelector "body"
-            []
+            [ fontFamilies [ "Rubik", "sans-serif" ] ]
         , typeSelector "h1"
-            []
+            [ fontFamilies [ "Adelle", "serif" ] ]
         , typeSelector "h2"
             []
         , typeSelector "h3"
