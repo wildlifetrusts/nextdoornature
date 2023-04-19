@@ -1,6 +1,6 @@
 module Theme.Global exposing (centerContent, globalStyles, lightTeal, purple, teal)
 
-import Css exposing (Color, Style, absolute, alignItems, auto, batch, boxSizing, center, ch, column, contentBox, displayFlex, flexDirection, fontFamilies, height, hex, hidden, left, marginLeft, marginRight, maxWidth, overflow, position, px, top, width)
+import Css exposing (Color, Style, absolute, alignItems, auto, batch, boxSizing, center, ch, color, column, contentBox, displayFlex, flexDirection, fontFamilies, height, hex, hidden, left, margin, marginLeft, marginRight, maxWidth, overflow, position, px, top, width, zero)
 import Css.Global exposing (global, typeSelector)
 import Css.Media as Media exposing (only, screen, withMedia)
 import Html.Styled exposing (Html)
@@ -111,15 +111,28 @@ globalStyles : Html msg
 globalStyles =
     global
         [ typeSelector "body"
-            [ fontFamilies [ "Rubik", "sans-serif" ] ]
+            [ fontFamilies [ "Rubik", "sans-serif" ]
+            , margin zero
+            ]
         , typeSelector "h1"
-            [ fontFamilies [ "Adelle", "serif" ] ]
+            [ fontFamilies [ "Adelle", "serif" ]
+            , color purple
+            ]
         , typeSelector "h2"
-            []
+            [ fontFamilies [ "Adelle", "serif" ]
+            , color purple
+            ]
         , typeSelector "h3"
-            []
+            [ fontFamilies [ "Adelle", "serif" ]
+            , color purple
+            ]
         , typeSelector "h4"
-            []
+            [ fontFamilies [ "Adelle", "serif" ]
+            , color purple
+            ]
+        , typeSelector "a"
+            [ color purple
+            ]
         , typeSelector "b"
             []
         , typeSelector "p"

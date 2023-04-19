@@ -56,7 +56,8 @@ viewRelatedGuideTeasers guideList =
     else
         text ""
 
-guideTitle: List Style
+
+guideTitle : List Style
 guideTitle =
     [ fontFamilies [ "Ludicrous", "serif" ]
     ]
