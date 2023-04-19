@@ -1,6 +1,6 @@
-module Theme.Global exposing (centerContent, globalStyles)
+module Theme.Global exposing (centerContent, globalStyles, lightTeal, purple, teal)
 
-import Css exposing (Style, absolute, alignItems, auto, batch, boxSizing, center, ch, column, contentBox, displayFlex, flexDirection, fontFamilies, height, hidden, left, marginLeft, marginRight, maxWidth, overflow, position, px, top, width)
+import Css exposing (Color, Style, absolute, alignItems, auto, batch, boxSizing, center, ch, column, contentBox, displayFlex, flexDirection, fontFamilies, height, hex, hidden, left, marginLeft, marginRight, maxWidth, overflow, position, px, top, width)
 import Css.Global exposing (global, typeSelector)
 import Css.Media as Media exposing (only, screen, withMedia)
 import Html.Styled exposing (Html)
@@ -75,6 +75,24 @@ withMediaMediumDesktopUp =
 -- Brand colours
 -- Accent colours
 -- Text and background colours
+
+
+purple : Color
+purple =
+    hex "54257F"
+
+
+teal : Color
+teal =
+    hex "058295"
+
+
+lightTeal : Color
+lightTeal =
+    hex "e7f2f4"
+
+
+
 -- Transitions
 -- Buttons (components)
 -- Buttons (styles)
