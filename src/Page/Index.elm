@@ -7,7 +7,7 @@ import I18n.Translate exposing (translate)
 import Message exposing (Msg)
 import Page.Guide.Data
 import Page.Shared.View
-import Shared exposing (Model, Request(..))
+import Shared exposing (Model)
 import Theme.Global exposing (centerContent)
 
 
