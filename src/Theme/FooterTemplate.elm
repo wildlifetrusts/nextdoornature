@@ -1,6 +1,6 @@
 module Theme.FooterTemplate exposing (view)
 
-import Css exposing (Style, batch, column, displayFlex, em, fitContent, flexDirection, flexShrink, flexWrap, justifyContent, margin2, minHeight, pct, row, spaceAround, width, wrap, zero, justifyContent, flexEnd, alignItems, center, property, backgroundColor, hex, color, padding, height, display, inlineBlock, px, rem)
+import Css exposing (Style, alignItems, backgroundColor, batch, center, color, column, display, displayFlex, em, fitContent, flexDirection, flexEnd, flexShrink, flexWrap, height, hex, inlineBlock, justifyContent, margin2, minHeight, padding, pct, property, px, rem, row, spaceAround, width, wrap, zero)
 import Html.Styled exposing (Html, a, div, footer, h3, img, p, text)
 import Html.Styled.Attributes exposing (css, href, src)
 import I18n.Keys exposing (Key(..))
@@ -20,9 +20,9 @@ view language =
                 [ p [] [ text (t FooterProjectInfo) ]
                 , img [ src "/images/wildlife-trust-logo.png" ] []
                 ]
-            :: (List.map
+                :: List.map
                     (\column -> navigationColumn column language)
-                    footerNavigationContent)
+                    footerNavigationContent
             )
         , div [ css [ footerLogoAreaStyle ] ]
             [ img [ css [ logoStyle ], src "/images/logo-heritage-fund.svg" ] []
@@ -102,6 +102,7 @@ footerStyle =
         , margin2 (em 2) zero
         ]
 
+
 footerLogoAreaStyle : Style
 footerLogoAreaStyle =
     batch
@@ -115,12 +116,14 @@ footerLogoAreaStyle =
         , padding (rem 3)
         ]
 
+
 logoStyle : Style
 logoStyle =
     batch
         [ height (px 90)
         , display inlineBlock
         ]
+
 
 logoPartitionStyle : Style
 logoPartitionStyle =
