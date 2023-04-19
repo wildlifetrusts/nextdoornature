@@ -80,7 +80,7 @@ init flags url key =
 getActions : Cmd Msg
 getActions =
     Http.get
-        { url = "https://www.wildlifetrusts.org/jsonapi/node/action"
+        { url = "/API.json"
         , expect = Http.expectJson GotActions actionTeaserListDecoder
         }
 
