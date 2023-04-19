@@ -74,7 +74,9 @@ actionTeaserDecoder : Json.Decode.Decoder GuideTeaser
 actionTeaserDecoder =
     Json.Decode.map4 GuideTeaser
         (Json.Decode.at [ "attributes", "title" ] Json.Decode.string)
-        (Json.Decode.at [ "attributes", "path", "alias" ] Json.Decode.string)
+        (Json.Decode.at [ "attributes", "path", "alias" ] Json.Decode.string
+            |> Json.Decode.andThen (\url -> Json.Decode.succeed ("https://www.wildlifetrusts.org" ++ url))
+        )
         (Json.Decode.at [ "attributes", "field_action_summary", "value" ] Json.Decode.string)
         (Json.Decode.maybe (Json.Decode.field "image" imageDecoder))
 
