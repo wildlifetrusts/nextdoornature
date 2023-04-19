@@ -1,9 +1,8 @@
 module Message exposing (Msg(..))
 
--- import Http
--- import Shared exposing (GuideTeaser)
-
 import Browser
+import Http
+import Page.Shared exposing (GuideTeaser)
 import Url
 
 
@@ -14,7 +13,4 @@ type Msg
     | CookieSettingsButtonClicked
     | CookiesAccepted
     | CookiesDeclined
-
-
-
--- | GotActions (Result Http.Error (List GuideTeaser))
+    | GotActions (Result Http.Error (List GuideTeaser))

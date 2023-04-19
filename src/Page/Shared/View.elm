@@ -6,7 +6,7 @@ import Html.Styled.Attributes exposing (alt, attribute, autoplay, css, href, src
 import Json.Decode exposing (Decoder)
 import List exposing (map, sortBy)
 import Message exposing (Msg)
-import Shared exposing (GuideTeaser, Image)
+import Page.Shared exposing (GuideTeaser, Image)
 import String exposing (length, padRight)
 import Svg.Styled exposing (image)
 

@@ -5,8 +5,8 @@ import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (Language, translate)
 import Json.Decode
 import Json.Decode.Extra
+import Page.Shared exposing (GuideTeaser, Image)
 import Page.Shared.View
-import Shared exposing (GuideTeaser, Image)
 
 
 type alias Story =
