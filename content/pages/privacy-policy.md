@@ -304,45 +304,10 @@ You can learn more about all the cookies we use below.
 **Purpose:** Used by the website to remember cookie preferences. \
 **Cookies:** cookie-agreed, MCPopupClosed
 
-**Cookie provider:** Facebook \
-**Purpose:** Used by Facebook for sharing content, conversion tracking, optimisation, creating audiences for Facebook Ads and marketing. \
-**Cookies:** \_fbp, fr \
-**Provider policy:** [Facebook](https://www.facebook.com/privacy/policies/cookies/)
-
-**Cookie provider:** Paypal \
-**Purpose:** Used to support payment services. \
-**Cookies:** AKDC, LANG, X-PP-SILOVER, akavpau_ppsd, enforce_policy, nsid, ts, ts_c, tsrce, x-csrf-jwt, x-pp-s \
-**Provider policy:** [Paypal](https://www.paypal.com/uk/webapps/mpp/ua/cookie-full)
-
-**Cookie provider:** Vimeo \
-**Purpose:** Used to embed videos from Vimeo using cookies that we consider essential to the video player experience. Does not use third-party analytics or advertising cookies. \
-**Cookies:** player, vuid \
-**Provider policy:** [Vimeo](https://vimeo.com/cookie_policy)
-
-**Cookie provider:** Eventbrite \
-**Purpose:** Used to deliver event booking services and content tailored to the user's interests. \
-**Cookies:** \_ga, \_gat, \_gid, AS, csrftoken, eblang, G, janus_re, mgref, SP, SS, ebGAClientId, lux_uid, SERVERID \
-**Provider policy:** [Eventbrite](https://www.eventbrite.co.uk/support/articles/en_US/Troubleshooting/eventbrite-cookie-policy)
-
-**Cookie provider:** New Relic \
-**Purpose:** Anonymously maintains a user's browsing session on the website to allow us to monitor and troubleshoot website performance. \
-**Cookies:** JSESSIONID \
-**Provider policy:** [New Relic](https://newrelic.com/termsandconditions/cookie-policy/cookie-table)
-
-**Cookie provider:** Engaging Networks \
-**Purpose:** Maintains a user's browsing session on the website when participating with our online campaigning activities. \
-**Cookies:** en_sessionId \
-**Provider policy:** [Engaging Networks](https://www.engagingnetworks.net/policies/)
-
 **Cookie provider:** Google \
 **Purpose:** Used to understand website usage including how users found and explored our site and how their experience can be enhanced. Google also provides campaign tracking, advertising and website functionality services. \
 **Cookies:** IDE, \_ga, \_gat, \_gat_UA-xxxxxxx-xx, \_gid \
 **Provider policy:** [Google](https://policies.google.com/technologies/cookies?hl=en-US)
-
-**Cookie provider:** Stripe \
-**Purpose:** Used for making card transactions on the website. Provided by Stripe.com which allows online transactions without storing any credit card information. \
-**Cookies:** **stripe_mid, **stripe_sid \
-**Provider policy:** [Stripe](https://stripe.com/gb/legal/cookies-policy)
 
 **Cookie provider:** Hotjar \
 **Purpose:** Anonymously analyses how the website is being used to improve the user experience. \
