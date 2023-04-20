@@ -2,7 +2,7 @@ module Theme.HeaderTemplate exposing (HeaderInfo, view)
 
 import Css exposing (Style, batch)
 import Html.Styled exposing (Html, h1, header, input, node, text)
-import Html.Styled.Attributes exposing (attribute, css, property, type_)
+import Html.Styled.Attributes exposing (attribute, css, placeholder, property, type_)
 import Html.Styled.Events exposing (on)
 import I18n.Translate exposing (Language(..))
 import Json.Decode
@@ -45,4 +45,4 @@ searchInput model =
                     "Welsh"
         , on "resultChanged" <| Json.Decode.map Message.SearchChanged <| Json.Decode.at [ "target", "searchResult" ] <| Json.Decode.string
         ]
-        [ input [ type_ "text" ] [] ]
+        [ input [ type_ "text", placeholder "Search Guides" ] [] ]
