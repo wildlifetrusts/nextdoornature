@@ -46,26 +46,26 @@ collections:
         name: "image"
         widget: "object"
         required: false
-        i18n: true 
+        i18n: true
         fields:
-          - { label: "Image", name: "src", widget: "image"  }
+          - { label: "Image", name: "src", widget: "image" }
           - { label: "Alt text", name: "alt", widget: "string", i18n: true }
       - label: "Video"
         name: "video"
         widget: "object"
         required: false
-        i18n: true 
+        i18n: true
         fields:
-          - { label: "Video", name: "src", widget: "video"  }
+          - { label: "Video", name: "src", widget: "video" }
           - { label: "Title", name: "title", widget: "string", i18n: true }
       - label: "Related Guides"
         name: "relatedGuides"
         widget: "list"
         required: false
-        i18n: true 
+        i18n: true
         fields:
           - { label: "Title", name: "title", widget: "string", i18n: true }
-          - { label: "Slug", name: "slug", widget: "string", i18n: true  }
+          - { label: "Slug", name: "slug", widget: "string", i18n: true }
           - {
               label: "Description",
               name: "description",
@@ -77,7 +77,7 @@ collections:
             name: "image"
             widget: "object"
             required: false
-            i18n: true 
+            i18n: true
             fields:
               - { label: "Image", name: "src", widget: "image" }
               - { label: "Alt text", name: "alt", widget: "string", i18n: true }
@@ -85,7 +85,7 @@ collections:
         name: "relatedStories"
         widget: "list"
         required: false
-        i18n: true 
+        i18n: true
         fields:
           - { label: "Title", name: "title", widget: "string", i18n: true }
           - { label: "Slug", name: "slug", widget: "string" }
