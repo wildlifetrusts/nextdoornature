@@ -27,6 +27,8 @@ type Key
     | FooterGuidesLink
     | FooterFindYourLocalTrustText
     | FooterFindYourLocalTrustLink
+    | FooterPrivacyPolicyText
+    | FooterPrivacyPolicyLink
       --- Cookie banner
     | CookieBannerH2
     | CookieBannerP

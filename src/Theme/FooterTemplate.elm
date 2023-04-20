@@ -5,7 +5,7 @@ import Html.Styled exposing (Html, a, br, div, footer, h3, img, p, text)
 import Html.Styled.Attributes exposing (css, href, src)
 import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (Language(..), translate)
-
+import Theme.Global exposing (lightTeal, purple, teal)
 
 view : Language -> Html msg
 view language =
@@ -57,7 +57,7 @@ navigationColumn column language =
         [ h3 []
             [ text (t column.title)
             ]
-        , div [] (List.map (\link -> a [ href (t link.href) ] [ text (t link.text) ]) column.links)
+        , div [ css [ footerColumnListStyle ] ] (List.map (\link -> a [ href (t link.href) ] [ text (t link.text) ]) column.links)
         ]
 
 
@@ -70,6 +70,7 @@ footerNavigationContent =
     [ { title = FooterTitleColumnA
       , links =
             [ { text = FooterVisitWebsiteText, href = FooterVisitWebsiteLink }
+            , { text = FooterPrivacyPolicyText, href = FooterPrivacyPolicyLink }
             ]
       }
     , { title = FooterTitleColumnB
@@ -91,6 +92,14 @@ footerColumnContentsStyle =
         ]
 
 
+footerColumnListStyle : Style
+footerColumnListStyle =
+    batch
+        [ displayFlex
+        , flexDirection column
+        ]
+
+
 footerContainerStyle : Style
 footerContainerStyle =
     batch
@@ -99,6 +108,7 @@ footerContainerStyle =
         , flexWrap wrap
         , justifyContent spaceAround
         , minHeight fitContent
+        , backgroundColor lightTeal
         ]
 
 
