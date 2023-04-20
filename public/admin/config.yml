@@ -1,6 +1,6 @@
 backend:
   name: git-gateway
-  branch: chore/7-add-cms # Branch to update (optional; defaults to master)
+  branch: main # Branch to update (optional; defaults to master)
 publish_mode: editorial_workflow
 media_folder: public/images/uploads
 i18n:
@@ -56,7 +56,7 @@ collections:
         required: false
         i18n: true
         fields:
-          - { label: "Video", name: "src", widget: "video" }
+          - { label: "URL", name: "src", widget: "string" }
           - { label: "Title", name: "title", widget: "string", i18n: true }
       - label: "Related Guides"
         name: "relatedGuides"
