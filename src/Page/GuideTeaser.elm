@@ -1,4 +1,4 @@
-module Page.Shared exposing (GuideTeaser, Image)
+module Page.GuideTeaser exposing (GuideTeaser, Image)
 
 
 type alias Image =

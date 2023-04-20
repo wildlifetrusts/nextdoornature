@@ -1,6 +1,6 @@
 module API exposing (..)
 
-import Expect exposing (equal, ok)
+import Expect exposing (equal)
 import Json.Decode
 import Page.Shared.View exposing (actionTeaserDecoder, actionTeaserListDecoder)
 import Test exposing (Test, describe, test)

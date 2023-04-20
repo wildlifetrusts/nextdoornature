@@ -6,7 +6,7 @@ import Html.Styled.Attributes exposing (alt, attribute, autoplay, css, href, src
 import Json.Decode exposing (Decoder)
 import List exposing (map, sortBy)
 import Message exposing (Msg)
-import Page.Shared exposing (GuideTeaser, Image)
+import Page.GuideTeaser
 import String exposing (length, padRight)
 import Svg.Styled exposing (image)
 
@@ -40,7 +40,7 @@ videoDecoder =
 type alias StoryTeaser =
     { title : String
     , slug : String
-    , image : Image
+    , image : Page.GuideTeaser.Image
     , description : String
     }
 
@@ -54,25 +54,25 @@ storyTeaserDecoder =
         (Json.Decode.field "description" Json.Decode.string)
 
 
-imageDecoder : Decoder Image
+imageDecoder : Decoder Page.GuideTeaser.Image
 imageDecoder =
-    Json.Decode.map2 Image
+    Json.Decode.map2 Page.GuideTeaser.Image
         (Json.Decode.field "src" Json.Decode.string)
         (Json.Decode.field "alt" Json.Decode.string)
 
 
-guideTeaserDecoder : Json.Decode.Decoder GuideTeaser
+guideTeaserDecoder : Json.Decode.Decoder Page.GuideTeaser.GuideTeaser
 guideTeaserDecoder =
-    Json.Decode.map4 GuideTeaser
+    Json.Decode.map4 Page.GuideTeaser.GuideTeaser
         (Json.Decode.field "title" Json.Decode.string)
         (Json.Decode.field "basename" Json.Decode.string)
         (Json.Decode.field "summary" Json.Decode.string)
         (Json.Decode.maybe (Json.Decode.field "image" imageDecoder))
 
 
-actionTeaserDecoder : Json.Decode.Decoder GuideTeaser
+actionTeaserDecoder : Json.Decode.Decoder Page.GuideTeaser.GuideTeaser
 actionTeaserDecoder =
-    Json.Decode.map4 GuideTeaser
+    Json.Decode.map4 Page.GuideTeaser.GuideTeaser
         (Json.Decode.at [ "attributes", "title" ] Json.Decode.string)
         (Json.Decode.at [ "attributes", "path", "alias" ] Json.Decode.string
             |> Json.Decode.andThen (\url -> Json.Decode.succeed ("https://www.wildlifetrusts.org" ++ url))
@@ -81,7 +81,7 @@ actionTeaserDecoder =
         (Json.Decode.maybe (Json.Decode.field "image" imageDecoder))
 
 
-actionTeaserListDecoder : Json.Decode.Decoder (List GuideTeaser)
+actionTeaserListDecoder : Json.Decode.Decoder (List Page.GuideTeaser.GuideTeaser)
 actionTeaserListDecoder =
     Json.Decode.field "data" <| Json.Decode.list actionTeaserDecoder
 
@@ -116,17 +116,17 @@ limitContent summary limit =
         summary
 
 
-defaultTeaserImg : Image
+defaultTeaserImg : Page.GuideTeaser.Image
 defaultTeaserImg =
     { src = "/images/wildlife-trust-logo.png"
     , alt = "[cCc] back up alt text for defualt image"
     }
 
 
-viewGuideTeaser : GuideTeaser -> Html Msg
+viewGuideTeaser : Page.GuideTeaser.GuideTeaser -> Html Msg
 viewGuideTeaser teaser =
     let
-        image : Image
+        image : Page.GuideTeaser.Image
         image =
             case teaser.maybeImage of
                 Just i ->
@@ -145,7 +145,7 @@ viewGuideTeaser teaser =
         ]
 
 
-viewGuideTeaserList : List GuideTeaser -> Html Msg
+viewGuideTeaserList : List Page.GuideTeaser.GuideTeaser -> Html Msg
 viewGuideTeaserList teasers =
     if List.length teasers > 0 then
         ul []

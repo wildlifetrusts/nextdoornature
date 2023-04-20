@@ -1,6 +1,6 @@
 module TestData exposing (..)
 
-import Page.Shared exposing (GuideTeaser)
+import Page.GuideTeaser
 
 
 singleActionFromAPI : String
@@ -242,7 +242,7 @@ singleActionFromAPI =
 """
 
 
-teaserFromResult : GuideTeaser
+teaserFromResult : Page.GuideTeaser.GuideTeaser
 teaserFromResult =
     { title = "How to help wildlife at school"
     , url = "https://www.wildlifetrusts.org/actions/how-help-wildlife-school"
@@ -251,7 +251,7 @@ teaserFromResult =
     }
 
 
-teaserFromResult2 : GuideTeaser
+teaserFromResult2 : Page.GuideTeaser.GuideTeaser
 teaserFromResult2 =
     { title = "How to make a coastal garden"
     , url = "https://www.wildlifetrusts.org/actions/how-make-coastal-garden"

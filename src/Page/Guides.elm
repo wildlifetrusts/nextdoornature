@@ -8,7 +8,7 @@ import I18n.Translate exposing (translate)
 import List exposing (concat)
 import Message exposing (Msg)
 import Page.Guide.Data exposing (Guide)
-import Page.Shared exposing (GuideTeaser)
+import Page.GuideTeaser
 import Page.Shared.View
 import Route
 import Shared exposing (Model, Request(..))
@@ -21,7 +21,7 @@ view model =
         t =
             translate model.language
 
-        teaserList : List GuideTeaser
+        teaserList : List Page.GuideTeaser.GuideTeaser
         teaserList =
             case model.externalActions of
                 Failure ->

@@ -5,7 +5,7 @@ import Dict exposing (Dict)
 import I18n.Translate exposing (Language)
 import Page.Data
 import Page.Guide.Data
-import Page.Shared
+import Page.GuideTeaser
 import Page.Story.Data
 import Route exposing (Route)
 
@@ -36,4 +36,4 @@ type alias Content =
 type Request
     = Failure
     | Loading
-    | Success (List Page.Shared.GuideTeaser)
+    | Success (List Page.GuideTeaser.GuideTeaser)

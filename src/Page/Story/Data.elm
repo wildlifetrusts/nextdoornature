@@ -5,7 +5,7 @@ import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (Language, translate)
 import Json.Decode
 import Json.Decode.Extra
-import Page.Shared exposing (GuideTeaser, Image)
+import Page.GuideTeaser
 import Page.Shared.View
 
 
@@ -14,9 +14,9 @@ type alias Story =
     , slug : String
     , maybeLocation : Maybe String
     , maybeGroupOrIndividual : Maybe String
-    , maybeImages : Maybe (List Image)
+    , maybeImages : Maybe (List Page.GuideTeaser.Image)
     , fullTextMarkdown : String
-    , relatedGuideList : List GuideTeaser
+    , relatedGuideList : List Page.GuideTeaser.GuideTeaser
     }
 
 
