@@ -5,6 +5,7 @@ import Html.Styled exposing (Html, a, div, h1, li, p, text, ul)
 import Html.Styled.Attributes exposing (css, href)
 import Message exposing (Msg)
 import Page.Guide.Data
+import Page.GuideTeaser
 import Page.Shared.View
 import Theme.Global exposing (centerContent)
 import Theme.Markdown exposing (markdownToHtml)
@@ -42,7 +43,7 @@ viewMaybeAudio maybeAudioMeta =
             text ""
 
 
-viewRelatedGuideTeasers : List Page.Shared.View.GuideTeaser -> Html Msg
+viewRelatedGuideTeasers : List Page.GuideTeaser.GuideTeaser -> Html Msg
 viewRelatedGuideTeasers guideList =
     if List.length guideList > 0 then
         ul []
