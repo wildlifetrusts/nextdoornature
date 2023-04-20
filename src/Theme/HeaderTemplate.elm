@@ -4,6 +4,7 @@ import Css exposing (Style, batch)
 import Html.Styled exposing (Html, h1, header, input, node, text)
 import Html.Styled.Attributes exposing (attribute, css, placeholder, property, type_)
 import Html.Styled.Events exposing (on)
+import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (Language(..))
 import Json.Decode
 import Json.Encode
@@ -34,6 +35,10 @@ headerStyle =
 
 searchInput : Model -> Html Msg
 searchInput model =
+    let
+        t =
+            I18n.Translate.translate model.language
+    in
     node "search-input"
         [ property "searchResult" <| Json.Encode.string model.search
         , attribute "language" <|
@@ -45,4 +50,4 @@ searchInput model =
                     "Welsh"
         , on "resultChanged" <| Json.Decode.map Message.SearchChanged <| Json.Decode.at [ "target", "searchResult" ] <| Json.Decode.string
         ]
-        [ input [ type_ "text", placeholder "Search Guides" ] [] ]
+        [ input [ type_ "text", placeholder (t SearchPlaceholder) ] [] ]

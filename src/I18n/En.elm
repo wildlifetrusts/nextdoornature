@@ -123,3 +123,9 @@ enStrings key =
 
         WelcomeP3 ->
             "[cCc] The goal of Nextdoor Nature is to get at least 1 in 4 people across the UK taking Action for Nature. This online library aims to support anyone who is interested in finding out what they can do, and how they can get other people involved."
+
+        ---
+        -- Search
+        ---
+        SearchPlaceholder ->
+            "Search Guides"
