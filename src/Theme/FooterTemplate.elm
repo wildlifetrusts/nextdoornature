@@ -4,7 +4,7 @@ import Css exposing (Style, alignItems, backgroundColor, batch, bold, center, co
 import Html.Styled exposing (Html, a, br, div, footer, h3, img, p, text)
 import Html.Styled.Attributes exposing (css, href, src)
 import I18n.Keys exposing (Key(..))
-import I18n.Translate exposing (Language, translate)
+import I18n.Translate exposing (Language(..), translate)
 
 
 view : Language -> Html msg
@@ -25,17 +25,24 @@ view language =
                     footerNavigationContent
             )
         , div [ css [ footerLogoAreaStyle ] ]
-            [ img [ css [ logoStyle ], src "/images/logo-heritage-fund.svg" ] []
+            [ img [ css [ logoStyle ], src (translatedLogoPath language "logo-heritage-fund") ] []
             , div [ css [ logoPartitionStyle ] ] []
-            , img [ css [ logoStyle ], src "/images/logo-queens-platinum-jubilee.svg" ] []
+            , img [ css [ logoStyle ], src (translatedLogoPath language "logo-queens-platinum-jubilee") ] []
             , div [ css [ logoPartitionStyle ] ] []
-            , img [ css [ logoStyle ], src "/images/logo-wildlife-trusts.svg" ] []
+            , img [ css [ logoStyle ], src (translatedLogoPath language "logo-wildlife-trusts") ] []
             , div [ css [ logoPartitionStyle ] ] []
             , div [ css [ nextdoorNatureTextStyle ] ] [ text (t SiteTitle) ]
             ]
         ]
 
-
+translatedLogoPath : Language -> String -> String
+translatedLogoPath language fileName =
+    case language of
+        English ->
+            "/images/" ++ fileName ++ "-en.svg"
+        Welsh ->
+            "/images/" ++ fileName ++ "-cy.svg"
+        
 navigationColumn : { title : Key, links : List { text : Key, href : Key } } -> Language -> Html msg
 navigationColumn column language =
     let
