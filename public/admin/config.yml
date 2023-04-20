@@ -21,8 +21,9 @@ collections:
       - label: "Images"
         name: "images"
         widget: "list"
+        i18n: true
         fields:
-          - { label: "Image", name: "src", widget: "image" }
+          - { label: "Image", name: "src", widget: "image", i18n: true }
           - { label: "Alt text", name: "alt", widget: "string", i18n: true }
       - { label: "Body", name: "body", widget: "markdown", i18n: true }
   - name: "guides"
@@ -48,7 +49,7 @@ collections:
         required: false
         i18n: true
         fields:
-          - { label: "Image", name: "src", widget: "image" }
+          - { label: "Image", name: "src", widget: "image", i18n: true }
           - { label: "Alt text", name: "alt", widget: "string", i18n: true }
       - label: "Video"
         name: "video"
@@ -56,7 +57,7 @@ collections:
         required: false
         i18n: true
         fields:
-          - { label: "URL", name: "src", widget: "string" }
+          - { label: "URL", name: "src", widget: "string", i18n: true }
           - { label: "Title", name: "title", widget: "string", i18n: true }
       - label: "Related Guides"
         name: "relatedGuides"
@@ -79,7 +80,7 @@ collections:
             required: false
             i18n: true
             fields:
-              - { label: "Image", name: "src", widget: "image" }
+              - { label: "Image", name: "src", widget: "image", i18n: true }
               - { label: "Alt text", name: "alt", widget: "string", i18n: true }
       - label: "Related Stories"
         name: "relatedStories"
@@ -88,7 +89,7 @@ collections:
         i18n: true
         fields:
           - { label: "Title", name: "title", widget: "string", i18n: true }
-          - { label: "Slug", name: "slug", widget: "string" }
+          - { label: "Slug", name: "slug", widget: "string", i18n: true }
           - {
               label: "Description",
               name: "description",
@@ -100,8 +101,9 @@ collections:
             name: "image"
             widget: "object"
             required: false
+            i18n: true
             fields:
-              - { label: "Image", name: "src", widget: "image" }
+              - { label: "Image", name: "src", widget: "image", i18n: true }
               - { label: "Alt text", name: "alt", widget: "string", i18n: true }
   - name: "pages"
     label: "Pages"
