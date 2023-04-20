@@ -35,14 +35,17 @@ view language =
             ]
         ]
 
+
 translatedLogoPath : Language -> String -> String
 translatedLogoPath language fileName =
     case language of
         English ->
             "/images/" ++ fileName ++ "-en.svg"
+
         Welsh ->
             "/images/" ++ fileName ++ "-cy.svg"
-        
+
+
 navigationColumn : { title : Key, links : List { text : Key, href : Key } } -> Language -> Html msg
 navigationColumn column language =
     let
