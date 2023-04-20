@@ -30,10 +30,8 @@ view language =
             , img [ css [ logoStyle ], src "/images/logo-queens-platinum-jubilee.svg" ] []
             , div [ css [ logoPartitionStyle ] ] []
             , img [ css [ logoStyle ], src "/images/logo-wildlife-trusts.svg" ] []
-
-            -- Nextdoor Nature logo
-            -- , div [ css [ logoPartitionStyle ] ] []
-            -- , img [ css [ logoStyle ], src "/images/logo-nextdoor-nature.svg" ] []
+            , div [ css [ logoPartitionStyle ] ] []
+            , img [ css [ logoStyle ], src "/images/logo-nextdoor-nature-footer.svg" ] []
             ]
         ]
 
