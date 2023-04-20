@@ -245,7 +245,7 @@ singleActionFromAPI =
 teaserFromResult : GuideTeaser
 teaserFromResult =
     { title = "How to help wildlife at school"
-    , url = "/actions/how-help-wildlife-school"
+    , url = "https://www.wildlifetrusts.org/actions/how-help-wildlife-school"
     , summary = "Whether feeding the birds, or sowing a wildflower patch, setting up wildlife areas in your school makes for happier, healthier and more creative children."
     , maybeImage = Nothing
     }
@@ -254,7 +254,7 @@ teaserFromResult =
 teaserFromResult2 : GuideTeaser
 teaserFromResult2 =
     { title = "How to make a coastal garden"
-    , url = "/actions/how-make-coastal-garden"
+    , url = "https://www.wildlifetrusts.org/actions/how-make-coastal-garden"
     , summary = "Coastal gardening can be a challenge, but with the right plants in the right place, your garden and its wildlife visitors can thrive."
     , maybeImage = Nothing
     }
