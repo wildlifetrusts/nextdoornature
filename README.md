@@ -47,6 +47,12 @@ Rules live in `review/src/ReviewConfig.elm` and can be modified if needed. These
 - When a pull request is created against `main`, cloudflare builds a preview site
 - When code is merged into `main` it is deployed to https://team-wilder-proto.pages.dev/
 
+## Using the CMS
+
+- The netlify admin for the site can be accessed at https://gleeful-frangipane-4618cb.netlify.app/admin
+- To log in you'll need to use your github identity and have write permission to this repo to make changes.
+- Any changes made & published here will be pushed to main
+
 ## Code and configs
 
 ### What it's for
