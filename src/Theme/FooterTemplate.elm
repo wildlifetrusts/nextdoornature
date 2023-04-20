@@ -7,6 +7,7 @@ import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (Language(..), translate)
 import Theme.Global exposing (lightTeal, purple, teal)
 
+
 view : Language -> Html msg
 view language =
     let
