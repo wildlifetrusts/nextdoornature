@@ -1,10 +1,11 @@
 module Theme.FooterTemplate exposing (view)
 
-import Css exposing (Style, batch, column, displayFlex, em, fitContent, flexDirection, flexShrink, flexWrap, justifyContent, margin2, minHeight, pct, row, spaceAround, width, wrap, zero)
+import Css exposing (Style, backgroundColor, batch, column, displayFlex, em, fitContent, flexDirection, flexShrink, flexWrap, justifyContent, margin2, minHeight, pct, row, spaceAround, width, wrap, zero)
 import Html.Styled exposing (Html, a, div, footer, h3, img, p, text)
 import Html.Styled.Attributes exposing (css, href, src)
 import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (Language, translate)
+import Theme.Global exposing (lightTeal, purple, teal)
 
 
 view : Language -> Html msg
@@ -89,6 +90,7 @@ footerContainerStyle =
         , flexWrap wrap
         , justifyContent spaceAround
         , minHeight fitContent
+        , backgroundColor lightTeal
         ]
 
 

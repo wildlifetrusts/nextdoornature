@@ -1,7 +1,7 @@
 module Theme.PageTemplate exposing (view)
 
 import CookieBanner
-import Css exposing (Style, alignItems, auto, batch, center, column, displayFlex, flex2, flexBasis, flexDirection, height, int, minHeight, pct, vh)
+import Css exposing (Style, alignItems, auto, backgroundColor, batch, center, column, displayFlex, flex2, flexBasis, flexDirection, height, int, minHeight, pct, vh)
 import Html.Styled exposing (Html, button, div, main_, text)
 import Html.Styled.Attributes exposing (css)
 import Html.Styled.Events exposing (onClick)
@@ -10,7 +10,7 @@ import I18n.Translate exposing (translate)
 import Message exposing (Msg(..))
 import Shared exposing (Model)
 import Theme.FooterTemplate as FooterTemplate
-import Theme.Global exposing (globalStyles)
+import Theme.Global exposing (globalStyles, lightTeal, purple, teal)
 import Theme.HeaderTemplate as HeaderTemplate
 
 
@@ -43,7 +43,8 @@ view model content =
 mainStyle : Style
 mainStyle =
     batch
-        []
+        [ backgroundColor lightTeal
+        ]
 
 
 pageStyle : Style
@@ -60,4 +61,5 @@ pageWrapperStyle =
         , flexDirection column
         , height (pct 100)
         , minHeight (vh 100)
+        , backgroundColor teal
         ]
