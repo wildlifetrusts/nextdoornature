@@ -1,7 +1,7 @@
-module Theme.PageTemplate exposing (PageInfo, view)
+module Theme.PageTemplate exposing (view)
 
 import CookieBanner
-import Css exposing (Style, alignItems, auto, batch, center, column, displayFlex, flex2, flexBasis, flexDirection, height, int, minHeight, pct, vh)
+import Css exposing (Style, alignItems, auto, backgroundColor, batch, center, column, displayFlex, flex2, flexBasis, flexDirection, height, int, minHeight, pct, vh)
 import Html.Styled exposing (Html, button, div, main_, text)
 import Html.Styled.Attributes exposing (css)
 import Html.Styled.Events exposing (onClick)
@@ -10,6 +10,7 @@ import I18n.Translate exposing (translate)
 import Message exposing (Msg(..))
 import Shared exposing (Model)
 import Theme.FooterTemplate as FooterTemplate
+import Theme.Global exposing (globalStyles, lightTeal, purple, teal)
 import Theme.HeaderTemplate as HeaderTemplate
 
 
@@ -17,20 +18,20 @@ type alias PageInfo =
     { title : Key, content : Html Msg }
 
 
-view : Model -> PageInfo -> Html Msg
-view model pageInfo =
+view : Model -> Html Msg -> Html Msg
+view model content =
     let
         t : Key -> String
         t =
             translate model.language
     in
     div [ css [ pageWrapperStyle ] ]
-        [ div [ css [ pageStyle ] ]
-            [ HeaderTemplate.view model { content = t pageInfo.title }
-            , main_ [ css [ mainStyle ] ]
+        [ globalStyles
+        , div [ css [ pageStyle ] ]
+            [ main_ [ css [ mainStyle ] ]
                 [ button [ onClick LanguageChangeRequested ] [ text (t ChangeLanguage) ]
                 , div []
-                    [ pageInfo.content
+                    [ content
                     ]
                 ]
             ]
@@ -42,7 +43,8 @@ view model pageInfo =
 mainStyle : Style
 mainStyle =
     batch
-        []
+        [ backgroundColor lightTeal
+        ]
 
 
 pageStyle : Style
@@ -59,4 +61,5 @@ pageWrapperStyle =
         , flexDirection column
         , height (pct 100)
         , minHeight (vh 100)
+        , backgroundColor teal
         ]

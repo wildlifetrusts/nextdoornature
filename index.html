@@ -4,7 +4,31 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>[cCc] Team Wilder Guides</title>
+    <title>[cCc] Nextdoor Nature Guides</title>
+
+    <!-- Adelle font from Adobe -->
+    <script type="text/javascript" src="//use.typekit.net/kmf0xzy.js"></script>
+    <script type="text/javascript">
+      try {
+        Typekit.load({ async: true });
+      } catch (e) {}
+    </script>
+
+    <!-- Rubik font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- ludicrous font -->
+    <style>
+      @font-face {
+        font-family: "Ludicrous";
+        src: url("/fonts/Ludicrous.woff") format("woff");
+      }
+    </style>
 
     <!-- Google tag (gtag.js) -->
     <script
@@ -20,6 +44,19 @@
     </script>
 
     <script type="module" src="./src/js/index.js"></script>
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   </head>
-  <body></body>
+  <body>
+    <script>
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", (user) => {
+          if (!user) {
+            window.netlifyIdentity.on("login", () => {
+              document.location.href = "/admin/";
+            });
+          }
+        });
+      }
+    </script>
+  </body>
 </html>

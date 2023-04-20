@@ -5,6 +5,7 @@ import Browser.Navigation
 import CookieBanner exposing (saveConsent)
 import GoogleAnalytics
 import Html.Styled exposing (Html, toUnstyled)
+import Http
 import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (Language(..))
 import Json.Decode
@@ -15,11 +16,12 @@ import Page.Guide.View
 import Page.Guides
 import Page.Index
 import Page.Shared.Data
+import Page.Shared.View exposing (actionTeaserListDecoder)
 import Page.Story.Data
 import Page.Story.View
 import Page.View
 import Route exposing (Route(..))
-import Shared exposing (CookieState, Model)
+import Shared exposing (CookieState, Model, Request(..))
 import Theme.PageTemplate
 import Url
 
@@ -70,9 +72,18 @@ init flags url key =
       , content = Page.Shared.Data.contentDictDecoder flags
       , language = English
       , search = ""
+      , externalActions = Loading
       }
-    , Cmd.none
+    , getActions
     )
+
+
+getActions : Cmd Msg
+getActions =
+    Http.get
+        { url = "/API.json"
+        , expect = Http.expectJson GotActions actionTeaserListDecoder
+        }
 
 
 consentDecoder : Flags -> String
@@ -130,6 +141,14 @@ update msg model =
                 )
             )
 
+        GotActions result ->
+            case result of
+                Ok list ->
+                    ( { model | externalActions = Success list }, Cmd.none )
+
+                Err _ ->
+                    ( { model | externalActions = Failure }, Cmd.none )
+
         CookieSettingsButtonClicked ->
             ( { model | cookieState = openCookieBanner model.cookieState }, Cmd.none )
 
@@ -180,33 +199,28 @@ view : Model -> Html Msg
 view model =
     case model.page of
         Index ->
-            Theme.PageTemplate.view model
-                { title = SiteTitle, content = Page.Index.view model }
+            Theme.PageTemplate.view model (Page.Index.view model)
 
         Story slug ->
-            Theme.PageTemplate.view model
-                { title = StoryTitle
-                , content =
-                    Page.Story.View.view (Page.Story.Data.storyFromSlug model.language model.content.stories slug)
-                }
+            let
+                story =
+                    Page.Story.Data.storyFromSlug model.language model.content.stories slug
+            in
+            Theme.PageTemplate.view model (Page.Story.View.view story)
 
         Guide slug ->
-            Theme.PageTemplate.view model
-                { title = GuideTitle
-                , content =
-                    Page.Guide.View.view (Page.Guide.Data.guideFromSlug model.language model.content.guides slug)
-                }
+            let
+                guide =
+                    Page.Guide.Data.guideFromSlug model.language model.content.guides slug
+            in
+            Theme.PageTemplate.view model (Page.Guide.View.view guide)
 
         Guides ->
-            Theme.PageTemplate.view model
-                { title = GuidesTitle
-                , content =
-                    Page.Guides.view model
-                }
+            Theme.PageTemplate.view model (Page.Guides.view model)
 
         Page slug ->
-            Theme.PageTemplate.view model
-                { title = PageTitle (Page.Data.pageTitleFromSlug model.content.pages slug)
-                , content =
-                    Page.View.view (Page.Data.pageFromSlug model.language model.content.pages slug)
-                }
+            let
+                page =
+                    Page.Data.pageFromSlug model.language model.content.pages slug
+            in
+            Theme.PageTemplate.view model (Page.View.view page)

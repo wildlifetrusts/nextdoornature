@@ -4,9 +4,6 @@ module I18n.Keys exposing (Key(..))
 type Key
     = SiteTitle
       --- Page Titles
-    | StoryTitle
-    | GuideTitle
-    | PageTitle String
     | GuidesTitle
     | ChangeLanguage
       --- 404 content
@@ -30,6 +27,8 @@ type Key
     | FooterGuidesLink
     | FooterFindYourLocalTrustText
     | FooterFindYourLocalTrustLink
+    | FooterPrivacyPolicyText
+    | FooterPrivacyPolicyLink
       --- Cookie banner
     | CookieBannerH2
     | CookieBannerP

@@ -1,10 +1,11 @@
-module Shared exposing (Content, CookieState, Model)
+module Shared exposing (Content, CookieState, Model, Request(..))
 
 import Browser.Navigation
 import Dict exposing (Dict)
 import I18n.Translate exposing (Language)
 import Page.Data
 import Page.Guide.Data
+import Page.GuideTeaser
 import Page.Story.Data
 import Route exposing (Route)
 
@@ -16,6 +17,7 @@ type alias Model =
     , language : Language
     , content : Content
     , search : String
+    , externalActions : Request
     }
 
 
@@ -30,3 +32,9 @@ type alias Content =
     , stories : Dict String Page.Story.Data.Story
     , pages : Dict String Page.Data.Page
     }
+
+
+type Request
+    = Failure
+    | Loading
+    | Success (List Page.GuideTeaser.GuideTeaser)

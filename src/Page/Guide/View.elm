@@ -1,9 +1,11 @@
 module Page.Guide.View exposing (view)
 
+import Css exposing (Style, batch, fontFamilies)
 import Html.Styled exposing (Html, a, div, h1, li, p, text, ul)
 import Html.Styled.Attributes exposing (css, href)
 import Message exposing (Msg)
 import Page.Guide.Data
+import Page.GuideTeaser
 import Page.Shared.View
 import Theme.Global exposing (centerContent)
 import Theme.Markdown exposing (markdownToHtml)
@@ -12,7 +14,7 @@ import Theme.Markdown exposing (markdownToHtml)
 view : Page.Guide.Data.Guide -> Html Msg
 view guide =
     div [ css [ centerContent ] ]
-        [ h1 [] [ text guide.title ]
+        [ h1 [ css guideTitle ] [ text guide.title ]
         , div [] (markdownToHtml guide.fullTextMarkdown)
         , viewMaybeVideo guide.maybeVideo
         , viewMaybeAudio guide.maybeAudio
@@ -41,7 +43,7 @@ viewMaybeAudio maybeAudioMeta =
             text ""
 
 
-viewRelatedGuideTeasers : List Page.Shared.View.GuideTeaser -> Html Msg
+viewRelatedGuideTeasers : List Page.GuideTeaser.GuideTeaser -> Html Msg
 viewRelatedGuideTeasers guideList =
     if List.length guideList > 0 then
         ul []
@@ -54,3 +56,9 @@ viewRelatedGuideTeasers guideList =
 
     else
         text ""
+
+
+guideTitle : List Style
+guideTitle =
+    [ fontFamilies [ "Ludicrous", "serif" ]
+    ]

@@ -1,6 +1,8 @@
 module Message exposing (Msg(..))
 
 import Browser
+import Http
+import Page.GuideTeaser
 import Url
 
 
@@ -12,3 +14,4 @@ type Msg
     | CookiesAccepted
     | CookiesDeclined
     | SearchChanged String
+    | GotActions (Result Http.Error (List Page.GuideTeaser.GuideTeaser))
