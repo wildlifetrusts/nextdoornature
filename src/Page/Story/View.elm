@@ -5,7 +5,7 @@ import Html.Styled.Attributes exposing (alt, css, href, src)
 import Message exposing (Msg)
 import Page.Shared.View
 import Page.Story.Data
-import Theme.Global exposing (centerContent)
+import Theme.Global exposing (centerContent, roundedCorners)
 import Theme.Markdown exposing (markdownToHtml)
 
 
@@ -30,7 +30,7 @@ view story =
         , div []
             (case story.maybeImages of
                 Just images ->
-                    List.map (\image -> img [ src image.src, alt image.alt ] []) images
+                    List.map (\image -> img [ css roundedCorners, src image.src, alt image.alt ] []) images
 
                 Nothing ->
                     [ text "" ]

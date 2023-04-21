@@ -9,6 +9,7 @@ import Message exposing (Msg)
 import Page.GuideTeaser
 import String exposing (length, padRight)
 import Svg.Styled exposing (image)
+import Theme.Global exposing (roundedCorners)
 
 
 type alias AudioMeta =
@@ -136,7 +137,7 @@ viewGuideTeaser teaser =
                     defaultTeaserImg
     in
     div []
-        [ img [ src image.src, alt image.alt ] []
+        [ img [ css roundedCorners, src image.src, alt image.alt ] []
         , p []
             [ a [ href teaser.url ] [ text teaser.title ] ]
         , p
@@ -148,7 +149,7 @@ viewGuideTeaser teaser =
 viewGuideTeaserList : List Page.GuideTeaser.GuideTeaser -> Html Msg
 viewGuideTeaserList teasers =
     if List.length teasers > 0 then
-        ul []
+        ul [ css [ guideTeaserListStyle ] ]
             (teasers
                 |> sortBy .title
                 |> map
@@ -168,7 +169,7 @@ viewStoryTeasers teasers =
                 |> map
                     (\{ description, image, slug, title } ->
                         div [ css [ storyTeaserStyle ] ]
-                            [ img [ src image.src, alt image.alt ] []
+                            [ img [ css roundedCorners, src image.src, alt image.alt ] []
                             , a [ href ("/stories/" ++ slug) ] [ text title ]
                             , p [] [ text description ]
                             ]
@@ -197,4 +198,11 @@ storyTeaserStyle =
         , flexDirection column
         , height (px 150)
         , maxWidth (px 150)
+        ]
+
+
+guideTeaserListStyle : Style
+guideTeaserListStyle =
+    batch
+        [ Css.listStyleType Css.none
         ]

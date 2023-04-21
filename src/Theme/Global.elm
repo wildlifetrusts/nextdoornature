@@ -100,11 +100,16 @@ lightTeal =
 -- Page Elements
 
 
+roundedCornerValue : Float
+roundedCornerValue =
+    2
+
+
 roundedCorners : List Style
 roundedCorners =
-    [ borderTopLeftRadius (rem 1)
-    , borderTopRightRadius (rem 1)
-    , borderBottomRightRadius (rem 1)
+    [ borderTopLeftRadius (rem roundedCornerValue)
+    , borderTopRightRadius (rem roundedCornerValue)
+    , borderBottomRightRadius (rem roundedCornerValue)
     , overflow hidden
     ]
 
