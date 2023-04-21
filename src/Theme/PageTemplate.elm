@@ -1,7 +1,7 @@
 module Theme.PageTemplate exposing (view)
 
 import CookieBanner
-import Css exposing (Style, alignItems, auto, batch, center, column, displayFlex, flex2, flexBasis, flexDirection, height, int, minHeight, pct, vh)
+import Css exposing (Style, alignItems, batch, center, column, displayFlex, flexDirection, height, minHeight, pct, vh, width)
 import Html.Styled exposing (Html, button, div, main_, text)
 import Html.Styled.Attributes exposing (css)
 import Html.Styled.Events exposing (onClick)
@@ -11,11 +11,6 @@ import Message exposing (Msg(..))
 import Shared exposing (Model)
 import Theme.FooterTemplate as FooterTemplate
 import Theme.Global exposing (globalStyles)
-import Theme.HeaderTemplate as HeaderTemplate
-
-
-type alias PageInfo =
-    { title : Key, content : Html Msg }
 
 
 view : Model -> Html Msg -> Html Msg
@@ -28,7 +23,7 @@ view model content =
     div [ css [ pageWrapperStyle ] ]
         [ globalStyles
         , div [ css [ pageStyle ] ]
-            [ main_ [ css [ mainStyle ] ]
+            [ main_ []
                 [ button [ onClick LanguageChangeRequested ] [ text (t ChangeLanguage) ]
                 , div []
                     [ content
@@ -40,16 +35,11 @@ view model content =
         ]
 
 
-mainStyle : Style
-mainStyle =
-    batch
-        []
-
-
 pageStyle : Style
 pageStyle =
     batch
-        [ flex2 (int 1) (int 0), flexBasis auto ]
+        [ width (pct 100)
+        ]
 
 
 pageWrapperStyle : Style
