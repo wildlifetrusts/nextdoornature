@@ -1,6 +1,6 @@
-module Theme.Global exposing (centerContent, globalStyles, lightTeal, purple, teal)
+module Theme.Global exposing (centerContent, globalStyles, lightTeal, purple, roundedCorners, teal)
 
-import Css exposing (Color, Style, absolute, alignItems, auto, batch, boxSizing, center, ch, color, column, contentBox, displayFlex, flexDirection, fontFamilies, height, hex, hidden, left, margin, marginLeft, marginRight, maxWidth, overflow, position, px, top, width, zero)
+import Css exposing (Color, Style, absolute, alignItems, auto, batch, borderBottomRightRadius, borderTopLeftRadius, borderTopRightRadius, boxSizing, center, ch, color, column, contentBox, displayFlex, flexDirection, fontFamilies, height, hex, hidden, left, margin, marginLeft, marginRight, maxWidth, overflow, position, px, rem, top, width, zero)
 import Css.Global exposing (global, typeSelector)
 import Css.Media as Media exposing (only, screen, withMedia)
 import Html.Styled exposing (Html)
@@ -98,6 +98,18 @@ lightTeal =
 -- Buttons (styles)
 -- Titles
 -- Page Elements
+
+
+roundedCorners : List Style
+roundedCorners =
+    [ borderTopLeftRadius (rem 1)
+    , borderTopRightRadius (rem 1)
+    , borderBottomRightRadius (rem 1)
+    , overflow hidden
+    ]
+
+
+
 -- Text styles
 -- Form field components
 -- Form field styles
