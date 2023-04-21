@@ -1,7 +1,7 @@
 module Theme.PageTemplate exposing (view)
 
 import CookieBanner
-import Css exposing (Style, alignItems, backgroundColor, batch, center, column, displayFlex, flex2, flexBasis, flexDirection, height, int, minHeight, pct, vh, width)
+import Css exposing (Style, alignItems, backgroundColor, batch, center, column, displayFlex, flex2, flexBasis, flexDirection, height, hidden, int, minHeight, none, overflowX, pct, vh, width)
 import Html.Styled exposing (Html, button, div, main_, text)
 import Html.Styled.Attributes exposing (css)
 import Html.Styled.Events exposing (onClick)
@@ -39,6 +39,7 @@ mainStyle : Style
 mainStyle =
     batch
         [ backgroundColor lightTeal
+        , overflowX hidden
         ]
 
 

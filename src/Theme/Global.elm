@@ -1,6 +1,6 @@
-module Theme.Global exposing (centerContent, globalStyles, lightTeal, pageColumnBlockStyle, pageColumnStyle, pageWrapperStyle, purple, teal, topTwoColumnsWrapperStyle)
+module Theme.Global exposing (centerContent, embeddedAudioStyle, embeddedVideoStyle, featureImageStyle, globalStyles, lightTeal, pageColumnBlockStyle, pageColumnStyle, pageWrapperStyle, purple, teal, teaserImageStyle, topTwoColumnsWrapperStyle)
 
-import Css exposing (Color, Style, absolute, alignItems, auto, batch, boxSizing, center, color, column, contentBox, displayFlex, flex, flexDirection, flexStart, flexWrap, fontFamilies, height, hex, hidden, int, justifyContent, lastChild, left, margin, marginBottom, marginLeft, marginRight, marginTop, maxWidth, minWidth, noWrap, overflow, padding, padding2, pct, position, px, rem, row, top, width, zero)
+import Css exposing (Color, Style, absolute, alignItems, auto, batch, boxSizing, center, color, column, contentBox, displayFlex, flex, flexDirection, flexStart, flexWrap, fontFamilies, height, hex, hidden, inherit, int, justifyContent, lastChild, left, margin, marginBottom, marginLeft, marginRight, marginTop, maxWidth, minWidth, noWrap, overflow, padding, padding2, pct, position, px, rem, row, top, width, zero)
 import Css.Global exposing (global, typeSelector)
 import Css.Media as Media exposing (only, screen, withMedia)
 import Html.Styled exposing (Html)
@@ -44,11 +44,6 @@ maxTabletLandscape =
 maxSmallDesktop : Float
 maxSmallDesktop =
     1500
-
-
-withMediaMobileOnly : List Style -> Style
-withMediaMobileOnly =
-    withMedia [ only screen [ Media.maxWidth (px (maxMobile - 1)) ] ]
 
 
 withMediaTabletPortraitUp : List Style -> Style
@@ -136,16 +131,66 @@ globalStyles =
 -- Helpers
 
 
+featureImageStyle : Style
+featureImageStyle =
+    batch
+        [ width (pct 100)
+        , height auto
+        , maxWidth (px (maxSmallDesktop / 3))
+        ]
+
+
+teaserImageStyle : Style
+teaserImageStyle =
+    batch
+        [ width (pct 100)
+        , height auto
+        , maxWidth (px (maxTabletPortrait / 3))
+        ]
+
+
+embeddedVideoStyle : Style
+embeddedVideoStyle =
+    batch
+        [ width (pct 100)
+        , height auto
+        , maxWidth (px (maxTabletLandscape / 3))
+        ]
+
+
+embeddedAudioStyle : Style
+embeddedAudioStyle =
+    batch
+        [ width (pct 100)
+        , height auto
+        , maxWidth (px (maxTabletLandscape / 3))
+        ]
+
+
+outerPadding : Style
+outerPadding =
+    batch
+        [ padding2 (rem 2) (rem 1)
+        , withMediaTabletPortraitUp
+            [ padding (rem 3)
+            ]
+        , withMediaTabletLandscapeUp
+            [ padding2 (rem 4) (rem 3)
+            ]
+        ]
+
+
 centerContent : Style
 centerContent =
     batch
-        [ boxSizing contentBox
+        [ alignItems center
+        , boxSizing contentBox
+        , displayFlex
+        , flexDirection column
         , maxWidth (px maxSmallDesktop)
         , marginLeft auto
         , marginRight auto
-        , displayFlex
-        , flexDirection column
-        , alignItems center
+        , outerPadding
         ]
 
 
@@ -157,7 +202,6 @@ pageWrapperStyle =
         , flexDirection column
         , flexWrap noWrap
         , justifyContent center
-        , padding2 (rem 3) (rem 4)
         , withMediaTabletLandscapeUp
             [ flexDirection row
             ]
@@ -182,23 +226,13 @@ topTwoColumnsWrapperStyle =
         ]
 
 
-pageColumnStyle : Style
-pageColumnStyle =
+pageColumnMarginStyle : Style
+pageColumnMarginStyle =
     batch
-        [ alignItems flexStart
-        , displayFlex
-        , flex (int 1)
-        , flexDirection column
-        , justifyContent center
-        , marginBottom (rem 3)
+        [ marginBottom (rem 3)
         , marginRight (rem 3)
-        , maxWidth (px (maxSmallDesktop / 3))
-        , minWidth (px (maxTabletPortrait / 3))
-        , padding (rem 0)
-        , width (pct 100)
         , lastChild
-            [ marginBottom
-                (rem 0)
+            [ marginBottom (rem 0)
             , marginRight (rem 0)
             ]
         , withMediaTabletPortraitUp
@@ -207,14 +241,38 @@ pageColumnStyle =
         ]
 
 
+columnWidthStyle : Style
+columnWidthStyle =
+    batch
+        [ maxWidth (px (maxSmallDesktop / 3))
+        , width (pct 100)
+        , withMediaTabletPortraitUp
+            [ minWidth (px (maxTabletPortrait / 3))
+            ]
+        ]
+
+
+pageColumnStyle : Style
+pageColumnStyle =
+    batch
+        [ alignItems flexStart
+        , columnWidthStyle
+        , displayFlex
+        , flex (int 1)
+        , flexDirection column
+        , justifyContent center
+        , pageColumnMarginStyle
+        ]
+
+
 pageColumnBlockStyle : Style
 pageColumnBlockStyle =
     batch
-        [ lastChild
+        [ marginBottom (rem 4)
+        , marginTop (rem 0)
+        , lastChild
             [ marginBottom (rem 0)
             ]
-        , marginBottom (rem 4)
-        , marginTop (rem 0)
         ]
 
 

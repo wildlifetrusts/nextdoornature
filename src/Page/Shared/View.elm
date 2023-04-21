@@ -9,6 +9,7 @@ import Message exposing (Msg)
 import Page.GuideTeaser
 import String exposing (length, padRight)
 import Svg.Styled exposing (image)
+import Theme.Global exposing (teaserImageStyle)
 
 
 type alias AudioMeta =
@@ -95,6 +96,7 @@ viewVideo videoMeta =
             , attribute "allowfullscreen" "true"
             , autoplay False
             , title videoMeta.title
+            , css [ Theme.Global.embeddedVideoStyle ]
             ]
             []
         ]
@@ -102,7 +104,10 @@ viewVideo videoMeta =
 
 viewAudio : AudioMeta -> Html Msg
 viewAudio audioMeta =
-    text "[fFf] render audio player"
+    div
+        [ css [ Theme.Global.embeddedVideoStyle ]
+        ]
+        [ text "[fFf] render audio player" ]
 
 
 limitContent : String -> Int -> String
@@ -136,7 +141,7 @@ viewGuideTeaser teaser =
                     defaultTeaserImg
     in
     div []
-        [ img [ src image.src, alt image.alt ] []
+        [ img [ src image.src, alt image.alt, css [ teaserImageStyle ] ] []
         , p []
             [ a [ href teaser.url ] [ text teaser.title ] ]
         , p
@@ -168,7 +173,7 @@ viewStoryTeasers teasers =
                 |> map
                     (\{ description, image, slug, title } ->
                         div [ css [ storyTeaserStyle ] ]
-                            [ img [ src image.src, alt image.alt ] []
+                            [ img [ src image.src, alt image.alt, css [ teaserImageStyle ] ] []
                             , a [ href ("/stories/" ++ slug) ] [ text title ]
                             , p [] [ text description ]
                             ]
