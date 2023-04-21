@@ -1,7 +1,7 @@
-module Theme.Global exposing (centerContent, globalStyles, pageColumnBlockStyle, pageColumnStyle, pageWrapperStyle, topTwoColumnsWrapperStyle)
+module Theme.Global exposing (centerContent, globalStyles, lightTeal, pageColumnBlockStyle, pageColumnStyle, pageWrapperStyle, purple, teal, topTwoColumnsWrapperStyle)
 
-import Css exposing (Style, absolute, alignItems, auto, batch, boxSizing, center, column, contentBox, displayFlex, flex, flexDirection, flexStart, flexWrap, fontFamilies, height, hidden, int, justifyContent, lastChild, left, marginBottom, marginLeft, marginRight, marginTop, maxWidth, minWidth, noWrap, overflow, padding, padding2, pct, position, px, rem, row, top, width, wrap)
-import Css.Global exposing (col, global, typeSelector)
+import Css exposing (Color, Style, absolute, alignItems, auto, batch, boxSizing, center, color, column, contentBox, displayFlex, flex, flexDirection, flexStart, flexWrap, fontFamilies, height, hex, hidden, int, justifyContent, lastChild, left, margin, marginBottom, marginLeft, marginRight, marginTop, maxWidth, noWrap, overflow, padding, padding2, pct, position, px, rem, row, top, width, zero)
+import Css.Global exposing (global, typeSelector)
 import Css.Media as Media exposing (only, screen, withMedia)
 import Html.Styled exposing (Html)
 
@@ -65,6 +65,24 @@ withMediaTabletLandscapeUp =
 -- Brand colours
 -- Accent colours
 -- Text and background colours
+
+
+purple : Color
+purple =
+    hex "54257F"
+
+
+teal : Color
+teal =
+    hex "058295"
+
+
+lightTeal : Color
+lightTeal =
+    hex "e7f2f4"
+
+
+
 -- Transitions
 -- Buttons (components)
 -- Buttons (styles)
@@ -83,15 +101,28 @@ globalStyles : Html msg
 globalStyles =
     global
         [ typeSelector "body"
-            [ fontFamilies [ "Rubik", "sans-serif" ] ]
+            [ fontFamilies [ "Rubik", "sans-serif" ]
+            , margin zero
+            ]
         , typeSelector "h1"
-            [ fontFamilies [ "Adelle", "serif" ] ]
+            [ fontFamilies [ "Adelle", "serif" ]
+            , color purple
+            ]
         , typeSelector "h2"
-            []
+            [ fontFamilies [ "Adelle", "serif" ]
+            , color purple
+            ]
         , typeSelector "h3"
-            []
+            [ fontFamilies [ "Adelle", "serif" ]
+            , color purple
+            ]
         , typeSelector "h4"
-            []
+            [ fontFamilies [ "Adelle", "serif" ]
+            , color purple
+            ]
+        , typeSelector "a"
+            [ color purple
+            ]
         , typeSelector "b"
             []
         , typeSelector "p"
