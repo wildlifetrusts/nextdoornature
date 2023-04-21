@@ -9,6 +9,7 @@ import Markdown.Parser
 import Markdown.Renderer
 import Theme.Global exposing (roundedCorners)
 
+
 markdownToHtml : String -> List (Html.Html msg)
 markdownToHtml markdown =
     case markdownToView markdown of
