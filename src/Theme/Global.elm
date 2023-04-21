@@ -156,6 +156,12 @@ globalStyles =
             []
         , typeSelector "blockquote"
             []
+        , typeSelector ".content_image"
+            [ borderTopLeftRadius (rem roundedCornerValue)
+            , borderTopRightRadius (rem roundedCornerValue)
+            , borderBottomRightRadius (rem roundedCornerValue)
+            , overflow hidden
+            ]
         ]
 
 
