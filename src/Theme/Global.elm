@@ -1,6 +1,6 @@
 module Theme.Global exposing (centerContent, globalStyles, lightTeal, pageColumnBlockStyle, pageColumnStyle, pageWrapperStyle, purple, teal, topTwoColumnsWrapperStyle)
 
-import Css exposing (Color, Style, absolute, alignItems, auto, batch, boxSizing, center, color, column, contentBox, displayFlex, flex, flexDirection, flexStart, flexWrap, fontFamilies, height, hex, hidden, int, justifyContent, lastChild, left, margin, marginBottom, marginLeft, marginRight, marginTop, maxWidth, noWrap, overflow, padding, padding2, pct, position, px, rem, row, top, width, zero)
+import Css exposing (Color, Style, absolute, alignItems, auto, batch, boxSizing, center, color, column, contentBox, displayFlex, flex, flexDirection, flexStart, flexWrap, fontFamilies, height, hex, hidden, int, justifyContent, lastChild, left, margin, marginBottom, marginLeft, marginRight, marginTop, maxWidth, minWidth, noWrap, overflow, padding, padding2, pct, position, px, rem, row, top, width, zero)
 import Css.Global exposing (global, typeSelector)
 import Css.Media as Media exposing (only, screen, withMedia)
 import Html.Styled exposing (Html)
@@ -193,6 +193,7 @@ pageColumnStyle =
         , marginBottom (rem 3)
         , marginRight (rem 3)
         , maxWidth (px (maxSmallDesktop / 3))
+        , minWidth (px (maxTabletPortrait / 3))
         , padding (rem 0)
         , width (pct 100)
         , lastChild
