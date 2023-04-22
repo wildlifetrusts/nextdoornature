@@ -1,4 +1,4 @@
-module Page.Shared.View exposing (AudioMeta, StoryTeaser, VideoMeta, actionTeaserDecoder, actionTeaserListDecoder, audioDecoder, defaultTeaserImg, guideTeaserDecoder, imageDecoder, storyTeaserDecoder, videoDecoder, viewAudio, viewGuideTeaserList, viewStoryTeasers, viewVideo)
+module Page.Shared.View exposing (AudioMeta, StoryTeaser, VideoMeta, actionTeaserDecoder, actionTeaserListDecoder, audioDecoder, defaultTeaserImg, guideTeaserDecoder, imageDecoder, interalGuideTeaserListDecoder, internalGuideTeaserDecoder, storyTeaserDecoder, videoDecoder, viewAudio, viewGuideTeaserList, viewStoryTeasers, viewVideo)
 
 import Css exposing (Style, batch, center, column, displayFlex, flexDirection, flexWrap, height, justifyContent, maxWidth, px, wrap)
 import Html.Styled exposing (Html, a, div, i, iframe, img, li, p, text, ul)
@@ -68,6 +68,20 @@ guideTeaserDecoder =
         (Json.Decode.field "basename" Json.Decode.string)
         (Json.Decode.field "summary" Json.Decode.string)
         (Json.Decode.maybe (Json.Decode.field "image" imageDecoder))
+
+
+internalGuideTeaserDecoder : Json.Decode.Decoder Page.GuideTeaser.GuideTeaser
+internalGuideTeaserDecoder =
+    Json.Decode.map4 Page.GuideTeaser.GuideTeaser
+        (Json.Decode.field "title" Json.Decode.string)
+        (Json.Decode.field "url" Json.Decode.string)
+        (Json.Decode.field "summary" Json.Decode.string)
+        (Json.Decode.maybe (Json.Decode.field "maybeImage" imageDecoder))
+
+
+interalGuideTeaserListDecoder : Json.Decode.Decoder (List Page.GuideTeaser.GuideTeaser)
+interalGuideTeaserListDecoder =
+    Json.Decode.list internalGuideTeaserDecoder
 
 
 actionTeaserDecoder : Json.Decode.Decoder Page.GuideTeaser.GuideTeaser

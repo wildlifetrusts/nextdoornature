@@ -71,7 +71,7 @@ init flags url key =
             }
       , content = Page.Shared.Data.contentDictDecoder flags
       , language = English
-      , search = ""
+      , search = []
       , externalActions = Loading
       }
     , getActions

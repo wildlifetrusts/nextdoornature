@@ -13,5 +13,5 @@ type Msg
     | CookieSettingsButtonClicked
     | CookiesAccepted
     | CookiesDeclined
-    | SearchChanged String
+    | SearchChanged (List Page.GuideTeaser.GuideTeaser)
     | GotActions (Result Http.Error (List Page.GuideTeaser.GuideTeaser))

@@ -8,8 +8,12 @@ import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (Language(..))
 import Json.Decode
 import Json.Encode
+import List exposing (concat)
 import Message exposing (Msg)
-import Shared exposing (Model)
+import Page.Guide.Data
+import Page.GuideTeaser
+import Page.Shared.View exposing (actionTeaserListDecoder)
+import Shared exposing (Model, Request(..))
 
 
 type alias HeaderInfo =
@@ -38,16 +42,25 @@ searchInput model =
     let
         t =
             I18n.Translate.translate model.language
+
+        teaserList : List Page.GuideTeaser.GuideTeaser
+        teaserList =
+            case model.externalActions of
+                Failure ->
+                    Page.Guide.Data.teaserListFromGuideDict model.language model.content.guides
+
+                Loading ->
+                    Page.Guide.Data.teaserListFromGuideDict model.language model.content.guides
+
+                Success list ->
+                    concat [ Page.Guide.Data.teaserListFromGuideDict model.language model.content.guides, list ]
     in
     node "search-input"
-        [ property "searchResult" <| Json.Encode.string model.search
-        , attribute "language" <|
-            case model.language of
-                English ->
-                    "English"
-
-                Welsh ->
-                    "Welsh"
-        , on "resultChanged" <| Json.Decode.map Message.SearchChanged <| Json.Decode.at [ "target", "searchResult" ] <| Json.Decode.string
+        [ property "searchResult" <| Page.GuideTeaser.guideTeaserListEncoder model.search
+        , attribute "search-input" <| Page.GuideTeaser.guideTeaserListString teaserList
+        , on "resultChanged" <|
+            Json.Decode.map Message.SearchChanged <|
+                Json.Decode.at [ "target", "searchResult" ] <|
+                    Json.Decode.list Page.Shared.View.internalGuideTeaserDecoder
         ]
         [ input [ type_ "text", placeholder (t SearchPlaceholder) ] [] ]
