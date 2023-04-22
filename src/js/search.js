@@ -35,7 +35,7 @@ export default class extends HTMLElement {
     console.log("updateSearch");
     // some of these life cycle methods may trigger the function before the component has fully loaded
     if (!this._input) return;
-    this.searchResult = JSON.stringify(this.searchInput);
+    this.searchResult = this.searchInput;
     // because this code runs outside Elms event system we need to give
     // Elm a bit of space to update the DOM when the attribute changes before
     // updating. Perhaps there is some way to express this better in Elm.
