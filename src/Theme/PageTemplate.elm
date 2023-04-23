@@ -27,6 +27,7 @@ view model content =
     in
     div [ css [ pageWrapperStyle ] ]
         [ globalStyles
+        , HeaderTemplate.view model.language model.page
         , div [ css [ pageStyle ] ]
             [ main_ [ css [ mainStyle ] ]
                 [ button [ onClick LanguageChangeRequested ] [ text (t ChangeLanguage) ]
