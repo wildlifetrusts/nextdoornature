@@ -155,7 +155,7 @@ viewGuideTeaser teaser =
                     defaultTeaserImg
     in
     li [ css [ teaserContainerStyle ] ]
-        [ img [ src image.src, alt image.alt, css [ teaserImageStyle ] ] []
+        [ img [ src image.src, alt image.alt, css [ roundedCornerStyle, teaserImageStyle ] ] []
         , p [ css [ teaserRowStyle ] ]
             [ a [ href teaser.url ] [ text teaser.title ] ]
         , viewGuideTeaserSummary teaser.summary
