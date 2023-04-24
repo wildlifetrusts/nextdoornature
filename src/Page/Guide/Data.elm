@@ -93,9 +93,14 @@ guidesInPreferredLanguage language guides =
             guides.cy
 
 
-fallbackGuides : Guides -> Dict String Guide
-fallbackGuides guides =
-    guides.en
+fallbackGuides : Language -> Guides -> Dict String Guide
+fallbackGuides language guides =
+    case language of
+        English ->
+            guides.cy
+
+        Welsh ->
+            guides.en
 
 
 guideFromSlug : Language -> Guides -> String -> Guide
@@ -105,7 +110,7 @@ guideFromSlug language guides slug =
             aGuide
 
         Nothing ->
-            case Dict.get slug (fallbackGuides guides) of
+            case Dict.get slug (fallbackGuides language guides) of
                 Just aGuide ->
                     aGuide
 
