@@ -1,8 +1,8 @@
 module Theme.HeaderTemplate exposing (view)
 
-import Css exposing (Style, batch)
-import Html.Styled exposing (Html, div, h1, header, text)
-import Html.Styled.Attributes exposing (css)
+import Css exposing (Style, batch, fontFamilies, fontSize, margin, rem, zero)
+import Html.Styled exposing (Html, a, div, h1, header, text)
+import Html.Styled.Attributes exposing (css, href)
 import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (Language, translate)
 import Route exposing (Route(..))
@@ -15,21 +15,26 @@ view language route =
         t =
             translate language
     in
-    header [ css [ headerStyle ] ]
-        [ viewSiteTitle route (t SiteTitle)
-        ]
+    header [] [ viewSiteTitle route (t SiteTitle) ]
 
 
 viewSiteTitle : Route -> String -> Html msg
 viewSiteTitle route siteTitle =
     if route == Index then
-        h1 [] [ text siteTitle ]
+        h1 [ css [ headerBrandStyle ] ] [ text siteTitle ]
 
     else
-        div [] [ text siteTitle ]
+        div [ css [ headerBrandStyle ] ]
+            [ a [ href "/" ]
+                [ text siteTitle
+                ]
+            ]
 
 
-headerStyle : Style
-headerStyle =
+headerBrandStyle : Style
+headerBrandStyle =
     batch
-        []
+        [ fontSize (rem 4)
+        , fontFamilies [ "Ludicrous" ]
+        , margin zero
+        ]
