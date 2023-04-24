@@ -5,7 +5,7 @@ import Html.Styled.Attributes exposing (alt, css, src)
 import Message exposing (Msg)
 import Page.Shared.View
 import Page.Story.Data
-import Theme.Global exposing (centerContent, roundedCornerStyle, featureImageStyle, mainContainerStyles, pageColumnStyle, topTwoColumnsWrapperStyle)
+import Theme.Global exposing (centerContent, featureImageStyle, mainContainerStyles, pageColumnStyle, roundedCornerStyle, topTwoColumnsWrapperStyle)
 import Theme.Markdown exposing (markdownToHtml)
 
 
