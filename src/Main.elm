@@ -10,6 +10,7 @@ import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (Language(..))
 import Json.Decode
 import Message exposing (Msg(..))
+import Metadata
 import Page.Data
 import Page.Guide.Data
 import Page.Guide.View
@@ -62,9 +63,13 @@ init flags url key =
         showCookieBanner =
             -- user has previously stated a preference, info should be collapsed
             storedConsent == "null"
+
+        page : Route
+        page =
+            Maybe.withDefault Index maybeRoute
     in
     ( { key = key
-      , page = Maybe.withDefault Index maybeRoute
+      , page = page
       , cookieState =
             { enableAnalytics = hasConsented
             , cookieBannerIsOpen = showCookieBanner
@@ -74,7 +79,10 @@ init flags url key =
       , search = []
       , externalActions = Loading
       }
-    , getActions
+    , Cmd.batch
+        [ Metadata.setMetadata (Metadata.metadataFromPage page)
+        , getActions
+        ]
     )
 
 
@@ -112,7 +120,9 @@ update msg model =
                     -- could 404 instead depends on desired behaviour
                     Maybe.withDefault Index (Route.fromUrl url)
             in
-            ( { model | page = newRoute }, Cmd.none )
+            ( { model | page = newRoute }
+            , Metadata.setMetadata (Metadata.metadataFromPage newRoute)
+            )
 
         LinkClicked urlRequest ->
             case urlRequest of
