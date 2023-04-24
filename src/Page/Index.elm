@@ -23,7 +23,7 @@ view model =
                 [ div [ css [ pageColumnStyle ] ]
                     (viewTextColumn t [ WelcomeP1, WelcomeP2, WelcomeP3 ])
                 , div [ css [ pageColumnStyle ] ]
-                    [ Page.Guide.Data.teaserListFromGuideDict model.language model.content.guides
+                    [ List.take 4 (Page.Guide.Data.teaserListFromGuideDict model.language model.content.guides)
                         |> Page.Shared.View.viewGuideTeaserList
                     ]
                 ]

@@ -1,6 +1,6 @@
-module Theme.Global exposing (centerContent, embeddedAudioStyle, embeddedVideoStyle, featureImageStyle, globalStyles, lightTeal, mainContainerStyles, pageColumnBlockStyle, pageColumnStyle, purple, roundedCornerStyle, teal, teaserImageStyle, topTwoColumnsWrapperStyle)
+module Theme.Global exposing (centerContent, embeddedAudioStyle, embeddedVideoStyle, featureImageStyle, globalStyles, lightTeal, mainContainerStyles, pageColumnBlockStyle, pageColumnStyle, purple, roundedCornerStyle, teal, teaserContainerStyle, teaserImageStyle, teaserRowStyle, teasersContainerStyle, topTwoColumnsWrapperStyle)
 
-import Css exposing (Color, Style, absolute, alignItems, auto, batch, borderBottomRightRadius, borderTopLeftRadius, borderTopRightRadius, boxSizing, center, color, column, contentBox, displayFlex, flex, flexDirection, flexStart, flexWrap, fontFamilies, height, hex, hidden, inherit, int, justifyContent, lastChild, left, margin, marginBottom, marginLeft, marginRight, marginTop, maxWidth, minWidth, noWrap, overflow, padding, padding2, pct, position, px, rem, row, top, width, zero)
+import Css exposing (Color, Style, absolute, alignItems, auto, batch, borderBottomRightRadius, borderTopLeftRadius, borderTopRightRadius, boxSizing, center, color, column, contentBox, displayFlex, flex, flex3, flexBasis, flexDirection, flexStart, flexWrap, fontFamilies, height, hex, hidden, inherit, int, justifyContent, lastChild, left, listStyle, margin, marginBottom, marginLeft, marginRight, marginTop, maxWidth, minWidth, noWrap, none, overflow, padding, padding2, pct, position, px, rem, row, top, width, wrap, zero)
 import Css.Global exposing (global, typeSelector)
 import Css.Media as Media exposing (only, screen, withMedia)
 import Html.Styled exposing (Html)
@@ -155,12 +155,60 @@ globalStyles =
 -- Helpers
 
 
+teaserContainerStyle : Style
+teaserContainerStyle =
+    batch
+        [ alignItems flexStart
+        , displayFlex
+        , flex3 (int 1) (int 1) (pct 34)
+        , flexDirection column
+        , listStyle none
+        , marginRight (rem 1.5)
+        , marginBottom (rem 1.5)
+        , minWidth (px 200)
+        , width (pct 100)
+        , lastChild
+            [ marginBottom (rem 0)
+            , marginRight (rem 0)
+            ]
+        , withMediaTabletPortraitUp
+            [ minWidth (px 100)
+            ]
+        ]
+
+
+teaserRowStyle : Style
+teaserRowStyle =
+    batch
+        [ margin (rem 0)
+        , marginBottom
+            (rem 0.5)
+        , lastChild
+            [ marginBottom (rem 0)
+            ]
+        ]
+
+
+teasersContainerStyle : Style
+teasersContainerStyle =
+    batch
+        [ alignItems flexStart
+        , displayFlex
+        , flexDirection row
+        , flexWrap wrap
+        , margin (rem 0)
+        , padding (rem 0)
+        , width (pct 100)
+        ]
+
+
 featureImageStyle : Style
 featureImageStyle =
     batch
         [ width (pct 100)
         , height auto
         , maxWidth (px (maxSmallDesktop / 3))
+        , teaserRowStyle
         ]
 
 

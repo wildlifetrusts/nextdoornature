@@ -1,7 +1,7 @@
 module Page.Shared.View exposing (AudioMeta, StoryTeaser, VideoMeta, actionTeaserDecoder, actionTeaserListDecoder, audioDecoder, defaultTeaserImg, guideTeaserDecoder, imageDecoder, interalGuideTeaserListDecoder, internalGuideTeaserDecoder, storyTeaserDecoder, videoDecoder, viewAudio, viewGuideTeaserList, viewStoryTeasers, viewVideo)
 
-import Css exposing (Style, batch, center, column, displayFlex, flexDirection, flexWrap, height, justifyContent, maxWidth, px, wrap)
-import Html.Styled exposing (Html, a, div, i, iframe, img, li, p, text, ul)
+import Css exposing (Style, batch, center, column, displayFlex, flexDirection, flexWrap, height, justifyContent, listStyle, maxWidth, none, px, wrap)
+import Html.Styled exposing (Html, a, div, i, iframe, img, li, p, summary, text, ul)
 import Html.Styled.Attributes exposing (alt, attribute, autoplay, css, href, src, title)
 import Json.Decode exposing (Decoder)
 import List exposing (map, sortBy)
@@ -9,7 +9,7 @@ import Message exposing (Msg)
 import Page.GuideTeaser
 import String exposing (length, padRight)
 import Svg.Styled exposing (image)
-import Theme.Global exposing (roundedCornerStyle, teaserImageStyle)
+import Theme.Global exposing (roundedCornerStyle, teaserContainerStyle, teaserImageStyle, teaserRowStyle, teasersContainerStyle)
 
 
 type alias AudioMeta =
@@ -154,24 +154,33 @@ viewGuideTeaser teaser =
                 Nothing ->
                     defaultTeaserImg
     in
-    div []
-        [ img [ src image.src, alt image.alt, css [ roundedCornerStyle, teaserImageStyle ] ] []
-        , p []
+    li [ css [ teaserContainerStyle ] ]
+        [ img [ src image.src, alt image.alt, css [ teaserImageStyle ] ] []
+        , p [ css [ teaserRowStyle ] ]
             [ a [ href teaser.url ] [ text teaser.title ] ]
-        , p
-            []
-            [ text <| limitContent teaser.summary 240 ]
+        , viewGuideTeaserSummary teaser.summary
         ]
+
+
+viewGuideTeaserSummary : String -> Html Msg
+viewGuideTeaserSummary summary =
+    if length summary > 0 then
+        p
+            [ css [ teaserRowStyle ] ]
+            [ text <| limitContent summary 240 ]
+
+    else
+        text ""
 
 
 viewGuideTeaserList : List Page.GuideTeaser.GuideTeaser -> Html Msg
 viewGuideTeaserList teasers =
     if List.length teasers > 0 then
-        ul []
+        ul [ css [ teasersContainerStyle ] ]
             (teasers
                 |> sortBy .title
                 |> map
-                    (\teaser -> li [] [ viewGuideTeaser teaser ])
+                    (\teaser -> viewGuideTeaser teaser)
             )
 
     else
@@ -186,7 +195,7 @@ viewStoryTeasers teasers =
                 |> sortBy .title
                 |> map
                     (\{ description, image, slug, title } ->
-                        div [ css [ storyTeaserStyle ] ]
+                        div [ css [ storyteaserContainerStyle ] ]
                             [ img [ src image.src, alt image.alt, css [ roundedCornerStyle, teaserImageStyle ] ] []
                             , a [ href ("/stories/" ++ slug) ] [ text title ]
                             , p [] [ text description ]
@@ -208,19 +217,12 @@ viewStoryTeasersStyle =
         ]
 
 
-storyTeaserStyle : Style
-storyTeaserStyle =
+storyteaserContainerStyle : Style
+storyteaserContainerStyle =
     batch
         [ justifyContent center
         , displayFlex
         , flexDirection column
         , height (px 150)
         , maxWidth (px 150)
-        ]
-
-
-guideTeaserListStyle : Style
-guideTeaserListStyle =
-    batch
-        [ Css.listStyleType Css.none
         ]
