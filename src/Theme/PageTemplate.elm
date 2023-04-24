@@ -11,6 +11,7 @@ import Message exposing (Msg(..))
 import Shared exposing (Model)
 import Theme.FooterTemplate as FooterTemplate
 import Theme.Global exposing (centerContent, globalStyles, lightTeal, pageWrapperStyle)
+import Theme.HeaderTemplate as HeaderTemplate
 
 
 view : Model -> Html Msg -> Html Msg
@@ -23,7 +24,8 @@ view model content =
     div []
         [ globalStyles
         , div [ css [ mainStyle ] ]
-            [ main_ [ css [ centerContent ] ]
+            [ HeaderTemplate.view model
+            , main_ [ css [ centerContent ] ]
                 [ button [ onClick LanguageChangeRequested ] [ text (t ChangeLanguage) ]
                 , div [ css [ pageWrapperStyle ] ]
                     [ content
