@@ -55,15 +55,19 @@ searchInput model =
 
         teaserList : List Page.GuideTeaser.GuideTeaser
         teaserList =
-            case model.externalActions of
-                Failure ->
-                    Page.Guide.Data.teaserListFromGuideDict model.language model.content.guides
+            if model.language == Welsh then
+                Page.Guide.Data.teaserListFromGuideDict model.language model.content.guides
 
-                Loading ->
-                    Page.Guide.Data.teaserListFromGuideDict model.language model.content.guides
+            else
+                case model.externalActions of
+                    Failure ->
+                        Page.Guide.Data.teaserListFromGuideDict model.language model.content.guides
 
-                Success list ->
-                    List.concat [ Page.Guide.Data.teaserListFromGuideDict model.language model.content.guides, list ]
+                    Loading ->
+                        Page.Guide.Data.teaserListFromGuideDict model.language model.content.guides
+
+                    Success list ->
+                        List.concat [ Page.Guide.Data.teaserListFromGuideDict model.language model.content.guides, list ]
     in
     label []
         [ text (t SearchPlaceholder)

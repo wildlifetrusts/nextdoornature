@@ -1,12 +1,16 @@
-module Page.Guide.Data exposing (Guide, guideDictDecoder, guideFromSlug, teaserListFromGuideDict)
+module Page.Guide.Data exposing (Guide, Guides, guideDictDecoder, guideFromSlug, guideLanguageDictDecoder, teaserListFromGuideDict)
 
 import Dict exposing (Dict)
 import I18n.Keys exposing (Key(..))
-import I18n.Translate exposing (Language, translate)
+import I18n.Translate exposing (Language(..), translate)
 import Json.Decode
 import Json.Decode.Extra
 import Page.GuideTeaser
 import Page.Shared.View
+
+
+type alias Guides =
+    { cy : Dict String Guide, en : Dict String Guide }
 
 
 type alias Guide =
@@ -72,14 +76,46 @@ guideDictDecoder =
         )
 
 
-guideFromSlug : Language -> Dict String Guide -> String -> Guide
+guideLanguageDictDecoder : Json.Decode.Decoder Guides
+guideLanguageDictDecoder =
+    Json.Decode.map2 Guides
+        (Json.Decode.field "cy" guideDictDecoder)
+        (Json.Decode.field "en" guideDictDecoder)
+
+
+guidesInPreferredLanguage : Language -> Guides -> Dict String Guide
+guidesInPreferredLanguage language guides =
+    case language of
+        English ->
+            guides.en
+
+        Welsh ->
+            guides.cy
+
+
+fallbackGuides : Language -> Guides -> Dict String Guide
+fallbackGuides language guides =
+    case language of
+        English ->
+            guides.cy
+
+        Welsh ->
+            guides.en
+
+
+guideFromSlug : Language -> Guides -> String -> Guide
 guideFromSlug language guides slug =
-    case Dict.get slug guides of
+    case Dict.get slug (guidesInPreferredLanguage language guides) of
         Just aGuide ->
             aGuide
 
         Nothing ->
-            blankGuide language
+            case Dict.get slug (fallbackGuides language guides) of
+                Just aGuide ->
+                    aGuide
+
+                Nothing ->
+                    blankGuide language
 
 
 slugToUrl : String -> String
@@ -89,15 +125,25 @@ slugToUrl slug =
 
 teaserListFromGuideDict :
     Language
-    -> Dict String Guide
+    -> Guides
     -> List Page.GuideTeaser.GuideTeaser
 teaserListFromGuideDict language guides =
-    Dict.toList guides
+    let
+        guide : Dict String Guide
+        guide =
+            case language of
+                English ->
+                    guides.en
+
+                Welsh ->
+                    guides.cy
+    in
+    Dict.toList guide
         |> List.map
-            (\( _, guide ) ->
-                { title = guide.title
-                , url = slugToUrl guide.slug
-                , summary = guide.summary
-                , maybeImage = guide.maybeImage
+            (\( _, g ) ->
+                { title = g.title
+                , url = slugToUrl g.slug
+                , summary = g.summary
+                , maybeImage = g.maybeImage
                 }
             )
