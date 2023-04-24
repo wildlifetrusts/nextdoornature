@@ -25,7 +25,12 @@ view model =
     in
     header []
         [ viewSiteTitle model.page (t SiteTitle)
-        , searchInput model
+        , case model.page of
+            Guides ->
+                searchInput model
+
+            _ ->
+                a [ href "/guides" ] [ text <| t FooterGuidesLinkText ]
         ]
 
 
