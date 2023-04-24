@@ -21,11 +21,13 @@
     "elm-review": "^2.9.1",
     "elm-test": "^0.19.1-revision12",
     "elm-tooling": "1.13.0",
-    "markdown-to-json": "^0.5.4",
     "husky": "^8.0.3",
+    "markdown-to-json": "^0.5.4",
     "prettier": "2.8.4",
     "vite": "4.1.4",
     "vite-plugin-elm": "2.8.0-beta.3"
   },
-  "dependencies": {}
+  "dependencies": {
+    "fuse.js": "^6.6.2"
+  }
 }
