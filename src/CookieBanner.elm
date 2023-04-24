@@ -1,6 +1,6 @@
 port module CookieBanner exposing (saveConsent, viewCookieBanner)
 
-import Css exposing (Style, backgroundColor, batch, bottom, fixed, position, px, rem, solid, vw, width)
+import Css exposing (Style, auto, backgroundColor, batch, bottom, fixed, margin, minHeight, position, px, rem, solid, vw, width)
 import Html.Styled exposing (Html, button, div, h2, p, text)
 import Html.Styled.Attributes exposing (css)
 import Html.Styled.Events exposing (onClick)

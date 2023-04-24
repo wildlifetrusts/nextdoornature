@@ -1,6 +1,6 @@
 module Theme.FooterTemplate exposing (view)
 
-import Css exposing (Style, alignItems, backgroundColor, batch, bold, center, color, column, display, displayFlex, em, fitContent, flexDirection, flexEnd, flexShrink, flexWrap, fontFamilies, fontSize, fontWeight, height, hex, inlineBlock, justifyContent, margin2, minHeight, padding, pct, property, px, rem, row, spaceAround, width, wrap, zero)
+import Css exposing (Style, alignItems, backgroundColor, batch, bold, center, color, column, display, displayFlex, em, fitContent, flexDirection, flexEnd, flexShrink, flexWrap, fontFamilies, fontSize, fontWeight, height, hex, inlineBlock, justifyContent, margin2, marginTop, minHeight, padding, paddingBottom, pct, property, px, rem, row, spaceAround, width, wrap, zero)
 import Html.Styled exposing (Html, a, br, div, footer, h3, img, p, text)
 import Html.Styled.Attributes exposing (css, href, src)
 import I18n.Keys exposing (Key(..))
@@ -118,7 +118,7 @@ footerStyle =
     batch
         [ flexShrink zero
         , width (pct 100)
-        , margin2 (em 2) zero
+        , marginTop (rem 2)
         ]
 
 
@@ -133,6 +133,7 @@ footerLogoAreaStyle =
         , backgroundColor (hex "53257f")
         , color (hex "fff")
         , padding (rem 3)
+        , paddingBottom (rem 5)
         ]
 
 
