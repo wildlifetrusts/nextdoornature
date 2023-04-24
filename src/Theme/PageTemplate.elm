@@ -13,6 +13,7 @@ import Theme.FooterTemplate as FooterTemplate
 import Theme.Global exposing (centerContent, globalStyles, lightTeal, pageWrapperStyle)
 import Theme.HeaderTemplate as HeaderTemplate
 
+
 view : Model -> Html Msg -> Html Msg
 view model content =
     let
