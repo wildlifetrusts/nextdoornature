@@ -9,7 +9,7 @@ import Message exposing (Msg)
 import Page.GuideTeaser
 import String exposing (length, padRight)
 import Svg.Styled exposing (image)
-import Theme.Global exposing (roundedCorners)
+import Theme.Global exposing (roundedCornerStyle, teaserImageStyle)
 
 
 type alias AudioMeta =
@@ -96,6 +96,7 @@ viewVideo videoMeta =
             , attribute "allowfullscreen" "true"
             , autoplay False
             , title videoMeta.title
+            , css [ Theme.Global.embeddedVideoStyle ]
             ]
             []
         ]
@@ -103,7 +104,10 @@ viewVideo videoMeta =
 
 viewAudio : AudioMeta -> Html Msg
 viewAudio audioMeta =
-    text "[fFf] render audio player"
+    div
+        [ css [ Theme.Global.embeddedVideoStyle ]
+        ]
+        [ text "[fFf] render audio player" ]
 
 
 limitContent : String -> Int -> String
@@ -137,7 +141,7 @@ viewGuideTeaser teaser =
                     defaultTeaserImg
     in
     div []
-        [ img [ css roundedCorners, src image.src, alt image.alt ] []
+        [ img [ src image.src, alt image.alt, css [ roundedCornerStyle, teaserImageStyle ] ] []
         , p []
             [ a [ href teaser.url ] [ text teaser.title ] ]
         , p
@@ -149,7 +153,7 @@ viewGuideTeaser teaser =
 viewGuideTeaserList : List Page.GuideTeaser.GuideTeaser -> Html Msg
 viewGuideTeaserList teasers =
     if List.length teasers > 0 then
-        ul [ css [ guideTeaserListStyle ] ]
+        ul []
             (teasers
                 |> sortBy .title
                 |> map
@@ -169,7 +173,7 @@ viewStoryTeasers teasers =
                 |> map
                     (\{ description, image, slug, title } ->
                         div [ css [ storyTeaserStyle ] ]
-                            [ img [ css roundedCorners, src image.src, alt image.alt ] []
+                            [ img [ src image.src, alt image.alt, css [ roundedCornerStyle, teaserImageStyle ] ] []
                             , a [ href ("/stories/" ++ slug) ] [ text title ]
                             , p [] [ text description ]
                             ]
