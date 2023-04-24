@@ -21,19 +21,23 @@ view model =
         [ div [ css [ pageWrapperStyle ] ]
             [ div [ css [ topTwoColumnsWrapperStyle ] ]
                 [ div [ css [ pageColumnStyle ] ]
-                    [ p [ css [ pageColumnBlockStyle ] ] [ text (t WelcomeP1) ]
-                    , p [ css [ pageColumnBlockStyle ] ] [ text (t WelcomeP2) ]
-                    , p [ css [ pageColumnBlockStyle ] ] [ text (t WelcomeP3) ]
-                    ]
+                    (viewTextColumn t [ WelcomeP1, WelcomeP2, WelcomeP3 ])
                 , div [ css [ pageColumnStyle ] ]
                     [ Page.Guide.Data.teaserListFromGuideDict model.language model.content.guides
                         |> Page.Shared.View.viewGuideTeaserList
                     ]
                 ]
             , div [ css [ pageColumnStyle ] ]
-                [ p [ css [ pageColumnBlockStyle ] ] [ text (t ExploreGuidesListPlaceholder) ]
-                , p [ css [ pageColumnBlockStyle ] ] [ text (t ExploreGuidesListPlaceholder) ]
-                , p [ css [ pageColumnBlockStyle ] ] [ text (t ExploreGuidesListPlaceholder) ]
-                ]
+                (viewTextColumn t
+                    [ ExploreGuidesListPlaceholder
+                    , ExploreGuidesListPlaceholder
+                    , ExploreGuidesListPlaceholder
+                    ]
+                )
             ]
         ]
+
+
+viewTextColumn : (Key -> String) -> List Key -> List (Html msg)
+viewTextColumn t paragraphs =
+    List.map (\para -> p [ css [ pageColumnBlockStyle ] ] [ text (t para) ]) paragraphs
