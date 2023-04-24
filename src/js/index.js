@@ -1,10 +1,13 @@
 import reset from "/src/css/reset.css?inline";
 import { Elm } from "/src/Main.elm";
+import SearchInput from "/src/js/search";
 
 import cyGuides from "../../data/guides/cy.json";
 import enGuides from "../../data/guides/en.json";
 import stories from "../../data/stories.json";
 import pages from "../../data/pages.json";
+
+customElements.define("search-input", SearchInput);
 
 const hasConsented = sessionStorage.getItem("ga-cookie-consent")
   ? sessionStorage.getItem("ga-cookie-consent")

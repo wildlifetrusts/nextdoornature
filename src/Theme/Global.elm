@@ -1,4 +1,4 @@
-module Theme.Global exposing (centerContent, embeddedAudioStyle, embeddedVideoStyle, featureImageStyle, globalStyles, lightTeal, pageColumnBlockStyle, pageColumnStyle, pageWrapperStyle, purple, teal, teaserImageStyle, topTwoColumnsWrapperStyle)
+module Theme.Global exposing (centerContent, embeddedAudioStyle, embeddedVideoStyle, featureImageStyle, globalStyles, lightTeal, mainContainerStyles, pageColumnBlockStyle, pageColumnStyle, purple, teal, teaserImageStyle, topTwoColumnsWrapperStyle)
 
 import Css exposing (Color, Style, absolute, alignItems, auto, batch, boxSizing, center, color, column, contentBox, displayFlex, flex, flexDirection, flexStart, flexWrap, fontFamilies, height, hex, hidden, inherit, int, justifyContent, lastChild, left, margin, marginBottom, marginLeft, marginRight, marginTop, maxWidth, minWidth, noWrap, overflow, padding, padding2, pct, position, px, rem, row, top, width, zero)
 import Css.Global exposing (global, typeSelector)
@@ -194,8 +194,8 @@ centerContent =
         ]
 
 
-pageWrapperStyle : Style
-pageWrapperStyle =
+mainContainerStyles : Style
+mainContainerStyles =
     batch
         [ alignItems flexStart
         , displayFlex

@@ -10,7 +10,8 @@ import I18n.Translate exposing (translate)
 import Message exposing (Msg(..))
 import Shared exposing (Model)
 import Theme.FooterTemplate as FooterTemplate
-import Theme.Global exposing (centerContent, globalStyles, lightTeal, pageWrapperStyle)
+import Theme.Global exposing (globalStyles, lightTeal, mainContainerStyles)
+import Theme.HeaderTemplate as HeaderTemplate
 
 
 view : Model -> Html Msg -> Html Msg
@@ -22,21 +23,22 @@ view model content =
     in
     div []
         [ globalStyles
-        , div [ css [ mainStyle ] ]
-            [ main_ [ css [ centerContent ] ]
-                [ button [ onClick LanguageChangeRequested ] [ text (t ChangeLanguage) ]
-                , div [ css [ pageWrapperStyle ] ]
-                    [ content
-                    ]
+        , div
+            [ css [ pageWrapperStyles ] ]
+            [ HeaderTemplate.view model
+            , button [ onClick LanguageChangeRequested ]
+                [ text (t ChangeLanguage) ]
+            , main_ [ css [ mainContainerStyles ] ]
+                [ content
                 ]
+            , FooterTemplate.view model.language
+            , CookieBanner.viewCookieBanner model.language model.cookieState
             ]
-        , FooterTemplate.view model.language
-        , CookieBanner.viewCookieBanner model.language model.cookieState
         ]
 
 
-mainStyle : Style
-mainStyle =
+pageWrapperStyles : Style
+pageWrapperStyles =
     batch
         [ backgroundColor lightTeal
         , overflowX hidden

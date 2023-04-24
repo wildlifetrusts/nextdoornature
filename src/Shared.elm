@@ -16,6 +16,7 @@ type alias Model =
     , cookieState : CookieState
     , language : Language
     , content : Content
+    , search : List Page.GuideTeaser.GuideTeaser
     , externalActions : Request
     }
 
