@@ -5,6 +5,7 @@ type Key
     = SiteTitle
       --- Page Titles
     | GuidesTitle
+    | GuidesMetaDescription
     | ChangeLanguage
       --- 404 content
     | Story404Title

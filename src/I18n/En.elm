@@ -15,6 +15,9 @@ enStrings key =
         GuidesTitle ->
             "[cCc] Guides"
 
+        GuidesMetaDescription ->
+            "[cCc] Description for the guides search page"
+
         ---
         -- Header
         ---

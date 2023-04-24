@@ -24,8 +24,14 @@ const app = Elm.Main.init({
 
 app.ports.setMetadata.subscribe(function (pageMetadata) {
   document.title = pageMetadata.title;
-  document.getElementsByTagName("meta").namedItem("og-title").setAttribute("content", pageMetadata.title);
-  document.getElementsByTagName("meta").namedItem("description").setAttribute("content", pageMetadata.description);
+  document
+    .getElementsByTagName("meta")
+    .namedItem("og-title")
+    .setAttribute("content", pageMetadata.title);
+  document
+    .getElementsByTagName("meta")
+    .namedItem("description")
+    .setAttribute("content", pageMetadata.description);
 });
 
 app.ports.saveConsent.subscribe(function (hasConsented) {

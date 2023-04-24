@@ -80,7 +80,7 @@ init flags url key =
       , externalActions = Loading
       }
     , Cmd.batch
-        [ Metadata.setMetadata (Metadata.metadataFromPage page)
+        [ Metadata.setMetadata (Metadata.metadataFromPage page English)
         , getActions
         ]
     )
@@ -121,7 +121,7 @@ update msg model =
                     Maybe.withDefault Index (Route.fromUrl url)
             in
             ( { model | page = newRoute }
-            , Metadata.setMetadata (Metadata.metadataFromPage newRoute)
+            , Metadata.setMetadata (Metadata.metadataFromPage newRoute model.language)
             )
 
         LinkClicked urlRequest ->
@@ -137,18 +137,26 @@ update msg model =
                     )
 
         LanguageChangeRequested ->
-            ( if model.language == English then
-                { model | language = Welsh }
+            let
+                newLanguage : Language
+                newLanguage =
+                    if model.language == English then
+                        Welsh
 
-              else
-                { model | language = English }
-            , GoogleAnalytics.updateAnalytics model.cookieState.enableAnalytics
-                (GoogleAnalytics.updateAnalyticsEvent
-                    { category = Route.toString model.page
-                    , action = "changed language to"
-                    , label = I18n.Translate.languageToString model.language
-                    }
-                )
+                    else
+                        English
+            in
+            ( { model | language = newLanguage }
+            , Cmd.batch
+                [ Metadata.setMetadata (Metadata.metadataFromPage model.page newLanguage)
+                , GoogleAnalytics.updateAnalytics model.cookieState.enableAnalytics
+                    (GoogleAnalytics.updateAnalyticsEvent
+                        { category = Route.toString model.page
+                        , action = "changed language to"
+                        , label = I18n.Translate.languageToString newLanguage
+                        }
+                    )
+                ]
             )
 
         GotActions result ->
