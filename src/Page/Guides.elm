@@ -4,7 +4,7 @@ import Dict
 import Html.Styled exposing (Html, a, div, h1, li, text, ul)
 import Html.Styled.Attributes exposing (class, css, href)
 import I18n.Keys exposing (Key(..))
-import I18n.Translate exposing (translate)
+import I18n.Translate exposing (Language(..), translate)
 import List
 import Message exposing (Msg)
 import Page.Guide.Data exposing (Guide)
@@ -23,7 +23,10 @@ view model =
 
         teaserList : List Page.GuideTeaser.GuideTeaser
         teaserList =
-            if List.length model.search > 0 then
+            if model.language == Welsh then
+                Page.Guide.Data.teaserListFromGuideDict model.language model.content.guides
+
+            else if List.length model.search > 0 then
                 model.search
 
             else
