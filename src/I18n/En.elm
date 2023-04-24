@@ -10,7 +10,7 @@ enStrings key =
         -- Page titles
         ---
         SiteTitle ->
-            "[cCc] Nextdoor Nature"
+            "The Nextdoor Nature Library"
 
         GuidesTitle ->
             "[cCc] Guides"
@@ -129,3 +129,6 @@ enStrings key =
         ---
         SearchPlaceholder ->
             "Search Guides"
+
+        ExploreGuidesListPlaceholder ->
+            "[cCc] Explore guides by theme"

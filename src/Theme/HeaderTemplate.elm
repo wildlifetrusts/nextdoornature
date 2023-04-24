@@ -1,40 +1,45 @@
-module Theme.HeaderTemplate exposing (HeaderInfo, view)
+module Theme.HeaderTemplate exposing (view)
 
-import Css exposing (Style, batch)
-import Html.Styled exposing (Html, h1, header, input, node, text)
-import Html.Styled.Attributes exposing (attribute, css, placeholder, property, type_)
+import Css exposing (Style, batch, fontFamilies, fontSize, margin, rem, zero)
+import Html.Styled exposing (Html, a, div, h1, header, input, node, text)
+import Html.Styled.Attributes exposing (attribute, css, href, placeholder, property, type_)
 import Html.Styled.Events exposing (on)
 import I18n.Keys exposing (Key(..))
-import I18n.Translate exposing (Language(..))
+import I18n.Translate exposing (Language(..), translate)
 import Json.Decode
-import Json.Encode
-import List exposing (concat, length)
+import List exposing (concat)
 import Message exposing (Msg)
 import Page.Guide.Data
 import Page.GuideTeaser
-import Page.Shared.View exposing (actionTeaserListDecoder)
+import Page.Shared.View
+import Route exposing (Route(..))
 import Shared exposing (Model, Request(..))
 
 
-type alias HeaderInfo =
-    { content : String }
-
-
-view : Model -> HeaderInfo -> Html Msg
-view model headerInfo =
-    header [ css [ headerStyle ] ]
-        [ h1
-            []
-            [ text headerInfo.content
-            ]
+view : Model -> Html Msg
+view model =
+    let
+        t : Key -> String
+        t =
+            translate model.language
+    in
+    header []
+        [ viewSiteTitle model.page (t SiteTitle)
         , searchInput model
         ]
 
 
-headerStyle : Style
-headerStyle =
-    batch
-        []
+viewSiteTitle : Route -> String -> Html Msg
+viewSiteTitle route siteTitle =
+    if route == Index then
+        h1 [ css [ headerBrandStyle ] ] [ text siteTitle ]
+
+    else
+        div [ css [ headerBrandStyle ] ]
+            [ a [ href "/" ]
+                [ text siteTitle
+                ]
+            ]
 
 
 searchInput : Model -> Html Msg
@@ -64,3 +69,12 @@ searchInput model =
                     Json.Decode.list Page.Shared.View.internalGuideTeaserDecoder
         ]
         [ input [ type_ "text", placeholder (t SearchPlaceholder) ] [] ]
+
+
+headerBrandStyle : Style
+headerBrandStyle =
+    batch
+        [ fontSize (rem 4)
+        , fontFamilies [ "Ludicrous" ]
+        , margin zero
+        ]

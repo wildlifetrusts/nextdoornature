@@ -1,13 +1,13 @@
 module Page.Guide.View exposing (view)
 
-import Css exposing (Style, batch, fontFamilies)
-import Html.Styled exposing (Html, a, div, h1, li, p, text, ul)
+import Css exposing (Style, fontFamilies)
+import Html.Styled exposing (Html, a, div, h1, li, text, ul)
 import Html.Styled.Attributes exposing (css, href)
 import Message exposing (Msg)
 import Page.Guide.Data
 import Page.GuideTeaser
 import Page.Shared.View
-import Theme.Global exposing (centerContent)
+import Theme.Global exposing (centerContent, mainContainerStyles, pageColumnBlockStyle, pageColumnStyle, topTwoColumnsWrapperStyle)
 import Theme.Markdown exposing (markdownToHtml)
 
 
@@ -15,11 +15,18 @@ view : Page.Guide.Data.Guide -> Html Msg
 view guide =
     div [ css [ centerContent ] ]
         [ h1 [ css guideTitle ] [ text guide.title ]
-        , div [] (markdownToHtml guide.fullTextMarkdown)
-        , viewMaybeVideo guide.maybeVideo
-        , viewMaybeAudio guide.maybeAudio
-        , Page.Shared.View.viewStoryTeasers guide.relatedStoryList
-        , viewRelatedGuideTeasers guide.relatedGuideList
+        , div [ css [ mainContainerStyles ] ]
+            [ div [ css [ topTwoColumnsWrapperStyle ] ]
+                [ div [ css [ pageColumnStyle ] ]
+                    [ div [ css [ pageColumnBlockStyle ] ] (markdownToHtml guide.fullTextMarkdown) ]
+                , viewMaybeVideo guide.maybeVideo
+                , viewMaybeAudio guide.maybeAudio
+                ]
+            , div [ css [ pageColumnStyle ] ]
+                [ Page.Shared.View.viewStoryTeasers guide.relatedStoryList
+                , viewRelatedGuideTeasers guide.relatedGuideList
+                ]
+            ]
         ]
 
 
@@ -27,7 +34,9 @@ viewMaybeVideo : Maybe Page.Shared.View.VideoMeta -> Html Msg
 viewMaybeVideo maybeVideoMeta =
     case maybeVideoMeta of
         Just aVideo ->
-            Page.Shared.View.viewVideo aVideo
+            div [ css [ pageColumnStyle ] ]
+                [ Page.Shared.View.viewVideo aVideo
+                ]
 
         Nothing ->
             text ""
@@ -37,7 +46,9 @@ viewMaybeAudio : Maybe Page.Shared.View.AudioMeta -> Html Msg
 viewMaybeAudio maybeAudioMeta =
     case maybeAudioMeta of
         Just anAudio ->
-            Page.Shared.View.viewAudio anAudio
+            div [ css [ pageColumnStyle ] ]
+                [ Page.Shared.View.viewAudio anAudio
+                ]
 
         Nothing ->
             text ""

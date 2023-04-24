@@ -41,3 +41,4 @@ type Key
     | WelcomeP3
       --- Search
     | SearchPlaceholder
+    | ExploreGuidesListPlaceholder
