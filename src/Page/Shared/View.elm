@@ -9,7 +9,7 @@ import Message exposing (Msg)
 import Page.GuideTeaser
 import String exposing (length, padRight)
 import Svg.Styled exposing (image)
-import Theme.Global exposing (teaserContainerStyle, teaserImageStyle, teaserRowStyle, teasersContainerStyle)
+import Theme.Global exposing (roundedCornerStyle, teaserContainerStyle, teaserImageStyle, teaserRowStyle, teasersContainerStyle)
 
 
 type alias AudioMeta =
@@ -155,7 +155,7 @@ viewGuideTeaser teaser =
                     defaultTeaserImg
     in
     li [ css [ teaserContainerStyle ] ]
-        [ img [ src image.src, alt image.alt, css [ teaserImageStyle ] ] []
+        [ img [ src image.src, alt image.alt, css [ roundedCornerStyle, teaserImageStyle ] ] []
         , p [ css [ teaserRowStyle ] ]
             [ a [ href teaser.url ] [ text teaser.title ] ]
         , viewGuideTeaserSummary teaser.summary
@@ -196,7 +196,7 @@ viewStoryTeasers teasers =
                 |> map
                     (\{ description, image, slug, title } ->
                         div [ css [ storyteaserContainerStyle ] ]
-                            [ img [ src image.src, alt image.alt, css [ teaserImageStyle ] ] []
+                            [ img [ src image.src, alt image.alt, css [ roundedCornerStyle, teaserImageStyle ] ] []
                             , a [ href ("/stories/" ++ slug) ] [ text title ]
                             , p [] [ text description ]
                             ]

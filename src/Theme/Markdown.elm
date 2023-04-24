@@ -7,6 +7,7 @@ import Markdown.Block as Block
 import Markdown.Html
 import Markdown.Parser
 import Markdown.Renderer
+import Theme.Global exposing (roundedCornerStyle)
 
 
 markdownToHtml : String -> List (Html.Html msg)
@@ -86,6 +87,7 @@ htmlRenderer =
                         [ Attr.src imageInfo.src
                         , Attr.alt imageInfo.alt
                         , Attr.title title
+                        , Attr.class "content_image"
                         ]
                         []
 
@@ -93,6 +95,7 @@ htmlRenderer =
                     Html.img
                         [ Attr.src imageInfo.src
                         , Attr.alt imageInfo.alt
+                        , Attr.class "content_image"
                         ]
                         []
     , text =

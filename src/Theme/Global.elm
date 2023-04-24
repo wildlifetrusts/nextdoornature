@@ -1,6 +1,6 @@
-module Theme.Global exposing (centerContent, embeddedAudioStyle, embeddedVideoStyle, featureImageStyle, globalStyles, lightTeal, mainContainerStyles, pageColumnBlockStyle, pageColumnStyle, purple, teal, teaserContainerStyle, teaserImageStyle, teaserRowStyle, teasersContainerStyle, topTwoColumnsWrapperStyle)
+module Theme.Global exposing (centerContent, embeddedAudioStyle, embeddedVideoStyle, featureImageStyle, globalStyles, lightTeal, mainContainerStyles, pageColumnBlockStyle, pageColumnStyle, purple, roundedCornerStyle, teal, teaserContainerStyle, teaserImageStyle, teaserRowStyle, teasersContainerStyle, topTwoColumnsWrapperStyle)
 
-import Css exposing (Color, Style, absolute, alignItems, auto, batch, boxSizing, center, color, column, contentBox, displayFlex, flex, flex3, flexBasis, flexDirection, flexStart, flexWrap, fontFamilies, height, hex, hidden, inherit, int, justifyContent, lastChild, left, listStyle, margin, marginBottom, marginLeft, marginRight, marginTop, maxWidth, minWidth, noWrap, none, overflow, padding, padding2, pct, position, px, rem, row, top, width, wrap, zero)
+import Css exposing (Color, Style, absolute, alignItems, auto, batch, borderBottomRightRadius, borderTopLeftRadius, borderTopRightRadius, boxSizing, center, color, column, contentBox, displayFlex, flex, flex3, flexBasis, flexDirection, flexStart, flexWrap, fontFamilies, height, hex, hidden, inherit, int, justifyContent, lastChild, left, listStyle, margin, marginBottom, marginLeft, marginRight, marginTop, maxWidth, minWidth, noWrap, none, overflow, padding, padding2, pct, position, px, rem, row, top, width, wrap, zero)
 import Css.Global exposing (global, typeSelector)
 import Css.Media as Media exposing (only, screen, withMedia)
 import Html.Styled exposing (Html)
@@ -83,6 +83,24 @@ lightTeal =
 -- Buttons (styles)
 -- Titles
 -- Page Elements
+
+
+roundedCornerValue : Float
+roundedCornerValue =
+    2
+
+
+roundedCornerStyle : Style
+roundedCornerStyle =
+    batch
+        [ borderTopLeftRadius (rem roundedCornerValue)
+        , borderTopRightRadius (rem roundedCornerValue)
+        , borderBottomRightRadius (rem roundedCornerValue)
+        , overflow hidden
+        ]
+
+
+
 -- Text styles
 -- Form field components
 -- Form field styles
@@ -124,6 +142,12 @@ globalStyles =
             []
         , typeSelector "blockquote"
             []
+        , typeSelector ".content_image"
+            [ borderTopLeftRadius (rem roundedCornerValue)
+            , borderTopRightRadius (rem roundedCornerValue)
+            , borderBottomRightRadius (rem roundedCornerValue)
+            , overflow hidden
+            ]
         ]
 
 
