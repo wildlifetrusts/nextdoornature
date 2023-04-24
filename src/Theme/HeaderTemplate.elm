@@ -1,6 +1,6 @@
 module Theme.HeaderTemplate exposing (view)
 
-import Css exposing (Style, alignItems, baseline, batch, center, column, displayFlex, flexDirection, flexEnd, flexStart, flexWrap, fontFamilies, fontSize, justifyContent, left, margin, margin2, marginBottom, marginRight, marginTop, noWrap, rem, right, row, spaceBetween, textAlign, zero)
+import Css exposing (Style, alignItems, auto, baseline, batch, center, column, displayFlex, flexDirection, flexEnd, flexStart, flexWrap, fontFamilies, fontSize, int, justifyContent, left, lineHeight, margin, margin2, marginBottom, marginRight, marginTop, maxWidth, noWrap, none, pct, px, rem, right, row, spaceBetween, textAlign, textDecoration, width, zero)
 import Html.Styled exposing (Html, a, button, div, h1, header, input, label, node, text)
 import Html.Styled.Attributes exposing (attribute, css, href, id, placeholder, property, type_)
 import Html.Styled.Events exposing (on, onClick)
@@ -46,7 +46,12 @@ viewSiteTitle route siteTitle =
 
     else
         div [ css [ headerBrandStyle, headerTitleStyle ] ]
-            [ a [ href "/" ]
+            [ a
+                [ href "/"
+                , css
+                    [ textDecoration none
+                    ]
+                ]
                 [ text siteTitle
                 ]
             ]
@@ -89,6 +94,7 @@ headerBrandStyle =
     batch
         [ fontSize (rem 4)
         , fontFamilies [ "Ludicrous" ]
+        , lineHeight (rem 4)
         , margin zero
         ]
 
@@ -140,5 +146,7 @@ headerLinkStyle =
 headerTitleStyle : Style
 headerTitleStyle =
     batch
-        [ marginRight (rem 3)
+        [ maxWidth (px 336)
+        , withMediaMobileUp
+            [ marginRight (rem 3) ]
         ]
