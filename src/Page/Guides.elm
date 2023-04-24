@@ -23,11 +23,11 @@ view model =
 
         teaserList : List Page.GuideTeaser.GuideTeaser
         teaserList =
-            if model.language == Welsh then
-                Page.Guide.Data.teaserListFromGuideDict model.language model.content.guides
-
-            else if List.length model.search > 0 then
+            if List.length model.search > 0 then
                 model.search
+
+            else if model.language == Welsh then
+                Page.Guide.Data.teaserListFromGuideDict model.language model.content.guides
 
             else
                 case model.externalActions of
