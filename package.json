@@ -8,7 +8,7 @@
     "build": "npm run generate && vite build",
     "generate": "npm run generate_guides && npm run generate_stories && npm run generate_pages",
     "generate_pages": "m2j -o ./data/pages.json -c ./content/pages/en/*.md",
-    "generate_guides": "m2j -o ./data/guides.json -c ./content/guides/en/*.md",
+    "generate_guides": "mkdir -p ./data/guides && m2j -o ./data/guides/english.json -c ./content/guides/en/*.md && m2j -o ./data/guides/welsh.json -c ./content/guides/cy/*.md",
     "generate_stories": "m2j -o ./data/stories.json -c ./content/stories/en/*.md",
     "format": "elm-format src",
     "lint": "npx elm-review",
