@@ -1,8 +1,8 @@
 module Theme.HeaderTemplate exposing (view)
 
 import Css exposing (Style, batch, fontFamilies, fontSize, margin, rem, zero)
-import Html.Styled exposing (Html, a, div, h1, header, input, node, text)
-import Html.Styled.Attributes exposing (attribute, css, href, placeholder, property, type_)
+import Html.Styled exposing (Html, a, div, h1, header, input, label, node, text)
+import Html.Styled.Attributes exposing (attribute, css, href, id, placeholder, property, type_)
 import Html.Styled.Events exposing (on)
 import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (Language(..), translate)
@@ -65,15 +65,18 @@ searchInput model =
                 Success list ->
                     concat [ Page.Guide.Data.teaserListFromGuideDict model.language model.content.guides, list ]
     in
-    node "search-input"
-        [ property "searchResult" <| Page.GuideTeaser.guideTeaserListEncoder model.search
-        , attribute "search-input" <| Page.GuideTeaser.guideTeaserListString teaserList
-        , on "resultChanged" <|
-            Json.Decode.map Message.SearchChanged <|
-                Json.Decode.at [ "target", "searchResult" ] <|
-                    Json.Decode.list Page.Shared.View.internalGuideTeaserDecoder
+    label []
+        [ text (t SearchPlaceholder)
+        , node "search-input"
+            [ property "searchResult" <| Page.GuideTeaser.guideTeaserListEncoder model.search
+            , attribute "search-input" <| Page.GuideTeaser.guideTeaserListString teaserList
+            , on "resultChanged" <|
+                Json.Decode.map Message.SearchChanged <|
+                    Json.Decode.at [ "target", "searchResult" ] <|
+                        Json.Decode.list Page.Shared.View.internalGuideTeaserDecoder
+            ]
+            [ input [ id "search", type_ "text", placeholder (t SearchPlaceholder) ] [] ]
         ]
-        [ input [ type_ "text", placeholder (t SearchPlaceholder) ] [] ]
 
 
 headerBrandStyle : Style
