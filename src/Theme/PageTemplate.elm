@@ -1,7 +1,7 @@
 module Theme.PageTemplate exposing (view)
 
 import CookieBanner
-import Css exposing (Style, alignItems, backgroundColor, batch, center, column, displayFlex, flex2, flexBasis, flexDirection, height, hidden, int, minHeight, none, overflowX, pct, vh, width)
+import Css exposing (Style, backgroundColor, batch, hidden, overflowX, pct, width)
 import Html.Styled exposing (Html, button, div, main_, text)
 import Html.Styled.Attributes exposing (css)
 import Html.Styled.Events exposing (onClick)
@@ -10,7 +10,7 @@ import I18n.Translate exposing (translate)
 import Message exposing (Msg(..))
 import Shared exposing (Model)
 import Theme.FooterTemplate as FooterTemplate
-import Theme.Global exposing (globalStyles, lightTeal, teal)
+import Theme.Global exposing (centerContent, globalStyles, lightTeal, pageWrapperStyle)
 
 
 view : Model -> Html Msg -> Html Msg
@@ -20,12 +20,12 @@ view model content =
         t =
             translate model.language
     in
-    div [ css [ pageWrapperStyle ] ]
+    div []
         [ globalStyles
-        , div [ css [ pageStyle ] ]
-            [ main_ []
+        , div [ css [ mainStyle ] ]
+            [ main_ [ css [ centerContent ] ]
                 [ button [ onClick LanguageChangeRequested ] [ text (t ChangeLanguage) ]
-                , div []
+                , div [ css [ pageWrapperStyle ] ]
                     [ content
                     ]
                 ]
@@ -40,23 +40,5 @@ mainStyle =
     batch
         [ backgroundColor lightTeal
         , overflowX hidden
-        ]
-
-
-pageStyle : Style
-pageStyle =
-    batch
-        [ width (pct 100)
-        ]
-
-
-pageWrapperStyle : Style
-pageWrapperStyle =
-    batch
-        [ alignItems center
-        , displayFlex
-        , flexDirection column
-        , height (pct 100)
-        , minHeight (vh 100)
-        , backgroundColor teal
+        , width (pct 100)
         ]
