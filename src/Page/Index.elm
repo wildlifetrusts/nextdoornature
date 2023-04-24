@@ -8,7 +8,7 @@ import Message exposing (Msg)
 import Page.Guide.Data
 import Page.Shared.View
 import Shared exposing (Model)
-import Theme.Global exposing (centerContent)
+import Theme.Global exposing (centerContent, pageColumnBlockStyle, pageColumnStyle, pageWrapperStyle, topTwoColumnsWrapperStyle)
 
 
 view : Model -> Html Msg
@@ -18,9 +18,26 @@ view model =
             translate model.language
     in
     div [ css [ centerContent ] ]
-        [ p [] [ text (t WelcomeP1) ]
-        , p [] [ text (t WelcomeP2) ]
-        , p [] [ text (t WelcomeP3) ]
-        , Page.Guide.Data.teaserListFromGuideDict model.language model.content.guides
-            |> Page.Shared.View.viewGuideTeaserList
+        [ div [ css [ pageWrapperStyle ] ]
+            [ div [ css [ topTwoColumnsWrapperStyle ] ]
+                [ div [ css [ pageColumnStyle ] ]
+                    (viewTextColumn t [ WelcomeP1, WelcomeP2, WelcomeP3 ])
+                , div [ css [ pageColumnStyle ] ]
+                    [ Page.Guide.Data.teaserListFromGuideDict model.language model.content.guides
+                        |> Page.Shared.View.viewGuideTeaserList
+                    ]
+                ]
+            , div [ css [ pageColumnStyle ] ]
+                (viewTextColumn t
+                    [ ExploreGuidesListPlaceholder
+                    , ExploreGuidesListPlaceholder
+                    , ExploreGuidesListPlaceholder
+                    ]
+                )
+            ]
         ]
+
+
+viewTextColumn : (Key -> String) -> List Key -> List (Html msg)
+viewTextColumn t paragraphs =
+    List.map (\para -> p [ css [ pageColumnBlockStyle ] ] [ text (t para) ]) paragraphs
