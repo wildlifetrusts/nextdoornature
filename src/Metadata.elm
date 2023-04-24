@@ -25,24 +25,34 @@ metadataFromPage page language =
             }
 
         Guide slug ->
-            { title = slug
+            { title = subPageTitle language slug
             , description = slug
             }
 
         Guides ->
-            { title = t GuidesTitle
+            { title = subPageTitle language (t GuidesTitle)
             , description = t GuidesMetaDescription
             }
 
         Story slug ->
-            { title = slug
+            { title = subPageTitle language slug
             , description = slug
             }
 
         Page slug ->
-            { title = slug
+            { title = subPageTitle language slug
             , description = slug
             }
+
+
+subPageTitle : Language -> String -> String
+subPageTitle language title =
+    let
+        t : Key -> String
+        t =
+            translate language
+    in
+    title ++ " | " ++ t SiteTitle
 
 
 port setMetadata : PageMetadata -> Cmd msg
