@@ -27,7 +27,10 @@ type alias CookieState =
 
 
 type alias Content =
-    { guides : Dict String Page.Guide.Data.Guide
+    { guides :
+        { cy : Dict String Page.Guide.Data.Guide
+        , en : Dict String Page.Guide.Data.Guide
+        }
     , stories : Dict String Page.Story.Data.Story
     , pages : Dict String Page.Data.Page
     }
