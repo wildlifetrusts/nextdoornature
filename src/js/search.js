@@ -34,7 +34,6 @@ export default class extends HTMLElement {
     // update on API return, possibly lang change later
     if (name === "search-input") {
       this.searchInput = JSON.parse(this.getAttribute("search-input"));
-      console.log(this.searchInput);
       this.fuse = new Fuse(this.searchInput, searchOpts);
     }
     this.updateSearch();

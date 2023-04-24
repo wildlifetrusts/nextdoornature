@@ -7,7 +7,7 @@ import Html.Styled.Events exposing (on)
 import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (Language(..), translate)
 import Json.Decode
-import List exposing (concat)
+import List
 import Message exposing (Msg)
 import Page.Guide.Data
 import Page.GuideTeaser
@@ -63,7 +63,7 @@ searchInput model =
                     Page.Guide.Data.teaserListFromGuideDict model.language model.content.guides
 
                 Success list ->
-                    concat [ Page.Guide.Data.teaserListFromGuideDict model.language model.content.guides, list ]
+                    List.concat [ Page.Guide.Data.teaserListFromGuideDict model.language model.content.guides, list ]
     in
     label []
         [ text (t SearchPlaceholder)
