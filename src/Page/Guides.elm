@@ -5,7 +5,7 @@ import Html.Styled exposing (Html, a, div, h1, li, text, ul)
 import Html.Styled.Attributes exposing (class, css, href)
 import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (translate)
-import List exposing (concat)
+import List exposing (concat, length)
 import Message exposing (Msg)
 import Page.Guide.Data exposing (Guide)
 import Page.GuideTeaser
@@ -23,15 +23,19 @@ view model =
 
         teaserList : List Page.GuideTeaser.GuideTeaser
         teaserList =
-            case model.externalActions of
-                Failure ->
-                    Page.Guide.Data.teaserListFromGuideDict model.language model.content.guides
+            if length model.search > 0 then
+                model.search
 
-                Loading ->
-                    Page.Guide.Data.teaserListFromGuideDict model.language model.content.guides
+            else
+                case model.externalActions of
+                    Failure ->
+                        Page.Guide.Data.teaserListFromGuideDict model.language model.content.guides
 
-                Success list ->
-                    concat [ Page.Guide.Data.teaserListFromGuideDict model.language model.content.guides, list ]
+                    Loading ->
+                        Page.Guide.Data.teaserListFromGuideDict model.language model.content.guides
+
+                    Success list ->
+                        concat [ Page.Guide.Data.teaserListFromGuideDict model.language model.content.guides, list ]
     in
     div [ css [ centerContent ] ]
         [ h1 [] [ text (t GuidesTitle) ]

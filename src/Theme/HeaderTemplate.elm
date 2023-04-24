@@ -8,7 +8,7 @@ import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (Language(..))
 import Json.Decode
 import Json.Encode
-import List exposing (concat)
+import List exposing (concat, length)
 import Message exposing (Msg)
 import Page.Guide.Data
 import Page.GuideTeaser
