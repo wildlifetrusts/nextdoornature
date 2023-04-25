@@ -1,8 +1,8 @@
 module Theme.FooterTemplate exposing (view)
 
-import Css exposing (Style, alignItems, alignSelf, auto, backgroundColor, batch, before, bold, border, borderLeft, borderLeft3, center, color, column, display, displayFlex, em, firstChild, fitContent, flex, flexDirection, flexEnd, flexGrow, flexShrink, flexStart, flexWrap, fontFamilies, fontSize, fontWeight, height, hex, inlineBlock, int, justifyContent, lastChild, margin, margin2, marginBottom, marginLeft, marginRight, marginTop, maxWidth, minHeight, minWidth, nthChild, padding, padding2, paddingBottom, pct, property, px, rem, row, solid, spaceAround, spaceBetween, unset, width, wrap, zero)
+import Css exposing (Style, alignItems, alignSelf, auto, backgroundColor, batch, borderLeft3, center, color, column, displayFlex, em, firstChild, fitContent, flexDirection, flexEnd, flexGrow, flexShrink, flexStart, flexWrap, fontFamilies, fontSize, height, int, justifyContent, lastChild, margin, margin2, marginBottom, marginLeft, marginRight, marginTop, maxWidth, minHeight, minWidth, nthChild, padding, padding2, paddingBottom, px, rem, row, solid, spaceAround, unset, width, wrap)
 import Css.Media as Media exposing (only, screen, withMedia)
-import Html.Styled exposing (Html, a, br, div, footer, h3, img, nav, p, text)
+import Html.Styled exposing (Html, a, div, footer, h3, img, nav, text)
 import Html.Styled.Attributes exposing (css, href, src)
 import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (Language(..), translate)
