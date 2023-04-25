@@ -128,7 +128,7 @@ enStrings key =
         -- Search
         ---
         SearchPlaceholder ->
-            "Search Guides"
+            "Search the library"
 
         ExploreGuidesListPlaceholder ->
             "[cCc] Explore guides by theme"
