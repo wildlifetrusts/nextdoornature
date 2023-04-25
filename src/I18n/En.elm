@@ -92,6 +92,15 @@ enStrings key =
         FooterPrivacyPolicyLink ->
             "/privacy-policy"
 
+        FooterSiteLogo ->
+            "Nextdoor Nature"
+
+        FooterCharityInfo ->
+            "[cCc] The Nextdoor Nature online library is a project by the Wildlife Trusts: Protecting Wildlife for the Future"
+
+        RegisteredCharityNumber ->
+            "Registered charity number 20723"
+
         ---
         -- Cookie banner
         ---

@@ -38,5 +38,8 @@ cyStrings key =
             --[cCc]
             "https://www.wildlifetrusts.org/wildlife-trusts"
 
+        FooterSiteLogo ->
+            "[cCc] Nextdoor Nature CY"
+
         _ ->
             "[cCc] [fFf] to reminder to add all Welsh Keys back"

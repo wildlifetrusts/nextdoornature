@@ -1,11 +1,12 @@
 module Theme.FooterTemplate exposing (view)
 
-import Css exposing (Style, alignItems, backgroundColor, batch, bold, center, color, column, display, displayFlex, em, fitContent, flexDirection, flexEnd, flexShrink, flexWrap, fontFamilies, fontSize, fontWeight, height, hex, inlineBlock, justifyContent, margin2, marginTop, minHeight, padding, paddingBottom, pct, property, px, rem, row, spaceAround, width, wrap, zero)
-import Html.Styled exposing (Html, a, br, div, footer, h3, img, p, text)
+import Css exposing (Style, alignItems, alignSelf, auto, backgroundColor, batch, before, bold, border, borderLeft, borderLeft3, center, color, column, display, displayFlex, em, firstChild, fitContent, flex, flexDirection, flexEnd, flexGrow, flexShrink, flexStart, flexWrap, fontFamilies, fontSize, fontWeight, height, hex, inlineBlock, int, justifyContent, lastChild, margin, margin2, marginBottom, marginLeft, marginRight, marginTop, maxWidth, minHeight, minWidth, nthChild, padding, padding2, paddingBottom, pct, property, px, rem, row, solid, spaceAround, spaceBetween, unset, width, wrap, zero)
+import Css.Media as Media exposing (only, screen, withMedia)
+import Html.Styled exposing (Html, a, br, div, footer, h3, img, nav, p, text)
 import Html.Styled.Attributes exposing (css, href, src)
 import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (Language(..), translate)
-import Theme.Global exposing (lightTeal, purple, teal)
+import Theme.Global exposing (centerContent, lightTeal, purple, white, withMediaMobileUp, withMediaTabletPortraitUp)
 
 
 view : Language -> Html msg
@@ -15,24 +16,25 @@ view language =
         t =
             translate language
     in
-    footer [ css [ footerStyle ] ]
-        [ div [ css [ footerContainerStyle ] ]
-            (div [ css [ footerColumnContentsStyle ] ]
-                [ p [] [ text (t FooterProjectInfo) ]
-                , img [ src "/images/wildlife-trust-logo.png" ] []
-                ]
-                :: List.map
-                    (\column -> navigationColumn column language)
-                    footerNavigationContent
+    footer []
+        [ nav [ css [ centerContent, footerNavStyle ] ]
+            (List.map
+                (\column -> navigationColumn column language)
+                footerNavigationContent
             )
-        , div [ css [ footerLogoAreaStyle ] ]
-            [ img [ css [ logoStyle ], src (translatedLogoPath language "logo-heritage-fund") ] []
-            , div [ css [ logoPartitionStyle ] ] []
-            , img [ css [ logoStyle ], src (translatedLogoPath language "logo-queens-platinum-jubilee") ] []
-            , div [ css [ logoPartitionStyle ] ] []
-            , img [ css [ logoStyle ], src (translatedLogoPath language "logo-wildlife-trusts") ] []
-            , div [ css [ logoPartitionStyle ] ] []
-            , div [ css [ nextdoorNatureTextStyle ] ] [ text (t SiteTitle) ]
+        , div [ css [ bottomFooterOuterContainerStyle ] ]
+            [ div [ css [ centerContent, bottomFooterContainerStyle ] ]
+                [ div [ css [ charityInfoStyle ] ]
+                    [ div [] [ text (t FooterCharityInfo) ]
+                    , div [ css [ marginTop (rem 0.5) ] ] [ text (t RegisteredCharityNumber) ]
+                    ]
+                , div [ css [ logosContainerStyle ] ]
+                    [ img [ css [ logoStyle ], src (translatedLogoPath language "logo-heritage-fund") ] []
+                    , img [ css [ logoStyle ], src (translatedLogoPath language "logo-queens-platinum-jubilee") ] []
+                    , img [ css [ logoStyle ], src (translatedLogoPath language "logo-wildlife-trusts") ] []
+                    , div [ css [ nextdoorNatureTextStyle, logoStyle ] ] [ text (t FooterSiteLogo) ]
+                    ]
+                ]
             ]
         ]
 
@@ -54,11 +56,11 @@ navigationColumn column language =
         t =
             translate language
     in
-    div [ css [ footerColumnContentsStyle ] ]
+    div [ css [ footerColumnListStyle ] ]
         [ h3 []
             [ text (t column.title)
             ]
-        , div [ css [ footerColumnListStyle ] ] (List.map (\link -> a [ href (t link.href) ] [ text (t link.text) ]) column.links)
+        , div [] (List.map (\link -> a [ href (t link.href) ] [ text (t link.text) ]) column.links)
         ]
 
 
@@ -85,55 +87,63 @@ footerNavigationContent =
     ]
 
 
-footerColumnContentsStyle : Style
-footerColumnContentsStyle =
-    batch
-        [ displayFlex
-        , flexDirection column
-        ]
-
-
 footerColumnListStyle : Style
 footerColumnListStyle =
     batch
-        [ displayFlex
+        [ alignSelf flexStart
+        , displayFlex
+        , flexGrow (int 0)
+        , flexShrink (int 1)
+        , maxWidth (rem 20)
+        , marginRight (rem 2)
+        , marginBottom (rem 1)
         , flexDirection column
+        , lastChild
+            [ marginRight (rem 0)
+            , marginBottom (rem 0)
+            ]
         ]
 
 
-footerContainerStyle : Style
-footerContainerStyle =
+footerNavStyle : Style
+footerNavStyle =
     batch
-        [ displayFlex
-        , flexDirection row
+        [ backgroundColor lightTeal
+        , displayFlex
+        , flexDirection column
         , flexWrap wrap
-        , justifyContent spaceAround
+        , justifyContent center
+        , margin auto
         , minHeight fitContent
-        , backgroundColor lightTeal
+        , paddingBottom (rem 4)
+        , width (rem 20)
+        , withMediaMobileUp
+            [ flexDirection row
+            , justifyContent spaceAround
+            , width auto
+            ]
         ]
 
 
-footerStyle : Style
-footerStyle =
+bottomFooterOuterContainerStyle : Style
+bottomFooterOuterContainerStyle =
     batch
-        [ flexShrink zero
-        , width (pct 100)
-        , marginTop (rem 2)
+        [ backgroundColor purple
+        , color white
         ]
 
 
-footerLogoAreaStyle : Style
-footerLogoAreaStyle =
+bottomFooterContainerStyle : Style
+bottomFooterContainerStyle =
     batch
-        [ displayFlex
-        , flexDirection row
-        , justifyContent flexEnd
-        , alignItems center
-        , property "gap" "3rem" -- rowGap (Css.rem 1)
-        , backgroundColor (hex "53257f")
-        , color (hex "fff")
-        , padding (rem 3)
-        , paddingBottom (rem 5)
+        [ alignItems center
+        , displayFlex
+        , flexDirection column
+        , justifyContent center
+        , withMediaTabletPortraitUp
+            [ alignItems flexStart
+            , flexDirection row
+            ]
         ]
 
 
@@ -141,17 +151,58 @@ logoStyle : Style
 logoStyle =
     batch
         [ height (px 90)
-        , display inlineBlock
+        , margin2 (rem 1) (rem 0)
+        , padding2 (rem 0) (rem 2)
+        , width (rem 11)
+        , withMediaMobileUp
+            [ borderLeft3 (px 1) solid white
+            , firstChild
+                [ borderLeft3 (px 1) solid purple
+                ]
+            , nthChild "3"
+                [ borderLeft3 (px 1) solid purple
+                , withMedia [ only screen [ Media.minWidth (px 1139) ] ]
+                    [ borderLeft3 (px 1) solid white
+                    ]
+                ]
+            ]
         ]
 
 
-logoPartitionStyle : Style
-logoPartitionStyle =
+charityInfoStyle : Style
+charityInfoStyle =
     batch
-        [ height (px 156)
-        , display inlineBlock
-        , width (px 1)
-        , backgroundColor (hex "fff")
+        [ marginLeft (rem 2)
+        , marginRight (rem 3)
+        , marginTop (rem 1)
+        , maxWidth (rem 32)
+        , withMediaTabletPortraitUp
+            [ marginLeft (rem 0)
+            , minWidth (rem 17)
+            , width (rem 17)
+            ]
+        ]
+
+
+logosContainerStyle : Style
+logosContainerStyle =
+    batch
+        [ alignItems center
+        , displayFlex
+        , flexDirection row
+        , flexWrap wrap
+        , justifyContent center
+        , maxWidth (rem 40)
+        , padding (rem 2)
+        , withMediaTabletPortraitUp
+            [ justifyContent flexEnd
+            , maxWidth unset
+            , padding (rem 0)
+            , width auto
+            ]
+        , withMediaMobileUp
+            [ paddingBottom (rem 1)
+            ]
         ]
 
 
