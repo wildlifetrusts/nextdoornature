@@ -21,6 +21,7 @@ type alias GuideTheme =
 
 guidesByTheme : List GuideTheme
 guidesByTheme =
+    -- TODO: text changes based on language
     [ { name = "Alpha", description = "A theme about Alpha things", slug = "alpha" }
     , { name = "Beta", description = "A theme about Beta things", slug = "beta" }
     , { name = "Cappa", description = "A theme about Cappa things", slug = "cappa" }
@@ -53,7 +54,7 @@ view model =
                     ]
                 ]
             , div [ css [ pageColumnStyle ] ]
-                ([ h2 [] [ text "Explore Guides by Theme" ]
+                ([ h2 [] [ text (t RelatedGuidesTitle) ] --  ]
                  ]
                     ++ List.map exploreGuideLink guidesByTheme
                 )
