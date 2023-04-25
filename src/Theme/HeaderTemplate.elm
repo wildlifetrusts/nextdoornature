@@ -1,8 +1,8 @@
 module Theme.HeaderTemplate exposing (view)
 
-import Css exposing (Style, alignItems, auto, baseline, batch, center, column, displayFlex, flexDirection, flexEnd, flexStart, flexWrap, fontFamilies, fontSize, int, justifyContent, left, lineHeight, margin, margin2, marginBottom, marginRight, marginTop, maxWidth, noWrap, none, pct, px, rem, right, row, spaceBetween, textAlign, textDecoration, width, zero)
-import Html.Styled exposing (Html, a, button, div, h1, header, input, label, node, text)
-import Html.Styled.Attributes exposing (attribute, css, href, id, placeholder, property, type_)
+import Css exposing (Style, absolute, alignItems, baseline, batch, border3, borderRadius, bottom, boxShadow, center, color, column, displayFlex, flexDirection, flexEnd, flexStart, flexWrap, focus, fontFamilies, fontSize, fontWeight, height, int, justifyContent, left, lineHeight, margin, margin2, margin4, marginBottom, marginRight, marginTop, maxWidth, minWidth, noWrap, none, outline, padding, padding3, padding4, position, pseudoElement, px, relative, rem, right, row, solid, spaceBetween, textAlign, textDecoration, top, zero)
+import Html.Styled exposing (Html, a, button, div, h1, header, img, input, label, node, text)
+import Html.Styled.Attributes exposing (attribute, css, href, id, placeholder, property, src, type_)
 import Html.Styled.Events exposing (on, onClick)
 import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (Language(..), translate)
@@ -14,7 +14,7 @@ import Page.GuideTeaser
 import Page.Shared.View
 import Route exposing (Route(..))
 import Shared exposing (Model, Request(..))
-import Theme.Global exposing (centerContent, outerPadding, withMediaMobileUp)
+import Theme.Global exposing (centerContent, outerPadding, purple, withMediaMobileUp)
 
 
 view : Model -> Html Msg
@@ -79,9 +79,8 @@ searchInput model =
                     Success list ->
                         List.concat [ Page.Guide.Data.teaserListFromGuideDict model.language model.content.guides, list ]
     in
-    label []
-        [ text (t SearchPlaceholder)
-        , node "search-input"
+    label [ css [ searchStyle ] ]
+        [ node "search-input"
             [ property "searchResult" <| Page.GuideTeaser.guideTeaserListEncoder model.search
             , attribute "search-input" <| Page.GuideTeaser.guideTeaserListString teaserList
             , on "resultChanged" <|
@@ -89,7 +88,8 @@ searchInput model =
                     Json.Decode.at [ "target", "searchResult" ] <|
                         Json.Decode.list Page.Shared.View.internalGuideTeaserDecoder
             ]
-            [ input [ id "search", type_ "text", placeholder (t SearchPlaceholder) ] [] ]
+            [ input [ id "search", type_ "text", placeholder (t SearchPlaceholder), css [ searchInputStyle ] ] [] ]
+        , img [ src "/images/arrow-right-purple.svg", css [ arrowStyle ] ] []
         ]
 
 
@@ -153,4 +153,45 @@ headerTitleStyle =
         [ maxWidth (px 336)
         , withMediaMobileUp
             [ marginRight (rem 3) ]
+        ]
+
+
+searchStyle : Style
+searchStyle =
+    batch
+        [ color purple
+        , margin4 (rem 0.5) (rem 0) (rem 0.5) (rem 0.5)
+        , height (rem 2)
+        , position relative
+        ]
+
+
+arrowStyle : Style
+arrowStyle =
+    batch
+        [ bottom (px 0)
+        , height (rem 1)
+        , padding (rem 0.75)
+        , position absolute
+        , right (px 0)
+        , top (px 0)
+        ]
+
+
+searchInputStyle : Style
+searchInputStyle =
+    batch
+        [ borderRadius (rem 1.5)
+        , border3 (px 3) solid purple
+        , boxShadow none
+        , height (rem 1)
+        , minWidth (px 240)
+        , padding4 (rem 0.5) (rem 2) (rem 0.5) (rem 1)
+        , focus
+            [ outline none
+            ]
+        , pseudoElement "placeholder"
+            [ color purple
+            , fontWeight (int 700)
+            ]
         ]
