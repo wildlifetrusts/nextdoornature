@@ -1,6 +1,6 @@
 module Theme.HeaderTemplate exposing (view)
 
-import Css exposing (Style, absolute, alignItems, auto, baseline, batch, border3, borderRadius, bottom, boxShadow, center, color, column, displayFlex, flexDirection, flexEnd, flexStart, flexWrap, focus, fontFamilies, fontSize, fontWeight, height, int, justifyContent, left, lineHeight, margin, margin2, margin4, marginBottom, marginRight, marginTop, maxWidth, minWidth, noWrap, none, normal, outline, padding, padding3, padding4, pct, position, pseudoElement, px, relative, rem, right, row, solid, spaceBetween, textAlign, textDecoration, top, width, zero)
+import Css exposing (Style, absolute, alignItems, auto, backgroundColor, baseline, batch, border3, borderRadius, bottom, boxShadow, center, color, column, displayFlex, flexDirection, flexEnd, flexStart, flexWrap, focus, fontFamilies, fontSize, fontWeight, height, int, justifyContent, left, lineHeight, margin, margin2, margin4, marginBottom, marginRight, marginTop, maxWidth, minWidth, noWrap, none, normal, outline, padding, padding3, padding4, pct, position, pseudoElement, px, relative, rem, right, row, solid, spaceBetween, textAlign, textDecoration, top, width, zero)
 import Html.Styled exposing (Html, a, button, div, h1, header, img, input, label, node, text)
 import Html.Styled.Attributes exposing (attribute, css, href, id, placeholder, property, src, type_)
 import Html.Styled.Events exposing (on, onClick)
@@ -14,7 +14,7 @@ import Page.GuideTeaser
 import Page.Shared.View
 import Route exposing (Route(..))
 import Shared exposing (Model, Request(..))
-import Theme.Global exposing (centerContent, purple, withMediaMobileUp)
+import Theme.Global exposing (centerContent, purple, teal, white, withMediaMobileUp)
 
 
 view : Model -> Html Msg
@@ -24,18 +24,20 @@ view model =
         t =
             translate model.language
     in
-    header [ css [ centerContent ] ]
-        [ div [ css [ headerContainerStyle ] ]
-            [ viewSiteTitle model.page (t SiteTitle)
-            , div [ css [ searchButtonsContainerStyle ] ]
-                [ button [ onClick LanguageChangeRequested ]
-                    [ text (t ChangeLanguage) ]
-                , case model.page of
-                    Guides ->
-                        searchInput model
+    header [ css [ headerOuterStyle ] ]
+        [ div [ css [ centerContent ] ]
+            [ div [ css [ headerContainerStyle ] ]
+                [ viewSiteTitle model.page (t SiteTitle)
+                , div [ css [ searchButtonsContainerStyle ] ]
+                    [ button [ onClick LanguageChangeRequested ]
+                        [ text (t ChangeLanguage) ]
+                    , case model.page of
+                        Guides ->
+                            searchInput model
 
-                    _ ->
-                        a [ href "/guides", css [ headerLinkStyle ] ] [ text <| t FooterGuidesLinkText ]
+                        _ ->
+                            a [ href "/guides", css [ headerLinkStyle ] ] [ text <| t FooterGuidesLinkText ]
+                    ]
                 ]
             ]
         ]
@@ -51,7 +53,8 @@ viewSiteTitle route siteTitle =
             [ a
                 [ href "/"
                 , css
-                    [ textDecoration none
+                    [ color white
+                    , textDecoration none
                     ]
                 ]
                 [ text siteTitle
@@ -98,7 +101,8 @@ searchInput model =
 headerBrandStyle : Style
 headerBrandStyle =
     batch
-        [ fontSize (rem 4)
+        [ color white
+        , fontSize (rem 4)
         , fontFamilies [ "Ludicrous" ]
         , fontWeight normal
         , lineHeight (rem 4)
@@ -106,6 +110,14 @@ headerBrandStyle =
         , maxWidth (px 336)
         , withMediaMobileUp
             [ marginRight (rem 3) ]
+        ]
+
+
+headerOuterStyle : Style
+headerOuterStyle =
+    batch
+        [ backgroundColor teal
+        , color white
         ]
 
 
@@ -145,7 +157,8 @@ searchButtonsContainerStyle =
 headerLinkStyle : Style
 headerLinkStyle =
     batch
-        [ textAlign left
+        [ color white
+        , textAlign left
         , withMediaMobileUp
             [ textAlign right
             ]

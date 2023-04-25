@@ -8,7 +8,7 @@ import I18n.Keys exposing (Key(..))
 import Message exposing (Msg(..))
 import Shared exposing (Model)
 import Theme.FooterTemplate as FooterTemplate
-import Theme.Global exposing (centerContent, globalStyles, lightTeal, mainContainerStyles)
+import Theme.Global exposing (globalStyles, lightTeal)
 import Theme.HeaderTemplate as HeaderTemplate
 
 

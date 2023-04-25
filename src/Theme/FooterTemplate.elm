@@ -1,12 +1,12 @@
 module Theme.FooterTemplate exposing (view)
 
-import Css exposing (Style, alignItems, alignSelf, auto, backgroundColor, batch, borderLeft3, center, color, column, displayFlex, em, firstChild, fitContent, flexDirection, flexEnd, flexGrow, flexShrink, flexStart, flexWrap, fontFamilies, fontSize, height, int, justifyContent, lastChild, margin, margin2, marginBottom, marginLeft, marginRight, marginTop, maxWidth, minHeight, minWidth, nthChild, padding, padding2, paddingBottom, px, rem, row, solid, spaceAround, spaceBetween, unset, width, wrap)
+import Css exposing (Style, alignItems, alignSelf, auto, backgroundColor, batch, border3, borderBox, borderLeft3, borderTop3, center, color, column, displayFlex, em, firstChild, fitContent, flexDirection, flexEnd, flexGrow, flexShrink, flexStart, flexWrap, fontFamilies, fontSize, height, int, justifyContent, lastChild, margin, margin2, marginBottom, marginLeft, marginRight, marginTop, maxWidth, minHeight, minWidth, nthChild, outset, padding, padding2, paddingBottom, px, rem, row, solid, spaceBetween, unset, width, wrap)
 import Css.Media as Media exposing (only, screen, withMedia)
 import Html.Styled exposing (Html, a, div, footer, h3, img, nav, text)
 import Html.Styled.Attributes exposing (css, href, src)
 import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (Language(..), translate)
-import Theme.Global exposing (centerContent, lightTeal, purple, white, withMediaMobileUp, withMediaTabletPortraitUp)
+import Theme.Global exposing (centerContent, lightTeal, purple, teal, white, withMediaMobileUp, withMediaTabletPortraitUp)
 
 
 view : Language -> Html msg
@@ -16,12 +16,15 @@ view language =
         t =
             translate language
     in
-    footer []
-        [ nav [ css [ centerContent, footerNavStyle ] ]
-            (List.map
-                (\column -> navigationColumn column language)
-                footerNavigationContent
-            )
+    footer
+        []
+        [ div [ css [ navBorderStyle ] ]
+            [ nav [ css [ centerContent, footerNavStyle ] ]
+                (List.map
+                    (\column -> navigationColumn column language)
+                    footerNavigationContent
+                )
+            ]
         , div [ css [ bottomFooterOuterContainerStyle ] ]
             [ div [ css [ centerContent, bottomFooterContainerStyle ] ]
                 [ div [ css [ charityInfoStyle ] ]
@@ -108,8 +111,7 @@ footerColumnListStyle =
 footerNavStyle : Style
 footerNavStyle =
     batch
-        [ backgroundColor lightTeal
-        , displayFlex
+        [ displayFlex
         , flexDirection column
         , flexWrap wrap
         , justifyContent center
@@ -130,6 +132,14 @@ bottomFooterOuterContainerStyle =
     batch
         [ backgroundColor purple
         , color white
+        ]
+
+
+navBorderStyle : Style
+navBorderStyle =
+    batch
+        [ border3 (rem 0.5) solid teal
+        , backgroundColor lightTeal
         ]
 
 
