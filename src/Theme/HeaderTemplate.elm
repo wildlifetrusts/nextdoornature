@@ -1,6 +1,6 @@
 module Theme.HeaderTemplate exposing (view)
 
-import Css exposing (Style, absolute, alignItems, baseline, batch, border3, borderRadius, bottom, boxShadow, center, color, column, displayFlex, flexDirection, flexEnd, flexStart, flexWrap, focus, fontFamilies, fontSize, fontWeight, height, int, justifyContent, left, lineHeight, margin, margin2, margin4, marginBottom, marginRight, marginTop, maxWidth, minWidth, noWrap, none, normal, outline, padding, padding3, padding4, position, pseudoElement, px, relative, rem, right, row, solid, spaceBetween, textAlign, textDecoration, top, zero)
+import Css exposing (Style, absolute, alignItems, auto, baseline, batch, border3, borderRadius, bottom, boxShadow, center, color, column, displayFlex, flexDirection, flexEnd, flexStart, flexWrap, focus, fontFamilies, fontSize, fontWeight, height, int, justifyContent, left, lineHeight, margin, margin2, margin4, marginBottom, marginRight, marginTop, maxWidth, minWidth, noWrap, none, normal, outline, padding, padding3, padding4, pct, position, pseudoElement, px, relative, rem, right, row, solid, spaceBetween, textAlign, textDecoration, top, width, zero)
 import Html.Styled exposing (Html, a, button, div, h1, header, img, input, label, node, text)
 import Html.Styled.Attributes exposing (attribute, css, href, id, placeholder, property, src, type_)
 import Html.Styled.Events exposing (on, onClick)
@@ -14,7 +14,7 @@ import Page.GuideTeaser
 import Page.Shared.View
 import Route exposing (Route(..))
 import Shared exposing (Model, Request(..))
-import Theme.Global exposing (centerContent, outerPadding, purple, withMediaMobileUp)
+import Theme.Global exposing (centerContent, purple, withMediaMobileUp)
 
 
 view : Model -> Html Msg
@@ -24,17 +24,19 @@ view model =
         t =
             translate model.language
     in
-    header [ css [ headerContainerStyle ] ]
-        [ viewSiteTitle model.page (t SiteTitle)
-        , div [ css [ searchButtonsContainerStyle ] ]
-            [ button [ onClick LanguageChangeRequested ]
-                [ text (t ChangeLanguage) ]
-            , case model.page of
-                Guides ->
-                    searchInput model
+    header [ css [ centerContent ] ]
+        [ div [ css [ headerContainerStyle ] ]
+            [ viewSiteTitle model.page (t SiteTitle)
+            , div [ css [ searchButtonsContainerStyle ] ]
+                [ button [ onClick LanguageChangeRequested ]
+                    [ text (t ChangeLanguage) ]
+                , case model.page of
+                    Guides ->
+                        searchInput model
 
-                _ ->
-                    a [ href "/guides", css [ headerLinkStyle ] ] [ text <| t FooterGuidesLinkText ]
+                    _ ->
+                        a [ href "/guides", css [ headerLinkStyle ] ] [ text <| t FooterGuidesLinkText ]
+                ]
             ]
         ]
 
@@ -107,12 +109,11 @@ headerContainerStyle : Style
 headerContainerStyle =
     batch
         [ alignItems baseline
-        , centerContent
         , displayFlex
         , flexDirection column
         , flexWrap noWrap
         , justifyContent center
-        , outerPadding
+        , width (pct 100)
         , withMediaMobileUp
             [ flexDirection row
             , justifyContent spaceBetween

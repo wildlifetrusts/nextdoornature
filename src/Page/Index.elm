@@ -1,6 +1,6 @@
 module Page.Index exposing (view)
 
-import Html.Styled exposing (Html, div, p, text)
+import Html.Styled exposing (Html, div, main_, p, text)
 import Html.Styled.Attributes exposing (css)
 import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (translate)
@@ -8,7 +8,7 @@ import Message exposing (Msg)
 import Page.Guide.Data
 import Page.Shared.View
 import Shared exposing (Model)
-import Theme.Global exposing (centerContent, mainContainerStyles, pageColumnBlockStyle, pageColumnStyle, topTwoColumnsWrapperStyle)
+import Theme.Global exposing (contentWrapper, mainContainerStyles, pageColumnBlockStyle, pageColumnStyle, topTwoColumnsWrapperStyle)
 
 
 view : Model -> Html Msg
@@ -17,24 +17,22 @@ view model =
         t =
             translate model.language
     in
-    div [ css [ centerContent ] ]
-        [ div [ css [ mainContainerStyles ] ]
-            [ div [ css [ topTwoColumnsWrapperStyle ] ]
-                [ div [ css [ pageColumnStyle ] ]
-                    (viewTextColumn t [ WelcomeP1, WelcomeP2, WelcomeP3 ])
-                , div [ css [ pageColumnStyle ] ]
-                    [ List.take 4 (Page.Guide.Data.teaserListFromGuideDict model.language model.content.guides)
-                        |> Page.Shared.View.viewGuideTeaserList
-                    ]
-                ]
+    main_ [ css [ mainContainerStyles, contentWrapper ] ]
+        [ div [ css [ topTwoColumnsWrapperStyle ] ]
+            [ div [ css [ pageColumnStyle ] ]
+                (viewTextColumn t [ WelcomeP1, WelcomeP2, WelcomeP3 ])
             , div [ css [ pageColumnStyle ] ]
-                (viewTextColumn t
-                    [ ExploreGuidesListPlaceholder
-                    , ExploreGuidesListPlaceholder
-                    , ExploreGuidesListPlaceholder
-                    ]
-                )
+                [ List.take 4 (Page.Guide.Data.teaserListFromGuideDict model.language model.content.guides)
+                    |> Page.Shared.View.viewGuideTeaserList
+                ]
             ]
+        , div [ css [ pageColumnStyle ] ]
+            (viewTextColumn t
+                [ ExploreGuidesListPlaceholder
+                , ExploreGuidesListPlaceholder
+                , ExploreGuidesListPlaceholder
+                ]
+            )
         ]
 
 

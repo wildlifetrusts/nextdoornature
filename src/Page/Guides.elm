@@ -1,7 +1,6 @@
 module Page.Guides exposing (view)
 
-import Dict
-import Html.Styled exposing (Html, a, div, h1, li, text, ul)
+import Html.Styled exposing (Html, a, div, h1, li, main_, text)
 import Html.Styled.Attributes exposing (class, css, href)
 import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (Language(..), translate)
@@ -12,7 +11,7 @@ import Page.GuideTeaser
 import Page.Shared.View
 import Route
 import Shared exposing (Model, Request(..))
-import Theme.Global exposing (centerContent)
+import Theme.Global exposing (contentWrapper, mainContainerStyles)
 
 
 view : Model -> Html Msg
@@ -40,9 +39,13 @@ view model =
                     Success list ->
                         List.concat [ Page.Guide.Data.teaserListFromGuideDict model.language model.content.guides, list ]
     in
-    div [ css [ centerContent ] ]
-        [ h1 [] [ text (t GuidesTitle) ]
-        , Page.Shared.View.viewGuideTeaserList teaserList
+    main_ [ css [ mainContainerStyles ] ]
+        [ h1 []
+            [ text (t GuidesTitle) ]
+        , div
+            [ css [ contentWrapper ] ]
+            [ Page.Shared.View.viewGuideTeaserList teaserList
+            ]
         ]
 
 

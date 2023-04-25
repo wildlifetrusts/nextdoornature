@@ -2,7 +2,7 @@ module Theme.PageTemplate exposing (view)
 
 import CookieBanner
 import Css exposing (Style, backgroundColor, batch, hidden, overflowX, pct, width)
-import Html.Styled exposing (Html, div, main_)
+import Html.Styled exposing (Html, div)
 import Html.Styled.Attributes exposing (css)
 import I18n.Keys exposing (Key(..))
 import Message exposing (Msg(..))
@@ -19,9 +19,7 @@ view model content =
         , div
             [ css [ pageWrapperStyles ] ]
             [ HeaderTemplate.view model
-            , main_ [ css [ mainContainerStyles ] ]
-                [ content
-                ]
+            , content
             , FooterTemplate.view model.language
             , CookieBanner.viewCookieBanner model.language model.cookieState
             ]
