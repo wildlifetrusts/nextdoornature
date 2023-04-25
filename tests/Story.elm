@@ -2,10 +2,11 @@ module Story exposing (suite)
 
 import Html
 import Html.Attributes
-import I18n.Keys exposing (Key(..))
+import Html.Styled
+import Message
 import Page.Shared.View exposing (defaultTeaserImg)
 import Page.Story.Data exposing (Story)
-import Page.Story.View exposing (view)
+import Page.Story.View
 import Test exposing (Test, describe, test)
 import Test.Html.Query as Query
 import Test.Html.Selector exposing (tag, text)
@@ -48,6 +49,7 @@ suite =
                 ]
             }
 
+        view : Story -> Html.Styled.Html Message.Msg
         view =
             Page.Story.View.view
     in

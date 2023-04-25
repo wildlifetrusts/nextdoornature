@@ -1,4 +1,4 @@
-module Theme.Markdown exposing (markdownToHtml, markdownToView)
+module Theme.Markdown exposing (markdownToHtml)
 
 import Css exposing (Style, batch)
 import Html.Styled as Html
@@ -108,6 +108,7 @@ htmlRenderer =
                             case item of
                                 Block.ListItem task children ->
                                     let
+                                        checkbox : Html.Html msg
                                         checkbox =
                                             case task of
                                                 Block.NoTask ->
@@ -165,6 +166,7 @@ htmlRenderer =
     , tableHeaderCell =
         \maybeAlignment ->
             let
+                attrs : List (Html.Attribute msg)
                 attrs =
                     maybeAlignment
                         |> Maybe.map
@@ -187,6 +189,7 @@ htmlRenderer =
     , tableCell =
         \maybeAlignment ->
             let
+                attrs : List (Html.Attribute msg)
                 attrs =
                     maybeAlignment
                         |> Maybe.map

@@ -1,11 +1,11 @@
-module API exposing (..)
+module API exposing (suite)
 
 import Expect exposing (equal)
 import Json.Decode
 import Page.GuideTeaser exposing (guideTeaserListString)
 import Page.Shared.View exposing (actionTeaserDecoder, actionTeaserListDecoder, interalGuideTeaserListDecoder)
 import Test exposing (Test, describe, test)
-import TestData exposing (..)
+import TestData exposing (actionsAPI, singleActionFromAPI, teaserFromResult, teaserFromResult2)
 
 
 suite : Test
@@ -30,6 +30,7 @@ suite =
         , test "internalGuideTeaserListDecoder works with encoded json" <|
             \_ ->
                 let
+                    json : String
                     json =
                         guideTeaserListString [ teaserFromResult, teaserFromResult2 ]
                 in

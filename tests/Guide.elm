@@ -2,9 +2,10 @@ module Guide exposing (suite)
 
 import Html
 import Html.Attributes
-import I18n.Keys exposing (Key(..))
+import Html.Styled
+import Message
 import Page.Guide.Data exposing (Guide)
-import Page.Guide.View exposing (view)
+import Page.Guide.View
 import Page.Shared.View exposing (defaultTeaserImg)
 import Test exposing (Test, describe, test)
 import Test.Html.Query as Query
@@ -71,6 +72,7 @@ suite =
                 ]
             }
 
+        view : Guide -> Html.Styled.Html Message.Msg
         view =
             Page.Guide.View.view
     in

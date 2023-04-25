@@ -1,10 +1,9 @@
-module Theme.Global exposing (centerContent, contentWrapper, embeddedAudioStyle, embeddedVideoStyle, featureImageStyle, globalStyles, lightTeal, pageColumnBlockStyle, pageColumnStyle, purple, roundedCornerStyle, teal, teaserContainerStyle, teaserImageStyle, teaserRowStyle, teasersContainerStyle, topTwoColumnsWrapperStyle, white, withMediaMobileUp, withMediaTabletPortraitUp)
+module Theme.Global exposing (centerContent, contentWrapper, embeddedVideoStyle, featureImageStyle, globalStyles, lightTeal, pageColumnBlockStyle, pageColumnStyle, purple, roundedCornerStyle, teal, teaserContainerStyle, teaserImageStyle, teaserRowStyle, teasersContainerStyle, topTwoColumnsWrapperStyle, white, withMediaMobileUp, withMediaTabletPortraitUp)
 
 import Css exposing (Color, Style, alignItems, auto, backgroundPosition, backgroundRepeat, backgroundSize, batch, borderBottomRightRadius, borderTopLeftRadius, borderTopRightRadius, boxSizing, center, color, column, contentBox, cover, displayFlex, flex, flex3, flexDirection, flexStart, flexWrap, fontFamilies, height, hex, hidden, inherit, int, justifyContent, lastChild, listStyle, margin, margin2, marginBottom, marginRight, marginTop, maxWidth, minWidth, noRepeat, noWrap, none, overflow, padding, padding2, pct, property, px, rem, row, spaceBetween, width, wrap, zero)
 import Css.Global exposing (global, typeSelector)
 import Css.Media as Media exposing (only, screen, withMedia)
 import Html.Styled exposing (Html)
-import Markdown.Block exposing (Alignment(..))
 
 
 
@@ -233,15 +232,6 @@ teaserImageStyle =
 
 embeddedVideoStyle : Style
 embeddedVideoStyle =
-    batch
-        [ width (pct 100)
-        , height auto
-        , maxWidth (px (maxTabletLandscape / 3))
-        ]
-
-
-embeddedAudioStyle : Style
-embeddedAudioStyle =
     batch
         [ width (pct 100)
         , height auto

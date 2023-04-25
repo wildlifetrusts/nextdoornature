@@ -65,6 +65,7 @@ viewSiteTitle route siteTitle =
 searchInput : Model -> Html Msg
 searchInput model =
     let
+        t : Key -> String
         t =
             I18n.Translate.translate model.language
 

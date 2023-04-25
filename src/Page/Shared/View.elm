@@ -1,14 +1,13 @@
 module Page.Shared.View exposing (AudioMeta, StoryTeaser, VideoMeta, actionTeaserDecoder, actionTeaserListDecoder, audioDecoder, defaultTeaserImg, guideTeaserDecoder, imageDecoder, interalGuideTeaserListDecoder, internalGuideTeaserDecoder, storyTeaserDecoder, videoDecoder, viewAudio, viewGuideTeaserList, viewStoryTeasers, viewVideo)
 
-import Css exposing (Style, batch, center, column, displayFlex, flexDirection, flexWrap, height, justifyContent, maxWidth, px, url, wrap)
-import Html.Styled exposing (Html, a, div, i, iframe, img, li, p, summary, text, ul)
+import Css exposing (Style, batch, center, column, displayFlex, flexDirection, flexWrap, height, justifyContent, maxWidth, px, wrap)
+import Html.Styled exposing (Html, a, div, iframe, img, li, p, text, ul)
 import Html.Styled.Attributes exposing (alt, attribute, autoplay, css, href, src, title)
 import Json.Decode exposing (Decoder)
 import List exposing (map, sortBy)
 import Message exposing (Msg)
 import Page.GuideTeaser
 import String exposing (length, padRight)
-import Svg.Styled exposing (image)
 import Theme.Global exposing (roundedCornerStyle, teaserContainerStyle, teaserImageStyle, teaserRowStyle, teasersContainerStyle)
 
 

@@ -14,6 +14,7 @@ import Theme.Global exposing (centerContent, contentWrapper, pageColumnBlockStyl
 view : Model -> Html Msg
 view model =
     let
+        t : Key -> String
         t =
             translate model.language
     in

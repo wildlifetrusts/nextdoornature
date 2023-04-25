@@ -6,7 +6,6 @@ import CookieBanner exposing (saveConsent)
 import GoogleAnalytics
 import Html.Styled exposing (Html, toUnstyled)
 import Http
-import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (Language(..))
 import Json.Decode
 import Message exposing (Msg(..))
@@ -203,6 +202,7 @@ view model =
 
         Story slug ->
             let
+                story : Page.Story.Data.Story
                 story =
                     Page.Story.Data.storyFromSlug model.language model.content.stories slug
             in
@@ -210,6 +210,7 @@ view model =
 
         Guide slug ->
             let
+                guide : Page.Guide.Data.Guide
                 guide =
                     Page.Guide.Data.guideFromSlug model.language model.content.guides slug
             in
@@ -220,6 +221,7 @@ view model =
 
         Page slug ->
             let
+                page : Page.Data.Page
                 page =
                     Page.Data.pageFromSlug model.language model.content.pages slug
             in
