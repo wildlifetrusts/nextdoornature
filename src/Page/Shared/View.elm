@@ -155,12 +155,11 @@ viewGuideTeaser teaser =
                     defaultTeaserImg
     in
     li [ css [ teaserContainerStyle ] ]
-        [ span
-            [ attribute "aria-label" image.alt
-            , attribute "role" "img"
+        [ img
+            [ alt image.alt
+            , src image.src
             , css
-                [ backgroundImage (url image.src)
-                , roundedCornerStyle
+                [ roundedCornerStyle
                 , teaserImageStyle
                 ]
             ]
@@ -205,12 +204,11 @@ viewStoryTeasers teasers =
                 |> map
                     (\{ description, image, slug, title } ->
                         div [ css [ storyteaserContainerStyle ] ]
-                            [ span
-                                [ attribute "aria-label" image.alt
-                                , attribute "role" "img"
+                            [ img
+                                [ alt image.alt
+                                , src image.src
                                 , css
-                                    [ backgroundImage (url image.src)
-                                    , roundedCornerStyle
+                                    [ roundedCornerStyle
                                     , teaserImageStyle
                                     ]
                                 ]

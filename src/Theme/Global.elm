@@ -225,6 +225,7 @@ teaserImageStyle =
         , backgroundSize cover
         , maxWidth (px (maxMobile / 3))
         , property "aspect-ratio" "1/1"
+        , property "object-fit" "cover"
         , width (pct 100)
         ]
 
