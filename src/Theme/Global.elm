@@ -1,26 +1,10 @@
-module Theme.Global exposing (centerContent, contentWrapper, embeddedAudioStyle, embeddedVideoStyle, featureImageStyle, globalStyles, lightTeal, mainContainerStyles, outerPadding, pageColumnBlockStyle, pageColumnStyle, purple, roundedCornerStyle, teal, teaserContainerStyle, teaserImageStyle, teaserRowStyle, teasersContainerStyle, topTwoColumnsWrapperStyle, white, withMediaMobileUp, withMediaTabletPortraitUp)
+module Theme.Global exposing (centerContent, contentWrapper, embeddedAudioStyle, embeddedVideoStyle, featureImageStyle, globalStyles, lightTeal, mainContainerStyles, pageColumnBlockStyle, pageColumnStyle, purple, roundedCornerStyle, teal, teaserContainerStyle, teaserImageStyle, teaserRowStyle, teasersContainerStyle, topTwoColumnsWrapperStyle, white, withMediaMobileUp, withMediaTabletPortraitUp)
 
-import Css exposing (Color, Style, absolute, alignItems, auto, backgroundPosition, backgroundRepeat, backgroundSize, batch, borderBottomRightRadius, borderTopLeftRadius, borderTopRightRadius, boxSizing, center, clip, color, column, contentBox, cover, displayFlex, fitContent, flex, flex3, flexDirection, flexStart, flexWrap, fontFamilies, height, hex, hidden, inherit, int, justifyContent, lastChild, left, listStyle, margin, margin2, marginBottom, marginLeft, marginRight, marginTop, maxWidth, minWidth, noRepeat, noWrap, none, overflow, padding, padding2, paddingLeft, paddingRight, pct, position, property, px, rem, row, spaceBetween, top, width, wrap, zero)
-import Css.Global exposing (global, rect, typeSelector)
+import Css exposing (Color, Style, alignItems, auto, backgroundPosition, backgroundRepeat, backgroundSize, batch, borderBottomRightRadius, borderTopLeftRadius, borderTopRightRadius, boxSizing, center, color, column, contentBox, cover, displayFlex, flex, flex3, flexDirection, flexStart, flexWrap, fontFamilies, height, hex, hidden, inherit, int, justifyContent, lastChild, listStyle, margin, margin2, marginBottom, marginRight, marginTop, maxWidth, minWidth, noRepeat, noWrap, none, overflow, padding, padding2, pct, property, px, rem, row, spaceBetween, width, wrap, zero)
+import Css.Global exposing (global, typeSelector)
 import Css.Media as Media exposing (only, screen, withMedia)
 import Html.Styled exposing (Html)
 import Markdown.Block exposing (Alignment(..))
-
-
-
--- Accessibility helpers
-
-
-screenReaderOnly : Style
-screenReaderOnly =
-    batch
-        [ position absolute
-        , left (px -10000)
-        , top auto
-        , width (px 1)
-        , height (px 1)
-        , overflow hidden
-        ]
 
 
 
@@ -68,9 +52,7 @@ withMediaDesktopUp =
 
 
 
--- Brand colours
--- Accent colours
--- Text and background colours
+-- Colours
 
 
 purple : Color
@@ -266,19 +248,6 @@ embeddedAudioStyle =
         ]
 
 
-outerPadding : Style
-outerPadding =
-    batch
-        [ padding2 (rem 2) (rem 1)
-        , withMediaTabletPortraitUp
-            [ padding (rem 3)
-            ]
-        , withMediaTabletLandscapeUp
-            [ padding2 (rem 4) (rem 3)
-            ]
-        ]
-
-
 centerContent : Style
 centerContent =
     batch
@@ -288,8 +257,14 @@ centerContent =
         , flexDirection column
         , maxWidth (px maxSmallDesktop)
         , margin (rem 0)
-        , outerPadding
+        , padding2 (rem 2) (rem 1)
         , width auto
+        , withMediaTabletPortraitUp
+            [ padding (rem 3)
+            ]
+        , withMediaTabletLandscapeUp
+            [ padding2 (rem 4) (rem 3)
+            ]
         , withMediaDesktopUp
             [ margin2 (rem 0) auto
             ]
@@ -304,8 +279,6 @@ contentWrapper =
         , flexDirection column
         , flexWrap noWrap
         , justifyContent center
-
-        -- , width (pct 100)
         , withMediaTabletLandscapeUp
             [ alignItems flexStart
             , flexDirection row
@@ -386,7 +359,3 @@ pageColumnBlockStyle =
             [ marginBottom (rem 0)
             ]
         ]
-
-
-
--- Map

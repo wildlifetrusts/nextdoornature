@@ -44,10 +44,10 @@ view model =
 viewSiteTitle : Route -> String -> Html Msg
 viewSiteTitle route siteTitle =
     if route == Index then
-        h1 [ css [ headerBrandStyle, headerTitleStyle, fixHeaderStyle ] ] [ text siteTitle ]
+        h1 [ css [ headerBrandStyle ] ] [ text siteTitle ]
 
     else
-        div [ css [ headerBrandStyle, headerTitleStyle ] ]
+        div [ css [ headerBrandStyle ] ]
             [ a
                 [ href "/"
                 , css
@@ -100,8 +100,12 @@ headerBrandStyle =
     batch
         [ fontSize (rem 4)
         , fontFamilies [ "Ludicrous" ]
+        , fontWeight normal
         , lineHeight (rem 4)
         , margin zero
+        , maxWidth (px 336)
+        , withMediaMobileUp
+            [ marginRight (rem 3) ]
         ]
 
 
@@ -148,15 +152,6 @@ headerLinkStyle =
         ]
 
 
-headerTitleStyle : Style
-headerTitleStyle =
-    batch
-        [ maxWidth (px 336)
-        , withMediaMobileUp
-            [ marginRight (rem 3) ]
-        ]
-
-
 searchStyle : Style
 searchStyle =
     batch
@@ -195,11 +190,4 @@ searchInputStyle =
             [ color purple
             , fontWeight (int 700)
             ]
-        ]
-
-
-fixHeaderStyle : Style
-fixHeaderStyle =
-    batch
-        [ fontWeight normal
         ]
