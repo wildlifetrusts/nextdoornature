@@ -1,6 +1,6 @@
 module Theme.HeaderTemplate exposing (view)
 
-import Css exposing (FontWeight, Style, alignItems, auto, backgroundColor, backgroundImage, backgroundPosition2, backgroundRepeat, backgroundSize, baseline, batch, border, center, color, column, display, displayFlex, em, flexDirection, flexEnd, flexStart, flexWrap, fontFamilies, fontSize, fontWeight, height, inlineBlock, int, justifyContent, left, lineHeight, margin, margin2, marginBottom, marginLeft, marginRight, marginTop, maxWidth, noRepeat, noWrap, none, normal, padding, pct, property, pseudoElement, px, rem, right, row, spaceBetween, textAlign, textDecoration, url, width, zero)
+import Css exposing (FontWeight, Style, alignItems, auto, backgroundColor, backgroundImage, backgroundPosition, backgroundPosition2, backgroundRepeat, backgroundSize, baseline, batch, border, center, color, column, contain, display, displayFlex, em, flexDirection, flexEnd, flexStart, flexWrap, fontFamilies, fontSize, fontWeight, height, inlineBlock, int, justifyContent, left, lineHeight, margin, margin2, marginBottom, marginLeft, marginRight, marginTop, maxWidth, noRepeat, noWrap, none, normal, padding, pct, property, pseudoElement, px, rem, right, row, spaceBetween, textAlign, textDecoration, url, width, zero)
 import Html.Styled exposing (Html, a, button, div, h1, header, input, label, node, text)
 import Html.Styled.Attributes exposing (attribute, css, href, id, placeholder, property, type_)
 import Html.Styled.Events exposing (on, onClick)
@@ -156,8 +156,8 @@ headerLinkStyle =
         [ pseudoElement "after"
             [ backgroundImage
                 (url "images/arrow--white.svg")
-            , backgroundSize (em 1)
-            , backgroundPosition2 (em 0) (em 0.2)
+            , backgroundSize contain
+            , backgroundPosition center
             , backgroundRepeat noRepeat
             , display inlineBlock
             , Css.property "content" "' '"
@@ -180,8 +180,8 @@ headerBtnStyle =
         [ pseudoElement "after"
             [ backgroundImage
                 (url "images/arrow--white.svg")
-            , backgroundSize (em 1)
-            , backgroundPosition2 (em 0) (em 0.2)
+            , backgroundSize contain
+            , backgroundPosition center
             , backgroundRepeat noRepeat
             , display inlineBlock
             , Css.property "content" "' '"

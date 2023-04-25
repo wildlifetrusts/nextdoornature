@@ -1,6 +1,6 @@
 module Theme.Global exposing (centerContent, embeddedAudioStyle, embeddedVideoStyle, featureImageStyle, globalStyles, lightTeal, mainContainerStyles, outerPadding, pageColumnBlockStyle, pageColumnStyle, purple, roundedCornerStyle, teal, teaserContainerStyle, teaserImageStyle, teaserRowStyle, teasersContainerStyle, topTwoColumnsWrapperStyle, white, withMediaMobileUp)
 
-import Css exposing (Color, Style, absolute, alignItems, auto, backgroundImage, backgroundPosition2, backgroundRepeat, backgroundSize, batch, borderBottomRightRadius, borderTopLeftRadius, borderTopRightRadius, boxSizing, center, color, column, contentBox, display, displayFlex, em, flex, flex3, flexDirection, flexStart, flexWrap, fontFamilies, height, hex, hidden, inlineBlock, int, justifyContent, lastChild, left, listStyle, margin, marginBottom, marginLeft, marginRight, marginTop, maxWidth, minWidth, noRepeat, noWrap, none, overflow, padding, padding2, pct, position, property, pseudoElement, px, rem, row, textDecoration, top, url, width, wrap, zero)
+import Css exposing (Color, Style, absolute, alignItems, auto, backgroundImage, backgroundPosition, backgroundPosition2, backgroundRepeat, backgroundSize, batch, borderBottomRightRadius, borderTopLeftRadius, borderTopRightRadius, boxSizing, center, color, column, contain, contentBox, display, displayFlex, em, ex, flex, flex3, flexDirection, flexStart, flexWrap, fontFamilies, height, hex, hidden, inlineBlock, int, justifyContent, lastChild, left, listStyle, margin, marginBottom, marginLeft, marginRight, marginTop, maxWidth, minWidth, noRepeat, noWrap, none, overflow, padding, padding2, pct, position, property, pseudoElement, px, rem, row, textDecoration, top, url, width, wrap, zero)
 import Css.Global exposing (global, typeSelector)
 import Css.Media as Media exposing (only, screen, withMedia)
 import Html.Styled exposing (Html)
@@ -149,13 +149,13 @@ globalStyles =
             , pseudoElement "after"
                 [ backgroundImage
                     (url "images/arrow.svg")
-                , backgroundSize (em 1)
-                , backgroundPosition2 (em 0) (em 0.2)
+                , backgroundSize contain
+                , backgroundPosition center
                 , backgroundRepeat noRepeat
                 , display inlineBlock
                 , property "content" "' '"
-                , height (em 1)
-                , width (em 1.2)
+                , height (ex 1.5)
+                , width (em 1.0)
                 , marginLeft (em 0.3)
                 ]
             ]

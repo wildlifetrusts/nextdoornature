@@ -1,6 +1,6 @@
 port module CookieBanner exposing (saveConsent, viewCookieBanner)
 
-import Css exposing (Style, auto, backgroundColor, backgroundImage, backgroundPosition2, backgroundRepeat, backgroundSize, batch, border, bottom, color, display, em, fixed, fontSize, height, inlineBlock, margin, marginLeft, marginRight, minHeight, noRepeat, padding, padding2, padding4, position, pseudoElement, px, rem, solid, textAlign, url, vw, width)
+import Css exposing (Style, auto, backgroundColor, backgroundImage, backgroundPosition, backgroundPosition2, backgroundRepeat, backgroundSize, batch, border, bottom, center, color, contain, display, em, ex, fixed, fontSize, height, inlineBlock, margin, marginLeft, marginRight, minHeight, noRepeat, padding, padding2, padding4, position, pseudoElement, px, rem, solid, textAlign, url, vw, width)
 import Html.Styled exposing (Html, button, div, h2, p, text)
 import Html.Styled.Attributes exposing (css)
 import Html.Styled.Events exposing (onClick)
@@ -64,15 +64,14 @@ cookieBtnStyle : Style
 cookieBtnStyle =
     batch
         [ pseudoElement "after"
-            [ backgroundImage
-                (url "images/arrow--white.svg")
-            , backgroundSize (em 1)
-            , backgroundPosition2 (em 0) (em 0.2)
+            [ backgroundImage (url "images/arrow--white.svg")
+            , backgroundSize contain
+            , backgroundPosition center
             , backgroundRepeat noRepeat
             , display inlineBlock
             , Css.property "content" "' '"
-            , height (em 1)
-            , width (em 1.2)
+            , height (ex 1.5)
+            , width (em 1.0)
             , marginLeft (em 0.3)
             ]
         , color white
