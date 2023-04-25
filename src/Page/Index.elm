@@ -1,6 +1,6 @@
 module Page.Index exposing (view)
 
-import Html.Styled exposing (Html, div, main_, p, text)
+import Html.Styled exposing (Html, div, p, text)
 import Html.Styled.Attributes exposing (css)
 import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (translate)
@@ -8,7 +8,7 @@ import Message exposing (Msg)
 import Page.Guide.Data
 import Page.Shared.View
 import Shared exposing (Model)
-import Theme.Global exposing (contentWrapper, mainContainerStyles, pageColumnBlockStyle, pageColumnStyle, topTwoColumnsWrapperStyle)
+import Theme.Global exposing (contentWrapper, mainInnerStyle, pageColumnBlockStyle, pageColumnStyle, topTwoColumnsWrapperStyle)
 
 
 view : Model -> Html Msg
@@ -17,7 +17,7 @@ view model =
         t =
             translate model.language
     in
-    main_ [ css [ mainContainerStyles, contentWrapper ] ]
+    div [ css [ mainInnerStyle, contentWrapper ] ]
         [ div [ css [ topTwoColumnsWrapperStyle ] ]
             [ div [ css [ pageColumnStyle ] ]
                 (viewTextColumn t [ WelcomeP1, WelcomeP2, WelcomeP3 ])

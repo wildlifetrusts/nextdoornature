@@ -1,19 +1,19 @@
 module Page.Guide.View exposing (view)
 
 import Css exposing (Style, batch, fontFamilies)
-import Html.Styled exposing (Html, a, div, h1, li, main_, text, ul)
+import Html.Styled exposing (Html, a, div, h1, li, text, ul)
 import Html.Styled.Attributes exposing (css, href)
 import Message exposing (Msg)
 import Page.Guide.Data
 import Page.GuideTeaser
 import Page.Shared.View
-import Theme.Global exposing (contentWrapper, mainContainerStyles, pageColumnBlockStyle, pageColumnStyle, topTwoColumnsWrapperStyle)
+import Theme.Global exposing (contentWrapper, mainInnerStyle, pageColumnBlockStyle, pageColumnStyle, topTwoColumnsWrapperStyle)
 import Theme.Markdown exposing (markdownToHtml)
 
 
 view : Page.Guide.Data.Guide -> Html Msg
 view guide =
-    main_ [ css [ mainContainerStyles ] ]
+    div [ css [ mainInnerStyle ] ]
         [ h1 [ css [ guideTitle ] ] [ text guide.title ]
         , div [ css [ contentWrapper ] ]
             [ div [ css [ topTwoColumnsWrapperStyle ] ]
