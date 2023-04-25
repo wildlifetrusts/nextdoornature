@@ -29,6 +29,9 @@ type Key
     | FooterFindYourLocalTrustLink
     | FooterPrivacyPolicyText
     | FooterPrivacyPolicyLink
+    | FooterSiteLogo
+    | FooterCharityInfo
+    | RegisteredCharityNumber
       --- Cookie banner
     | CookieBannerH2
     | CookieBannerP
