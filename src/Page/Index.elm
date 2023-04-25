@@ -8,7 +8,7 @@ import Message exposing (Msg)
 import Page.Guide.Data
 import Page.Shared.View
 import Shared exposing (Model)
-import Theme.Global exposing (contentWrapper, mainInnerStyle, pageColumnBlockStyle, pageColumnStyle, topTwoColumnsWrapperStyle)
+import Theme.Global exposing (centerContent, contentWrapper, pageColumnBlockStyle, pageColumnStyle, topTwoColumnsWrapperStyle)
 
 
 view : Model -> Html Msg
@@ -17,7 +17,7 @@ view model =
         t =
             translate model.language
     in
-    div [ css [ mainInnerStyle, contentWrapper ] ]
+    div [ css [ centerContent, contentWrapper ] ]
         [ div [ css [ topTwoColumnsWrapperStyle ] ]
             [ div [ css [ pageColumnStyle ] ]
                 (viewTextColumn t [ WelcomeP1, WelcomeP2, WelcomeP3 ])

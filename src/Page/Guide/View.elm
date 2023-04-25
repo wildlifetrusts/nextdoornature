@@ -7,13 +7,13 @@ import Message exposing (Msg)
 import Page.Guide.Data
 import Page.GuideTeaser
 import Page.Shared.View
-import Theme.Global exposing (contentWrapper, mainInnerStyle, pageColumnBlockStyle, pageColumnStyle, topTwoColumnsWrapperStyle)
+import Theme.Global exposing (centerContent, contentWrapper, pageColumnBlockStyle, pageColumnStyle, topTwoColumnsWrapperStyle)
 import Theme.Markdown exposing (markdownToHtml)
 
 
 view : Page.Guide.Data.Guide -> Html Msg
 view guide =
-    div [ css [ mainInnerStyle ] ]
+    div [ css [ centerContent ] ]
         [ h1 [ css [ guideTitle ] ] [ text guide.title ]
         , div [ css [ contentWrapper ] ]
             [ div [ css [ topTwoColumnsWrapperStyle ] ]

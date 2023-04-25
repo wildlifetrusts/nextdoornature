@@ -11,7 +11,7 @@ import Page.GuideTeaser
 import Page.Shared.View
 import Route
 import Shared exposing (Model, Request(..))
-import Theme.Global exposing (contentWrapper, mainInnerStyle)
+import Theme.Global exposing (centerContent, contentWrapper)
 
 
 view : Model -> Html Msg
@@ -39,7 +39,7 @@ view model =
                     Success list ->
                         List.concat [ Page.Guide.Data.teaserListFromGuideDict model.language model.content.guides, list ]
     in
-    div [ css [ mainInnerStyle ] ]
+    div [ css [ centerContent ] ]
         [ h1 []
             [ text (t GuidesTitle) ]
         , div

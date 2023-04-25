@@ -1,4 +1,4 @@
-module Theme.Global exposing (centerContent, contentWrapper, embeddedAudioStyle, embeddedVideoStyle, featureImageStyle, globalStyles, lightTeal, mainInnerStyle, pageColumnBlockStyle, pageColumnStyle, purple, roundedCornerStyle, teal, teaserContainerStyle, teaserImageStyle, teaserRowStyle, teasersContainerStyle, topTwoColumnsWrapperStyle, white, withMediaMobileUp, withMediaTabletPortraitUp)
+module Theme.Global exposing (centerContent, contentWrapper, embeddedAudioStyle, embeddedVideoStyle, featureImageStyle, globalStyles, lightTeal, pageColumnBlockStyle, pageColumnStyle, purple, roundedCornerStyle, teal, teaserContainerStyle, teaserImageStyle, teaserRowStyle, teasersContainerStyle, topTwoColumnsWrapperStyle, white, withMediaMobileUp, withMediaTabletPortraitUp)
 
 import Css exposing (Color, Style, alignItems, auto, backgroundPosition, backgroundRepeat, backgroundSize, batch, borderBottomRightRadius, borderTopLeftRadius, borderTopRightRadius, boxSizing, center, color, column, contentBox, cover, displayFlex, flex, flex3, flexDirection, flexStart, flexWrap, fontFamilies, height, hex, hidden, inherit, int, justifyContent, lastChild, listStyle, margin, margin2, marginBottom, marginRight, marginTop, maxWidth, minWidth, noRepeat, noWrap, none, overflow, padding, padding2, pct, property, px, rem, row, spaceBetween, width, wrap, zero)
 import Css.Global exposing (global, typeSelector)
@@ -118,6 +118,7 @@ globalStyles =
         , typeSelector "h1"
             [ fontFamilies [ "Adelle", "serif" ]
             , color purple
+            , width (pct 100)
             ]
         , typeSelector "h2"
             [ fontFamilies [ "Adelle", "serif" ]
@@ -255,6 +256,7 @@ centerContent =
         , boxSizing contentBox
         , displayFlex
         , flexDirection column
+        , margin auto
         , maxWidth (px maxSmallDesktop)
         , margin (rem 0)
         , padding2 (rem 2) (rem 1)
@@ -283,14 +285,6 @@ contentWrapper =
             [ alignItems flexStart
             , flexDirection row
             ]
-        ]
-
-
-mainInnerStyle : Style
-mainInnerStyle =
-    batch
-        [ centerContent
-        , margin auto
         ]
 
 
