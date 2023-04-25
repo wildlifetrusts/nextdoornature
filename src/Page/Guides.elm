@@ -47,9 +47,3 @@ view model =
             [ Page.Shared.View.viewGuideTeaserList teaserList
             ]
         ]
-
-
-guideCard : Guide -> Html Msg
-guideCard guide =
-    li [ class "guide-card" ]
-        [ a [ href (Route.toString (Route.Guide guide.slug)) ] [ text guide.title ] ]

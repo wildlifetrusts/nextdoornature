@@ -8,7 +8,7 @@ import Page.Guide.View exposing (view)
 import Page.Shared.View exposing (defaultTeaserImg)
 import Test exposing (Test, describe, test)
 import Test.Html.Query as Query
-import Test.Html.Selector exposing (classes, tag, text)
+import Test.Html.Selector exposing (tag, text)
 import TestUtils exposing (queryFromStyledHtml)
 
 

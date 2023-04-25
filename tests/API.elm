@@ -3,7 +3,7 @@ module API exposing (..)
 import Expect exposing (equal)
 import Json.Decode
 import Page.GuideTeaser exposing (guideTeaserListString)
-import Page.Shared.View exposing (actionTeaserDecoder, actionTeaserListDecoder, interalGuideTeaserListDecoder, internalGuideTeaserDecoder)
+import Page.Shared.View exposing (actionTeaserDecoder, actionTeaserListDecoder, interalGuideTeaserListDecoder)
 import Test exposing (Test, describe, test)
 import TestData exposing (..)
 

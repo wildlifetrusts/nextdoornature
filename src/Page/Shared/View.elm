@@ -1,7 +1,7 @@
 module Page.Shared.View exposing (AudioMeta, StoryTeaser, VideoMeta, actionTeaserDecoder, actionTeaserListDecoder, audioDecoder, defaultTeaserImg, guideTeaserDecoder, imageDecoder, interalGuideTeaserListDecoder, internalGuideTeaserDecoder, storyTeaserDecoder, videoDecoder, viewAudio, viewGuideTeaserList, viewStoryTeasers, viewVideo)
 
-import Css exposing (Style, backgroundImage, batch, center, column, displayFlex, flexDirection, flexWrap, height, justifyContent, listStyle, maxWidth, none, px, url, wrap)
-import Html.Styled exposing (Html, a, div, i, iframe, img, li, p, span, summary, text, ul)
+import Css exposing (Style, batch, center, column, displayFlex, flexDirection, flexWrap, height, justifyContent, maxWidth, px, url, wrap)
+import Html.Styled exposing (Html, a, div, i, iframe, img, li, p, summary, text, ul)
 import Html.Styled.Attributes exposing (alt, attribute, autoplay, css, href, src, title)
 import Json.Decode exposing (Decoder)
 import List exposing (map, sortBy)
@@ -117,7 +117,7 @@ viewVideo videoMeta =
 
 
 viewAudio : AudioMeta -> Html Msg
-viewAudio audioMeta =
+viewAudio _ =
     div
         [ css [ Theme.Global.embeddedVideoStyle ]
         ]
