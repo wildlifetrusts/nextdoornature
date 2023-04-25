@@ -1,7 +1,7 @@
 module Theme.Global exposing (centerContent, embeddedAudioStyle, embeddedVideoStyle, featureImageStyle, globalStyles, lightTeal, mainContainerStyles, outerPadding, pageColumnBlockStyle, pageColumnStyle, purple, roundedCornerStyle, teal, teaserContainerStyle, teaserImageStyle, teaserRowStyle, teasersContainerStyle, topTwoColumnsWrapperStyle, white, withMediaMobileUp, withMediaTabletPortraitUp)
 
-import Css exposing (Color, Style, absolute, alignItems, auto, batch, borderBottomRightRadius, borderTopLeftRadius, borderTopRightRadius, boxSizing, center, color, column, contentBox, displayFlex, flex, flex3, flexDirection, flexStart, flexWrap, fontFamilies, height, hex, hidden, int, justifyContent, lastChild, left, listStyle, margin, marginBottom, marginLeft, marginRight, marginTop, maxWidth, minWidth, noWrap, none, overflow, padding, padding2, pct, position, px, rem, row, spaceBetween, top, width, wrap, zero)
-import Css.Global exposing (global, typeSelector)
+import Css exposing (Color, Style, absolute, alignItems, auto, backgroundPosition, backgroundRepeat, backgroundSize, batch, borderBottomRightRadius, borderTopLeftRadius, borderTopRightRadius, boxSizing, center, clip, color, column, contentBox, cover, displayFlex, flex, flex3, flexDirection, flexStart, flexWrap, fontFamilies, height, hex, hidden, int, justifyContent, lastChild, left, listStyle, margin, marginBottom, marginLeft, marginRight, marginTop, maxWidth, minWidth, noRepeat, noWrap, none, overflow, padding, padding2, pct, position, property, px, rem, row, spaceBetween, top, width, wrap, zero)
+import Css.Global exposing (global, rect, typeSelector)
 import Css.Media as Media exposing (only, screen, withMedia)
 import Html.Styled exposing (Html)
 
@@ -175,7 +175,7 @@ teaserContainerStyle =
         , listStyle none
         , marginRight (rem 1.5)
         , marginBottom (rem 1.5)
-        , minWidth (px 200)
+        , minWidth (px 120)
         , width (pct 100)
         , lastChild
             [ marginBottom (rem 0)
@@ -225,9 +225,13 @@ featureImageStyle =
 teaserImageStyle : Style
 teaserImageStyle =
     batch
-        [ width (pct 100)
-        , height auto
-        , maxWidth (px (maxTabletPortrait / 3))
+        [ backgroundRepeat noRepeat
+        , backgroundPosition center
+        , backgroundSize cover
+        , maxWidth (px (maxMobile / 3))
+        , property "aspect-ratio" "1/1"
+        , property "object-fit" "cover"
+        , width (pct 100)
         ]
 
 
