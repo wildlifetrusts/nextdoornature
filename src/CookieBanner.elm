@@ -8,6 +8,7 @@ import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (Language, translate)
 import Message exposing (Msg(..))
 import Shared exposing (CookieState)
+import Theme.FluidScale
 import Theme.Global exposing (lightTeal, purple)
 
 
@@ -30,7 +31,7 @@ viewCookieBannerContent language =
             translate language
     in
     div []
-        [ h2 [] [ text (t CookieBannerH2) ]
+        [ h2 [ css [ Theme.FluidScale.fontSize1 ] ] [ text (t CookieBannerH2) ]
         , p
             [ css [ width (vw 100) ]
             ]
