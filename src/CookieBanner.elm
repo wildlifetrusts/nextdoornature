@@ -1,6 +1,6 @@
 port module CookieBanner exposing (saveConsent, viewCookieBanner)
 
-import Css exposing (Style, auto, backgroundColor, batch, bottom, fixed, margin, minHeight, position, px, rem, solid, vw, width)
+import Css exposing (Style, backgroundColor, batch, bottom, fixed, position, px, rem, solid, vw, width)
 import Html.Styled exposing (Html, button, div, h2, p, text)
 import Html.Styled.Attributes exposing (css)
 import Html.Styled.Events exposing (onClick)
@@ -31,7 +31,10 @@ viewCookieBannerContent language =
     in
     div []
         [ h2 [] [ text (t CookieBannerH2) ]
-        , p [] [ text (t CookieBannerP) ]
+        , p
+            [ css [ width (vw 100) ]
+            ]
+            [ text (t CookieBannerP) ]
         , button [ onClick CookiesDeclined ] [ text (t CookieDeclineButtonText) ]
         , button [ onClick CookiesAccepted ] [ text (t CookieAcceptButtonText) ]
         ]
@@ -53,5 +56,4 @@ viewCookieBannerStyles =
         , bottom (px 0)
         , Css.borderTop3 (rem 0.25) solid purple
         , position fixed
-        , width (vw 100)
         ]
