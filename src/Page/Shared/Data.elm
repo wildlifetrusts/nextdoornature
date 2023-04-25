@@ -10,7 +10,7 @@ import Page.Story.Data
 type alias Content =
     { guides : Page.Guide.Data.Guides
     , stories : Dict String Page.Story.Data.Story
-    , pages : Dict String Page.Data.Page
+    , pages : Page.Data.Pages
     }
 
 
@@ -23,7 +23,7 @@ contentDictDecoder flags =
         Err _ ->
             { guides = { cy = Dict.empty, en = Dict.empty }
             , stories = Dict.empty
-            , pages = Dict.empty
+            , pages = { cy = Dict.empty, en = Dict.empty }
             }
 
 
@@ -32,4 +32,4 @@ flagsDictDecoder =
     Json.Decode.map3 Content
         (Json.Decode.field "guides" Page.Guide.Data.guideLanguageDictDecoder)
         (Json.Decode.field "stories" Page.Story.Data.storyDictDecoder)
-        (Json.Decode.field "pages" Page.Data.pageDictDecoder)
+        (Json.Decode.field "pages" Page.Data.pageLanguageDictDecoder)
