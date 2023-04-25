@@ -1,6 +1,6 @@
 module Theme.HeaderTemplate exposing (view)
 
-import Css exposing (Style, absolute, alignItems, baseline, batch, border3, borderRadius, bottom, boxShadow, center, color, column, displayFlex, flexDirection, flexEnd, flexStart, flexWrap, focus, fontFamilies, fontSize, fontWeight, height, int, justifyContent, left, lineHeight, margin, margin2, margin4, marginBottom, marginRight, marginTop, maxWidth, minWidth, noWrap, none, outline, padding, padding3, padding4, position, pseudoElement, px, relative, rem, right, row, solid, spaceBetween, textAlign, textDecoration, top, zero)
+import Css exposing (Style, absolute, alignItems, baseline, batch, border3, borderRadius, bottom, boxShadow, center, color, column, displayFlex, flexDirection, flexEnd, flexStart, flexWrap, focus, fontFamilies, fontSize, fontWeight, height, int, justifyContent, left, lineHeight, margin, margin2, margin4, marginBottom, marginRight, marginTop, maxWidth, minWidth, noWrap, none, normal, outline, padding, padding3, padding4, position, pseudoElement, px, relative, rem, right, row, solid, spaceBetween, textAlign, textDecoration, top, zero)
 import Html.Styled exposing (Html, a, button, div, h1, header, img, input, label, node, text)
 import Html.Styled.Attributes exposing (attribute, css, href, id, placeholder, property, src, type_)
 import Html.Styled.Events exposing (on, onClick)
@@ -42,7 +42,7 @@ view model =
 viewSiteTitle : Route -> String -> Html Msg
 viewSiteTitle route siteTitle =
     if route == Index then
-        h1 [ css [ headerBrandStyle, headerTitleStyle ] ] [ text siteTitle ]
+        h1 [ css [ headerBrandStyle, headerTitleStyle, fixHeaderStyle ] ] [ text siteTitle ]
 
     else
         div [ css [ headerBrandStyle, headerTitleStyle ] ]
@@ -194,4 +194,11 @@ searchInputStyle =
             [ color purple
             , fontWeight (int 700)
             ]
+        ]
+
+
+fixHeaderStyle : Style
+fixHeaderStyle =
+    batch
+        [ fontWeight normal
         ]
