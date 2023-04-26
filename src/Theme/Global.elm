@@ -141,7 +141,7 @@ globalStyles =
             , textDecoration none
             , pseudoElement "after"
                 [ backgroundImage
-                    (url "images/arrow.svg")
+                    (url "/images/arrow.svg")
                 , backgroundSize contain
                 , backgroundPosition center
                 , backgroundRepeat noRepeat
