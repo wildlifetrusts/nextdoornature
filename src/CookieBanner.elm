@@ -1,6 +1,6 @@
 port module CookieBanner exposing (saveConsent, viewCookieBanner)
 
-import Css exposing (Style, backgroundColor, backgroundImage, backgroundPosition, backgroundRepeat, backgroundSize, batch, border, borderTop3, bottom, center, color, contain, display, em, ex, fixed, fontSize, height, inlineBlock, marginLeft, marginRight, noRepeat, padding2, paddingBottom, paddingTop, pct, position, pseudoElement, px, rem, solid, url, width)
+import Css exposing (Style, backgroundColor, backgroundImage, backgroundPosition, backgroundRepeat, backgroundSize, batch, border, borderTop3, bottom, center, color, contain, display, em, ex, fixed, fontSize, height, inlineBlock, marginLeft, marginRight, minHeight, noRepeat, padding2, paddingBottom, paddingTop, pct, position, pseudoElement, px, rem, solid, url, width)
 import Html.Styled exposing (Html, button, div, h2, p, text)
 import Html.Styled.Attributes exposing (css)
 import Html.Styled.Events exposing (onClick)
@@ -13,13 +13,15 @@ import Theme.Global exposing (centerContent, lightTeal, purple, white, withMedia
 
 viewCookieBanner : Language -> CookieState -> Html Msg
 viewCookieBanner language cookieState =
-    div [ css [ viewCookieBannerStyles ] ]
-        [ if cookieState.cookieBannerIsOpen then
-            viewCookieBannerContent language
+    if cookieState.cookieBannerIsOpen then
+        div [ css [ viewCookieBannerStyles ] ]
+            [ viewCookieBannerContent language
+            ]
 
-          else
-            viewCookieSettingsButton language
-        ]
+    else
+        div [ css [ viewCookieButtonStyles ] ]
+            [ viewCookieSettingsButton language
+            ]
 
 
 viewCookieBannerContent : Language -> Html Msg
@@ -55,11 +57,18 @@ port saveConsent : Bool -> Cmd msg
 viewCookieBannerStyles : Style
 viewCookieBannerStyles =
     batch
+        [ viewCookieButtonStyles
+        , width (pct 100)
+        ]
+
+
+viewCookieButtonStyles : Style
+viewCookieButtonStyles =
+    batch
         [ backgroundColor lightTeal
         , bottom (px 0)
-        , borderTop3 (rem 0.25) solid purple
+        , borderTop3 (rem 0.5) solid purple
         , position fixed
-        , width (pct 100)
         ]
 
 
@@ -78,7 +87,8 @@ outerPadding =
 innerContainer : Style
 innerContainer =
     batch
-        [ width (pct 100)
+        [ minHeight (rem 13)
+        , width (pct 100)
         ]
 
 
