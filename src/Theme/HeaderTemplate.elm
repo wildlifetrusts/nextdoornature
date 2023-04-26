@@ -36,7 +36,7 @@ view model =
                             searchInput model
 
                         _ ->
-                            a [ href "/guides", css [ headerLinkStyle ] ] [ text <| t FooterGuidesLinkText ]
+                            a [ href (Route.toString Guides), css [ headerLinkStyle ] ] [ text (t FooterGuidesLinkText) ]
                     ]
                 ]
             ]
