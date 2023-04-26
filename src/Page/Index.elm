@@ -8,33 +8,32 @@ import Message exposing (Msg)
 import Page.Guide.Data
 import Page.Shared.View
 import Shared exposing (Model)
-import Theme.Global exposing (centerContent, mainContainerStyles, pageColumnBlockStyle, pageColumnStyle, topTwoColumnsWrapperStyle)
+import Theme.Global exposing (centerContent, contentWrapper, pageColumnBlockStyle, pageColumnStyle, topTwoColumnsWrapperStyle)
 
 
 view : Model -> Html Msg
 view model =
     let
+        t : Key -> String
         t =
             translate model.language
     in
-    div [ css [ centerContent ] ]
-        [ div [ css [ mainContainerStyles ] ]
-            [ div [ css [ topTwoColumnsWrapperStyle ] ]
-                [ div [ css [ pageColumnStyle ] ]
-                    (viewTextColumn t [ WelcomeP1, WelcomeP2, WelcomeP3 ])
-                , div [ css [ pageColumnStyle ] ]
-                    [ List.take 4 (Page.Guide.Data.teaserListFromGuideDict model.language model.content.guides)
-                        |> Page.Shared.View.viewGuideTeaserList
-                    ]
-                ]
+    div [ css [ centerContent, contentWrapper ] ]
+        [ div [ css [ topTwoColumnsWrapperStyle ] ]
+            [ div [ css [ pageColumnStyle ] ]
+                (viewTextColumn t [ WelcomeP1, WelcomeP2, WelcomeP3 ])
             , div [ css [ pageColumnStyle ] ]
-                (viewTextColumn t
-                    [ ExploreGuidesListPlaceholder
-                    , ExploreGuidesListPlaceholder
-                    , ExploreGuidesListPlaceholder
-                    ]
-                )
+                [ List.take 4 (Page.Guide.Data.teaserListFromGuideDict model.language model.content.guides)
+                    |> Page.Shared.View.viewGuideTeaserList
+                ]
             ]
+        , div [ css [ pageColumnStyle ] ]
+            (viewTextColumn t
+                [ ExploreGuidesListPlaceholder
+                , ExploreGuidesListPlaceholder
+                , ExploreGuidesListPlaceholder
+                ]
+            )
         ]
 
 

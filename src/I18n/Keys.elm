@@ -10,7 +10,6 @@ type Key
       --- 404 content
     | Story404Title
     | Story404Body
-    | Story404Slug
     | Guide404Title
     | Guide404Slug
     | Guide404Body
@@ -18,7 +17,6 @@ type Key
     | AncillaryPage404Title
     | AncillaryPage404Body
       --- Footer
-    | FooterProjectInfo
     | FooterTitleColumnA
     | FooterTitleColumnB
     | FooterTitleColumnC
@@ -30,6 +28,9 @@ type Key
     | FooterFindYourLocalTrustLink
     | FooterPrivacyPolicyText
     | FooterPrivacyPolicyLink
+    | FooterSiteLogo
+    | FooterCharityInfo
+    | RegisteredCharityNumber
       --- Cookie banner
     | CookieBannerH2
     | CookieBannerP

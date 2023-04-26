@@ -3,9 +3,10 @@ import { Elm } from "/src/Main.elm";
 import SearchInput from "/src/js/search";
 
 import cyGuides from "../../data/guides/cy.json";
+import cyPages from "../../data/pages/cy.json";
 import enGuides from "../../data/guides/en.json";
+import enPages from "../../data/pages/en.json";
 import stories from "../../data/stories.json";
-import pages from "../../data/pages.json";
 
 customElements.define("search-input", SearchInput);
 
@@ -18,7 +19,7 @@ const app = Elm.Main.init({
     hasConsented,
     guides: { cy: cyGuides, en: enGuides },
     stories,
-    pages,
+    pages: { cy: cyPages, en: enPages },
   },
 });
 

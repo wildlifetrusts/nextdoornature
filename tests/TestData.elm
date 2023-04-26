@@ -1,4 +1,4 @@
-module TestData exposing (..)
+module TestData exposing (actionsAPI, singleActionFromAPI, teaserFromResult, teaserFromResult2)
 
 import Page.GuideTeaser
 

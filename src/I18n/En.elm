@@ -42,9 +42,6 @@ enStrings key =
         Story404Body ->
             "[cCc] Try searching again [home](\"\\\")"
 
-        Story404Slug ->
-            "story-not-found"
-
         AncillaryPage404Title ->
             "[cCc] Sorry, we can't find that page"
 
@@ -57,9 +54,6 @@ enStrings key =
         ---
         -- Footer
         ---
-        FooterProjectInfo ->
-            "[cCc] Project Info Text"
-
         FooterTitleColumnA ->
             "[cCc] Find out more"
 
@@ -94,6 +88,15 @@ enStrings key =
 
         FooterPrivacyPolicyLink ->
             "/privacy-policy"
+
+        FooterSiteLogo ->
+            "Nextdoor Nature"
+
+        FooterCharityInfo ->
+            "[cCc] The Nextdoor Nature online library is a project by the Wildlife Trusts: Protecting Wildlife for the Future"
+
+        RegisteredCharityNumber ->
+            "Registered charity number 20723"
 
         ---
         -- Cookie banner
@@ -131,7 +134,7 @@ enStrings key =
         -- Search
         ---
         SearchPlaceholder ->
-            "Search Guides"
+            "Search the library"
 
         ExploreGuidesListPlaceholder ->
             "[cCc] Explore guides by theme"

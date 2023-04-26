@@ -1,14 +1,13 @@
 module Page.Shared.View exposing (AudioMeta, StoryTeaser, VideoMeta, actionTeaserDecoder, actionTeaserListDecoder, audioDecoder, defaultTeaserImg, guideTeaserDecoder, imageDecoder, interalGuideTeaserListDecoder, internalGuideTeaserDecoder, storyTeaserDecoder, videoDecoder, viewAudio, viewGuideTeaserList, viewStoryTeasers, viewVideo)
 
-import Css exposing (Style, batch, center, column, displayFlex, flexDirection, flexWrap, height, justifyContent, listStyle, maxWidth, none, px, wrap)
-import Html.Styled exposing (Html, a, div, i, iframe, img, li, p, summary, text, ul)
+import Css exposing (Style, batch, center, column, displayFlex, flexDirection, flexWrap, height, justifyContent, maxWidth, px, wrap)
+import Html.Styled exposing (Html, a, div, iframe, img, li, p, text, ul)
 import Html.Styled.Attributes exposing (alt, attribute, autoplay, css, href, src, title)
 import Json.Decode exposing (Decoder)
 import List exposing (map, sortBy)
 import Message exposing (Msg)
 import Page.GuideTeaser
 import String exposing (length, padRight)
-import Svg.Styled exposing (image)
 import Theme.Global exposing (roundedCornerStyle, teaserContainerStyle, teaserImageStyle, teaserRowStyle, teasersContainerStyle)
 
 
@@ -117,7 +116,7 @@ viewVideo videoMeta =
 
 
 viewAudio : AudioMeta -> Html Msg
-viewAudio audioMeta =
+viewAudio _ =
     div
         [ css [ Theme.Global.embeddedVideoStyle ]
         ]
@@ -155,7 +154,15 @@ viewGuideTeaser teaser =
                     defaultTeaserImg
     in
     li [ css [ teaserContainerStyle ] ]
-        [ img [ src image.src, alt image.alt, css [ roundedCornerStyle, teaserImageStyle ] ] []
+        [ img
+            [ alt image.alt
+            , src image.src
+            , css
+                [ roundedCornerStyle
+                , teaserImageStyle
+                ]
+            ]
+            []
         , p [ css [ teaserRowStyle ] ]
             [ a [ href teaser.url ] [ text teaser.title ] ]
         , viewGuideTeaserSummary teaser.summary
@@ -196,7 +203,15 @@ viewStoryTeasers teasers =
                 |> map
                     (\{ description, image, slug, title } ->
                         div [ css [ storyteaserContainerStyle ] ]
-                            [ img [ src image.src, alt image.alt, css [ roundedCornerStyle, teaserImageStyle ] ] []
+                            [ img
+                                [ alt image.alt
+                                , src image.src
+                                , css
+                                    [ roundedCornerStyle
+                                    , teaserImageStyle
+                                    ]
+                                ]
+                                []
                             , a [ href ("/stories/" ++ slug) ] [ text title ]
                             , p [] [ text description ]
                             ]
