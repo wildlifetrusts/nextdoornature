@@ -1,8 +1,8 @@
 module Theme.HeaderTemplate exposing (view)
 
-import Css exposing (Style, absolute, alignItems, backgroundColor, backgroundImage, backgroundPosition, backgroundRepeat, backgroundSize, baseline, batch, border, border3, borderRadius, bottom, boxShadow, center, color, column, contain, display, displayFlex, em, flexDirection, flexEnd, flexStart, flexWrap, focus, fontFamilies, fontSize, fontWeight, height, inlineBlock, int, justifyContent, left, lineHeight, margin, margin2, margin4, marginBottom, marginLeft, marginRight, marginTop, maxWidth, minWidth, noRepeat, noWrap, none, normal, outline, padding, padding4, pct, position, pseudoElement, px, relative, rem, right, row, solid, spaceBetween, textAlign, textDecoration, top, url, width, zero)
+import Css exposing (Style, absolute, alignItems, backgroundColor, backgroundImage, backgroundPosition, backgroundRepeat, backgroundSize, baseline, batch, border, border3, borderRadius, bottom, boxShadow, center, color, column, contain, display, displayFlex, em, flexDirection, flexEnd, flexStart, flexWrap, focus, fontFamilies, fontSize, fontWeight, height, inlineBlock, int, justifyContent, left, lineHeight, margin, margin2, margin4, marginBottom, marginLeft, marginRight, marginTop, minWidth, noRepeat, noWrap, none, normal, outline, padding, padding4, pct, position, pseudoElement, px, relative, rem, right, row, solid, spaceBetween, textAlign, top, url, width, zero)
 import Html.Styled exposing (Html, a, button, div, h1, header, img, input, label, node, text)
-import Html.Styled.Attributes exposing (attribute, css, href, id, placeholder, property, src, type_)
+import Html.Styled.Attributes exposing (attribute, css, href, id, placeholder, src, type_)
 import Html.Styled.Events exposing (on, onClick)
 import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (Language(..), translate)
@@ -14,6 +14,7 @@ import Page.GuideTeaser
 import Page.Shared.View
 import Route exposing (Route(..))
 import Shared exposing (Model, Request(..))
+import Theme.FluidScale
 import Theme.Global exposing (centerContent, purple, teal, white, withMediaMobileUp)
 
 
@@ -104,13 +105,13 @@ searchInput model =
 headerBrandStyle : Style
 headerBrandStyle =
     batch
-        [ color white
-        , fontSize (rem 4)
+        [ Theme.FluidScale.fontSize5
+        , Theme.FluidScale.logoContainer
+        , color white
         , fontFamilies [ "Ludicrous" ]
         , fontWeight normal
-        , lineHeight (rem 4)
+        , lineHeight (em 1.2)
         , margin zero
-        , maxWidth (px 336)
         , withMediaMobileUp
             [ marginRight (rem 3) ]
         ]
@@ -206,16 +207,6 @@ headerBtnStyle =
         , withMediaMobileUp
             [ textAlign right
             ]
-        ]
-
-
-headerTitleStyle : Style
-headerTitleStyle =
-    batch
-        [ fontWeight normal
-        , maxWidth (px 336)
-        , withMediaMobileUp
-            [ marginRight (rem 3) ]
         ]
 
 

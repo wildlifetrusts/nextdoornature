@@ -4,6 +4,7 @@ import Css exposing (Color, Style, alignItems, auto, backgroundImage, background
 import Css.Global exposing (global, typeSelector)
 import Css.Media as Media exposing (only, screen, withMedia)
 import Html.Styled exposing (Html)
+import Theme.FluidScale
 
 
 
@@ -117,19 +118,23 @@ globalStyles =
         , typeSelector "h1"
             [ fontFamilies [ "Adelle", "serif" ]
             , color purple
+            , Theme.FluidScale.fontSize4
             , width (pct 100)
             ]
         , typeSelector "h2"
             [ fontFamilies [ "Adelle", "serif" ]
             , color purple
+            , Theme.FluidScale.fontSize3
             ]
         , typeSelector "h3"
             [ fontFamilies [ "Adelle", "serif" ]
             , color purple
+            , Theme.FluidScale.fontSize2
             ]
         , typeSelector "h4"
             [ fontFamilies [ "Adelle", "serif" ]
             , color purple
+            , Theme.FluidScale.fontSize1
             ]
         , typeSelector "a"
             [ color purple
