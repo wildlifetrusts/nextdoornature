@@ -6,6 +6,7 @@ import Html.Styled exposing (Html, a, div, footer, h3, img, nav, text)
 import Html.Styled.Attributes exposing (css, href, src)
 import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (Language(..), translate)
+import Theme.FluidScale
 import Theme.Global exposing (centerContent, lightTeal, purple, teal, white, withMediaMobileUp, withMediaTabletPortraitUp)
 
 
@@ -60,7 +61,7 @@ navigationColumn column language =
             translate language
     in
     div [ css [ footerColumnListStyle ] ]
-        [ h3 []
+        [ h3 [ css [ Theme.FluidScale.fontSize1 ] ]
             [ text (t column.title)
             ]
         , div [] (List.map (\link -> a [ href (t link.href) ] [ text (t link.text) ]) column.links)

@@ -44,5 +44,8 @@ cyStrings key =
         FooterSiteLogo ->
             "[cCc] Nextdoor Nature CY"
 
+        SearchPlaceholder ->
+            "[cCc] Cy label"
+
         _ ->
             "[cCc] [fFf] to reminder to add all Welsh Keys back"
