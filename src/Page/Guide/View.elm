@@ -1,21 +1,21 @@
 module Page.Guide.View exposing (view)
 
-import Css exposing (Style, fontFamilies)
+import Css exposing (Style, batch, fontFamilies)
 import Html.Styled exposing (Html, a, div, h1, li, text, ul)
 import Html.Styled.Attributes exposing (css, href)
 import Message exposing (Msg)
 import Page.Guide.Data
 import Page.GuideTeaser
 import Page.Shared.View
-import Theme.Global exposing (centerContent, mainContainerStyles, pageColumnBlockStyle, pageColumnStyle, topTwoColumnsWrapperStyle)
+import Theme.Global exposing (centerContent, contentWrapper, pageColumnBlockStyle, pageColumnStyle, topTwoColumnsWrapperStyle)
 import Theme.Markdown exposing (markdownToHtml)
 
 
 view : Page.Guide.Data.Guide -> Html Msg
 view guide =
     div [ css [ centerContent ] ]
-        [ h1 [ css guideTitle ] [ text guide.title ]
-        , div [ css [ mainContainerStyles ] ]
+        [ h1 [ css [ guideTitle ] ] [ text guide.title ]
+        , div [ css [ contentWrapper ] ]
             [ div [ css [ topTwoColumnsWrapperStyle ] ]
                 [ div [ css [ pageColumnStyle ] ]
                     [ div [ css [ pageColumnBlockStyle ] ] (markdownToHtml guide.fullTextMarkdown) ]
@@ -69,7 +69,8 @@ viewRelatedGuideTeasers guideList =
         text ""
 
 
-guideTitle : List Style
+guideTitle : Style
 guideTitle =
-    [ fontFamilies [ "Ludicrous", "serif" ]
-    ]
+    batch
+        [ fontFamilies [ "Ludicrous", "serif" ]
+        ]

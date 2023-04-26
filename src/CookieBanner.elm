@@ -1,6 +1,6 @@
 port module CookieBanner exposing (saveConsent, viewCookieBanner)
 
-import Css exposing (Style, auto, backgroundColor, backgroundImage, backgroundPosition, backgroundPosition2, backgroundRepeat, backgroundSize, batch, border, bottom, center, color, contain, display, em, ex, fixed, fontSize, height, inlineBlock, margin, marginLeft, marginRight, minHeight, noRepeat, padding, padding2, padding4, position, pseudoElement, px, rem, solid, textAlign, url, vw, width)
+import Css exposing (Style, backgroundColor, backgroundImage, backgroundPosition, backgroundRepeat, backgroundSize, batch, border, borderTop3, bottom, center, color, contain, display, em, ex, fixed, fontSize, height, inlineBlock, marginLeft, marginRight, noRepeat, padding2, paddingBottom, paddingTop, pct, position, pseudoElement, px, rem, solid, url, width)
 import Html.Styled exposing (Html, button, div, h2, p, text)
 import Html.Styled.Attributes exposing (css)
 import Html.Styled.Events exposing (onClick)
@@ -8,8 +8,7 @@ import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (Language, translate)
 import Message exposing (Msg(..))
 import Shared exposing (CookieState)
-import String exposing (left, right)
-import Theme.Global exposing (lightTeal, purple, teal, white, withMediaMobileUp)
+import Theme.Global exposing (centerContent, lightTeal, purple, white, withMediaMobileUp)
 
 
 viewCookieBanner : Language -> CookieState -> Html Msg
@@ -30,16 +29,17 @@ viewCookieBannerContent language =
         t =
             translate language
     in
-    div [ css [ padding4 (rem 0) (rem 1) (rem 1) (rem 1) ] ]
-        [ h2 [] [ text (t CookieBannerH2) ]
-        , p
-            [ css [ width (vw 100) ]
+    div [ css [ outerPadding, centerContent ] ]
+        [ div [ css [ innerContainer ] ]
+            [ h2 [] [ text (t CookieBannerH2) ]
+            , p
+                []
+                [ text (t CookieBannerP) ]
+            , button [ css [ cookieBtnStyle ], onClick CookiesDeclined ]
+                [ text (t CookieDeclineButtonText) ]
+            , button [ css [ cookieBtnStyle ], onClick CookiesAccepted ]
+                [ text (t CookieAcceptButtonText) ]
             ]
-            [ text (t CookieBannerP) ]
-        , button [ css [ cookieBtnStyle ], onClick CookiesDeclined ]
-            [ text (t CookieDeclineButtonText) ]
-        , button [ css [ cookieBtnStyle ], onClick CookiesAccepted ]
-            [ text (t CookieAcceptButtonText) ]
         ]
 
 
@@ -57,8 +57,28 @@ viewCookieBannerStyles =
     batch
         [ backgroundColor lightTeal
         , bottom (px 0)
-        , Css.borderTop3 (rem 0.25) solid purple
+        , borderTop3 (rem 0.25) solid purple
         , position fixed
+        , width (pct 100)
+        ]
+
+
+outerPadding : Style
+outerPadding =
+    batch
+        [ paddingBottom (rem 0.5)
+        , paddingTop (rem 0.5)
+        , withMediaMobileUp
+            [ paddingBottom (rem 0.5)
+            , paddingTop (rem 0.5)
+            ]
+        ]
+
+
+innerContainer : Style
+innerContainer =
+    batch
+        [ width (pct 100)
         ]
 
 

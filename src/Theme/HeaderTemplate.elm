@@ -1,6 +1,6 @@
 module Theme.HeaderTemplate exposing (view)
 
-import Css exposing (FontWeight, Style, absolute, alignItems, auto, backgroundColor, backgroundImage, backgroundPosition, backgroundPosition2, backgroundRepeat, backgroundSize, baseline, batch, border, border3, borderRadius, bottom, boxShadow, center, color, column, contain, display, displayFlex, em, flexDirection, flexEnd, flexStart, flexWrap, focus, fontFamilies, fontSize, fontWeight, height, inlineBlock, int, justifyContent, left, lineHeight, margin, margin2, margin4, marginBottom, marginLeft, marginRight, marginTop, maxWidth, minWidth, noRepeat, noWrap, none, normal, outline, padding, padding4, pct, position, property, pseudoElement, px, relative, rem, right, row, solid, spaceBetween, textAlign, textDecoration, top, url, width, zero)
+import Css exposing (Style, absolute, alignItems, backgroundColor, backgroundImage, backgroundPosition, backgroundRepeat, backgroundSize, baseline, batch, border, border3, borderRadius, bottom, boxShadow, center, color, column, contain, display, displayFlex, em, flexDirection, flexEnd, flexStart, flexWrap, focus, fontFamilies, fontSize, fontWeight, height, inlineBlock, int, justifyContent, left, lineHeight, margin, margin2, margin4, marginBottom, marginLeft, marginRight, marginTop, maxWidth, minWidth, noRepeat, noWrap, none, normal, outline, padding, padding4, pct, position, pseudoElement, px, relative, rem, right, row, solid, spaceBetween, textAlign, textDecoration, top, url, width, zero)
 import Html.Styled exposing (Html, a, button, div, h1, header, img, input, label, node, text)
 import Html.Styled.Attributes exposing (attribute, css, href, id, placeholder, property, src, type_)
 import Html.Styled.Events exposing (on, onClick)
@@ -14,7 +14,7 @@ import Page.GuideTeaser
 import Page.Shared.View
 import Route exposing (Route(..))
 import Shared exposing (Model, Request(..))
-import Theme.Global exposing (centerContent, outerPadding, purple, teal, white, withMediaMobileUp)
+import Theme.Global exposing (centerContent, purple, teal, white, withMediaMobileUp)
 
 
 view : Model -> Html Msg
@@ -24,18 +24,20 @@ view model =
         t =
             translate model.language
     in
-    header [ css [ headerStyle ] ]
-        [ div [ css [ headerContainerStyle ] ]
-            [ viewSiteTitle model.page (t SiteTitle)
-            , div [ css [ searchButtonsContainerStyle ] ]
-                [ button [ css [ headerBtnStyle ], onClick LanguageChangeRequested ]
-                    [ text (t ChangeLanguage) ]
-                , case model.page of
-                    Guides ->
-                        searchInput model
+    header [ css [ headerOuterStyle ] ]
+        [ div [ css [ centerContent ] ]
+            [ div [ css [ headerContainerStyle ] ]
+                [ viewSiteTitle model.page (t SiteTitle)
+                , div [ css [ searchButtonsContainerStyle ] ]
+                    [ button [ css [ headerBtnStyle ], onClick LanguageChangeRequested ]
+                        [ text (t ChangeLanguage) ]
+                    , case model.page of
+                        Guides ->
+                            searchInput model
 
-                    _ ->
-                        a [ href "/guides", css [ headerLinkStyle ] ] [ text <| t FooterGuidesLinkText ]
+                        _ ->
+                            a [ href (Route.toString Guides), css [ headerLinkStyle ] ] [ text (t FooterGuidesLinkText) ]
+                    ]
                 ]
             ]
         ]
@@ -44,10 +46,10 @@ view model =
 viewSiteTitle : Route -> String -> Html Msg
 viewSiteTitle route siteTitle =
     if route == Index then
-        h1 [ css [ headerBrandStyle, headerTitleStyle, fixHeaderStyle ] ] [ text siteTitle ]
+        h1 [ css [ headerBrandStyle ] ] [ text siteTitle ]
 
     else
-        div [ css [ headerBrandStyle, headerTitleStyle ] ]
+        div [ css [ headerBrandStyle ] ]
             [ a
                 [ href "/"
                 , css
@@ -64,6 +66,7 @@ viewSiteTitle route siteTitle =
 searchInput : Model -> Html Msg
 searchInput model =
     let
+        t : Key -> String
         t =
             I18n.Translate.translate model.language
 
@@ -94,25 +97,29 @@ searchInput model =
                         Json.Decode.list Page.Shared.View.internalGuideTeaserDecoder
             ]
             [ input [ id "search", type_ "text", placeholder (t SearchPlaceholder), css [ searchInputStyle ] ] [] ]
-        , img [ css [ arrowStyle ], src "/images/arrow-right-purple.svg", Html.Styled.Attributes.attribute "aria-hidden" "true" ] []
-        ]
-
-
-headerStyle : Style
-headerStyle =
-    batch
-        [ backgroundColor teal
-        , color white
+        , img [ src "/images/arrow-right-purple.svg", css [ arrowStyle ] ] []
         ]
 
 
 headerBrandStyle : Style
 headerBrandStyle =
     batch
-        [ fontSize (rem 4)
+        [ color white
+        , fontSize (rem 4)
         , fontFamilies [ "Ludicrous" ]
+        , fontWeight normal
         , lineHeight (rem 4)
         , margin zero
+        , maxWidth (px 336)
+        , withMediaMobileUp
+            [ marginRight (rem 3) ]
+        ]
+
+
+headerOuterStyle : Style
+headerOuterStyle =
+    batch
+        [ backgroundColor teal
         , color white
         ]
 
@@ -121,12 +128,11 @@ headerContainerStyle : Style
 headerContainerStyle =
     batch
         [ alignItems baseline
-        , centerContent
         , displayFlex
         , flexDirection column
         , flexWrap noWrap
         , justifyContent center
-        , outerPadding
+        , width (pct 100)
         , withMediaMobileUp
             [ flexDirection row
             , justifyContent spaceBetween
@@ -251,11 +257,4 @@ searchInputStyle =
             [ color purple
             , fontWeight (int 700)
             ]
-        ]
-
-
-fixHeaderStyle : Style
-fixHeaderStyle =
-    batch
-        [ fontWeight normal
         ]

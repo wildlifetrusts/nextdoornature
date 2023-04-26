@@ -1,13 +1,12 @@
-module Theme.Markdown exposing (markdownToHtml, markdownToView)
+module Theme.Markdown exposing (markdownToHtml)
 
-import Css exposing (Style, absolute, batch, before, center, color, decimal, em, firstChild, fontSize, fontWeight, int, left, lineHeight, listStyle, listStyleType, marginBlockEnd, marginBlockStart, none, paddingLeft, position, property, relative, rem, textAlign, top)
+import Css exposing (Style, batch)
 import Html.Styled as Html
 import Html.Styled.Attributes as Attr exposing (css)
 import Markdown.Block as Block
 import Markdown.Html
 import Markdown.Parser
 import Markdown.Renderer
-import Theme.Global exposing (roundedCornerStyle)
 
 
 markdownToHtml : String -> List (Html.Html msg)
@@ -109,6 +108,7 @@ htmlRenderer =
                             case item of
                                 Block.ListItem task children ->
                                     let
+                                        checkbox : Html.Html msg
                                         checkbox =
                                             case task of
                                                 Block.NoTask ->
@@ -152,7 +152,7 @@ htmlRenderer =
                 )
     , html = Markdown.Html.oneOf []
     , codeBlock =
-        \{ body, language } ->
+        \{ body } ->
             Html.pre []
                 [ Html.code []
                     [ Html.text body
@@ -166,6 +166,7 @@ htmlRenderer =
     , tableHeaderCell =
         \maybeAlignment ->
             let
+                attrs : List (Html.Attribute msg)
                 attrs =
                     maybeAlignment
                         |> Maybe.map
@@ -188,6 +189,7 @@ htmlRenderer =
     , tableCell =
         \maybeAlignment ->
             let
+                attrs : List (Html.Attribute msg)
                 attrs =
                     maybeAlignment
                         |> Maybe.map
