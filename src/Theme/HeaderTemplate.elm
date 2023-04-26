@@ -1,6 +1,6 @@
 module Theme.HeaderTemplate exposing (view)
 
-import Css exposing (Style, absolute, alignItems, baseline, batch, border3, borderRadius, bottom, boxShadow, center, color, column, displayFlex, em, flexDirection, flexEnd, flexStart, flexWrap, focus, fontFamilies, fontSize, fontWeight, height, int, justifyContent, left, lineHeight, margin, margin2, margin4, marginBottom, marginRight, marginTop, maxWidth, minWidth, noWrap, none, normal, outline, padding, padding3, padding4, position, pseudoElement, px, relative, rem, right, row, solid, spaceBetween, textAlign, textDecoration, top, zero)
+import Css exposing (Style, absolute, alignItems, backgroundColor, baseline, batch, border3, borderRadius, bottom, boxShadow, center, color, column, displayFlex, em, flexDirection, flexEnd, flexStart, flexWrap, focus, fontFamilies, fontWeight, height, int, justifyContent, left, lineHeight, margin, margin2, margin4, marginBottom, marginRight, marginTop, maxWidth, minWidth, noWrap, none, normal, outline, padding, padding4, pct, position, pseudoElement, px, relative, rem, right, row, solid, spaceBetween, textAlign, textDecoration, top, width, zero)
 import Html.Styled exposing (Html, a, button, div, h1, header, img, input, label, node, text)
 import Html.Styled.Attributes exposing (attribute, css, href, id, placeholder, property, src, type_)
 import Html.Styled.Events exposing (on, onClick)
@@ -15,7 +15,7 @@ import Page.Shared.View
 import Route exposing (Route(..))
 import Shared exposing (Model, Request(..))
 import Theme.FluidScale
-import Theme.Global exposing (centerContent, outerPadding, purple, withMediaMobileUp)
+import Theme.Global exposing (centerContent, purple, teal, white, withMediaMobileUp)
 
 
 view : Model -> Html Msg
@@ -25,17 +25,21 @@ view model =
         t =
             translate model.language
     in
-    header [ css [ headerContainerStyle ] ]
-        [ viewSiteTitle model.page (t SiteTitle)
-        , div [ css [ searchButtonsContainerStyle ] ]
-            [ button [ onClick LanguageChangeRequested ]
-                [ text (t ChangeLanguage) ]
-            , case model.page of
-                Guides ->
-                    searchInput model
+    header [ css [ headerOuterStyle ] ]
+        [ div [ css [ centerContent ] ]
+            [ div [ css [ headerContainerStyle ] ]
+                [ viewSiteTitle model.page (t SiteTitle)
+                , div [ css [ searchButtonsContainerStyle ] ]
+                    [ button [ onClick LanguageChangeRequested ]
+                        [ text (t ChangeLanguage) ]
+                    , case model.page of
+                        Guides ->
+                            searchInput model
 
-                _ ->
-                    a [ href "/guides", css [ headerLinkStyle ] ] [ text <| t FooterGuidesLinkText ]
+                        _ ->
+                            a [ href (Route.toString Guides), css [ headerLinkStyle ] ] [ text (t FooterGuidesLinkText) ]
+                    ]
+                ]
             ]
         ]
 
@@ -43,14 +47,15 @@ view model =
 viewSiteTitle : Route -> String -> Html Msg
 viewSiteTitle route siteTitle =
     if route == Index then
-        h1 [ css [ headerBrandStyle, headerTitleStyle, fixHeaderStyle ] ] [ text siteTitle ]
+        h1 [ css [ headerBrandStyle ] ] [ text siteTitle ]
 
     else
-        div [ css [ headerBrandStyle, headerTitleStyle ] ]
+        div [ css [ headerBrandStyle ] ]
             [ a
                 [ href "/"
                 , css
-                    [ textDecoration none
+                    [ color white
+                    , textDecoration none
                     ]
                 ]
                 [ text siteTitle
@@ -61,6 +66,7 @@ viewSiteTitle route siteTitle =
 searchInput : Model -> Html Msg
 searchInput model =
     let
+        t : Key -> String
         t =
             I18n.Translate.translate model.language
 
@@ -98,9 +104,22 @@ headerBrandStyle : Style
 headerBrandStyle =
     batch
         [ Theme.FluidScale.fontSize5
+        , color white
         , fontFamilies [ "Ludicrous" ]
+        , fontWeight normal
         , lineHeight (em 1.2)
         , margin zero
+        , maxWidth (px 336)
+        , withMediaMobileUp
+            [ marginRight (rem 3) ]
+        ]
+
+
+headerOuterStyle : Style
+headerOuterStyle =
+    batch
+        [ backgroundColor teal
+        , color white
         ]
 
 
@@ -108,12 +127,11 @@ headerContainerStyle : Style
 headerContainerStyle =
     batch
         [ alignItems baseline
-        , centerContent
         , displayFlex
         , flexDirection column
         , flexWrap noWrap
         , justifyContent center
-        , outerPadding
+        , width (pct 100)
         , withMediaMobileUp
             [ flexDirection row
             , justifyContent spaceBetween
@@ -141,19 +159,11 @@ searchButtonsContainerStyle =
 headerLinkStyle : Style
 headerLinkStyle =
     batch
-        [ textAlign left
+        [ color white
+        , textAlign left
         , withMediaMobileUp
             [ textAlign right
             ]
-        ]
-
-
-headerTitleStyle : Style
-headerTitleStyle =
-    batch
-        [ maxWidth (px 336)
-        , withMediaMobileUp
-            [ marginRight (rem 3) ]
         ]
 
 
@@ -195,11 +205,4 @@ searchInputStyle =
             [ color purple
             , fontWeight (int 700)
             ]
-        ]
-
-
-fixHeaderStyle : Style
-fixHeaderStyle =
-    batch
-        [ fontWeight normal
         ]
