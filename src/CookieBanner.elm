@@ -1,6 +1,6 @@
 port module CookieBanner exposing (saveConsent, viewCookieBanner)
 
-import Css exposing (Style, backgroundColor, batch, borderTop3, bottom, fixed, paddingBottom, paddingTop, pct, position, px, rem, solid, width)
+import Css exposing (Style, backgroundColor, backgroundImage, backgroundPosition, backgroundRepeat, backgroundSize, batch, border, borderTop3, bottom, center, color, contain, display, em, ex, fixed, fontSize, height, inlineBlock, marginLeft, marginRight, noRepeat, padding2, paddingBottom, paddingTop, pct, position, pseudoElement, px, rem, solid, url, width)
 import Html.Styled exposing (Html, button, div, h2, p, text)
 import Html.Styled.Attributes exposing (css)
 import Html.Styled.Events exposing (onClick)
@@ -8,7 +8,7 @@ import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (Language, translate)
 import Message exposing (Msg(..))
 import Shared exposing (CookieState)
-import Theme.Global exposing (centerContent, lightTeal, purple, withMediaMobileUp)
+import Theme.Global exposing (centerContent, lightTeal, purple, white, withMediaMobileUp)
 
 
 viewCookieBanner : Language -> CookieState -> Html Msg
@@ -35,15 +35,17 @@ viewCookieBannerContent language =
             , p
                 []
                 [ text (t CookieBannerP) ]
-            , button [ onClick CookiesDeclined ] [ text (t CookieDeclineButtonText) ]
-            , button [ onClick CookiesAccepted ] [ text (t CookieAcceptButtonText) ]
+            , button [ css [ cookieBtnStyle ], onClick CookiesDeclined ]
+                [ text (t CookieDeclineButtonText) ]
+            , button [ css [ cookieBtnStyle ], onClick CookiesAccepted ]
+                [ text (t CookieAcceptButtonText) ]
             ]
         ]
 
 
 viewCookieSettingsButton : Language -> Html Msg
 viewCookieSettingsButton language =
-    button [ onClick CookieSettingsButtonClicked ]
+    button [ css [ cookieBtnStyle, marginRight (rem 0) ], onClick CookieSettingsButtonClicked ]
         [ text (translate language CookieSettingsButtonText) ]
 
 
@@ -77,4 +79,27 @@ innerContainer : Style
 innerContainer =
     batch
         [ width (pct 100)
+        ]
+
+
+cookieBtnStyle : Style
+cookieBtnStyle =
+    batch
+        [ pseudoElement "after"
+            [ backgroundImage (url "images/arrow--white.svg")
+            , backgroundSize contain
+            , backgroundPosition center
+            , backgroundRepeat noRepeat
+            , display inlineBlock
+            , Css.property "content" "' '"
+            , height (ex 1.5)
+            , width (em 1.0)
+            , marginLeft (em 0.3)
+            ]
+        , color white
+        , backgroundColor purple
+        , border (px 0)
+        , fontSize (rem 1)
+        , padding2 (rem 0.3) (rem 0.5)
+        , marginRight (rem 0.5)
         ]

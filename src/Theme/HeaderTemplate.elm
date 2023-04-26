@@ -1,8 +1,8 @@
 module Theme.HeaderTemplate exposing (view)
 
-import Css exposing (Style, absolute, alignItems, backgroundColor, baseline, batch, border3, borderRadius, bottom, boxShadow, center, color, column, displayFlex, em, flexDirection, flexEnd, flexStart, flexWrap, focus, fontFamilies, fontWeight, height, int, justifyContent, left, lineHeight, margin, margin2, margin4, marginBottom, marginRight, marginTop, maxWidth, minWidth, noWrap, none, normal, outline, padding, padding4, pct, position, pseudoElement, px, relative, rem, right, row, solid, spaceBetween, textAlign, textDecoration, top, width, zero)
+import Css exposing (Style, absolute, alignItems, backgroundColor, backgroundImage, backgroundPosition, backgroundRepeat, backgroundSize, baseline, batch, border, border3, borderRadius, bottom, boxShadow, center, color, column, contain, display, displayFlex, em, flexDirection, flexEnd, flexStart, flexWrap, focus, fontFamilies, fontSize, fontWeight, height, inlineBlock, int, justifyContent, left, lineHeight, margin, margin2, margin4, marginBottom, marginLeft, marginRight, marginTop, minWidth, noRepeat, noWrap, none, normal, outline, padding, padding4, pct, position, pseudoElement, px, relative, rem, right, row, solid, spaceBetween, textAlign, top, url, width, zero)
 import Html.Styled exposing (Html, a, button, div, h1, header, img, input, label, node, text)
-import Html.Styled.Attributes exposing (attribute, css, href, id, placeholder, property, src, type_)
+import Html.Styled.Attributes exposing (attribute, css, href, id, placeholder, src, type_)
 import Html.Styled.Events exposing (on, onClick)
 import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (Language(..), translate)
@@ -30,7 +30,7 @@ view model =
             [ div [ css [ headerContainerStyle ] ]
                 [ viewSiteTitle model.page (t SiteTitle)
                 , div [ css [ searchButtonsContainerStyle ] ]
-                    [ button [ onClick LanguageChangeRequested ]
+                    [ button [ css [ headerBtnStyle ], onClick LanguageChangeRequested ]
                         [ text (t ChangeLanguage) ]
                     , case model.page of
                         Guides ->
@@ -54,8 +54,9 @@ viewSiteTitle route siteTitle =
             [ a
                 [ href "/"
                 , css
-                    [ color white
-                    , textDecoration none
+                    [ headerLinkStyle
+                    , pseudoElement "after"
+                        [ display none ]
                     ]
                 ]
                 [ text siteTitle
@@ -87,8 +88,9 @@ searchInput model =
                         List.concat [ Page.Guide.Data.teaserListFromGuideDict model.language model.content.guides, list ]
     in
     label [ css [ searchStyle ] ]
-        [ node "search-input"
-            [ property "searchResult" <| Page.GuideTeaser.guideTeaserListEncoder model.search
+        [ text (t SearchPlaceholder)
+        , node "search-input"
+            [ Html.Styled.Attributes.property "searchResult" <| Page.GuideTeaser.guideTeaserListEncoder model.search
             , attribute "search-input" <| Page.GuideTeaser.guideTeaserListString teaserList
             , on "resultChanged" <|
                 Json.Decode.map Message.SearchChanged <|
@@ -148,7 +150,7 @@ searchButtonsContainerStyle =
         , flexWrap noWrap
         , justifyContent center
         , marginTop (rem 2)
-        , marginBottom (rem 0)
+        , marginBottom (rem 0.3)
         , withMediaMobileUp
             [ margin2 (rem 2) (rem 0)
             , alignItems flexEnd
@@ -159,7 +161,48 @@ searchButtonsContainerStyle =
 headerLinkStyle : Style
 headerLinkStyle =
     batch
-        [ color white
+        [ pseudoElement "after"
+            [ backgroundImage
+                (url "images/arrow--white.svg")
+            , backgroundSize contain
+            , backgroundPosition center
+            , backgroundRepeat noRepeat
+            , display inlineBlock
+            , Css.property "content" "' '"
+            , height (em 1)
+            , width (em 1.2)
+            , marginLeft (rem 0.3)
+            ]
+        , color white
+        , marginBottom (rem 0.3)
+        , textAlign left
+        , withMediaMobileUp
+            [ textAlign right
+            ]
+        ]
+
+
+headerBtnStyle : Style
+headerBtnStyle =
+    batch
+        [ pseudoElement "after"
+            [ backgroundImage
+                (url "images/arrow--white.svg")
+            , backgroundSize contain
+            , backgroundPosition center
+            , backgroundRepeat noRepeat
+            , display inlineBlock
+            , Css.property "content" "' '"
+            , height (em 1)
+            , width (em 1.2)
+            , marginLeft (em 0.3)
+            ]
+        , color white
+        , backgroundColor teal
+        , border (px 0)
+        , fontSize (rem 1)
+        , marginBottom (rem 0.3)
+        , padding (px 0)
         , textAlign left
         , withMediaMobileUp
             [ textAlign right
@@ -170,7 +213,7 @@ headerLinkStyle =
 searchStyle : Style
 searchStyle =
     batch
-        [ color purple
+        [ color white
         , margin4 (rem 0.5) (rem 0) (rem 0.5) (rem 0.5)
         , height (rem 2)
         , position relative
