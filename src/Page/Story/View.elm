@@ -5,7 +5,7 @@ import Html.Styled.Attributes exposing (alt, css, src)
 import Message exposing (Msg)
 import Page.Shared.View
 import Page.Story.Data
-import Theme.Global exposing (centerContent, featureImageStyle, mainContainerStyles, pageColumnStyle, roundedCornerStyle, topTwoColumnsWrapperStyle)
+import Theme.Global exposing (centerContent, contentWrapper, featureImageStyle, pageColumnStyle, roundedCornerStyle, topTwoColumnsWrapperStyle)
 import Theme.Markdown exposing (markdownToHtml)
 
 
@@ -13,7 +13,7 @@ view : Page.Story.Data.Story -> Html Msg
 view story =
     div [ css [ centerContent ] ]
         [ h1 [] [ text story.title ]
-        , div [ css [ mainContainerStyles ] ]
+        , div [ css [ contentWrapper ] ]
             [ div [ css [ topTwoColumnsWrapperStyle ] ]
                 [ div [ css [ pageColumnStyle ] ]
                     [ div []

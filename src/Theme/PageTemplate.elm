@@ -1,14 +1,13 @@
 module Theme.PageTemplate exposing (view)
 
 import CookieBanner
-import Css exposing (Style, backgroundColor, batch, hidden, overflowX, pct, width)
+import Css exposing (Style, backgroundColor, batch, border3, hidden, overflowX, pct, rem, solid, width)
 import Html.Styled exposing (Html, div, main_)
 import Html.Styled.Attributes exposing (css)
-import I18n.Keys exposing (Key(..))
-import Message exposing (Msg(..))
+import Message exposing (Msg)
 import Shared exposing (Model)
 import Theme.FooterTemplate as FooterTemplate
-import Theme.Global exposing (centerContent, globalStyles, lightTeal, mainContainerStyles)
+import Theme.Global exposing (globalStyles, lightTeal, teal)
 import Theme.HeaderTemplate as HeaderTemplate
 
 
@@ -31,7 +30,14 @@ view model content =
 pageWrapperStyles : Style
 pageWrapperStyles =
     batch
-        [ backgroundColor lightTeal
-        , overflowX hidden
+        [ overflowX hidden
         , width (pct 100)
+        ]
+
+
+mainContainerStyles : Style
+mainContainerStyles =
+    batch
+        [ border3 (rem 0.5) solid teal
+        , backgroundColor lightTeal
         ]

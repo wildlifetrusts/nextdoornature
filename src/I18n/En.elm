@@ -39,9 +39,6 @@ enStrings key =
         Story404Body ->
             "[cCc] Try searching again [home](\"\\\")"
 
-        Story404Slug ->
-            "story-not-found"
-
         AncillaryPage404Title ->
             "[cCc] Sorry, we can't find that page"
 
@@ -54,9 +51,6 @@ enStrings key =
         ---
         -- Footer
         ---
-        FooterProjectInfo ->
-            "[cCc] Project Info Text"
-
         FooterTitleColumnA ->
             "[cCc] Find out more"
 

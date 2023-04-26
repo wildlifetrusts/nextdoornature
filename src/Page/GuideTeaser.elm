@@ -1,4 +1,4 @@
-module Page.GuideTeaser exposing (GuideTeaser, Image, guideTeaserEncoder, guideTeaserListEncoder, guideTeaserListString)
+module Page.GuideTeaser exposing (GuideTeaser, Image, guideTeaserListEncoder, guideTeaserListString)
 
 import Json.Encode as Encode
 

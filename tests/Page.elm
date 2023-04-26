@@ -1,7 +1,8 @@
 module Page exposing (suite)
 
 import Html
-import I18n.Keys exposing (Key(..))
+import Html.Styled
+import Message
 import Page.Data
 import Page.View
 import Test exposing (Test, describe, test)
@@ -20,6 +21,7 @@ suite =
             , fullTextMarkdown = "# Some markdown\n\nA small paragraph."
             }
 
+        view : Page.Data.Page -> Html.Styled.Html Message.Msg
         view =
             Page.View.view
     in
