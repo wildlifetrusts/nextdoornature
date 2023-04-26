@@ -145,6 +145,7 @@ globalStyles =
             , borderTopRightRadius (rem roundedCornerValue)
             , borderBottomRightRadius (rem roundedCornerValue)
             , overflow hidden
+            , width (pct 100)
             ]
         ]
 
