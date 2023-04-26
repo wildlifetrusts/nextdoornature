@@ -32,7 +32,10 @@ viewCookieBannerContent language =
     in
     div [ css [ padding4 (rem 0) (rem 1) (rem 1) (rem 1) ] ]
         [ h2 [] [ text (t CookieBannerH2) ]
-        , p [] [ text (t CookieBannerP) ]
+        , p
+            [ css [ width (vw 100) ]
+            ]
+            [ text (t CookieBannerP) ]
         , button [ css [ cookieBtnStyle ], onClick CookiesDeclined ]
             [ text (t CookieDeclineButtonText) ]
         , button [ css [ cookieBtnStyle ], onClick CookiesAccepted ]
@@ -56,7 +59,6 @@ viewCookieBannerStyles =
         , bottom (px 0)
         , Css.borderTop3 (rem 0.25) solid purple
         , position fixed
-        , width (vw 100)
         ]
 
 

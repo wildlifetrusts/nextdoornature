@@ -1,4 +1,4 @@
-module Page.Guide.Data exposing (Guide, Guides, guideDictDecoder, guideFromSlug, guideLanguageDictDecoder, teaserListFromGuideDict)
+module Page.Guide.Data exposing (Guide, Guides, guideFromSlug, guideLanguageDictDecoder, teaserListFromGuideDict)
 
 import Dict exposing (Dict)
 import I18n.Keys exposing (Key(..))

@@ -1,6 +1,6 @@
-module Theme.Global exposing (centerContent, embeddedAudioStyle, embeddedVideoStyle, featureImageStyle, globalStyles, lightTeal, mainContainerStyles, outerPadding, pageColumnBlockStyle, pageColumnStyle, purple, roundedCornerStyle, teal, teaserContainerStyle, teaserImageStyle, teaserRowStyle, teasersContainerStyle, topTwoColumnsWrapperStyle, white, withMediaMobileUp)
+module Theme.Global exposing (centerContent, embeddedAudioStyle, embeddedVideoStyle, featureImageStyle, globalStyles, lightTeal, mainContainerStyles, outerPadding, pageColumnBlockStyle, pageColumnStyle, purple, roundedCornerStyle, teal, teaserContainerStyle, teaserImageStyle, teaserRowStyle, teasersContainerStyle, topTwoColumnsWrapperStyle, white, withMediaMobileUp, withMediaTabletPortraitUp)
 
-import Css exposing (Color, Style, absolute, alignItems, auto, backgroundImage, backgroundPosition, backgroundPosition2, backgroundRepeat, backgroundSize, batch, borderBottomRightRadius, borderTopLeftRadius, borderTopRightRadius, boxSizing, center, color, column, contain, contentBox, cursor, display, displayFlex, em, ex, flex, flex3, flexDirection, flexStart, flexWrap, fontFamilies, height, hex, hidden, inlineBlock, int, justifyContent, lastChild, left, listStyle, margin, marginBottom, marginLeft, marginRight, marginTop, maxWidth, minWidth, noRepeat, noWrap, none, overflow, padding, padding2, pct, pointer, position, property, pseudoElement, px, rem, row, textDecoration, top, url, width, wrap, zero)
+import Css exposing (Color, Style, absolute, alignItems, auto, backgroundImage, backgroundPosition, backgroundRepeat, backgroundSize, batch, borderBottomRightRadius, borderTopLeftRadius, borderTopRightRadius, boxSizing, center, color, column, contain, contentBox, cover, cursor, display, displayFlex, em, ex, flex, flex3, flexDirection, flexStart, flexWrap, fontFamilies, height, hex, hidden, inlineBlock, int, justifyContent, lastChild, left, listStyle, margin, marginBottom, marginLeft, marginRight, marginTop, maxWidth, minWidth, noRepeat, noWrap, none, overflow, padding, padding2, pct, pointer, position, property, pseudoElement, px, rem, row, textDecoration, top, url, width, wrap, zero)
 import Css.Global exposing (global, typeSelector)
 import Css.Media as Media exposing (only, screen, withMedia)
 import Html.Styled exposing (Html)
@@ -84,7 +84,7 @@ lightTeal =
 
 white : Color
 white =
-    hex "FFF"
+    hex "ffffff"
 
 
 
@@ -193,7 +193,7 @@ teaserContainerStyle =
         , listStyle none
         , marginRight (rem 1.5)
         , marginBottom (rem 1.5)
-        , minWidth (px 200)
+        , minWidth (px 120)
         , width (pct 100)
         , lastChild
             [ marginBottom (rem 0)
@@ -243,9 +243,13 @@ featureImageStyle =
 teaserImageStyle : Style
 teaserImageStyle =
     batch
-        [ width (pct 100)
-        , height auto
-        , maxWidth (px (maxTabletPortrait / 3))
+        [ backgroundRepeat noRepeat
+        , backgroundPosition center
+        , backgroundSize cover
+        , maxWidth (px (maxMobile / 3))
+        , property "aspect-ratio" "1/1"
+        , property "object-fit" "cover"
+        , width (pct 100)
         ]
 
 

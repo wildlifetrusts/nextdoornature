@@ -1,8 +1,8 @@
 module Theme.HeaderTemplate exposing (view)
 
-import Css exposing (FontWeight, Style, alignItems, auto, backgroundColor, backgroundImage, backgroundPosition, backgroundPosition2, backgroundRepeat, backgroundSize, baseline, batch, border, center, color, column, contain, display, displayFlex, em, flexDirection, flexEnd, flexStart, flexWrap, fontFamilies, fontSize, fontWeight, height, inlineBlock, int, justifyContent, left, lineHeight, margin, margin2, marginBottom, marginLeft, marginRight, marginTop, maxWidth, noRepeat, noWrap, none, normal, padding, pct, property, pseudoElement, px, rem, right, row, spaceBetween, textAlign, textDecoration, url, width, zero)
-import Html.Styled exposing (Html, a, button, div, h1, header, input, label, node, text)
-import Html.Styled.Attributes exposing (attribute, css, href, id, placeholder, property, type_)
+import Css exposing (FontWeight, Style, absolute, alignItems, auto, backgroundColor, backgroundImage, backgroundPosition, backgroundPosition2, backgroundRepeat, backgroundSize, baseline, batch, border, border3, borderRadius, bottom, boxShadow, center, color, column, contain, display, displayFlex, em, flexDirection, flexEnd, flexStart, flexWrap, focus, fontFamilies, fontSize, fontWeight, height, inlineBlock, int, justifyContent, left, lineHeight, margin, margin2, margin4, marginBottom, marginLeft, marginRight, marginTop, maxWidth, minWidth, noRepeat, noWrap, none, normal, outline, padding, padding4, pct, position, property, pseudoElement, px, relative, rem, right, row, solid, spaceBetween, textAlign, textDecoration, top, url, width, zero)
+import Html.Styled exposing (Html, a, button, div, h1, header, img, input, label, node, text)
+import Html.Styled.Attributes exposing (attribute, css, href, id, placeholder, property, src, type_)
 import Html.Styled.Events exposing (on, onClick)
 import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (Language(..), translate)
@@ -14,7 +14,7 @@ import Page.GuideTeaser
 import Page.Shared.View
 import Route exposing (Route(..))
 import Shared exposing (Model, Request(..))
-import Theme.Global exposing (centerContent, outerPadding, teal, white, withMediaMobileUp)
+import Theme.Global exposing (centerContent, outerPadding, purple, teal, white, withMediaMobileUp)
 
 
 view : Model -> Html Msg
@@ -44,7 +44,7 @@ view model =
 viewSiteTitle : Route -> String -> Html Msg
 viewSiteTitle route siteTitle =
     if route == Index then
-        h1 [ css [ headerBrandStyle, headerTitleStyle ] ] [ text siteTitle ]
+        h1 [ css [ headerBrandStyle, headerTitleStyle, fixHeaderStyle ] ] [ text siteTitle ]
 
     else
         div [ css [ headerBrandStyle, headerTitleStyle ] ]
@@ -83,7 +83,7 @@ searchInput model =
                     Success list ->
                         List.concat [ Page.Guide.Data.teaserListFromGuideDict model.language model.content.guides, list ]
     in
-    label []
+    label [ css [ searchStyle ] ]
         [ text (t SearchPlaceholder)
         , node "search-input"
             [ Html.Styled.Attributes.property "searchResult" <| Page.GuideTeaser.guideTeaserListEncoder model.search
@@ -93,7 +93,8 @@ searchInput model =
                     Json.Decode.at [ "target", "searchResult" ] <|
                         Json.Decode.list Page.Shared.View.internalGuideTeaserDecoder
             ]
-            [ input [ id "search", type_ "text", placeholder (t SearchPlaceholder) ] [] ]
+            [ input [ id "search", type_ "text", placeholder (t SearchPlaceholder), css [ searchInputStyle ] ] [] ]
+        , img [ css [ arrowStyle ], src "/images/arrow-right-purple.svg", Html.Styled.Attributes.attribute "aria-hidden" "true" ] []
         ]
 
 
@@ -209,4 +210,52 @@ headerTitleStyle =
         , maxWidth (px 336)
         , withMediaMobileUp
             [ marginRight (rem 3) ]
+        ]
+
+
+searchStyle : Style
+searchStyle =
+    batch
+        [ color white
+        , margin4 (rem 0.5) (rem 0) (rem 0.5) (rem 0.5)
+        , height (rem 2)
+        , position relative
+        ]
+
+
+arrowStyle : Style
+arrowStyle =
+    batch
+        [ bottom (px 0)
+        , height (rem 1)
+        , padding (rem 0.75)
+        , position absolute
+        , right (px 0)
+        , top (px 0)
+        ]
+
+
+searchInputStyle : Style
+searchInputStyle =
+    batch
+        [ borderRadius (rem 1.5)
+        , border3 (px 3) solid purple
+        , boxShadow none
+        , height (rem 1)
+        , minWidth (px 240)
+        , padding4 (rem 0.5) (rem 2) (rem 0.5) (rem 1)
+        , focus
+            [ outline none
+            ]
+        , pseudoElement "placeholder"
+            [ color purple
+            , fontWeight (int 700)
+            ]
+        ]
+
+
+fixHeaderStyle : Style
+fixHeaderStyle =
+    batch
+        [ fontWeight normal
         ]
