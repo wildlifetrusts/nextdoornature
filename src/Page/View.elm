@@ -12,5 +12,5 @@ view : Page.Data.Page -> Html Msg
 view page =
     div [ css [ centerContent ] ]
         [ h1 [] [ text page.title ]
-        , div [ css [] ] (markdownToHtml page.fullTextMarkdown)
+        , div [ ] (markdownToHtml page.fullTextMarkdown)
         ]
