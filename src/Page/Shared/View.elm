@@ -1,6 +1,6 @@
 module Page.Shared.View exposing (AudioMeta, StoryTeaser, VideoMeta, actionTeaserDecoder, actionTeaserListDecoder, audioDecoder, defaultTeaserImg, guideTeaserDecoder, imageDecoder, interalGuideTeaserListDecoder, internalGuideTeaserDecoder, storyTeaserDecoder, videoDecoder, viewAudio, viewGuideTeaserList, viewStoryTeasers, viewVideo)
 
-import Css exposing (Style, batch, center, column, displayFlex, flexDirection, flexWrap, height, justifyContent, maxWidth, px, wrap)
+import Css exposing (Style, absolute, batch, center, column, displayFlex, flexDirection, flexWrap, height, justifyContent, left, maxWidth, paddingBottom, pct, position, px, relative, top, width, wrap, zero)
 import Html.Styled exposing (Html, a, div, iframe, img, li, p, text, ul)
 import Html.Styled.Attributes exposing (alt, attribute, autoplay, css, href, src, title)
 import Json.Decode exposing (Decoder)
@@ -102,14 +102,14 @@ actionTeaserListDecoder =
 
 viewVideo : VideoMeta -> Html Msg
 viewVideo videoMeta =
-    div []
+    div [ css [ videoContainerStyle ] ]
         [ iframe
             [ src videoMeta.src
             , attribute "frameborder" "0"
             , attribute "allowfullscreen" "true"
             , autoplay False
             , title videoMeta.title
-            , css [ Theme.Global.embeddedVideoStyle ]
+            , css [ Theme.Global.embeddedVideoStyle, videoFixStyle ]
             ]
             []
         ]
@@ -240,4 +240,24 @@ storyteaserContainerStyle =
         , flexDirection column
         , height (px 150)
         , maxWidth (px 150)
+        ]
+
+
+videoFixStyle : Style
+videoFixStyle =
+    batch
+        [ height (pct 100)
+        , left zero
+        , top zero
+        , position absolute
+        , width (pct 100)
+        ]
+
+
+videoContainerStyle : Style
+videoContainerStyle =
+    batch
+        [ paddingBottom (pct 56.25)
+        , position relative
+        , width (pct 100)
         ]
