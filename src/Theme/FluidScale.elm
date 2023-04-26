@@ -1,4 +1,4 @@
-module Theme.FluidScale exposing (fontSize0, fontSize1, fontSize2, fontSize3, fontSize4, fontSize5, fontSizeMinus1, fontSizeMinus2)
+module Theme.FluidScale exposing (fontSize0, fontSize1, fontSize2, fontSize3, fontSize4, fontSize5, fontSizeMinus1, fontSizeMinus2, logoContainer)
 
 import Css exposing (Style, property)
 
@@ -93,3 +93,8 @@ fontSize4 =
 fontSize5 : Style
 fontSize5 =
     property "font-size" "clamp(2.49rem, calc(2.03rem + 2.31vw), 3.82rem)"
+
+
+logoContainer : Style
+logoContainer =
+    property "max-width" "clamp(16rem, 60vw, 21rem)"

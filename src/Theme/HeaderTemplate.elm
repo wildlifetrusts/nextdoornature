@@ -104,12 +104,12 @@ headerBrandStyle : Style
 headerBrandStyle =
     batch
         [ Theme.FluidScale.fontSize5
+        , Theme.FluidScale.logoContainer
         , color white
         , fontFamilies [ "Ludicrous" ]
         , fontWeight normal
         , lineHeight (em 1.2)
         , margin zero
-        , maxWidth (px 336)
         , withMediaMobileUp
             [ marginRight (rem 3) ]
         ]
