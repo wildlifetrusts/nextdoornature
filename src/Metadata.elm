@@ -3,6 +3,7 @@ port module Metadata exposing (metadataFromPage, setMetadata)
 import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (Language(..), translate)
 import Route exposing (Route(..))
+import Shared exposing (Content)
 
 
 type alias PageMetadata =
@@ -11,8 +12,8 @@ type alias PageMetadata =
     }
 
 
-metadataFromPage : Route -> Language -> PageMetadata
-metadataFromPage page language =
+metadataFromPage : Route -> Language -> Content -> PageMetadata
+metadataFromPage page language content =
     let
         t : Key -> String
         t =
@@ -43,6 +44,16 @@ metadataFromPage page language =
             { title = subPageTitle language slug
             , description = slug
             }
+
+
+metadataFromSlug : ( Route, String ) -> PageMetadata
+metadataFromSlug ( page, slug ) =
+    --case Dict.get slug pages of
+    --     Just aPage ->
+    --         aPage.title
+    --        Nothing ->
+    --        ""
+    { title = slug, description = slug }
 
 
 subPageTitle : Language -> String -> String

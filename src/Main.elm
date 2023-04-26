@@ -22,7 +22,7 @@ import Page.Story.Data
 import Page.Story.View
 import Page.View
 import Route exposing (Route(..))
-import Shared exposing (CookieState, Model, Request(..))
+import Shared exposing (Content, CookieState, Model, Request(..))
 import Theme.PageTemplate
 import Url
 
@@ -67,6 +67,10 @@ init flags url key =
         page : Route
         page =
             Maybe.withDefault Index maybeRoute
+
+        content : Content
+        content =
+            Page.Shared.Data.contentDictDecoder flags
     in
     ( { key = key
       , page = page
@@ -74,13 +78,13 @@ init flags url key =
             { enableAnalytics = hasConsented
             , cookieBannerIsOpen = showCookieBanner
             }
-      , content = Page.Shared.Data.contentDictDecoder flags
+      , content = content
       , language = English
       , search = []
       , externalActions = Loading
       }
     , Cmd.batch
-        [ Metadata.setMetadata (Metadata.metadataFromPage page English)
+        [ Metadata.setMetadata (Metadata.metadataFromPage page English content)
         , getActions
         ]
     )
@@ -121,7 +125,7 @@ update msg model =
                     Maybe.withDefault Index (Route.fromUrl url)
             in
             ( { model | page = newRoute }
-            , Metadata.setMetadata (Metadata.metadataFromPage newRoute model.language)
+            , Metadata.setMetadata (Metadata.metadataFromPage newRoute model.language model.content)
             )
 
         LinkClicked urlRequest ->
@@ -148,7 +152,7 @@ update msg model =
             in
             ( { model | language = newLanguage }
             , Cmd.batch
-                [ Metadata.setMetadata (Metadata.metadataFromPage model.page newLanguage)
+                [ Metadata.setMetadata (Metadata.metadataFromPage model.page newLanguage model.content)
                 , GoogleAnalytics.updateAnalytics model.cookieState.enableAnalytics
                     (GoogleAnalytics.updateAnalyticsEvent
                         { category = Route.toString model.page
