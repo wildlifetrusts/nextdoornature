@@ -163,7 +163,7 @@ headerLinkStyle =
     batch
         [ pseudoElement "after"
             [ backgroundImage
-                (url "images/arrow--white.svg")
+                (url "/images/arrow--white.svg")
             , backgroundSize contain
             , backgroundPosition center
             , backgroundRepeat noRepeat
@@ -187,7 +187,7 @@ headerBtnStyle =
     batch
         [ pseudoElement "after"
             [ backgroundImage
-                (url "images/arrow--white.svg")
+                (url "/images/arrow--white.svg")
             , backgroundSize contain
             , backgroundPosition center
             , backgroundRepeat noRepeat
