@@ -55,9 +55,27 @@ collections:
         widget: "object"
         i18n: true
         fields:
-          - { label: "Image", name: "src", widget: "image", required: false, i18n: true }
-          - { label: "Alt text", name: "alt", widget: "string", required: false, i18n: true }
-          - { label: "Photo credit", name: "credit", widget: "string", required: false, i18n: true }
+          - {
+              label: "Image",
+              name: "src",
+              widget: "image",
+              required: false,
+              i18n: true,
+            }
+          - {
+              label: "Alt text",
+              name: "alt",
+              widget: "string",
+              required: false,
+              i18n: true,
+            }
+          - {
+              label: "Photo credit",
+              name: "credit",
+              widget: "string",
+              required: false,
+              i18n: true,
+            }
       - label: "Video"
         name: "video"
         widget: "object"
