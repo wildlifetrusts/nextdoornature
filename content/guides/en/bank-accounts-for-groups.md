@@ -1,18 +1,19 @@
 ---
 title: Bank Accounts for Groups
+summary: A guide about setting up a bank account for your group
 video:
-  title: "Nextdoor Nature - Community in Jaywick"
+  title: Nextdoor Nature - Community in Jaywick
   src: https://www.youtube.com/embed/Htp5yWAsE2M
 relatedGuides:
-  - title: "Types of Community Group"
-    slug: types-of-community-group
+  - Types of community group (England and Wales)
+  - "[cCc] Test guide"
 relatedStories:
   - title: "[cCc] Dummy story"
-    slug: "story-slug"
+    slug: story-slug
     image:
-      src: "/images/wildlife-trust-logo.png"
-      alt: "Wildlife Trusts logo"
-    description: "A short description of my story"
+      src: /images/wildlife-trust-logo.png
+      alt: Wildlife Trusts logo
+    description: A short description of my story
 ---
 
 [cCc] You’ll need a bank account if your group’s applying for grants. You’ll also need one if you collect donations or fees and use that money to buy things for your project. Don’t be tempted to use a personal account! It gets very messy very quickly.
