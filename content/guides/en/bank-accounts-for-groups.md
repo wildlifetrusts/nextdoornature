@@ -2,8 +2,8 @@
 title: Bank Accounts for Groups
 summary: A guide about setting up a bank account for your group
 video:
-  title: ""
-  src: ""
+  title: Jaywick project
+  src: https://www.youtube.com/embed/Htp5yWAsE2M
 relatedGuides:
   - Types of community group (England and Wales)
 relatedStories:
