@@ -18,9 +18,25 @@ collections:
     i18n: true
     fields: # The fields for each document
       - { label: "Title", name: "title", widget: "string", i18n: true }
-      - { label: "Who the story is about", name: "who", widget: "string", i18n: true }
-      - { label: "Where it took place", name: "location", widget: "string", i18n: true }
-      - { label: "Postcode (not displayed)", name: "postcode", required: false, widget: "string", i18n: true }
+      - {
+          label: "Who the story is about",
+          name: "who",
+          widget: "string",
+          i18n: true,
+        }
+      - {
+          label: "Where it took place",
+          name: "location",
+          widget: "string",
+          i18n: true,
+        }
+      - {
+          label: "Postcode (not displayed)",
+          name: "postcode",
+          required: false,
+          widget: "string",
+          i18n: true,
+        }
       - label: "Images"
         name: "images"
         widget: "list"
@@ -28,8 +44,20 @@ collections:
         fields:
           - { label: "Image", name: "src", widget: "image", i18n: true }
           - { label: "Alt text", name: "alt", widget: "string", i18n: true }
-          - { label: "Photo credit", name: "credit", widget: "string", required: false, i18n: true }
-          - { label: "Caption", name: "caption", widget: "string", required: false, i18n: true }
+          - {
+              label: "Photo credit",
+              name: "credit",
+              widget: "string",
+              required: false,
+              i18n: true,
+            }
+          - {
+              label: "Caption",
+              name: "caption",
+              widget: "string",
+              required: false,
+              i18n: true,
+            }
       - {
           label: "Summary",
           name: "summary",
