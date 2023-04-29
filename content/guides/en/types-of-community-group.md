@@ -3,7 +3,7 @@ title: Types of community group (England and Wales)
 summary: A guide that explains different structures for officially recognised
   community groups in England and Wales.
 image:
-  src: /images/wildlife-trust-logo.png
+  src: /public/images/uploads/tree.jpg
   alt: "[cCc] some alt text"
 relatedGuides: []
 relatedStories:
