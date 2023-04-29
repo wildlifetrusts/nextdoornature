@@ -214,7 +214,7 @@ view model =
                 guide =
                     Page.Guide.Data.guideFromSlug model.language model.content.guides slug
             in
-            Theme.PageTemplate.view model (Page.Guide.View.view guide)
+            Theme.PageTemplate.view model (Page.Guide.View.view model.language guide (Page.Guide.Data.allGuidesSlugTitleList model.content.guides))
 
         Guides ->
             Theme.PageTemplate.view model (Page.Guides.view model)

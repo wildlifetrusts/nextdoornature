@@ -1,4 +1,4 @@
-module Page.Guide.Data exposing (Guide, Guides, guideFromSlug, guideLanguageDictDecoder, teaserListFromGuideDict)
+module Page.Guide.Data exposing (Guide, GuideListItem, Guides, allGuidesSlugTitleList, guideFromSlug, guideLanguageDictDecoder, teaserListFromGuideDict)
 
 import Dict exposing (Dict)
 import I18n.Keys exposing (Key(..))
@@ -21,9 +21,13 @@ type alias Guide =
     , maybeImage : Maybe Page.GuideTeaser.Image
     , maybeVideo : Maybe Page.Shared.View.VideoMeta
     , maybeAudio : Maybe Page.Shared.View.AudioMeta
-    , relatedStoryList : List Page.Shared.View.StoryTeaser
-    , relatedGuideList : List Page.GuideTeaser.GuideTeaser
+    , relatedStoryList : List String
+    , relatedGuideList : List String
     }
+
+
+type alias GuideListItem =
+    { slug : String, title : String }
 
 
 blankGuide : Language -> Guide
@@ -65,12 +69,12 @@ guideDictDecoder =
                 (Json.Decode.maybe (Json.Decode.field "audio" Page.Shared.View.audioDecoder))
             |> Json.Decode.Extra.andMap
                 (Json.Decode.field "relatedStories"
-                    (Json.Decode.list Page.Shared.View.storyTeaserDecoder)
+                    (Json.Decode.list Json.Decode.string)
                     |> Json.Decode.Extra.withDefault []
                 )
             |> Json.Decode.Extra.andMap
                 (Json.Decode.field "relatedGuides"
-                    (Json.Decode.list Page.Shared.View.guideTeaserDecoder)
+                    (Json.Decode.list Json.Decode.string)
                     |> Json.Decode.Extra.withDefault []
                 )
         )
@@ -116,6 +120,13 @@ guideFromSlug language guides slug =
 
                 Nothing ->
                     blankGuide language
+
+
+allGuidesSlugTitleList : Guides -> List GuideListItem
+allGuidesSlugTitleList guides =
+    Dict.union guides.en guides.cy
+        |> Dict.toList
+        |> List.map (\( _, guide ) -> { slug = guide.slug, title = guide.title })
 
 
 slugToUrl : String -> String
