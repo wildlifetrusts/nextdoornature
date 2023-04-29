@@ -13,6 +13,7 @@ relatedGuides:
 relatedStories:
   - Test story with minimal fields
 ---
+
 ## Test guide with lots of info
 
 [cCc] for placeholder copy sweep

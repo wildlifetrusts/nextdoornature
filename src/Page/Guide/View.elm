@@ -1,6 +1,6 @@
 module Page.Guide.View exposing (view)
 
-import Css exposing (Style, batch, fontFamilies)
+import Css exposing (Style, batch, fontFamilies, listStyle, none, paddingLeft, zero)
 import Html.Styled exposing (Html, a, div, h1, h2, li, text, ul)
 import Html.Styled.Attributes exposing (css, href)
 import I18n.Keys exposing (Key(..))
@@ -80,7 +80,7 @@ viewRelatedGuideTeasers language guideTitleList allGuidesSlugTitleList =
     if List.length relatedGuideItems > 0 then
         div []
             [ h2 [] [ text (t RelatedGuidesHeading) ]
-            , ul []
+            , ul [ css [ listStyleNone ] ]
                 (List.map
                     (\{ title, slug } ->
                         li [] [ a [ href slug ] [ text title ] ]
@@ -116,3 +116,11 @@ guideTitleStyle =
 guideSummaryStyle : Style
 guideSummaryStyle =
     fontSize1
+
+
+listStyleNone : Style
+listStyleNone =
+    batch
+        [ listStyle none
+        , paddingLeft zero
+        ]

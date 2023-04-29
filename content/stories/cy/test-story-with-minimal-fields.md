@@ -7,9 +7,10 @@ images: null
 summary: Dyma gynnwys straeon prawf, a gynhyrchir i boblogi'r safle cyn i
   gynnwys go iawn fynd i mewn.
 ---
-## Fy stori 
 
-Stori brawf yn llawn ysbrydoliaeth. 
+## Fy stori
+
+Stori brawf yn llawn ysbrydoliaeth.
 
 [cCc] Marked felly rydyn ni'n dal mewn ysgub.
 
