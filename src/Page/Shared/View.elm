@@ -1,6 +1,5 @@
-module Page.Shared.View exposing (AudioMeta, StoryTeaser, VideoMeta, actionTeaserDecoder, actionTeaserListDecoder, audioDecoder, defaultTeaserImg, guideTeaserDecoder, imageDecoder, interalGuideTeaserListDecoder, internalGuideTeaserDecoder, storyTeaserDecoder, videoDecoder, viewAudio, viewGuideTeaserList, viewStoryTeasers, viewVideo)
+module Page.Shared.View exposing (AudioMeta, VideoMeta, actionTeaserDecoder, actionTeaserListDecoder, audioDecoder, defaultTeaserImg, guideTeaserDecoder, imageDecoder, interalGuideTeaserListDecoder, internalGuideTeaserDecoder, videoDecoder, viewAudio, viewGuideTeaserList, viewVideo)
 
-import Css exposing (Style, batch, center, column, displayFlex, flexDirection, flexWrap, height, justifyContent, maxWidth, px, wrap)
 import Html.Styled exposing (Html, a, div, iframe, img, li, p, text, ul)
 import Html.Styled.Attributes exposing (alt, attribute, autoplay, css, href, src, title)
 import Json.Decode exposing (Decoder)
@@ -35,23 +34,6 @@ videoDecoder =
     Json.Decode.map2 VideoMeta
         (Json.Decode.field "title" Json.Decode.string)
         (Json.Decode.field "src" Json.Decode.string)
-
-
-type alias StoryTeaser =
-    { title : String
-    , slug : String
-    , image : Page.GuideTeaser.Image
-    , description : String
-    }
-
-
-storyTeaserDecoder : Json.Decode.Decoder StoryTeaser
-storyTeaserDecoder =
-    Json.Decode.map4 StoryTeaser
-        (Json.Decode.field "title" Json.Decode.string)
-        (Json.Decode.field "slug" Json.Decode.string)
-        (Json.Decode.field "image" imageDecoder)
-        (Json.Decode.field "description" Json.Decode.string)
 
 
 imageDecoder : Decoder Page.GuideTeaser.Image
@@ -192,52 +174,3 @@ viewGuideTeaserList teasers =
 
     else
         text ""
-
-
-viewStoryTeasers : List StoryTeaser -> Html Msg
-viewStoryTeasers teasers =
-    if List.length teasers > 0 then
-        div [ css [ viewStoryTeasersStyle ] ]
-            (teasers
-                |> sortBy .title
-                |> map
-                    (\{ description, image, slug, title } ->
-                        div [ css [ storyteaserContainerStyle ] ]
-                            [ img
-                                [ alt image.alt
-                                , src image.src
-                                , css
-                                    [ roundedCornerStyle
-                                    , teaserImageStyle
-                                    ]
-                                ]
-                                []
-                            , a [ href ("/stories/" ++ slug) ] [ text title ]
-                            , p [] [ text description ]
-                            ]
-                    )
-            )
-
-    else
-        text ""
-
-
-viewStoryTeasersStyle : Style
-viewStoryTeasersStyle =
-    batch
-        [ justifyContent center
-        , displayFlex
-        , flexWrap wrap
-        , maxWidth (px 400)
-        ]
-
-
-storyteaserContainerStyle : Style
-storyteaserContainerStyle =
-    batch
-        [ justifyContent center
-        , displayFlex
-        , flexDirection column
-        , height (px 150)
-        , maxWidth (px 150)
-        ]

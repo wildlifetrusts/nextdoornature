@@ -1,21 +1,22 @@
 module Page.Guide.View exposing (view)
 
-import Css exposing (Style, batch, fontFamilies, listStyle, none, paddingLeft, zero)
-import Html.Styled exposing (Html, a, div, h1, h2, li, text, ul)
-import Html.Styled.Attributes exposing (css, href)
+import Css exposing (Style, batch, center, column, displayFlex, flexDirection, flexWrap, fontFamilies, height, justifyContent, listStyle, maxWidth, none, paddingLeft, px, wrap, zero)
+import Html.Styled exposing (Html, a, div, h1, h2, img, li, text, ul)
+import Html.Styled.Attributes exposing (alt, css, href, src)
 import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (Language, translate)
+import List
 import Message exposing (Msg)
 import Page.Guide.Data
-import Page.GuideTeaser
 import Page.Shared.View
+import Page.Story.Data
 import Theme.FluidScale exposing (fontSize1)
-import Theme.Global exposing (centerContent, contentWrapper, pageColumnBlockStyle, pageColumnStyle, topTwoColumnsWrapperStyle)
+import Theme.Global exposing (centerContent, contentWrapper, pageColumnBlockStyle, pageColumnStyle, roundedCornerStyle, teaserImageStyle, topTwoColumnsWrapperStyle)
 import Theme.Markdown exposing (markdownToHtml)
 
 
-view : Language -> Page.Guide.Data.Guide -> List Page.Guide.Data.GuideListItem -> Html Msg
-view language guide allGudes =
+view : Language -> Page.Guide.Data.Guide -> List Page.Guide.Data.GuideListItem -> List Page.Story.Data.StoryTeaser -> Html Msg
+view language guide allGudes allStories =
     div [ css [ centerContent ] ]
         [ h1 [ css [ guideTitleStyle ] ] [ text guide.title ]
         , div [ css [ contentWrapper ] ]
@@ -31,7 +32,7 @@ view language guide allGudes =
                     ]
                 ]
             , div [ css [ pageColumnStyle ] ]
-                [ viewRelatedStoryTeasers guide.relatedStoryList
+                [ viewRelatedStoryTeasers language guide.relatedStoryList allStories
                 ]
             ]
         ]
@@ -64,7 +65,7 @@ viewMaybeAudio maybeAudioMeta =
 viewRelatedGuideTeasers :
     Language
     -> List String
-    -> List { title : String, slug : String }
+    -> List Page.Guide.Data.GuideListItem
     -> Html Msg
 viewRelatedGuideTeasers language guideTitleList allGuidesSlugTitleList =
     let
@@ -93,19 +94,66 @@ viewRelatedGuideTeasers language guideTitleList allGuidesSlugTitleList =
         text ""
 
 
-viewRelatedStoryTeasers : List String -> Html Msg
-viewRelatedStoryTeasers storyTitleList =
-    if List.length storyTitleList > 0 then
-        ul []
-            (List.map
-                (\title ->
-                    li [] [ a [ href "" ] [ text title ] ]
-                )
-                storyTitleList
+viewRelatedStoryTeasers :
+    Language
+    -> List String
+    -> List Page.Story.Data.StoryTeaser
+    -> Html Msg
+viewRelatedStoryTeasers language storyTitleList teasers =
+    if List.length teasers > 0 then
+        div [ css [ viewStoryTeasersStyle ] ]
+            (teasers
+                |> List.sortBy .title
+                |> List.map
+                    (\{ maybeImage, slug, title } ->
+                        div [ css [ storyteaserContainerStyle ] ]
+                            [ viewStoryImage maybeImage
+                            , a [ href ("/stories/" ++ slug) ] [ text title ]
+                            ]
+                    )
             )
 
     else
         text ""
+
+
+viewStoryTeasersStyle : Style
+viewStoryTeasersStyle =
+    batch
+        [ justifyContent center
+        , displayFlex
+        , flexWrap wrap
+        , maxWidth (px 400)
+        ]
+
+
+viewStoryImage : Maybe Page.Story.Data.Image -> Html Msg
+viewStoryImage maybeImage =
+    case maybeImage of
+        Just image ->
+            img
+                [ alt image.alt
+                , src image.src
+                , css
+                    [ roundedCornerStyle
+                    , teaserImageStyle
+                    ]
+                ]
+                []
+
+        Nothing ->
+            text "TODO default image HERE [cCc]"
+
+
+storyteaserContainerStyle : Style
+storyteaserContainerStyle =
+    batch
+        [ justifyContent center
+        , displayFlex
+        , flexDirection column
+        , height (px 150)
+        , maxWidth (px 150)
+        ]
 
 
 guideTitleStyle : Style

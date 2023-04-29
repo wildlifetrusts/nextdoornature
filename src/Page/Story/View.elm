@@ -30,14 +30,7 @@ view story =
                             Nothing ->
                                 text ""
                         ]
-                    , div []
-                        (case story.maybeImages of
-                            Just images ->
-                                List.map (\image -> img [ src image.src, alt image.alt, css [ roundedCornerStyle, featureImageStyle ] ] []) images
-
-                            Nothing ->
-                                [ text "" ]
-                        )
+                    , div [] (viewImages story.images)
                     ]
                 , div [ css [ pageColumnStyle ] ]
                     (markdownToHtml story.fullTextMarkdown)
@@ -45,6 +38,13 @@ view story =
             , viewColumnWrapper (Page.Shared.View.viewGuideTeaserList story.relatedGuideList)
             ]
         ]
+
+
+viewImages : List Page.Story.Data.Image -> List (Html Msg)
+viewImages imageList =
+    List.map
+        (\image -> img [ src image.src, alt image.alt, css [ roundedCornerStyle, featureImageStyle ] ] [])
+        imageList
 
 
 viewColumnWrapper : Html Msg -> Html Msg

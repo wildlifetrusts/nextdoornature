@@ -1,12 +1,16 @@
-module Page.Story.Data exposing (Story, storyDictDecoder, storyFromSlug)
+module Page.Story.Data exposing (Image, Stories, Story, StoryTeaser, allStoryTeaserList, storyFromSlug, storyLanguageDictDecoder)
 
 import Dict exposing (Dict)
 import I18n.Keys exposing (Key(..))
-import I18n.Translate exposing (Language, translate)
+import I18n.Translate exposing (Language(..), translate)
 import Json.Decode
 import Json.Decode.Extra
 import Page.GuideTeaser
 import Page.Shared.View
+
+
+type alias Stories =
+    { cy : Dict String Story, en : Dict String Story }
 
 
 type alias Story =
@@ -14,9 +18,15 @@ type alias Story =
     , slug : String
     , maybeLocation : Maybe String
     , maybeGroupOrIndividual : Maybe String
-    , maybeImages : Maybe (List Page.GuideTeaser.Image)
+    , images : List Image
     , fullTextMarkdown : String
     , relatedGuideList : List Page.GuideTeaser.GuideTeaser
+    }
+
+
+type alias Image =
+    { alt : String
+    , src : String
     }
 
 
@@ -32,8 +42,15 @@ blankStory language =
     , fullTextMarkdown = t Story404Body
     , maybeLocation = Nothing
     , maybeGroupOrIndividual = Nothing
-    , maybeImages = Nothing
+    , images = []
     , relatedGuideList = []
+    }
+
+
+type alias StoryTeaser =
+    { title : String
+    , slug : String
+    , maybeImage : Maybe Image
     }
 
 
@@ -50,7 +67,7 @@ storyDictDecoder =
             |> Json.Decode.Extra.andMap
                 (Json.Decode.maybe (Json.Decode.field "groupOrIndividual" Json.Decode.string |> Json.Decode.Extra.withDefault ""))
             |> Json.Decode.Extra.andMap
-                (Json.Decode.maybe (Json.Decode.field "images" (Json.Decode.list Page.Shared.View.imageDecoder)))
+                (Json.Decode.field "images" (Json.Decode.list imageDecoder))
             |> Json.Decode.Extra.andMap
                 (Json.Decode.field "content" Json.Decode.string |> Json.Decode.Extra.withDefault "")
             |> Json.Decode.Extra.andMap
@@ -61,11 +78,42 @@ storyDictDecoder =
         )
 
 
-storyFromSlug : Language -> Dict String Story -> String -> Story
+imageDecoder : Json.Decode.Decoder Image
+imageDecoder =
+    Json.Decode.map2 Image
+        (Json.Decode.field "alt" Json.Decode.string)
+        (Json.Decode.field "src" Json.Decode.string)
+
+
+storyLanguageDictDecoder : Json.Decode.Decoder Stories
+storyLanguageDictDecoder =
+    Json.Decode.map2 Stories
+        (Json.Decode.field "cy" storyDictDecoder)
+        (Json.Decode.field "en" storyDictDecoder)
+
+
+storiesFromLanguage : Language -> Stories -> Dict String Story
+storiesFromLanguage language stories =
+    case language of
+        English ->
+            stories.en
+
+        Welsh ->
+            stories.cy
+
+
+storyFromSlug : Language -> Stories -> String -> Story
 storyFromSlug language stories slug =
-    case Dict.get slug stories of
+    case Dict.get slug (storiesFromLanguage language stories) of
         Just aStory ->
             aStory
 
         Nothing ->
             blankStory language
+
+
+allStoryTeaserList : Stories -> List StoryTeaser
+allStoryTeaserList stories =
+    Dict.union stories.en stories.cy
+        |> Dict.toList
+        |> List.map (\( _, story ) -> { slug = story.slug, title = story.title, maybeImage = List.head story.images })
