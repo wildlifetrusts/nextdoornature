@@ -1,26 +1,19 @@
 ---
-title: Types of community group
+title: Types of community group (England and Wales)
+summary: A guide that explains different structures for officially recognised
+  community groups in England and Wales.
 image:
-  src: "/images/wildlife-trust-logo.png"
+  src: /images/wildlife-trust-logo.png
   alt: "[cCc] some alt text"
-summary: |-
-  If you’re just a small group of volunteers, with no plans to employ staff or rent premises, this is the one for you.
-
-  It’s the easiest group to set up. All you need is to write a **constitution** or **governing document**. This is a list of rules for the group. It also says what your group’s going to do, and how it’s going to do it.
-relatedGuides:
-  - title: "Types of Community Group"
-    slug: types-of-community-group
+relatedGuides: []
 relatedStories:
   - title: "[cCc] Dummy story"
-    slug: "story-slug"
+    slug: story-slug
     image:
-      src: "/images/wildlife-trust-logo.png"
-      alt: "Wildlife Trusts logo"
-    description: "A short description of my story"
+      src: /images/wildlife-trust-logo.png
+      alt: Wildlife Trusts logo
+    description: A short description of my story
 ---
-
-## [cCc] Types of Community Group (England and Wales)
-
 ### An Unincorporated Association
 
 If you’re just a small group of volunteers, with no plans to employ staff or rent premises, this is the one
@@ -31,10 +24,10 @@ is a list of rules for the group. It also says what your group’s going to do, 
 
 #### This kind of group:
 
-- doesn’t have to be a charity (although you can set up a charity if you want to). You will need to get official advice if you want to be a charity.
-- isn’t a separate legal structure. This means the group can’t take on a contract or own property - but individual members can do.
-- has members who vote on what the group should do.
-- the group can become a different type of group or a charity later.
+* doesn’t have to be a charity (although you can set up a charity if you want to). You will need to get official advice if you want to be a charity.
+* isn’t a separate legal structure. This means the group can’t take on a contract or own property - but individual members can do.
+* has members who vote on what the group should do.
+* the group can become a different type of group or a charity later.
   See our separate document about “Setting up a Community Group” for information about unincorporated associations.
 
 ### Incorporated and Unincorporated
@@ -43,8 +36,8 @@ The difference between these two things is just whether your group has a separat
 
 #### Examples of incorporated groups:
 
-- Community Interest Company (CIC)
-- Company Limited by Guarantee
-- Charitable Incorporated Organisation
-- Community Benefit Society
-- Cooperative Society
+* Community Interest Company (CIC)
+* Company Limited by Guarantee
+* Charitable Incorporated Organisation
+* Community Benefit Society
+* Cooperative Society
