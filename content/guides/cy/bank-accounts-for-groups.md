@@ -4,8 +4,8 @@ video:
   title: Nextdoor Nature - Community in Jaywick
   src: https://www.youtube.com/embed/Htp5yWAsE2M
 relatedGuides:
-  - title: Types of Community Group
-    slug: types-of-community-group
+  - Bank Accounts for Groups
+  - Types of community group
 relatedStories:
   - title: "[cCc] Dummy story"
     slug: story-slug
