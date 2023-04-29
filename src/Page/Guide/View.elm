@@ -7,6 +7,7 @@ import Message exposing (Msg)
 import Page.Guide.Data
 import Page.GuideTeaser
 import Page.Shared.View
+import Theme.FluidScale exposing (fontSize1)
 import Theme.Global exposing (centerContent, contentWrapper, pageColumnBlockStyle, pageColumnStyle, topTwoColumnsWrapperStyle)
 import Theme.Markdown exposing (markdownToHtml)
 
@@ -14,11 +15,13 @@ import Theme.Markdown exposing (markdownToHtml)
 view : Page.Guide.Data.Guide -> Html Msg
 view guide =
     div [ css [ centerContent ] ]
-        [ h1 [ css [ guideTitle ] ] [ text guide.title ]
+        [ h1 [ css [ guideTitleStyle ] ] [ text guide.title ]
         , div [ css [ contentWrapper ] ]
             [ div [ css [ topTwoColumnsWrapperStyle ] ]
                 [ div [ css [ pageColumnStyle ] ]
-                    [ div [ css [ pageColumnBlockStyle ] ] (markdownToHtml guide.fullTextMarkdown) ]
+                    [ div [ css [ guideSummaryStyle ] ] [ text guide.summary ]
+                    , div [ css [ pageColumnBlockStyle ] ] (markdownToHtml guide.fullTextMarkdown)
+                    ]
                 , viewMaybeVideo guide.maybeVideo
                 , viewMaybeAudio guide.maybeAudio
                 ]
@@ -69,8 +72,11 @@ viewRelatedGuideTeasers guideList =
         text ""
 
 
-guideTitle : Style
-guideTitle =
-    batch
-        [ fontFamilies [ "Ludicrous", "serif" ]
-        ]
+guideTitleStyle : Style
+guideTitleStyle =
+    fontFamilies [ "Ludicrous", "serif" ]
+
+
+guideSummaryStyle : Style
+guideSummaryStyle =
+    fontSize1
