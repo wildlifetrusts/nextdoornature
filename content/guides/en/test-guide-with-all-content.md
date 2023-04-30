@@ -1,6 +1,6 @@
 ---
 title: Test guide with all content
-summary: "This is a test guide with all possible fields filled in."
+summary: "This is a test guide with all possible fields filled in "
 image:
   src: https://www.wildlifetrusts.org/sites/default/files/styles/scaled_8_col_desk/public/2021-10/Peatland%20%28C%29%20Mark%20Hamblin%202020%20VISION.webp?itok=IttJjlSo
   alt: Peaty sunset
@@ -14,9 +14,9 @@ relatedStories:
   - Test story with minimal fields
 ---
 
-## Test guide with lots of info
+#﻿# Test guide with lots of info
 
-[cCc] for placeholder copy sweep
+[﻿cCc] for placeholder copy sweep
 
 Lorem ipsum dolor sit amet consectetur adipiscing elit dictumst odio class mauris, nascetur curae pellentesque laoreet nullam hac nisl ante lobortis posuere, malesuada hendrerit pharetra curabitur mus quam dapibus convallis condimentum suscipit. Fusce pretium non sociosqu sem himenaeos rutrum turpis praesent laoreet fermentum, viverra mollis cursus suspendisse vel suscipit id quisque magna, aliquam eget neque et etiam metus montes blandit feugiat. Torquent ante odio suspendisse sagittis leo ullamcorper facilisis mattis nostra faucibus, donec aliquet integer ad quam sed sodales sociosqu bibendum tempor, posuere massa volutpat condimentum felis neque nisl interdum elementum.
 
