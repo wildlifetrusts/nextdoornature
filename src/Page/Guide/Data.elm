@@ -10,7 +10,9 @@ import Page.Shared.View
 
 
 type alias Guides =
-    { cy : Dict String Guide, en : Dict String Guide }
+    { cy : Dict String Guide
+    , en : Dict String Guide
+    }
 
 
 type alias Guide =
