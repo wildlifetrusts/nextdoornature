@@ -21,6 +21,8 @@ type Key
     | FooterTitleColumnC
     | FooterVisitWebsiteText
     | FooterVisitWebsiteLink
+    | FooterAboutText
+    | FooterAboutLink
     | FooterGuidesLinkText
     | FooterGuidesLink
     | FooterFindYourLocalTrustText

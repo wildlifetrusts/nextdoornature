@@ -73,6 +73,12 @@ enStrings key =
             --[cCc]
             "https://www.wildlifetrusts.org/"
 
+        FooterAboutText ->
+            "Find out more about this project"
+
+        FooterAboutLink ->
+            "/about"
+
         FooterFindYourLocalTrustText ->
             "[cCc] Find your local trust"
 
