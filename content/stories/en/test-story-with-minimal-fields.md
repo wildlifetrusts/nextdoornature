@@ -7,11 +7,11 @@ summary: This is test story content, generated to populate the site before real
   content goes in.
 ---
 
-## M﻿y story
+## My story
 
-A﻿ test story full of inspiration.
+A test story full of inspiration.
 
-[﻿cCc] Marked so we catch in a sweep.
+[cCc] Marked so we catch in a sweep.
 
 Lorem ipsum dolor sit amet consectetur adipiscing elit dictumst odio class mauris, nascetur curae pellentesque laoreet nullam hac nisl ante lobortis posuere, malesuada hendrerit pharetra curabitur mus quam dapibus convallis condimentum suscipit. Fusce pretium non sociosqu sem himenaeos rutrum turpis praesent laoreet fermentum, viverra mollis cursus suspendisse vel suscipit id quisque magna, aliquam eget neque et etiam metus montes blandit feugiat. Torquent ante odio suspendisse sagittis leo ullamcorper facilisis mattis nostra faucibus, donec aliquet integer ad quam sed sodales sociosqu bibendum tempor, posuere massa volutpat condimentum felis neque nisl interdum elementum.
 
