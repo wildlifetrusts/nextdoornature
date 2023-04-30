@@ -1,6 +1,6 @@
 module Page.Guide.View exposing (view)
 
-import Css exposing (Style, batch, center, column, displayFlex, flexDirection, flexWrap, fontFamilies, justifyContent, listStyle, maxWidth, none, paddingLeft, px, wrap, zero)
+import Css exposing (Style, batch, center, column, displayFlex, flexDirection, flexWrap, fontFamilies, justifyContent, listStyle, marginTop, maxWidth, none, paddingLeft, px, wrap, zero)
 import Html.Styled exposing (Html, a, div, h1, h2, img, li, text, ul)
 import Html.Styled.Attributes exposing (alt, css, href, src)
 import I18n.Keys exposing (Key(..))
@@ -128,18 +128,26 @@ viewRelatedStoryTeasers :
     -> List Page.Story.Data.StoryTeaser
     -> Html Msg
 viewRelatedStoryTeasers language storyTitleList teasers =
+    let
+        t : Key -> String
+        t =
+            translate language
+    in
     if List.length teasers > 0 then
-        div [ css [ viewStoryTeasersStyle ] ]
-            (teasers
-                |> List.sortBy .slug
-                |> List.map
-                    (\teaser ->
-                        div [ css [ storyteaserContainerStyle ] ]
-                            [ viewStoryImage (teaserImageFromLanguage language teaser)
-                            , a [ href (Route.toString (Story teaser.slug)) ] [ text (titleFromLanguage language teaser) ]
-                            ]
-                    )
-            )
+        div []
+            [ h2 [ css [ marginTop zero ] ] [ text (t RelatedStoriesHeading) ]
+            , div [ css [ viewStoryTeasersStyle ] ]
+                (teasers
+                    |> List.sortBy .slug
+                    |> List.map
+                        (\teaser ->
+                            div [ css [ storyteaserContainerStyle ] ]
+                                [ viewStoryImage (teaserImageFromLanguage language teaser)
+                                , a [ href (Route.toString (Story teaser.slug)) ] [ text (titleFromLanguage language teaser) ]
+                                ]
+                        )
+                )
+            ]
 
     else
         text ""

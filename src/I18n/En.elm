@@ -6,14 +6,8 @@ import I18n.Keys exposing (Key(..))
 enStrings : Key -> String
 enStrings key =
     case key of
-        ---
-        -- Page titles
-        ---
         SiteTitle ->
             "The Nextdoor Nature Library"
-
-        GuidesTitle ->
-            "[cCc] Guides"
 
         ---
         -- Header
@@ -133,9 +127,15 @@ enStrings key =
         RelatedGuidesHeading ->
             "Related Guides"
 
+        RelatedStoriesHeading ->
+            "Real Stories"
+
         ---
         -- Guides Page
         ---
+        GuidesTitle ->
+            "[cCc] Guides"
+
         SearchPlaceholder ->
             "Search the library"
 
