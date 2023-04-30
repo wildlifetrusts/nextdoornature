@@ -1,4 +1,4 @@
-module Page.Story.Data exposing (Image, Stories, Story, StoryTeaser, allStoryTeaserList, storyFromSlug, storyLanguageDictDecoder)
+module Page.Story.Data exposing (Image, Stories, Story, StoryTeaser, allStoryTeaserList, defaultStoryImageSrc, storyFromSlug, storyLanguageDictDecoder)
 
 import Dict exposing (Dict)
 import I18n.Keys exposing (Key(..))
@@ -30,6 +30,11 @@ type alias Image =
     { alt : String
     , src : String
     }
+
+
+defaultStoryImageSrc : String
+defaultStoryImageSrc =
+    "/images/default-story-image.jpg"
 
 
 blankStory : Language -> Story

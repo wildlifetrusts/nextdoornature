@@ -44,7 +44,12 @@ viewImages : List Page.Story.Data.Image -> List (Html Msg)
 viewImages imageList =
     List.map
         (\image -> img [ src image.src, alt image.alt, css [ roundedCornerStyle, featureImageStyle ] ] [])
-        imageList
+        (if List.length imageList == 0 then
+            imageList ++ [ { alt = "", src = Page.Story.Data.defaultStoryImageSrc } ]
+
+         else
+            imageList
+        )
 
 
 viewColumnWrapper : Html Msg -> Html Msg

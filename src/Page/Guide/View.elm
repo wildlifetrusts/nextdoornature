@@ -118,11 +118,6 @@ viewRelatedStoryTeasers language storyTitleList teasers =
         text ""
 
 
-defaultStoryImageSrc : String
-defaultStoryImageSrc =
-    "/images/default-story-image.jpg"
-
-
 viewStoryImage : Maybe Page.Story.Data.Image -> Html Msg
 viewStoryImage maybeImage =
     let
@@ -136,7 +131,7 @@ viewStoryImage maybeImage =
 
                 Nothing ->
                     { alt = ""
-                    , src = defaultStoryImageSrc
+                    , src = Page.Story.Data.defaultStoryImageSrc
                     }
     in
     img
