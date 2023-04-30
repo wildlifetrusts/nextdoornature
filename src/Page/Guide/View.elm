@@ -4,7 +4,7 @@ import Css exposing (Style, batch, center, column, displayFlex, flexDirection, f
 import Html.Styled exposing (Html, a, div, h1, h2, img, li, text, ul)
 import Html.Styled.Attributes exposing (alt, css, href, src)
 import I18n.Keys exposing (Key(..))
-import I18n.Translate exposing (Language, translate)
+import I18n.Translate exposing (Language(..), translate)
 import List
 import Message exposing (Msg)
 import Page.Guide.Data
@@ -77,15 +77,15 @@ viewRelatedGuideTeasers language guideTitleList allGuidesSlugTitleList =
         relatedGuideItems : List Page.Guide.Data.GuideListItem
         relatedGuideItems =
             allGuidesSlugTitleList
-                |> List.filter (\{ title } -> List.member title guideTitleList)
+                |> List.filter (\{ titleKey } -> List.member titleKey guideTitleList)
     in
     if List.length relatedGuideItems > 0 then
         div []
             [ h2 [] [ text (t RelatedGuidesHeading) ]
             , ul [ css [ listStyleNone ] ]
                 (List.map
-                    (\{ title, slug } ->
-                        li [] [ a [ href slug ] [ text title ] ]
+                    (\item ->
+                        li [] [ a [ href item.slug ] [ text (titleFromLanguage language item) ] ]
                     )
                     relatedGuideItems
                 )
@@ -93,6 +93,33 @@ viewRelatedGuideTeasers language guideTitleList allGuidesSlugTitleList =
 
     else
         text ""
+
+
+titleFromLanguage :
+    Language
+    ->
+        { item
+            | en : { a | title : String }
+            , cy : { a | title : String }
+        }
+    -> String
+titleFromLanguage language { en, cy } =
+    case language of
+        English ->
+            en.title
+
+        Welsh ->
+            cy.title
+
+
+teaserImageFromLanguage : Language -> Page.Story.Data.StoryTeaser -> Maybe Page.Story.Data.Image
+teaserImageFromLanguage language { en, cy } =
+    case language of
+        English ->
+            en.maybeImage
+
+        Welsh ->
+            cy.maybeImage
 
 
 viewRelatedStoryTeasers :
@@ -104,12 +131,12 @@ viewRelatedStoryTeasers language storyTitleList teasers =
     if List.length teasers > 0 then
         div [ css [ viewStoryTeasersStyle ] ]
             (teasers
-                |> List.sortBy .title
+                |> List.sortBy .slug
                 |> List.map
-                    (\{ maybeImage, slug, title } ->
+                    (\teaser ->
                         div [ css [ storyteaserContainerStyle ] ]
-                            [ viewStoryImage maybeImage
-                            , a [ href (Route.toString (Story slug)) ] [ text title ]
+                            [ viewStoryImage (teaserImageFromLanguage language teaser)
+                            , a [ href (Route.toString (Story teaser.slug)) ] [ text (titleFromLanguage language teaser) ]
                             ]
                     )
             )

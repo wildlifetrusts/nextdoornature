@@ -55,9 +55,10 @@ blankStory language =
 
 
 type alias StoryTeaser =
-    { title : String
+    { titleKey : String
     , slug : String
-    , maybeImage : Maybe Image
+    , en : { title : String, maybeImage : Maybe Image }
+    , cy : { title : String, maybeImage : Maybe Image }
     }
 
 
@@ -109,6 +110,16 @@ storiesInPreferredLanguage language stories =
             stories.cy
 
 
+fallbackStories : Language -> Stories -> Dict String Story
+fallbackStories language stories =
+    case language of
+        English ->
+            stories.cy
+
+        Welsh ->
+            stories.en
+
+
 storyFromSlug : Language -> Stories -> String -> Story
 storyFromSlug language stories slug =
     case Dict.get slug (storiesInPreferredLanguage language stories) of
@@ -116,11 +127,46 @@ storyFromSlug language stories slug =
             aStory
 
         Nothing ->
-            blankStory language
+            case Dict.get slug (fallbackStories language stories) of
+                Just aStory ->
+                    aStory
+
+                Nothing ->
+                    blankStory language
 
 
 allStoryTeaserList : Stories -> List StoryTeaser
 allStoryTeaserList stories =
+    -- merge on slug keys, keeping en data
     Dict.union stories.en stories.cy
         |> Dict.toList
-        |> List.map (\( _, story ) -> { slug = story.slug, title = story.title, maybeImage = List.head story.images })
+        |> List.map
+            (\( _, story ) ->
+                { slug = story.slug
+                , titleKey = story.title
+                , en = translationsFromSlug stories.en story
+                , cy = translationsFromSlug stories.cy story
+                }
+            )
+
+
+translationsFromSlug : Dict String Story -> Story -> { title : String, maybeImage : Maybe Image }
+translationsFromSlug storyDict { slug, title, images } =
+    case Dict.get slug storyDict of
+        Just aStory ->
+            { title = aStory.title
+            , maybeImage =
+                -- If there are no images, check the story we passed in.
+                -- Maybe images only exist in one language.
+                if List.length aStory.images > 0 then
+                    List.head aStory.images
+
+                else
+                    List.head images
+            }
+
+        -- If we don't have a story with this slug,
+        -- fall back to the one we passed in.
+        -- Means this story is only on one language.
+        Nothing ->
+            { title = title, maybeImage = List.head images }

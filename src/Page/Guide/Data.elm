@@ -7,6 +7,7 @@ import Json.Decode
 import Json.Decode.Extra
 import Page.GuideTeaser
 import Page.Shared.View
+import Route
 
 
 type alias Guides =
@@ -29,7 +30,11 @@ type alias Guide =
 
 
 type alias GuideListItem =
-    { slug : String, title : String }
+    { slug : String
+    , titleKey : String
+    , en : { title : String }
+    , cy : { title : String }
+    }
 
 
 blankGuide : Language -> Guide
@@ -126,14 +131,33 @@ guideFromSlug language guides slug =
 
 allGuidesSlugTitleList : Guides -> List GuideListItem
 allGuidesSlugTitleList guides =
+    -- merge on slug keys keeping en data
     Dict.union guides.en guides.cy
         |> Dict.toList
-        |> List.map (\( _, guide ) -> { slug = guide.slug, title = guide.title })
+        |> List.map
+            (\( _, guide ) ->
+                { slug = guide.slug
+                , titleKey = guide.title
+                , en =
+                    { title = titleFromSlug guides.en guide }
+                , cy =
+                    { title = titleFromSlug guides.cy guide
+                    }
+                }
+            )
 
 
-slugToUrl : String -> String
-slugToUrl slug =
-    "/guides/" ++ slug
+titleFromSlug : Dict String Guide -> Guide -> String
+titleFromSlug guideDict { slug, title } =
+    case Dict.get slug guideDict of
+        Just aGuide ->
+            aGuide.title
+
+        -- If we don't find a match on the slug,
+        -- go with the title of guide we passed in.
+        -- Means guide only exists in one language.
+        Nothing ->
+            title
 
 
 teaserListFromGuideDict :
@@ -141,21 +165,11 @@ teaserListFromGuideDict :
     -> Guides
     -> List Page.GuideTeaser.GuideTeaser
 teaserListFromGuideDict language guides =
-    let
-        guide : Dict String Guide
-        guide =
-            case language of
-                English ->
-                    guides.en
-
-                Welsh ->
-                    guides.cy
-    in
-    Dict.toList guide
+    Dict.toList (guidesInPreferredLanguage language guides)
         |> List.map
             (\( _, g ) ->
                 { title = g.title
-                , url = slugToUrl g.slug
+                , url = Route.toString (Route.Guide g.slug)
                 , summary = g.summary
                 , maybeImage = g.maybeImage
                 }
