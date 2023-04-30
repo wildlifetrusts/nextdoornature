@@ -1,12 +1,18 @@
-module Page.Story.Data exposing (Story, storyDictDecoder, storyFromSlug)
+module Page.Story.Data exposing (Stories, Story, storyFromSlug, storyLanguageDictDecoder)
 
 import Dict exposing (Dict)
 import I18n.Keys exposing (Key(..))
-import I18n.Translate exposing (Language, translate)
+import I18n.Translate exposing (Language(..), translate)
 import Json.Decode
 import Json.Decode.Extra
 import Page.GuideTeaser
 import Page.Shared.View
+
+
+type alias Stories =
+    { cy : Dict String Story
+    , en : Dict String Story
+    }
 
 
 type alias Story =
@@ -61,9 +67,26 @@ storyDictDecoder =
         )
 
 
-storyFromSlug : Language -> Dict String Story -> String -> Story
+storyLanguageDictDecoder : Json.Decode.Decoder Stories
+storyLanguageDictDecoder =
+    Json.Decode.map2 Stories
+        (Json.Decode.field "cy" storyDictDecoder)
+        (Json.Decode.field "en" storyDictDecoder)
+
+
+storiesInPreferredLanguage : Language -> Stories -> Dict String Story
+storiesInPreferredLanguage language stories =
+    case language of
+        English ->
+            stories.en
+
+        Welsh ->
+            stories.cy
+
+
+storyFromSlug : Language -> Stories -> String -> Story
 storyFromSlug language stories slug =
-    case Dict.get slug stories of
+    case Dict.get slug (storiesInPreferredLanguage language stories) of
         Just aStory ->
             aStory
 

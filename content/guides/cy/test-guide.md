@@ -2,9 +2,10 @@
 title: Canllaw prawf
 summary: Dyma ganllaw prawf gyda dolor Lorem ipsum sit amet
 ---
-## Fy nghanllaw 
 
-Canllaw prawf yn llawn gwybodaeth ddefnyddiol. 
+## Fy nghanllaw
+
+Canllaw prawf yn llawn gwybodaeth ddefnyddiol.
 
 [cCc] Marked felly rydyn ni'n dal mewn ysgub.
 
