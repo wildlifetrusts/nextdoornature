@@ -137,12 +137,14 @@ limitContent summary limit =
 defaultTeaserImg : Page.GuideTeaser.Image
 defaultTeaserImg =
     { src = "/images/wildlife-trust-logo.png"
-    , alt = "[cCc] back up alt text for defualt image"
+
+    -- If it's a placeholder, alt probably not meaningful
+    , alt = ""
     }
 
 
-viewGuideTeaser : Page.GuideTeaser.GuideTeaser -> Html Msg
-viewGuideTeaser teaser =
+viewGuideTeaser : Bool -> Page.GuideTeaser.GuideTeaser -> Html Msg
+viewGuideTeaser includeSummary teaser =
     let
         image : Page.GuideTeaser.Image
         image =
@@ -165,7 +167,11 @@ viewGuideTeaser teaser =
             []
         , p [ css [ teaserRowStyle ] ]
             [ a [ href teaser.url ] [ text teaser.title ] ]
-        , viewGuideTeaserSummary teaser.summary
+        , if includeSummary then
+            viewGuideTeaserSummary teaser.summary
+
+          else
+            text ""
         ]
 
 
@@ -180,14 +186,14 @@ viewGuideTeaserSummary summary =
         text ""
 
 
-viewGuideTeaserList : List Page.GuideTeaser.GuideTeaser -> Html Msg
-viewGuideTeaserList teasers =
+viewGuideTeaserList : Bool -> List Page.GuideTeaser.GuideTeaser -> Html Msg
+viewGuideTeaserList includeSummary teasers =
     if List.length teasers > 0 then
         ul [ css [ teasersContainerStyle ] ]
             (teasers
                 |> sortBy .title
                 |> map
-                    (\teaser -> viewGuideTeaser teaser)
+                    (\teaser -> viewGuideTeaser includeSummary teaser)
             )
 
     else
