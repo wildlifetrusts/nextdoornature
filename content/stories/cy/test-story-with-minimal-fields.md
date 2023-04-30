@@ -2,8 +2,7 @@
 title: Stori brofi heb fawr o gaeau
 who: Grŵp prawf
 location: Yn y Deyrnas Unedig
-postcode: null
-images: null
+images: []
 summary: Dyma gynnwys straeon prawf, a gynhyrchir i boblogi'r safle cyn i
   gynnwys go iawn fynd i mewn.
 ---
