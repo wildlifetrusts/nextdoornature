@@ -1,6 +1,6 @@
 module Page.Guide.View exposing (view)
 
-import Css exposing (Style, batch, center, column, displayFlex, flexDirection, flexWrap, fontFamilies, height, justifyContent, listStyle, maxWidth, none, paddingLeft, px, wrap, zero)
+import Css exposing (Style, batch, center, column, displayFlex, flexDirection, flexWrap, fontFamilies, justifyContent, listStyle, maxWidth, none, paddingLeft, px, wrap, zero)
 import Html.Styled exposing (Html, a, div, h1, h2, img, li, text, ul)
 import Html.Styled.Attributes exposing (alt, css, href, src)
 import I18n.Keys exposing (Key(..))
@@ -10,6 +10,7 @@ import Message exposing (Msg)
 import Page.Guide.Data
 import Page.Shared.View
 import Page.Story.Data
+import Route exposing (Route(..))
 import Theme.FluidScale exposing (fontSize1)
 import Theme.Global exposing (centerContent, contentWrapper, pageColumnBlockStyle, pageColumnStyle, roundedCornerStyle, teaserImageStyle, topTwoColumnsWrapperStyle)
 import Theme.Markdown exposing (markdownToHtml)
@@ -108,13 +109,45 @@ viewRelatedStoryTeasers language storyTitleList teasers =
                     (\{ maybeImage, slug, title } ->
                         div [ css [ storyteaserContainerStyle ] ]
                             [ viewStoryImage maybeImage
-                            , a [ href ("/stories/" ++ slug) ] [ text title ]
+                            , a [ href (Route.toString (Story slug)) ] [ text title ]
                             ]
                     )
             )
 
     else
         text ""
+
+
+defaultStoryImageSrc : String
+defaultStoryImageSrc =
+    "/images/default-story-image.jpg"
+
+
+viewStoryImage : Maybe Page.Story.Data.Image -> Html Msg
+viewStoryImage maybeImage =
+    let
+        image : Page.Story.Data.Image
+        image =
+            case maybeImage of
+                Just anImage ->
+                    { alt = anImage.alt
+                    , src = anImage.src
+                    }
+
+                Nothing ->
+                    { alt = ""
+                    , src = defaultStoryImageSrc
+                    }
+    in
+    img
+        [ alt image.alt
+        , src image.src
+        , css
+            [ roundedCornerStyle
+            , teaserImageStyle
+            ]
+        ]
+        []
 
 
 viewStoryTeasersStyle : Style
@@ -127,31 +160,12 @@ viewStoryTeasersStyle =
         ]
 
 
-viewStoryImage : Maybe Page.Story.Data.Image -> Html Msg
-viewStoryImage maybeImage =
-    case maybeImage of
-        Just image ->
-            img
-                [ alt image.alt
-                , src image.src
-                , css
-                    [ roundedCornerStyle
-                    , teaserImageStyle
-                    ]
-                ]
-                []
-
-        Nothing ->
-            text "TODO default image HERE [cCc]"
-
-
 storyteaserContainerStyle : Style
 storyteaserContainerStyle =
     batch
         [ justifyContent center
         , displayFlex
         , flexDirection column
-        , height (px 150)
         , maxWidth (px 150)
         ]
 
