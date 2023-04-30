@@ -10,7 +10,9 @@ import Page.Shared.View
 
 
 type alias Stories =
-    { cy : Dict String Story, en : Dict String Story }
+    { cy : Dict String Story
+    , en : Dict String Story
+    }
 
 
 type alias Story =
@@ -92,8 +94,8 @@ storyLanguageDictDecoder =
         (Json.Decode.field "en" storyDictDecoder)
 
 
-storiesFromLanguage : Language -> Stories -> Dict String Story
-storiesFromLanguage language stories =
+storiesInPreferredLanguage : Language -> Stories -> Dict String Story
+storiesInPreferredLanguage language stories =
     case language of
         English ->
             stories.en
@@ -104,7 +106,7 @@ storiesFromLanguage language stories =
 
 storyFromSlug : Language -> Stories -> String -> Story
 storyFromSlug language stories slug =
-    case Dict.get slug (storiesFromLanguage language stories) of
+    case Dict.get slug (storiesInPreferredLanguage language stories) of
         Just aStory ->
             aStory
 
