@@ -17,7 +17,7 @@ import Theme.Markdown exposing (markdownToHtml)
 
 
 view : Language -> Page.Guide.Data.Guide -> List Page.Guide.Data.GuideListItem -> List Page.Story.Data.StoryTeaser -> Html Msg
-view language guide allGudes allStories =
+view language guide allGuides allStories =
     div [ css [ centerContent ] ]
         [ h1 [ css [ guideTitleStyle ] ] [ text guide.title ]
         , div [ css [ contentWrapper ] ]
@@ -29,7 +29,7 @@ view language guide allGudes allStories =
                 , div [ css [ pageColumnStyle ] ]
                     [ viewMaybeVideo guide.maybeVideo
                     , viewMaybeAudio guide.maybeAudio
-                    , viewRelatedGuideTeasers language guide.relatedGuideList allGudes
+                    , viewRelatedGuideTeasers language guide.relatedGuideList allGuides
                     ]
                 ]
             , div [ css [ pageColumnStyle ] ]
