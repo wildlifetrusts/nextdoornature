@@ -35,7 +35,7 @@ view story =
                 , div [ css [ pageColumnStyle ] ]
                     (markdownToHtml story.fullTextMarkdown)
                 ]
-            , viewColumnWrapper (Page.Shared.View.viewGuideTeaserList story.relatedGuideList)
+            , viewColumnWrapper (Page.Shared.View.viewGuideTeaserList False story.relatedGuideList)
             ]
         ]
 
