@@ -44,6 +44,6 @@ view model =
             [ text (t GuidesTitle) ]
         , div
             [ css [ contentWrapper ] ]
-            [ Page.Shared.View.viewGuideTeaserList teaserList
+            [ Page.Shared.View.viewGuideTeaserList True teaserList
             ]
         ]
