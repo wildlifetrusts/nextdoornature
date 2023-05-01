@@ -1,4 +1,4 @@
-module Page.Story.Data exposing (Stories, Story, storyFromSlug, storyLanguageDictDecoder)
+module Page.Story.Data exposing (Image, Stories, Story, StoryTeaser, allStoryTeaserList, defaultStoryImageSrc, storyFromSlug, storyLanguageDictDecoder)
 
 import Dict exposing (Dict)
 import I18n.Keys exposing (Key(..))
@@ -20,10 +20,21 @@ type alias Story =
     , slug : String
     , maybeLocation : Maybe String
     , maybeGroupOrIndividual : Maybe String
-    , maybeImages : Maybe (List Page.GuideTeaser.Image)
+    , images : List Image
     , fullTextMarkdown : String
     , relatedGuideList : List Page.GuideTeaser.GuideTeaser
     }
+
+
+type alias Image =
+    { alt : String
+    , src : String
+    }
+
+
+defaultStoryImageSrc : String
+defaultStoryImageSrc =
+    "/images/default-story-image.jpg"
 
 
 blankStory : Language -> Story
@@ -38,8 +49,16 @@ blankStory language =
     , fullTextMarkdown = t Story404Body
     , maybeLocation = Nothing
     , maybeGroupOrIndividual = Nothing
-    , maybeImages = Nothing
+    , images = []
     , relatedGuideList = []
+    }
+
+
+type alias StoryTeaser =
+    { titleKey : String
+    , slug : String
+    , en : { title : String, maybeImage : Maybe Image }
+    , cy : { title : String, maybeImage : Maybe Image }
     }
 
 
@@ -56,7 +75,7 @@ storyDictDecoder =
             |> Json.Decode.Extra.andMap
                 (Json.Decode.maybe (Json.Decode.field "groupOrIndividual" Json.Decode.string |> Json.Decode.Extra.withDefault ""))
             |> Json.Decode.Extra.andMap
-                (Json.Decode.maybe (Json.Decode.field "images" (Json.Decode.list Page.Shared.View.imageDecoder)))
+                (Json.Decode.field "images" (Json.Decode.list imageDecoder))
             |> Json.Decode.Extra.andMap
                 (Json.Decode.field "content" Json.Decode.string |> Json.Decode.Extra.withDefault "")
             |> Json.Decode.Extra.andMap
@@ -65,6 +84,13 @@ storyDictDecoder =
                     |> Json.Decode.Extra.withDefault []
                 )
         )
+
+
+imageDecoder : Json.Decode.Decoder Image
+imageDecoder =
+    Json.Decode.map2 Image
+        (Json.Decode.field "alt" Json.Decode.string)
+        (Json.Decode.field "src" Json.Decode.string)
 
 
 storyLanguageDictDecoder : Json.Decode.Decoder Stories
@@ -84,6 +110,16 @@ storiesInPreferredLanguage language stories =
             stories.cy
 
 
+fallbackStories : Language -> Stories -> Dict String Story
+fallbackStories language stories =
+    case language of
+        English ->
+            stories.cy
+
+        Welsh ->
+            stories.en
+
+
 storyFromSlug : Language -> Stories -> String -> Story
 storyFromSlug language stories slug =
     case Dict.get slug (storiesInPreferredLanguage language stories) of
@@ -91,4 +127,46 @@ storyFromSlug language stories slug =
             aStory
 
         Nothing ->
-            blankStory language
+            case Dict.get slug (fallbackStories language stories) of
+                Just aStory ->
+                    aStory
+
+                Nothing ->
+                    blankStory language
+
+
+allStoryTeaserList : Stories -> List StoryTeaser
+allStoryTeaserList stories =
+    -- merge on slug keys, keeping en data
+    Dict.union stories.en stories.cy
+        |> Dict.toList
+        |> List.map
+            (\( _, story ) ->
+                { slug = story.slug
+                , titleKey = story.title
+                , en = translationsFromSlug stories.en story
+                , cy = translationsFromSlug stories.cy story
+                }
+            )
+
+
+translationsFromSlug : Dict String Story -> Story -> { title : String, maybeImage : Maybe Image }
+translationsFromSlug storyDict { slug, title, images } =
+    case Dict.get slug storyDict of
+        Just aStory ->
+            { title = aStory.title
+            , maybeImage =
+                -- If there are no images, check the story we passed in.
+                -- Maybe images only exist in one language.
+                if List.length aStory.images > 0 then
+                    List.head aStory.images
+
+                else
+                    List.head images
+            }
+
+        -- If we don't have a story with this slug,
+        -- fall back to the one we passed in.
+        -- Means this story is only on one language.
+        Nothing ->
+            { title = title, maybeImage = List.head images }

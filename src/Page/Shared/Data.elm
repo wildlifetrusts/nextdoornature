@@ -1,6 +1,6 @@
 module Page.Shared.Data exposing (contentDictDecoder)
 
-import Dict exposing (Dict)
+import Dict
 import Json.Decode
 import Page.Data
 import Page.Guide.Data
@@ -14,7 +14,11 @@ contentDictDecoder flags =
         Ok goodContent ->
             goodContent
 
-        Err _ ->
+        Err error ->
+            --let
+            --    e =
+            --        Debug.log "Flag decode ERROR" error
+            --in
             { guides = { cy = Dict.empty, en = Dict.empty }
             , pages = { cy = Dict.empty, en = Dict.empty }
             , stories = { cy = Dict.empty, en = Dict.empty }

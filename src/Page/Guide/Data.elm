@@ -1,4 +1,4 @@
-module Page.Guide.Data exposing (Guide, Guides, guideFromSlug, guideLanguageDictDecoder, teaserListFromGuideDict)
+module Page.Guide.Data exposing (Guide, GuideListItem, Guides, allGuidesSlugTitleList, guideFromSlug, guideLanguageDictDecoder, teaserListFromGuideDict)
 
 import Dict exposing (Dict)
 import I18n.Keys exposing (Key(..))
@@ -7,6 +7,7 @@ import Json.Decode
 import Json.Decode.Extra
 import Page.GuideTeaser
 import Page.Shared.View
+import Route
 
 
 type alias Guides =
@@ -23,8 +24,16 @@ type alias Guide =
     , maybeImage : Maybe Page.GuideTeaser.Image
     , maybeVideo : Maybe Page.Shared.View.VideoMeta
     , maybeAudio : Maybe Page.Shared.View.AudioMeta
-    , relatedStoryList : List Page.Shared.View.StoryTeaser
-    , relatedGuideList : List Page.GuideTeaser.GuideTeaser
+    , relatedStoryList : List String
+    , relatedGuideList : List String
+    }
+
+
+type alias GuideListItem =
+    { slug : String
+    , titleKey : String
+    , en : { title : String }
+    , cy : { title : String }
     }
 
 
@@ -67,12 +76,12 @@ guideDictDecoder =
                 (Json.Decode.maybe (Json.Decode.field "audio" Page.Shared.View.audioDecoder))
             |> Json.Decode.Extra.andMap
                 (Json.Decode.field "relatedStories"
-                    (Json.Decode.list Page.Shared.View.storyTeaserDecoder)
+                    (Json.Decode.list Json.Decode.string)
                     |> Json.Decode.Extra.withDefault []
                 )
             |> Json.Decode.Extra.andMap
                 (Json.Decode.field "relatedGuides"
-                    (Json.Decode.list Page.Shared.View.guideTeaserDecoder)
+                    (Json.Decode.list Json.Decode.string)
                     |> Json.Decode.Extra.withDefault []
                 )
         )
@@ -120,9 +129,35 @@ guideFromSlug language guides slug =
                     blankGuide language
 
 
-slugToUrl : String -> String
-slugToUrl slug =
-    "/guides/" ++ slug
+allGuidesSlugTitleList : Guides -> List GuideListItem
+allGuidesSlugTitleList guides =
+    -- merge on slug keys keeping en data
+    Dict.union guides.en guides.cy
+        |> Dict.toList
+        |> List.map
+            (\( _, guide ) ->
+                { slug = guide.slug
+                , titleKey = guide.title
+                , en =
+                    { title = titleFromSlug guides.en guide }
+                , cy =
+                    { title = titleFromSlug guides.cy guide
+                    }
+                }
+            )
+
+
+titleFromSlug : Dict String Guide -> Guide -> String
+titleFromSlug guideDict { slug, title } =
+    case Dict.get slug guideDict of
+        Just aGuide ->
+            aGuide.title
+
+        -- If we don't find a match on the slug,
+        -- go with the title of guide we passed in.
+        -- Means guide only exists in one language.
+        Nothing ->
+            title
 
 
 teaserListFromGuideDict :
@@ -130,21 +165,11 @@ teaserListFromGuideDict :
     -> Guides
     -> List Page.GuideTeaser.GuideTeaser
 teaserListFromGuideDict language guides =
-    let
-        guide : Dict String Guide
-        guide =
-            case language of
-                English ->
-                    guides.en
-
-                Welsh ->
-                    guides.cy
-    in
-    Dict.toList guide
+    Dict.toList (guidesInPreferredLanguage language guides)
         |> List.map
             (\( _, g ) ->
                 { title = g.title
-                , url = slugToUrl g.slug
+                , url = Route.toString (Route.Guide g.slug)
                 , summary = g.summary
                 , maybeImage = g.maybeImage
                 }

@@ -31,7 +31,8 @@ collections:
           i18n: true,
         }
       - {
-          label: "Postcode (not displayed)",
+          label: "Postcode",
+          hint: "Not displayed - for internal use",
           name: "postcode",
           required: false,
           widget: "string",
@@ -40,6 +41,7 @@ collections:
       - label: "Images"
         name: "images"
         widget: "list"
+        required: false
         i18n: true
         fields:
           - { label: "Image", name: "src", widget: "image", i18n: true }
@@ -60,6 +62,7 @@ collections:
             }
       - {
           label: "Summary",
+          hint: "Also used for SEO description",
           name: "summary",
           widget: "string",
           pattern: ["^.{50,160}$", "Must be between 50 and 160 characters"],
@@ -135,7 +138,7 @@ collections:
         search_fields: ["title", "summary"]
         value_field: "title"
         display_fields: ["title"]
-        i18n: true
+        i18n: false
       - label: "Related Stories"
         name: "relatedStories"
         widget: "relation"
@@ -144,7 +147,7 @@ collections:
         search_fields: ["title", "summary"]
         value_field: "title"
         display_fields: ["title"]
-        i18n: true
+        i18n: false
   - name: "pages"
     label: "Pages"
     folder: "content/pages"

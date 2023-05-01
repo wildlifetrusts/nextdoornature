@@ -19,8 +19,8 @@ const app = Elm.Main.init({
   flags: {
     hasConsented,
     guides: { cy: cyGuides, en: enGuides },
-    stories: { cy: cyStories, en: enStories },
     pages: { cy: cyPages, en: enPages },
+    stories: { cy: cyStories, en: enStories },
   },
 });
 

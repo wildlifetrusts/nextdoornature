@@ -3,8 +3,6 @@ module I18n.Keys exposing (Key(..))
 
 type Key
     = SiteTitle
-      --- Page Titles
-    | GuidesTitle
     | ChangeLanguage
       --- 404 content
     | Story404Title
@@ -40,6 +38,10 @@ type Key
     | WelcomeP1
     | WelcomeP2
     | WelcomeP3
-      --- Search
+      --- Guide Page
+    | RelatedGuidesHeading
+    | RelatedStoriesHeading
+      --- Guides Page
+    | GuidesTitle
     | SearchPlaceholder
     | ExploreGuidesListPlaceholder
