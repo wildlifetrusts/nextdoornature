@@ -1,9 +1,10 @@
-module Theme.Global exposing (centerContent, contentWrapper, embeddedVideoStyle, featureImageStyle, globalStyles, lightTeal, pageColumnBlockStyle, pageColumnStyle, purple, roundedCornerStyle, teal, teaserContainerStyle, teaserImageStyle, teaserRowStyle, teasersContainerStyle, topTwoColumnsWrapperStyle, white, withMediaMobileUp, withMediaTabletPortraitUp)
+module Theme.Global exposing (centerContent, contentWrapper, featureImageStyle, globalStyles, lightTeal, listStyleNone, maxTabletLandscape, pageColumnBlockStyle, pageColumnStyle, purple, roundedCornerStyle, teal, teaserContainerStyle, teaserImageStyle, teaserRowStyle, teasersContainerStyle, topTwoColumnsWrapperStyle, white, withMediaMobileUp, withMediaTabletPortraitUp)
 
-import Css exposing (Color, Style, absolute, alignItems, auto, backgroundPosition, backgroundRepeat, backgroundSize, batch, borderBottomRightRadius, borderTopLeftRadius, borderTopRightRadius, boxSizing, center, color, column, contentBox, cover, displayFlex, flex, flex3, flexDirection, flexStart, flexWrap, fontFamilies, height, hex, hidden, inherit, int, justifyContent, lastChild, left, listStyle, margin, margin2, marginBottom, marginRight, marginTop, maxWidth, minWidth, noRepeat, noWrap, none, overflow, padding, padding2, pct, position, property, px, rem, row, spaceBetween, top, width, wrap, zero)
+import Css exposing (Color, Style, absolute, alignItems, auto, backgroundImage, backgroundPosition, backgroundRepeat, backgroundSize, batch, borderBottomRightRadius, borderTopLeftRadius, borderTopRightRadius, boxSizing, center, color, column, contain, contentBox, cover, cursor, display, displayFlex, em, ex, flex, flex3, flexDirection, flexStart, flexWrap, fontFamilies, height, hex, hidden, inherit, inlineBlock, int, justifyContent, lastChild, left, listStyle, margin, margin2, marginBottom, marginLeft, marginRight, marginTop, maxWidth, minWidth, noRepeat, noWrap, none, overflow, padding, padding2, paddingLeft, pct, pointer, position, property, pseudoElement, px, rem, row, spaceBetween, textDecoration, top, url, width, wrap, zero)
 import Css.Global exposing (global, typeSelector)
 import Css.Media as Media exposing (only, screen, withMedia)
 import Html.Styled exposing (Html)
+import Theme.FluidScale
 
 
 
@@ -117,22 +118,39 @@ globalStyles =
         , typeSelector "h1"
             [ fontFamilies [ "Adelle", "serif" ]
             , color purple
+            , Theme.FluidScale.fontSize4
             , width (pct 100)
             ]
         , typeSelector "h2"
             [ fontFamilies [ "Adelle", "serif" ]
             , color purple
+            , Theme.FluidScale.fontSize3
             ]
         , typeSelector "h3"
             [ fontFamilies [ "Adelle", "serif" ]
             , color purple
+            , Theme.FluidScale.fontSize2
             ]
         , typeSelector "h4"
             [ fontFamilies [ "Adelle", "serif" ]
             , color purple
+            , Theme.FluidScale.fontSize1
             ]
         , typeSelector "a"
             [ color purple
+            , textDecoration none
+            , pseudoElement "after"
+                [ backgroundImage
+                    (url "/images/arrow.svg")
+                , backgroundSize contain
+                , backgroundPosition center
+                , backgroundRepeat noRepeat
+                , display inlineBlock
+                , property "content" "' '"
+                , height (ex 1.5)
+                , width (em 1.0)
+                , marginLeft (em 0.3)
+                ]
             ]
         , typeSelector "b"
             []
@@ -140,6 +158,11 @@ globalStyles =
             []
         , typeSelector "blockquote"
             []
+        , typeSelector "button"
+            [ fontFamilies [ "Rubik", "sans-serif" ]
+            , color purple
+            , cursor pointer
+            ]
         , typeSelector ".content_image"
             [ borderTopLeftRadius (rem roundedCornerValue)
             , borderTopRightRadius (rem roundedCornerValue)
@@ -152,6 +175,14 @@ globalStyles =
 
 
 -- Helpers
+
+
+listStyleNone : Style
+listStyleNone =
+    batch
+        [ listStyle none
+        , paddingLeft zero
+        ]
 
 
 teaserContainerStyle : Style
@@ -228,18 +259,6 @@ teaserImageStyle =
         , property "aspect-ratio" "1/1"
         , property "object-fit" "cover"
         , width (pct 100)
-        ]
-
-
-embeddedVideoStyle : Style
-embeddedVideoStyle =
-    batch
-        [ height (pct 100)
-        , left zero
-        , position absolute
-        , top zero
-        , width (pct 100)
-        , maxWidth (px (maxTabletLandscape / 3))
         ]
 
 

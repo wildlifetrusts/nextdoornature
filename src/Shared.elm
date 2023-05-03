@@ -36,7 +36,10 @@ type alias Content =
         { cy : Dict String Page.Data.Page
         , en : Dict String Page.Data.Page
         }
-    , stories : Dict String Page.Story.Data.Story
+    , stories :
+        { cy : Dict String Page.Story.Data.Story
+        , en : Dict String Page.Story.Data.Story
+        }
     }
 
 

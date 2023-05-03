@@ -1,4 +1,4 @@
-module Page.Shared.View exposing (AudioMeta, StoryTeaser, VideoMeta, actionTeaserDecoder, actionTeaserListDecoder, audioDecoder, defaultTeaserImg, guideTeaserDecoder, imageDecoder, interalGuideTeaserListDecoder, internalGuideTeaserDecoder, storyTeaserDecoder, videoDecoder, viewAudio, viewGuideTeaserList, viewStoryTeasers, viewVideo)
+module Page.Shared.View exposing (AudioMeta, VideoMeta, actionTeaserDecoder, actionTeaserListDecoder, audioDecoder, defaultTeaserImg, guideTeaserDecoder, imageDecoder, interalGuideTeaserListDecoder, internalGuideTeaserDecoder, videoDecoder, viewAudio, viewGuideTeaserList, viewVideo)
 
 import Css exposing (Style, absolute, batch, center, column, displayFlex, flexDirection, flexWrap, height, justifyContent, left, maxWidth, paddingBottom, pct, position, px, relative, top, width, wrap, zero)
 import Html.Styled exposing (Html, a, div, iframe, img, li, p, text, ul)
@@ -35,23 +35,6 @@ videoDecoder =
     Json.Decode.map2 VideoMeta
         (Json.Decode.field "title" Json.Decode.string)
         (Json.Decode.field "src" Json.Decode.string)
-
-
-type alias StoryTeaser =
-    { title : String
-    , slug : String
-    , image : Page.GuideTeaser.Image
-    , description : String
-    }
-
-
-storyTeaserDecoder : Json.Decode.Decoder StoryTeaser
-storyTeaserDecoder =
-    Json.Decode.map4 StoryTeaser
-        (Json.Decode.field "title" Json.Decode.string)
-        (Json.Decode.field "slug" Json.Decode.string)
-        (Json.Decode.field "image" imageDecoder)
-        (Json.Decode.field "description" Json.Decode.string)
 
 
 imageDecoder : Decoder Page.GuideTeaser.Image
@@ -109,7 +92,7 @@ viewVideo videoMeta =
             , attribute "allowfullscreen" "true"
             , autoplay False
             , title videoMeta.title
-            , css [ Theme.Global.embeddedVideoStyle ]
+            , css [ embeddedVideoStyle ]
             ]
             []
         ]
@@ -118,7 +101,7 @@ viewVideo videoMeta =
 viewAudio : AudioMeta -> Html Msg
 viewAudio _ =
     div
-        [ css [ Theme.Global.embeddedVideoStyle ]
+        [ css [ embeddedVideoStyle ]
         ]
         [ text "[fFf] render audio player" ]
 
@@ -137,12 +120,14 @@ limitContent summary limit =
 defaultTeaserImg : Page.GuideTeaser.Image
 defaultTeaserImg =
     { src = "/images/wildlife-trust-logo.png"
-    , alt = "[cCc] back up alt text for defualt image"
+
+    -- If it's a placeholder, alt probably not meaningful
+    , alt = ""
     }
 
 
-viewGuideTeaser : Page.GuideTeaser.GuideTeaser -> Html Msg
-viewGuideTeaser teaser =
+viewGuideTeaser : Bool -> Page.GuideTeaser.GuideTeaser -> Html Msg
+viewGuideTeaser includeSummary teaser =
     let
         image : Page.GuideTeaser.Image
         image =
@@ -165,7 +150,11 @@ viewGuideTeaser teaser =
             []
         , p [ css [ teaserRowStyle ] ]
             [ a [ href teaser.url ] [ text teaser.title ] ]
-        , viewGuideTeaserSummary teaser.summary
+        , if includeSummary then
+            viewGuideTeaserSummary teaser.summary
+
+          else
+            text ""
         ]
 
 
@@ -180,66 +169,29 @@ viewGuideTeaserSummary summary =
         text ""
 
 
-viewGuideTeaserList : List Page.GuideTeaser.GuideTeaser -> Html Msg
-viewGuideTeaserList teasers =
+viewGuideTeaserList : Bool -> List Page.GuideTeaser.GuideTeaser -> Html Msg
+viewGuideTeaserList includeSummary teasers =
     if List.length teasers > 0 then
         ul [ css [ teasersContainerStyle ] ]
             (teasers
                 |> sortBy .title
                 |> map
-                    (\teaser -> viewGuideTeaser teaser)
+                    (\teaser -> viewGuideTeaser includeSummary teaser)
             )
 
     else
         text ""
 
 
-viewStoryTeasers : List StoryTeaser -> Html Msg
-viewStoryTeasers teasers =
-    if List.length teasers > 0 then
-        div [ css [ viewStoryTeasersStyle ] ]
-            (teasers
-                |> sortBy .title
-                |> map
-                    (\{ description, image, slug, title } ->
-                        div [ css [ storyteaserContainerStyle ] ]
-                            [ img
-                                [ alt image.alt
-                                , src image.src
-                                , css
-                                    [ roundedCornerStyle
-                                    , teaserImageStyle
-                                    ]
-                                ]
-                                []
-                            , a [ href ("/stories/" ++ slug) ] [ text title ]
-                            , p [] [ text description ]
-                            ]
-                    )
-            )
-
-    else
-        text ""
-
-
-viewStoryTeasersStyle : Style
-viewStoryTeasersStyle =
+embeddedVideoStyle : Style
+embeddedVideoStyle =
     batch
-        [ justifyContent center
-        , displayFlex
-        , flexWrap wrap
-        , maxWidth (px 400)
-        ]
-
-
-storyteaserContainerStyle : Style
-storyteaserContainerStyle =
-    batch
-        [ justifyContent center
-        , displayFlex
-        , flexDirection column
-        , height (px 150)
-        , maxWidth (px 150)
+        [ height (pct 100)
+        , left zero
+        , position absolute
+        , top zero
+        , width (pct 100)
+        , maxWidth (px (Theme.Global.maxTabletLandscape / 3))
         ]
 
 

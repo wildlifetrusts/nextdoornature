@@ -1,11 +1,15 @@
 ---
-title: Canllaw prawf
-summary: Dyma ganllaw prawf gyda dolor Lorem ipsum sit amet
+title: Stori brofi heb fawr o gaeau
+who: Grŵp prawf
+location: Yn y Deyrnas Unedig
+images: []
+summary: Dyma gynnwys straeon prawf, a gynhyrchir i boblogi'r safle cyn i
+  gynnwys go iawn fynd i mewn.
 ---
 
-## Fy nghanllaw
+## Fy stori
 
-Canllaw prawf yn llawn gwybodaeth ddefnyddiol.
+Stori brawf yn llawn ysbrydoliaeth.
 
 [cCc] Marked felly rydyn ni'n dal mewn ysgub.
 

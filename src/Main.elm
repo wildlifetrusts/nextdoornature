@@ -6,7 +6,8 @@ import CookieBanner exposing (saveConsent)
 import GoogleAnalytics
 import Html.Styled exposing (Html, toUnstyled)
 import Http
-import I18n.Translate exposing (Language(..))
+import I18n.Keys exposing (Key(..))
+import I18n.Translate exposing (Language(..), translate)
 import Json.Decode
 import Message exposing (Msg(..))
 import Page.Data
@@ -191,7 +192,12 @@ subscriptions _ =
 
 viewDocument : Model -> Browser.Document Msg
 viewDocument model =
-    { title = "[cCc] App title", body = [ toUnstyled (view model) ] }
+    let
+        t : Key -> String
+        t =
+            translate model.language
+    in
+    { title = t SiteTitle, body = [ toUnstyled (view model) ] }
 
 
 view : Model -> Html Msg
@@ -214,7 +220,12 @@ view model =
                 guide =
                     Page.Guide.Data.guideFromSlug model.language model.content.guides slug
             in
-            Theme.PageTemplate.view model (Page.Guide.View.view guide)
+            Theme.PageTemplate.view model
+                (Page.Guide.View.view model.language
+                    guide
+                    (Page.Guide.Data.allGuidesSlugTitleList model.content.guides)
+                    (Page.Story.Data.allStoryTeaserList model.content.stories)
+                )
 
         Guides ->
             Theme.PageTemplate.view model (Page.Guides.view model)

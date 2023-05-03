@@ -6,14 +6,8 @@ import I18n.Keys exposing (Key(..))
 enStrings : Key -> String
 enStrings key =
     case key of
-        ---
-        -- Page titles
-        ---
         SiteTitle ->
             "The Nextdoor Nature Library"
-
-        GuidesTitle ->
-            "[cCc] Guides"
 
         ---
         -- Header
@@ -73,6 +67,12 @@ enStrings key =
             --[cCc]
             "https://www.wildlifetrusts.org/"
 
+        FooterAboutText ->
+            "Find out more about this project"
+
+        FooterAboutLink ->
+            "/about"
+
         FooterFindYourLocalTrustText ->
             "[cCc] Find your local trust"
 
@@ -128,8 +128,20 @@ enStrings key =
             "[cCc] The goal of Nextdoor Nature is to get at least 1 in 4 people across the UK taking Action for Nature. This online library aims to support anyone who is interested in finding out what they can do, and how they can get other people involved."
 
         ---
-        -- Search
+        -- Guide Page
         ---
+        RelatedGuidesHeading ->
+            "Related Guides"
+
+        RelatedStoriesHeading ->
+            "Real Stories"
+
+        ---
+        -- Guides Page
+        ---
+        GuidesTitle ->
+            "[cCc] Guides"
+
         SearchPlaceholder ->
             "Search the library"
 
