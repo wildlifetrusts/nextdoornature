@@ -1,4 +1,4 @@
-module Theme.Global exposing (centerContent, contentWrapper, embeddedVideoStyle, featureImageStyle, globalStyles, lightTeal, listStyleNone, pageColumnBlockStyle, pageColumnStyle, purple, roundedCornerStyle, teal, teaserContainerStyle, teaserImageStyle, teaserRowStyle, teasersContainerStyle, topTwoColumnsWrapperStyle, white, withMediaMobileUp, withMediaTabletPortraitUp)
+module Theme.Global exposing (centerContent, contentWrapper, featureImageStyle, globalStyles, lightTeal, listStyleNone, maxTabletLandscape, pageColumnBlockStyle, pageColumnStyle, purple, roundedCornerStyle, teal, teaserContainerStyle, teaserImageStyle, teaserRowStyle, teasersContainerStyle, topTwoColumnsWrapperStyle, white, withMediaMobileUp, withMediaTabletPortraitUp)
 
 import Css exposing (Color, Style, alignItems, auto, backgroundImage, backgroundPosition, backgroundRepeat, backgroundSize, batch, borderBottomRightRadius, borderTopLeftRadius, borderTopRightRadius, boxSizing, center, color, column, contain, contentBox, cover, cursor, display, displayFlex, em, ex, flex, flex3, flexDirection, flexStart, flexWrap, fontFamilies, height, hex, hidden, inherit, inlineBlock, int, justifyContent, lastChild, listStyle, margin, margin2, marginBottom, marginLeft, marginRight, marginTop, maxWidth, minWidth, noRepeat, noWrap, none, overflow, padding, padding2, paddingLeft, pct, pointer, property, pseudoElement, px, rem, row, spaceBetween, textDecoration, url, width, wrap, zero)
 import Css.Global exposing (global, typeSelector)
@@ -168,6 +168,7 @@ globalStyles =
             , borderTopRightRadius (rem roundedCornerValue)
             , borderBottomRightRadius (rem roundedCornerValue)
             , overflow hidden
+            , width (pct 100)
             ]
         ]
 
@@ -258,15 +259,6 @@ teaserImageStyle =
         , property "aspect-ratio" "1/1"
         , property "object-fit" "cover"
         , width (pct 100)
-        ]
-
-
-embeddedVideoStyle : Style
-embeddedVideoStyle =
-    batch
-        [ width (pct 100)
-        , height auto
-        , maxWidth (px (maxTabletLandscape / 3))
         ]
 
 

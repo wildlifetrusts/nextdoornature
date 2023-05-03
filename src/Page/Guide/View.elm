@@ -43,9 +43,7 @@ viewMaybeVideo : Maybe Page.Shared.View.VideoMeta -> Html Msg
 viewMaybeVideo maybeVideoMeta =
     case maybeVideoMeta of
         Just aVideo ->
-            div [ css [ pageColumnStyle ] ]
-                [ Page.Shared.View.viewVideo aVideo
-                ]
+            Page.Shared.View.viewVideo aVideo
 
         Nothing ->
             text ""

@@ -1,5 +1,6 @@
 module Page.Shared.View exposing (AudioMeta, VideoMeta, actionTeaserDecoder, actionTeaserListDecoder, audioDecoder, defaultTeaserImg, guideTeaserDecoder, imageDecoder, interalGuideTeaserListDecoder, internalGuideTeaserDecoder, videoDecoder, viewAudio, viewGuideTeaserList, viewVideo)
 
+import Css exposing (Style, absolute, batch, height, left, maxWidth, paddingBottom, pct, position, px, relative, top, width, zero)
 import Html.Styled exposing (Html, a, div, iframe, img, li, p, text, ul)
 import Html.Styled.Attributes exposing (alt, attribute, autoplay, css, href, src, title)
 import Json.Decode exposing (Decoder)
@@ -84,14 +85,14 @@ actionTeaserListDecoder =
 
 viewVideo : VideoMeta -> Html Msg
 viewVideo videoMeta =
-    div []
+    div [ css [ videoContainerStyle ] ]
         [ iframe
             [ src videoMeta.src
             , attribute "frameborder" "0"
             , attribute "allowfullscreen" "true"
             , autoplay False
             , title videoMeta.title
-            , css [ Theme.Global.embeddedVideoStyle ]
+            , css [ embeddedVideoStyle ]
             ]
             []
         ]
@@ -100,7 +101,7 @@ viewVideo videoMeta =
 viewAudio : AudioMeta -> Html Msg
 viewAudio _ =
     div
-        [ css [ Theme.Global.embeddedVideoStyle ]
+        [ css [ embeddedVideoStyle ]
         ]
         [ text "[fFf] render audio player" ]
 
@@ -180,3 +181,24 @@ viewGuideTeaserList includeSummary teasers =
 
     else
         text ""
+
+
+embeddedVideoStyle : Style
+embeddedVideoStyle =
+    batch
+        [ height (pct 100)
+        , left zero
+        , position absolute
+        , top zero
+        , width (pct 100)
+        , maxWidth (px (Theme.Global.maxTabletLandscape / 3))
+        ]
+
+
+videoContainerStyle : Style
+videoContainerStyle =
+    batch
+        [ paddingBottom (pct 56.25)
+        , position relative
+        , width (pct 100)
+        ]
