@@ -109,7 +109,7 @@ viewVideo videoMeta =
             , attribute "allowfullscreen" "true"
             , autoplay False
             , title videoMeta.title
-            , css [ Theme.Global.embeddedVideoStyle, videoFixStyle ]
+            , css [ Theme.Global.embeddedVideoStyle ]
             ]
             []
         ]
@@ -240,17 +240,6 @@ storyteaserContainerStyle =
         , flexDirection column
         , height (px 150)
         , maxWidth (px 150)
-        ]
-
-
-videoFixStyle : Style
-videoFixStyle =
-    batch
-        [ height (pct 100)
-        , left zero
-        , top zero
-        , position absolute
-        , width (pct 100)
         ]
 
 
