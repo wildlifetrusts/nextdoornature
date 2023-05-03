@@ -1,6 +1,6 @@
 module Page.Shared.View exposing (AudioMeta, VideoMeta, actionTeaserDecoder, actionTeaserListDecoder, audioDecoder, defaultTeaserImg, guideTeaserDecoder, imageDecoder, interalGuideTeaserListDecoder, internalGuideTeaserDecoder, videoDecoder, viewAudio, viewGuideTeaserList, viewVideo)
 
-import Css exposing (Style, absolute, batch, center, column, displayFlex, flexDirection, flexWrap, height, justifyContent, left, maxWidth, paddingBottom, pct, position, px, relative, top, width, wrap, zero)
+import Css exposing (Style, absolute, batch, height, left, maxWidth, paddingBottom, pct, position, px, relative, top, width, zero)
 import Html.Styled exposing (Html, a, div, iframe, img, li, p, text, ul)
 import Html.Styled.Attributes exposing (alt, attribute, autoplay, css, href, src, title)
 import Json.Decode exposing (Decoder)
