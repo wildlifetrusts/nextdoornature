@@ -13,10 +13,10 @@ import Message exposing (Msg(..))
 import Page.Data
 import Page.Guide.Data
 import Page.Guide.View
-import Page.Guides
+import Page.Guides.Data
+import Page.Guides.View
 import Page.Index
 import Page.Shared.Data
-import Page.Shared.View exposing (actionTeaserListDecoder)
 import Page.Story.Data
 import Page.Story.View
 import Page.View
@@ -69,7 +69,7 @@ init flags url key =
             { enableAnalytics = hasConsented
             , cookieBannerIsOpen = showCookieBanner
             }
-      , content = Page.Shared.Data.contentDictDecoder flags
+      , content = Shared.contentDictDecoder flags
       , language = English
       , search = []
       , externalActions = Loading
@@ -82,7 +82,7 @@ getActions : Cmd Msg
 getActions =
     Http.get
         { url = "/API.json"
-        , expect = Http.expectJson GotActions actionTeaserListDecoder
+        , expect = Http.expectJson GotActions Page.Guides.Data.actionTeaserListDecoder
         }
 
 
@@ -228,7 +228,7 @@ view model =
                 )
 
         Guides ->
-            Theme.PageTemplate.view model (Page.Guides.view model)
+            Theme.PageTemplate.view model (Page.Guides.View.view model)
 
         Page slug ->
             let

@@ -8,6 +8,7 @@ import I18n.Translate exposing (Language(..), translate)
 import List
 import Message exposing (Msg)
 import Page.Guide.Data
+import Page.Shared.Data
 import Page.Shared.View
 import Page.Story.Data
 import Route exposing (Route(..))
@@ -39,7 +40,7 @@ view language guide allGuides allStories =
         ]
 
 
-viewMaybeVideo : Maybe Page.Shared.View.VideoMeta -> Html Msg
+viewMaybeVideo : Maybe Page.Shared.Data.VideoMeta -> Html Msg
 viewMaybeVideo maybeVideoMeta =
     case maybeVideoMeta of
         Just aVideo ->
@@ -49,7 +50,7 @@ viewMaybeVideo maybeVideoMeta =
             text ""
 
 
-viewMaybeAudio : Maybe Page.Shared.View.AudioMeta -> Html Msg
+viewMaybeAudio : Maybe Page.Shared.Data.AudioMeta -> Html Msg
 viewMaybeAudio maybeAudioMeta =
     case maybeAudioMeta of
         Just anAudio ->

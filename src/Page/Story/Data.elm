@@ -5,8 +5,8 @@ import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (Language(..), translate)
 import Json.Decode
 import Json.Decode.Extra
-import Page.GuideTeaser
-import Page.Shared.View
+import Page.Guides.Data
+import Page.Shared.Data
 
 
 type alias Stories =
@@ -22,7 +22,7 @@ type alias Story =
     , maybeGroupOrIndividual : Maybe String
     , images : List Image
     , fullTextMarkdown : String
-    , relatedGuideList : List Page.GuideTeaser.GuideTeaser
+    , relatedGuideList : List Page.Shared.Data.GuideTeaser
     }
 
 
@@ -80,7 +80,7 @@ storyDictDecoder =
                 (Json.Decode.field "content" Json.Decode.string |> Json.Decode.Extra.withDefault "")
             |> Json.Decode.Extra.andMap
                 (Json.Decode.field "relatedGuideList"
-                    (Json.Decode.list Page.Shared.View.guideTeaserDecoder)
+                    (Json.Decode.list Page.Guides.Data.guideTeaserDecoder)
                     |> Json.Decode.Extra.withDefault []
                 )
         )
@@ -91,6 +91,15 @@ imageDecoder =
     Json.Decode.map2 Image
         (Json.Decode.field "alt" Json.Decode.string)
         (Json.Decode.field "src" Json.Decode.string)
+
+
+guideTeaserDecoder : Json.Decode.Decoder Page.Shared.Data.GuideTeaser
+guideTeaserDecoder =
+    Json.Decode.map4 Page.Shared.Data.GuideTeaser
+        (Json.Decode.field "title" Json.Decode.string)
+        (Json.Decode.field "basename" Json.Decode.string)
+        (Json.Decode.field "summary" Json.Decode.string)
+        (Json.Decode.maybe (Json.Decode.field "image" imageDecoder))
 
 
 storyLanguageDictDecoder : Json.Decode.Decoder Stories
