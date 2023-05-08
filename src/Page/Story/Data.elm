@@ -93,15 +93,6 @@ imageDecoder =
         (Json.Decode.field "src" Json.Decode.string)
 
 
-guideTeaserDecoder : Json.Decode.Decoder Page.Shared.Data.GuideTeaser
-guideTeaserDecoder =
-    Json.Decode.map4 Page.Shared.Data.GuideTeaser
-        (Json.Decode.field "title" Json.Decode.string)
-        (Json.Decode.field "basename" Json.Decode.string)
-        (Json.Decode.field "summary" Json.Decode.string)
-        (Json.Decode.maybe (Json.Decode.field "image" imageDecoder))
-
-
 storyLanguageDictDecoder : Json.Decode.Decoder Stories
 storyLanguageDictDecoder =
     Json.Decode.map2 Stories

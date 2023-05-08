@@ -1,6 +1,5 @@
 module Page.Shared.Data exposing (AudioMeta, GuideTeaser, GuideTeaserImage, VideoMeta, audioDecoder, defaultTeaserImage, guideTeaserImageDecoder, videoDecoder)
 
-import Dict
 import Json.Decode
 
 

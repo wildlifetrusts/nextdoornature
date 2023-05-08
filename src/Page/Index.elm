@@ -5,7 +5,6 @@ import Html.Styled.Attributes exposing (css)
 import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (translate)
 import Message exposing (Msg)
-import Page.Guide.Data
 import Page.Guides.Data
 import Page.Guides.View
 import Shared exposing (Model)

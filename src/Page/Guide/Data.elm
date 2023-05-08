@@ -6,7 +6,6 @@ import I18n.Translate exposing (Language(..), translate)
 import Json.Decode
 import Json.Decode.Extra
 import Page.Shared.Data
-import Route
 
 
 type alias Guides =

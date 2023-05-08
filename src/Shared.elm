@@ -56,7 +56,7 @@ contentDictDecoder flags =
         Ok goodContent ->
             goodContent
 
-        Err error ->
+        Err _ ->
             --let
             --    e =
             --        Debug.log "Flag decode ERROR" error

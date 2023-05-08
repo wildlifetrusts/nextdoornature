@@ -1,43 +1,33 @@
-module Theme.FluidScale exposing (fontSize0, fontSize1, fontSize2, fontSize3, fontSize4, fontSize5, fontSizeMinus1, fontSizeMinus2, logoContainer)
+module Theme.FluidScale exposing (fontSize1, fontSize2, fontSize3, fontSize4, fontSize5, logoContainer)
+
+-- Commented out currently unused: fontSize0, fontSizeMinus1, fontSizeMinus2
 
 import Css exposing (Style, property)
 
 
 
 -- https://utopia.fyi/type/calculator?c=320,16,1.2,1240,20,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12
-
-
-{-| Fluid fontSize
-
-    @screen width 320px font-size = 12.50px
-    @screen width 1240px font-size = 12.8px
-
--}
-fontSizeMinus2 : Style
-fontSizeMinus2 =
-    property "font-size" "clamp(0.69rem, calc(0.66rem + 0.18vw), 0.80rem)"
-
-
-{-| Fluid fontSize
-
-    @screen width 320px font-size = 15.00px
-    @screen width 1240px font-size = 16.0px
-
--}
-fontSizeMinus1 : Style
-fontSizeMinus1 =
-    property "font-size" "clamp(0.83rem, calc(0.78rem + 0.29vw), 1.00rem)"
-
-
-{-| Fluid fontSize
-
-    @screen width 320px font-size = 18.00px
-    @screen width 1240px font-size = 20.0px
-
--}
-fontSize0 : Style
-fontSize0 =
-    property "font-size" "clamp(1.00rem, calc(0.91rem + 0.43vw), 1.25rem)"
+--{-| Fluid fontSize
+--    @screen width 320px font-size = 12.50px
+--    @screen width 1240px font-size = 12.8px
+---}
+--fontSizeMinus2 : Style
+--fontSizeMinus2 =
+--    property "font-size" "clamp(0.69rem, calc(0.66rem + 0.18vw), 0.80rem)"
+--{-| Fluid fontSize
+--    @screen width 320px font-size = 15.00px
+--    @screen width 1240px font-size = 16.0px
+---}
+--fontSizeMinus1 : Style
+--fontSizeMinus1 =
+--    property "font-size" "clamp(0.83rem, calc(0.78rem + 0.29vw), 1.00rem)"
+--{-| Fluid fontSize
+--    @screen width 320px font-size = 18.00px
+--    @screen width 1240px font-size = 20.0px
+---}
+--fontSize0 : Style
+--fontSize0 =
+--    property "font-size" "clamp(1.00rem, calc(0.91rem + 0.43vw), 1.25rem)"
 
 
 {-| Fluid fontSize

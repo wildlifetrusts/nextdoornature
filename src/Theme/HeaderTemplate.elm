@@ -9,10 +9,8 @@ import I18n.Translate exposing (Language(..), translate)
 import Json.Decode
 import List
 import Message exposing (Msg(..))
-import Page.Guide.Data
 import Page.Guides.Data
 import Page.Shared.Data
-import Page.Shared.View
 import Route exposing (Route(..))
 import Shared exposing (Model, Request(..))
 import Theme.FluidScale

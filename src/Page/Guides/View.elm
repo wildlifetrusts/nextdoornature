@@ -4,10 +4,8 @@ import Html.Styled exposing (Html, a, div, h1, img, li, p, text, ul)
 import Html.Styled.Attributes exposing (alt, css, href, src)
 import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (Language(..), translate)
-import Json.Encode as Encode
 import List
 import Message exposing (Msg)
-import Page.Guide.Data
 import Page.Guides.Data
 import Page.Shared.Data
 import Shared exposing (Model, Request(..))

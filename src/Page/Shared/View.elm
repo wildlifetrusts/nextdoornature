@@ -1,14 +1,10 @@
 module Page.Shared.View exposing (viewAudio, viewVideo)
 
 import Css exposing (Style, absolute, batch, height, left, paddingBottom, pct, position, relative, top, width, zero)
-import Html.Styled exposing (Html, a, div, iframe, img, li, p, text, ul)
-import Html.Styled.Attributes exposing (alt, attribute, autoplay, css, href, src, title)
-import Json.Decode exposing (Decoder)
-import List exposing (map, sortBy)
+import Html.Styled exposing (Html, div, iframe, text)
+import Html.Styled.Attributes exposing (attribute, autoplay, css, src, title)
 import Message exposing (Msg)
 import Page.Shared.Data
-import String exposing (length, padRight)
-import Theme.Global exposing (roundedCornerStyle, teaserContainerStyle, teaserImageStyle, teaserRowStyle, teasersContainerStyle)
 
 
 viewVideo : Page.Shared.Data.VideoMeta -> Html Msg

@@ -1,17 +1,13 @@
-module Page.Guides.Data exposing (actionTeaserDecoder, actionTeaserListDecoder, guideTeaserDecoder, guideTeaserEncoder, guideTeaserListEncoder, guideTeaserListString, interalGuideTeaserListDecoder, internalGuideTeaserDecoder, teaserListFromGuideDict)
+module Page.Guides.Data exposing (actionTeaserListDecoder, guideTeaserDecoder, guideTeaserListEncoder, guideTeaserListString, internalGuideTeaserDecoder, teaserListFromGuideDict)
 
 import Dict
-import Html.Styled exposing (Html, div, h1, text)
-import Html.Styled.Attributes exposing (css)
-import I18n.Keys exposing (Key(..))
-import I18n.Translate exposing (Language(..), translate)
+import I18n.Translate exposing (Language)
 import Json.Decode
 import Json.Encode as Encode
 import List
 import Page.Guide.Data
 import Page.Shared.Data
 import Route
-import Theme.Global exposing (centerContent, contentWrapper)
 
 
 guideTeaserDecoder : Json.Decode.Decoder Page.Shared.Data.GuideTeaser
@@ -83,11 +79,6 @@ internalGuideTeaserDecoder =
         (Json.Decode.field "url" Json.Decode.string)
         (Json.Decode.field "summary" Json.Decode.string)
         (Json.Decode.maybe (Json.Decode.field "maybeImage" Page.Shared.Data.guideTeaserImageDecoder))
-
-
-interalGuideTeaserListDecoder : Json.Decode.Decoder (List Page.Shared.Data.GuideTeaser)
-interalGuideTeaserListDecoder =
-    Json.Decode.list internalGuideTeaserDecoder
 
 
 actionTeaserDecoder : Json.Decode.Decoder Page.Shared.Data.GuideTeaser
