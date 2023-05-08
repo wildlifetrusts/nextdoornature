@@ -29,8 +29,8 @@ type alias Guide =
 
 
 type alias Image =
-    { alt : String
-    , src : String
+    { src : String
+    , alt : String
     , maybeCredit : Maybe String
     }
 

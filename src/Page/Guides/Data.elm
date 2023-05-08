@@ -68,7 +68,12 @@ teaserListFromGuideDict language guides =
 
 guideImagefromTeaserImage : Maybe Page.Guide.Data.Image -> Maybe Page.Shared.Data.GuideTeaserImage
 guideImagefromTeaserImage maybeImage =
-    Just { alt = "", src = "" }
+    case maybeImage of
+        Just anImage ->
+            Just { alt = anImage.alt, src = anImage.src }
+
+        Nothing ->
+            Just Page.Shared.Data.defaultTeaserImage
 
 
 internalGuideTeaserDecoder : Json.Decode.Decoder Page.Shared.Data.GuideTeaser
