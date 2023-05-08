@@ -1,4 +1,4 @@
-module Page.Guide.Data exposing (Guide, GuideListItem, Guides, Image, allGuidesSlugTitleList, guideFromSlug, guideLanguageDictDecoder, guidesInPreferredLanguage)
+module Page.Guide.Data exposing (Guide, GuideListItem, Guides, Image, allGuidesSlugTitleList, defaultGuideImage, guideFromSlug, guideLanguageDictDecoder, guidesInPreferredLanguage)
 
 import Dict exposing (Dict)
 import I18n.Keys exposing (Key(..))
@@ -31,6 +31,14 @@ type alias Image =
     { src : String
     , alt : String
     , maybeCredit : Maybe String
+    }
+
+
+defaultGuideImage : Image
+defaultGuideImage =
+    { src = "/images/default-guide-image.jpg"
+    , alt = ""
+    , maybeCredit = Nothing
     }
 
 

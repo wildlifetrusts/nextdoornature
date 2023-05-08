@@ -13,7 +13,7 @@ import Page.Shared.View
 import Page.Story.Data
 import Route exposing (Route(..))
 import Theme.FluidScale exposing (fontSize1)
-import Theme.Global exposing (centerContent, contentWrapper, pageColumnBlockStyle, pageColumnStyle, roundedCornerStyle, teaserImageStyle, topTwoColumnsWrapperStyle)
+import Theme.Global exposing (centerContent, contentWrapper, featureImageStyle, pageColumnBlockStyle, pageColumnStyle, roundedCornerStyle, teaserImageStyle, topTwoColumnsWrapperStyle)
 import Theme.Markdown exposing (markdownToHtml)
 
 
@@ -21,22 +21,51 @@ view : Language -> Page.Guide.Data.Guide -> List Page.Guide.Data.GuideListItem -
 view language guide allGuides allStories =
     div [ css [ centerContent ] ]
         [ h1 [ css [ guideTitleStyle ] ] [ text guide.title ]
-        , div [ css [ contentWrapper ] ]
-            [ div [ css [ topTwoColumnsWrapperStyle ] ]
-                [ div [ css [ pageColumnStyle ] ]
-                    [ div [ css [ guideSummaryStyle ] ] [ text guide.summary ]
-                    , div [ css [ pageColumnBlockStyle ] ] (markdownToHtml guide.fullTextMarkdown)
-                    ]
-                , div [ css [ pageColumnStyle ] ]
-                    [ viewMaybeVideo guide.maybeVideo
-                    , viewMaybeAudio guide.maybeAudio
-                    , viewRelatedGuideTeasers language guide.relatedGuideList allGuides
-                    ]
-                ]
-            , div [ css [ pageColumnStyle ] ]
-                [ viewRelatedStoryTeasers language guide.relatedStoryList allStories
-                ]
+        , viewSummaryImageRow guide
+        , viewRow
+            ( markdownToHtml guide.fullTextMarkdown
+            , [ viewMaybeVideo guide.maybeVideo
+              , viewMaybeAudio guide.maybeAudio
+              , viewRelatedGuideTeasers language guide.relatedGuideList allGuides
+              ]
+            , [ viewRelatedStoryTeasers language guide.relatedStoryList allStories ]
+            )
+        ]
+
+
+viewSummaryImageRow : Page.Guide.Data.Guide -> Html Msg
+viewSummaryImageRow guide =
+    let
+        image : Page.Guide.Data.Image
+        image =
+            case guide.maybeImage of
+                Just anImage ->
+                    anImage
+
+                Nothing ->
+                    Page.Guide.Data.defaultGuideImage
+    in
+    viewRow
+        ( [ div [ css [ guideSummaryStyle ] ] [ text guide.summary ] ]
+        , [ img [ css [ featureImageStyle ], src image.src, alt image.alt ] [] ]
+        , case image.maybeCredit of
+            Just aCredit ->
+                [ text aCredit ]
+
+            Nothing ->
+                [ text "" ]
+        )
+
+
+viewRow : ( List (Html Msg), List (Html Msg), List (Html Msg) ) -> Html Msg
+viewRow ( content1, content2, content3 ) =
+    div [ css [ contentWrapper ] ]
+        [ div [ css [ topTwoColumnsWrapperStyle ] ]
+            [ div [ css [ pageColumnStyle ] ]
+                [ div [ css [ pageColumnBlockStyle ] ] content1 ]
+            , div [ css [ pageColumnStyle ] ] content2
             ]
+        , div [ css [ pageColumnStyle ] ] content3
         ]
 
 
