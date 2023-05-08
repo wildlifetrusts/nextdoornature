@@ -1,4 +1,4 @@
-module Page.Guides.Data exposing (actionTeaserListDecoder, guideTeaserDecoder, guideTeaserListEncoder, guideTeaserListString, internalGuideTeaserDecoder, teaserListFromGuideDict)
+module Page.Guides.Data exposing (actionTeaserDecoder, actionTeaserListDecoder, guideTeaserDecoder, guideTeaserListEncoder, guideTeaserListString, internalGuideTeaserDecoder, internalGuideTeaserListDecoder, teaserListFromGuideDict)
 
 import Dict
 import I18n.Translate exposing (Language)
@@ -79,6 +79,11 @@ internalGuideTeaserDecoder =
         (Json.Decode.field "url" Json.Decode.string)
         (Json.Decode.field "summary" Json.Decode.string)
         (Json.Decode.maybe (Json.Decode.field "maybeImage" Page.Shared.Data.guideTeaserImageDecoder))
+
+
+internalGuideTeaserListDecoder : Json.Decode.Decoder (List Page.Shared.Data.GuideTeaser)
+internalGuideTeaserListDecoder =
+    Json.Decode.list internalGuideTeaserDecoder
 
 
 actionTeaserDecoder : Json.Decode.Decoder Page.Shared.Data.GuideTeaser
