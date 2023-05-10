@@ -9,9 +9,8 @@ import I18n.Translate exposing (Language(..), translate)
 import Json.Decode
 import List
 import Message exposing (Msg(..))
-import Page.Guide.Data
-import Page.GuideTeaser
-import Page.Shared.View
+import Page.Guides.Data
+import Page.Shared.Data
 import Route exposing (Route(..))
 import Shared exposing (Model, Request(..))
 import Theme.FluidScale
@@ -71,31 +70,31 @@ searchInput model =
         t =
             I18n.Translate.translate model.language
 
-        teaserList : List Page.GuideTeaser.GuideTeaser
+        teaserList : List Page.Shared.Data.GuideTeaser
         teaserList =
             if model.language == Welsh then
-                Page.Guide.Data.teaserListFromGuideDict model.language model.content.guides
+                Page.Guides.Data.teaserListFromGuideDict model.language model.content.guides
 
             else
                 case model.externalActions of
                     Failure ->
-                        Page.Guide.Data.teaserListFromGuideDict model.language model.content.guides
+                        Page.Guides.Data.teaserListFromGuideDict model.language model.content.guides
 
                     Loading ->
-                        Page.Guide.Data.teaserListFromGuideDict model.language model.content.guides
+                        Page.Guides.Data.teaserListFromGuideDict model.language model.content.guides
 
                     Success list ->
-                        List.concat [ Page.Guide.Data.teaserListFromGuideDict model.language model.content.guides, list ]
+                        List.concat [ Page.Guides.Data.teaserListFromGuideDict model.language model.content.guides, list ]
     in
     label [ css [ searchStyle ] ]
         [ text (t SearchPlaceholder)
         , node "search-input"
-            [ Html.Styled.Attributes.property "searchResult" <| Page.GuideTeaser.guideTeaserListEncoder model.search
-            , attribute "search-input" <| Page.GuideTeaser.guideTeaserListString teaserList
+            [ Html.Styled.Attributes.property "searchResult" <| Page.Guides.Data.guideTeaserListEncoder model.search
+            , attribute "search-input" <| Page.Guides.Data.guideTeaserListString teaserList
             , on "resultChanged" <|
                 Json.Decode.map Message.SearchChanged <|
                     Json.Decode.at [ "target", "searchResult" ] <|
-                        Json.Decode.list Page.Shared.View.internalGuideTeaserDecoder
+                        Json.Decode.list Page.Guides.Data.internalGuideTeaserDecoder
             ]
             [ input [ id "search", type_ "text", placeholder (t SearchPlaceholder), css [ searchInputStyle ] ] [] ]
         , img [ src "/images/arrow-right-purple.svg", css [ arrowStyle ] ] []

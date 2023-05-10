@@ -8,11 +8,12 @@ import I18n.Translate exposing (Language(..), translate)
 import List
 import Message exposing (Msg)
 import Page.Guide.Data
+import Page.Shared.Data
 import Page.Shared.View
 import Page.Story.Data
 import Route exposing (Route(..))
 import Theme.FluidScale exposing (fontSize1)
-import Theme.Global exposing (centerContent, contentWrapper, pageColumnBlockStyle, pageColumnStyle, roundedCornerStyle, teaserImageStyle, topTwoColumnsWrapperStyle)
+import Theme.Global exposing (centerContent, contentWrapper, featureImageStyle, pageColumnBlockStyle, pageColumnStyle, roundedCornerStyle, teaserImageStyle, topTwoColumnsWrapperStyle)
 import Theme.Markdown exposing (markdownToHtml)
 
 
@@ -20,26 +21,55 @@ view : Language -> Page.Guide.Data.Guide -> List Page.Guide.Data.GuideListItem -
 view language guide allGuides allStories =
     div [ css [ centerContent ] ]
         [ h1 [ css [ guideTitleStyle ] ] [ text guide.title ]
-        , div [ css [ contentWrapper ] ]
-            [ div [ css [ topTwoColumnsWrapperStyle ] ]
-                [ div [ css [ pageColumnStyle ] ]
-                    [ div [ css [ guideSummaryStyle ] ] [ text guide.summary ]
-                    , div [ css [ pageColumnBlockStyle ] ] (markdownToHtml guide.fullTextMarkdown)
-                    ]
-                , div [ css [ pageColumnStyle ] ]
-                    [ viewMaybeVideo guide.maybeVideo
-                    , viewMaybeAudio guide.maybeAudio
-                    , viewRelatedGuideTeasers language guide.relatedGuideList allGuides
-                    ]
-                ]
-            , div [ css [ pageColumnStyle ] ]
-                [ viewRelatedStoryTeasers language guide.relatedStoryList allStories
-                ]
-            ]
+        , viewSummaryImageRow guide
+        , viewRow
+            ( markdownToHtml guide.fullTextMarkdown
+            , [ viewMaybeVideo guide.maybeVideo
+              , viewMaybeAudio guide.maybeAudio
+              , viewRelatedGuideTeasers language guide.relatedGuideList allGuides
+              ]
+            , [ viewRelatedStoryTeasers language guide.relatedStoryList allStories ]
+            )
         ]
 
 
-viewMaybeVideo : Maybe Page.Shared.View.VideoMeta -> Html Msg
+viewSummaryImageRow : Page.Guide.Data.Guide -> Html Msg
+viewSummaryImageRow guide =
+    let
+        image : Page.Guide.Data.Image
+        image =
+            case guide.maybeImage of
+                Just anImage ->
+                    anImage
+
+                Nothing ->
+                    Page.Guide.Data.defaultGuideImage
+    in
+    viewRow
+        ( [ div [ css [ guideSummaryStyle ] ] [ text guide.summary ] ]
+        , [ img [ css [ featureImageStyle ], src image.src, alt image.alt ] [] ]
+        , case image.maybeCredit of
+            Just aCredit ->
+                [ text aCredit ]
+
+            Nothing ->
+                [ text "" ]
+        )
+
+
+viewRow : ( List (Html Msg), List (Html Msg), List (Html Msg) ) -> Html Msg
+viewRow ( content1, content2, content3 ) =
+    div [ css [ contentWrapper ] ]
+        [ div [ css [ topTwoColumnsWrapperStyle ] ]
+            [ div [ css [ pageColumnStyle ] ]
+                [ div [ css [ pageColumnBlockStyle ] ] content1 ]
+            , div [ css [ pageColumnStyle ] ] content2
+            ]
+        , div [ css [ pageColumnStyle ] ] content3
+        ]
+
+
+viewMaybeVideo : Maybe Page.Shared.Data.VideoMeta -> Html Msg
 viewMaybeVideo maybeVideoMeta =
     case maybeVideoMeta of
         Just aVideo ->
@@ -49,7 +79,7 @@ viewMaybeVideo maybeVideoMeta =
             text ""
 
 
-viewMaybeAudio : Maybe Page.Shared.View.AudioMeta -> Html Msg
+viewMaybeAudio : Maybe Page.Shared.Data.AudioMeta -> Html Msg
 viewMaybeAudio maybeAudioMeta =
     case maybeAudioMeta of
         Just anAudio ->
@@ -68,16 +98,17 @@ viewRelatedGuideTeasers :
     -> Html Msg
 viewRelatedGuideTeasers language guideTitleList allGuidesSlugTitleList =
     let
-        t : Key -> String
-        t =
-            translate language
-
         relatedGuideItems : List Page.Guide.Data.GuideListItem
         relatedGuideItems =
             allGuidesSlugTitleList
                 |> List.filter (\{ titleKey } -> List.member titleKey guideTitleList)
     in
     if List.length relatedGuideItems > 0 then
+        let
+            t : Key -> String
+            t =
+                translate language
+        in
         div []
             [ h2 [] [ text (t RelatedGuidesHeading) ]
             , ul [ css [ listStyleNone ] ]
@@ -125,17 +156,23 @@ viewRelatedStoryTeasers :
     -> List String
     -> List Page.Story.Data.StoryTeaser
     -> Html Msg
-viewRelatedStoryTeasers language storyTitleList teasers =
+viewRelatedStoryTeasers language storyTitleList allStoryTeasers =
     let
-        t : Key -> String
-        t =
-            translate language
+        relatedStoryItems : List Page.Story.Data.StoryTeaser
+        relatedStoryItems =
+            allStoryTeasers
+                |> List.filter (\{ titleKey } -> List.member titleKey storyTitleList)
     in
-    if List.length teasers > 0 then
+    if List.length relatedStoryItems > 0 then
+        let
+            t : Key -> String
+            t =
+                translate language
+        in
         div []
             [ h2 [ css [ marginTop zero ] ] [ text (t RelatedStoriesHeading) ]
             , div [ css [ viewStoryTeasersStyle ] ]
-                (teasers
+                (relatedStoryItems
                     |> List.sortBy .slug
                     |> List.map
                         (\teaser ->

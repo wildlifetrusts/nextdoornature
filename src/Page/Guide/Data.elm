@@ -1,13 +1,11 @@
-module Page.Guide.Data exposing (Guide, GuideListItem, Guides, allGuidesSlugTitleList, guideFromSlug, guideLanguageDictDecoder, teaserListFromGuideDict)
+module Page.Guide.Data exposing (Guide, GuideListItem, Guides, Image, allGuidesSlugTitleList, defaultGuideImage, guideFromSlug, guideLanguageDictDecoder, guidesInPreferredLanguage)
 
 import Dict exposing (Dict)
 import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (Language(..), translate)
 import Json.Decode
 import Json.Decode.Extra
-import Page.GuideTeaser
-import Page.Shared.View
-import Route
+import Page.Shared.Data
 
 
 type alias Guides =
@@ -21,11 +19,26 @@ type alias Guide =
     , slug : String
     , fullTextMarkdown : String
     , summary : String
-    , maybeImage : Maybe Page.GuideTeaser.Image
-    , maybeVideo : Maybe Page.Shared.View.VideoMeta
-    , maybeAudio : Maybe Page.Shared.View.AudioMeta
+    , maybeImage : Maybe Image
+    , maybeVideo : Maybe Page.Shared.Data.VideoMeta
+    , maybeAudio : Maybe Page.Shared.Data.AudioMeta
     , relatedStoryList : List String
     , relatedGuideList : List String
+    }
+
+
+type alias Image =
+    { src : String
+    , alt : String
+    , maybeCredit : Maybe String
+    }
+
+
+defaultGuideImage : Image
+defaultGuideImage =
+    { src = "/images/default-guide-image.jpg"
+    , alt = ""
+    , maybeCredit = Nothing
     }
 
 
@@ -69,11 +82,11 @@ guideDictDecoder =
             |> Json.Decode.Extra.andMap
                 (Json.Decode.field "summary" Json.Decode.string |> Json.Decode.Extra.withDefault "")
             |> Json.Decode.Extra.andMap
-                (Json.Decode.maybe (Json.Decode.field "image" Page.Shared.View.imageDecoder))
+                (Json.Decode.maybe (Json.Decode.field "image" imageDecoder))
             |> Json.Decode.Extra.andMap
-                (Json.Decode.maybe (Json.Decode.field "video" Page.Shared.View.videoDecoder))
+                (Json.Decode.maybe (Json.Decode.field "video" Page.Shared.Data.videoDecoder))
             |> Json.Decode.Extra.andMap
-                (Json.Decode.maybe (Json.Decode.field "audio" Page.Shared.View.audioDecoder))
+                (Json.Decode.maybe (Json.Decode.field "audio" Page.Shared.Data.audioDecoder))
             |> Json.Decode.Extra.andMap
                 (Json.Decode.field "relatedStories"
                     (Json.Decode.list Json.Decode.string)
@@ -85,6 +98,14 @@ guideDictDecoder =
                     |> Json.Decode.Extra.withDefault []
                 )
         )
+
+
+imageDecoder : Json.Decode.Decoder Image
+imageDecoder =
+    Json.Decode.map3 Image
+        (Json.Decode.field "src" Json.Decode.string)
+        (Json.Decode.field "alt" Json.Decode.string)
+        (Json.Decode.maybe (Json.Decode.field "credit" Json.Decode.string))
 
 
 guideLanguageDictDecoder : Json.Decode.Decoder Guides
@@ -158,19 +179,3 @@ titleFromSlug guideDict { slug, title } =
         -- Means guide only exists in one language.
         Nothing ->
             title
-
-
-teaserListFromGuideDict :
-    Language
-    -> Guides
-    -> List Page.GuideTeaser.GuideTeaser
-teaserListFromGuideDict language guides =
-    Dict.toList (guidesInPreferredLanguage language guides)
-        |> List.map
-            (\( _, g ) ->
-                { title = g.title
-                , url = Route.toString (Route.Guide g.slug)
-                , summary = g.summary
-                , maybeImage = g.maybeImage
-                }
-            )

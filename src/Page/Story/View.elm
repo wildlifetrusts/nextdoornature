@@ -3,7 +3,7 @@ module Page.Story.View exposing (view)
 import Html.Styled exposing (Html, div, h1, img, p, text)
 import Html.Styled.Attributes exposing (alt, css, src)
 import Message exposing (Msg)
-import Page.Shared.View
+import Page.Guides.View
 import Page.Story.Data
 import Theme.Global exposing (centerContent, contentWrapper, featureImageStyle, pageColumnStyle, roundedCornerStyle, topTwoColumnsWrapperStyle)
 import Theme.Markdown exposing (markdownToHtml)
@@ -35,7 +35,7 @@ view story =
                 , div [ css [ pageColumnStyle ] ]
                     (markdownToHtml story.fullTextMarkdown)
                 ]
-            , viewColumnWrapper (Page.Shared.View.viewGuideTeaserList False story.relatedGuideList)
+            , viewColumnWrapper (Page.Guides.View.viewGuideTeaserList False story.relatedGuideList)
             ]
         ]
 
