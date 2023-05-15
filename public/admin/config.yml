@@ -138,6 +138,7 @@ collections:
         search_fields: ["title", "summary"]
         value_field: "title"
         display_fields: ["title"]
+        required: false
         i18n: false
       - label: "Related Stories"
         name: "relatedStories"
@@ -147,6 +148,7 @@ collections:
         search_fields: ["title", "summary"]
         value_field: "title"
         display_fields: ["title"]
+        required: false
         i18n: false
   - name: "pages"
     label: "Pages"
