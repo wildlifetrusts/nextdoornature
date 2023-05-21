@@ -17,7 +17,7 @@ This kind of group:
 * the group can become a different type of group or a charity later.
 
 
-See our separate document about [Setting up a Community Group]( for information about unincorporated associations.
+See our separate document about [Setting up a Community Group]() for information about unincorporated associations.
 
 
 
