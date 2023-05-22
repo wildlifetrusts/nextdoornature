@@ -1,5 +1,5 @@
 ---
-title: Setting up a basic community group
+title: Setting up a Basic Community Group
 summary: This guide explains how to set up a basic community group or
   unincorporated association.
 ---

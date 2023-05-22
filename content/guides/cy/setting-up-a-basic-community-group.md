@@ -1,5 +1,5 @@
 ---
-title: Sefydlu grŵp cymunedol sylfaenol
+title: Sefydlu Grŵp Cymunedol Sylfaenol
 summary: Yr enw ar y grŵp hawsaf i’w sefydlu yw “cymdeithas anghorfforedig”.
 ---
 Yr enw ar y grŵp hawsaf i’w sefydlu yw “cymdeithas anghorfforedig”. Mae angen i chi ysgrifennu “cyfansoddiad” neu “ddogfen lywodraethu”. Dyma restr o reolau ar gyfer y grŵp. Mae hefyd yn dweud beth mae eich grŵp yn mynd i’w wneud, a sut mae’n mynd i’w wneud.
