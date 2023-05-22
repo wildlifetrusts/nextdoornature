@@ -50,6 +50,8 @@ So yes, **do ask questions, but only relevant ones** – and do not be upset if 
 
 An important question to ask is about **names**. While in the UK, we are moving towards more informal ways of talking to people, using their first names, many people do not like it. Older people may prefer to be “Mr” or “Mrs”. Different languages deal with names differently – the first name you see might be a family name, for example. Simply ask what people want to be called. This is important for pronouns, too. You can offer your own name and pronoun first, then that automatically invites the other person to tell you theirs.
 
+
+
 ## Communication across languages
 
 
