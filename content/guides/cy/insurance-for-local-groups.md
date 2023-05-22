@@ -1,5 +1,5 @@
 ---
-title: " Yswiriant ar gyfer grwpiau lleol"
+title: " Yswiriant ar Gyfer Grwpiau Lleol"
 summary: " Yswiriant ar gyfer grwpiau lleol. Mae gwahanol fathau o yswiriant."
 ---
 Nid yw hwn yn gyngor yswiriant ffurfiol.

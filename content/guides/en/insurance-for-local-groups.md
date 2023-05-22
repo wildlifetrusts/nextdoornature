@@ -1,5 +1,5 @@
 ---
-title: Insurance for local groups
+title: Insurance for Local Groups
 summary: Types of insurance for local groups and why you need it.
 ---
 
