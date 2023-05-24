@@ -1,5 +1,5 @@
 ---
-title: Ymgysylltu cymunedol amlieithog
+title: Ymgysylltu Cymunedol Amlieithog
 summary: Crynodeb am weithio gyda grwpiau lle siaredir llawer o ieithoedd.
 ---
 ## Adnabod yr angen 

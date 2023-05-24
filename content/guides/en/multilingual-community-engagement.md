@@ -1,5 +1,5 @@
 ---
-title: Multilingual community engagement
+title: Multilingual Community Engagement
 summary: A summary about working with groups where many languages are spoken.
 ---
 ## Identify the need
