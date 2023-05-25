@@ -2,6 +2,10 @@
 title: Sut i Wneud Cais am Gyllid
 summary: Crynodeb o'r hyn sydd angen i chi ei wneud pan fyddwch yn ystyried
   gwneud cais am gyllid
+relatedGuides:
+  - "Finding Funding "
+  - Bank Accounts For Groups
+  - Faith Groups and Lottery Funding
 ---
 ## Paratoi 
 
