@@ -2,6 +2,8 @@
 title: Dod o Hyd i Gyllid
 summary: Syniadau cyffredinol ac awgrymiadau ar gyfer dod o hyd i gyllid ar
   gyfer eich prosiectau
+relatedGuides:
+  - Bank Accounts For Groups
 ---
 ## Cyngor cyffredinol am gyllid
 
