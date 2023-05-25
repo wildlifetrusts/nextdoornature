@@ -1,6 +1,8 @@
 ---
 title: Rheoli gofod gwyrdd yn eich ardal
 summary: Crynodeb o sut i ddechrau cymryd drosodd darn o fannau gwyrdd
+relatedGuides:
+  - Insurance for Local Groups
 ---
 Canllawiau i Gymru yn unig. Mae gan yr Alban, Gogledd Iwerddon a Lloegr gyngor gwahanol. Edrychwch ar y dogfennau ar wahân.
 
