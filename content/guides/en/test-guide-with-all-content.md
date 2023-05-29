@@ -9,7 +9,7 @@ video:
   src: https://www.youtube.com/embed/Hgw9oXeWJFQ
   title: Wildlife Trusts - Meet our staff
 relatedGuides:
-  - Test guide
+  - All About Councils and Local Authorities
 relatedStories:
   - Test story with minimal fields
 ---
