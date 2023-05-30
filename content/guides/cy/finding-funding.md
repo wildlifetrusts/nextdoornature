@@ -7,6 +7,7 @@ image:
   credit: Photo copyright Autumn Barlow/The Wildlife Trusts 2023
 relatedGuides:
   - Bank Accounts For Groups
+  - How to Apply for Funding
 ---
 ## Cyngor cyffredinol am gyllid
 
