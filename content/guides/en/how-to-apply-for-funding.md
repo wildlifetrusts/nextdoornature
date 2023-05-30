@@ -1,6 +1,11 @@
 ---
 title: How to Apply for Funding
 summary: A summary of what you need to do when you are thinking of applying for funding
+image:
+  src: /public/images/uploads/how-to-apply-for-funding_orig-2-.jpg
+  alt: A brown notebook with the word "plans" on the front surrounded by green
+    plants
+  credit: Photo copyright Autumn Barlow/The Wildlife Trusts 2023
 relatedGuides:
   - "Finding Funding "
   - Bank Accounts For Groups
