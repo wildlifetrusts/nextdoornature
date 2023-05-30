@@ -7,6 +7,8 @@ image:
   alt: An image of two holy books surrounded by green plants
   credit: Image copyright Autumn Barlow/The Wildlife Trusts 2023
 video: null
+relatedGuides:
+  - "Finding Funding "
 ---
 
 
