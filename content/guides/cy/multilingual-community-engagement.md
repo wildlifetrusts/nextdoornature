@@ -1,6 +1,10 @@
 ---
 title: Ymgysylltu Cymunedol Amlieithog
 summary: Crynodeb am weithio gyda grwpiau lle siaredir llawer o ieithoedd.
+image:
+  src: /public/images/uploads/workingwithmanylanguages_orig-2-.jpg
+  alt: A stack of small dictionaries in other languages
+  credit: Photo copyright Autumn Barlow/The Wildlife Trusts 2023
 ---
 ## Adnabod yr angen 
 
