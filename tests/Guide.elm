@@ -57,9 +57,11 @@ suite =
                 ]
             }
 
+        allGuideList : List GuideListItem
         allGuideList =
             []
 
+        allStoryList : List StoryTeaser
         allStoryList =
             []
 
