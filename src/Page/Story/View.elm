@@ -1,6 +1,6 @@
 module Page.Story.View exposing (view)
 
-import Css exposing (Style, backgroundColor, batch, hex, initial, margin3, minWidth, px, rem, width)
+import Css exposing (Style, backgroundColor, batch, hex, initial, margin3, maxWidth, pct, px, rem, width)
 import Html.Styled exposing (Html, div, h1, img, p, text)
 import Html.Styled.Attributes exposing (alt, css, src)
 import Message exposing (Msg)
@@ -16,7 +16,7 @@ view story =
         [ h1 [] [ text story.title ]
         , div [ css [ contentWrapper ] ]
             [ div [ css [ topTwoColumnsWrapperStyle ] ]
-                [ div [ css [ imageColumnStyle, pageColumnStyle ] ]
+                [ div [ css [ pageColumnStyle ] ]
                     [ div []
                         [ case story.maybeGroupOrIndividual of
                             Just groupOrIndividual ->
@@ -46,7 +46,7 @@ viewImages imageList =
     List.map
         (\image ->
             div []
-                [ img [ src image.src, alt image.alt, css [ roundedCornerStyle, featureImageStyle ] ] []
+                [ img [ src image.src, alt image.alt, css [ roundedCornerStyle, featureImageStyle, imageSizeFixStyle ] ] []
                 , viewImageCaption (maybeCaptions image.maybeCaption image.maybeCredit)
                 ]
         )
@@ -72,15 +72,6 @@ viewColumnWrapper content =
 
     else
         text ""
-
-
-imageColumnStyle : Style
-imageColumnStyle =
-    batch
-        [ withMediaTabletPortraitUp
-            [ minWidth initial
-            ]
-        ]
 
 
 maybeCaptions : Maybe String -> Maybe String -> Maybe String
@@ -125,3 +116,10 @@ imageCaptionStyle : Style
 imageCaptionStyle =
     batch
         [ margin3 (rem 0) (rem 0) (rem 1) ]
+
+
+imageSizeFixStyle : Style
+imageSizeFixStyle =
+    batch
+        [ maxWidth (pct 100)
+        ]
