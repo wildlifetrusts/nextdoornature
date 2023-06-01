@@ -153,7 +153,7 @@ collections:
   - name: "pages"
     label: "Pages"
     folder: "content/pages"
-    create: true
+    create: false
     slug: "{{slug}}"
     i18n: true
     fields:
