@@ -1,7 +1,7 @@
 module Page.Story.View exposing (view)
 
-import Css exposing (Style, batch, margin3, rem)
-import Html.Styled exposing (Html, div, h1, img, p, text)
+import Css exposing (Style, batch, margin3, pct, rem, width)
+import Html.Styled exposing (Html, div, h1, h2, h3, img, p, text)
 import Html.Styled.Attributes exposing (alt, css, src)
 import Message exposing (Msg)
 import Page.Guides.View
@@ -14,19 +14,26 @@ view : Page.Story.Data.Story -> Html Msg
 view story =
     div [ css [ centerContent ] ]
         [ h1 [] [ text story.title ]
-        , div [ css [ contentWrapper ] ]
+        , h2 [] [ text story.summary ]
+        , div [ css [ contentWrapper, width (pct 100) ] ]
             [ div [ css [ topTwoColumnsWrapperStyle ] ]
                 [ div [ css [ pageColumnStyle ] ]
                     [ div []
                         [ case story.maybeGroupOrIndividual of
                             Just groupOrIndividual ->
-                                p [] [ text groupOrIndividual ]
+                                div []
+                                    [ h3 [] [ text "Who" ]
+                                    , p [] [ text groupOrIndividual ]
+                                    ]
 
                             Nothing ->
                                 text ""
                         , case story.maybeLocation of
                             Just location ->
-                                p [] [ text location ]
+                                div []
+                                    [ h3 [] [ text "Where" ]
+                                    , p [] [ text location ]
+                                    ]
 
                             Nothing ->
                                 text ""

@@ -1,6 +1,6 @@
 module Theme.Global exposing (centerContent, contentWrapper, featureImageStyle, globalStyles, lightTeal, listStyleNone, pageColumnBlockStyle, pageColumnStyle, purple, roundedCornerStyle, teal, teaserContainerStyle, teaserImageStyle, teaserRowStyle, teasersContainerStyle, topTwoColumnsWrapperStyle, white, withMediaMobileUp, withMediaTabletPortraitUp)
 
-import Css exposing (Color, Style, alignItems, auto, backgroundImage, backgroundPosition, backgroundRepeat, backgroundSize, batch, borderBottomRightRadius, borderTopLeftRadius, borderTopRightRadius, boxSizing, center, color, column, contain, contentBox, cover, cursor, display, displayFlex, em, ex, flex, flex3, flexDirection, flexStart, flexWrap, fontFamilies, height, hex, hidden, inherit, inlineBlock, int, justifyContent, lastChild, listStyle, margin, margin2, marginBottom, marginLeft, marginRight, marginTop, maxWidth, minWidth, noRepeat, noWrap, none, overflow, padding, padding2, paddingLeft, pct, pointer, property, pseudoElement, px, rem, row, spaceBetween, textDecoration, url, width, wrap, zero)
+import Css exposing (Color, Style, alignItems, auto, backgroundImage, backgroundPosition, backgroundRepeat, backgroundSize, batch, borderBottomRightRadius, borderTopLeftRadius, borderTopRightRadius, boxSizing, center, color, column, contain, contentBox, cover, cursor, display, displayFlex, em, ex, flex, flex3, flexDirection, flexStart, flexWrap, fontFamilies, height, hex, hidden, inherit, inlineBlock, int, justifyContent, lastChild, listStyle, margin, margin2, margin3, marginBottom, marginLeft, marginRight, marginTop, maxWidth, minWidth, noRepeat, noWrap, none, overflow, padding, padding2, paddingLeft, pct, pointer, property, pseudoElement, px, rem, row, spaceBetween, textDecoration, url, width, wrap, zero)
 import Css.Global exposing (global, typeSelector)
 import Css.Media as Media exposing (only, screen, withMedia)
 import Html.Styled exposing (Html)
@@ -118,23 +118,26 @@ globalStyles =
         , typeSelector "h1"
             [ fontFamilies [ "Adelle", "serif" ]
             , color purple
-            , Theme.FluidScale.fontSize4
+            , Theme.FluidScale.fontSize1
             , width (pct 100)
             ]
         , typeSelector "h2"
             [ fontFamilies [ "Adelle", "serif" ]
             , color purple
-            , Theme.FluidScale.fontSize3
+            , marginTop (rem 0)
+            , Theme.FluidScale.fontSize2
+            , width (pct 100)
             ]
         , typeSelector "h3"
             [ fontFamilies [ "Adelle", "serif" ]
             , color purple
-            , Theme.FluidScale.fontSize2
+            , margin (rem 0)
+            , Theme.FluidScale.fontSize3
             ]
         , typeSelector "h4"
             [ fontFamilies [ "Adelle", "serif" ]
             , color purple
-            , Theme.FluidScale.fontSize1
+            , Theme.FluidScale.fontSize4
             ]
         , typeSelector "a"
             [ color purple
@@ -294,6 +297,7 @@ contentWrapper =
         , flexDirection column
         , flexWrap noWrap
         , justifyContent center
+        , width auto
         , withMediaTabletLandscapeUp
             [ alignItems flexStart
             , flexDirection row
@@ -310,11 +314,13 @@ topTwoColumnsWrapperStyle =
         , flexWrap noWrap
         , justifyContent center
         , marginBottom (rem 3)
-        , width auto
+        , width (pct 100)
+        , withMediaTabletLandscapeUp
+            [ marginRight (rem 3)
+            ]
         , withMediaTabletPortraitUp
             [ flex (int 2)
             , flexDirection row
-            , marginRight (rem 3)
             ]
         ]
 
