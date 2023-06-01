@@ -1,11 +1,12 @@
 module Page.Story.View exposing (view)
 
+import Css exposing (Style, backgroundColor, batch, hex, initial, minWidth, px, width)
 import Html.Styled exposing (Html, div, h1, img, p, text)
 import Html.Styled.Attributes exposing (alt, css, src)
 import Message exposing (Msg)
 import Page.Guides.View
 import Page.Story.Data
-import Theme.Global exposing (centerContent, contentWrapper, featureImageStyle, pageColumnStyle, roundedCornerStyle, topTwoColumnsWrapperStyle)
+import Theme.Global exposing (centerContent, contentWrapper, featureImageStyle, pageColumnStyle, roundedCornerStyle, topTwoColumnsWrapperStyle, withMediaTabletPortraitUp)
 import Theme.Markdown exposing (markdownToHtml)
 
 
@@ -15,7 +16,7 @@ view story =
         [ h1 [] [ text story.title ]
         , div [ css [ contentWrapper ] ]
             [ div [ css [ topTwoColumnsWrapperStyle ] ]
-                [ div [ css [ pageColumnStyle ] ]
+                [ div [ css [ imageColumnStyle, pageColumnStyle ] ]
                     [ div []
                         [ case story.maybeGroupOrIndividual of
                             Just groupOrIndividual ->
@@ -60,3 +61,12 @@ viewColumnWrapper content =
 
     else
         text ""
+
+
+imageColumnStyle : Style
+imageColumnStyle =
+    batch
+        [ withMediaTabletPortraitUp
+            [ minWidth initial
+            ]
+        ]
