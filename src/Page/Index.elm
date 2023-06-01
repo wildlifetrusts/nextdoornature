@@ -1,6 +1,6 @@
 module Page.Index exposing (view)
 
-import Html.Styled exposing (Html, div, p, text)
+import Html.Styled exposing (Html, div, h1, p, text)
 import Html.Styled.Attributes exposing (css)
 import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (translate)
@@ -18,22 +18,26 @@ view model =
         t =
             translate model.language
     in
-    div [ css [ centerContent, contentWrapper ] ]
-        [ div [ css [ topTwoColumnsWrapperStyle ] ]
-            [ div [ css [ pageColumnStyle ] ]
-                (viewTextColumn t [ WelcomeP1, WelcomeP2, WelcomeP3 ])
+    div [ css [ centerContent ] ]
+        [ h1 []
+            [ text (t HomeTitle) ]
+        , div [ css [ contentWrapper ] ]
+            [ div [ css [ topTwoColumnsWrapperStyle ] ]
+                [ div [ css [ pageColumnStyle ] ]
+                    (viewTextColumn t [ WelcomeP1, WelcomeP2, WelcomeP3 ])
+                , div [ css [ pageColumnStyle ] ]
+                    [ List.take 4 (Page.Guides.Data.teaserListFromGuideDict model.language model.content.guides)
+                        |> Page.Guides.View.viewGuideTeaserList False
+                    ]
+                ]
             , div [ css [ pageColumnStyle ] ]
-                [ List.take 4 (Page.Guides.Data.teaserListFromGuideDict model.language model.content.guides)
-                    |> Page.Guides.View.viewGuideTeaserList False
-                ]
+                (viewTextColumn t
+                    [ ExploreGuidesListPlaceholder
+                    , ExploreGuidesListPlaceholder
+                    , ExploreGuidesListPlaceholder
+                    ]
+                )
             ]
-        , div [ css [ pageColumnStyle ] ]
-            (viewTextColumn t
-                [ ExploreGuidesListPlaceholder
-                , ExploreGuidesListPlaceholder
-                , ExploreGuidesListPlaceholder
-                ]
-            )
         ]
 
 

@@ -1,6 +1,6 @@
-module Theme.Global exposing (centerContent, contentWrapper, featureImageStyle, globalStyles, lightTeal, listStyleNone, pageColumnBlockStyle, pageColumnStyle, purple, roundedCornerStyle, teal, teaserContainerStyle, teaserImageStyle, teaserRowStyle, teasersContainerStyle, topTwoColumnsWrapperStyle, white, withMediaMobileUp, withMediaTabletPortraitUp)
+module Theme.Global exposing (borderWrapper, centerContent, contentWrapper, featureImageStyle, globalStyles, lightTeal, listStyleNone, pageColumnBlockStyle, pageColumnStyle, purple, roundedCornerStyle, teal, teaserContainerStyle, teaserImageStyle, teaserRowStyle, teasersContainerStyle, topTwoColumnsWrapperStyle, white, withMediaMobileUp, withMediaTabletPortraitUp)
 
-import Css exposing (Color, Style, alignItems, auto, backgroundImage, backgroundPosition, backgroundRepeat, backgroundSize, batch, borderBottomRightRadius, borderTopLeftRadius, borderTopRightRadius, boxSizing, center, color, column, contain, contentBox, cover, cursor, display, displayFlex, em, ex, flex, flex3, flexDirection, flexStart, flexWrap, fontFamilies, height, hex, hidden, inherit, inlineBlock, int, justifyContent, lastChild, listStyle, margin, margin2, marginBottom, marginLeft, marginRight, marginTop, maxWidth, minWidth, noRepeat, noWrap, none, overflow, padding, padding2, paddingLeft, pct, pointer, property, pseudoElement, px, rem, row, spaceBetween, textDecoration, url, width, wrap, zero)
+import Css exposing (Color, Style, alignItems, auto, backgroundImage, backgroundPosition, backgroundRepeat, backgroundSize, batch, border3, borderBottomRightRadius, borderTopLeftRadius, borderTopRightRadius, boxSizing, center, color, column, contain, contentBox, cover, cursor, display, displayFlex, em, ex, flex, flex3, flexDirection, flexStart, flexWrap, fontFamilies, height, hex, hidden, inherit, inlineBlock, int, justifyContent, lastChild, listStyle, margin, margin2, margin3, marginBottom, marginLeft, marginRight, marginTop, maxWidth, minWidth, noRepeat, noWrap, none, overflow, padding, padding2, paddingLeft, pct, pointer, property, pseudoElement, px, rem, row, solid, spaceBetween, textDecoration, url, width, wrap, zero)
 import Css.Global exposing (global, typeSelector)
 import Css.Media as Media exposing (only, screen, withMedia)
 import Html.Styled exposing (Html)
@@ -118,6 +118,7 @@ globalStyles =
         , typeSelector "h1"
             [ fontFamilies [ "Adelle", "serif" ]
             , color purple
+            , margin3 (rem 0) auto (rem 2)
             , Theme.FluidScale.fontSize4
             , width (pct 100)
             ]
@@ -271,17 +272,11 @@ centerContent =
         , flexDirection column
         , margin auto
         , maxWidth (px maxSmallDesktop)
-        , margin (rem 0)
-        , padding2 (rem 2) (rem 1)
+        , margin2 (rem 0) auto
+        , padding (rem 1)
         , width auto
         , withMediaTabletPortraitUp
-            [ padding (rem 3)
-            ]
-        , withMediaTabletLandscapeUp
-            [ padding2 (rem 4) (rem 3)
-            ]
-        , withMediaDesktopUp
-            [ margin2 (rem 0) auto
+            [ padding2 (rem 1) (rem 3)
             ]
         ]
 
@@ -365,4 +360,11 @@ pageColumnBlockStyle =
         , lastChild
             [ marginBottom (rem 0)
             ]
+        ]
+
+
+borderWrapper : Style
+borderWrapper =
+    batch
+        [ border3 (rem 0.5) solid teal
         ]
