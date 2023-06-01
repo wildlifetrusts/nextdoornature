@@ -1,4 +1,4 @@
-module Page.Guides.Data exposing (actionTeaserDecoder, actionTeaserListDecoder, guideTeaserDecoder, guideTeaserListEncoder, guideTeaserListString, internalGuideTeaserDecoder, internalGuideTeaserListDecoder, teaserListFromGuideDict)
+module Page.Guides.Data exposing (actionTeaserDecoder, actionTeaserListDecoder, guideTeaserDecoder, guideTeaserListEncoder, guideTeaserListString, internalGuideTeaserDecoder, internalGuideTeaserListDecoder, teaserListFromGuideDict, featuredGuides)
 
 import Dict
 import I18n.Translate exposing (Language)
@@ -44,6 +44,13 @@ guideTeaserListString guideTeaserList =
 guideTeaserListEncoder : List Page.Shared.Data.GuideTeaser -> Encode.Value
 guideTeaserListEncoder guideTeasers =
     Encode.list guideTeaserEncoder guideTeasers
+
+
+featuredGuides : Page.Guide.Data.Guides -> Dict.Dict String Page.Guide.Data.Guide
+featuredGuides guides =
+    Dict.filter
+        (\(_, guide) -> Maybe.withDefault "" guide.maybeFeatured == "True")
+        guides.en
 
 
 teaserListFromGuideDict :

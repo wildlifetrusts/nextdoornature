@@ -13,6 +13,7 @@ relatedGuides:
   - "Finding Funding "
 relatedStories:
   - Test story with minimal fields
+featured: True
 ---
 
 \#﻿# Test guide with lots of info
