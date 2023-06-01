@@ -7,7 +7,7 @@ enStrings : Key -> String
 enStrings key =
     case key of
         SiteTitle ->
-            "The Nextdoor Nature Library"
+            "The Nextdoor Nature Hub"
 
         ---
         -- Header
@@ -49,7 +49,7 @@ enStrings key =
             "[cCc] Find out more"
 
         FooterTitleColumnB ->
-            "[cCc] Explore the library"
+            "[cCc] Explore the hub"
 
         FooterGuidesLinkText ->
             "[cCc] Browse our guides"
@@ -90,7 +90,7 @@ enStrings key =
             "Nextdoor Nature"
 
         FooterCharityInfo ->
-            "[cCc] The Nextdoor Nature online library is a project by the Wildlife Trusts: Protecting Wildlife for the Future"
+            "[cCc] The Nextdoor Nature hub is a project by the Wildlife Trusts: Protecting Wildlife for the Future"
 
         RegisteredCharityNumber ->
             "Registered charity number 20723"
@@ -125,7 +125,7 @@ enStrings key =
             "[cCc] With the climate and environmental crisis ever worsining, it's important to recognise that there are actions all of us can take that can meaniningfully make a difference. It's easy to feel powerless, but in fact, together we are powerful!"
 
         WelcomeP3 ->
-            "[cCc] The goal of Nextdoor Nature is to get at least 1 in 4 people across the UK taking Action for Nature. This online library aims to support anyone who is interested in finding out what they can do, and how they can get other people involved."
+            "[cCc] The goal of Nextdoor Nature is to get at least 1 in 4 people across the UK taking Action for Nature. This hub aims to support anyone who is interested in finding out what they can do, and how they can get other people involved."
 
         ---
         -- Guide Page
@@ -143,7 +143,7 @@ enStrings key =
             "[cCc] Guides"
 
         SearchPlaceholder ->
-            "Search the library"
+            "Search the hub"
 
         ExploreGuidesListPlaceholder ->
             "[cCc] Explore guides by theme"
