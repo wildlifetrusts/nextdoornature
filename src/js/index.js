@@ -1,4 +1,4 @@
-import reset from "/src/css/reset.css?inline";
+import "/src/css/reset.css";
 import { Elm } from "/src/Main.elm";
 import SearchInput from "/src/js/search";
 
