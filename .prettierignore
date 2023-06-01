@@ -14,3 +14,5 @@ package-lock.json
 # build files
 dist
 
+#cms generated files
+content

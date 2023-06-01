@@ -29,7 +29,5 @@
   },
   "dependencies": {
     "fuse.js": "^6.6.2"
-  },
-  "lint-staged": {
-    "ignore": ["content"]  }
+  }
 }
