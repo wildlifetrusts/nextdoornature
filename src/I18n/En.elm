@@ -118,6 +118,9 @@ enStrings key =
         ---
         -- Index page
         ---
+        HomeTitle ->
+            "Welcome to the nextdoor nature hub"
+
         WelcomeP1 ->
             "[cCc] Nextdoor Nature is an initiative launched by the Wilidlife Trusts in 2022. (Read more here) The aim of Nextdoor Nature is to equip everyone with the skills and knowledge they need to make a positive difference for nature - in their own area, and beyond."
 
