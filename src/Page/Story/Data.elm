@@ -29,6 +29,8 @@ type alias Story =
 type alias Image =
     { alt : String
     , src : String
+    , maybeCaption : Maybe String
+    , maybeCredit : Maybe String
     }
 
 
@@ -88,9 +90,11 @@ storyDictDecoder =
 
 imageDecoder : Json.Decode.Decoder Image
 imageDecoder =
-    Json.Decode.map2 Image
+    Json.Decode.map4 Image
         (Json.Decode.field "alt" Json.Decode.string)
         (Json.Decode.field "src" Json.Decode.string)
+        (Json.Decode.maybe (Json.Decode.field "caption" Json.Decode.string))
+        (Json.Decode.maybe (Json.Decode.field "credit" Json.Decode.string))
 
 
 storyLanguageDictDecoder : Json.Decode.Decoder Stories
