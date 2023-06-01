@@ -197,11 +197,15 @@ viewStoryImage maybeImage =
                 Just anImage ->
                     { alt = anImage.alt
                     , src = anImage.src
+                    , maybeCaption = anImage.maybeCaption
+                    , maybeCredit = anImage.maybeCredit
                     }
 
                 Nothing ->
                     { alt = ""
                     , src = Page.Story.Data.defaultStoryImageSrc
+                    , maybeCaption = Nothing
+                    , maybeCredit = Nothing
                     }
     in
     img
