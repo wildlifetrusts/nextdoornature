@@ -1,6 +1,6 @@
 module Page.Guide.View exposing (view)
 
-import Css exposing (Style, batch, center, column, displayFlex, flexDirection, flexWrap, fontFamilies, justifyContent, listStyle, marginTop, maxWidth, none, paddingLeft, px, wrap, zero)
+import Css exposing (Style, batch, center, column, displayFlex, flexDirection, flexWrap, fontFamilies, justifyContent, listStyle, marginTop, maxWidth, none, padding2, paddingLeft, px, wrap, zero)
 import Html.Styled exposing (Html, a, div, h1, h2, img, li, text, ul)
 import Html.Styled.Attributes exposing (alt, css, href, src)
 import I18n.Keys exposing (Key(..))
@@ -197,11 +197,15 @@ viewStoryImage maybeImage =
                 Just anImage ->
                     { alt = anImage.alt
                     , src = anImage.src
+                    , maybeCaption = anImage.maybeCaption
+                    , maybeCredit = anImage.maybeCredit
                     }
 
                 Nothing ->
                     { alt = ""
                     , src = Page.Story.Data.defaultStoryImageSrc
+                    , maybeCaption = Nothing
+                    , maybeCredit = Nothing
                     }
     in
     img

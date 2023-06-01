@@ -2,6 +2,11 @@
 title: Sut i Wneud Cais am Gyllid
 summary: Crynodeb o'r hyn sydd angen i chi ei wneud pan fyddwch yn ystyried
   gwneud cais am gyllid
+image:
+  alt: A brown notebook with the word "plans" on the front surrounded by green
+    plants
+  credit: Photo copyright Autumn Barlow/The Wildlife Trusts 2023
+  src: /public/images/uploads/how-to-apply-for-funding_orig-2-.jpg
 relatedGuides:
   - "Finding Funding "
   - Bank Accounts For Groups

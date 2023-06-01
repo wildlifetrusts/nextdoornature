@@ -7,7 +7,7 @@ import Html.Styled.Attributes exposing (css)
 import Message exposing (Msg)
 import Shared exposing (Model)
 import Theme.FooterTemplate as FooterTemplate
-import Theme.Global exposing (globalStyles, lightTeal, teal)
+import Theme.Global exposing (borderWrapper, globalStyles, lightTeal, teal)
 import Theme.HeaderTemplate as HeaderTemplate
 
 
@@ -38,6 +38,6 @@ pageWrapperStyles =
 mainContainerStyles : Style
 mainContainerStyles =
     batch
-        [ border3 (rem 0.5) solid teal
+        [ borderWrapper
         , backgroundColor lightTeal
         ]

@@ -1,7 +1,7 @@
 module Theme.HeaderTemplate exposing (view)
 
 import Css exposing (Style, absolute, alignItems, backgroundColor, backgroundImage, backgroundPosition, backgroundRepeat, backgroundSize, baseline, batch, border, border3, borderRadius, bottom, boxShadow, center, color, column, contain, display, displayFlex, em, flexDirection, flexEnd, flexStart, flexWrap, focus, fontFamilies, fontSize, fontWeight, height, inlineBlock, int, justifyContent, left, lineHeight, margin, margin2, margin4, marginBottom, marginLeft, marginRight, marginTop, minWidth, noRepeat, noWrap, none, normal, outline, padding, padding4, pct, position, pseudoElement, px, relative, rem, right, row, solid, spaceBetween, textAlign, top, url, width, zero)
-import Html.Styled exposing (Html, a, button, div, h1, header, img, input, label, node, text)
+import Html.Styled exposing (Html, a, button, div, header, img, input, label, node, text)
 import Html.Styled.Attributes exposing (attribute, css, href, id, placeholder, src, type_)
 import Html.Styled.Events exposing (on, onClick)
 import I18n.Keys exposing (Key(..))
@@ -14,7 +14,7 @@ import Page.Shared.Data
 import Route exposing (Route(..))
 import Shared exposing (Model, Request(..))
 import Theme.FluidScale
-import Theme.Global exposing (centerContent, purple, teal, white, withMediaMobileUp)
+import Theme.Global exposing (borderWrapper, centerContent, purple, teal, white, withMediaMobileUp)
 
 
 view : Model -> Html Msg
@@ -27,7 +27,7 @@ view model =
     header [ css [ headerOuterStyle ] ]
         [ div [ css [ centerContent ] ]
             [ div [ css [ headerContainerStyle ] ]
-                [ viewSiteTitle model.page (t SiteTitle)
+                [ viewSiteTitle (t SiteTitle)
                 , div [ css [ searchButtonsContainerStyle ] ]
                     [ button [ css [ headerBtnStyle ], onClick LanguageChangeRequested ]
                         [ text (t ChangeLanguage) ]
@@ -43,24 +43,20 @@ view model =
         ]
 
 
-viewSiteTitle : Route -> String -> Html Msg
-viewSiteTitle route siteTitle =
-    if route == Index then
-        h1 [ css [ headerBrandStyle ] ] [ text siteTitle ]
-
-    else
-        div [ css [ headerBrandStyle ] ]
-            [ a
-                [ href "/"
-                , css
-                    [ headerLinkStyle
-                    , pseudoElement "after"
-                        [ display none ]
-                    ]
-                ]
-                [ text siteTitle
+viewSiteTitle : String -> Html Msg
+viewSiteTitle siteTitle =
+    div [ css [ headerBrandStyle ] ]
+        [ a
+            [ href "/"
+            , css
+                [ headerLinkStyle
+                , pseudoElement "after"
+                    [ display none ]
                 ]
             ]
+            [ text siteTitle
+            ]
+        ]
 
 
 searchInput : Model -> Html Msg
@@ -120,6 +116,7 @@ headerOuterStyle : Style
 headerOuterStyle =
     batch
         [ backgroundColor teal
+        , borderWrapper
         , color white
         ]
 
@@ -149,7 +146,6 @@ searchButtonsContainerStyle =
         , flexWrap noWrap
         , justifyContent center
         , marginTop (rem 2)
-        , marginBottom (rem 0.3)
         , withMediaMobileUp
             [ margin2 (rem 2) (rem 0)
             , alignItems flexEnd

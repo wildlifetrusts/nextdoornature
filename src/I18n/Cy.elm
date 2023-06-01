@@ -7,7 +7,7 @@ cyStrings : Key -> String
 cyStrings key =
     case key of
         SiteTitle ->
-            "[cCc] Nextdoor Nature CY"
+            "[cCc] Hwb Natur Drws-nesaf"
 
         GuidesTitle ->
             "[cCc] Guides CY"
@@ -39,7 +39,7 @@ cyStrings key =
             "https://www.wildlifetrusts.org/wildlife-trusts"
 
         FooterSiteLogo ->
-            "[cCc] Nextdoor Nature CY"
+            "[cCc] Natur Drws-nesaf"
 
         SearchPlaceholder ->
             "[cCc] Cy label"
