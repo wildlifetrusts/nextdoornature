@@ -1,6 +1,6 @@
 module Page.Story.View exposing (view)
 
-import Css exposing (Style, backgroundColor, batch, hex, initial, minWidth, px, width, margin3, rem)
+import Css exposing (Style, backgroundColor, batch, hex, initial, margin3, minWidth, px, rem, width)
 import Html.Styled exposing (Html, div, h1, img, p, text)
 import Html.Styled.Attributes exposing (alt, css, src)
 import Message exposing (Msg)
@@ -81,6 +81,7 @@ imageColumnStyle =
             [ minWidth initial
             ]
         ]
+
 
 maybeCaptions : Maybe String -> Maybe String -> Maybe String
 maybeCaptions maybeImageCaption maybeImageCredit =
