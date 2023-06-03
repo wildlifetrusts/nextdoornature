@@ -5,6 +5,8 @@ image:
   src: /public/images/uploads/contact-your-mp_orig-2-.jpg
   credit: Photo copyright Autumn Barlow/The Wildlife Trusts 2023
   alt: An address book, an envelope and a stamp
+relatedGuides:
+  - All About Councils and Local Authorities
 ---
 Mae aelod seneddol, neu AS, ar gyfer pob ardal yn y DU. Yr enw ar bob ardal yw ‘etholaeth’. Gallwch gysylltu â'ch AS drwy lythyr neu e-bost.
 Cewch weld pwy yw eich AS gyda'r adnodd ar-lein yma. Cliciwch ar y ddolen [yma.](https://members.parliament.uk/FindYourMP) Nodwch eich cod post yn y bocs cyntaf, a chlicio ar y botwm glas, ‘search.’
