@@ -1,6 +1,10 @@
 ---
 title: "Making sure everyone can access your group or project "
 summary: Information about ensuring your projects are accessible to everyone.
+image:
+  src: /public/images/uploads/accessibility_orig-2-.jpg
+  alt: A bolted, locked gate
+  credit: Photo copyright Autumn Barlow/The Wildlife Trusts 2023
 ---
 
 This information will not cover accessibility at events. That is a separate document.
