@@ -11,6 +11,8 @@ images:
 summary: The elders who use the Hadhari Centre in Derby would like a nicer place
   to sit out and enjoy nature, and perhaps somewhere to grow food.
 ---
+#﻿# A city centre community garden
+
 In late 2022, Adam began to work with the Hadhari Centre which offers food and companionship to the elders in Derby's West Indian community. The city centre building has some unused outside space.
 
 T﻿he residents who use the centre wanted to be able to sit outside and watch the birds and relax. But as the centre also runs a lunch club, the community decided they also wanted to grow some vegetables they could use in the kitchens.
