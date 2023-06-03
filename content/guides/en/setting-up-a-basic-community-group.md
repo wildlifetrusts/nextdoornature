@@ -2,6 +2,12 @@
 title: Setting up a Basic Community Group
 summary: This guide explains how to set up a basic community group or
   unincorporated association.
+image:
+  src: /public/images/uploads/setting-up-community-group_orig-2-.jpg
+  alt: An image of a notebook with pens
+  credit: Image copyright Autumn Barlow/The Wildlife Trusts 2023
+relatedGuides:
+  - Types of Community Group (England and Wales)
 ---
 The easiest group to set up is called an “unincorporated association”. You need to write a “constitution” or “governing document”. This is a list of rules for the group. It also says what your group’s going to do, and how it’s going to do it.
 
