@@ -1,6 +1,12 @@
 ---
 title: How to contact your MP, MS (Wales), MLA (Northern Ireland) or MSP (Scotland)
 summary: How to find your MP and how to get in touch with them
+image:
+  src: /public/images/uploads/contact-your-mp_orig-2-.jpg
+  alt: An address book, an envelope and a stamp
+  credit: Photo copyright Autumn Barlow/The Wildlife Trusts 2023
+relatedGuides:
+  - All About Councils and Local Authorities
 ---
 There is a member of parliament, or MP, for every area in the UK. Each area is called a ‘constituency.’ You can contact your MP by letter or by email.
 In **Scotland**, you will also have an MSP – Member of Scottish Parliament. There are 59 MPs in Scotland, and 129 MSPs. They are elected in separate elections. 
