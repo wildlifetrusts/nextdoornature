@@ -46,7 +46,7 @@ viewImages imageList =
     List.map
         (\image ->
             div []
-                [ img [ src image.src, alt image.alt, css [ roundedCornerStyle, featureImageStyle, imageSizeFixStyle ] ] []
+                [ img [ src image.src, alt image.alt, css [ roundedCornerStyle, featureImageStyle ] ] []
                 , viewImageCaption (maybeCaptions image.maybeCaption image.maybeCredit)
                 ]
         )
@@ -116,10 +116,3 @@ imageCaptionStyle : Style
 imageCaptionStyle =
     batch
         [ margin3 (rem 0) (rem 0) (rem 1) ]
-
-
-imageSizeFixStyle : Style
-imageSizeFixStyle =
-    batch
-        [ maxWidth (pct 100)
-        ]
