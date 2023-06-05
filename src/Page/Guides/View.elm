@@ -40,7 +40,13 @@ view model =
     in
     div [ css [ centerContent ] ]
         [ h1 []
-            [ text (t GuidesTitle) ]
+            [ text <|
+                if String.length model.query > 0 then
+                    t <| GuidesTitleFiltered (String.fromInt <| List.length model.search) model.query
+
+                else
+                    t GuidesTitle
+            ]
         , div
             [ css [ contentWrapper ] ]
             [ viewGuideTeaserList True teaserList

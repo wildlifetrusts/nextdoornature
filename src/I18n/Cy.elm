@@ -12,6 +12,9 @@ cyStrings key =
         GuidesTitle ->
             "[cCc] Guides CY"
 
+        GuidesTitleFiltered num query ->
+            num ++ " CY guides on '" ++ query ++ "' [cCc]"
+
         ChangeLanguage ->
             "[cCc] Switch to English"
 
