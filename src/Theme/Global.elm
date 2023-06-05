@@ -245,7 +245,6 @@ featureImageStyle =
     batch
         [ width (pct 100)
         , height auto
-        , maxWidth (pct 100)
         , teaserRowStyle
         ]
 
