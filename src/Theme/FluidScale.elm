@@ -1,4 +1,4 @@
-module Theme.FluidScale exposing (fontSize1, fontSize2, fontSize3, fontSize4, fontSize5, logoContainer)
+module Theme.FluidScale exposing (fontSizeBase, fontSizeExtraLarge, fontSizeHeaderBrand, fontSizeLarge, fontSizeMedium, logoContainer)
 
 -- Commented out currently unused: fontSize0, fontSizeMinus1, fontSizeMinus2
 
@@ -36,9 +36,9 @@ import Css exposing (Style, property)
     @screen width 1240px font-size = 25.0px
 
 -}
-fontSize1 : Style
-fontSize1 =
-    property "font-size" "clamp(1.20rem, calc(1.07rem + 0.63vw), 1.56rem)"
+fontSizeExtraLarge : Style
+fontSizeExtraLarge =
+    property "font-size" "clamp(1.8rem, calc(1.5rem + 1.70vw), 3rem)"
 
 
 {-| Fluid fontSize
@@ -47,9 +47,9 @@ fontSize1 =
     @screen width 1240px font-size = 31.2px
 
 -}
-fontSize2 : Style
-fontSize2 =
-    property "font-size" "clamp(1.44rem, calc(1.26rem + 0.89vw), 1.95rem)"
+fontSizeLarge : Style
+fontSizeLarge =
+    property "font-size" "clamp(1.2rem, calc(1rem + 0.89vw), 1.6rem)"
 
 
 {-| Fluid fontSize
@@ -58,9 +58,9 @@ fontSize2 =
     @screen width 1240px font-size = 39.0px
 
 -}
-fontSize3 : Style
-fontSize3 =
-    property "font-size" "clamp(1.73rem, calc(1.48rem + 1.24vw), 2.44rem)"
+fontSizeMedium : Style
+fontSizeMedium =
+    property "font-size" "clamp(1.20rem, calc(1rem + 0.43vw), 1.35rem)"
 
 
 {-| Fluid fontSize
@@ -69,9 +69,9 @@ fontSize3 =
     @screen width 1240px font-size = 48.8px
 
 -}
-fontSize4 : Style
-fontSize4 =
-    property "font-size" "clamp(2.07rem, calc(1.73rem + 1.70vw), 3.05rem)"
+fontSizeBase : Style
+fontSizeBase =
+    property "font-size" "clamp(1.20rem, calc(1.07rem + 0.63vw), 1.56rem)"
 
 
 {-| Fluid fontSize
@@ -80,8 +80,8 @@ fontSize4 =
     @screen width 1240px font-size = 12.8px
 
 -}
-fontSize5 : Style
-fontSize5 =
+fontSizeHeaderBrand : Style
+fontSizeHeaderBrand =
     property "font-size" "clamp(2.49rem, calc(2.03rem + 2.31vw), 3.82rem)"
 
 

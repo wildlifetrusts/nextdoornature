@@ -100,7 +100,7 @@ searchInput model =
 headerBrandStyle : Style
 headerBrandStyle =
     batch
-        [ Theme.FluidScale.fontSize5
+        [ Theme.FluidScale.fontSizeHeaderBrand
         , Theme.FluidScale.logoContainer
         , color white
         , fontFamilies [ "Ludicrous" ]

@@ -150,3 +150,12 @@ enStrings key =
 
         ExploreGuidesListPlaceholder ->
             "[cCc] Explore guides by theme"
+
+        ---
+        -- Story Page
+        ---
+        WhereSubHeading ->
+            "Where"
+
+        WhoSubHeading ->
+            "Who"

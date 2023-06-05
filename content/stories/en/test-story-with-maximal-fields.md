@@ -1,7 +1,7 @@
 ---
 title: Test story with maximal fields
 who: Test group
-location: In the United Kingdom
+location: The United Kingdom
 images: 
   - src: "/images/default-story-image.jpg"
     alt: "alt text"
@@ -13,8 +13,6 @@ images:
 summary: This is test story content, generated to populate the site before real
   content goes in.
 ---
-
-## My story
 
 A test story full of inspiration.
 
