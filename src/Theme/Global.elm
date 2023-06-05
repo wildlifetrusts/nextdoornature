@@ -241,11 +241,10 @@ teasersContainerStyle =
 featureImageStyle : Style
 featureImageStyle =
     batch
-        [ width (pct 100)
-        , height auto
-        , maxWidth (px (maxSmallDesktop / 3))
+        [ height auto
         , roundedCornerStyle
         , teaserRowStyle
+        , width (pct 100)
         ]
 
 
