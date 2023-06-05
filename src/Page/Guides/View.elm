@@ -102,7 +102,6 @@ viewGuideTeaserList includeSummary teasers =
     if List.length teasers > 0 then
         ul [ css [ Theme.Global.teasersContainerStyle ] ]
             (teasers
-                |> List.sortBy .title
                 |> List.map
                     (\teaser -> viewGuideTeaser includeSummary teaser)
             )

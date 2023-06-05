@@ -144,7 +144,11 @@ update msg model =
         GotActions result ->
             case result of
                 Ok list ->
-                    ( { model | externalActions = Success list }, Cmd.none )
+                    let
+                        actions =
+                            List.sortBy .title list
+                    in
+                    ( { model | externalActions = Success actions }, Cmd.none )
 
                 Err _ ->
                     ( { model | externalActions = Failure }, Cmd.none )
