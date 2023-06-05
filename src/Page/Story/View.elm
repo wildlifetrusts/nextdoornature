@@ -6,7 +6,7 @@ import Html.Styled.Attributes exposing (alt, css, src)
 import Message exposing (Msg)
 import Page.Guides.View
 import Page.Story.Data
-import Theme.Global exposing (centerContent, contentWrapper, featureImageStyle, pageColumnStyle, roundedCornerStyle, topTwoColumnsWrapperStyle)
+import Theme.Global exposing (centerContent, contentWrapper, featureImageStyle, pageColumnStyle, topTwoColumnsWrapperStyle)
 import Theme.Markdown exposing (markdownToHtml)
 
 
@@ -46,7 +46,7 @@ viewImages imageList =
     List.map
         (\image ->
             div []
-                [ img [ src image.src, alt image.alt, css [ roundedCornerStyle, featureImageStyle ] ] []
+                [ img [ src image.src, alt image.alt, css [ featureImageStyle ] ] []
                 , viewImageCaption (maybeCaptions image.maybeCaption image.maybeCredit)
                 ]
         )

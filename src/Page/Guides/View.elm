@@ -65,8 +65,7 @@ viewGuideTeaser includeSummary teaser =
             [ alt image.alt
             , src image.src
             , css
-                [ Theme.Global.roundedCornerStyle
-                , Theme.Global.teaserImageStyle
+                [ Theme.Global.teaserImageStyle
                 ]
             ]
             []

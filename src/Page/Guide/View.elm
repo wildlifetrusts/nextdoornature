@@ -1,6 +1,6 @@
 module Page.Guide.View exposing (view)
 
-import Css exposing (Style, batch, center, column, displayFlex, flexDirection, flexWrap, fontFamilies, justifyContent, listStyle, marginTop, maxWidth, none, padding2, paddingLeft, px, wrap, zero)
+import Css exposing (Style, batch, borderBottom3, center, column, displayFlex, flexDirection, flexWrap, fontFamilies, justifyContent, listStyle, marginBottom, marginTop, maxWidth, none, padding2, paddingLeft, px, rem, solid, wrap, zero)
 import Html.Styled exposing (Html, a, div, h1, h2, img, li, text, ul)
 import Html.Styled.Attributes exposing (alt, css, href, src)
 import I18n.Keys exposing (Key(..))
@@ -13,23 +13,31 @@ import Page.Shared.View
 import Page.Story.Data
 import Route exposing (Route(..))
 import Theme.FluidScale exposing (fontSize1)
-import Theme.Global exposing (centerContent, contentWrapper, featureImageStyle, pageColumnBlockStyle, pageColumnStyle, roundedCornerStyle, teaserImageStyle, topTwoColumnsWrapperStyle)
+import Theme.Global exposing (centerContent, contentWrapper, featureImageStyle, pageColumnBlockStyle, pageColumnStyle, teal, teaserImageStyle, topTwoColumnsWrapperStyle)
 import Theme.Markdown exposing (markdownToHtml)
 
 
 view : Language -> Page.Guide.Data.Guide -> List Page.Guide.Data.GuideListItem -> List Page.Story.Data.StoryTeaser -> Html Msg
 view language guide allGuides allStories =
-    div [ css [ centerContent ] ]
-        [ h1 [ css [ guideTitleStyle ] ] [ text guide.title ]
-        , viewSummaryImageRow guide
-        , viewRow
-            ( markdownToHtml guide.fullTextMarkdown
-            , [ viewMaybeVideo guide.maybeVideo
-              , viewMaybeAudio guide.maybeAudio
-              , viewRelatedGuideTeasers language guide.relatedGuideList allGuides
-              ]
-            , [ viewRelatedStoryTeasers language guide.relatedStoryList allStories ]
-            )
+    div []
+        [ div [ css [ outerBorderStyle ] ]
+            [ div
+                [ css [ centerContent ] ]
+                [ h1 [ css [ guideTitleStyle ] ] [ text guide.title ]
+                , viewSummaryImageRow guide
+                ]
+            ]
+        , div
+            [ css [ centerContent ] ]
+            [ viewRow
+                ( markdownToHtml guide.fullTextMarkdown
+                , [ viewMaybeVideo guide.maybeVideo
+                  , viewMaybeAudio guide.maybeAudio
+                  , viewRelatedGuideTeasers language guide.relatedGuideList allGuides
+                  ]
+                , [ viewRelatedStoryTeasers language guide.relatedStoryList allStories ]
+                )
+            ]
         ]
 
 
@@ -212,8 +220,7 @@ viewStoryImage maybeImage =
         [ alt image.alt
         , src image.src
         , css
-            [ roundedCornerStyle
-            , teaserImageStyle
+            [ teaserImageStyle
             ]
         ]
         []
@@ -254,4 +261,12 @@ listStyleNone =
     batch
         [ listStyle none
         , paddingLeft zero
+        ]
+
+
+outerBorderStyle : Style
+outerBorderStyle =
+    batch
+        [ borderBottom3 (rem 0.5) solid teal
+        , marginBottom (rem 2)
         ]
