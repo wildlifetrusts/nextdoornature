@@ -119,27 +119,27 @@ globalStyles =
             [ fontFamilies [ "Adelle", "serif" ]
             , color purple
             , margin3 (rem 0) auto (rem 1.5)
-            , Theme.FluidScale.fontSize1
+            , Theme.FluidScale.fontSizeExtraLarge
             , width (pct 100)
             ]
         , typeSelector "h2"
             [ fontFamilies [ "Adelle", "serif" ]
             , color purple
             , margin3 (rem 0) auto (rem 1.5)
-            , Theme.FluidScale.fontSize2
+            , Theme.FluidScale.fontSizeLarge
             , width (pct 100)
             ]
         , typeSelector "h3"
             [ fontFamilies [ "Adelle", "serif" ]
             , color purple
             , margin3 (rem 0) auto (rem 1)
-            , Theme.FluidScale.fontSize3
+            , Theme.FluidScale.fontSizeMedium
             ]
         , typeSelector "h4"
             [ fontFamilies [ "Adelle", "serif" ]
             , color purple
             , margin3 (rem 0) auto (rem 1)
-            , Theme.FluidScale.fontSize4
+            , Theme.FluidScale.fontSizeBase
             ]
         , typeSelector "a"
             [ color purple
