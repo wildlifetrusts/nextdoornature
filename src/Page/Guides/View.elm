@@ -39,7 +39,7 @@ view model =
                         List.concat [ Page.Guides.Data.teaserListFromGuideDict model.language model.content.guides, list ]
     in
     div [ css [ centerContent ] ]
-        [ h1 [ attribute "aria-live" "polite" ]
+        [ h1 [ attribute "aria-live" "alert" ]
             [ text <|
                 if String.length model.query > 0 then
                     t <| GuidesTitleFiltered (String.fromInt <| List.length model.search) model.query
