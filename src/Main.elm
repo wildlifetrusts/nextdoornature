@@ -211,7 +211,7 @@ view model =
                 story =
                     Page.Story.Data.storyFromSlug model.language model.content.stories slug
             in
-            Theme.PageTemplate.view model (Page.Story.View.view story)
+            Theme.PageTemplate.view model (Page.Story.View.view model.language story)
 
         Guide slug ->
             let

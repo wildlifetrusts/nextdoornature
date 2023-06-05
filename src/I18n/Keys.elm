@@ -48,3 +48,6 @@ type Key
     | GuidesTitle
     | SearchPlaceholder
     | ExploreGuidesListPlaceholder
+      --- Story Page
+    | WhoSubHeading
+    | WhereSubHeading
