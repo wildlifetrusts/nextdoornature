@@ -15,3 +15,4 @@ type Msg
     | CookiesDeclined
     | SearchChanged (List Page.Shared.Data.GuideTeaser)
     | GotActions (Result Http.Error (List Page.Shared.Data.GuideTeaser))
+    | NoOp

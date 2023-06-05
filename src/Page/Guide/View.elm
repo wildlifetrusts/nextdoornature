@@ -1,7 +1,7 @@
 module Page.Guide.View exposing (view)
 
 import Css exposing (Style, batch, center, column, displayFlex, flexDirection, flexWrap, fontFamilies, justifyContent, listStyle, marginTop, maxWidth, none, padding2, paddingLeft, px, wrap, zero)
-import Html.Styled exposing (Html, a, div, h1, h2, img, li, text, ul)
+import Html.Styled exposing (Html, a, div, h2, img, li, text, ul)
 import Html.Styled.Attributes exposing (alt, css, href, src)
 import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (Language(..), translate)
@@ -13,14 +13,14 @@ import Page.Shared.View
 import Page.Story.Data
 import Route exposing (Route(..))
 import Theme.FluidScale exposing (fontSize1)
-import Theme.Global exposing (centerContent, contentWrapper, featureImageStyle, pageColumnBlockStyle, pageColumnStyle, roundedCornerStyle, teaserImageStyle, topTwoColumnsWrapperStyle)
+import Theme.Global exposing (centerContent, contentWrapper, featureImageStyle, pageColumnBlockStyle, pageColumnStyle, primaryHeader, roundedCornerStyle, teaserImageStyle, topTwoColumnsWrapperStyle)
 import Theme.Markdown exposing (markdownToHtml)
 
 
 view : Language -> Page.Guide.Data.Guide -> List Page.Guide.Data.GuideListItem -> List Page.Story.Data.StoryTeaser -> Html Msg
 view language guide allGuides allStories =
     div [ css [ centerContent ] ]
-        [ h1 [ css [ guideTitleStyle ] ] [ text guide.title ]
+        [ primaryHeader guide.title
         , viewSummaryImageRow guide
         , viewRow
             ( markdownToHtml guide.fullTextMarkdown
@@ -237,11 +237,6 @@ storyteaserContainerStyle =
         , flexDirection column
         , maxWidth (px 150)
         ]
-
-
-guideTitleStyle : Style
-guideTitleStyle =
-    fontFamilies [ "Ludicrous", "serif" ]
 
 
 guideSummaryStyle : Style

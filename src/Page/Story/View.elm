@@ -1,19 +1,19 @@
 module Page.Story.View exposing (view)
 
 import Css exposing (Style, batch, margin3, rem)
-import Html.Styled exposing (Html, div, h1, img, p, text)
+import Html.Styled exposing (Html, div, img, p, text)
 import Html.Styled.Attributes exposing (alt, css, src)
 import Message exposing (Msg)
 import Page.Guides.View
 import Page.Story.Data
-import Theme.Global exposing (centerContent, contentWrapper, featureImageStyle, pageColumnStyle, roundedCornerStyle, topTwoColumnsWrapperStyle)
+import Theme.Global exposing (centerContent, contentWrapper, featureImageStyle, pageColumnStyle, primaryHeader, roundedCornerStyle, topTwoColumnsWrapperStyle)
 import Theme.Markdown exposing (markdownToHtml)
 
 
 view : Page.Story.Data.Story -> Html Msg
 view story =
     div [ css [ centerContent ] ]
-        [ h1 [] [ text story.title ]
+        [ primaryHeader story.title
         , div [ css [ contentWrapper ] ]
             [ div [ css [ topTwoColumnsWrapperStyle ] ]
                 [ div [ css [ pageColumnStyle ] ]

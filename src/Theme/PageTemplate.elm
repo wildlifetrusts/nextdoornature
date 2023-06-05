@@ -3,7 +3,7 @@ module Theme.PageTemplate exposing (view)
 import CookieBanner
 import Css exposing (Style, backgroundColor, batch, border3, hidden, overflowX, pct, rem, solid, width)
 import Html.Styled exposing (Html, div, main_)
-import Html.Styled.Attributes exposing (css)
+import Html.Styled.Attributes exposing (css, id)
 import Message exposing (Msg)
 import Shared exposing (Model)
 import Theme.FooterTemplate as FooterTemplate
@@ -14,6 +14,7 @@ import Theme.HeaderTemplate as HeaderTemplate
 view : Model -> Html Msg -> Html Msg
 view model content =
     div []
+        -- id "focus-target" ]
         [ globalStyles
         , div
             [ css [ pageWrapperStyles ] ]
