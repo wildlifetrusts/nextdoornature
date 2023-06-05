@@ -34,7 +34,13 @@ suite =
             , slug = "slug"
             , maybeLocation = Just "Test location"
             , maybeGroupOrIndividual = Just "Test group"
-            , images = [ { src = "/images/wildlife-trust-logo.png", alt = "placeholder" } ]
+            , images =
+                [ { src = "/images/wildlife-trust-logo.png"
+                  , alt = "placeholder"
+                  , maybeCaption = Just "caption"
+                  , maybeCredit = Just "credit"
+                  }
+                ]
             , relatedGuideList =
                 [ { title = "A related guide"
                   , url = "/a-guide"

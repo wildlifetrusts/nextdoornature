@@ -17,7 +17,7 @@ type alias Model =
     , cookieState : CookieState
     , language : Language
     , content : Content
-    , search : List Page.Shared.Data.GuideTeaser
+    , search : List Page.Shared.Data.Teaser
     , query : String
     , externalActions : Request
     }
@@ -48,7 +48,7 @@ type alias Content =
 type Request
     = Failure
     | Loading
-    | Success (List Page.Shared.Data.GuideTeaser)
+    | Success (List Page.Shared.Data.Teaser)
 
 
 contentDictDecoder : Json.Decode.Value -> Content
