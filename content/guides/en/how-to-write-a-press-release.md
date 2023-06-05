@@ -1,6 +1,10 @@
 ---
 title: How To Write a Press Release
 summary: "Basic tips on how to write a press release                "
+image:
+  src: /public/images/uploads/press-release_orig-2-.jpg
+  alt: A newspaper and some green leaves
+  credit: Photo copyright Autumn Barlow/The Wildlife Trusts 2023
 ---
 
 ## How it looks:

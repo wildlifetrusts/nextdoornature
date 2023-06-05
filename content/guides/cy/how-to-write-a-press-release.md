@@ -1,6 +1,10 @@
 ---
 title: Datganiadau i'r Wasg – cyfarwyddyd
 summary: Awgrymiadau sylfaenol ar sut i ysgrifennu datganiad i'r wasg
+image:
+  src: /public/images/uploads/press-release_orig-2-.jpg
+  alt: A newspaper and some green leaves
+  credit: Photo copyright Autumn Barlow/The Wildlife Trusts 2023
 ---
 ## Sut mae’n edrych:
 

@@ -1,6 +1,10 @@
 ---
 title: Insurance for Local Groups
 summary: Types of insurance for local groups and why you need it.
+image:
+  src: /public/images/uploads/insurance_orig-2-.jpg
+  alt: Some insurance paperwork
+  credit: Photo copyright Autumn Barlow/The Wildlife Trusts 2023
 ---
 
 

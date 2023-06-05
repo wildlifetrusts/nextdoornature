@@ -1,6 +1,10 @@
 ---
 title: " Yswiriant ar Gyfer Grwpiau Lleol"
 summary: " Yswiriant ar gyfer grwpiau lleol. Mae gwahanol fathau o yswiriant."
+image:
+  src: /public/images/uploads/insurance_orig-2-.jpg
+  credit: Photo copyright Autumn Barlow/The Wildlife Trusts 2023
+  alt: Some insurance paperwork
 ---
 Nid yw hwn yn gyngor yswiriant ffurfiol.
 
