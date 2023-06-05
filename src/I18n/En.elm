@@ -145,6 +145,9 @@ enStrings key =
         GuidesTitle ->
             "[cCc] Guides"
 
+        GuidesTitleFiltered num query ->
+            num ++ " guides on '" ++ query ++ "' [cCc]"
+
         SearchPlaceholder ->
             "Search the hub"
 

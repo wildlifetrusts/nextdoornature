@@ -71,6 +71,7 @@ init flags url key =
       , content = Shared.contentDictDecoder flags
       , language = English
       , search = []
+      , query = ""
       , externalActions = Loading
       }
     , getActions
@@ -143,7 +144,11 @@ update msg model =
         GotActions result ->
             case result of
                 Ok list ->
-                    ( { model | externalActions = Success list }, Cmd.none )
+                    let
+                        actions =
+                            List.sortBy .title list
+                    in
+                    ( { model | externalActions = Success actions }, Cmd.none )
 
                 Err _ ->
                     ( { model | externalActions = Failure }, Cmd.none )
@@ -170,8 +175,8 @@ update msg model =
                 Cmd.none
             )
 
-        SearchChanged searchResult ->
-            ( { model | search = searchResult }, Cmd.none )
+        SearchChanged searchResult query ->
+            ( { model | search = searchResult, query = query }, Cmd.none )
 
 
 openCookieBanner : CookieState -> CookieState

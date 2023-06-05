@@ -60,6 +60,7 @@ teaserListFromGuideDict language guides =
                 , maybeImage = guideImagefromTeaserImage g.maybeImage
                 }
             )
+        |> List.sortBy .title
 
 
 guideImagefromTeaserImage : Maybe Page.Guide.Data.Image -> Maybe Page.Shared.Data.GuideTeaserImage

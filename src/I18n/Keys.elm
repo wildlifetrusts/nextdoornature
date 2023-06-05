@@ -46,6 +46,7 @@ type Key
     | RelatedStoriesHeading
       --- Guides Page
     | GuidesTitle
+    | GuidesTitleFiltered String String
     | SearchPlaceholder
     | ExploreGuidesListPlaceholder
       --- Story Page

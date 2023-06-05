@@ -1,7 +1,7 @@
 module Page.Guides.View exposing (view, viewGuideTeaserList)
 
 import Html.Styled exposing (Html, a, div, h1, img, li, p, text, ul)
-import Html.Styled.Attributes exposing (alt, css, href, src)
+import Html.Styled.Attributes exposing (alt, attribute, css, href, src)
 import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (Language(..), translate)
 import List
@@ -21,7 +21,7 @@ view model =
 
         teaserList : List Page.Shared.Data.GuideTeaser
         teaserList =
-            if List.length model.search > 0 then
+            if String.length model.query > 0 then
                 model.search
 
             else if model.language == Welsh then
@@ -39,8 +39,14 @@ view model =
                         List.concat [ Page.Guides.Data.teaserListFromGuideDict model.language model.content.guides, list ]
     in
     div [ css [ centerContent ] ]
-        [ h1 []
-            [ text (t GuidesTitle) ]
+        [ h1 [ attribute "aria-live" "alert" ]
+            [ text <|
+                if String.length model.query > 0 then
+                    t <| GuidesTitleFiltered (String.fromInt <| List.length model.search) model.query
+
+                else
+                    t GuidesTitle
+            ]
         , div
             [ css [ contentWrapper ] ]
             [ viewGuideTeaserList True teaserList
@@ -96,7 +102,6 @@ viewGuideTeaserList includeSummary teasers =
     if List.length teasers > 0 then
         ul [ css [ Theme.Global.teasersContainerStyle ] ]
             (teasers
-                |> List.sortBy .title
                 |> List.map
                     (\teaser -> viewGuideTeaser includeSummary teaser)
             )

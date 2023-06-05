@@ -18,6 +18,7 @@ type alias Model =
     , language : Language
     , content : Content
     , search : List Page.Shared.Data.GuideTeaser
+    , query : String
     , externalActions : Request
     }
 

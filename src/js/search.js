@@ -2,6 +2,8 @@ import Fuse from "fuse.js";
 
 const searchOpts = {
   keys: ["title", "summary"],
+  ignoreLocation: true,
+  threshold: 0.4,
 };
 
 const template = document.createElement("template");
