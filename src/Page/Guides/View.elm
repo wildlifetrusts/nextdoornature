@@ -1,7 +1,7 @@
 module Page.Guides.View exposing (view, viewGuideTeaserList)
 
 import Html.Styled exposing (Html, a, div, h1, img, li, p, text, ul)
-import Html.Styled.Attributes exposing (alt, css, href, src)
+import Html.Styled.Attributes exposing (alt, attribute, css, href, src)
 import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (Language(..), translate)
 import List
@@ -39,7 +39,7 @@ view model =
                         List.concat [ Page.Guides.Data.teaserListFromGuideDict model.language model.content.guides, list ]
     in
     div [ css [ centerContent ] ]
-        [ h1 []
+        [ h1 [ attribute "aria-live" "polite" ]
             [ text <|
                 if String.length model.query > 0 then
                     t <| GuidesTitleFiltered (String.fromInt <| List.length model.search) model.query
