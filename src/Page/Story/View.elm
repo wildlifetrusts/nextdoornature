@@ -1,6 +1,6 @@
 module Page.Story.View exposing (view)
 
-import Css exposing (Style, batch, margin3, maxWidth, pct, rem)
+import Css exposing (Style, batch, margin3, rem)
 import Html.Styled exposing (Html, div, h1, img, p, text)
 import Html.Styled.Attributes exposing (alt, css, src)
 import Message exposing (Msg)
