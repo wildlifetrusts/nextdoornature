@@ -1,7 +1,7 @@
 module Page.Story.View exposing (view)
 
 import Css exposing (Style, batch, margin3, pct, rem, width)
-import Html.Styled exposing (Html, div, h1, h2, h3, img, p, text)
+import Html.Styled exposing (Html, div, h1, h3, img, p, text)
 import Html.Styled.Attributes exposing (alt, css, src)
 import Message exposing (Msg)
 import Page.Guides.View
@@ -14,7 +14,6 @@ view : Page.Story.Data.Story -> Html Msg
 view story =
     div [ css [ centerContent ] ]
         [ h1 [] [ text story.title ]
-        , h2 [] [ text story.summary ]
         , div [ css [ contentWrapper, width (pct 100) ] ]
             [ div [ css [ topTwoColumnsWrapperStyle ] ]
                 [ div [ css [ pageColumnStyle ] ]

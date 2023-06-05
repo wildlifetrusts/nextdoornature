@@ -18,7 +18,6 @@ type alias Stories =
 type alias Story =
     { title : String
     , slug : String
-    , summary : String
     , maybeLocation : Maybe String
     , maybeGroupOrIndividual : Maybe String
     , images : List Image
@@ -49,7 +48,6 @@ blankStory language =
     in
     { title = t Story404Title
     , slug = ""
-    , summary = ""
     , fullTextMarkdown = t Story404Body
     , maybeLocation = Nothing
     , maybeGroupOrIndividual = Nothing
@@ -74,8 +72,6 @@ storyDictDecoder =
                 (Json.Decode.field "title" Json.Decode.string |> Json.Decode.Extra.withDefault "")
             |> Json.Decode.Extra.andMap
                 (Json.Decode.field "basename" Json.Decode.string |> Json.Decode.Extra.withDefault "")
-            |> Json.Decode.Extra.andMap
-                (Json.Decode.field "summary" Json.Decode.string |> Json.Decode.Extra.withDefault "")
             |> Json.Decode.Extra.andMap
                 (Json.Decode.maybe (Json.Decode.field "location" Json.Decode.string |> Json.Decode.Extra.withDefault ""))
             |> Json.Decode.Extra.andMap
