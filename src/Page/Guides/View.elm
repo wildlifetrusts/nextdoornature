@@ -21,7 +21,7 @@ view model =
 
         teaserList : List Page.Shared.Data.GuideTeaser
         teaserList =
-            if List.length model.search > 0 then
+            if String.length model.query > 0 then
                 model.search
 
             else if model.language == Welsh then

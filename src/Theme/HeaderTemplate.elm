@@ -88,9 +88,7 @@ searchInput model =
             [ Html.Styled.Attributes.property "searchResult" <| Page.Guides.Data.guideTeaserListEncoder model.search
             , attribute "search-input" <| Page.Guides.Data.guideTeaserListString teaserList
             , on "resultChanged" <|
-                Json.Decode.map Message.SearchChanged <|
-                    Json.Decode.at [ "target", "searchResult" ] <|
-                        Json.Decode.list Page.Guides.Data.internalGuideTeaserDecoder
+                Json.Decode.map2 Message.SearchChanged (Json.Decode.at [ "target", "searchResult" ] (Json.Decode.list Page.Guides.Data.internalGuideTeaserDecoder)) (Json.Decode.at [ "target", "_input", "value" ] Json.Decode.string)
             ]
             [ input [ id "search", type_ "text", placeholder (t SearchPlaceholder), css [ searchInputStyle ] ] [] ]
         , img [ src "/images/arrow-right-purple.svg", css [ arrowStyle ] ] []
