@@ -4,7 +4,7 @@ import Css exposing (Color, Style, absolute, alignItems, auto, backgroundImage, 
 import Css.Global exposing (global, typeSelector)
 import Css.Media as Media exposing (only, screen, withMedia)
 import Html.Styled exposing (Html, h1, text)
-import Html.Styled.Attributes exposing (css, id)
+import Html.Styled.Attributes exposing (id, tabindex)
 import Theme.FluidScale
 
 
@@ -202,12 +202,7 @@ globalStyles =
 
 primaryHeader : String -> Html msg
 primaryHeader title =
-    h1 [ css [ primaryHeaderStyle ], id "focus-target" ] [ text title ]
-
-
-primaryHeaderStyle : Style
-primaryHeaderStyle =
-    fontFamilies [ "Ludicrous", "serif" ]
+    h1 [ id "focus-target", tabindex -1 ] [ text title ]
 
 
 listStyleNone : Style

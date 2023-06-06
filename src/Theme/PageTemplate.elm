@@ -14,7 +14,6 @@ import Theme.HeaderTemplate as HeaderTemplate
 view : Model -> Html Msg -> Html Msg
 view model content =
     div []
-        -- id "focus-target" ]
         [ globalStyles
         , div
             [ css [ pageWrapperStyles ] ]
