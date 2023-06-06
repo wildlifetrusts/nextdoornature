@@ -1,12 +1,26 @@
-module Theme.Global exposing (borderWrapper, centerContent, contentWrapper, featureImageStyle, globalStyles, lightTeal, listStyleNone, pageColumnBlockStyle, pageColumnStyle, primaryHeader, purple, roundedCornerStyle, teal, teaserContainerStyle, teaserImageStyle, teaserRowStyle, teasersContainerStyle, topTwoColumnsWrapperStyle, white, withMediaMobileUp, withMediaTabletPortraitUp)
+module Theme.Global exposing (borderWrapper, centerContent, contentWrapper, featureImageStyle, globalStyles, lightTeal, listStyleNone, pageColumnBlockStyle, pageColumnStyle, purple, roundedCornerStyle, screenReaderOnly, teal, teaserContainerStyle, teaserImageStyle, teaserRowStyle, teasersContainerStyle, topTwoColumnsWrapperStyle, white, withMediaMobileUp, withMediaTabletPortraitUp)
 
-import Css exposing (Color, Style, alignItems, auto, backgroundImage, backgroundPosition, backgroundRepeat, backgroundSize, batch, border3, borderBottomRightRadius, borderTopLeftRadius, borderTopRightRadius, boxSizing, center, color, column, contain, contentBox, cover, cursor, display, displayFlex, em, ex, flex, flex3, flexDirection, flexStart, flexWrap, fontFamilies, height, hex, hidden, inherit, inlineBlock, int, justifyContent, lastChild, listStyle, margin, margin2, margin3, marginBottom, marginLeft, marginRight, marginTop, maxWidth, minWidth, noRepeat, noWrap, none, overflow, padding, padding2, paddingLeft, pct, pointer, property, pseudoElement, px, rem, row, solid, spaceBetween, textDecoration, url, width, wrap, zero)
+import Css exposing (Color, Style, absolute, alignItems, auto, backgroundImage, backgroundPosition, backgroundRepeat, backgroundSize, batch, border3, borderBottomRightRadius, borderTopLeftRadius, borderTopRightRadius, boxSizing, center, color, column, contain, contentBox, cover, cursor, display, displayFlex, em, ex, flex, flex3, flexDirection, flexStart, flexWrap, fontFamilies, height, hex, hidden, inherit, inlineBlock, int, justifyContent, lastChild, left, listStyle, margin, margin2, margin3, marginBottom, marginLeft, marginRight, marginTop, maxWidth, minWidth, noRepeat, noWrap, none, overflow, padding, padding2, paddingLeft, pct, pointer, position, property, pseudoElement, px, rem, row, solid, spaceBetween, textDecoration, top, url, width, wrap, zero)
 import Css.Global exposing (global, typeSelector)
 import Css.Media as Media exposing (only, screen, withMedia)
-import Html.Styled exposing (Html, h1, text)
-import Html.Styled.Attributes exposing (css, id)
-import Message exposing (Msg)
+import Html.Styled exposing (Html)
 import Theme.FluidScale
+
+
+
+-- Accessibility helpers
+
+
+screenReaderOnly : Style
+screenReaderOnly =
+    batch
+        [ position absolute
+        , left (px -10000)
+        , top auto
+        , width (px 1)
+        , height (px 1)
+        , overflow hidden
+        ]
 
 
 
@@ -120,24 +134,28 @@ globalStyles =
         , typeSelector "h1"
             [ fontFamilies [ "Adelle", "serif" ]
             , color purple
-            , margin3 (rem 0) auto (rem 2)
-            , Theme.FluidScale.fontSize4
+            , margin3 (rem 0) auto (rem 1.5)
+            , Theme.FluidScale.fontSizeExtraLarge
             , width (pct 100)
             ]
         , typeSelector "h2"
             [ fontFamilies [ "Adelle", "serif" ]
             , color purple
-            , Theme.FluidScale.fontSize3
+            , margin3 (rem 0) auto (rem 1.5)
+            , Theme.FluidScale.fontSizeLarge
+            , width (pct 100)
             ]
         , typeSelector "h3"
             [ fontFamilies [ "Adelle", "serif" ]
             , color purple
-            , Theme.FluidScale.fontSize2
+            , margin3 (rem 0) auto (rem 1)
+            , Theme.FluidScale.fontSizeMedium
             ]
         , typeSelector "h4"
             [ fontFamilies [ "Adelle", "serif" ]
             , color purple
-            , Theme.FluidScale.fontSize1
+            , margin3 (rem 0) auto (rem 1)
+            , Theme.FluidScale.fontSizeBase
             ]
         , typeSelector "a"
             [ color purple
@@ -158,7 +176,8 @@ globalStyles =
         , typeSelector "b"
             []
         , typeSelector "p"
-            []
+            [ margin3 (rem 0) auto (rem 1)
+            ]
         , typeSelector "blockquote"
             []
         , typeSelector "button"
@@ -300,6 +319,7 @@ contentWrapper =
         , flexDirection column
         , flexWrap noWrap
         , justifyContent center
+        , width auto
         , withMediaTabletLandscapeUp
             [ alignItems flexStart
             , flexDirection row
@@ -316,11 +336,13 @@ topTwoColumnsWrapperStyle =
         , flexWrap noWrap
         , justifyContent center
         , marginBottom (rem 3)
-        , width auto
+        , width (pct 100)
+        , withMediaTabletLandscapeUp
+            [ marginRight (rem 3)
+            ]
         , withMediaTabletPortraitUp
             [ flex (int 2)
             , flexDirection row
-            , marginRight (rem 3)
             ]
         ]
 

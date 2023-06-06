@@ -1,26 +1,36 @@
 module Page.Story.View exposing (view)
 
-import Css exposing (Style, batch, margin3, rem)
-import Html.Styled exposing (Html, div, img, p, text)
+import Css exposing (Style, batch, margin3, pct, rem, width)
+import Html.Styled exposing (Html, div, h1, h3, img, p, text)
 import Html.Styled.Attributes exposing (alt, css, src)
+import I18n.Keys exposing (Key(..))
+import I18n.Translate exposing (Language(..), translate)
 import Message exposing (Msg)
 import Page.Guides.View
 import Page.Story.Data
-import Theme.Global exposing (centerContent, contentWrapper, featureImageStyle, pageColumnStyle, primaryHeader, roundedCornerStyle, topTwoColumnsWrapperStyle)
+import Theme.Global exposing (centerContent, contentWrapper, featureImageStyle, pageColumnStyle, roundedCornerStyle, topTwoColumnsWrapperStyle)
 import Theme.Markdown exposing (markdownToHtml)
 
 
-view : Page.Story.Data.Story -> Html Msg
-view story =
+view : Language -> Page.Story.Data.Story -> Html Msg
+view language story =
+    let
+        t : Key -> String
+        t =
+            translate language
+    in
     div [ css [ centerContent ] ]
         [ primaryHeader story.title
-        , div [ css [ contentWrapper ] ]
+        , div [ css [ contentWrapper, width (pct 100) ] ]
             [ div [ css [ topTwoColumnsWrapperStyle ] ]
                 [ div [ css [ pageColumnStyle ] ]
                     [ div []
                         [ case story.maybeGroupOrIndividual of
                             Just groupOrIndividual ->
-                                p [] [ text groupOrIndividual ]
+                                div []
+                                    [ h3 [] [ text (t WhoSubHeading) ]
+                                    , p [] [ text groupOrIndividual ]
+                                    ]
 
                             Nothing ->
                                 text ""

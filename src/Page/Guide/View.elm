@@ -12,7 +12,7 @@ import Page.Shared.Data
 import Page.Shared.View
 import Page.Story.Data
 import Route exposing (Route(..))
-import Theme.FluidScale exposing (fontSize1)
+import Theme.FluidScale exposing (fontSizeBase)
 import Theme.Global exposing (centerContent, contentWrapper, featureImageStyle, pageColumnBlockStyle, pageColumnStyle, primaryHeader, roundedCornerStyle, teaserImageStyle, topTwoColumnsWrapperStyle)
 import Theme.Markdown exposing (markdownToHtml)
 
@@ -241,7 +241,7 @@ storyteaserContainerStyle =
 
 guideSummaryStyle : Style
 guideSummaryStyle =
-    fontSize1
+    fontSizeBase
 
 
 listStyleNone : Style

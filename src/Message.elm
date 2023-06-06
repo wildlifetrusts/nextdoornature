@@ -13,6 +13,6 @@ type Msg
     | CookieSettingsButtonClicked
     | CookiesAccepted
     | CookiesDeclined
-    | SearchChanged (List Page.Shared.Data.GuideTeaser)
+    | SearchChanged (List Page.Shared.Data.GuideTeaser) String
     | GotActions (Result Http.Error (List Page.Shared.Data.GuideTeaser))
     | NoOp
