@@ -1,11 +1,10 @@
-module Page.Story.Data exposing (Image, Stories, Story, StoryTeaser, allStoryTeaserList, defaultStoryImageSrc, storyFromSlug, storyLanguageDictDecoder)
+module Page.Story.Data exposing (Image, Stories, Story, StoryTeaser, allStoryTeaserList, defaultStoryImageSrc, storiesInPreferredLanguage, storyFromSlug, storyLanguageDictDecoder)
 
 import Dict exposing (Dict)
 import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (Language(..), translate)
 import Json.Decode
 import Json.Decode.Extra
-import Page.Guides.Data
 import Page.Shared.Data
 
 
@@ -22,7 +21,7 @@ type alias Story =
     , maybeGroupOrIndividual : Maybe String
     , images : List Image
     , fullTextMarkdown : String
-    , relatedGuideList : List Page.Shared.Data.GuideTeaser
+    , relatedGuideList : List Page.Shared.Data.Teaser
     }
 
 
@@ -82,7 +81,7 @@ storyDictDecoder =
                 (Json.Decode.field "content" Json.Decode.string |> Json.Decode.Extra.withDefault "")
             |> Json.Decode.Extra.andMap
                 (Json.Decode.field "relatedGuideList"
-                    (Json.Decode.list Page.Guides.Data.guideTeaserDecoder)
+                    (Json.Decode.list guideTeaserDecoder)
                     |> Json.Decode.Extra.withDefault []
                 )
         )
@@ -174,3 +173,12 @@ translationsFromSlug storyDict { slug, title, images } =
         -- Means this story is only on one language.
         Nothing ->
             { title = title, maybeImage = List.head images }
+
+
+guideTeaserDecoder : Json.Decode.Decoder Page.Shared.Data.Teaser
+guideTeaserDecoder =
+    Json.Decode.map4 Page.Shared.Data.Teaser
+        (Json.Decode.field "title" Json.Decode.string)
+        (Json.Decode.field "basename" Json.Decode.string)
+        (Json.Decode.field "summary" Json.Decode.string)
+        (Json.Decode.maybe (Json.Decode.field "image" Page.Shared.Data.guideTeaserImageDecoder))

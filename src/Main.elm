@@ -1,6 +1,7 @@
 module Main exposing (Flags, main)
 
 import Browser
+import Browser.Dom
 import Browser.Navigation
 import CookieBanner exposing (saveConsent)
 import GoogleAnalytics
@@ -19,8 +20,10 @@ import Page.Index
 import Page.Story.Data
 import Page.Story.View
 import Page.View
+import Random
 import Route exposing (Route(..))
 import Shared exposing (CookieState, Model, Request(..))
+import Task
 import Theme.PageTemplate
 import Url
 
@@ -73,8 +76,12 @@ init flags url key =
       , search = []
       , query = ""
       , externalActions = Loading
+      , seed = Nothing
       }
-    , getActions
+    , Cmd.batch
+        [ getActions
+        , Random.generate UpdateSeed Random.independentSeed
+        ]
     )
 
 
@@ -101,6 +108,16 @@ flagsConsentDecoder =
     Json.Decode.field "hasConsented" Json.Decode.string
 
 
+resetViewportTop : Cmd Msg
+resetViewportTop =
+    Task.perform (\_ -> NoOp) (Browser.Dom.setViewport 0 0)
+
+
+resetFocusTop : Cmd Msg
+resetFocusTop =
+    Task.attempt (\_ -> NoOp) (Browser.Dom.focus "focus-target")
+
+
 update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
     case msg of
@@ -112,7 +129,9 @@ update msg model =
                     -- could 404 instead depends on desired behaviour
                     Maybe.withDefault Index (Route.fromUrl url)
             in
-            ( { model | page = newRoute }, Cmd.none )
+            ( { model | page = newRoute }
+            , Cmd.batch [ resetFocusTop, resetViewportTop ]
+            )
 
         LinkClicked urlRequest ->
             case urlRequest of
@@ -177,6 +196,12 @@ update msg model =
 
         SearchChanged searchResult query ->
             ( { model | search = searchResult, query = query }, Cmd.none )
+
+        UpdateSeed seed ->
+            ( { model | seed = Just seed }, Cmd.none )
+
+        NoOp ->
+            ( model, Cmd.none )
 
 
 openCookieBanner : CookieState -> CookieState
