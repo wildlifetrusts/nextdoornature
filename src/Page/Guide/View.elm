@@ -1,7 +1,7 @@
 module Page.Guide.View exposing (view)
 
-import Css exposing (Style, batch, borderBottom3, center, column, displayFlex, flexDirection, flexWrap, fontFamilies, justifyContent, listStyle, marginBottom, marginTop, maxWidth, none, padding2, paddingLeft, px, rem, solid, wrap, zero)
-import Html.Styled exposing (Html, a, div, h1, h2, img, li, text, ul)
+import Css exposing (Style, batch, borderBottom3, center, column, displayFlex, flexDirection, flexWrap, justifyContent, listStyle, marginBottom, marginTop, maxWidth, none, paddingLeft, px, rem, solid, wrap, zero)
+import Html.Styled exposing (Html, a, div, h2, img, li, text, ul)
 import Html.Styled.Attributes exposing (alt, css, href, src)
 import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (Language(..), translate)
@@ -12,8 +12,8 @@ import Page.Shared.Data
 import Page.Shared.View
 import Page.Story.Data
 import Route exposing (Route(..))
-import Theme.FluidScale exposing (fontSize1)
-import Theme.Global exposing (centerContent, contentWrapper, featureImageStyle, pageColumnBlockStyle, pageColumnStyle, teal, teaserImageStyle, topTwoColumnsWrapperStyle)
+import Theme.FluidScale exposing (fontSizeBase)
+import Theme.Global exposing (centerContent, contentWrapper, featureImageStyle, pageColumnBlockStyle, pageColumnStyle, primaryHeader, teal, teaserImageStyle, topTwoColumnsWrapperStyle)
 import Theme.Markdown exposing (markdownToHtml)
 
 
@@ -23,7 +23,7 @@ view language guide allGuides allStories =
         [ div [ css [ outerBorderStyle ] ]
             [ div
                 [ css [ centerContent ] ]
-                [ h1 [ css [ guideTitleStyle ] ] [ text guide.title ]
+                [ primaryHeader [] guide.title
                 , viewSummaryImageRow guide
                 ]
             ]
@@ -246,14 +246,9 @@ storyteaserContainerStyle =
         ]
 
 
-guideTitleStyle : Style
-guideTitleStyle =
-    fontFamilies [ "Ludicrous", "serif" ]
-
-
 guideSummaryStyle : Style
 guideSummaryStyle =
-    fontSize1
+    fontSizeBase
 
 
 listStyleNone : Style

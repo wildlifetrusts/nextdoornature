@@ -1,8 +1,8 @@
 module Theme.HeaderTemplate exposing (view)
 
-import Css exposing (Style, absolute, alignItems, backgroundColor, backgroundImage, backgroundPosition, backgroundRepeat, backgroundSize, baseline, batch, border, border3, borderRadius, bottom, boxShadow, center, color, column, contain, display, displayFlex, em, flexDirection, flexEnd, flexStart, flexWrap, focus, fontFamilies, fontSize, fontWeight, height, inlineBlock, int, justifyContent, left, lineHeight, margin, margin2, margin4, marginBottom, marginLeft, marginRight, marginTop, minWidth, noRepeat, noWrap, none, normal, outline, padding, padding4, pct, position, pseudoElement, px, relative, rem, right, row, solid, spaceBetween, textAlign, top, url, width, zero)
+import Css exposing (Style, absolute, alignItems, backgroundColor, backgroundImage, backgroundPosition, backgroundRepeat, backgroundSize, baseline, batch, border, border3, borderRadius, bottom, boxShadow, center, color, column, contain, display, displayFlex, em, flexDirection, flexEnd, flexStart, flexWrap, focus, fontFamilies, fontSize, fontWeight, height, inlineBlock, int, justifyContent, left, lineHeight, margin, margin2, marginBottom, marginLeft, marginRight, marginTop, minWidth, noRepeat, noWrap, none, normal, outline, padding, padding4, pct, position, pseudoElement, px, rem, right, row, solid, spaceBetween, textAlign, top, url, width, zero)
 import Html.Styled exposing (Html, a, button, div, header, img, input, label, node, text)
-import Html.Styled.Attributes exposing (attribute, css, href, id, placeholder, src, type_)
+import Html.Styled.Attributes exposing (attribute, css, for, href, id, placeholder, src, type_)
 import Html.Styled.Events exposing (on, onClick)
 import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (Language(..), translate)
@@ -14,7 +14,7 @@ import Page.Shared.Data
 import Route exposing (Route(..))
 import Shared exposing (Model, Request(..))
 import Theme.FluidScale
-import Theme.Global exposing (borderWrapper, centerContent, purple, teal, white, withMediaMobileUp)
+import Theme.Global exposing (borderWrapper, centerContent, purple, screenReaderOnly, teal, white, withMediaMobileUp)
 
 
 view : Model -> Html Msg
@@ -66,7 +66,7 @@ searchInput model =
         t =
             I18n.Translate.translate model.language
 
-        teaserList : List Page.Shared.Data.GuideTeaser
+        teaserList : List Page.Shared.Data.Teaser
         teaserList =
             if model.language == Welsh then
                 Page.Guides.Data.teaserListFromGuideDict model.language model.content.guides
@@ -82,15 +82,14 @@ searchInput model =
                     Success list ->
                         List.concat [ Page.Guides.Data.teaserListFromGuideDict model.language model.content.guides, list ]
     in
-    label [ css [ searchStyle ] ]
-        [ text (t SearchPlaceholder)
+    div []
+        [ label [ for "search", css [ screenReaderOnly ] ]
+            [ text (t SearchPlaceholder) ]
         , node "search-input"
             [ Html.Styled.Attributes.property "searchResult" <| Page.Guides.Data.guideTeaserListEncoder model.search
             , attribute "search-input" <| Page.Guides.Data.guideTeaserListString teaserList
             , on "resultChanged" <|
-                Json.Decode.map Message.SearchChanged <|
-                    Json.Decode.at [ "target", "searchResult" ] <|
-                        Json.Decode.list Page.Guides.Data.internalGuideTeaserDecoder
+                Json.Decode.map2 Message.SearchChanged (Json.Decode.at [ "target", "searchResult" ] (Json.Decode.list Page.Guides.Data.internalGuideTeaserDecoder)) (Json.Decode.at [ "target", "_input", "value" ] Json.Decode.string)
             ]
             [ input [ id "search", type_ "text", placeholder (t SearchPlaceholder), css [ searchInputStyle ] ] [] ]
         , img [ src "/images/arrow-right-purple.svg", css [ arrowStyle ] ] []
@@ -100,7 +99,7 @@ searchInput model =
 headerBrandStyle : Style
 headerBrandStyle =
     batch
-        [ Theme.FluidScale.fontSize5
+        [ Theme.FluidScale.fontSizeHeaderBrand
         , Theme.FluidScale.logoContainer
         , color white
         , fontFamilies [ "Ludicrous" ]
@@ -202,16 +201,6 @@ headerBtnStyle =
         , withMediaMobileUp
             [ textAlign right
             ]
-        ]
-
-
-searchStyle : Style
-searchStyle =
-    batch
-        [ color white
-        , margin4 (rem 0.5) (rem 0) (rem 0.5) (rem 0.5)
-        , height (rem 2)
-        , position relative
         ]
 
 

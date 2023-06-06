@@ -1,7 +1,7 @@
-module Page.Guides.View exposing (view, viewGuideTeaserList)
+module Page.Guides.View exposing (view, viewTeaserList)
 
-import Html.Styled exposing (Html, a, div, h1, img, li, p, text, ul)
-import Html.Styled.Attributes exposing (alt, css, href, src)
+import Html.Styled exposing (Html, a, div, img, li, p, text, ul)
+import Html.Styled.Attributes exposing (alt, attribute, css, href, src)
 import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (Language(..), translate)
 import List
@@ -9,7 +9,7 @@ import Message exposing (Msg)
 import Page.Guides.Data
 import Page.Shared.Data
 import Shared exposing (Model, Request(..))
-import Theme.Global exposing (centerContent, contentWrapper)
+import Theme.Global exposing (centerContent, contentWrapper, primaryHeader)
 
 
 view : Model -> Html Msg
@@ -19,9 +19,9 @@ view model =
         t =
             translate model.language
 
-        teaserList : List Page.Shared.Data.GuideTeaser
+        teaserList : List Page.Shared.Data.Teaser
         teaserList =
-            if List.length model.search > 0 then
+            if String.length model.query > 0 then
                 model.search
 
             else if model.language == Welsh then
@@ -37,21 +37,28 @@ view model =
 
                     Success list ->
                         List.concat [ Page.Guides.Data.teaserListFromGuideDict model.language model.content.guides, list ]
+
+        headerText : String
+        headerText =
+            if String.length model.query > 0 then
+                t <| GuidesTitleFiltered (String.fromInt <| List.length model.search) model.query
+
+            else
+                t GuidesTitle
     in
     div [ css [ centerContent ] ]
-        [ h1 []
-            [ text (t GuidesTitle) ]
+        [ primaryHeader [ attribute "aria-live" "alert" ] headerText
         , div
             [ css [ contentWrapper ] ]
-            [ viewGuideTeaserList True teaserList
+            [ viewTeaserList True teaserList
             ]
         ]
 
 
-viewGuideTeaser : Bool -> Page.Shared.Data.GuideTeaser -> Html Msg
+viewGuideTeaser : Bool -> Page.Shared.Data.Teaser -> Html Msg
 viewGuideTeaser includeSummary teaser =
     let
-        image : Page.Shared.Data.GuideTeaserImage
+        image : Page.Shared.Data.TeaserImage
         image =
             case teaser.maybeImage of
                 Just i ->
@@ -90,12 +97,11 @@ viewGuideTeaserSummary summary =
         text ""
 
 
-viewGuideTeaserList : Bool -> List Page.Shared.Data.GuideTeaser -> Html Msg
-viewGuideTeaserList includeSummary teasers =
+viewTeaserList : Bool -> List Page.Shared.Data.Teaser -> Html Msg
+viewTeaserList includeSummary teasers =
     if List.length teasers > 0 then
         ul [ css [ Theme.Global.teasersContainerStyle ] ]
             (teasers
-                |> List.sortBy .title
                 |> List.map
                     (\teaser -> viewGuideTeaser includeSummary teaser)
             )

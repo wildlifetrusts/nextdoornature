@@ -41,10 +41,16 @@ type Key
     | WelcomeP1
     | WelcomeP2
     | WelcomeP3
+    | GuideHighlightsSubtitle
+    | StoryHighlightsSubtitle
       --- Guide Page
     | RelatedGuidesHeading
     | RelatedStoriesHeading
       --- Guides Page
     | GuidesTitle
+    | GuidesTitleFiltered String String
     | SearchPlaceholder
     | ExploreGuidesListPlaceholder
+      --- Story Page
+    | WhoSubHeading
+    | WhereSubHeading

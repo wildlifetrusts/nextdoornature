@@ -61,7 +61,7 @@ navigationColumn column language =
             translate language
     in
     div [ css [ footerColumnListStyle ] ]
-        [ h3 [ css [ Theme.FluidScale.fontSize1 ] ]
+        [ h3 [ css [ Theme.FluidScale.fontSizeLarge ] ]
             [ text (t column.title)
             ]
         , nav []
