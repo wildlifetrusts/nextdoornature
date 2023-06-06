@@ -8,7 +8,7 @@ import I18n.Translate exposing (Language(..), translate)
 import Message exposing (Msg)
 import Page.Guides.View
 import Page.Story.Data
-import Theme.Global exposing (centerContent, contentWrapper, featureImageStyle, pageColumnStyle, roundedCornerStyle, topTwoColumnsWrapperStyle)
+import Theme.Global exposing (centerContent, contentWrapper, featureImageStyle, pageColumnStyle, primaryHeader, roundedCornerStyle, topTwoColumnsWrapperStyle)
 import Theme.Markdown exposing (markdownToHtml)
 
 
@@ -20,7 +20,7 @@ view language story =
             translate language
     in
     div [ css [ centerContent ] ]
-        [ h1 [] [ text story.title ]
+        [ primaryHeader [] story.title
         , div [ css [ contentWrapper, width (pct 100) ] ]
             [ div [ css [ topTwoColumnsWrapperStyle ] ]
                 [ div [ css [ pageColumnStyle ] ]

@@ -1,6 +1,6 @@
 module Page.Guides.View exposing (view, viewTeaserList)
 
-import Html.Styled exposing (Html, a, div, h1, img, li, p, text, ul)
+import Html.Styled exposing (Html, a, div, img, li, p, text, ul)
 import Html.Styled.Attributes exposing (alt, attribute, css, href, src)
 import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (Language(..), translate)
@@ -9,7 +9,7 @@ import Message exposing (Msg)
 import Page.Guides.Data
 import Page.Shared.Data
 import Shared exposing (Model, Request(..))
-import Theme.Global exposing (centerContent, contentWrapper)
+import Theme.Global exposing (centerContent, contentWrapper, primaryHeader)
 
 
 view : Model -> Html Msg
@@ -37,16 +37,17 @@ view model =
 
                     Success list ->
                         List.concat [ Page.Guides.Data.teaserListFromGuideDict model.language model.content.guides, list ]
+
+        headerText : String
+        headerText =
+            if String.length model.query > 0 then
+                t <| GuidesTitleFiltered (String.fromInt <| List.length model.search) model.query
+
+            else
+                t GuidesTitle
     in
     div [ css [ centerContent ] ]
-        [ h1 [ attribute "aria-live" "alert" ]
-            [ text <|
-                if String.length model.query > 0 then
-                    t <| GuidesTitleFiltered (String.fromInt <| List.length model.search) model.query
-
-                else
-                    t GuidesTitle
-            ]
+        [ primaryHeader [ attribute "aria-live" "alert" ] headerText
         , div
             [ css [ contentWrapper ] ]
             [ viewTeaserList True teaserList

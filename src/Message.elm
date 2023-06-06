@@ -14,6 +14,6 @@ type Msg
     | CookieSettingsButtonClicked
     | CookiesAccepted
     | CookiesDeclined
-    | SearchChanged (List Page.Shared.Data.Teaser) String
-    | GotActions (Result Http.Error (List Page.Shared.Data.Teaser))
+    | SearchChanged (List Page.Shared.Data.GuideTeaser) String
+    | GotActions (Result Http.Error (List Page.Shared.Data.GuideTeaser))
     | UpdateSeed Random.Seed

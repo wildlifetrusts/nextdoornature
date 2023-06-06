@@ -10,7 +10,7 @@ import Page.Guides.Data
 import Page.Guides.View
 import Shared exposing (Model, shuffleList)
 import Theme.FluidScale
-import Theme.Global exposing (centerContent, contentWrapper, pageColumnBlockStyle, pageColumnStyle, topTwoColumnsWrapperStyle)
+import Theme.Global exposing (centerContent, contentWrapper, pageColumnBlockStyle, pageColumnStyle, primaryHeader, topTwoColumnsWrapperStyle)
 
 
 view : Model -> Html Msg
@@ -21,8 +21,7 @@ view model =
             translate model.language
     in
     div [ css [ centerContent ] ]
-        [ h1 []
-            [ text (t HomeTitle) ]
+        [ primaryHeader [] (t HomeTitle)
         , div [ css [ contentWrapper ] ]
             [ div [ css [ topTwoColumnsWrapperStyle ] ]
                 [ div [ css [ pageColumnStyle ] ]
