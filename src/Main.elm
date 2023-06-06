@@ -5,7 +5,7 @@ import Browser.Dom
 import Browser.Navigation
 import CookieBanner exposing (saveConsent)
 import GoogleAnalytics
-import Html.Styled exposing (Html, toUnstyled, div, text)
+import Html.Styled exposing (Html, div, text, toUnstyled)
 import Http
 import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (Language(..), translate)
@@ -230,7 +230,6 @@ viewDocument model =
     { title = t SiteTitle, body = [ toUnstyled (view model) ] }
 
 
-
 view : Model -> Html Msg
 view model =
     case model.page of
@@ -243,13 +242,13 @@ view model =
                 maybeStory =
                     Page.Story.Data.storyFromSlug model.language model.content.stories slug
             in
-            Theme.PageTemplate.view model
-                <| case maybeStory of
-                        Just story ->
-                            Page.Story.View.view model.language story
-                        
-                        Nothing ->
-                            resourceNotFound model.language
+            Theme.PageTemplate.view model <|
+                case maybeStory of
+                    Just story ->
+                        Page.Story.View.view model.language story
+
+                    Nothing ->
+                        resourceNotFound model.language
 
         Guide slug ->
             let
@@ -257,15 +256,14 @@ view model =
                 maybeGuide =
                     Page.Guide.Data.guideFromSlug model.language model.content.guides slug
             in
-            Theme.PageTemplate.view model
-                <| case maybeGuide of
+            Theme.PageTemplate.view model <|
+                case maybeGuide of
                     Just guide ->
-                        (Page.Guide.View.view model.language
+                        Page.Guide.View.view model.language
                             guide
                             (Page.Guide.Data.allGuidesSlugTitleList model.content.guides)
                             (Page.Story.Data.allStoryTeaserList model.content.stories)
-                        )
-                        
+
                     Nothing ->
                         resourceNotFound model.language
 

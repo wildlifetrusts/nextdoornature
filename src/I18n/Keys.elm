@@ -9,7 +9,6 @@ type Key
     | ResourceNotFoundText
     | ResourceNotFoundLinkText
     | ResourceNotFoundLinkPath
-
     | Story404Title
     | Story404Body
     | Guide404Title
@@ -18,7 +17,6 @@ type Key
     | AncillaryPage404Slug
     | AncillaryPage404Title
     | AncillaryPage404Body
-    
       --- Footer
     | FooterTitleColumnA
     | FooterTitleColumnB
