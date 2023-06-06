@@ -28,7 +28,7 @@ guideTeaserEncoder guideTeaser =
         , ( "maybeImage"
           , case guideTeaser.maybeImage of
                 Just image ->
-                    Encode.object [ ( "url", Encode.string image.src ), ( "alt", Encode.string image.alt ) ]
+                    Encode.object [ ( "src", Encode.string image.src ), ( "alt", Encode.string image.alt ) ]
 
                 Nothing ->
                     Encode.null
