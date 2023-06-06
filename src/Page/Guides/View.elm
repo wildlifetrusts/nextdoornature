@@ -1,5 +1,6 @@
 module Page.Guides.View exposing (view, viewGuideTeaserList)
 
+import Css exposing (fontWeight, int)
 import Html.Styled exposing (Html, a, div, h1, img, li, p, text, ul)
 import Html.Styled.Attributes exposing (alt, attribute, css, href, src)
 import I18n.Keys exposing (Key(..))
@@ -77,7 +78,7 @@ viewGuideTeaser includeSummary teaser =
             ]
             []
         , p [ css [ Theme.Global.teaserRowStyle ] ]
-            [ a [ href teaser.url ] [ text teaser.title ] ]
+            [ a [ css [ fontWeight (int 600) ], href teaser.url ] [ text teaser.title ] ]
         , if includeSummary then
             viewGuideTeaserSummary teaser.summary
 
