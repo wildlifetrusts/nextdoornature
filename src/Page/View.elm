@@ -11,6 +11,6 @@ import Theme.Markdown exposing (markdownToHtml)
 view : Page.Data.Page -> Html Msg
 view page =
     div [ css [ centerContent ] ]
-        [ primaryHeader page.title
+        [ primaryHeader [] page.title
         , div [] (markdownToHtml page.fullTextMarkdown)
         ]

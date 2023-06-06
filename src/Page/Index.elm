@@ -19,7 +19,7 @@ view model =
             translate model.language
     in
     div [ css [ centerContent ] ]
-        [ primaryHeader (t HomeTitle)
+        [ primaryHeader [] (t HomeTitle)
         , div [ css [ contentWrapper ] ]
             [ div [ css [ topTwoColumnsWrapperStyle ] ]
                 [ div [ css [ pageColumnStyle ] ]

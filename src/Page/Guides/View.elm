@@ -47,7 +47,7 @@ view model =
                 t GuidesTitle
     in
     div [ css [ centerContent ] ]
-        [ primaryHeader headerText
+        [ primaryHeader [ attribute "aria-live" "alert" ] headerText
         , div
             [ css [ contentWrapper ] ]
             [ viewGuideTeaserList True teaserList

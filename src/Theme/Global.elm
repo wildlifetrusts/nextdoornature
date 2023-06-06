@@ -200,9 +200,9 @@ globalStyles =
 -- Helpers
 
 
-primaryHeader : String -> Html msg
-primaryHeader title =
-    h1 [ id "focus-target", tabindex -1 ] [ text title ]
+primaryHeader : List (Html.Styled.Attribute msg) -> String -> Html msg
+primaryHeader extraAttributes title =
+    h1 ([ id "focus-target", tabindex -1 ] ++ extraAttributes) [ text title ]
 
 
 listStyleNone : Style

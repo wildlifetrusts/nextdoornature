@@ -20,7 +20,7 @@ view language story =
             translate language
     in
     div [ css [ centerContent ] ]
-        [ primaryHeader story.title
+        [ primaryHeader [] story.title
         , div [ css [ contentWrapper, width (pct 100) ] ]
             [ div [ css [ topTwoColumnsWrapperStyle ] ]
                 [ div [ css [ pageColumnStyle ] ]

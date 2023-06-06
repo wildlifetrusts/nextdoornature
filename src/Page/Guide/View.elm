@@ -20,7 +20,7 @@ import Theme.Markdown exposing (markdownToHtml)
 view : Language -> Page.Guide.Data.Guide -> List Page.Guide.Data.GuideListItem -> List Page.Story.Data.StoryTeaser -> Html Msg
 view language guide allGuides allStories =
     div [ css [ centerContent ] ]
-        [ primaryHeader guide.title
+        [ primaryHeader [] guide.title
         , viewSummaryImageRow guide
         , viewRow
             ( markdownToHtml guide.fullTextMarkdown
