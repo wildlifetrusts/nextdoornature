@@ -135,19 +135,14 @@ fallbackGuides language guides =
             guides.en
 
 
-guideFromSlug : Language -> Guides -> String -> Guide
+guideFromSlug : Language -> Guides -> String -> Maybe Guide
 guideFromSlug language guides slug =
     case Dict.get slug (guidesInPreferredLanguage language guides) of
         Just aGuide ->
-            aGuide
+            Just aGuide
 
         Nothing ->
-            case Dict.get slug (fallbackGuides language guides) of
-                Just aGuide ->
-                    aGuide
-
-                Nothing ->
-                    blankGuide language
+            Dict.get slug (fallbackGuides language guides)
 
 
 allGuidesSlugTitleList : Guides -> List GuideListItem

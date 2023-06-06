@@ -18,6 +18,18 @@ enStrings key =
         ---
         -- 404 content
         ---
+        ResourceNotFoundTitle ->
+            "[cCc] Oops!"
+
+        ResourceNotFoundText ->
+            "[cCc] Looks like we've popped up on the wrong page"
+
+        ResourceNotFoundLinkText ->
+            "[cCc] Back to home page"
+
+        ResourceNotFoundLinkPath ->
+            "/"
+
         Guide404Title ->
             "[cCc] Sorry, we can't find that guide"
 

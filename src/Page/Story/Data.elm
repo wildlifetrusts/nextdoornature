@@ -123,19 +123,14 @@ fallbackStories language stories =
             stories.en
 
 
-storyFromSlug : Language -> Stories -> String -> Story
+storyFromSlug : Language -> Stories -> String -> Maybe Story
 storyFromSlug language stories slug =
     case Dict.get slug (storiesInPreferredLanguage language stories) of
         Just aStory ->
-            aStory
+            Just aStory
 
         Nothing ->
-            case Dict.get slug (fallbackStories language stories) of
-                Just aStory ->
-                    aStory
-
-                Nothing ->
-                    blankStory language
+            Dict.get slug (fallbackStories language stories)
 
 
 allStoryTeaserList : Stories -> List StoryTeaser
