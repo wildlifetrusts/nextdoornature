@@ -52,9 +52,9 @@ teaserListFromGuideDict :
     -> Page.Guide.Data.Guides
     -> List Page.Shared.Data.Teaser
 teaserListFromGuideDict language guides =
-    Dict.toList (Page.Guide.Data.guidesInPreferredLanguage language guides)
+    Dict.values (Page.Guide.Data.guidesInPreferredLanguage language guides)
         |> List.map
-            (\( _, g ) ->
+            (\g ->
                 { title = g.title
                 , url = Route.toString (Route.Guide g.slug)
                 , summary = g.summary
@@ -69,9 +69,9 @@ teaserListFromStoryDict :
     -> Page.Story.Data.Stories
     -> List Page.Shared.Data.Teaser
 teaserListFromStoryDict language stories =
-    Dict.toList (Page.Story.Data.storiesInPreferredLanguage language stories)
+    Dict.values (Page.Story.Data.storiesInPreferredLanguage language stories)
         |> List.map
-            (\( _, s ) ->
+            (\s ->
                 { title = s.title
                 , url = Route.toString (Route.Story s.slug)
                 , summary = ""
