@@ -286,6 +286,7 @@ teaserImageStyle =
         , property "aspect-ratio" "1/1"
         , property "object-fit" "cover"
         , width (pct 100)
+        , marginBottom (rem 1)
         ]
 
 
