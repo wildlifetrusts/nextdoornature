@@ -1,6 +1,6 @@
 module Page.Index exposing (view)
 
-import Css exposing (Style, batch, fontSize, margin2, marginBottom, rem)
+import Css exposing (Style, batch, marginBottom, rem)
 import Html.Styled exposing (Html, div, h1, h2, p, text)
 import Html.Styled.Attributes exposing (css)
 import I18n.Keys exposing (Key(..))
@@ -60,5 +60,5 @@ teaserSubtitleStyle : Style
 teaserSubtitleStyle =
     batch
         [ marginBottom (rem 1)
-        , Theme.FluidScale.fontSize1
+        , Theme.FluidScale.fontSizeLarge
         ]
