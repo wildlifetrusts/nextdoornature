@@ -1,11 +1,11 @@
 module Page.NotFound exposing (resourceNotFound)
 
-import Css exposing (Style, batch, margin3, maxWidth, pct, rem, width)
+import Css exposing (Style, batch, pct, width)
 import Html.Styled exposing (Html, a, div, img, p, text)
-import Html.Styled.Attributes exposing (alt, css, href, src)
+import Html.Styled.Attributes exposing (css, href, src)
 import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (Language(..), translate)
-import Theme.Global exposing (centerContent, contentWrapper, featureImageStyle, pageColumnBlockStyle, pageColumnStyle, primaryHeader, roundedCornerStyle, teaserImageStyle, topTwoColumnsWrapperStyle)
+import Theme.Global exposing (centerContent, contentWrapper, pageColumnStyle, primaryHeader, topTwoColumnsWrapperStyle)
 
 
 resourceNotFound : Language -> Html msg
@@ -34,6 +34,4 @@ resourceNotFound language =
 
 badgeImageStyle : Style
 badgeImageStyle =
-    batch
-        [-- width (pct 50)
-        ]
+    batch []
