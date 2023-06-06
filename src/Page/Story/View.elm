@@ -36,7 +36,10 @@ view language story =
                                 text ""
                         , case story.maybeLocation of
                             Just location ->
-                                p [] [ text location ]
+                                div []
+                                    [ h3 [] [ text (t WhereSubHeading) ]
+                                    , p [] [ text location ]
+                                    ]
 
                             Nothing ->
                                 text ""

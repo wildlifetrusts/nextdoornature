@@ -37,9 +37,17 @@ view model =
 
                     Success list ->
                         List.concat [ Page.Guides.Data.teaserListFromGuideDict model.language model.content.guides, list ]
+
+        headerText : String
+        headerText =
+            if String.length model.query > 0 then
+                t <| GuidesTitleFiltered (String.fromInt <| List.length model.search) model.query
+
+            else
+                t GuidesTitle
     in
     div [ css [ centerContent ] ]
-        [ primaryHeader (t GuidesTitle)
+        [ primaryHeader headerText
         , div
             [ css [ contentWrapper ] ]
             [ viewGuideTeaserList True teaserList
