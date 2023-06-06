@@ -49,7 +49,7 @@ view language story =
                 , div [ css [ pageColumnStyle ] ]
                     (markdownToHtml story.fullTextMarkdown)
                 ]
-            , viewColumnWrapper (Page.Guides.View.viewGuideTeaserList False story.relatedGuideList)
+            , viewColumnWrapper (Page.Guides.View.viewTeaserList False story.relatedGuideList)
             ]
         ]
 

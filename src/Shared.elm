@@ -1,5 +1,6 @@
-module Shared exposing (Content, CookieState, Model, Request(..), contentDictDecoder)
+module Shared exposing (Content, CookieState, Model, Request(..), contentDictDecoder, shuffleList)
 
+import Array
 import Browser.Navigation
 import Dict exposing (Dict)
 import I18n.Translate exposing (Language)
@@ -8,6 +9,7 @@ import Page.Data
 import Page.Guide.Data
 import Page.Shared.Data
 import Page.Story.Data
+import Random
 import Route exposing (Route)
 
 
@@ -17,9 +19,10 @@ type alias Model =
     , cookieState : CookieState
     , language : Language
     , content : Content
-    , search : List Page.Shared.Data.GuideTeaser
+    , search : List Page.Shared.Data.Teaser
     , query : String
     , externalActions : Request
+    , seed : Maybe Random.Seed
     }
 
 
@@ -48,7 +51,7 @@ type alias Content =
 type Request
     = Failure
     | Loading
-    | Success (List Page.Shared.Data.GuideTeaser)
+    | Success (List Page.Shared.Data.Teaser)
 
 
 contentDictDecoder : Json.Decode.Value -> Content
@@ -74,3 +77,40 @@ flagsDictDecoder =
         (Json.Decode.field "guides" Page.Guide.Data.guideLanguageDictDecoder)
         (Json.Decode.field "pages" Page.Data.pageLanguageDictDecoder)
         (Json.Decode.field "stories" Page.Story.Data.storyLanguageDictDecoder)
+
+
+shuffleList : Maybe Random.Seed -> List a -> List a
+shuffleList seed list =
+    case seed of
+        Just aSeed ->
+            shuffleListHelper aSeed list []
+
+        Nothing ->
+            []
+
+
+shuffleListHelper : Random.Seed -> List a -> List a -> List a
+shuffleListHelper seed source result =
+    if List.isEmpty source then
+        result
+
+    else
+        let
+            indexGenerator =
+                Random.int 0 (List.length source - 1)
+
+            ( index, nextSeed ) =
+                Random.step indexGenerator seed
+
+            valAtIndex =
+                Array.get index (Array.fromList source)
+
+            sourceWithoutIndex =
+                List.take index source ++ List.drop (index + 1) source
+        in
+        case valAtIndex of
+            Just val ->
+                shuffleListHelper nextSeed sourceWithoutIndex (val :: result)
+
+            Nothing ->
+                result

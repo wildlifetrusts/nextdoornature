@@ -1,4 +1,4 @@
-module Page.Guides.View exposing (view, viewGuideTeaserList)
+module Page.Guides.View exposing (view, viewTeaserList)
 
 import Html.Styled exposing (Html, a, div, img, li, p, text, ul)
 import Html.Styled.Attributes exposing (alt, attribute, css, href, src)
@@ -19,7 +19,7 @@ view model =
         t =
             translate model.language
 
-        teaserList : List Page.Shared.Data.GuideTeaser
+        teaserList : List Page.Shared.Data.Teaser
         teaserList =
             if String.length model.query > 0 then
                 model.search
@@ -50,15 +50,15 @@ view model =
         [ primaryHeader [ attribute "aria-live" "alert" ] headerText
         , div
             [ css [ contentWrapper ] ]
-            [ viewGuideTeaserList True teaserList
+            [ viewTeaserList True teaserList
             ]
         ]
 
 
-viewGuideTeaser : Bool -> Page.Shared.Data.GuideTeaser -> Html Msg
+viewGuideTeaser : Bool -> Page.Shared.Data.Teaser -> Html Msg
 viewGuideTeaser includeSummary teaser =
     let
-        image : Page.Shared.Data.GuideTeaserImage
+        image : Page.Shared.Data.TeaserImage
         image =
             case teaser.maybeImage of
                 Just i ->
@@ -98,8 +98,8 @@ viewGuideTeaserSummary summary =
         text ""
 
 
-viewGuideTeaserList : Bool -> List Page.Shared.Data.GuideTeaser -> Html Msg
-viewGuideTeaserList includeSummary teasers =
+viewTeaserList : Bool -> List Page.Shared.Data.Teaser -> Html Msg
+viewTeaserList includeSummary teasers =
     if List.length teasers > 0 then
         ul [ css [ Theme.Global.teasersContainerStyle ] ]
             (teasers

@@ -20,6 +20,7 @@ import Page.Index
 import Page.Story.Data
 import Page.Story.View
 import Page.View
+import Random
 import Route exposing (Route(..))
 import Shared exposing (CookieState, Model, Request(..))
 import Task
@@ -75,8 +76,12 @@ init flags url key =
       , search = []
       , query = ""
       , externalActions = Loading
+      , seed = Nothing
       }
-    , getActions
+    , Cmd.batch
+        [ getActions
+        , Random.generate UpdateSeed Random.independentSeed
+        ]
     )
 
 
@@ -191,6 +196,9 @@ update msg model =
 
         SearchChanged searchResult query ->
             ( { model | search = searchResult, query = query }, Cmd.none )
+
+        UpdateSeed seed ->
+            ( { model | seed = Just seed }, Cmd.none )
 
         NoOp ->
             ( model, Cmd.none )

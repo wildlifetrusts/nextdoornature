@@ -66,7 +66,7 @@ searchInput model =
         t =
             I18n.Translate.translate model.language
 
-        teaserList : List Page.Shared.Data.GuideTeaser
+        teaserList : List Page.Shared.Data.Teaser
         teaserList =
             if model.language == Welsh then
                 Page.Guides.Data.teaserListFromGuideDict model.language model.content.guides
