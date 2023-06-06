@@ -41,6 +41,8 @@ type Key
     | WelcomeP1
     | WelcomeP2
     | WelcomeP3
+    | GuideHighlightsSubtitle
+    | StoryHighlightsSubtitle
       --- Guide Page
     | RelatedGuidesHeading
     | RelatedStoriesHeading
