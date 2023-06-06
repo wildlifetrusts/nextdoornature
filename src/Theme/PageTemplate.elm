@@ -3,7 +3,7 @@ module Theme.PageTemplate exposing (view)
 import CookieBanner
 import Css exposing (Style, backgroundColor, batch, border3, hidden, overflowX, pct, rem, solid, width)
 import Html.Styled exposing (Html, div, main_)
-import Html.Styled.Attributes exposing (css, id)
+import Html.Styled.Attributes exposing (css)
 import Message exposing (Msg)
 import Shared exposing (Model)
 import Theme.FooterTemplate as FooterTemplate
