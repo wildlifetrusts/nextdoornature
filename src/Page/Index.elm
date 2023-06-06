@@ -7,7 +7,7 @@ import I18n.Translate exposing (translate)
 import Message exposing (Msg)
 import Page.Guides.Data
 import Page.Guides.View
-import Shared exposing (Model)
+import Shared exposing (Model, shuffleList)
 import Theme.Global exposing (centerContent, contentWrapper, pageColumnBlockStyle, pageColumnStyle, topTwoColumnsWrapperStyle)
 
 
@@ -26,9 +26,13 @@ view model =
                 [ div [ css [ pageColumnStyle ] ]
                     (viewTextColumn t [ WelcomeP1, WelcomeP2, WelcomeP3 ])
                 , div [ css [ pageColumnStyle ] ]
-                    [ List.take 2 (Page.Guides.Data.teaserListFromGuideDict model.language model.content.guides)
+                    [ Page.Guides.Data.teaserListFromGuideDict model.language model.content.guides
+                        |> shuffleList model.seed
+                        |> List.take 2
                         |> Page.Guides.View.viewTeaserList False
-                    , List.take 2 (Page.Guides.Data.teaserListFromStoryDict model.language model.content.stories)
+                    , Page.Guides.Data.teaserListFromStoryDict model.language model.content.stories
+                        |> shuffleList model.seed
+                        |> List.take 2
                         |> Page.Guides.View.viewTeaserList False
                     ]
                 ]

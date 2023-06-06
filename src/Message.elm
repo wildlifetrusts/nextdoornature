@@ -3,6 +3,7 @@ module Message exposing (Msg(..))
 import Browser
 import Http
 import Page.Shared.Data
+import Random
 import Url
 
 
@@ -15,3 +16,4 @@ type Msg
     | CookiesDeclined
     | SearchChanged (List Page.Shared.Data.Teaser) String
     | GotActions (Result Http.Error (List Page.Shared.Data.Teaser))
+    | UpdateSeed Random.Seed
