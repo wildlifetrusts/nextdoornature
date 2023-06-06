@@ -74,7 +74,7 @@ storyDictDecoder =
             |> Json.Decode.Extra.andMap
                 (Json.Decode.maybe (Json.Decode.field "location" Json.Decode.string |> Json.Decode.Extra.withDefault ""))
             |> Json.Decode.Extra.andMap
-                (Json.Decode.maybe (Json.Decode.field "groupOrIndividual" Json.Decode.string |> Json.Decode.Extra.withDefault ""))
+                (Json.Decode.maybe (Json.Decode.field "who" Json.Decode.string |> Json.Decode.Extra.withDefault ""))
             |> Json.Decode.Extra.andMap
                 (Json.Decode.field "images" (Json.Decode.list imageDecoder))
             |> Json.Decode.Extra.andMap

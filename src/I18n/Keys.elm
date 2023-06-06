@@ -51,3 +51,6 @@ type Key
     | GuidesTitleFiltered String String
     | SearchPlaceholder
     | ExploreGuidesListPlaceholder
+      --- Story Page
+    | WhoSubHeading
+    | WhereSubHeading

@@ -7,8 +7,6 @@ summary: This is test story content, generated to populate the site before real
   content goes in.
 ---
 
-## My story
-
 A test story full of inspiration.
 
 [cCc] Marked so we catch in a sweep.

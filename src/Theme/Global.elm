@@ -134,24 +134,28 @@ globalStyles =
         , typeSelector "h1"
             [ fontFamilies [ "Adelle", "serif" ]
             , color purple
-            , margin3 (rem 0) auto (rem 2)
-            , Theme.FluidScale.fontSize4
+            , margin3 (rem 0) auto (rem 1.5)
+            , Theme.FluidScale.fontSizeExtraLarge
             , width (pct 100)
             ]
         , typeSelector "h2"
             [ fontFamilies [ "Adelle", "serif" ]
             , color purple
-            , Theme.FluidScale.fontSize3
+            , margin3 (rem 0) auto (rem 1.5)
+            , Theme.FluidScale.fontSizeLarge
+            , width (pct 100)
             ]
         , typeSelector "h3"
             [ fontFamilies [ "Adelle", "serif" ]
             , color purple
-            , Theme.FluidScale.fontSize2
+            , margin3 (rem 0) auto (rem 1)
+            , Theme.FluidScale.fontSizeMedium
             ]
         , typeSelector "h4"
             [ fontFamilies [ "Adelle", "serif" ]
             , color purple
-            , Theme.FluidScale.fontSize1
+            , margin3 (rem 0) auto (rem 1)
+            , Theme.FluidScale.fontSizeBase
             ]
         , typeSelector "a"
             [ color purple
@@ -172,7 +176,8 @@ globalStyles =
         , typeSelector "b"
             []
         , typeSelector "p"
-            []
+            [ margin3 (rem 0) auto (rem 1)
+            ]
         , typeSelector "blockquote"
             []
         , typeSelector "button"
@@ -261,7 +266,6 @@ featureImageStyle =
     batch
         [ width (pct 100)
         , height auto
-        , maxWidth (px (maxSmallDesktop / 3))
         , teaserRowStyle
         ]
 
@@ -305,6 +309,7 @@ contentWrapper =
         , flexDirection column
         , flexWrap noWrap
         , justifyContent center
+        , width auto
         , withMediaTabletLandscapeUp
             [ alignItems flexStart
             , flexDirection row
@@ -321,11 +326,13 @@ topTwoColumnsWrapperStyle =
         , flexWrap noWrap
         , justifyContent center
         , marginBottom (rem 3)
-        , width auto
+        , width (pct 100)
+        , withMediaTabletLandscapeUp
+            [ marginRight (rem 3)
+            ]
         , withMediaTabletPortraitUp
             [ flex (int 2)
             , flexDirection row
-            , marginRight (rem 3)
             ]
         ]
 
