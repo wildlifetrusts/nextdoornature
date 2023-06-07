@@ -20,19 +20,6 @@ type alias Page =
     }
 
 
-blankPage : Language -> Page
-blankPage language =
-    let
-        t : Key -> String
-        t =
-            translate language
-    in
-    { title = t AncillaryPage404Title
-    , slug = t AncillaryPage404Slug
-    , fullTextMarkdown = t AncillaryPage404Body
-    }
-
-
 pageDictDecoder : Json.Decode.Decoder (Dict String Page)
 pageDictDecoder =
     Json.Decode.dict

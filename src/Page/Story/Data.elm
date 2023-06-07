@@ -38,23 +38,6 @@ defaultStoryImageSrc =
     "/images/default-story-image.jpg"
 
 
-blankStory : Language -> Story
-blankStory language =
-    let
-        t : Key -> String
-        t =
-            translate language
-    in
-    { title = t Story404Title
-    , slug = ""
-    , fullTextMarkdown = t Story404Body
-    , maybeLocation = Nothing
-    , maybeGroupOrIndividual = Nothing
-    , images = []
-    , relatedGuideList = []
-    }
-
-
 type alias StoryTeaser =
     { titleKey : String
     , slug : String

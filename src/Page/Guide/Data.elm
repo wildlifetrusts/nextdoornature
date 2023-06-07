@@ -50,25 +50,6 @@ type alias GuideListItem =
     }
 
 
-blankGuide : Language -> Guide
-blankGuide language =
-    let
-        t : Key -> String
-        t =
-            translate language
-    in
-    { title = t Guide404Title
-    , slug = t Guide404Slug
-    , fullTextMarkdown = t Guide404Body
-    , summary = t Guide404Title
-    , maybeImage = Nothing
-    , maybeVideo = Nothing
-    , maybeAudio = Nothing
-    , relatedStoryList = []
-    , relatedGuideList = []
-    }
-
-
 guideDictDecoder : Json.Decode.Decoder (Dict String Guide)
 guideDictDecoder =
     Json.Decode.dict
