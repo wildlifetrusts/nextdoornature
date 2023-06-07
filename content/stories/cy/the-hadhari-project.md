@@ -4,7 +4,7 @@ who: Derbyshire Wildlife Trust and the elders of the West Indian Community in De
 location: The Hadhari Centre, Derby
 postcode: null
 images:
-  - src: /public/images/uploads/joycegrundyadam_hidariderby_12-2-.jpg
+  - src: /images/uploads/joycegrundyadam_hidariderby_12-2-.jpg
     alt: A man and a woman talking in a wintery garden
     credit: Photo copyright Autumn Barlow/The Wildlife Trusts 2022
     caption: Adam from Derbyshire Wildlife Trust is speaking to Joyce, centre

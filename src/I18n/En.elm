@@ -18,29 +18,17 @@ enStrings key =
         ---
         -- 404 content
         ---
-        Guide404Title ->
-            "[cCc] Sorry, we can't find that guide"
+        ResourceNotFoundTitle ->
+            "[cCc] Oops!"
 
-        Guide404Slug ->
-            "guide-not-found"
+        ResourceNotFoundText ->
+            "[cCc] Looks like we've popped up on the wrong page"
 
-        Guide404Body ->
-            "[cCc] Try searching again [home](\"\\\")"
+        ResourceNotFoundLinkText ->
+            "[cCc] Back to home page"
 
-        Story404Title ->
-            "[cCc] Sorry, we can't find that story"
-
-        Story404Body ->
-            "[cCc] Try searching again [home](\"\\\")"
-
-        AncillaryPage404Title ->
-            "[cCc] Sorry, we can't find that page"
-
-        AncillaryPage404Slug ->
-            "page-not-found"
-
-        AncillaryPage404Body ->
-            "[cCc] Try searching again [home](\"\\\")"
+        ResourceNotFoundLinkPath ->
+            "/"
 
         ---
         -- Footer

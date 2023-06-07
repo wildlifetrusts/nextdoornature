@@ -3,7 +3,7 @@ title: "Sicrhau bod pawb yn gallu cael mynediad at eich grŵp neu brosiect "
 summary: "Mae angen pethau gwahanol ar wahanol bobl i'w helpu i gymryd rhan yn
   gyfartal mewn grŵp. "
 image:
-  src: /public/images/uploads/accessibility_orig-2-.jpg
+  src: /images/uploads/accessibility_orig-2-.jpg
   alt: A bolted, locked gate
   credit: Photo copyright Autumn Barlow/The Wildlife Trusts 2023
 ---

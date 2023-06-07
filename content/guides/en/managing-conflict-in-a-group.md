@@ -2,7 +2,7 @@
 title: Managing conflict in a group
 summary: Understanding conflict and how to deal with it in groups
 image:
-  src: /public/images/uploads/managingconflictingroup_orig-2-.jpg
+  src: /images/uploads/managingconflictingroup_orig-2-.jpg
   alt: A photo of a leaf with many holes eaten away at it
   credit: Photo copyright Autumn Barlow/The Wildlife Trusts 2023
 ---

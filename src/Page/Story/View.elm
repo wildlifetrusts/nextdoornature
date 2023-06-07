@@ -1,7 +1,7 @@
 module Page.Story.View exposing (view)
 
 import Css exposing (Style, batch, margin3, pct, rem, width)
-import Html.Styled exposing (Html, div, h1, h3, img, p, text)
+import Html.Styled exposing (Html, div, h3, img, p, text)
 import Html.Styled.Attributes exposing (alt, css, src)
 import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (Language(..), translate)

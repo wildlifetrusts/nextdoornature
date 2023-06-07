@@ -9,6 +9,18 @@ cyStrings key =
         SiteTitle ->
             "[cCc] Hwb Natur Drws-nesaf"
 
+        ResourceNotFoundTitle ->
+            "[cCc] Oops! CY"
+
+        ResourceNotFoundText ->
+            "[cCc] Looks like we've popped up on the wrong page CY"
+
+        ResourceNotFoundLinkText ->
+            "[cCc] Back to home page CY"
+
+        ResourceNotFoundLinkPath ->
+            "/"
+
         GuidesTitle ->
             "[cCc] Guides CY"
 
