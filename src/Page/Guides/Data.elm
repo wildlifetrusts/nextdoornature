@@ -1,23 +1,15 @@
-module Page.Guides.Data exposing (actionTeaserDecoder, actionTeaserListDecoder, guideTeaserDecoder, guideTeaserListEncoder, guideTeaserListString, internalGuideTeaserDecoder, internalGuideTeaserListDecoder, teaserListFromGuideDict, teaserListFromStoryDict)
+module Page.Guides.Data exposing (actionTeaserDecoder, actionTeaserListDecoder, guideTeaserListEncoder, guideTeaserListString, internalGuideTeaserDecoder, internalGuideTeaserListDecoder, teaserListFromGuideDict, teaserListFromStoryDict)
 
 import Dict
 import I18n.Translate exposing (Language)
 import Json.Decode
+import Json.Decode.Extra
 import Json.Encode as Encode
 import List
 import Page.Guide.Data
 import Page.Shared.Data
 import Page.Story.Data
 import Route
-
-
-guideTeaserDecoder : Json.Decode.Decoder Page.Shared.Data.Teaser
-guideTeaserDecoder =
-    Json.Decode.map4 Page.Shared.Data.Teaser
-        (Json.Decode.field "title" Json.Decode.string)
-        (Json.Decode.field "basename" Json.Decode.string)
-        (Json.Decode.field "summary" Json.Decode.string)
-        (Json.Decode.maybe (Json.Decode.field "image" Page.Shared.Data.guideTeaserImageDecoder))
 
 
 guideTeaserEncoder : Page.Shared.Data.Teaser -> Encode.Value
@@ -106,7 +98,10 @@ internalGuideTeaserDecoder =
     Json.Decode.map4 Page.Shared.Data.Teaser
         (Json.Decode.field "title" Json.Decode.string)
         (Json.Decode.field "url" Json.Decode.string)
-        (Json.Decode.field "summary" Json.Decode.string)
+        (Json.Decode.field "preview" Json.Decode.string
+            |> Json.Decode.Extra.withDefault ""
+            |> Json.Decode.andThen (\preview -> Json.Decode.succeed (Page.Shared.Data.summaryFromPreview preview))
+        )
         (Json.Decode.maybe (Json.Decode.field "maybeImage" Page.Shared.Data.guideTeaserImageDecoder))
 
 

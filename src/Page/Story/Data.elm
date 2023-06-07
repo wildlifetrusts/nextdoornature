@@ -81,7 +81,7 @@ storyDictDecoder =
                 (Json.Decode.field "content" Json.Decode.string |> Json.Decode.Extra.withDefault "")
             |> Json.Decode.Extra.andMap
                 (Json.Decode.field "relatedGuideList"
-                    (Json.Decode.list guideTeaserDecoder)
+                    (Json.Decode.list Page.Shared.Data.guideTeaserDecoder)
                     |> Json.Decode.Extra.withDefault []
                 )
         )
@@ -173,12 +173,3 @@ translationsFromSlug storyDict { slug, title, images } =
         -- Means this story is only on one language.
         Nothing ->
             { title = title, maybeImage = List.head images }
-
-
-guideTeaserDecoder : Json.Decode.Decoder Page.Shared.Data.Teaser
-guideTeaserDecoder =
-    Json.Decode.map4 Page.Shared.Data.Teaser
-        (Json.Decode.field "title" Json.Decode.string)
-        (Json.Decode.field "basename" Json.Decode.string)
-        (Json.Decode.field "summary" Json.Decode.string)
-        (Json.Decode.maybe (Json.Decode.field "image" Page.Shared.Data.guideTeaserImageDecoder))

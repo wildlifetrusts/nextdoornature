@@ -13,7 +13,7 @@ import Page.Shared.View
 import Page.Story.Data
 import Route exposing (Route(..))
 import Theme.FluidScale exposing (fontSizeBase)
-import Theme.Global exposing (centerContent, contentWrapper, featureImageStyle, pageColumnBlockStyle, pageColumnStyle, primaryHeader, roundedCornerStyle, teaserImageStyle, topTwoColumnsWrapperStyle)
+import Theme.Global exposing (centerContent, contentWrapper, featureImageStyle, pageColumnBlockStyle, pageColumnStyle, primaryHeader, teaserImageStyle, topTwoColumnsWrapperStyle)
 import Theme.Markdown exposing (markdownToHtml)
 
 
@@ -209,13 +209,7 @@ viewStoryImage maybeImage =
                     }
     in
     img
-        [ alt image.alt
-        , src image.src
-        , css
-            [ roundedCornerStyle
-            , teaserImageStyle
-            ]
-        ]
+        [ alt image.alt, src image.src, css [ teaserImageStyle ] ]
         []
 
 

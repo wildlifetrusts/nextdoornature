@@ -31,12 +31,12 @@ view model =
                     , Page.Guides.Data.teaserListFromGuideDict model.language model.content.guides
                         |> shuffleList model.seed
                         |> List.take 2
-                        |> Page.Guides.View.viewTeaserList False
+                        |> Page.Guides.View.viewTeaserList False Page.Guides.View.homePageLayoutStyle
                     , h2 [ css [ teaserSubtitleStyle ] ] [ text (t StoryHighlightsSubtitle) ]
                     , Page.Guides.Data.teaserListFromStoryDict model.language model.content.stories
                         |> shuffleList model.seed
                         |> List.take 2
-                        |> Page.Guides.View.viewTeaserList False
+                        |> Page.Guides.View.viewTeaserList False Page.Guides.View.homePageLayoutStyle
                     ]
                 ]
             , div [ css [ pageColumnStyle ] ]

@@ -8,7 +8,7 @@ import I18n.Translate exposing (Language(..), translate)
 import Message exposing (Msg)
 import Page.Guides.View
 import Page.Story.Data
-import Theme.Global exposing (centerContent, contentWrapper, featureImageStyle, pageColumnStyle, primaryHeader, roundedCornerStyle, topTwoColumnsWrapperStyle)
+import Theme.Global exposing (centerContent, contentWrapper, featureImageStyle, pageColumnStyle, primaryHeader, topTwoColumnsWrapperStyle)
 import Theme.Markdown exposing (markdownToHtml)
 
 
@@ -49,7 +49,7 @@ view language story =
                 , div [ css [ pageColumnStyle ] ]
                     (markdownToHtml story.fullTextMarkdown)
                 ]
-            , viewColumnWrapper (Page.Guides.View.viewTeaserList False story.relatedGuideList)
+            , viewColumnWrapper (Page.Guides.View.viewTeaserList False Page.Guides.View.homePageLayoutStyle story.relatedGuideList)
             ]
         ]
 
@@ -59,7 +59,7 @@ viewImages imageList =
     List.map
         (\image ->
             div []
-                [ img [ src image.src, alt image.alt, css [ roundedCornerStyle, featureImageStyle ] ] []
+                [ img [ src image.src, alt image.alt, css [ featureImageStyle ] ] []
                 , viewImageCaption (maybeCaptions image.maybeCaption image.maybeCredit)
                 ]
         )

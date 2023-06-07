@@ -80,7 +80,10 @@ guideDictDecoder =
             |> Json.Decode.Extra.andMap
                 (Json.Decode.field "content" Json.Decode.string |> Json.Decode.Extra.withDefault "")
             |> Json.Decode.Extra.andMap
-                (Json.Decode.field "summary" Json.Decode.string |> Json.Decode.Extra.withDefault "")
+                (Json.Decode.field "preview" Json.Decode.string
+                    |> Json.Decode.Extra.withDefault ""
+                    |> Json.Decode.andThen (\preview -> Json.Decode.succeed (Page.Shared.Data.summaryFromPreview preview))
+                )
             |> Json.Decode.Extra.andMap
                 (Json.Decode.maybe (Json.Decode.field "image" imageDecoder))
             |> Json.Decode.Extra.andMap

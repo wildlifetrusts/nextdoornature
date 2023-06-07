@@ -149,7 +149,7 @@ enStrings key =
         -- Guides Page
         ---
         GuidesTitle ->
-            "[cCc] Guides"
+            "Guides"
 
         GuidesTitleFiltered num query ->
             num ++ " guides on '" ++ query ++ "' [cCc]"
