@@ -1,7 +1,7 @@
 module Page.Guide.View exposing (view)
 
-import Css exposing (Style, batch, center, column, displayFlex, flexDirection, flexWrap, fontFamilies, justifyContent, listStyle, marginTop, maxWidth, none, padding2, paddingLeft, px, wrap, zero)
-import Html.Styled exposing (Html, a, div, h2, img, li, text, ul)
+import Css exposing (Style, auto, batch, borderBottom3, center, color, column, displayFlex, flexDirection, flexWrap, justifyContent, listStyle, margin2, marginBottom, marginTop, maxWidth, none, paddingLeft, px, rem, solid, wrap, zero)
+import Html.Styled exposing (Html, a, div, h2, img, li, p, text, ul)
 import Html.Styled.Attributes exposing (alt, css, href, src)
 import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (Language(..), translate)
@@ -12,29 +12,35 @@ import Page.Shared.Data
 import Page.Shared.View
 import Page.Story.Data
 import Route exposing (Route(..))
-import Theme.FluidScale exposing (fontSizeBase)
-import Theme.Global exposing (centerContent, contentWrapper, featureImageStyle, pageColumnBlockStyle, pageColumnStyle, primaryHeader, roundedCornerStyle, teaserImageStyle, topTwoColumnsWrapperStyle)
+import Theme.Global exposing (centerContent, contentWrapper, featureImageStyle, pageColumnBlockStyle, pageColumnStyle, primaryHeader, purple, teal, teaserImageStyle, topTwoColumnsWrapperStyle)
 import Theme.Markdown exposing (markdownToHtml)
 
 
 view : Language -> Page.Guide.Data.Guide -> List Page.Guide.Data.GuideListItem -> List Page.Story.Data.StoryTeaser -> Html Msg
 view language guide allGuides allStories =
-    div [ css [ centerContent ] ]
-        [ primaryHeader [] guide.title
-        , viewSummaryImageRow guide
-        , viewRow
-            ( markdownToHtml guide.fullTextMarkdown
-            , [ viewMaybeVideo guide.maybeVideo
-              , viewMaybeAudio guide.maybeAudio
-              , viewRelatedGuideTeasers language guide.relatedGuideList allGuides
-              ]
-            , [ viewRelatedStoryTeasers language guide.relatedStoryList allStories ]
-            )
+    div []
+        [ div [ css [ outerBorderStyle ] ]
+            [ div
+                [ css [ centerContent ] ]
+                [ primaryHeader [ css [ guideTitleStyle ] ] guide.title
+                ]
+            ]
+        , div
+            [ css [ centerContent ] ]
+            [ viewRow
+                ( viewImageColumn guide
+                , [ viewMaybeVideo guide.maybeVideo
+                  , viewMaybeAudio guide.maybeAudio
+                  , viewRelatedGuideTeasers language guide.relatedGuideList allGuides
+                  ]
+                , [ viewRelatedStoryTeasers language guide.relatedStoryList allStories ]
+                )
+            ]
         ]
 
 
-viewSummaryImageRow : Page.Guide.Data.Guide -> Html Msg
-viewSummaryImageRow guide =
+viewImageColumn : Page.Guide.Data.Guide -> List (Html Msg)
+viewImageColumn guide =
     let
         image : Page.Guide.Data.Image
         image =
@@ -45,16 +51,17 @@ viewSummaryImageRow guide =
                 Nothing ->
                     Page.Guide.Data.defaultGuideImage
     in
-    viewRow
-        ( [ div [ css [ guideSummaryStyle ] ] [ text guide.summary ] ]
-        , [ img [ css [ featureImageStyle ], src image.src, alt image.alt ] [] ]
+    [ div []
+        [ img [ css [ featureImageStyle ], src image.src, alt image.alt ] []
         , case image.maybeCredit of
             Just aCredit ->
-                [ text aCredit ]
+                p [ css [ imageCaptionStyle ] ] [ text aCredit ]
 
             Nothing ->
-                [ text "" ]
-        )
+                text ""
+        ]
+    , div [] (markdownToHtml guide.fullTextMarkdown)
+    ]
 
 
 viewRow : ( List (Html Msg), List (Html Msg), List (Html Msg) ) -> Html Msg
@@ -212,8 +219,7 @@ viewStoryImage maybeImage =
         [ alt image.alt
         , src image.src
         , css
-            [ roundedCornerStyle
-            , teaserImageStyle
+            [ teaserImageStyle
             ]
         ]
         []
@@ -239,14 +245,28 @@ storyteaserContainerStyle =
         ]
 
 
-guideSummaryStyle : Style
-guideSummaryStyle =
-    fontSizeBase
-
-
 listStyleNone : Style
 listStyleNone =
     batch
         [ listStyle none
         , paddingLeft zero
         ]
+
+
+outerBorderStyle : Style
+outerBorderStyle =
+    batch
+        [ borderBottom3 (rem 0.5) solid teal
+        , marginBottom (rem 2)
+        ]
+
+
+imageCaptionStyle : Style
+imageCaptionStyle =
+    batch
+        [ color purple, margin2 (rem 1) (rem 0) ]
+
+
+guideTitleStyle : Style
+guideTitleStyle =
+    batch [ margin2 (rem 0) auto ]
