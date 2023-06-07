@@ -272,8 +272,14 @@ view model =
 
         Page slug ->
             let
-                page : Page.Data.Page
-                page =
+                maybePage : Maybe Page.Data.Page
+                maybePage =
                     Page.Data.pageFromSlug model.language model.content.pages slug
             in
-            Theme.PageTemplate.view model (Page.View.view page)
+            Theme.PageTemplate.view model <|
+                case maybePage of
+                    Just page ->
+                        Page.View.view page
+
+                    Nothing ->
+                        resourceNotFound model.language

@@ -73,16 +73,11 @@ fallbackPages language pages =
             pages.en
 
 
-pageFromSlug : Language -> Pages -> String -> Page
+pageFromSlug : Language -> Pages -> String -> Maybe Page
 pageFromSlug language pages slug =
     case Dict.get slug (pagesInPreferredLanguage language pages) of
         Just aPage ->
-            aPage
+            Just aPage
 
         Nothing ->
-            case Dict.get slug (fallbackPages language pages) of
-                Just aPage ->
-                    aPage
-
-                Nothing ->
-                    blankPage language
+            Dict.get slug (fallbackPages language pages)
