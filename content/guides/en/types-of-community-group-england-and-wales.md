@@ -3,16 +3,17 @@ title: Types of Community Group (England and Wales)
 summary: This guides explains the different types of group in England and Wales
 relatedGuides:
   - Setting up a basic community group
+category: admin-and-info
 ---
 ## An Unincorporated Association
-If you’re just a small group of volunteers, with no plans to employ staff or rent premises, this is the one for you. 
+If you’re just a small group of volunteers, with no plans to employ staff or rent premises, this is the one for you.
 It’s the easiest group to set up. All you need is to write a “constitution” or “governing document”. This is a list of rules for the group. It also says what your group’s going to do, and how it’s going to do it.
 
 
 
 This kind of group:
 * doesn’t have to be a charity (although you can set up a charity if you want to). You will need to get official advice if you want to be a charity.
-* isn’t a separate legal structure. This means the group can’t take on a contract or own property - but individual members can do. 
+* isn’t a separate legal structure. This means the group can’t take on a contract or own property - but individual members can do.
 * has members who vote on what the group should do.
 * the group can become a different type of group or a charity later.
 
@@ -63,7 +64,7 @@ These groups can’t be charities:
 
 
 
-Use the simple “Route Map” at the Resource Centre [here](https://www.resourcecentre.org.uk/information/routemap/) to find out what your group’s legal structure should be. 
+Use the simple “Route Map” at the Resource Centre [here](https://www.resourcecentre.org.uk/information/routemap/) to find out what your group’s legal structure should be.
 
 
 
@@ -72,9 +73,9 @@ If this guide was too complicated, you can read it in a different way [here.](ht
 
 
 | **Type of group** | **Incorporated or unincorporated?** | **Charitable or not?** | **Do the members vote?** | **Is it regulated?** | **Other information** |
-| --- | --- | --- | --- | --- | --- | 
+| --- | --- | --- | --- | --- | --- |
 | Unincorporated Association | Unincorporated | Can be charitable or not | No |	No (unless it is also charitable) | The simplest type of community group. |
-| Charitable Trust | Unincorporated | Charitable | No | Yes – register with Charity Commission if income over £5,000 | Must write a trust deed. Run by a small group of people called trustees. | 
+| Charitable Trust | Unincorporated | Charitable | No | Yes – register with Charity Commission if income over £5,000 | Must write a trust deed. Run by a small group of people called trustees. |
 | Charitable Incorporated Organisation (CIO) | Incorporated | Charitable | If an Association, members vote. If a Foundation, members do not vote. | Yes – register with Charity Commission whatever income. | Must use model constitution approved by Charity Commission. Registration takes up to 40 days. Simpler and cheaper than a Charitable Company.
 | Company Limited by Guarantee (Limited Company) | Incorporated | Can be charitable or not | Yes | Yes - registered and regulated by Companies House. | Controlled by directors. No shareholders. Can be not-for-profit, which reinvests income into the group. |
 | Charitable Company | Incorporated | Charitable | Yes | Yes – registered with Companies House AND Charity Commission | A CIO might be simpler. |

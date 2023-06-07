@@ -10,6 +10,7 @@ relatedGuides:
   - How to Apply for Funding
 relatedStories:
   - Test story with minimal fields
+category: admin-and-info
 ---
 You’ll need a bank account if your group’s applying for grants. You’ll also need one if you collect donations or fees and use that money to buy things for your project. Don’t be tempted to use a personal account! It gets very messy very quickly.
 
@@ -21,7 +22,7 @@ Most traditional banks offer “community” accounts for non-profit groups. Som
 
 
 
-## What to consider 
+## What to consider
 
 
 
@@ -43,12 +44,12 @@ Usually, one of these people will be your group’s treasurer.
 
 
 
-## Paperwork you need 
+## Paperwork you need
 
 
 
 Although more banks are moving to online applications, many still need you to go into a branch. Every bank has different demands for paperwork, but you’ll usually have to take:
-* The signatories’ proof of identity 
+* The signatories’ proof of identity
 * The signatories’ proof of address (the bank should have a list of what’s acceptable)
 * Your group’s written constitution
 * Completed application form

@@ -9,6 +9,7 @@ image:
 relatedGuides:
   - Bank Accounts For Groups
   - How to Apply for Funding
+category: admin-and-info
 ---
 ## Cyngor cyffredinol am gyllid
 
@@ -33,7 +34,7 @@ Mae [GrantFinder](https://www.grantfinder.co.uk/funding-highlights/funds/communi
 * …ac efallai rhai o'r lleill, yn dibynnu ar ba mor arbenigol yw eich prosiect.
 
 Mae gan [Charity Excellence](https://www.charityexcellence.co.uk/Home/BlogDetail?Link=Small_Charity_NonProfit_Grant_Funding) Gronfa Ddata Canfod Cyllidwyr am ddim.
-Dyma [Gronfa Gymunedol y Loteri Genedlaethol.](https://www.tnlcommunityfund.org.uk/funding/thinking-of-applying-for-funding)  
+Dyma [Gronfa Gymunedol y Loteri Genedlaethol.](https://www.tnlcommunityfund.org.uk/funding/thinking-of-applying-for-funding)
 Dyma rywfaint o [gyllid yn yr Alban](https://www.communityfoodandhealth.org.uk/funding/funding-sources/) yn benodol.
 
 ## Ffynonellau eraill o gyllid

@@ -7,10 +7,11 @@ image:
   alt: An address book, an envelope and a stamp
 relatedGuides:
   - All About Councils and Local Authorities
+category: admin-and-info
 ---
 Mae aelod seneddol, neu AS, ar gyfer pob ardal yn y DU. Yr enw ar bob ardal yw ‘etholaeth’. Gallwch gysylltu â'ch AS drwy lythyr neu e-bost.
 Cewch weld pwy yw eich AS gyda'r adnodd ar-lein yma. Cliciwch ar y ddolen [yma.](https://members.parliament.uk/FindYourMP) Nodwch eich cod post yn y bocs cyntaf, a chlicio ar y botwm glas, ‘search.’
-Y canlyniad fydd enw eich AS. Cliciwch ar hwnnw ac fe welwch chi ei gyfeiriad e-bost a'i gyfeiriad cyswllt ar gyfer llythyrau. Bydd hefyd yn dweud wrthych beth i'w alw.        
+Y canlyniad fydd enw eich AS. Cliciwch ar hwnnw ac fe welwch chi ei gyfeiriad e-bost a'i gyfeiriad cyswllt ar gyfer llythyrau. Bydd hefyd yn dweud wrthych beth i'w alw.
 Gall fod â dau gyfeiriad cyswllt ar gyfer llythyrau. Un yw ei gyfeiriad ‘seneddol’, sy’n golygu’r cyfeiriad yn Llundain. Y llall fydd ei gyfeiriad ‘etholaeth’, sef ei gyfeiriad yn eich ardal leol. Gall y cyfeiriad fod yn swyddfa neu’n gyfeiriad cartref. Gallwch ysgrifennu i'r naill gyfeiriad neu'r llall.
 
 Mae'r cyngor yma yr un fath ar gyfer negeseuon e-bost ac ar gyfer llythyrau.

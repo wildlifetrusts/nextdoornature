@@ -5,6 +5,7 @@ image:
   src: /images/uploads/managingconflictingroup_orig-2-.jpg
   alt: A photo of a leaf with many holes eaten away at it
   credit: Photo copyright Autumn Barlow/The Wildlife Trusts 2023
+category: admin-and-info
 ---
 Mae gwrthdaro yn normal, ac ni allwch ei osgoi.
 
@@ -22,7 +23,7 @@ Ond gallwch chi ei reoli!
 * Rhwystredigaeth a straen
 * Teimladau o ddiffyg pŵer
 * Barn amrywiol am y ffordd orau o wneud rhywbeth
-* Newidiadau yn y ffordd mae pethau'n cael eu gwneud, sy'n golygu bod pobl yn teimlo'n anesmwyth 
+* Newidiadau yn y ffordd mae pethau'n cael eu gwneud, sy'n golygu bod pobl yn teimlo'n anesmwyth
 
 
 
@@ -54,7 +55,7 @@ Pan fydd ateb posibl wedi’i ganfod, gwnewch yn siŵr bod pawb yn hapus ag ef, 
 
 
 
-## Nid yw datrys gwrthdaro yn ymwneud ag ennill y ddadl 
+## Nid yw datrys gwrthdaro yn ymwneud ag ennill y ddadl
 
 
 
@@ -74,9 +75,9 @@ Ceisiwch osgoi labelu barn neu sylwadau unrhyw un fel “anghywir” a pheidiwch
 
 
 
-## Rhagor o help 
+## Rhagor o help
 
 
 
-Canllaw defnyddiol a syml gyda mwy o gynghorion ar gael [yma.](https://www.clarke.edu/campus-life/health-wellness/counseling/articles-advice/tips-for-managing-conflict/) 
-Mae hwn yn [ganllaw rhagorol gyda chynghorion](https://www.doc.govt.nz/get-involved/run-a-project/community-project-guidelines/manage-conflict-in-a-group/) ar beth i’w wneud os yw rhywun yn gas yn uniongyrchol tuag atoch chi. 
+Canllaw defnyddiol a syml gyda mwy o gynghorion ar gael [yma.](https://www.clarke.edu/campus-life/health-wellness/counseling/articles-advice/tips-for-managing-conflict/)
+Mae hwn yn [ganllaw rhagorol gyda chynghorion](https://www.doc.govt.nz/get-involved/run-a-project/community-project-guidelines/manage-conflict-in-a-group/) ar beth i’w wneud os yw rhywun yn gas yn uniongyrchol tuag atoch chi.

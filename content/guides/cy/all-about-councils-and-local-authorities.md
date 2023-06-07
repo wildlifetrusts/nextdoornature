@@ -5,17 +5,18 @@ image:
   src: /images/uploads/councils-and-las_orig-2-.jpg
   alt: Local maps and street atlases
   credit: Photo copyright Autumn Barlow/The Wildlife Trusts 2023
+category: admin-and-info
 ---
 ## A pham ddylwn i boeni?
 
 Gall “Awdurdod Lleol” olygu unrhyw un o'r gwahanol fathau o gynghorau yn y DU. Mae systemau gwahanol yng Nghymru, Lloegr, yr Alban a Gogledd Iwerddon. Mae gan Ddibynyddion y Goron, Ynys Manaw ac Ynysoedd y Sianel, eu ffordd eu hunain o weithio hefyd.
 Mae angen i chi wybod pwy yw eich cyngor a sut i gysylltu ag ef, oherwydd mae ganddo wybodaeth am barciau, ymylon ffyrdd, mannau cymunedol, cynllunio a mwy.
 
-## Lloegr 
+## Lloegr
 
 Mae gan Loegr systemau gwahanol mewn gwahanol leoedd, ac yn aml mae gan y rhain enwau gwahanol. Efallai y byddwch yn gweld “awdurdod lleol” neu “llywodraeth leol etholedig” sy’n golygu “cyngor”.
 Rhowch eich cod post ar y wefan [yma.](https://www.gov.uk/find-local-council)
-Bydd yn dweud wrthych chi pa fath o gyngor rydych yn byw ynddo. Os oes mwy nag un, bydd yn dweud wrthych chi pwy sy'n gwneud beth. 
+Bydd yn dweud wrthych chi pa fath o gyngor rydych yn byw ynddo. Os oes mwy nag un, bydd yn dweud wrthych chi pwy sy'n gwneud beth.
 
 Y cyfan sydd angen i chi ei wybod yw pwy sy'n gwneud beth, a bydd y [wefan](https://www.gov.uk/find-local-council) yn dweud wrthych chi.
 Os oes gennych chi ddau gyngor, bydd y cyngor sir mawr yn gofalu am ysgolion, gofal cymdeithasol, llyfrgelloedd, safonau masnach, penderfyniadau cynllunio mawr a thrafnidiaeth. Bydd y cynghorau dosbarth, bwrdeistref neu ddinas llai yn gofalu am sbwriel ac ailgylchu, eich treth gyngor, tai, a cheisiadau cynllunio lleol.
@@ -44,7 +45,7 @@ Mae cynghorau yn y prif ardaloedd mwy yn gofalu am ysgolion, gofal cymdeithasol,
 Mae’r cynghorau cymuned neu dref llai yn gofalu am neuaddau pentref, caeau chwarae, mannau agored, llochesi bws, goleuadau stryd a llwybrau troed.
 Chwiliwch am eich cyngor lleol yng Nghymru drwy roi eich cod post ar y wefan [yma.](https://llyw.cymru/darganfod-eich-awdurdod-lleol)
 
-## Gogledd Iwerddon 
+## Gogledd Iwerddon
 Mae Gogledd Iwerddon wedi’i rhannu yn 11 “ardal llywodraeth leol” neu LGDs. Gallant gael eu galw'n gyngor bwrdeistref, cyngor dinas neu gyngor dosbarth.
 Mae'r LGDs yn gofalu am gynllunio, biniau, canolfannau chwaraeon a hamdden, gwasanaethau cymunedol, rheoli adeiladu, a datblygiad diwylliannol lleol. Fodd bynnag, nid ydynt yn rheoli ysgolion, ffyrdd na thai. Mae'r LGDs yn ysgrifennu cynllun datblygu lleol i ddweud ble gellir adeiladu tai.
 Chwiliwch am eich cyngor lleol yng Ngogledd Iwerddon drwy roi eich cod post ar y wefan [yma.](https://www.gov.uk/find-local-council)
@@ -54,7 +55,7 @@ Nid yw Ynys Manaw yn rhan o’r DU. Mae’n “Ddibyniaeth ar y Goron Brydeinig 
 Mae wedi’i rhannu’n 21 awdurdod lleol a all fod yn “awdurdodau tref”, “awdurdodau dosbarth”, “awdurdodau pentref” neu “awdurdodau plwyf.” Maen nhw'n gofalu am finiau, parciau, tai, ymylon ffyrdd, llyfrgelloedd a choed.
 Chwiliwch am eich cyngor lleol ar Ynys Manaw drwy roi eich cod post ar [y map yma.](https://manngis.maps.arcgis.com/apps/InformationLookup/index.html?appid=80d5112582fd40c3a746b3bd0439873e)
 
-## Ynysoedd y Sianel          
+## Ynysoedd y Sianel
 Mae Ynysoedd y Sianel wedi’u rhannu’n “Feilïaeth Guernsey” a “Beilïaeth Jersey”, ac nid ydynt yn rhan o’r DU. Fel Ynys Manaw, maen nhw’n “Ddibyniaethau’r Goron” gyda’u llywodraeth eu hunain.
-Mae Ymddiriedolaeth Natur leol ar Alderney sy'n rhan o Feilïaeth Guernsey. Mae Alderney yn un plwyf cyflawn. Mae ganddi hefyd ei senedd ei hun, “Taleithiau Alderney”, ac arlywydd. Taleithiau Alderney sy'n gofalu am y rhan fwyaf o'r ynys ac eithrio rhai pethau fel amddiffyn, materion tramor a physgodfeydd, sydd yng ngofal y DU. Fel arall, mae popeth arall yn cael ei reoli gan Daleithiau Alderney. Mae mwy o wybodeth ar gael ar eu [gwefan swyddogol](http://www.alderney.gov.gg/) 
+Mae Ymddiriedolaeth Natur leol ar Alderney sy'n rhan o Feilïaeth Guernsey. Mae Alderney yn un plwyf cyflawn. Mae ganddi hefyd ei senedd ei hun, “Taleithiau Alderney”, ac arlywydd. Taleithiau Alderney sy'n gofalu am y rhan fwyaf o'r ynys ac eithrio rhai pethau fel amddiffyn, materion tramor a physgodfeydd, sydd yng ngofal y DU. Fel arall, mae popeth arall yn cael ei reoli gan Daleithiau Alderney. Mae mwy o wybodeth ar gael ar eu [gwefan swyddogol](http://www.alderney.gov.gg/)
 

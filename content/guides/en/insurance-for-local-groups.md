@@ -5,10 +5,11 @@ image:
   src: /images/uploads/insurance_orig-2-.jpg
   alt: Some insurance paperwork
   credit: Photo copyright Autumn Barlow/The Wildlife Trusts 2023
+category: admin-and-info
 ---
 
 
-This is not formal insurance advice. 
+This is not formal insurance advice.
 
 
 
@@ -64,9 +65,9 @@ It is less likely you will need these other types of insurance:
 
 
 
-The National Council for Voluntary Organisations (NCVO) has lots of help [here.](https://knowhow.ncvo.org.uk/organisation/operations/insurance "knowhow.ncvo.org.uk") 
+The National Council for Voluntary Organisations (NCVO) has lots of help [here.](https://knowhow.ncvo.org.uk/organisation/operations/insurance "knowhow.ncvo.org.uk")
 
 
 
-Remember: it’s quite simple to set up your insurance, and often it’s reasonably cheap. It can be a legal requirement to have insurance, so don’t try to avoid it. 
+Remember: it’s quite simple to set up your insurance, and often it’s reasonably cheap. It can be a legal requirement to have insurance, so don’t try to avoid it.
 

@@ -5,18 +5,19 @@ image:
   src: /images/uploads/workingwithmanylanguages_orig-2-.jpg
   alt: A stack of small dictionaries in other languages
   credit: Photo copyright Autumn Barlow/The Wildlife Trusts 2023
+category: admin-and-info
 ---
 ## Identify the need
 
 A ‘community language’ is one that people speak alongside the dominant language of a country or region. These are also called ‘asset languages’, ‘heritage languages’, ‘first language’, ‘mother tongue’ or other terms – useful to know if you’re doing some research yourself.
 
-Around 300 languages are spoken in the UK. We can’t translate everything. 
+Around 300 languages are spoken in the UK. We can’t translate everything.
 
 First, you need to know which languages are spoken in your community. You can use census data and local community organisations.
 
 ## Translation isn’t the aim
 
-Because it’s impossible to translate everything word for word, instead look at the idea of “cultural interpretation”. This helps people feel more comfortable and engaged. 
+Because it’s impossible to translate everything word for word, instead look at the idea of “cultural interpretation”. This helps people feel more comfortable and engaged.
 
 You do this by partnering with:
 
@@ -26,11 +27,11 @@ You do this by partnering with:
 * Local government
 * Educational establishments – for example, “Multilingual Manchester” offers student volunteers as interpreters.
 
-These people can advise you on how to communicate information in a culturally appropriate way. 
+These people can advise you on how to communicate information in a culturally appropriate way.
 
-* Would it be easier to create an infographic rather than translating some text? 
-* Can you hold language-specific meetings or events? 
-* Can you provide multiple ways for people to respond to you?  
+* Would it be easier to create an infographic rather than translating some text?
+* Can you hold language-specific meetings or events?
+* Can you provide multiple ways for people to respond to you?
 
 Remember that people often have a range of strengths. If English is their second language, they might be very good at listening and understanding, but struggle with speaking or writing. Often, people can read English better than they can write it. Bearing that in mind, can you produce written work in simple or plain English, but offer ways for them to contact you that don’t rely on writing? If you’re conducting a session online, how about language-specific breakout rooms?
 
@@ -38,7 +39,7 @@ If you work with someone who is a translator, see them as an active partner. Enc
 
 ## If you have a budget
 
-* Can you have a simultaneous interpreter at a meeting or event? 
+* Can you have a simultaneous interpreter at a meeting or event?
 * Can you include closed captions for virtual meetings?
 * Do you need a sign language interpreter?
 
