@@ -2,7 +2,7 @@ module Page.Guide.Data exposing (Guide, GuideListItem, Guides, Image, allGuidesS
 
 import Dict exposing (Dict)
 import I18n.Keys exposing (Key(..))
-import I18n.Translate exposing (Language(..), translate)
+import I18n.Translate exposing (Language(..))
 import Json.Decode
 import Json.Decode.Extra
 import Page.Shared.Data
@@ -24,6 +24,7 @@ type alias Guide =
     , maybeAudio : Maybe Page.Shared.Data.AudioMeta
     , relatedStoryList : List String
     , relatedGuideList : List String
+    , categorySlug : String
     }
 
 
@@ -78,6 +79,8 @@ guideDictDecoder =
                     (Json.Decode.list Json.Decode.string)
                     |> Json.Decode.Extra.withDefault []
                 )
+            |> Json.Decode.Extra.andMap
+                (Json.Decode.field "category" Json.Decode.string |> Json.Decode.Extra.withDefault "")
         )
 
 
