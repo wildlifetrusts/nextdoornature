@@ -23,9 +23,15 @@ collections:
           label: "Category",
           name: "Category",
           widget: "select",
-          options: [ "admin-and-info", "media-publicity-events", "working-with-people", "working-with-the-authorities" ],
+          options:
+            [
+              "admin-and-info",
+              "media-publicity-events",
+              "working-with-people",
+              "working-with-the-authorities",
+            ],
           default: "admin-and-info",
-          i18n: false
+          i18n: false,
         }
       - {
           label: "Who the story is about",
