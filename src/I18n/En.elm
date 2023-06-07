@@ -30,30 +30,6 @@ enStrings key =
         ResourceNotFoundLinkPath ->
             "/"
 
-        Guide404Title ->
-            "[cCc] Sorry, we can't find that guide"
-
-        Guide404Slug ->
-            "guide-not-found"
-
-        Guide404Body ->
-            "[cCc] Try searching again [home](\"\\\")"
-
-        Story404Title ->
-            "[cCc] Sorry, we can't find that story"
-
-        Story404Body ->
-            "[cCc] Try searching again [home](\"\\\")"
-
-        AncillaryPage404Title ->
-            "[cCc] Sorry, we can't find that page"
-
-        AncillaryPage404Slug ->
-            "page-not-found"
-
-        AncillaryPage404Body ->
-            "[cCc] Try searching again [home](\"\\\")"
-
         ---
         -- Footer
         ---
