@@ -19,6 +19,7 @@ import Page.Guides.View
 import Page.Index
 import Page.Story.Data
 import Page.Story.View
+import Page.SubmitStory.View
 import Page.View
 import Route exposing (Route(..))
 import Shared exposing (CookieState, Model, Request(..))
@@ -247,6 +248,9 @@ view model =
                     (Page.Guide.Data.allGuidesSlugTitleList model.content.guides)
                     (Page.Story.Data.allStoryTeaserList model.content.stories)
                 )
+
+        SubmitStory ->
+            Theme.PageTemplate.view model (Page.SubmitStory.View.view model)
 
         Guides ->
             Theme.PageTemplate.view model (Page.Guides.View.view model)
