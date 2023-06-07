@@ -20,6 +20,14 @@ collections:
     fields: # The fields for each document
       - { label: "Title", name: "title", widget: "string", i18n: true }
       - {
+          label: "Category",
+          name: "Category",
+          widget: "select",
+          options: [ "admin-and-info", "media-publicity-events", "working-with-people", "working-with-the-authorities" ],
+          default: "admin-and-info",
+          i18n: false
+        }
+      - {
           label: "Who the story is about",
           name: "who",
           widget: "string",
