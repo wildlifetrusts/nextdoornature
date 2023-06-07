@@ -61,6 +61,14 @@ collections:
               required: false,
               i18n: true,
             }
+      - {
+          label: "Summary",
+          hint: "Also used for SEO description",
+          name: "summary",
+          widget: "string",
+          pattern: ["^.{50,160}$", "Must be between 50 and 160 characters"],
+          i18n: true,
+        }
       - { label: "Body", name: "body", widget: "markdown", i18n: true }
   - name: "guides"
     label: "Guides"
@@ -70,6 +78,13 @@ collections:
     i18n: true
     fields:
       - { label: "Title", name: "title", widget: "string", i18n: true }
+      - {
+          label: "Summary",
+          name: "summary",
+          widget: "string",
+          pattern: ["^.{50,160}$", "Must be between 50 and 160 characters"],
+          i18n: true,
+        }
       - { label: "Body", name: "body", widget: "markdown", i18n: true }
       - label: "Image"
         name: "image"
@@ -121,7 +136,7 @@ collections:
         widget: "relation"
         collection: "guides"
         multiple: true
-        search_fields: ["title"]
+        search_fields: ["title", "summary"]
         value_field: "title"
         display_fields: ["title"]
         required: false
@@ -131,7 +146,7 @@ collections:
         widget: "relation"
         collection: "stories"
         multiple: true
-        search_fields: ["title"]
+        search_fields: ["title", "summary"]
         value_field: "title"
         display_fields: ["title"]
         required: false
@@ -144,4 +159,11 @@ collections:
     i18n: true
     fields:
       - { label: "Title", name: "title", widget: "string", i18n: true }
+      - {
+          label: "Summary",
+          name: "summary",
+          widget: "string",
+          pattern: ["^.{50,160}$", "Must be between 50 and 160 characters"],
+          i18n: true,
+        }
       - { label: "Body", name: "body", widget: "markdown", i18n: true }
