@@ -2,7 +2,7 @@
 title: Taking Over Green Space In Your Area
 summary: A summary of how to get started in taking over a patch of green space
 image:
-  src: /public/images/uploads/takingovergreenspace_orig-2-.jpg
+  src: /images/uploads/takingovergreenspace_orig-2-.jpg
   alt: A trowel in the dirt in front of a small green bushy plant
   credit: Photo copyright Autumn Barlow / The Wildlife Trusts 2023
 relatedGuides:
