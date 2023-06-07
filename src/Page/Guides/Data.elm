@@ -98,10 +98,7 @@ internalGuideTeaserDecoder =
     Json.Decode.map4 Page.Shared.Data.Teaser
         (Json.Decode.field "title" Json.Decode.string)
         (Json.Decode.field "url" Json.Decode.string)
-        (Json.Decode.field "preview" Json.Decode.string
-            |> Json.Decode.Extra.withDefault ""
-            |> Json.Decode.andThen (\preview -> Json.Decode.succeed (Page.Shared.Data.summaryFromPreview preview))
-        )
+        (Json.Decode.field "summary" Json.Decode.string |> Json.Decode.Extra.withDefault "")
         (Json.Decode.maybe (Json.Decode.field "maybeImage" Page.Shared.Data.guideTeaserImageDecoder))
 
 

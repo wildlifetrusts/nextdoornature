@@ -1,4 +1,4 @@
-module Page.Shared.Data exposing (AudioMeta, Teaser, TeaserImage, VideoMeta, audioDecoder, defaultTeaserImage, guideTeaserDecoder, guideTeaserImageDecoder, summaryFromPreview, videoDecoder)
+module Page.Shared.Data exposing (AudioMeta, Teaser, TeaserImage, VideoMeta, audioDecoder, defaultTeaserImage, guideTeaserDecoder, guideTeaserImageDecoder, videoDecoder)
 
 import Json.Decode
 
@@ -12,9 +12,7 @@ guideTeaserDecoder =
     Json.Decode.map4 Teaser
         (Json.Decode.field "title" Json.Decode.string)
         (Json.Decode.field "basename" Json.Decode.string)
-        (Json.Decode.field "preview" Json.Decode.string
-            |> Json.Decode.andThen (\content -> Json.Decode.succeed (summaryFromPreview content))
-        )
+        (Json.Decode.field "summary" Json.Decode.string)
         (Json.Decode.maybe (Json.Decode.field "image" guideTeaserImageDecoder))
 
 
@@ -64,10 +62,3 @@ videoDecoder =
     Json.Decode.map2 VideoMeta
         (Json.Decode.field "title" Json.Decode.string)
         (Json.Decode.field "src" Json.Decode.string)
-
-
-summaryFromPreview : String -> String
-summaryFromPreview content =
-    content
-        |> String.replace "#" ""
-        |> String.replace "*" ""
