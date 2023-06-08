@@ -5,6 +5,9 @@ image:
   src: /images/uploads/finding-funding_orig-2-.jpg
   alt: An open planner with the words "find funding" circled
   credit: Photo copyright Autumn Barlow/The Wildlife Trusts 2023
+video:
+  src: https://youtu.be/b32JWimgF2w
+  title: Finding Funding. A Nextdoor Nature Video.
 relatedGuides:
   - Bank Accounts For Groups
   - How to Apply for Funding
@@ -33,14 +36,14 @@ If you prefer to look at a book, you can use *The Directory of Grant Making Trus
 * …and maybe some of the others, depending on how specialist your project is.
 
 [Charity Excellence](https://www.charityexcellence.co.uk/Home/BlogDetail?Link=Small_Charity_NonProfit_Grant_Funding) has a free Funder Finding Database.
-Here is the [National Lottery Community Fund.](https://www.tnlcommunityfund.org.uk/funding/thinking-of-applying-for-funding)
+Here is the [National Lottery Community Fund.](https://www.tnlcommunityfund.org.uk/funding/thinking-of-applying-for-funding) 
 This is some specifically [Scottish funding.](https://www.communityfoodandhealth.org.uk/funding/funding-sources/)
 
 ## Other sources of money
 
-It’s unlikely you’ll be looking for investment rather than a grant. But if you do want to borrow money, look [here.](https://locality.org.uk/services-tools/funding/)
+It’s unlikely you’ll be looking for investment rather than a grant. But if you do want to borrow money, look [here.](https://locality.org.uk/services-tools/funding/) 
 You might do some fundraising activities. Look at our separate document about running fundraising events.
 
 ## Other help
 
-[NCVO has a free spreadsheet tool](https://www.ncvo.org.uk/help-and-guidance/running-a-charity/financial-management/planning-and-budgeting/funding-and-income-planner/) to help you plan your budget. This can be useful when you’re applying for grants!
+[NCVO has a free spreadsheet tool](https://www.ncvo.org.uk/help-and-guidance/running-a-charity/financial-management/planning-and-budgeting/funding-and-income-planner/) to help you plan your budget. This can be useful when you’re applying for grants! 

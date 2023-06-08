@@ -6,6 +6,9 @@ image:
   alt: An open planner with the words "find funding" circled
   credit: Photo copyright Autumn Barlow/The Wildlife Trusts 2023
   src: /images/uploads/finding-funding_orig-2-.jpg
+video:
+  src: https://youtu.be/b32JWimgF2w
+  title: Dod o Hyd i Gyllid. Fideo Natur Drws Nesaf.
 relatedGuides:
   - Bank Accounts For Groups
   - How to Apply for Funding
@@ -34,7 +37,7 @@ Mae [GrantFinder](https://www.grantfinder.co.uk/funding-highlights/funds/communi
 * …ac efallai rhai o'r lleill, yn dibynnu ar ba mor arbenigol yw eich prosiect.
 
 Mae gan [Charity Excellence](https://www.charityexcellence.co.uk/Home/BlogDetail?Link=Small_Charity_NonProfit_Grant_Funding) Gronfa Ddata Canfod Cyllidwyr am ddim.
-Dyma [Gronfa Gymunedol y Loteri Genedlaethol.](https://www.tnlcommunityfund.org.uk/funding/thinking-of-applying-for-funding)
+Dyma [Gronfa Gymunedol y Loteri Genedlaethol.](https://www.tnlcommunityfund.org.uk/funding/thinking-of-applying-for-funding)  
 Dyma rywfaint o [gyllid yn yr Alban](https://www.communityfoodandhealth.org.uk/funding/funding-sources/) yn benodol.
 
 ## Ffynonellau eraill o gyllid

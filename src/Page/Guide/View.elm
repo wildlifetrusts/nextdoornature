@@ -244,12 +244,7 @@ viewStoryImage maybeImage =
                     }
     in
     img
-        [ alt image.alt
-        , src image.src
-        , css
-            [ teaserImageStyle
-            ]
-        ]
+        [ alt image.alt, src image.src, css [ teaserImageStyle ] ]
         []
 
 
