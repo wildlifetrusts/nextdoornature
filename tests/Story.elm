@@ -4,7 +4,7 @@ import Html
 import Html.Attributes
 import Html.Styled
 import Message
-import Page.Shared.View exposing (defaultTeaserImg)
+import Page.Shared.Data exposing (defaultTeaserImage)
 import Page.Story.Data exposing (Story)
 import Page.Story.View
 import Test exposing (Test, describe, test)
@@ -23,7 +23,7 @@ suite =
             , fullTextMarkdown = "# Some minimal test reource markdown"
             , maybeLocation = Nothing
             , maybeGroupOrIndividual = Nothing
-            , maybeImages = Nothing
+            , images = []
             , relatedGuideList = []
             }
 
@@ -34,17 +34,23 @@ suite =
             , slug = "slug"
             , maybeLocation = Just "Test location"
             , maybeGroupOrIndividual = Just "Test group"
-            , maybeImages = Just [ { src = "/images/wildlife-trust-logo.png", alt = "placeholder" } ]
+            , images =
+                [ { src = "/images/wildlife-trust-logo.png"
+                  , alt = "placeholder"
+                  , maybeCaption = Just "caption"
+                  , maybeCredit = Just "credit"
+                  }
+                ]
             , relatedGuideList =
                 [ { title = "A related guide"
                   , url = "/a-guide"
                   , summary = "A related guide"
-                  , maybeImage = Just defaultTeaserImg
+                  , maybeImage = Just defaultTeaserImage
                   }
                 , { title = "Another related guide"
                   , url = "/another-guide"
                   , summary = "A related guide"
-                  , maybeImage = Just defaultTeaserImg
+                  , maybeImage = Just defaultTeaserImage
                   }
                 ]
             }
@@ -94,18 +100,17 @@ suite =
                                     []
             , test "Full story view has an image" <|
                 \() ->
-                    case storyFull.maybeImages of
-                        Just images ->
-                            queryFromStyledHtml (view storyFull)
-                                |> Query.contains
-                                    (List.map
-                                        (\image -> Html.img [ Html.Attributes.alt image.alt, Html.Attributes.src image.src ] [])
-                                        images
-                                    )
+                    if List.length storyFull.images > 0 then
+                        queryFromStyledHtml (view storyFull)
+                            |> Query.contains
+                                (List.map
+                                    (\image -> Html.img [ Html.Attributes.alt image.alt, Html.Attributes.src image.src ] [])
+                                    storyFull.images
+                                )
 
-                        Nothing ->
-                            queryFromStyledHtml (view storyFull)
-                                |> Query.contains
-                                    []
+                    else
+                        queryFromStyledHtml (view storyFull)
+                            |> Query.contains
+                                []
             ]
         ]

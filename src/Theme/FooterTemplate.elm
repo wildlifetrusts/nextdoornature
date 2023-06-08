@@ -2,12 +2,12 @@ module Theme.FooterTemplate exposing (view)
 
 import Css exposing (Style, alignItems, alignSelf, auto, backgroundColor, batch, border3, borderLeft3, borderTop, center, color, column, displayFlex, em, firstChild, fitContent, flexDirection, flexEnd, flexGrow, flexShrink, flexStart, flexWrap, fontFamilies, fontSize, height, int, justifyContent, lastChild, margin, margin2, marginBottom, marginLeft, marginRight, marginTop, maxWidth, minHeight, minWidth, nthChild, padding, padding2, paddingBottom, px, rem, row, solid, spaceBetween, unset, width, wrap)
 import Css.Media as Media exposing (only, screen, withMedia)
-import Html.Styled exposing (Html, a, div, footer, h3, img, nav, text)
+import Html.Styled exposing (Html, a, div, footer, h3, img, li, nav, text, ul)
 import Html.Styled.Attributes exposing (css, href, src)
 import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (Language(..), translate)
 import Theme.FluidScale
-import Theme.Global exposing (centerContent, lightTeal, purple, teal, white, withMediaMobileUp, withMediaTabletPortraitUp)
+import Theme.Global exposing (centerContent, lightTeal, listStyleNone, purple, teal, white, withMediaMobileUp, withMediaTabletPortraitUp)
 
 
 view : Language -> Html msg
@@ -27,7 +27,7 @@ view language =
                 )
             ]
         , div [ css [ bottomFooterOuterContainerStyle ] ]
-            [ div [ css [ centerContent, bottomFooterContainerStyle ] ]
+            [ div [ css [ bottomFooterContainerStyle, centerContent ] ]
                 [ div [ css [ charityInfoStyle ] ]
                     [ div [] [ text (t FooterCharityInfo) ]
                     , div [ css [ marginTop (rem 0.5) ] ] [ text (t RegisteredCharityNumber) ]
@@ -61,10 +61,12 @@ navigationColumn column language =
             translate language
     in
     div [ css [ footerColumnListStyle ] ]
-        [ h3 [ css [ Theme.FluidScale.fontSize1 ] ]
+        [ h3 [ css [ Theme.FluidScale.fontSizeLarge ] ]
             [ text (t column.title)
             ]
-        , div [] (List.map (\link -> a [ href (t link.href) ] [ text (t link.text) ]) column.links)
+        , nav []
+            [ ul [ css [ listStyleNone ] ] (List.map (\link -> li [] [ a [ href (t link.href) ] [ text (t link.text) ] ]) column.links)
+            ]
         ]
 
 
@@ -77,6 +79,7 @@ footerNavigationContent =
     [ { title = FooterTitleColumnA
       , links =
             [ { text = FooterVisitWebsiteText, href = FooterVisitWebsiteLink }
+            , { text = FooterAboutText, href = FooterAboutLink }
             , { text = FooterPrivacyPolicyText, href = FooterPrivacyPolicyLink }
             ]
       }
@@ -155,6 +158,8 @@ bottomFooterContainerStyle =
         , withMediaTabletPortraitUp
             [ alignItems flexStart
             , flexDirection row
+            -- must be higher than cookie banner button
+            , paddingBottom (rem 3)
             ]
         ]
 

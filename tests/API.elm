@@ -2,8 +2,7 @@ module API exposing (suite)
 
 import Expect exposing (equal)
 import Json.Decode
-import Page.GuideTeaser exposing (guideTeaserListString)
-import Page.Shared.View exposing (actionTeaserDecoder, actionTeaserListDecoder, interalGuideTeaserListDecoder)
+import Page.Guides.Data exposing (actionTeaserDecoder, actionTeaserListDecoder, guideTeaserListString, internalGuideTeaserListDecoder)
 import Test exposing (Test, describe, test)
 import TestData exposing (actionsAPI, singleActionFromAPI, teaserFromResult, teaserFromResult2)
 
@@ -34,7 +33,7 @@ suite =
                     json =
                         guideTeaserListString [ teaserFromResult, teaserFromResult2 ]
                 in
-                case Json.Decode.decodeString interalGuideTeaserListDecoder json of
+                case Json.Decode.decodeString internalGuideTeaserListDecoder json of
                     Ok list ->
                         equal list [ teaserFromResult, teaserFromResult2 ]
 

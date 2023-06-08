@@ -4,6 +4,8 @@ This is part of the [Wildlife Trusts](https://www.wildlifetrusts.org/) larger [T
 
 [Current release](https://team-wilder-proto.pages.dev/)
 
+[Current content editor](https://team-wilder-content.netlify.app/admin)
+
 ## Development
 
 ### Prerequisites
@@ -49,8 +51,8 @@ Rules live in `review/src/ReviewConfig.elm` and can be modified if needed. These
 
 ## Using the CMS
 
-- The netlify admin for the site can be accessed at https://gleeful-frangipane-4618cb.netlify.app/admin
-- To log in you'll need to use your github identity and have write permission to this repo to make changes.
+- The netlify admin for the site can be accessed at https://team-wilder-content.netlify.app/admin
+- To log in you'll need to use your github account and have write permission to this repo to make changes.
 - Any changes made & published here will be pushed to main
 
 ## Code and configs

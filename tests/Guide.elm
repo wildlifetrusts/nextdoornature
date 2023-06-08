@@ -3,10 +3,11 @@ module Guide exposing (suite)
 import Html
 import Html.Attributes
 import Html.Styled
+import I18n.Translate exposing (Language(..))
 import Message
-import Page.Guide.Data exposing (Guide)
+import Page.Guide.Data exposing (Guide, GuideListItem, defaultGuideImage)
 import Page.Guide.View
-import Page.Shared.View exposing (defaultTeaserImg)
+import Page.Story.Data exposing (StoryTeaser)
 import Test exposing (Test, describe, test)
 import Test.Html.Query as Query
 import Test.Html.Selector exposing (tag, text)
@@ -35,7 +36,7 @@ suite =
             , slug = "a-guide"
             , fullTextMarkdown = "# Some full test reource markdown\n\nA small paragraph."
             , summary = "Some full test reource markdown"
-            , maybeImage = Just defaultTeaserImg
+            , maybeImage = Just defaultGuideImage
             , maybeVideo =
                 Just
                     { title = "A guide video"
@@ -44,49 +45,45 @@ suite =
             , maybeAudio =
                 Just
                     { title = "An audio guide"
-                    , src = "https://an.audio.guide"
+                    , src = "https://an.aud io.guide"
                     }
             , relatedStoryList =
-                [ { title = "A related story"
-                  , slug = "a-story"
-                  , image = { src = "/", alt = "" }
-                  , description = "test description"
-                  }
-                , { title = "Another related story"
-                  , slug = "another-story"
-                  , image = { src = "/", alt = "" }
-                  , description = "test description"
-                  }
+                [ "A related story"
+                , "Another related story"
                 ]
             , relatedGuideList =
-                [ { title = "A related guide"
-                  , url = "/a-guide"
-                  , summary = "A related guide"
-                  , maybeImage = Just defaultTeaserImg
-                  }
-                , { title = "Another related guide"
-                  , url = "/another-guide"
-                  , summary = "A related guide"
-                  , maybeImage = Just defaultTeaserImg
-                  }
+                [ "A related guide"
+                , "Another related guide"
                 ]
             }
 
-        view : Guide -> Html.Styled.Html Message.Msg
+        allGuideList : List GuideListItem
+        allGuideList =
+            []
+
+        allStoryList : List StoryTeaser
+        allStoryList =
+            []
+
+        view :
+            Guide
+            -> List GuideListItem
+            -> List StoryTeaser
+            -> Html.Styled.Html Message.Msg
         view =
-            Page.Guide.View.view
+            Page.Guide.View.view English
     in
     describe "Guide Page"
         [ describe "View tests"
             [ test "Guide view has title" <|
                 \() ->
-                    queryFromStyledHtml (view guideMinimal)
+                    queryFromStyledHtml (view guideMinimal allGuideList allStoryList)
                         |> Query.contains
                             [ Html.h1 [] [ Html.text guideMinimal.title ]
                             ]
             , test "Guide view has body that is HTML" <|
                 \() ->
-                    queryFromStyledHtml (view guideFull)
+                    queryFromStyledHtml (view guideFull allGuideList allStoryList)
                         |> Query.has
                             [ tag "h1"
                             , text "Some full test reource markdown"
@@ -95,22 +92,22 @@ suite =
                             ]
             , test "Guide view can have a video" <|
                 \() ->
-                    queryFromStyledHtml (view guideFull)
+                    queryFromStyledHtml (view guideFull allGuideList allStoryList)
                         |> Query.has
                             [ tag "iframe" ]
             , test "Guide view can have audio" <|
                 \() ->
-                    queryFromStyledHtml (view guideFull)
+                    queryFromStyledHtml (view guideFull allGuideList allStoryList)
                         |> Query.contains
                             [ Html.text "[fFf] render audio player" ]
             , test "Guide view can have related story teasers" <|
                 \() ->
-                    queryFromStyledHtml (view guideFull)
+                    queryFromStyledHtml (view guideFull allGuideList allStoryList)
                         |> Query.contains
                             [ Html.a [ Html.Attributes.href "/stories/another-story" ] [ Html.text "Another related story" ] ]
             , test "Guide view can have related guide teasers" <|
                 \() ->
-                    queryFromStyledHtml (view guideFull)
+                    queryFromStyledHtml (view guideFull allGuideList allStoryList)
                         |> Query.contains
                             [ Html.ul []
                                 [ Html.li [] [ Html.a [ Html.Attributes.href "/a-guide" ] [ Html.text "A related guide" ] ]

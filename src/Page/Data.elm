@@ -20,19 +20,6 @@ type alias Page =
     }
 
 
-blankPage : Language -> Page
-blankPage language =
-    let
-        t : Key -> String
-        t =
-            translate language
-    in
-    { title = t AncillaryPage404Title
-    , slug = t AncillaryPage404Slug
-    , fullTextMarkdown = t AncillaryPage404Body
-    }
-
-
 pageDictDecoder : Json.Decode.Decoder (Dict String Page)
 pageDictDecoder =
     Json.Decode.dict
@@ -73,16 +60,11 @@ fallbackPages language pages =
             pages.en
 
 
-pageFromSlug : Language -> Pages -> String -> Page
+pageFromSlug : Language -> Pages -> String -> Maybe Page
 pageFromSlug language pages slug =
     case Dict.get slug (pagesInPreferredLanguage language pages) of
-        Just aGuide ->
-            aGuide
+        Just aPage ->
+            Just aPage
 
         Nothing ->
-            case Dict.get slug (fallbackPages language pages) of
-                Just aGuide ->
-                    aGuide
-
-                Nothing ->
-                    blankPage language
+            Dict.get slug (fallbackPages language pages)

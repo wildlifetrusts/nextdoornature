@@ -3,25 +3,20 @@ module I18n.Keys exposing (Key(..))
 
 type Key
     = SiteTitle
-      --- Page Titles
-    | GuidesTitle
-    | GuidesMetaDescription
     | ChangeLanguage
       --- 404 content
-    | Story404Title
-    | Story404Body
-    | Guide404Title
-    | Guide404Slug
-    | Guide404Body
-    | AncillaryPage404Slug
-    | AncillaryPage404Title
-    | AncillaryPage404Body
+    | ResourceNotFoundTitle
+    | ResourceNotFoundText
+    | ResourceNotFoundLinkText
+    | ResourceNotFoundLinkPath
       --- Footer
     | FooterTitleColumnA
     | FooterTitleColumnB
     | FooterTitleColumnC
     | FooterVisitWebsiteText
     | FooterVisitWebsiteLink
+    | FooterAboutText
+    | FooterAboutLink
     | FooterGuidesLinkText
     | FooterGuidesLink
     | FooterFindYourLocalTrustText
@@ -38,9 +33,21 @@ type Key
     | CookieDeclineButtonText
     | CookieSettingsButtonText
       --- Index Page
+    | HomeTitle
     | WelcomeP1
     | WelcomeP2
     | WelcomeP3
-      --- Search
+    | GuideHighlightsSubtitle
+    | StoryHighlightsSubtitle
+      --- Guide Page
+    | RelatedGuidesHeading
+    | RelatedStoriesHeading
+      --- Guides Page
+    | GuidesTitle
+    | GuidesMetaDescription
+    | GuidesTitleFiltered String String
     | SearchPlaceholder
     | ExploreGuidesListPlaceholder
+      --- Story Page
+    | WhoSubHeading
+    | WhereSubHeading

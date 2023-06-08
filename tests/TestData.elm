@@ -1,6 +1,6 @@
 module TestData exposing (actionsAPI, singleActionFromAPI, teaserFromResult, teaserFromResult2)
 
-import Page.GuideTeaser
+import Page.Shared.Data
 
 
 singleActionFromAPI : String
@@ -242,7 +242,7 @@ singleActionFromAPI =
 """
 
 
-teaserFromResult : Page.GuideTeaser.GuideTeaser
+teaserFromResult : Page.Shared.Data.Teaser
 teaserFromResult =
     { title = "How to help wildlife at school"
     , url = "https://www.wildlifetrusts.org/actions/how-help-wildlife-school"
@@ -251,7 +251,7 @@ teaserFromResult =
     }
 
 
-teaserFromResult2 : Page.GuideTeaser.GuideTeaser
+teaserFromResult2 : Page.Shared.Data.Teaser
 teaserFromResult2 =
     { title = "How to make a coastal garden"
     , url = "https://www.wildlifetrusts.org/actions/how-make-coastal-garden"

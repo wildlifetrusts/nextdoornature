@@ -1,12 +1,15 @@
-module Shared exposing (Content, CookieState, Model, Request(..))
+module Shared exposing (Content, CookieState, Model, Request(..), contentDictDecoder, shuffleList)
 
+import Array
 import Browser.Navigation
 import Dict exposing (Dict)
 import I18n.Translate exposing (Language)
+import Json.Decode
 import Page.Data
 import Page.Guide.Data
-import Page.GuideTeaser
+import Page.Shared.Data
 import Page.Story.Data
+import Random
 import Route exposing (Route)
 
 
@@ -16,8 +19,10 @@ type alias Model =
     , cookieState : CookieState
     , language : Language
     , content : Content
-    , search : List Page.GuideTeaser.GuideTeaser
+    , search : List Page.Shared.Data.Teaser
+    , query : String
     , externalActions : Request
+    , seed : Maybe Random.Seed
     }
 
 
@@ -36,11 +41,76 @@ type alias Content =
         { cy : Dict String Page.Data.Page
         , en : Dict String Page.Data.Page
         }
-    , stories : Dict String Page.Story.Data.Story
+    , stories :
+        { cy : Dict String Page.Story.Data.Story
+        , en : Dict String Page.Story.Data.Story
+        }
     }
 
 
 type Request
     = Failure
     | Loading
-    | Success (List Page.GuideTeaser.GuideTeaser)
+    | Success (List Page.Shared.Data.Teaser)
+
+
+contentDictDecoder : Json.Decode.Value -> Content
+contentDictDecoder flags =
+    case Json.Decode.decodeValue flagsDictDecoder flags of
+        Ok goodContent ->
+            goodContent
+
+        Err _ ->
+            --let
+            --    e =
+            --        Debug.log "Flag decode ERROR" error
+            --in
+            { guides = { cy = Dict.empty, en = Dict.empty }
+            , pages = { cy = Dict.empty, en = Dict.empty }
+            , stories = { cy = Dict.empty, en = Dict.empty }
+            }
+
+
+flagsDictDecoder : Json.Decode.Decoder Content
+flagsDictDecoder =
+    Json.Decode.map3 Content
+        (Json.Decode.field "guides" Page.Guide.Data.guideLanguageDictDecoder)
+        (Json.Decode.field "pages" Page.Data.pageLanguageDictDecoder)
+        (Json.Decode.field "stories" Page.Story.Data.storyLanguageDictDecoder)
+
+
+shuffleList : Maybe Random.Seed -> List a -> List a
+shuffleList seed list =
+    case seed of
+        Just aSeed ->
+            shuffleListHelper aSeed list []
+
+        Nothing ->
+            []
+
+
+shuffleListHelper : Random.Seed -> List a -> List a -> List a
+shuffleListHelper seed source result =
+    if List.isEmpty source then
+        result
+
+    else
+        let
+            indexGenerator =
+                Random.int 0 (List.length source - 1)
+
+            ( index, nextSeed ) =
+                Random.step indexGenerator seed
+
+            valAtIndex =
+                Array.get index (Array.fromList source)
+
+            sourceWithoutIndex =
+                List.take index source ++ List.drop (index + 1) source
+        in
+        case valAtIndex of
+            Just val ->
+                shuffleListHelper nextSeed sourceWithoutIndex (val :: result)
+
+            Nothing ->
+                result

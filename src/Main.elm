@@ -1,27 +1,31 @@
 module Main exposing (Flags, main)
 
 import Browser
+import Browser.Dom
 import Browser.Navigation
 import CookieBanner exposing (saveConsent)
 import GoogleAnalytics
-import Html.Styled exposing (Html, toUnstyled)
+import Html.Styled exposing (Html, div, text, toUnstyled)
 import Http
-import I18n.Translate exposing (Language(..))
+import I18n.Keys exposing (Key(..))
+import I18n.Translate exposing (Language(..), translate)
 import Json.Decode
 import Message exposing (Msg(..))
 import Metadata
 import Page.Data
 import Page.Guide.Data
 import Page.Guide.View
-import Page.Guides
+import Page.Guides.Data
+import Page.Guides.View
 import Page.Index
-import Page.Shared.Data
-import Page.Shared.View exposing (actionTeaserListDecoder)
+import Page.NotFound exposing (resourceNotFound)
 import Page.Story.Data
 import Page.Story.View
 import Page.View
+import Random
 import Route exposing (Route(..))
 import Shared exposing (Content, CookieState, Model, Request(..))
+import Task
 import Theme.PageTemplate
 import Url
 
@@ -69,7 +73,7 @@ init flags url key =
 
         content : Content
         content =
-            Page.Shared.Data.contentDictDecoder flags
+            Shared.contentDictDecoder flags
     in
     ( { key = key
       , page = page
@@ -80,11 +84,14 @@ init flags url key =
       , content = content
       , language = English
       , search = []
+      , query = ""
       , externalActions = Loading
+      , seed = Nothing
       }
     , Cmd.batch
         [ Metadata.setMetadata (Metadata.metadataFromPage page English content)
         , getActions
+        , Random.generate UpdateSeed Random.independentSeed
         ]
     )
 
@@ -93,7 +100,7 @@ getActions : Cmd Msg
 getActions =
     Http.get
         { url = "/API.json"
-        , expect = Http.expectJson GotActions actionTeaserListDecoder
+        , expect = Http.expectJson GotActions Page.Guides.Data.actionTeaserListDecoder
         }
 
 
@@ -112,6 +119,16 @@ flagsConsentDecoder =
     Json.Decode.field "hasConsented" Json.Decode.string
 
 
+resetViewportTop : Cmd Msg
+resetViewportTop =
+    Task.perform (\_ -> NoOp) (Browser.Dom.setViewport 0 0)
+
+
+resetFocusTop : Cmd Msg
+resetFocusTop =
+    Task.attempt (\_ -> NoOp) (Browser.Dom.focus "focus-target")
+
+
 update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
     case msg of
@@ -124,7 +141,11 @@ update msg model =
                     Maybe.withDefault Index (Route.fromUrl url)
             in
             ( { model | page = newRoute }
-            , Metadata.setMetadata (Metadata.metadataFromPage newRoute model.language model.content)
+            , Cmd.batch
+                [ Metadata.setMetadata (Metadata.metadataFromPage newRoute model.language model.content)
+                , resetFocusTop
+                , resetViewportTop
+                ]
             )
 
         LinkClicked urlRequest ->
@@ -165,7 +186,11 @@ update msg model =
         GotActions result ->
             case result of
                 Ok list ->
-                    ( { model | externalActions = Success list }, Cmd.none )
+                    let
+                        actions =
+                            List.sortBy .title list
+                    in
+                    ( { model | externalActions = Success actions }, Cmd.none )
 
                 Err _ ->
                     ( { model | externalActions = Failure }, Cmd.none )
@@ -192,8 +217,14 @@ update msg model =
                 Cmd.none
             )
 
-        SearchChanged searchResult ->
-            ( { model | search = searchResult }, Cmd.none )
+        SearchChanged searchResult query ->
+            ( { model | search = searchResult, query = query }, Cmd.none )
+
+        UpdateSeed seed ->
+            ( { model | seed = Just seed }, Cmd.none )
+
+        NoOp ->
+            ( model, Cmd.none )
 
 
 openCookieBanner : CookieState -> CookieState
@@ -213,7 +244,12 @@ subscriptions _ =
 
 viewDocument : Model -> Browser.Document Msg
 viewDocument model =
-    { title = "[cCc] App title", body = [ toUnstyled (view model) ] }
+    let
+        t : Key -> String
+        t =
+            translate model.language
+    in
+    { title = t SiteTitle, body = [ toUnstyled (view model) ] }
 
 
 view : Model -> Html Msg
@@ -224,27 +260,48 @@ view model =
 
         Story slug ->
             let
-                story : Page.Story.Data.Story
-                story =
+                maybeStory : Maybe Page.Story.Data.Story
+                maybeStory =
                     Page.Story.Data.storyFromSlug model.language model.content.stories slug
             in
-            Theme.PageTemplate.view model (Page.Story.View.view story)
+            Theme.PageTemplate.view model <|
+                case maybeStory of
+                    Just story ->
+                        Page.Story.View.view model.language story
+
+                    Nothing ->
+                        resourceNotFound model.language
 
         Guide slug ->
             let
-                guide : Page.Guide.Data.Guide
-                guide =
+                maybeGuide : Maybe Page.Guide.Data.Guide
+                maybeGuide =
                     Page.Guide.Data.guideFromSlug model.language model.content.guides slug
             in
-            Theme.PageTemplate.view model (Page.Guide.View.view guide)
+            Theme.PageTemplate.view model <|
+                case maybeGuide of
+                    Just guide ->
+                        Page.Guide.View.view model.language
+                            guide
+                            (Page.Guide.Data.allGuidesSlugTitleList model.content.guides)
+                            (Page.Story.Data.allStoryTeaserList model.content.stories)
+
+                    Nothing ->
+                        resourceNotFound model.language
 
         Guides ->
-            Theme.PageTemplate.view model (Page.Guides.view model)
+            Theme.PageTemplate.view model (Page.Guides.View.view model)
 
         Page slug ->
             let
-                page : Page.Data.Page
-                page =
+                maybePage : Maybe Page.Data.Page
+                maybePage =
                     Page.Data.pageFromSlug model.language model.content.pages slug
             in
-            Theme.PageTemplate.view model (Page.View.view page)
+            Theme.PageTemplate.view model <|
+                case maybePage of
+                    Just page ->
+                        Page.View.view page
+
+                    Nothing ->
+                        resourceNotFound model.language

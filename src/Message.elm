@@ -2,7 +2,8 @@ module Message exposing (Msg(..))
 
 import Browser
 import Http
-import Page.GuideTeaser
+import Page.Shared.Data
+import Random
 import Url
 
 
@@ -13,5 +14,7 @@ type Msg
     | CookieSettingsButtonClicked
     | CookiesAccepted
     | CookiesDeclined
-    | SearchChanged (List Page.GuideTeaser.GuideTeaser)
-    | GotActions (Result Http.Error (List Page.GuideTeaser.GuideTeaser))
+    | SearchChanged (List Page.Shared.Data.Teaser) String
+    | GotActions (Result Http.Error (List Page.Shared.Data.Teaser))
+    | UpdateSeed Random.Seed
+    | NoOp

@@ -1,35 +1,64 @@
-module Page.Shared.Data exposing (Content, contentDictDecoder)
+module Page.Shared.Data exposing (AudioMeta, Teaser, TeaserImage, VideoMeta, audioDecoder, defaultTeaserImage, guideTeaserDecoder, guideTeaserImageDecoder, videoDecoder)
 
-import Dict exposing (Dict)
 import Json.Decode
-import Page.Data
-import Page.Guide.Data
-import Page.Story.Data
 
 
-type alias Content =
-    { guides : Page.Guide.Data.Guides
-    , stories : Dict String Page.Story.Data.Story
-    , pages : Page.Data.Pages
+type alias TeaserImage =
+    { src : String, alt : String }
+
+
+guideTeaserDecoder : Json.Decode.Decoder Teaser
+guideTeaserDecoder =
+    Json.Decode.map4 Teaser
+        (Json.Decode.field "title" Json.Decode.string)
+        (Json.Decode.field "basename" Json.Decode.string)
+        (Json.Decode.field "summary" Json.Decode.string)
+        (Json.Decode.maybe (Json.Decode.field "image" guideTeaserImageDecoder))
+
+
+defaultTeaserImage : TeaserImage
+defaultTeaserImage =
+    { src = "/images/default-guide-image.jpg", alt = "" }
+
+
+guideTeaserImageDecoder : Json.Decode.Decoder TeaserImage
+guideTeaserImageDecoder =
+    Json.Decode.map2 TeaserImage
+        (Json.Decode.field "src" Json.Decode.string)
+        (Json.Decode.field "alt" Json.Decode.string)
+
+
+type alias Teaser =
+    { title : String
+
+    -- This will maybe turn into Url.Url when we include external resources
+    , url : String
+    , summary : String
+    , maybeImage : Maybe TeaserImage
     }
 
 
-contentDictDecoder : Json.Decode.Value -> Content
-contentDictDecoder flags =
-    case Json.Decode.decodeValue flagsDictDecoder flags of
-        Ok goodContent ->
-            goodContent
-
-        Err _ ->
-            { guides = { cy = Dict.empty, en = Dict.empty }
-            , stories = Dict.empty
-            , pages = { cy = Dict.empty, en = Dict.empty }
-            }
+type alias AudioMeta =
+    { title : String
+    , src : String
+    }
 
 
-flagsDictDecoder : Json.Decode.Decoder Content
-flagsDictDecoder =
-    Json.Decode.map3 Content
-        (Json.Decode.field "guides" Page.Guide.Data.guideLanguageDictDecoder)
-        (Json.Decode.field "stories" Page.Story.Data.storyDictDecoder)
-        (Json.Decode.field "pages" Page.Data.pageLanguageDictDecoder)
+audioDecoder : Json.Decode.Decoder AudioMeta
+audioDecoder =
+    Json.Decode.map2 AudioMeta
+        (Json.Decode.field "title" Json.Decode.string)
+        (Json.Decode.field "src" Json.Decode.string)
+
+
+type alias VideoMeta =
+    { title : String
+    , src : String
+    }
+
+
+videoDecoder : Json.Decode.Decoder VideoMeta
+videoDecoder =
+    Json.Decode.map2 VideoMeta
+        (Json.Decode.field "title" Json.Decode.string)
+        (Json.Decode.field "src" Json.Decode.string)

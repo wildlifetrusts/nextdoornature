@@ -1,10 +1,27 @@
-module Theme.Global exposing (centerContent, contentWrapper, embeddedVideoStyle, featureImageStyle, globalStyles, lightTeal, pageColumnBlockStyle, pageColumnStyle, purple, roundedCornerStyle, teal, teaserContainerStyle, teaserImageStyle, teaserRowStyle, teasersContainerStyle, topTwoColumnsWrapperStyle, white, withMediaMobileUp, withMediaTabletPortraitUp)
+module Theme.Global exposing (borderWrapper, centerContent, contentWrapper, featureImageStyle, globalStyles, lightTeal, listStyleNone, pageColumnBlockStyle, pageColumnStyle, primaryHeader, purple, roundedCornerStyle, screenReaderOnly, teal, teaserContainerStyle, teaserImageStyle, teaserRowStyle, teasersContainerStyle, topTwoColumnsWrapperStyle, white, withMediaDesktopUp, withMediaMobileUp, withMediaTabletLandscapeUp, withMediaTabletPortraitUp)
 
-import Css exposing (Color, Style, alignItems, auto, backgroundImage, backgroundPosition, backgroundRepeat, backgroundSize, batch, borderBottomRightRadius, borderTopLeftRadius, borderTopRightRadius, boxSizing, center, color, column, contain, contentBox, cover, cursor, display, displayFlex, em, ex, flex, flex3, flexDirection, flexStart, flexWrap, fontFamilies, height, hex, hidden, inherit, inlineBlock, int, justifyContent, lastChild, listStyle, margin, margin2, marginBottom, marginLeft, marginRight, marginTop, maxWidth, minWidth, noRepeat, noWrap, none, overflow, padding, padding2, pct, pointer, property, pseudoElement, px, rem, row, spaceBetween, textDecoration, url, width, wrap, zero)
+import Css exposing (Color, Style, absolute, alignItems, auto, backgroundImage, backgroundPosition, backgroundRepeat, backgroundSize, batch, border3, borderBottomRightRadius, borderRadius4, borderTopLeftRadius, borderTopRightRadius, boxSizing, center, color, column, contain, contentBox, cover, cursor, display, displayFlex, em, ex, flex, flex3, flexDirection, flexStart, flexWrap, fontFamilies, height, hex, hidden, inherit, inlineBlock, int, justifyContent, lastChild, left, listStyle, margin, margin2, margin3, marginBottom, marginLeft, marginRight, marginTop, maxWidth, minWidth, noRepeat, noWrap, none, overflow, padding, padding2, paddingLeft, pct, pointer, position, property, pseudoElement, px, rem, row, solid, spaceBetween, textDecoration, top, url, width, wrap, zero)
 import Css.Global exposing (global, typeSelector)
 import Css.Media as Media exposing (only, screen, withMedia)
-import Html.Styled exposing (Html)
+import Html.Styled exposing (Html, h1, text)
+import Html.Styled.Attributes exposing (id, tabindex)
 import Theme.FluidScale
+
+
+
+-- Accessibility helpers
+
+
+screenReaderOnly : Style
+screenReaderOnly =
+    batch
+        [ position absolute
+        , left (px -10000)
+        , top auto
+        , width (px 1)
+        , height (px 1)
+        , overflow hidden
+        ]
 
 
 
@@ -91,9 +108,7 @@ roundedCornerValue =
 roundedCornerStyle : Style
 roundedCornerStyle =
     batch
-        [ borderTopLeftRadius (rem roundedCornerValue)
-        , borderTopRightRadius (rem roundedCornerValue)
-        , borderBottomRightRadius (rem roundedCornerValue)
+        [ borderRadius4 (rem roundedCornerValue) (rem roundedCornerValue) (rem roundedCornerValue) (rem 0)
         , overflow hidden
         ]
 
@@ -118,30 +133,35 @@ globalStyles =
         , typeSelector "h1"
             [ fontFamilies [ "Adelle", "serif" ]
             , color purple
-            , Theme.FluidScale.fontSize4
+            , margin3 (rem 0) auto (rem 1.5)
+            , Theme.FluidScale.fontSizeExtraLarge
             , width (pct 100)
             ]
         , typeSelector "h2"
             [ fontFamilies [ "Adelle", "serif" ]
             , color purple
-            , Theme.FluidScale.fontSize3
+            , margin3 (rem 0) auto (rem 1.5)
+            , Theme.FluidScale.fontSizeLarge
+            , width (pct 100)
             ]
         , typeSelector "h3"
             [ fontFamilies [ "Adelle", "serif" ]
             , color purple
-            , Theme.FluidScale.fontSize2
+            , margin3 (rem 0) auto (rem 1)
+            , Theme.FluidScale.fontSizeMedium
             ]
         , typeSelector "h4"
             [ fontFamilies [ "Adelle", "serif" ]
             , color purple
-            , Theme.FluidScale.fontSize1
+            , margin3 (rem 0) auto (rem 1)
+            , Theme.FluidScale.fontSizeBase
             ]
         , typeSelector "a"
             [ color purple
             , textDecoration none
             , pseudoElement "after"
                 [ backgroundImage
-                    (url "images/arrow.svg")
+                    (url "/images/arrow.svg")
                 , backgroundSize contain
                 , backgroundPosition center
                 , backgroundRepeat noRepeat
@@ -155,7 +175,8 @@ globalStyles =
         , typeSelector "b"
             []
         , typeSelector "p"
-            []
+            [ margin3 (rem 0) auto (rem 1)
+            ]
         , typeSelector "blockquote"
             []
         , typeSelector "button"
@@ -168,12 +189,26 @@ globalStyles =
             , borderTopRightRadius (rem roundedCornerValue)
             , borderBottomRightRadius (rem roundedCornerValue)
             , overflow hidden
+            , width (pct 100)
             ]
         ]
 
 
 
 -- Helpers
+
+
+primaryHeader : List (Html.Styled.Attribute msg) -> String -> Html msg
+primaryHeader extraAttributes title =
+    h1 ([ id "focus-target", tabindex -1 ] ++ extraAttributes) [ text title ]
+
+
+listStyleNone : Style
+listStyleNone =
+    batch
+        [ listStyle none
+        , paddingLeft zero
+        ]
 
 
 teaserContainerStyle : Style
@@ -184,10 +219,6 @@ teaserContainerStyle =
         , flex3 (int 1) (int 1) (pct 20)
         , flexDirection column
         , listStyle none
-        , marginRight (rem 1.5)
-        , marginBottom (rem 1.5)
-        , maxWidth (px 180)
-        , minWidth (px 120)
         , width (pct 100)
         , lastChild
             [ marginBottom (rem 0)
@@ -233,10 +264,10 @@ teasersContainerStyle =
 featureImageStyle : Style
 featureImageStyle =
     batch
-        [ width (pct 100)
-        , height auto
-        , maxWidth (px (maxSmallDesktop / 3))
+        [ height auto
+        , roundedCornerStyle
         , teaserRowStyle
+        , width (pct 100)
         ]
 
 
@@ -246,19 +277,11 @@ teaserImageStyle =
         [ backgroundRepeat noRepeat
         , backgroundPosition center
         , backgroundSize cover
-        , maxWidth (px (maxMobile / 3))
         , property "aspect-ratio" "1/1"
         , property "object-fit" "cover"
+        , roundedCornerStyle
         , width (pct 100)
-        ]
-
-
-embeddedVideoStyle : Style
-embeddedVideoStyle =
-    batch
-        [ width (pct 100)
-        , height auto
-        , maxWidth (px (maxTabletLandscape / 3))
+        , marginBottom (rem 1)
         ]
 
 
@@ -271,17 +294,11 @@ centerContent =
         , flexDirection column
         , margin auto
         , maxWidth (px maxSmallDesktop)
-        , margin (rem 0)
-        , padding2 (rem 2) (rem 1)
+        , margin2 (rem 0) auto
+        , padding (rem 1)
         , width auto
         , withMediaTabletPortraitUp
-            [ padding (rem 3)
-            ]
-        , withMediaTabletLandscapeUp
-            [ padding2 (rem 4) (rem 3)
-            ]
-        , withMediaDesktopUp
-            [ margin2 (rem 0) auto
+            [ padding2 (rem 1) (rem 3)
             ]
         ]
 
@@ -294,6 +311,7 @@ contentWrapper =
         , flexDirection column
         , flexWrap noWrap
         , justifyContent center
+        , width (pct 100)
         , withMediaTabletLandscapeUp
             [ alignItems flexStart
             , flexDirection row
@@ -310,11 +328,13 @@ topTwoColumnsWrapperStyle =
         , flexWrap noWrap
         , justifyContent center
         , marginBottom (rem 3)
-        , width auto
+        , width (pct 100)
+        , withMediaTabletLandscapeUp
+            [ marginRight (rem 3)
+            ]
         , withMediaTabletPortraitUp
             [ flex (int 2)
             , flexDirection row
-            , marginRight (rem 3)
             ]
         ]
 
@@ -353,6 +373,7 @@ pageColumnStyle =
         , flexDirection column
         , justifyContent center
         , pageColumnMarginStyle
+        , width (pct 100)
         ]
 
 
@@ -364,4 +385,11 @@ pageColumnBlockStyle =
         , lastChild
             [ marginBottom (rem 0)
             ]
+        ]
+
+
+borderWrapper : Style
+borderWrapper =
+    batch
+        [ border3 (rem 0.5) solid teal
         ]

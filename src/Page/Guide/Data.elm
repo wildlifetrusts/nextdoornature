@@ -1,16 +1,17 @@
-module Page.Guide.Data exposing (Guide, Guides, guideFromSlug, guideLanguageDictDecoder, teaserListFromGuideDict)
+module Page.Guide.Data exposing (Guide, GuideListItem, Guides, Image, allGuidesSlugTitleList, defaultGuideImage, guideFromSlug, guideLanguageDictDecoder, guidesInPreferredLanguage)
 
 import Dict exposing (Dict)
 import I18n.Keys exposing (Key(..))
-import I18n.Translate exposing (Language(..), translate)
+import I18n.Translate exposing (Language(..))
 import Json.Decode
 import Json.Decode.Extra
-import Page.GuideTeaser
-import Page.Shared.View
+import Page.Shared.Data
 
 
 type alias Guides =
-    { cy : Dict String Guide, en : Dict String Guide }
+    { cy : Dict String Guide
+    , en : Dict String Guide
+    }
 
 
 type alias Guide =
@@ -18,30 +19,34 @@ type alias Guide =
     , slug : String
     , fullTextMarkdown : String
     , summary : String
-    , maybeImage : Maybe Page.GuideTeaser.Image
-    , maybeVideo : Maybe Page.Shared.View.VideoMeta
-    , maybeAudio : Maybe Page.Shared.View.AudioMeta
-    , relatedStoryList : List Page.Shared.View.StoryTeaser
-    , relatedGuideList : List Page.GuideTeaser.GuideTeaser
+    , maybeImage : Maybe Image
+    , maybeVideo : Maybe Page.Shared.Data.VideoMeta
+    , maybeAudio : Maybe Page.Shared.Data.AudioMeta
+    , relatedStoryList : List String
+    , relatedGuideList : List String
     }
 
 
-blankGuide : Language -> Guide
-blankGuide language =
-    let
-        t : Key -> String
-        t =
-            translate language
-    in
-    { title = t Guide404Title
-    , slug = t Guide404Slug
-    , fullTextMarkdown = t Guide404Body
-    , summary = t Guide404Title
-    , maybeImage = Nothing
-    , maybeVideo = Nothing
-    , maybeAudio = Nothing
-    , relatedStoryList = []
-    , relatedGuideList = []
+type alias Image =
+    { src : String
+    , alt : String
+    , maybeCredit : Maybe String
+    }
+
+
+defaultGuideImage : Image
+defaultGuideImage =
+    { src = "/images/default-guide-image.jpg"
+    , alt = ""
+    , maybeCredit = Nothing
+    }
+
+
+type alias GuideListItem =
+    { slug : String
+    , titleKey : String
+    , en : { title : String }
+    , cy : { title : String }
     }
 
 
@@ -56,24 +61,34 @@ guideDictDecoder =
             |> Json.Decode.Extra.andMap
                 (Json.Decode.field "content" Json.Decode.string |> Json.Decode.Extra.withDefault "")
             |> Json.Decode.Extra.andMap
-                (Json.Decode.field "summary" Json.Decode.string |> Json.Decode.Extra.withDefault "")
+                (Json.Decode.field "summary" Json.Decode.string
+                    |> Json.Decode.Extra.withDefault ""
+                )
             |> Json.Decode.Extra.andMap
-                (Json.Decode.maybe (Json.Decode.field "image" Page.Shared.View.imageDecoder))
+                (Json.Decode.maybe (Json.Decode.field "image" imageDecoder))
             |> Json.Decode.Extra.andMap
-                (Json.Decode.maybe (Json.Decode.field "video" Page.Shared.View.videoDecoder))
+                (Json.Decode.maybe (Json.Decode.field "video" Page.Shared.Data.videoDecoder))
             |> Json.Decode.Extra.andMap
-                (Json.Decode.maybe (Json.Decode.field "audio" Page.Shared.View.audioDecoder))
+                (Json.Decode.maybe (Json.Decode.field "audio" Page.Shared.Data.audioDecoder))
             |> Json.Decode.Extra.andMap
                 (Json.Decode.field "relatedStories"
-                    (Json.Decode.list Page.Shared.View.storyTeaserDecoder)
+                    (Json.Decode.list Json.Decode.string)
                     |> Json.Decode.Extra.withDefault []
                 )
             |> Json.Decode.Extra.andMap
                 (Json.Decode.field "relatedGuides"
-                    (Json.Decode.list Page.Shared.View.guideTeaserDecoder)
+                    (Json.Decode.list Json.Decode.string)
                     |> Json.Decode.Extra.withDefault []
                 )
         )
+
+
+imageDecoder : Json.Decode.Decoder Image
+imageDecoder =
+    Json.Decode.map3 Image
+        (Json.Decode.field "src" Json.Decode.string)
+        (Json.Decode.field "alt" Json.Decode.string)
+        (Json.Decode.maybe (Json.Decode.field "credit" Json.Decode.string))
 
 
 guideLanguageDictDecoder : Json.Decode.Decoder Guides
@@ -103,47 +118,42 @@ fallbackGuides language guides =
             guides.en
 
 
-guideFromSlug : Language -> Guides -> String -> Guide
+guideFromSlug : Language -> Guides -> String -> Maybe Guide
 guideFromSlug language guides slug =
     case Dict.get slug (guidesInPreferredLanguage language guides) of
         Just aGuide ->
-            aGuide
+            Just aGuide
 
         Nothing ->
-            case Dict.get slug (fallbackGuides language guides) of
-                Just aGuide ->
-                    aGuide
-
-                Nothing ->
-                    blankGuide language
+            Dict.get slug (fallbackGuides language guides)
 
 
-slugToUrl : String -> String
-slugToUrl slug =
-    "/guides/" ++ slug
-
-
-teaserListFromGuideDict :
-    Language
-    -> Guides
-    -> List Page.GuideTeaser.GuideTeaser
-teaserListFromGuideDict language guides =
-    let
-        guide : Dict String Guide
-        guide =
-            case language of
-                English ->
-                    guides.en
-
-                Welsh ->
-                    guides.cy
-    in
-    Dict.toList guide
+allGuidesSlugTitleList : Guides -> List GuideListItem
+allGuidesSlugTitleList guides =
+    -- merge on slug keys keeping en data
+    Dict.union guides.en guides.cy
+        |> Dict.toList
         |> List.map
-            (\( _, g ) ->
-                { title = g.title
-                , url = slugToUrl g.slug
-                , summary = g.summary
-                , maybeImage = g.maybeImage
+            (\( _, guide ) ->
+                { slug = guide.slug
+                , titleKey = guide.title
+                , en =
+                    { title = titleFromSlug guides.en guide }
+                , cy =
+                    { title = titleFromSlug guides.cy guide
+                    }
                 }
             )
+
+
+titleFromSlug : Dict String Guide -> Guide -> String
+titleFromSlug guideDict { slug, title } =
+    case Dict.get slug guideDict of
+        Just aGuide ->
+            aGuide.title
+
+        -- If we don't find a match on the slug,
+        -- go with the title of guide we passed in.
+        -- Means guide only exists in one language.
+        Nothing ->
+            title

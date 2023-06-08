@@ -96,7 +96,7 @@ cookieBtnStyle : Style
 cookieBtnStyle =
     batch
         [ pseudoElement "after"
-            [ backgroundImage (url "images/arrow--white.svg")
+            [ backgroundImage (url "/images/arrow--white.svg")
             , backgroundSize contain
             , backgroundPosition center
             , backgroundRepeat noRepeat
