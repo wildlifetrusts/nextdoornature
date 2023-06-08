@@ -1,8 +1,8 @@
-port module Metadata exposing (metadataFromPage, setMetadata)
+port module Metadata exposing (PageMetadata, metadataFromPage, setMetadata)
 
 import Dict
 import I18n.Keys exposing (Key(..))
-import I18n.Translate exposing (Language(..), dictFromLanguage, translate)
+import I18n.Translate exposing (Language, dictFromLanguage, translate)
 import Route exposing (Route(..))
 import Shared exposing (Content)
 

@@ -5,7 +5,7 @@ import Browser.Dom
 import Browser.Navigation
 import CookieBanner exposing (saveConsent)
 import GoogleAnalytics
-import Html.Styled exposing (Html, div, text, toUnstyled)
+import Html.Styled exposing (Html, toUnstyled)
 import Http
 import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (Language(..), translate)
