@@ -2,7 +2,7 @@ module Page.Guide.Data exposing (Guide, GuideListItem, Guides, Image, allGuidesS
 
 import Dict exposing (Dict)
 import I18n.Keys exposing (Key(..))
-import I18n.Translate exposing (Language(..), translate)
+import I18n.Translate exposing (Language(..))
 import Json.Decode
 import Json.Decode.Extra
 import Page.Shared.Data
@@ -61,7 +61,9 @@ guideDictDecoder =
             |> Json.Decode.Extra.andMap
                 (Json.Decode.field "content" Json.Decode.string |> Json.Decode.Extra.withDefault "")
             |> Json.Decode.Extra.andMap
-                (Json.Decode.field "summary" Json.Decode.string |> Json.Decode.Extra.withDefault "")
+                (Json.Decode.field "summary" Json.Decode.string
+                    |> Json.Decode.Extra.withDefault ""
+                )
             |> Json.Decode.Extra.andMap
                 (Json.Decode.maybe (Json.Decode.field "image" imageDecoder))
             |> Json.Decode.Extra.andMap
