@@ -10,6 +10,7 @@ relatedGuides:
   - "Finding Funding "
   - Bank Accounts For Groups
   - Faith Groups and Lottery Funding
+category: admin-and-info
 ---
 ## Preparation
 
@@ -46,11 +47,11 @@ Think about money. You will need to make a detailed budget. Tips:
 
 ## Find a funder
 
-First, you need to be clear about the outcomes of your project. Different funders have different priorities, and this means that they will fund your project only if you have the same goals as they do. 
+First, you need to be clear about the outcomes of your project. Different funders have different priorities, and this means that they will fund your project only if you have the same goals as they do.
 Funders need to be sure that your project really will make a difference. They don’t want to waste money. You must have evidence to show that your project is important. You can do this in a few ways:
 
 * You can ask people who are involved and record their answers. Use their quotes.
-* You can use statistical information (facts and numbers). Start with the websites for your local council, local authority, police or health authorities. Use reliable sources such as Government reports. 
+* You can use statistical information (facts and numbers). Start with the websites for your local council, local authority, police or health authorities. Use reliable sources such as Government reports.
 * You can use letters of support from other groups, local councillors, the police, and schools
 * You can show that you have a link with local and regional strategies or government projects
 

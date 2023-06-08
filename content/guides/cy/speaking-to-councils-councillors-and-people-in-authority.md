@@ -1,8 +1,9 @@
 ---
 title: Siarad â Chynghorau, Cynghorwyr a Phobl mewn Awdurdod
 summary: Sut i deimlo'n fwy hyderus pan fyddwch chi'n siarad â'ch cyngor lleol
+category: admin-and-info
 ---
-## Siarad â chynghorau a chynghorwyr: Cyngor Ymarferol 
+## Siarad â chynghorau a chynghorwyr: Cyngor Ymarferol
 
 Mae angen i chi wybod pwy sy'n gwneud beth yn eich awdurdod lleol ac mae hyn yn wahanol ar draws y DU. Dechreuwch gyda'n dogfen “Am Gynghorau ac Awdurdodau Lleol”.
 Mae gan y rhan fwyaf o Awdurdodau Lleol wefan a fydd yn rhestru'r adrannau a'r hyn mae pob adran yn ei wneud. Fel arfer bydd y wefan yn cynnwys yr aelodau o staff neu'r cysylltiadau sydd arnoch eu hangen.
@@ -12,7 +13,7 @@ Mae'r rhan fwyaf o bobl yn defnyddio e-bost y dyddiau hyn ond os na chewch ymate
 ## Siarad â chynghorau a chynghorwyr: Hyder a Sgiliau Cyfathrebu
 
 Mae un peth pwysig i'w gofio: pobl ydyn nhw! Maen nhw'n cael dyddiau gwael a dyddiau da, yn union fel chi. Weithiau does ganddyn nhw ddim yr atebion i gyd sydd arnoch eu hangen. Weithiau maen nhw'n teimlo allan o'u dyfnder, ac weithiau maen nhw'n barod iawn i helpu.
-Mae’n normal iawn teimlo’n bryderus am siarad â rhywun sy’n “swyddogol”. 
+Mae’n normal iawn teimlo’n bryderus am siarad â rhywun sy’n “swyddogol”.
 
 **Cofiwch fod pawb sy'n gweithio i'r cyngor wedi’u rhwymo i gyfrinachedd a rheolau'r GDPR (preifatrwydd) fel pawb arall.** Mae’n normal poeni y gallent drosglwyddo gwybodaeth rhwng adrannau, ond ni fydd hyn yn digwydd. Os ydyn nhw'n mynd i dorri cyfrinachedd, rhaid iddyn nhw ddweud wrthych chi beth maen nhw'n ei wneud, a pham maen nhw'n ei wneud. Gallwch siarad yn breifat ag unrhyw aelod o'r cyngor. Yr unig amser y gall unrhyw un drosglwyddo gwybodaeth breifat yw os oes rhywun mewn perygl o niwed.
 
@@ -29,7 +30,7 @@ Nawr mae angen i chi ddweud wrthyn nhw beth rydych chi eisiau iddyn nhw ei wneud
 Rhowch lawer o opsiynau iddyn nhw fel eu bod yn gallu dewis yr hyn sydd orau iddynt.
 Pam siarad â nhw o gwbl? Oherwydd efallai bod rheswm pam mae pethau wedi cael eu gwneud mewn ffordd arbennig. Mae’n dda i bawb wrando cyn iddynt benderfynu. Gallwch hefyd ddod i adnabod y bobl sy'n gyfrifol, a gall hyn eich helpu i ddylanwadu arnynt.
 
-## Sut i deimlo’n hyderus ar y ffôn   
+## Sut i deimlo’n hyderus ar y ffôn
 
 Paratowch yr hyn rydych chi'n mynd i'w ddweud. Gallwch ei ysgrifennu ar bapur. Mae'n ddefnyddiol iawn ymarfer eich brawddeg gyntaf yn uchel hefyd.
 Sefwch tra byddwch chi'n siarad ar y ffôn. Mae hyn yn eich helpu i anadlu'n ddyfnach a gall eich helpu i deimlo'n fwy hyderus.
@@ -40,11 +41,11 @@ Ceisiwch fod yn rhywle heb bethau’n tynnu eich sylw a heb lawer o sŵn.
 Gwnewch yn siŵr bod rhyw fath o wobr yn aros amdanoch chi ar ôl yr alwad ffôn! Gall hyn fod yn unrhyw beth o bum munud yn eistedd yn yr ardd, yn mwynhau'r blodau, i damaid o gacen gyda phaned o de. Beth bynnag sy'n gwneud i chi wenu.
 Os yw galwadau ffôn yn anodd i chi, a'ch bod wedi gwneud un beth bynnag - DA IAWN! Nid yw rhai pobl yn gwybod pa mor anodd y gall fod. Ond mae llawer o bobl yn gwybod ei fod yn anodd, felly gallwch chi deimlo'n falch ohonoch chi'ch hun yn bendant.
 
-## Sut i deimlo’n hyderus ar alwad fideo         
+## Sut i deimlo’n hyderus ar alwad fideo
 
 Gwisgwch ddillad sy'n gwneud i chi deimlo'n dda, gan gynnwys eich esgidiau.
 Cymerwch eich amser i sefydlu'r gofod. Nid dau funud cyn yr alwad yw'r amser i ddarganfod bod y camera yn rhy isel.
-Gwnewch yn siŵr eich bod mewn lleoliad heb lawer o sŵn na phethau i dynnu eich sylw. 
+Gwnewch yn siŵr eich bod mewn lleoliad heb lawer o sŵn na phethau i dynnu eich sylw.
 Ysgrifennwch yr hyn yr hoffech ei ddweud ar gardiau nodiadau neu ar bapur.
 Mae gweld eich wyneb eich hun yn gallu tynnu sylw. Gallwch chi ddiffodd llun eich wyneb a chanolbwyntio ar wyneb y person arall yn unig - yn union fel mewn bywyd go iawn. Mae llawer o bobl yn teimlo bod hyn yn ddefnyddiol.
 Peidiwch â theimlo rheidrwydd i siarad drwy'r amser. Mae caniatáu saib rhwng pobl yn siarad yn beth da oherwydd gall fod oedi hefyd.

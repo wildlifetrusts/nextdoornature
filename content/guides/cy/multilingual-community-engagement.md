@@ -8,6 +8,7 @@ image:
 video:
   src: https://youtu.be/Tk7InQgM7PE
   title: Ymgysylltu Cymunedol Amlieithog. Fideo Natur Drws Nesaf.
+category: admin-and-info
 ---
 ## Adnabod yr angen 
 

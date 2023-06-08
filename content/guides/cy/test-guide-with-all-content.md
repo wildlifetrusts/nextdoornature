@@ -4,4 +4,5 @@ relatedGuides:
   - "Finding Funding "
 relatedStories:
   - Test story with minimal fields
+category: admin-and-info
 ---

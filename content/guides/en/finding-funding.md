@@ -11,6 +11,7 @@ video:
 relatedGuides:
   - Bank Accounts For Groups
   - How to Apply for Funding
+category: admin-and-info
 ---
 ## General advice about funding
 

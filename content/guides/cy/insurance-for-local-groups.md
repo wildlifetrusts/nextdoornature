@@ -5,6 +5,7 @@ image:
   src: /images/uploads/insurance_orig-2-.jpg
   credit: Photo copyright Autumn Barlow/The Wildlife Trusts 2023
   alt: Some insurance paperwork
+category: admin-and-info
 ---
 Nid yw hwn yn gyngor yswiriant ffurfiol.
 

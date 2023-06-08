@@ -8,6 +8,7 @@ image:
 video:
   src: https://youtu.be/pZDv-ri2GOs
   title: Beth mae cynghorau ac awdurdodau lleol yn ei wneud? Fideo Natur Drws Nesaf.
+category: admin-and-info
 ---
 ## A pham ddylwn i boeni?
 
