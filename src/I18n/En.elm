@@ -162,3 +162,15 @@ enStrings key =
 
         WhoSubHeading ->
             "Who"
+
+        ---
+        -- SubmitStory Page
+        ---
+        SubmitStoryHeading ->
+            "[cCc] Share your story"
+
+        SubmitStoryP1 ->
+            "[cCc] Case studies are a vital tool  in helping others achieve success - Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni esse sequi iste eligendi nobis, pariatur repellat itaque voluptatum ab ad eos animi, asperiores dolores repellendus? Tenetur, minima! Fugiat, soluta corrupti?"
+
+        SubmitStoryP2 ->
+            "[cCc] By submitting  a case study Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni esse sequi iste eligendi nobis, pariatur repellat itaque voluptatum ab ad eos animi, asperiores dolores repellendus? Tenetur, minima! Fugiat, soluta corrupti?"

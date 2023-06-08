@@ -52,3 +52,7 @@ type Key
       --- Story Page
     | WhoSubHeading
     | WhereSubHeading
+      --- SubmitStory Page
+    | SubmitStoryHeading
+    | SubmitStoryP1
+    | SubmitStoryP2

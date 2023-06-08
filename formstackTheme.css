@@ -1,0 +1,31 @@
+.fsBody .fsForm {
+  font-family: Rubik, sans-serif;
+  background-color: #e7f2f4;
+  color: black;
+}
+
+.fsRowBody {
+  background-color: #e7f2f4;
+}
+
+.fsBody .fsSupporting {
+  font-size: 16px;
+  line-height: 1.5;
+  color: black;
+}
+
+.fsBody .fsLabel {
+  font-size: 18px;
+  font-weight: bold;
+  color: black;
+}
+
+.fsForm input[type="file"]::-webkit-file-upload-button,
+.fsForm .fsFileUploadButton {
+  background-color: #54257f;
+  margin-right: 0.5rem;
+}
+
+.fsSubmitButton {
+  background-color: #54257f !important;
+}

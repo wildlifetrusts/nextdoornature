@@ -1,25 +1,36 @@
 module Page.SubmitStory.View exposing (..)
 
-import Css exposing (Style, auto, batch, display, displayFlex, flex3, flexBasis, flexGrow, flexShrink, flexWrap, hidden, int, maxWidth, overflow, pct, property, width, wrap)
-import Css.Transitions exposing (objectPosition2)
+import Css exposing (Style, batch, displayFlex, flexGrow, flexShrink, flexWrap, hidden, int, overflow, pct, property, width, wrap)
 import Html.Styled exposing (Html, div, h2, iframe, img, li, p, text, ul)
 import Html.Styled.Attributes as Attr exposing (attribute, css)
-import I18n.Translate exposing (Language(..))
+import I18n.Keys exposing (Key(..))
+import I18n.Translate exposing (Language(..), translate)
 import Message exposing (Msg)
 import Shared exposing (Model)
-import Theme.Global exposing (centerContent, featureImageStyle, listStyleNone, primaryHeader, roundedCornerStyle)
+import Theme.FluidScale
+import Theme.Global exposing (centerContent, listStyleNone, primaryHeader, roundedCornerStyle)
 
 
 view : Model -> Html Msg
 view model =
+    let
+        t : Key -> String
+        t =
+            translate model.language
+    in
     div [ css [ centerContent ] ]
-        [ primaryHeader [] "Share your story"
+        [ primaryHeader [] (t SubmitStoryHeading)
         , submitFlex model
         ]
 
 
 submitFlex : Model -> Html Msg
 submitFlex model =
+    let
+        t : Key -> String
+        t =
+            translate model.language
+    in
     div
         [ css
             [ batch
@@ -29,17 +40,17 @@ submitFlex model =
                 ]
             ]
         ]
-        [ description
+        [ description (t SubmitStoryP1) (t SubmitStoryP2)
         , form model
         , images
         ]
 
 
-description : Html Msg
-description =
+description : String -> String -> Html Msg
+description p1 p2 =
     div [ css [ flexChild ] ]
-        [ p [] [ text "[cCc] Case studies are a vital tool  in helping others achieve success - Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni esse sequi iste eligendi nobis, pariatur repellat itaque voluptatum ab ad eos animi, asperiores dolores repellendus? Tenetur, minima! Fugiat, soluta corrupti?" ]
-        , p [] [ text "[cCc] By submitting  a case study Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni esse sequi iste eligendi nobis, pariatur repellat itaque voluptatum ab ad eos animi, asperiores dolores repellendus? Tenetur, minima! Fugiat, soluta corrupti?" ]
+        [ p [ css [ Theme.FluidScale.fontSizeMedium ] ] [ text p1 ]
+        , p [] [ text p2 ]
         ]
 
 
@@ -55,7 +66,7 @@ form model =
 
                         -- these attributes are modified from those supplied by formstack
                         , Attr.attribute "width" "100%"
-                        , Attr.height 1000
+                        , Attr.height 1200
                         ]
                         []
 
@@ -65,7 +76,7 @@ form model =
                         [ Attr.src "https://teamwildertest.formstack.com/forms/teamwilder_test"
                         , Attr.title "teamwilder_test"
                         , Attr.width 600
-                        , Attr.height 1000
+                        , Attr.height 1200
                         ]
                         []
     in
