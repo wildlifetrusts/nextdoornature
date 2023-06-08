@@ -46,7 +46,7 @@ metadataFromPage page language content =
             }
 
         Guide slug ->
-            case metadataFromSlug slug (dictFromLanguage language content.guides) of
+            case guideMetadataFromSlug slug (dictFromLanguage language content.guides) of
                 Just metadata ->
                     { metadata | title = subPageTitle language metadata.title }
 
@@ -60,10 +60,12 @@ metadataFromPage page language content =
             }
 
         Story slug ->
-            { title = subPageTitle language slug
-            , description = slug
-            , imageSrc = defaultMetaImageSrc
-            }
+            case storyMetadataFromSlug slug (dictFromLanguage language content.stories) of
+                Just metadata ->
+                    { metadata | title = subPageTitle language metadata.title }
+
+                Nothing ->
+                    defaultMetadata language
 
         Page slug ->
             { title = subPageTitle language slug
@@ -72,7 +74,7 @@ metadataFromPage page language content =
             }
 
 
-metadataFromSlug :
+guideMetadataFromSlug :
     String
     ->
         Dict.Dict
@@ -83,7 +85,7 @@ metadataFromSlug :
                 , maybeImage : Maybe { b | src : String }
             }
     -> Maybe PageMetadata
-metadataFromSlug slug contentDict =
+guideMetadataFromSlug slug contentDict =
     case Dict.get slug contentDict of
         Just content ->
             Just
@@ -94,6 +96,36 @@ metadataFromSlug slug contentDict =
 
         Nothing ->
             Nothing
+
+
+storyMetadataFromSlug :
+    String
+    ->
+        Dict.Dict
+            String
+            { a
+                | title : String
+                , images : List { b | src : String }
+            }
+    -> Maybe PageMetadata
+storyMetadataFromSlug slug contentDict =
+    case Dict.get slug contentDict of
+        Just content ->
+            Just
+                { title = content.title
+
+                -- TODO replace with description (from summary?)
+                , description = content.title
+                , imageSrc = imageSrcFromList content.images
+                }
+
+        Nothing ->
+            Nothing
+
+
+imageSrcFromList : List { a | src : String } -> String
+imageSrcFromList imageList =
+    imageSrcFromMaybeImage (List.head imageList)
 
 
 imageSrcFromMaybeImage : Maybe { a | src : String } -> String
