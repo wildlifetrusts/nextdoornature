@@ -34,6 +34,10 @@ app.ports.setMetadata.subscribe(function (pageMetadata) {
     .getElementsByTagName("meta")
     .namedItem("description")
     .setAttribute("content", pageMetadata.description);
+  document
+    .getElementsByTagName("meta")
+    .namedItem("og-image")
+    .setAttribute("content", pageMetadata.imageSrc);
 });
 
 app.ports.saveConsent.subscribe(function (hasConsented) {
