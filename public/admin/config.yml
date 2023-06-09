@@ -64,7 +64,7 @@ collections:
               name: "src",
               widget: "image",
               i18n: true,
-              hint: "Please keep file size under 1 megabyte.",
+              hint: "Please keep file size under 1MB.",
             }
           - { label: "Alt text", name: "alt", widget: "string", i18n: true }
           - {
@@ -117,7 +117,7 @@ collections:
               widget: "image",
               required: false,
               i18n: true,
-              hint: "Please keep file size under 1 megabyte.",
+              hint: "Please keep file size under 1MB.",
             }
           - {
               label: "Alt text",
