@@ -59,7 +59,13 @@ collections:
         required: false
         i18n: true
         fields:
-          - { label: "Image", name: "src", widget: "image", i18n: true }
+          - {
+              label: "Image",
+              name: "src",
+              widget: "image",
+              i18n: true,
+              hint: "Please keep file size under 1 megabyte.",
+            }
           - { label: "Alt text", name: "alt", widget: "string", i18n: true }
           - {
               label: "Photo credit",
@@ -111,6 +117,7 @@ collections:
               widget: "image",
               required: false,
               i18n: true,
+              hint: "Please keep file size under 1 megabyte.",
             }
           - {
               label: "Alt text",
