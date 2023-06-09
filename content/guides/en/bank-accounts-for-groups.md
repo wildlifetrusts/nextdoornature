@@ -12,7 +12,7 @@ relatedStories:
   - Test story with minimal fields
 category: admin-and-info
 video:
-  src: "12345678911"
+  src: ""
 ---
 You’ll need a bank account if your group’s applying for grants. You’ll also need one if you collect donations or fees and use that money to buy things for your project. Don’t be tempted to use a personal account! It gets very messy very quickly.
 
