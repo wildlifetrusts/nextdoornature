@@ -120,7 +120,7 @@ collections:
           - {
               label: "YouTube video ID",
               name: "id",
-              widget: "string",  
+              widget: "string",
               hint: "Embed url will be added automatically as `https://youtube.com/embed/`. Save ID here only e.g. Ab123x456Yz",
               pattern: ["^.{11}$", "Must be an 11 character code"],
               required: false,

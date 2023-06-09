@@ -158,6 +158,7 @@ bottomFooterContainerStyle =
         , withMediaTabletPortraitUp
             [ alignItems flexStart
             , flexDirection row
+
             -- must be higher than cookie banner button
             , paddingBottom (rem 3)
             ]
