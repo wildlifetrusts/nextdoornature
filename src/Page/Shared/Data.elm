@@ -61,4 +61,13 @@ videoDecoder : Json.Decode.Decoder VideoMeta
 videoDecoder =
     Json.Decode.map2 VideoMeta
         (Json.Decode.field "title" Json.Decode.string)
-        (Json.Decode.field "src" Json.Decode.string)
+        (Json.Decode.field "id"
+            (Json.Decode.string
+                |> Json.Decode.andThen idToEmbedSrc
+            )
+        )
+
+
+idToEmbedSrc : String -> Json.Decode.Decoder String
+idToEmbedSrc videoId =
+    Json.Decode.succeed ("https://youtube.com/embed/" ++ videoId)

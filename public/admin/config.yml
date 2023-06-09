@@ -112,15 +112,17 @@ collections:
               required: false,
               i18n: true,
             }
-      - label: "Video"
+      - label: "YouTube video"
         name: "video"
         widget: "object"
         i18n: true
         fields:
           - {
-              label: "URL",
-              name: "src",
-              widget: "string",
+              label: "YouTube video ID",
+              name: "id",
+              widget: "string",  
+              hint: "Embed url will be added automatically as `https://youtube.com/embed/`. Save ID here only e.g. Ab123x456Yz",
+              pattern: ["^.{11}$", "Must be an 11 character code"],
               required: false,
               i18n: true,
             }

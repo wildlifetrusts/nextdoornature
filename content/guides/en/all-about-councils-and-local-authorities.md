@@ -6,7 +6,7 @@ image:
   alt: Local maps and street atlases
   credit: Photo copyright Autumn Barlow/The Wildlife Trusts 2023
 video:
-  src: https://youtu.be/pZDv-ri2GOs
+  id: pZDv-ri2GOs
   title: About Councils and Local Authorities. A Nextdoor Nature Video.
 ---
 ## What do councils and Local Authorities do?
