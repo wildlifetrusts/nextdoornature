@@ -97,12 +97,12 @@ collections:
           widget: "select",
           options:
             [
-              "admin-and-info",
-              "media-publicity-events",
-              "working-with-people",
-              "working-with-the-authorities",
+              { label: "Community Groups - Admin and Information", value: "admin-and-info" },
+              { label: "Media, Publicity and Events", value: "media-publicity-events" },
+              { label: "Working with People", value: "working-with-people" },
+              { label: "Working with the Authorities", value: "working-with-the-authorities" },
             ],
-          default: "admin-and-info",
+          default: "",
           i18n: false,
         }
       - { label: "Body", name: "body", widget: "markdown", i18n: true }
