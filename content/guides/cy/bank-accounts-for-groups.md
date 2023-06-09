@@ -6,7 +6,7 @@ image:
   credit: Photo copyright Autumn Barlow/The Wildlife Trusts 2023
   alt: A pile of bank statements
 relatedGuides:
-  - Test guide
+  - How to Apply for Funding
 relatedStories:
   - Test story with minimal fields
 category: admin-and-info
