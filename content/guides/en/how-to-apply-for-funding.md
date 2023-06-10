@@ -75,19 +75,47 @@ When you have a good idea of your project and your outcomes, you can write your 
 ## Find a funder
 
 [My Funding Central](https://www.myfundingcentral.co.uk/)
+
+
 [Funds Online](https://fundsonline.org.uk/)
+
+
 [UK Community Foundations](https://www.ukcommunityfoundations.org/)
+
+
 [The National Lottery Community Fund](https://www.tnlcommunityfund.org.uk/)
+
+
 [The National Lottery Heritage Fund](https://www.heritagefund.org.uk/)
+
+
 [The People’s Postcode Lottery](https://www.postcodetrust.org.uk/)
+
+
 [Comic Relief](https://www.comicrelief.com/funding/funding-opportunities)
+
+
 [ENTRUST – Landfill Communities Fund](https://www.entrust.org.uk/landfill-community-fund/finding-funding/funder-search/)
+
+
 [Community Shares Co-operatives](https://www.uk.coop/support-your-co-op/community-shares)
+
+
 Housing associations around the UK often fund local projects
+
+
 Major banks all have various funds available for local and national projects
+
+
 Crowdfunding might also be a choice for smaller projects
 
 ## For more detailed information, see:
 
 The National Federation of Parks and Green Spaces guide, [pages 9 to 12.](https://natfedparks.org.uk/wp-content/uploads/2020/02/PAGCE-events-workshop-docs-all-collated.pdf)
-The National Council for Voluntary Organisations has lots of help. Go [here](https://beta.ncvo.org.uk/help-and-guidance/funding-income/all-about-grants/) for six articles about grants. For advice about a business plan, and some downloadable templates, see [here.](https://knowhow.ncvo.org.uk/tools-resources/business-plan-template) And how to explain why your project is important is [here.](https://knowhow.ncvo.org.uk/how-to/how-to-explain-why-your-project-is-needed-in-300-words)
+
+
+The National Council for Voluntary Organisations has lots of help. Go [here](https://beta.ncvo.org.uk/help-and-guidance/funding-income/all-about-grants/) for six articles about grants.
+
+For advice about a business plan, and some downloadable templates, see [here.](https://knowhow.ncvo.org.uk/tools-resources/business-plan-template) 
+
+And how to explain why your project is important is [here.](https://knowhow.ncvo.org.uk/how-to/how-to-explain-why-your-project-is-needed-in-300-words)
