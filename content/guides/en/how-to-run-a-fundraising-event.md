@@ -8,8 +8,7 @@ category: admin-and-info
 This advice is for you if you are planning a one-off event to raise money. If you want to apply for funding, see our other resources.
 
 
-There are many different events you can do to raise money. There are no specific rules around things like Charity Cake/Bake Sales. However, food hygiene is very important, and you can find easy-to-read information on the Food Standards website [here.]
-(https://www.food.gov.uk/business-guidance/food-hygiene-for-your-business) Remember to think about food allergies and label any food if it has nuts or other things that could make some people ill.
+There are many different events you can do to raise money. There are no specific rules around things like Charity Cake/Bake Sales. However, food hygiene is very important, and you can find easy-to-read information on the Food Standards website [here.](https://www.food.gov.uk/business-guidance/food-hygiene-for-your-business) Remember to think about food allergies and label any food if it has nuts or other things that could make some people ill.
 
 
 As well as cake sales, cake parties, community picnics and coffee mornings, there are lots of other things you could do. Here are some ideas to bring people together:
