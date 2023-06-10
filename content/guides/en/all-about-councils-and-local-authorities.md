@@ -7,7 +7,7 @@ image:
   credit: Photo copyright Autumn Barlow/The Wildlife Trusts 2023
 video:
   src: pZDv-ri2GOs
-  title: About Councils and Local Authorities. A Nextdoor Nature Video.
+  title: "About Councils and Local Authorities: A Nextdoor Nature Video."
 category: admin-and-info
 ---
 ## What do councils and Local Authorities do?
