@@ -76,21 +76,51 @@ Pan fydd gennych syniad da o'ch prosiect a'ch canlyniadau, gallwch ysgrifennu ei
 ## Dod o hyd i gyllidwr
 
 [My Funding Central](https://www.myfundingcentral.co.uk/)
+
+
 [Funds Online](https://fundsonline.org.uk/)
+
+
 [UK Community Foundations](https://www.ukcommunityfoundations.org/)
+
+
 [Cronfa Gymunedol y Loteri Genedlaethol](https://www.tnlcommunityfund.org.uk/)
+
+
 [Cronfa Dreftadaeth y Loteri Genedlaethol](https://www.heritagefund.org.uk/)
+
+
 [Loteri Cod Post y Bobl](https://www.postcodetrust.org.uk/)
+
+
 [Comic Relief](https://www.comicrelief.com/funding/funding-opportunities)
+
+
 [ENTRUST – Cronfa Cymunedau Tirlenwi](https://www.entrust.org.uk/landfill-community-fund/finding-funding/funder-search/)
+
+
 [Cydweithfeydd Community Shares](https://www.uk.coop/support-your-co-op/community-shares)
+
+
 Mae cymdeithasau tai ledled y DU yn cyllido prosiectau lleol yn aml
+
+
 Mae gan fanciau mawr i gyd gronfeydd amrywiol ar gael ar gyfer prosiectau lleol a chenedlaethol
+
+
 Gallai cyllido torfol fod yn ddewis ar gyfer prosiectau llai hefyd
+
+
 
 ## Am wybodaeth fanylach, edrychwch ar:
 
 Canllaw y Ffederasiwn Cenedlaethol o Barciau a Gofod Gwyrdd, [tudalennau 9 i 12](https://natfedparks.org.uk/wp-content/uploads/2020/02/PAGCE-events-workshop-docs-all-collated.pdf)
-Mae gan y Cyngor Cenedlaethol ar gyfer Mudiadau Gwirfoddol lawer o help. Ewch [yma](https://beta.ncvo.org.uk/help-and-guidance/funding-income/all-about-grants/) am chwe erthygl am grantiau. Am gyngor am gynllun busnes, a rhai templedi i’w lawrlwytho, edrychwch [yma.](https://knowhow.ncvo.org.uk/tools-resources/business-plan-template) Ac mae sut i egluro pam mae eich prosiect yn bwysig ar gael [yma.](https://knowhow.ncvo.org.uk/how-to/how-to-explain-why-your-project-is-needed-in-300-words)
+
+
+Mae gan y Cyngor Cenedlaethol ar gyfer Mudiadau Gwirfoddol lawer o help. Ewch [yma](https://beta.ncvo.org.uk/help-and-guidance/funding-income/all-about-grants/) am chwe erthygl am grantiau. 
+
+Am gyngor am gynllun busnes, a rhai templedi i’w lawrlwytho, edrychwch [yma.](https://knowhow.ncvo.org.uk/tools-resources/business-plan-template) 
+
+Ac mae sut i egluro pam mae eich prosiect yn bwysig ar gael [yma.](https://knowhow.ncvo.org.uk/how-to/how-to-explain-why-your-project-is-needed-in-300-words)
 
 
