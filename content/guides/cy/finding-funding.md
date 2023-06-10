@@ -7,11 +7,12 @@ image:
   credit: Photo copyright Autumn Barlow/The Wildlife Trusts 2023
   src: /images/uploads/finding-funding_orig-2-.jpg
 video:
-  src: https://youtu.be/b32JWimgF2w
+  src: b32JWimgF2w
   title: Dod o Hyd i Gyllid. Fideo Natur Drws Nesaf.
 relatedGuides:
   - Bank Accounts For Groups
   - How to Apply for Funding
+category: admin-and-info
 ---
 ## Cyngor cyffredinol am gyllid
 

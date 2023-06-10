@@ -3,6 +3,7 @@ title: "Sut i Gynnal Digwyddiad Codi Arian "
 summary: Rhestr gyflym o syniadau ac awgrymiadau ar gyfer cynnal digwyddiad codi arian
 relatedGuides:
   - Insurance for Local Groups
+category: admin-and-info
 ---
 Mae'r cyngor yma ar eich cyfer chi os ydych chi'n cynllunio digwyddiad untro i godi arian. Os ydych chi eisiau gwneud cais am arian, edrychwch ar ein hadnoddau eraill.
 Mae llawer o wahanol ddigwyddiadau y gallwch chi eu cynnal i godi arian. Nid oes unrhyw reolau penodol yn ymwneud â phethau fel Arwerthiant Cacennau / Pobi Elusennol. Fodd bynnag, mae hylendid bwyd yn bwysig iawn, a gallwch ddod o hyd i wybodaeth hawdd ei darllen ar y wefan Safonau Bwyd yma: (https://www.food.gov.uk/business-guidance/food-hygiene-for-your-business) Cofiwch feddwl am alergeddau bwyd a labelwch unrhyw fwyd os oes ganddo gnau ynddo, neu bethau eraill a allai wneud rhai pobl yn sâl.
@@ -17,7 +18,7 @@ Yn ogystal ag arwerthiant cacennau, partïon cacennau, picnics cymunedol a borea
 * Raffl
 * Taith gerdded yn ystod y nos
 * Bingo
-* Gwisgo i fyny 
+* Gwisgo i fyny
 * Taith gerdded corws y wawr
 * Cysgu gwyllt
 
@@ -25,7 +26,7 @@ Gallwch werthu pethau:
 
 * Arwerthiant llyfrau
 * Arwerthiant celf a chrefft
-* Arwerthiant dewch a phrynu 
+* Arwerthiant dewch a phrynu
 * Ocsiwn
 
 Gall pobl gael eu noddi i wneud pethau fel:
@@ -36,11 +37,11 @@ Gall pobl gael eu noddi i wneud pethau fel:
 
 Neu gallwch fod yn actif! Rhowch gynnig ar y rhain:
 
-* Cwrs rhwystro 
-* Deifio o’r awyr 
+* Cwrs rhwystro
+* Deifio o’r awyr
 * Rhedeg marathon
 * Gemau Olympaidd Mini
-* Abseilu 
+* Abseilu
 * Ras hwyl
 * Gêm bêl droed
 * Dawns ysgubor

@@ -6,8 +6,9 @@ image:
   alt: Local maps and street atlases
   credit: Photo copyright Autumn Barlow/The Wildlife Trusts 2023
 video:
-  src: https://youtu.be/pZDv-ri2GOs
+  src: pZDv-ri2GOs
   title: Beth mae cynghorau ac awdurdodau lleol yn ei wneud? Fideo Natur Drws Nesaf.
+category: admin-and-info
 ---
 ## A pham ddylwn i boeni?
 

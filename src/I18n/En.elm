@@ -159,3 +159,21 @@ enStrings key =
 
         WhoSubHeading ->
             "Who"
+
+        ---
+        -- Category things
+        ---
+        CategoryAdminAndInfoName ->
+            "Community Groups - Admin and Information"
+
+        CategoryPublicityEventsName ->
+            "Media, Publicity and Events"
+
+        CategoryWorkingWithPeopleName ->
+            "Working with People"
+
+        CategoryWorkingWithAuthoritiesName ->
+            "Working with the Authorities"
+
+        InCategory ->
+            "[cCc] In category "

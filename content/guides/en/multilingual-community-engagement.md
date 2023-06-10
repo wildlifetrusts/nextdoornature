@@ -6,8 +6,9 @@ image:
   alt: A stack of small dictionaries in other languages
   credit: Photo copyright Autumn Barlow/The Wildlife Trusts 2023
 video:
-  src: https://youtu.be/Tk7InQgM7PE
+  src: Tk7InQgM7PE
   title: Working with many languages. A Nextdoor Nature Video.
+category: admin-and-info
 ---
 ## Identify the need
 

@@ -62,5 +62,23 @@ cyStrings key =
         SearchPlaceholder ->
             "[cCc] Cy label"
 
+        ---
+        -- Category things
+        ---
+        CategoryAdminAndInfoName ->
+            "Grwpiau Cymunedol - Gweinyddol a Gwybodaeth"
+
+        CategoryPublicityEventsName ->
+            "Cyfryngau, Cyhoeddusrwydd a Digwyddiadau"
+
+        CategoryWorkingWithPeopleName ->
+            "Gweithio gyda Phobl"
+
+        CategoryWorkingWithAuthoritiesName ->
+            "Gweithio gyda'r Awdurdodau"
+
+        InCategory ->
+            "[cCc] In category CY"
+
         _ ->
             "[cCc] [fFf] to reminder to add all Welsh Keys back"

@@ -7,9 +7,10 @@ image:
   credit: Photo copyright Autumn Barlow/The Wildlife Trusts 2023
 relatedGuides:
   - All About Councils and Local Authorities
+category: admin-and-info
 ---
 There is a member of parliament, or MP, for every area in the UK. Each area is called a ‘constituency.’ You can contact your MP by letter or by email.
-In **Scotland**, you will also have an MSP – Member of Scottish Parliament. There are 59 MPs in Scotland, and 129 MSPs. They are elected in separate elections. 
+In **Scotland**, you will also have an MSP – Member of Scottish Parliament. There are 59 MPs in Scotland, and 129 MSPs. They are elected in separate elections.
 In **Wales,** you will also have an MS - Member of the Senedd. There are 32 MPs in Wales, and 60 MSs.
 In **Northern Ireland**, you will also have an MLA - Member of the Legislative Assembly. There are 18 MPs in Northern Ireland, and 90 MLAs. At the time of writing, the Assembly is not sitting.
 Find out who your MP is with this online tool. Click the link [here.](https://members.parliament.uk/FindYourMP) Put your postcode in the first box, and click the blue button, ‘search.’
@@ -26,6 +27,6 @@ In the next paragraph, you must tell them what you want them to do. Some ideas a
 * You want them to come to an event.
 
 To speak directly to your MP, you can arrange a meeting. All MPs hold regular ‘surgeries’ which is when they are in your area and can speak to people. You will need to write a letter or email their office to find out when they will be free. Or you can telephone their office and speak to someone who works there.
-When you ask for a meeting, explain what you want to talk about. 
+When you ask for a meeting, explain what you want to talk about.
 You can take some notes with you if you are worried about forgetting what you want to say.
 Don’t worry if you’re not an expert. Be passionate about your cause. And don’t forget to take a photo and put it on social media! It can encourage other people to get involved and support you.

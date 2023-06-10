@@ -2,6 +2,7 @@
 title: Cynghorion Ymarferol ar gyfer Cyfathrebu Traws-ddiwylliannol
 summary: " Syniadau defnyddiol pan fyddwch chi'n gweithio gyda phobl o
   gefndiroedd diwylliannol amrywiol."
+category: admin-and-info
 ---
 Gall gweithio gyda phobl o gefndiroedd diwylliannol gwahanol fod yn ddiddorol, yn werth chweil ac yn heriol. Edrychwch ar yr awgrymiadau hyn. Nid yw’n rhestr gyflawn, ond gobeithio y bydd yn rhoi man cychwyn i chi.
 
@@ -39,7 +40,7 @@ Mae rhai pethau pwysig am iaith y corff hefyd. Mae'n eithaf hysbys, mewn cymuned
 
 
 
-Os ydych chi'n gwybod am brif gefndiroedd diwylliannol y grŵp(iau) rydych chi'n mynd i ddelio â nhw, gwnewch ychydig o **chwilio ar-lein** cyn i chi gwrdd. Fodd bynnag, peidiwch â mynd yn rhy gaeth i’r hyn sy'n “iawn” a beth sy'n “anghywir”. Yn lle hynny, mae'n llawer gwell i berthnasoedd personol os ydych chi'n mynd i mewn a gwrando. Arsylwi. Gofyn cwestiynau. Fel arfer bydd cwestiwn wedi'i eirio'n barchus, ac yn cael ei ofyn mewn ysbryd ymholi dilys, yn cael ei groesawu. 
+Os ydych chi'n gwybod am brif gefndiroedd diwylliannol y grŵp(iau) rydych chi'n mynd i ddelio â nhw, gwnewch ychydig o **chwilio ar-lein** cyn i chi gwrdd. Fodd bynnag, peidiwch â mynd yn rhy gaeth i’r hyn sy'n “iawn” a beth sy'n “anghywir”. Yn lle hynny, mae'n llawer gwell i berthnasoedd personol os ydych chi'n mynd i mewn a gwrando. Arsylwi. Gofyn cwestiynau. Fel arfer bydd cwestiwn wedi'i eirio'n barchus, ac yn cael ei ofyn mewn ysbryd ymholi dilys, yn cael ei groesawu.
 
 
 

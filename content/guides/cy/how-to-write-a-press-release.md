@@ -5,6 +5,7 @@ image:
   src: /images/uploads/press-release_orig-2-.jpg
   alt: A newspaper and some green leaves
   credit: Photo copyright Autumn Barlow/The Wildlife Trusts 2023
+category: admin-and-info
 ---
 ## Sut mae’n edrych:
 
@@ -17,7 +18,7 @@ Cysylltwch y cynnwys ag unrhyw luniau, a dylech roi capsiynau clir ar eu cyfer, 
 Peidiwch â bod ofn pwyntiau bwled. Gallant gyfleu eich negeseuon allweddol yn effeithiol iawn.
 Os yw eich prosiect neu ddigwyddiad wedi cael cyllid, peidiwch ag anghofio sôn am y cyllidwyr neu’r noddwyr hynny! Gallai hyd yn oed fod yn amod ar y cyllid.
 
-## Beth mae’n ei ddweud: 
+## Beth mae’n ei ddweud:
 
 Sut mae hyn yn newyddion? Beth sy'n unigryw am y stori hon rydych chi'n ei hadrodd, a pham nawr? Ystyriwch:
 
@@ -37,7 +38,7 @@ EI BRAWFDDARLLEN! A chael rhywun arall i'w wirio, hefyd. Nid yw hyn yn ymwneud �
 
 **Dywed Bobi Esiampl, y Cyfarwyddwr Esiamplau: “Yn bersonol, rydw i’n meddwl bod hon yn esiampl wych.”**
 
-Cynlluniwch ymlaen! Gallwch chi osod embargo ar ddatganiad i'r wasg os ydych chi'n torri stori ar ddiwrnod penodol. Nodwch yn glir ar dop e-bost y datganiad i'r wasg os yw hyn yn wir. Gallech chi nodi’r canlynol: 
+Cynlluniwch ymlaen! Gallwch chi osod embargo ar ddatganiad i'r wasg os ydych chi'n torri stori ar ddiwrnod penodol. Nodwch yn glir ar dop e-bost y datganiad i'r wasg os yw hyn yn wir. Gallech chi nodi’r canlynol:
 
 **Embargo: ddim i’w gyhoeddi na’i ddarlledu cyn 00.01 dydd Llun 25 Gorffennaf 2022**
 
