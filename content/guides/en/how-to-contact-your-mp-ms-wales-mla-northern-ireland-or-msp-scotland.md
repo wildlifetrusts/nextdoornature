@@ -17,8 +17,7 @@ In **Wales,** you will also have an MS - Member of the Senedd. There are 32 MPs 
 
 In **Northern Ireland**, you will also have an MLA - Member of the Legislative Assembly. There are 18 MPs in Northern Ireland, and 90 MLAs. At the time of writing, the Assembly is not sitting.
 
-Find out who your MP is with this online tool. Click the link [here.]
-(https://members.parliament.uk/FindYourMP) Put your postcode in the first box, and click the blue button, ‘search.’
+Find out who your MP is with this online tool. Click the link [here.](https://members.parliament.uk/FindYourMP) Put your postcode in the first box, and click the blue button, ‘search.’
 
 The result will be your MP’s name. Click on that and you will find their email address and their contact address for letters. It will also tell you what to call them.
 
