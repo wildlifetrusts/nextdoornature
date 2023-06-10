@@ -6,7 +6,7 @@ image:
   alt: An open planner with the words "find funding" circled
   credit: Photo copyright Autumn Barlow/The Wildlife Trusts 2023
 video:
-  src: https://www.youtube.com/embed/b32JWimgF2w
+  src: b32JWimgF2w
   title: Finding Funding. A Nextdoor Nature Video.
 relatedGuides:
   - Bank Accounts For Groups
