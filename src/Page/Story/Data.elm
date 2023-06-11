@@ -20,7 +20,6 @@ type alias Story =
     , maybeGroupOrIndividual : Maybe String
     , images : List Image
     , fullTextMarkdown : String
-    , relatedGuideList : List Page.Shared.Data.Teaser
     }
 
 
@@ -61,11 +60,6 @@ storyDictDecoder =
                 (Json.Decode.field "images" (Json.Decode.list imageDecoder))
             |> Json.Decode.Extra.andMap
                 (Json.Decode.field "content" Json.Decode.string |> Json.Decode.Extra.withDefault "")
-            |> Json.Decode.Extra.andMap
-                (Json.Decode.field "relatedGuideList"
-                    (Json.Decode.list Page.Shared.Data.guideTeaserDecoder)
-                    |> Json.Decode.Extra.withDefault []
-                )
         )
 
 

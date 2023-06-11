@@ -148,7 +148,7 @@ viewRelatedGuideTeasers language guideTitleList allGuidesSlugTitleList =
             , ul [ css [ listStyleNone ] ]
                 (List.map
                     (\item ->
-                        li [] [ a [ href item.slug ] [ text (titleFromLanguage language item) ] ]
+                        li [] [ a [ href (Route.toString (Guide item.slug)) ] [ text (titleFromLanguage language item) ] ]
                     )
                     relatedGuideItems
                 )

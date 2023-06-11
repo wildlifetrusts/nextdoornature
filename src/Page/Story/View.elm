@@ -1,12 +1,12 @@
 module Page.Story.View exposing (view)
 
 import Css exposing (Style, batch, margin3, pct, rem, width)
-import Html.Styled exposing (Html, div, h3, img, p, text)
+import Html.Styled exposing (Html, div, h2, h3, img, li, p, text, ul)
 import Html.Styled.Attributes exposing (alt, css, src)
 import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (Language, translate)
 import Message exposing (Msg)
-import Page.Guides.View
+import Page.Shared.Data
 import Page.Story.Data
 import Theme.Global exposing (centerContent, contentWrapper, featureImageStyle, pageColumnStyle, primaryHeader, topTwoColumnsWrapperStyle)
 import Theme.Markdown exposing (markdownToHtml)
@@ -49,7 +49,6 @@ view language story =
                 , div [ css [ pageColumnStyle ] ]
                     (markdownToHtml story.fullTextMarkdown)
                 ]
-            , viewColumnWrapper (Page.Guides.View.viewTeaserList False Page.Guides.View.homePageLayoutStyle story.relatedGuideList)
             ]
         ]
 

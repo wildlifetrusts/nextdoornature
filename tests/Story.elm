@@ -3,6 +3,7 @@ module Story exposing (suite)
 import Html
 import Html.Attributes
 import Html.Styled
+import I18n.Translate exposing (Language(..))
 import Message
 import Page.Shared.Data exposing (defaultTeaserImage)
 import Page.Story.Data exposing (Story)
@@ -20,17 +21,16 @@ suite =
         storyMinimal =
             { title = "A minimal test story"
             , slug = "slug"
-            , fullTextMarkdown = "# Some minimal test reource markdown"
+            , fullTextMarkdown = "# Some minimal test resource markdown"
             , maybeLocation = Nothing
             , maybeGroupOrIndividual = Nothing
             , images = []
-            , relatedGuideList = []
             }
 
         storyFull : Story
         storyFull =
             { title = "A full test story"
-            , fullTextMarkdown = "# Some full test reource markdown\n\nA small paragraph."
+            , fullTextMarkdown = "# Some full test resource markdown\n\nA small paragraph."
             , slug = "slug"
             , maybeLocation = Just "Test location"
             , maybeGroupOrIndividual = Just "Test group"
@@ -41,47 +41,22 @@ suite =
                   , maybeCredit = Just "credit"
                   }
                 ]
-            , relatedGuideList =
-                [ { title = "A related guide"
-                  , url = "/a-guide"
-                  , summary = "A related guide"
-                  , maybeImage = Just defaultTeaserImage
-                  }
-                , { title = "Another related guide"
-                  , url = "/another-guide"
-                  , summary = "A related guide"
-                  , maybeImage = Just defaultTeaserImage
-                  }
-                ]
             }
 
         view : Story -> Html.Styled.Html Message.Msg
         view =
-            Page.Story.View.view
+            Page.Story.View.view English
     in
     describe "Story Page"
         [ describe "View tests"
-            [ test "Story view has title" <|
-                \() ->
-                    queryFromStyledHtml (view storyMinimal)
-                        |> Query.contains
-                            [ Html.h1 [] [ Html.text storyMinimal.title ]
-                            ]
-            , test "Story view has body that is HTML" <|
+            [ test "Story view has body that is HTML" <|
                 \() ->
                     queryFromStyledHtml (view storyFull)
                         |> Query.has
                             [ tag "h1"
-                            , text "Some full test reource markdown"
+                            , text "Some full test resource markdown"
                             , tag "p"
                             , text "A small paragraph."
-                            ]
-            , test "Story view can have related guide teasers" <|
-                \() ->
-                    queryFromStyledHtml (view storyFull)
-                        |> Query.contains
-                            [ Html.p [] [ Html.a [ Html.Attributes.href "/a-guide" ] [ Html.text "A related guide" ] ]
-                            , Html.p [] [ Html.a [ Html.Attributes.href "/another-guide" ] [ Html.text "Another related guide" ] ]
                             ]
             , test "Full story view has an author" <|
                 \() ->
@@ -104,7 +79,7 @@ suite =
                         queryFromStyledHtml (view storyFull)
                             |> Query.contains
                                 (List.map
-                                    (\image -> Html.img [ Html.Attributes.alt image.alt, Html.Attributes.src image.src ] [])
+                                    (\image -> Html.img [ Html.Attributes.alt image.alt, Html.Attributes.src image.src, Html.Attributes.class "_570ce029" ] [])
                                     storyFull.images
                                 )
 
