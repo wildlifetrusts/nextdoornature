@@ -181,3 +181,11 @@ enStrings key =
 
         SubmitStoryP2 ->
             "[cCc] By submitting  a case study Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni esse sequi iste eligendi nobis, pariatur repellat itaque voluptatum ab ad eos animi, asperiores dolores repellendus? Tenetur, minima! Fugiat, soluta corrupti?"
+        SubmitFormSrc ->
+            "https://teamwildertest.formstack.com/forms/teamwilder_test"
+
+        SubmitFormTitle ->
+            "teamwilder_test"
+
+        SubmitFormHeading ->
+            "Your details"

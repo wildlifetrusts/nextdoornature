@@ -58,3 +58,12 @@ type Key
     | SubmitStoryHeading
     | SubmitStoryP1
     | SubmitStoryP2
+      {-
+         from formstack iframe embed code
+      -}
+    | SubmitFormSrc
+      {-
+         from formstack iframe embed code
+      -}
+    | SubmitFormTitle
+    | SubmitFormHeading

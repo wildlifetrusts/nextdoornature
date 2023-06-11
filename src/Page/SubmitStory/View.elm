@@ -57,32 +57,18 @@ description p1 p2 =
 form : Model -> Html Msg
 form model =
     let
-        formstack =
-            case model.language of
-                English ->
-                    iframe
-                        [ Attr.src "https://teamwildertest.formstack.com/forms/teamwilder_test"
-                        , Attr.title "teamwilder_test"
-
-                        -- these attributes are modified from those supplied by formstack
-                        , Attr.attribute "width" "100%"
-                        , Attr.height 1200
-                        ]
-                        []
-
-                Welsh ->
-                    -- this would need to be a separate welsh form
-                    iframe
-                        [ Attr.src "https://teamwildertest.formstack.com/forms/teamwilder_test"
-                        , Attr.title "teamwilder_test"
-                        , Attr.width 600
-                        , Attr.height 1200
-                        ]
-                        []
+        t : Key -> String
+        t =
+            translate model.language
     in
     div [ css [ batch [ width (pct 100) ], flexChild ] ]
-        [ h2 [] [ text "your details" ]
-        , formstack
+        [ h2 [] [ text (t SubmitFormHeading) ]
+        , iframe
+            [ Attr.src (t SubmitFormSrc)
+            , Attr.title (t SubmitFormTitle)
+            , css [ border (rem 0), width (pct 100), height (rem 77) ]
+            ]
+            []
         ]
 
 
