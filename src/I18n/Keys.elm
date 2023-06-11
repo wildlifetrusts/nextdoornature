@@ -39,6 +39,9 @@ type Key
     | WelcomeP3
     | GuideHighlightsSubtitle
     | StoryHighlightsSubtitle
+    | CallForStoryHeading
+    | CallForStoryP
+    | CallForStoryLinkText
       --- Guide Page
     | RelatedGuidesHeading
     | RelatedStoriesHeading

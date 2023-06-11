@@ -124,6 +124,15 @@ enStrings key =
         StoryHighlightsSubtitle ->
             "Story highlights"
 
+        CallForStoryHeading ->
+            "Share your story"
+
+        CallForStoryP ->
+            "[cCc] Have done something great for nature in your community? We would love to share your experience to help others, including any challenges you faced or hurdles you had to overcome."
+
+        CallForStoryLinkText ->
+            "Send us your story"
+
         ---
         -- Guide Page
         ---

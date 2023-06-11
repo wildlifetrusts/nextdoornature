@@ -1,16 +1,16 @@
 module Page.Index exposing (view)
 
-import Css exposing (Style, batch, column, flexDirection, marginBottom, property, rem, row)
-import Html.Styled exposing (Html, div, h1, h2, p, text)
-import Html.Styled.Attributes exposing (css)
+import Css exposing (Style, backgroundColor, backgroundImage, backgroundPosition, backgroundRepeat, batch, color, column, flexDirection, marginBottom, noRepeat, padding, paddingRight, pct, property, rem, right, row, url, width)
+import Html.Styled exposing (Html, a, div, h1, h2, p, text)
+import Html.Styled.Attributes exposing (css, href)
 import I18n.Keys exposing (Key(..))
-import I18n.Translate exposing (translate)
+import I18n.Translate exposing (Language, translate)
 import Message exposing (Msg)
 import Page.Guides.Data
 import Page.Guides.View
 import Shared exposing (Model, shuffleList)
 import Theme.FluidScale
-import Theme.Global exposing (centerContent, contentWrapper, pageColumnBlockStyle, pageColumnStyle, primaryHeader, topTwoColumnsWrapperStyle, withMediaMobileUp, withMediaTabletPortraitUp)
+import Theme.Global exposing (centerContent, contentWrapper, pageColumnBlockStyle, pageColumnStyle, primaryHeader, purple, topTwoColumnsWrapperStyle, white, withMediaMobileUp, withMediaTabletPortraitUp)
 
 
 view : Model -> Html Msg
@@ -49,6 +49,7 @@ view model =
                     , ExploreGuidesListPlaceholder
                     , ExploreGuidesListPlaceholder
                     ]
+                    ++ [ viewCallForStory model.language ]
                 )
             ]
         ]
@@ -57,6 +58,20 @@ view model =
 viewTextColumn : (Key -> String) -> List Key -> List (Html msg)
 viewTextColumn t paragraphs =
     List.map (\para -> p [ css [ pageColumnBlockStyle ] ] [ text (t para) ]) paragraphs
+
+
+viewCallForStory : Language -> Html Msg
+viewCallForStory language =
+    let
+        t : Key -> String
+        t =
+            translate language
+    in
+    div [ css [ callForStoryStyle, Theme.Global.roundedCornerStyle ] ]
+        [ h2 [ css [ callForStoryHeadingStyle ] ] [ text (t CallForStoryHeading) ]
+        , p [] [ text (t CallForStoryP) ]
+        , a [ href "submit story Route [cCc]", css [ callForStoryLinkStyle ] ] [ text (t CallForStoryLinkText) ]
+        ]
 
 
 teaserSubtitleStyle : Style
@@ -74,4 +89,30 @@ teaserColumnStyle =
         , property "gap" "1rem"
         , withMediaTabletPortraitUp [ flexDirection column ]
         , withMediaMobileUp [ flexDirection row ]
+        ]
+
+
+callForStoryStyle : Style
+callForStoryStyle =
+    batch
+        [ backgroundColor purple
+        , color white
+        , padding (rem 1)
+        , width (pct 100)
+        ]
+
+
+callForStoryHeadingStyle : Style
+callForStoryHeadingStyle =
+    color white
+
+
+callForStoryLinkStyle : Style
+callForStoryLinkStyle =
+    batch
+        [ backgroundImage (url "/images/arrow--white.svg")
+        , backgroundPosition right
+        , backgroundRepeat noRepeat
+        , color white
+        , paddingRight (rem 1.5)
         ]
