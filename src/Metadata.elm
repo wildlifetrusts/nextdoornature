@@ -3,6 +3,9 @@ port module Metadata exposing (PageMetadata, metadataFromPage, setMetadata)
 import Dict
 import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (Language, dictFromLanguage, translate)
+import Page.Data
+import Page.Guide.Data
+import Page.Story.Data
 import Route exposing (Route(..))
 import Shared exposing (Content)
 
@@ -78,14 +81,7 @@ metadataFromPage page language content =
 
 guideMetadataFromSlug :
     String
-    ->
-        Dict.Dict
-            String
-            { a
-                | summary : String
-                , title : String
-                , maybeImage : Maybe { b | src : String }
-            }
+    -> Dict.Dict String Page.Guide.Data.Guide
     -> Maybe PageMetadata
 guideMetadataFromSlug slug contentDict =
     case Dict.get slug contentDict of
@@ -102,14 +98,7 @@ guideMetadataFromSlug slug contentDict =
 
 storyMetadataFromSlug :
     String
-    ->
-        Dict.Dict
-            String
-            { a
-                | title : String
-                , fullTextMarkdown : String
-                , images : List { b | src : String }
-            }
+    -> Dict.Dict String Page.Story.Data.Story
     -> Maybe PageMetadata
 storyMetadataFromSlug slug contentDict =
     case Dict.get slug contentDict of
@@ -126,13 +115,7 @@ storyMetadataFromSlug slug contentDict =
 
 pageMetadataFromSlug :
     String
-    ->
-        Dict.Dict
-            String
-            { a
-                | title : String
-                , fullTextMarkdown : String
-            }
+    -> Dict.Dict String Page.Data.Page
     -> Maybe PageMetadata
 pageMetadataFromSlug slug contentDict =
     case Dict.get slug contentDict of
