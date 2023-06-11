@@ -10,3 +10,8 @@ npm-debug.log
 
 # build files
 dist
+
+# environment variables
+.env
+.env.*
+!.env.example
