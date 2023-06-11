@@ -96,7 +96,7 @@ submitImgGrid : Style
 submitImgGrid =
     batch
         [ property "display" "grid"
-        , property "grid-template-columns" "repeat(auto-fit, minmax(280px, 1fr))"
+        , property "grid-template-columns" "repeat(auto-fit, minmax(290px, 1fr))"
         , property "gap" "1rem"
         ]
 
