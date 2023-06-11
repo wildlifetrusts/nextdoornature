@@ -5,7 +5,7 @@ import Browser.Dom
 import Browser.Navigation
 import CookieBanner exposing (saveConsent)
 import GoogleAnalytics
-import Html.Styled exposing (Html, div, text, toUnstyled)
+import Html.Styled exposing (Html, toUnstyled)
 import Http
 import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (Language(..), translate)
@@ -18,6 +18,7 @@ import Page.Guides.Data
 import Page.Guides.View
 import Page.Index
 import Page.NotFound exposing (resourceNotFound)
+import Page.Shared.Data
 import Page.Story.Data
 import Page.Story.View
 import Page.View
@@ -165,6 +166,7 @@ update msg model =
             case result of
                 Ok list ->
                     let
+                        actions : List Page.Shared.Data.Teaser
                         actions =
                             List.sortBy .title list
                     in

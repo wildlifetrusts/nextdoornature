@@ -1,6 +1,6 @@
-module Theme.Global exposing (borderWrapper, centerContent, contentWrapper, featureImageStyle, globalStyles, lightTeal, listStyleNone, pageColumnBlockStyle, pageColumnStyle, primaryHeader, purple, roundedCornerStyle, screenReaderOnly, teal, teaserContainerStyle, teaserImageStyle, teaserRowStyle, teasersContainerStyle, topTwoColumnsWrapperStyle, white, withMediaDesktopUp, withMediaMobileUp, withMediaTabletLandscapeUp, withMediaTabletPortraitUp)
+module Theme.Global exposing (borderWrapper, centerContent, contentWrapper, featureImageStyle, globalStyles, lightTeal, listStyleNone, pageColumnBlockStyle, pageColumnStyle, primaryHeader, purple, screenReaderOnly, teal, teaserContainerStyle, teaserImageStyle, teaserRowStyle, topTwoColumnsWrapperStyle, white, withMediaDesktopUp, withMediaMobileUp, withMediaTabletLandscapeUp, withMediaTabletPortraitUp)
 
-import Css exposing (Color, Style, absolute, alignItems, auto, backgroundImage, backgroundPosition, backgroundRepeat, backgroundSize, batch, border3, borderBottomRightRadius, borderRadius4, borderTopLeftRadius, borderTopRightRadius, boxSizing, center, color, column, contain, contentBox, cover, cursor, display, displayFlex, em, ex, flex, flex3, flexDirection, flexStart, flexWrap, fontFamilies, height, hex, hidden, inherit, inlineBlock, int, justifyContent, lastChild, left, listStyle, margin, margin2, margin3, marginBottom, marginLeft, marginRight, marginTop, maxWidth, minWidth, noRepeat, noWrap, none, overflow, padding, padding2, paddingLeft, pct, pointer, position, property, pseudoElement, px, rem, row, solid, spaceBetween, textDecoration, top, url, width, wrap, zero)
+import Css exposing (Color, Style, absolute, alignItems, auto, backgroundImage, backgroundPosition, backgroundRepeat, backgroundSize, batch, border3, borderBottomRightRadius, borderRadius4, borderTopLeftRadius, borderTopRightRadius, boxSizing, center, color, column, contain, contentBox, cover, cursor, display, displayFlex, em, ex, flex, flex3, flexDirection, flexStart, flexWrap, fontFamilies, height, hex, hidden, inherit, inlineBlock, int, justifyContent, lastChild, left, listStyle, margin, margin2, margin3, marginBottom, marginLeft, marginRight, marginTop, maxWidth, minWidth, noRepeat, noWrap, none, overflow, padding, padding2, paddingLeft, pct, pointer, position, property, pseudoElement, px, rem, row, solid, textDecoration, top, url, width, zero)
 import Css.Global exposing (global, typeSelector)
 import Css.Media as Media exposing (only, screen, withMedia)
 import Html.Styled exposing (Html, h1, text)
@@ -240,23 +240,6 @@ teaserRowStyle =
         , width inherit
         , lastChild
             [ marginBottom (rem 0)
-            ]
-        ]
-
-
-teasersContainerStyle : Style
-teasersContainerStyle =
-    batch
-        [ alignItems flexStart
-        , displayFlex
-        , flexDirection row
-        , flexWrap wrap
-        , justifyContent spaceBetween
-        , margin (rem 0)
-        , padding (rem 0)
-        , width auto
-        , withMediaTabletPortraitUp
-            [ justifyContent flexStart
             ]
         ]
 

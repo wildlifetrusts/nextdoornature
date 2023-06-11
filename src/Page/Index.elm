@@ -1,7 +1,7 @@
 module Page.Index exposing (view)
 
 import Css exposing (Style, batch, column, flexDirection, marginBottom, property, rem, row)
-import Html.Styled exposing (Html, div, h1, h2, p, text)
+import Html.Styled exposing (Html, div, h2, p, text)
 import Html.Styled.Attributes exposing (css)
 import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (translate)

@@ -1,6 +1,5 @@
 module Page.Guide.View exposing (view)
 
-import Browser.Navigation exposing (Key)
 import Css exposing (Style, auto, batch, borderBottom3, center, color, column, displayFlex, flexDirection, flexWrap, justifyContent, listStyle, margin2, marginBottom, marginTop, maxWidth, none, paddingLeft, px, rem, solid, wrap, zero)
 import Html.Styled exposing (Html, a, div, h2, img, li, p, text, ul)
 import Html.Styled.Attributes exposing (alt, css, href, src)
@@ -47,7 +46,7 @@ view language guide allGuides allStories =
 viewImageColumn : Language -> Page.Guide.Data.Guide -> List (Html Msg)
 viewImageColumn language guide =
     let
-        t : I18n.Keys.Key -> String
+        t : Key -> String
         t =
             translate language
 
@@ -60,7 +59,7 @@ viewImageColumn language guide =
                 Nothing ->
                     Page.Guide.Data.defaultGuideImage
 
-        categorySlugToKey : String -> I18n.Keys.Key
+        categorySlugToKey : String -> Key
         categorySlugToKey slug =
             case slug of
                 "admin-and-info" ->
@@ -140,7 +139,7 @@ viewRelatedGuideTeasers language guideTitleList allGuidesSlugTitleList =
     in
     if List.length relatedGuideItems > 0 then
         let
-            t : I18n.Keys.Key -> String
+            t : Key -> String
             t =
                 translate language
         in
@@ -200,7 +199,7 @@ viewRelatedStoryTeasers language storyTitleList allStoryTeasers =
     in
     if List.length relatedStoryItems > 0 then
         let
-            t : I18n.Keys.Key -> String
+            t : Key -> String
             t =
                 translate language
         in

@@ -1,8 +1,7 @@
 module Page.Story.Data exposing (Image, Stories, Story, StoryTeaser, allStoryTeaserList, defaultStoryImageSrc, storiesInPreferredLanguage, storyFromSlug, storyLanguageDictDecoder)
 
 import Dict exposing (Dict)
-import I18n.Keys exposing (Key(..))
-import I18n.Translate exposing (Language(..), translate)
+import I18n.Translate exposing (Language(..))
 import Json.Decode
 import Json.Decode.Extra
 import Page.Shared.Data
