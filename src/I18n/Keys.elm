@@ -25,6 +25,8 @@ type Key
     | FooterGuidesLink
     | FooterFindYourLocalTrustText
     | FooterFindYourLocalTrustLink
+    | FooterShareYoutStoryText
+    | FooterShareYoutStoryLink
     | FooterPrivacyPolicyText
     | FooterPrivacyPolicyLink
     | FooterSiteLogo

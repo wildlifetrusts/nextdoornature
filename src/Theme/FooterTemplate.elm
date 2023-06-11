@@ -89,6 +89,7 @@ footerNavigationContent =
     , { title = FooterTitleColumnC
       , links =
             [ { text = FooterFindYourLocalTrustText, href = FooterFindYourLocalTrustLink }
+            , { text = FooterShareYoutStoryText, href = FooterShareYoutStoryLink }
             ]
       }
     ]
