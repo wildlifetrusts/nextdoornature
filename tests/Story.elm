@@ -5,7 +5,6 @@ import Html.Attributes
 import Html.Styled
 import I18n.Translate exposing (Language(..))
 import Message
-import Page.Shared.Data exposing (defaultTeaserImage)
 import Page.Story.Data exposing (Story)
 import Page.Story.View
 import Test exposing (Test, describe, test)
@@ -49,7 +48,14 @@ suite =
     in
     describe "Story Page"
         [ describe "View tests"
-            [ test "Story view has body that is HTML" <|
+            [ test "Story view has a body" <|
+                \() ->
+                    queryFromStyledHtml (view storyMinimal)
+                        |> Query.has
+                            [ tag "h1"
+                            , text "A minimal test story"
+                            ]
+            , test "Story view has body converts markdown to HTML" <|
                 \() ->
                     queryFromStyledHtml (view storyFull)
                         |> Query.has

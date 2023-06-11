@@ -4,7 +4,6 @@ import Dict exposing (Dict)
 import I18n.Translate exposing (Language(..))
 import Json.Decode
 import Json.Decode.Extra
-import Page.Shared.Data
 
 
 type alias Stories =

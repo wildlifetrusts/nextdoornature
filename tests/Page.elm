@@ -1,6 +1,5 @@
 module Page exposing (suite)
 
-import Html
 import Html.Styled
 import Message
 import Page.Data

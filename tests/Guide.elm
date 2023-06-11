@@ -21,8 +21,8 @@ suite =
         guideMinimal =
             { title = "A minimal test guide"
             , slug = "a-guide"
-            , fullTextMarkdown = "# Some minimal test reource markdown"
-            , summary = "Some minimal test reource markdown"
+            , fullTextMarkdown = "## Some minimal test resource markdown"
+            , summary = "Some minimal test resource markdown"
             , maybeImage = Nothing
             , maybeVideo = Nothing
             , maybeAudio = Nothing
@@ -35,8 +35,8 @@ suite =
         guideFull =
             { title = "A full test guide"
             , slug = "a-guide"
-            , fullTextMarkdown = "## Some full test reource markdown\n\nA small paragraph."
-            , summary = "Some full test reource markdown"
+            , fullTextMarkdown = "## Some full test resource markdown\n\nA small paragraph."
+            , summary = "Some full test resource markdown"
             , maybeImage = Just defaultGuideImage
             , maybeVideo =
                 Just
@@ -111,10 +111,17 @@ suite =
         [ describe "View tests"
             [ test "Guide view has body that is HTML" <|
                 \() ->
+                    queryFromStyledHtml (view guideMinimal allGuideList allStoryList)
+                        |> Query.has
+                            [ tag "h2"
+                            , text "Some minimal test resource markdown"
+                            ]
+            , test "Guide view has body with h2 and p" <|
+                \() ->
                     queryFromStyledHtml (view guideFull allGuideList allStoryList)
                         |> Query.has
                             [ tag "h2"
-                            , text "Some full test reource markdown"
+                            , text "Some full test resource markdown"
                             , tag "p"
                             , text "A small paragraph."
                             ]
