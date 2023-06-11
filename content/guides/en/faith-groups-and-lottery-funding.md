@@ -8,25 +8,26 @@ image:
   credit: Image copyright Autumn Barlow/The Wildlife Trusts 2023
 relatedGuides:
   - "Finding Funding "
+category: admin-and-info
 ---
 
 
 
 There are many faiths within the UK and they take various positions on gambling and using the proceeds of gambling. However, it’s important to note that The National Lottery Community Fund and The National Lottery Heritage Fund don’t run The National Lottery itself. This separation means that some faith groups are able to accept funding from The National Lottery Heritage Fund even if they object to gambling.
- 
+
 A summary is presented below but please remember that individual groups, communities and congregations will be guided by varying principles and may have different opinions. Conversation is encouraged – do talk to people and listen to their concerns – but remember that we are not here to persuade anyone.
 
 
 
 
-## Islam 
+## Islam
 
 Many Muslim groups will refuse funding from The National Lottery. However, this is not a blanket ban, and there is room for negotiation. A group might wish to consult their local Iman. Some discussion among scholars:
 
 "The Lottery distributers operate on behalf of governmental departments and once the funds are received by the distributers they become the property of the state, albeit with prescribed avenues of expenditure. Whilst, the National Lottery is a form of gambling and without doubt prohibited in Islam, according to the principles of Imam Abu Hanifah, Imam Abu Yusuf and Imam Mohammed, non-Muslim are not obligated by Shariah in their own lands. Therefore, the appropriation by the state of the 28 pence from every £1 spent in the purchase of Lottery tickets is not subject to the dictates of Shariah. When this is then distributed in what are referred to as ‘good causes’ the prohibitive nature of the Lottery is not carried through to the award of Lottery funding. Therefore, it is not prohibited in principle for an Islamic institution to apply for Lottery funding…" See [here.](http://alqalam.org.uk/is-it-permissible-for-an-islamic-institite-to-apply-for-a-grant-from-the-big-lottery-fund/ "Alqalam.org")
- 
+
 "Notwithstanding, as the origin of the funding is the National Lottery it is arguably bereft of any spiritual dimension and as such should be avoided by religious institutions and should not be actively sought out. Only when it is unavoidable, such as if one is employed in a community project that is wholly or partially funded by the National Lottery and one has no control over how the role is funded, should it be tolerated." See [here.](http://alqalam.org.uk/is-it-permissible-for-an-islamic-institite-to-apply-for-a-grant-from-the-big-lottery-fund/ "Alqalam.org")
- 
+
 "If the only source of funds the Arts Council receives is from the Lottery or most of their funds, then it is not permissible for you to receive their funding unless you are a worthy charitable cause, and Allah knows best." See [here.](https://seekersguidance.org/uncategorized/can-i-accept-national-lottery-fund/ "Seekersguidance.org")
 
 
@@ -48,14 +49,14 @@ Methodist Churches have been allowed to apply for money from the National Lotter
 
 ## Baptist Churches
 
-In principle, Baptists are opposed to receiving money from the National Lottery. However, there might be some local acceptance, depending on the purposes of the money. 
+In principle, Baptists are opposed to receiving money from the National Lottery. However, there might be some local acceptance, depending on the purposes of the money.
 
 They say: "Please note that the Baptist Union of Great Britain is opposed to the National Lottery and therefore does not recommend that church groups apply for funds from this source and is unable to offer advice on how to do so. However it is important to note that Lottery proceeds are often applied to a number of locally administered grant bodies such as community chests / children’s fund etc."
 
 
 
 Find out more [here.](https://www.baptist.org.uk/Publisher/File.aspx?ID=111248&view=browser "Baptist.org.uk")
- 
+
 
 ## Other Christian Denominations
 

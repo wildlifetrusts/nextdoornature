@@ -50,3 +50,9 @@ type Key
       --- Story Page
     | WhoSubHeading
     | WhereSubHeading
+      --- Category things
+    | CategoryAdminAndInfoName
+    | CategoryPublicityEventsName
+    | CategoryWorkingWithPeopleName
+    | CategoryWorkingWithAuthoritiesName
+    | InCategory

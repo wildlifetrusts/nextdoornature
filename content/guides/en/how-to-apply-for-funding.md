@@ -10,6 +10,7 @@ relatedGuides:
   - "Finding Funding "
   - Bank Accounts For Groups
   - Faith Groups and Lottery Funding
+category: admin-and-info
 ---
 ## Preparation
 
@@ -46,11 +47,11 @@ Think about money. You will need to make a detailed budget. Tips:
 
 ## Find a funder
 
-First, you need to be clear about the outcomes of your project. Different funders have different priorities, and this means that they will fund your project only if you have the same goals as they do. 
+First, you need to be clear about the outcomes of your project. Different funders have different priorities, and this means that they will fund your project only if you have the same goals as they do.
 Funders need to be sure that your project really will make a difference. They don’t want to waste money. You must have evidence to show that your project is important. You can do this in a few ways:
 
 * You can ask people who are involved and record their answers. Use their quotes.
-* You can use statistical information (facts and numbers). Start with the websites for your local council, local authority, police or health authorities. Use reliable sources such as Government reports. 
+* You can use statistical information (facts and numbers). Start with the websites for your local council, local authority, police or health authorities. Use reliable sources such as Government reports.
 * You can use letters of support from other groups, local councillors, the police, and schools
 * You can show that you have a link with local and regional strategies or government projects
 
@@ -74,19 +75,47 @@ When you have a good idea of your project and your outcomes, you can write your 
 ## Find a funder
 
 [My Funding Central](https://www.myfundingcentral.co.uk/)
+
+
 [Funds Online](https://fundsonline.org.uk/)
+
+
 [UK Community Foundations](https://www.ukcommunityfoundations.org/)
+
+
 [The National Lottery Community Fund](https://www.tnlcommunityfund.org.uk/)
+
+
 [The National Lottery Heritage Fund](https://www.heritagefund.org.uk/)
+
+
 [The People’s Postcode Lottery](https://www.postcodetrust.org.uk/)
+
+
 [Comic Relief](https://www.comicrelief.com/funding/funding-opportunities)
+
+
 [ENTRUST – Landfill Communities Fund](https://www.entrust.org.uk/landfill-community-fund/finding-funding/funder-search/)
+
+
 [Community Shares Co-operatives](https://www.uk.coop/support-your-co-op/community-shares)
+
+
 Housing associations around the UK often fund local projects
+
+
 Major banks all have various funds available for local and national projects
+
+
 Crowdfunding might also be a choice for smaller projects
 
 ## For more detailed information, see:
 
 The National Federation of Parks and Green Spaces guide, [pages 9 to 12.](https://natfedparks.org.uk/wp-content/uploads/2020/02/PAGCE-events-workshop-docs-all-collated.pdf)
-The National Council for Voluntary Organisations has lots of help. Go [here](https://beta.ncvo.org.uk/help-and-guidance/funding-income/all-about-grants/) for six articles about grants. For advice about a business plan, and some downloadable templates, see [here.](https://knowhow.ncvo.org.uk/tools-resources/business-plan-template) And how to explain why your project is important is [here.](https://knowhow.ncvo.org.uk/how-to/how-to-explain-why-your-project-is-needed-in-300-words)
+
+
+The National Council for Voluntary Organisations has lots of help. Go [here](https://beta.ncvo.org.uk/help-and-guidance/funding-income/all-about-grants/) for six articles about grants.
+
+For advice about a business plan, and some downloadable templates, see [here.](https://knowhow.ncvo.org.uk/tools-resources/business-plan-template) 
+
+And how to explain why your project is important is [here.](https://knowhow.ncvo.org.uk/how-to/how-to-explain-why-your-project-is-needed-in-300-words)

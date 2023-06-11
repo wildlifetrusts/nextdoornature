@@ -24,6 +24,7 @@ type alias Guide =
     , maybeAudio : Maybe Page.Shared.Data.AudioMeta
     , relatedStoryList : List String
     , relatedGuideList : List String
+    , categorySlug : String
     }
 
 
@@ -80,6 +81,8 @@ guideDictDecoder =
                     (Json.Decode.list Json.Decode.string)
                     |> Json.Decode.Extra.withDefault []
                 )
+            |> Json.Decode.Extra.andMap
+                (Json.Decode.field "category" Json.Decode.string |> Json.Decode.Extra.withDefault "")
         )
 
 
