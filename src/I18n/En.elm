@@ -80,10 +80,10 @@ enStrings key =
             --[cCc]
             "https://www.wildlifetrusts.org/wildlife-trusts"
 
-        FooterShareYoutStoryText ->
+        FooterShareYourStoryText ->
             "[cCc] Share your story"
 
-        FooterShareYoutStoryLink ->
+        FooterShareYourStoryLink ->
             --[cCc]
             "/submit-story"
 
