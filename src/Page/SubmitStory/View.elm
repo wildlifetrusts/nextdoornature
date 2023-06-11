@@ -1,14 +1,14 @@
 module Page.SubmitStory.View exposing (..)
 
-import Css exposing (Style, batch, displayFlex, flexGrow, flexShrink, flexWrap, hidden, int, overflow, pct, property, width, wrap)
-import Html.Styled exposing (Html, div, h2, iframe, img, li, p, text, ul)
-import Html.Styled.Attributes as Attr exposing (attribute, css)
+import Css exposing (Style, batch, border, displayFlex, flexGrow, flexShrink, flexWrap, height, hidden, int, overflow, pct, property, rem, width, wrap)
+import Html.Styled exposing (Html, div, h2, iframe, img, p, text)
+import Html.Styled.Attributes as Attr exposing (css)
 import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (Language(..), translate)
 import Message exposing (Msg)
 import Shared exposing (Model)
 import Theme.FluidScale
-import Theme.Global exposing (centerContent, listStyleNone, primaryHeader, roundedCornerStyle)
+import Theme.Global exposing (centerContent, primaryHeader, roundedCornerStyle)
 
 
 view : Model -> Html Msg
@@ -42,7 +42,7 @@ submitFlex model =
         ]
         [ description (t SubmitStoryP1) (t SubmitStoryP2)
         , form model
-        , images
+        , imageGrid imageList
         ]
 
 
@@ -72,15 +72,14 @@ form model =
         ]
 
 
-images : Html Msg
-images =
-    ul [ attribute "role" "list", css [ listStyleNone, submitImgGrid, flexChild ] ]
-        [ li [] [ img [ css [ roundedCornerStyle, submitImgStyle ], Attr.src "/images/submitStory/david-clode-eL4ADAsiOR8-unsplash.jpg", Attr.alt "" ] [] ]
-        , li [] [ img [ css [ roundedCornerStyle, submitImgStyle ], Attr.src "/images/submitStory/steve-adams-bY_q4VodUc0-unsplash.jpg", Attr.alt "" ] [] ]
-        , li [] [ img [ css [ roundedCornerStyle, submitImgStyle ], Attr.src "/images/submitStory/kenny-eliason-qo6_mo9dsYg-unsplash.jpg", Attr.alt "" ] [] ]
-        , li [] [ img [ css [ roundedCornerStyle, submitImgStyle ], Attr.src "/images/submitStory/sincerely-media-Agr1YTrzYPI-unsplash.jpg", Attr.alt "" ] [] ]
-        , li [] [ img [ css [ roundedCornerStyle, submitImgStyle ], Attr.src "/images/submitStory/ocg-saving-the-ocean-bWAArZ5M4Ag-unsplash.jpg", Attr.alt "" ] [] ]
-        ]
+imageList : List ( String, String )
+imageList =
+    [ ( "/images/submitStory/david-clode-eL4ADAsiOR8-unsplash.jpg", "" )
+    , ( "/images/submitStory/steve-adams-bY_q4VodUc0-unsplash.jpg", "" )
+    , ( "/images/submitStory/kenny-eliason-qo6_mo9dsYg-unsplash.jpg", "" )
+    , ( "/images/submitStory/sincerely-media-Agr1YTrzYPI-unsplash.jpg", "" )
+    , ( "/images/submitStory/ocg-saving-the-ocean-bWAArZ5M4Ag-unsplash.jpg", "" )
+    ]
 
 
 submitImgStyle : Style
@@ -109,3 +108,14 @@ flexChild =
         , flexGrow (int 1)
         , property "flex-basis" "25rem"
         ]
+
+
+imageGrid : List ( String, String ) -> Html Msg
+imageGrid images =
+    div [ css [ submitImgGrid, flexChild ] ]
+        (List.map (\( src, alt ) -> gridItem src alt) images)
+
+
+gridItem : String -> String -> Html Msg
+gridItem src alt =
+    div [] [ img [ css [ roundedCornerStyle, submitImgStyle ], Attr.src src, Attr.alt alt ] [] ]
