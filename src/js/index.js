@@ -25,19 +25,30 @@ const app = Elm.Main.init({
 });
 
 app.ports.setMetadata.subscribe(function (pageMetadata) {
-  document.title = pageMetadata.title;
-  document
-    .getElementsByTagName("meta")
-    .namedItem("og-title")
-    .setAttribute("content", pageMetadata.title);
-  document
-    .getElementsByTagName("meta")
-    .namedItem("description")
-    .setAttribute("content", pageMetadata.description);
-  document
-    .getElementsByTagName("meta")
-    .namedItem("og-image")
-    .setAttribute("content", pageMetadata.imageSrc);
+  const baseUrl = import.meta.env.VITE_BASE_URL ?? "https://nextdoornaturehub.org.uk";
+  if (pageMetadata.hasOwnProperty("title")) {
+    document.title = pageMetadata.title;
+    document
+      .getElementsByTagName("meta")
+      .namedItem("og-title")
+      .setAttribute("content", pageMetadata.title);
+  }
+  if (pageMetadata.hasOwnProperty("description")) {
+    document
+      .getElementsByTagName("meta")
+      .namedItem("description")
+      .setAttribute("content", pageMetadata.description);
+    document
+      .getElementsByTagName("meta")
+      .namedItem("og-description")
+      .setAttribute("content", pageMetadata.description);
+  }
+  if (pageMetadata.hasOwnProperty("imageSrc")) {
+    document
+      .getElementsByTagName("meta")
+      .namedItem("og-image")
+      .setAttribute("content", baseUrl + pageMetadata.imageSrc);
+  }
 });
 
 app.ports.saveConsent.subscribe(function (hasConsented) {
