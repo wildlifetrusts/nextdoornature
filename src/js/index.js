@@ -25,7 +25,8 @@ const app = Elm.Main.init({
 });
 
 app.ports.setMetadata.subscribe(function (pageMetadata) {
-  const baseUrl = import.meta.env.VITE_BASE_URL ?? "https://nextdoornaturehub.org.uk";
+  const baseUrl =
+    import.meta.env.VITE_BASE_URL ?? "https://nextdoornaturehub.org.uk";
   if (pageMetadata.hasOwnProperty("title")) {
     document.title = pageMetadata.title;
     document
