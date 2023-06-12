@@ -114,5 +114,6 @@ callForStoryLinkStyle =
         , backgroundPosition right
         , backgroundRepeat noRepeat
         , color white
+        , fontWeight (int 500)
         , paddingRight (rem 1.5)
         ]
