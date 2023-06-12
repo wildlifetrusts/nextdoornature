@@ -4,7 +4,7 @@ import Css exposing (Style, batch, pct, width)
 import Html.Styled exposing (Html, a, div, img, p, text)
 import Html.Styled.Attributes exposing (css, href, src)
 import I18n.Keys exposing (Key(..))
-import I18n.Translate exposing (Language(..), translate)
+import I18n.Translate exposing (Language, translate)
 import Theme.Global exposing (centerContent, contentWrapper, pageColumnStyle, primaryHeader, topTwoColumnsWrapperStyle)
 
 

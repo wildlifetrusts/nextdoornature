@@ -1,8 +1,7 @@
 module Page.Data exposing (Page, Pages, pageFromSlug, pageLanguageDictDecoder)
 
 import Dict exposing (Dict)
-import I18n.Keys exposing (Key(..))
-import I18n.Translate exposing (Language(..), translate)
+import I18n.Translate exposing (Language(..))
 import Json.Decode
 import Json.Decode.Extra
 

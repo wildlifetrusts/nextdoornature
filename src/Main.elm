@@ -19,6 +19,7 @@ import Page.Guides.Data
 import Page.Guides.View
 import Page.Index
 import Page.NotFound exposing (resourceNotFound)
+import Page.Shared.Data
 import Page.Story.Data
 import Page.Story.View
 import Page.View
@@ -187,6 +188,7 @@ update msg model =
             case result of
                 Ok list ->
                     let
+                        actions : List Page.Shared.Data.Teaser
                         actions =
                             List.sortBy .title list
                     in

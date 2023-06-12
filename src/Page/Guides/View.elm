@@ -62,8 +62,8 @@ viewGuideTeaser includeSummary teaser =
         image : Page.Shared.Data.TeaserImage
         image =
             case teaser.maybeImage of
-                Just i ->
-                    i
+                Just anImage ->
+                    anImage
 
                 Nothing ->
                     Page.Shared.Data.defaultTeaserImage
