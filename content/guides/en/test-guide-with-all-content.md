@@ -6,13 +6,14 @@ image:
   alt: Peaty sunset
   credit: Mark Hamblin/2020 VISION
 video:
-  src: https://www.youtube.com/embed/Hgw9oXeWJFQ
+  id: Hgw9oXeWJFQ
   title: Wildlife Trusts - Meet our staff
 relatedGuides:
   - All About Councils and Local Authorities
   - "Finding Funding "
 relatedStories:
   - Test story with minimal fields
+category: admin-and-info
 ---
 
 \#﻿# Test guide with lots of info

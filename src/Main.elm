@@ -5,12 +5,13 @@ import Browser.Dom
 import Browser.Navigation
 import CookieBanner exposing (saveConsent)
 import GoogleAnalytics
-import Html.Styled exposing (Html, div, text, toUnstyled)
+import Html.Styled exposing (Html, toUnstyled)
 import Http
 import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (Language(..), translate)
 import Json.Decode
 import Message exposing (Msg(..))
+import Metadata
 import Page.Data
 import Page.Guide.Data
 import Page.Guide.View
@@ -18,13 +19,14 @@ import Page.Guides.Data
 import Page.Guides.View
 import Page.Index
 import Page.NotFound exposing (resourceNotFound)
+import Page.Shared.Data
 import Page.Story.Data
 import Page.Story.View
 import Page.SubmitStory.View
 import Page.View
 import Random
 import Route exposing (Route(..))
-import Shared exposing (CookieState, Model, Request(..))
+import Shared exposing (Content, CookieState, Model, Request(..))
 import Task
 import Theme.PageTemplate
 import Url
@@ -66,14 +68,22 @@ init flags url key =
         showCookieBanner =
             -- user has previously stated a preference, info should be collapsed
             storedConsent == "null"
+
+        page : Route
+        page =
+            Maybe.withDefault Index maybeRoute
+
+        content : Content
+        content =
+            Shared.contentDictDecoder flags
     in
     ( { key = key
-      , page = Maybe.withDefault Index maybeRoute
+      , page = page
       , cookieState =
             { enableAnalytics = hasConsented
             , cookieBannerIsOpen = showCookieBanner
             }
-      , content = Shared.contentDictDecoder flags
+      , content = content
       , language = English
       , search = []
       , query = ""
@@ -81,7 +91,8 @@ init flags url key =
       , seed = Nothing
       }
     , Cmd.batch
-        [ getActions
+        [ Metadata.setMetadata (Metadata.metadataFromPage page English content)
+        , getActions
         , Random.generate UpdateSeed Random.independentSeed
         ]
     )
@@ -132,7 +143,11 @@ update msg model =
                     Maybe.withDefault Index (Route.fromUrl url)
             in
             ( { model | page = newRoute }
-            , Cmd.batch [ resetFocusTop, resetViewportTop ]
+            , Cmd.batch
+                [ Metadata.setMetadata (Metadata.metadataFromPage newRoute model.language model.content)
+                , resetFocusTop
+                , resetViewportTop
+                ]
             )
 
         LinkClicked urlRequest ->
@@ -148,24 +163,33 @@ update msg model =
                     )
 
         LanguageChangeRequested ->
-            ( if model.language == English then
-                { model | language = Welsh }
+            let
+                newLanguage : Language
+                newLanguage =
+                    if model.language == English then
+                        Welsh
 
-              else
-                { model | language = English }
-            , GoogleAnalytics.updateAnalytics model.cookieState.enableAnalytics
-                (GoogleAnalytics.updateAnalyticsEvent
-                    { category = Route.toString model.page
-                    , action = "changed language to"
-                    , label = I18n.Translate.languageToString model.language
-                    }
-                )
+                    else
+                        English
+            in
+            ( { model | language = newLanguage }
+            , Cmd.batch
+                [ Metadata.setMetadata (Metadata.metadataFromPage model.page newLanguage model.content)
+                , GoogleAnalytics.updateAnalytics model.cookieState.enableAnalytics
+                    (GoogleAnalytics.updateAnalyticsEvent
+                        { category = Route.toString model.page
+                        , action = "changed language to"
+                        , label = I18n.Translate.languageToString newLanguage
+                        }
+                    )
+                ]
             )
 
         GotActions result ->
             case result of
                 Ok list ->
                     let
+                        actions : List Page.Shared.Data.Teaser
                         actions =
                             List.sortBy .title list
                     in

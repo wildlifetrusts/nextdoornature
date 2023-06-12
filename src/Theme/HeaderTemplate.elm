@@ -1,8 +1,8 @@
 module Theme.HeaderTemplate exposing (view)
 
-import Css exposing (Style, absolute, alignItems, backgroundColor, backgroundImage, backgroundPosition, backgroundRepeat, backgroundSize, baseline, batch, border, border3, borderRadius, bottom, boxShadow, center, color, column, contain, display, displayFlex, em, flexDirection, flexEnd, flexStart, flexWrap, focus, fontFamilies, fontSize, fontWeight, height, inlineBlock, int, justifyContent, left, lineHeight, margin, margin2, marginBottom, marginLeft, marginRight, marginTop, minWidth, noRepeat, noWrap, none, normal, outline, padding, padding4, pct, position, pseudoElement, px, rem, right, row, solid, spaceBetween, textAlign, top, url, width, zero)
-import Html.Styled exposing (Html, a, button, div, header, img, input, label, node, text)
-import Html.Styled.Attributes exposing (attribute, css, for, href, id, placeholder, src, type_)
+import Css exposing (Style, alignItems, backgroundColor, backgroundImage, backgroundPosition, backgroundPosition2, backgroundRepeat, backgroundSize, baseline, batch, border, border3, borderRadius, boxShadow, center, color, column, contain, display, displayFlex, em, flexDirection, flexEnd, flexStart, flexWrap, focus, fontFamilies, fontSize, fontWeight, height, inlineBlock, int, justifyContent, left, lineHeight, margin, margin2, marginBottom, marginLeft, marginRight, marginTop, minWidth, noRepeat, noWrap, none, normal, outline, padding, padding4, pct, pseudoElement, px, rem, right, row, solid, spaceBetween, textAlign, url, width, zero)
+import Html.Styled exposing (Html, a, button, div, header, input, label, node, text)
+import Html.Styled.Attributes exposing (attribute, css, for, href, id, placeholder, type_)
 import Html.Styled.Events exposing (on, onClick)
 import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (Language(..), translate)
@@ -92,7 +92,6 @@ searchInput model =
                 Json.Decode.map2 Message.SearchChanged (Json.Decode.at [ "target", "searchResult" ] (Json.Decode.list Page.Guides.Data.internalGuideTeaserDecoder)) (Json.Decode.at [ "target", "_input", "value" ] Json.Decode.string)
             ]
             [ input [ id "search", type_ "text", placeholder (t SearchPlaceholder), css [ searchInputStyle ] ] [] ]
-        , img [ src "/images/arrow-right-purple.svg", css [ arrowStyle ] ] []
         ]
 
 
@@ -195,7 +194,6 @@ headerBtnStyle =
         , backgroundColor teal
         , border (px 0)
         , fontSize (rem 1)
-        , marginBottom (rem 0.3)
         , padding (px 0)
         , textAlign left
         , withMediaMobileUp
@@ -204,26 +202,18 @@ headerBtnStyle =
         ]
 
 
-arrowStyle : Style
-arrowStyle =
-    batch
-        [ bottom (px 0)
-        , height (rem 1)
-        , padding (rem 0.75)
-        , position absolute
-        , right (px 0)
-        , top (px 0)
-        ]
-
-
 searchInputStyle : Style
 searchInputStyle =
     batch
-        [ borderRadius (rem 1.5)
-        , border3 (px 3) solid purple
+        [ backgroundImage (url "/images/arrow-right-purple.svg")
+        , backgroundPosition2 (pct 95) (pct 50)
+        , backgroundRepeat noRepeat
+        , backgroundSize (rem 1)
+        , borderRadius (rem 1.5)
+        , border3 (px 2) solid purple
         , boxShadow none
-        , height (rem 1)
         , minWidth (px 240)
+        , marginTop (rem 1)
         , padding4 (rem 0.5) (rem 2) (rem 0.5) (rem 1)
         , focus
             [ outline none

@@ -9,6 +9,9 @@ enStrings key =
         SiteTitle ->
             "The Nextdoor Nature Hub"
 
+        GuidesMetaDescription ->
+            "[cCc] Description for the guides search page"
+
         ---
         -- Header
         ---
@@ -131,6 +134,15 @@ enStrings key =
         StoryHighlightsSubtitle ->
             "Story highlights"
 
+        CallForStoryHeading ->
+            "Share your story"
+
+        CallForStoryP ->
+            "[cCc] Have done something great for nature in your community? We would love to share your experience to help others, including any challenges you faced or hurdles you had to overcome."
+
+        CallForStoryLinkText ->
+            "Send us your story"
+
         ---
         -- Guide Page
         ---
@@ -144,7 +156,7 @@ enStrings key =
         -- Guides Page
         ---
         GuidesTitle ->
-            "[cCc] Guides"
+            "Guides"
 
         GuidesTitleFiltered num query ->
             num ++ " guides on '" ++ query ++ "' [cCc]"
@@ -188,3 +200,21 @@ enStrings key =
 
         SubmitFormHeading ->
             "Your details"
+
+        ---
+        -- Category things
+        ---
+        CategoryAdminAndInfoName ->
+            "Community Groups - Admin and Information"
+
+        CategoryPublicityEventsName ->
+            "Media, Publicity and Events"
+
+        CategoryWorkingWithPeopleName ->
+            "Working with People"
+
+        CategoryWorkingWithAuthoritiesName ->
+            "Working with the Authorities"
+
+        InCategory ->
+            "[cCc] In category "

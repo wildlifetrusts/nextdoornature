@@ -27,7 +27,7 @@ view language =
                 )
             ]
         , div [ css [ bottomFooterOuterContainerStyle ] ]
-            [ div [ css [ centerContent, bottomFooterContainerStyle ] ]
+            [ div [ css [ bottomFooterContainerStyle, centerContent ] ]
                 [ div [ css [ charityInfoStyle ] ]
                     [ div [] [ text (t FooterCharityInfo) ]
                     , div [ css [ marginTop (rem 0.5) ] ] [ text (t RegisteredCharityNumber) ]
@@ -159,6 +159,9 @@ bottomFooterContainerStyle =
         , withMediaTabletPortraitUp
             [ alignItems flexStart
             , flexDirection row
+
+            -- must be higher than cookie banner button
+            , paddingBottom (rem 3)
             ]
         ]
 

@@ -1,4 +1,4 @@
-module I18n.Translate exposing (Language(..), languageToString, translate)
+module I18n.Translate exposing (Language(..), dictFromLanguage, languageToString, translate)
 
 import I18n.Cy exposing (cyStrings)
 import I18n.En exposing (enStrings)
@@ -18,6 +18,19 @@ languageToString language =
 
         Welsh ->
             "Welsh"
+
+
+dictFromLanguage :
+    Language
+    -> { en : aDict, cy : aDict }
+    -> aDict
+dictFromLanguage language content =
+    case language of
+        English ->
+            content.en
+
+        Welsh ->
+            content.cy
 
 
 translate : Language -> Key -> String

@@ -3,6 +3,7 @@ title: Mathau o Grwpiau Cymunedol (Cymru a Lloegr)
 summary: "Mathau o Grwpiau Cymunedol (Cymru a Lloegr)          "
 relatedGuides:
   - Setting up a basic community group
+category: admin-and-info
 ---
 ## Cymdeithas Anghorfforedig
 Os mai dim ond grŵp bach o wirfoddolwyr ydych chi, heb unrhyw gynlluniau i gyflogi staff neu rentu eiddo, dyma’r un i chi.
@@ -47,7 +48,7 @@ Enghreifftiau o grwpiau anghorfforedig:
 
 
 ## Ydych Chi'n Elusennol?
-Diffinnir elusen yn y gyfraith yng Nghymru a Lloegr fel grŵp sydd â dibenion elusennol yn unig. Mae’n cael ei reoleiddio gan yr Uchel Lys. Mae’n rhaid i chi brofi eich bod yn bodoli er budd y cyhoedd. Os yw eich incwm yn fwy na £5,000 y flwyddyn neu os ydych chi’n Sefydliad Corfforedig Elusennol, rhaid i chi gofrestru gyda’r Comisiwn Elusennau. Edrychwch ar y canllawiau swyddogol ar wefan y Llywodraeth [yma.](https://www.gov.uk/government/publications/what-makes-a-charity-cc4/what-makes-a-charity-cc4) 
+Diffinnir elusen yn y gyfraith yng Nghymru a Lloegr fel grŵp sydd â dibenion elusennol yn unig. Mae’n cael ei reoleiddio gan yr Uchel Lys. Mae’n rhaid i chi brofi eich bod yn bodoli er budd y cyhoedd. Os yw eich incwm yn fwy na £5,000 y flwyddyn neu os ydych chi’n Sefydliad Corfforedig Elusennol, rhaid i chi gofrestru gyda’r Comisiwn Elusennau. Edrychwch ar y canllawiau swyddogol ar wefan y Llywodraeth [yma.](https://www.gov.uk/government/publications/what-makes-a-charity-cc4/what-makes-a-charity-cc4)
 
 
 
@@ -66,7 +67,7 @@ Ni all y grwpiau hyn fod yn elusennau:
 
 
 
-Defnyddiwch y “Map Llwybr” syml yn y Ganolfan Adnoddau [yma](https://www.resourcecentre.org.uk/information/routemap/) i weld beth ddylai strwythur cyfreithiol eich grŵp fod. 
+Defnyddiwch y “Map Llwybr” syml yn y Ganolfan Adnoddau [yma](https://www.resourcecentre.org.uk/information/routemap/) i weld beth ddylai strwythur cyfreithiol eich grŵp fod.
 
 
 
@@ -75,8 +76,8 @@ Os oedd y canllaw hwn yn rhy gymhleth, gallwch ei ddarllen mewn ffordd wahanol [
 
 
 | **Math o grŵp** | **Corfforedig neu anghorfforedig?** | **Elusennol neu ddim?** | **Ydi’r aelodau’n pleidleisio?** | **A ydyw wedi’i reoleiddio?** | **Gwybodaeth arall** |
-| --- | --- | --- | --- | --- | --- | 
-| Cymdeithas Anghorfforedig | Anghorfforedig | Gall fod yn elusennol neu beidio | Nac ydynt | Nac ydi (oni bai ei fod yn elusennol hefyd) | Y math symlaf o grŵp cymunedol | 
+| --- | --- | --- | --- | --- | --- |
+| Cymdeithas Anghorfforedig | Anghorfforedig | Gall fod yn elusennol neu beidio | Nac ydynt | Nac ydi (oni bai ei fod yn elusennol hefyd) | Y math symlaf o grŵp cymunedol |
 | Ymddiriedolaeth Elusennol | Anghorfforedig | Elusennol | Nac ydynt | Ydi – cofrestru gyda’r Comisiwn Elusennau os yw’r incwm dros £5,000 | Rhaid ysgrifennu gweithred ymddiriedaeth. Gweithredir gan grŵp bychan o bobl o’r enw ymddiriedolwyr. |
 | Sefydliad Corfforedig Elusennol (CIO)	| Anghorfforedig | Elusennol | Os yw'n Gymdeithas, bydd yr aelodau'n pleidleisio. Os yw'n Sefydliad, nid yw'r aelodau'n pleidleisio. | Ydi – cofrestru gyda’r Comisiwn Elusennau beth bynnag yw’r incwm	| Rhaid defnyddio cyfansoddiad enghreifftiol sydd wedi'i gymeradwyo gan y Comisiwn Elusennau. Mae cofrestru'n cymryd hyd at 40 diwrnod. Symlach a rhatach na Chwmni Elusennol. |
 | Cwmni Cyfyngedig trwy Warant (Cwmni Cyfyngedig) | Corfforedig | Gall fod yn elusennol neu beidio | Ydynt | Ydi - cofrestru a rheoleiddio gan Dŷ'r Cwmnïau | Rheolir gan gyfarwyddwyr. Dim cyfranddalwyr. Gall fod yn nid-er-elw, sy'n ailfuddsoddi incwm yn y grŵp. |

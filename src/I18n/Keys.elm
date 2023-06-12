@@ -41,11 +41,15 @@ type Key
     | WelcomeP3
     | GuideHighlightsSubtitle
     | StoryHighlightsSubtitle
+    | CallForStoryHeading
+    | CallForStoryP
+    | CallForStoryLinkText
       --- Guide Page
     | RelatedGuidesHeading
     | RelatedStoriesHeading
       --- Guides Page
     | GuidesTitle
+    | GuidesMetaDescription
     | GuidesTitleFiltered String String
     | SearchPlaceholder
     | ExploreGuidesListPlaceholder
@@ -65,3 +69,9 @@ type Key
       -}
     | SubmitFormTitle
     | SubmitFormHeading
+      --- Category things
+    | CategoryAdminAndInfoName
+    | CategoryPublicityEventsName
+    | CategoryWorkingWithPeopleName
+    | CategoryWorkingWithAuthoritiesName
+    | InCategory

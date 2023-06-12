@@ -1,6 +1,6 @@
-module Page.Guides.View exposing (view, viewTeaserList)
+module Page.Guides.View exposing (homePageLayoutStyle, view, viewTeaserList)
 
-import Css exposing (fontWeight, int)
+import Css exposing (Style, batch, fontWeight, int, margin, padding, pct, property, rem, width)
 import Html.Styled exposing (Html, a, div, img, li, p, text, ul)
 import Html.Styled.Attributes exposing (alt, attribute, css, href, src)
 import I18n.Keys exposing (Key(..))
@@ -10,7 +10,7 @@ import Message exposing (Msg)
 import Page.Guides.Data
 import Page.Shared.Data
 import Shared exposing (Model, Request(..))
-import Theme.Global exposing (centerContent, contentWrapper, primaryHeader)
+import Theme.Global exposing (centerContent, contentWrapper, primaryHeader, withMediaDesktopUp, withMediaMobileUp, withMediaTabletLandscapeUp, withMediaTabletPortraitUp)
 
 
 view : Model -> Html Msg
@@ -48,10 +48,10 @@ view model =
                 t GuidesTitle
     in
     div [ css [ centerContent ] ]
-        [ primaryHeader [ attribute "aria-live" "alert" ] headerText
+        [ primaryHeader [ attribute "aria-live" "alert", css [ guidesSearchTitleStyle ] ] headerText
         , div
             [ css [ contentWrapper ] ]
-            [ viewTeaserList True teaserList
+            [ viewTeaserList True guidesPageLayoutStyle teaserList
             ]
         ]
 
@@ -62,8 +62,8 @@ viewGuideTeaser includeSummary teaser =
         image : Page.Shared.Data.TeaserImage
         image =
             case teaser.maybeImage of
-                Just i ->
-                    i
+                Just anImage ->
+                    anImage
 
                 Nothing ->
                     Page.Shared.Data.defaultTeaserImage
@@ -98,10 +98,10 @@ viewGuideTeaserSummary summary =
         text ""
 
 
-viewTeaserList : Bool -> List Page.Shared.Data.Teaser -> Html Msg
-viewTeaserList includeSummary teasers =
+viewTeaserList : Bool -> Style -> List Page.Shared.Data.Teaser -> Html Msg
+viewTeaserList includeSummary style teasers =
     if List.length teasers > 0 then
-        ul [ css [ Theme.Global.teasersContainerStyle ] ]
+        ul [ css [ style ] ]
             (teasers
                 |> List.map
                     (\teaser -> viewGuideTeaser includeSummary teaser)
@@ -120,3 +120,51 @@ limitContent summary limit =
 
     else
         summary
+
+
+guidesPageLayoutStyle : Style
+guidesPageLayoutStyle =
+    batch
+        [ property "display" "grid"
+        , margin (rem 0)
+        , padding (rem 0)
+        , property "grid-template-columns" "repeat(2, 1fr)"
+        , property "gap" "1rem"
+        , width (pct 100)
+        , withMediaDesktopUp
+            [ property "grid-template-columns" "repeat(6, 1fr)"
+            , property "gap" "2rem"
+            ]
+        , withMediaTabletLandscapeUp
+            [ property "grid-template-columns" "repeat(5, 1fr)"
+            ]
+        , withMediaTabletPortraitUp
+            [ property "grid-template-columns" "repeat(4, 1fr)"
+            , property "gap" "1.5rem"
+            ]
+        , withMediaMobileUp
+            [ property "grid-template-columns" "repeat(3, 1fr)"
+            ]
+        ]
+
+
+homePageLayoutStyle : Style
+homePageLayoutStyle =
+    batch
+        [ property "display" "grid"
+        , margin (rem 0)
+        , padding (rem 0)
+        , property "grid-template-columns" "repeat(2, 1fr)"
+        , property "gap" "1rem"
+        , width (pct 100)
+        ]
+
+
+guidesSearchTitleStyle : Style
+guidesSearchTitleStyle =
+    batch
+        [ property "hyphens" "auto"
+        , withMediaMobileUp
+            [ property "hyphens" "none"
+            ]
+        ]

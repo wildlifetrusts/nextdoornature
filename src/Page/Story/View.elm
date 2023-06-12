@@ -4,9 +4,8 @@ import Css exposing (Style, batch, margin3, pct, rem, width)
 import Html.Styled exposing (Html, div, h3, img, p, text)
 import Html.Styled.Attributes exposing (alt, css, src)
 import I18n.Keys exposing (Key(..))
-import I18n.Translate exposing (Language(..), translate)
+import I18n.Translate exposing (Language, translate)
 import Message exposing (Msg)
-import Page.Guides.View
 import Page.Story.Data
 import Theme.Global exposing (centerContent, contentWrapper, featureImageStyle, pageColumnStyle, primaryHeader, topTwoColumnsWrapperStyle)
 import Theme.Markdown exposing (markdownToHtml)
@@ -49,7 +48,6 @@ view language story =
                 , div [ css [ pageColumnStyle ] ]
                     (markdownToHtml story.fullTextMarkdown)
                 ]
-            , viewColumnWrapper (Page.Guides.View.viewTeaserList False story.relatedGuideList)
             ]
         ]
 
@@ -77,16 +75,6 @@ viewImages imageList =
         )
 
 
-viewColumnWrapper : Html Msg -> Html Msg
-viewColumnWrapper content =
-    if content /= text "" then
-        div [ css [ pageColumnStyle ] ]
-            [ content ]
-
-    else
-        text ""
-
-
 maybeCaptions : Maybe String -> Maybe String -> Maybe String
 maybeCaptions maybeImageCaption maybeImageCredit =
     case maybeImageCredit of
@@ -94,6 +82,7 @@ maybeCaptions maybeImageCaption maybeImageCredit =
             case maybeImageCaption of
                 Just anImageCaption ->
                     let
+                        concatenator : String
                         concatenator =
                             if
                                 String.endsWith "." anImageCaption

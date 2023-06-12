@@ -28,7 +28,7 @@ view language guide allGuides allStories =
         , div
             [ css [ centerContent ] ]
             [ viewRow
-                ( viewImageColumn guide
+                ( viewImageColumn language guide
                 , [ viewMaybeVideo guide.maybeVideo
                   , viewMaybeAudio guide.maybeAudio
                   , viewRelatedGuideTeasers language guide.relatedGuideList allGuides
@@ -39,9 +39,17 @@ view language guide allGuides allStories =
         ]
 
 
-viewImageColumn : Page.Guide.Data.Guide -> List (Html Msg)
-viewImageColumn guide =
+
+-- viewCategorySubHeader : Language -> Page.Guide.Data.Guide -> List (Html Msg)
+
+
+viewImageColumn : Language -> Page.Guide.Data.Guide -> List (Html Msg)
+viewImageColumn language guide =
     let
+        t : Key -> String
+        t =
+            translate language
+
         image : Page.Guide.Data.Image
         image =
             case guide.maybeImage of
@@ -50,6 +58,24 @@ viewImageColumn guide =
 
                 Nothing ->
                     Page.Guide.Data.defaultGuideImage
+
+        categorySlugToKey : String -> Key
+        categorySlugToKey slug =
+            case slug of
+                "admin-and-info" ->
+                    CategoryAdminAndInfoName
+
+                "media-publicity-events" ->
+                    CategoryPublicityEventsName
+
+                "working-with-people" ->
+                    CategoryWorkingWithPeopleName
+
+                "working-with-the-authorities" ->
+                    CategoryWorkingWithAuthoritiesName
+
+                _ ->
+                    CategoryAdminAndInfoName
     in
     [ div []
         [ img [ css [ featureImageStyle ], src image.src, alt image.alt ] []
@@ -60,6 +86,7 @@ viewImageColumn guide =
             Nothing ->
                 text ""
         ]
+    , div [] [ text (t InCategory ++ t (categorySlugToKey guide.categorySlug)) ]
     , div [] (markdownToHtml guide.fullTextMarkdown)
     ]
 
@@ -121,7 +148,7 @@ viewRelatedGuideTeasers language guideTitleList allGuidesSlugTitleList =
             , ul [ css [ listStyleNone ] ]
                 (List.map
                     (\item ->
-                        li [] [ a [ href item.slug ] [ text (titleFromLanguage language item) ] ]
+                        li [] [ a [ href (Route.toString (Guide item.slug)) ] [ text (titleFromLanguage language item) ] ]
                     )
                     relatedGuideItems
                 )
@@ -216,12 +243,7 @@ viewStoryImage maybeImage =
                     }
     in
     img
-        [ alt image.alt
-        , src image.src
-        , css
-            [ teaserImageStyle
-            ]
-        ]
+        [ alt image.alt, src image.src, css [ teaserImageStyle ] ]
         []
 
 
