@@ -1,6 +1,6 @@
 module Theme.Global exposing (borderWrapper, centerContent, contentWrapper, featureImageStyle, globalStyles, hideFromPrint, lightTeal, listStyleNone, pageColumnBlockStyle, pageColumnStyle, primaryHeader, purple, roundedCornerStyle, screenReaderOnly, teal, teaserContainerStyle, teaserImageStyle, teaserRowStyle, topTwoColumnsWrapperStyle, white, withMediaDesktopUp, withMediaMobileUp, withMediaPrint, withMediaTabletLandscapeUp, withMediaTabletPortraitUp)
 
-import Css exposing (Color, Style, absolute, alignItems, auto, backgroundColor, backgroundImage, backgroundPosition, backgroundRepeat, backgroundSize, batch, border, border3, borderBottomRightRadius, borderRadius4, borderTopLeftRadius, borderTopRightRadius, boxSizing, center, color, column, contain, contentBox, cover, cursor, display, displayFlex, em, ex, flex, flex3, flexDirection, flexStart, flexWrap, fontFamilies, height, hex, hidden, inherit, inlineBlock, int, justifyContent, lastChild, left, listStyle, margin, margin2, margin3, marginBottom, marginLeft, marginRight, marginTop, maxContent, maxWidth, minWidth, noRepeat, noWrap, none, overflow, padding, padding2, paddingLeft, pct, pointer, position, property, pseudoElement, px, rem, row, solid, textDecoration, top, underline, url, width, zero)
+import Css exposing (Color, Style, absolute, alignItems, auto, backgroundColor, backgroundImage, backgroundPosition, backgroundRepeat, backgroundSize, batch, border, border3, borderBottomRightRadius, borderRadius4, borderTopLeftRadius, borderTopRightRadius, boxSizing, breakWord, center, cm, color, column, contain, contentBox, cover, cursor, display, displayFlex, em, ex, flex, flex3, flexDirection, flexStart, flexWrap, fontFamilies, height, hex, hidden, inherit, inlineBlock, int, justifyContent, lastChild, left, listStyle, margin, margin2, margin3, marginBottom, marginLeft, marginRight, marginTop, maxWidth, minWidth, noRepeat, noWrap, none, overflow, overflowWrap, padding, padding2, paddingLeft, pct, pointer, position, property, pseudoElement, px, rem, row, solid, textDecoration, top, underline, url, width, zero)
 import Css.Global exposing (global, typeSelector)
 import Css.Media as Media exposing (only, print, screen, withMedia)
 import Html.Styled exposing (Html, h1, text)
@@ -68,23 +68,20 @@ withMediaDesktopUp =
     withMedia [ only screen [ Media.minWidth (px maxSmallDesktop) ] ]
 
 
+basePrintStyles : List Style
+basePrintStyles =
+    [ backgroundColor white
+    , color black
+    , border (px 0)
+    , overflowWrap breakWord
+    ]
+
+
 withMediaPrint : Maybe (List Style) -> Style
 withMediaPrint styles =
-    case styles of
-        Just s ->
-            withMedia [ only print [] ] <|
-                [ backgroundColor white
-                , color black
-                , border (px 0)
-                ]
-                    ++ s
-
-        Nothing ->
-            withMedia [ only print [] ]
-                [ backgroundColor white
-                , color black
-                , border (px 0)
-                ]
+    withMedia [ only print [] ] <|
+        basePrintStyles
+            ++ Maybe.withDefault [] styles
 
 
 hideFromPrint : Style
@@ -211,7 +208,7 @@ globalStyles =
                     , pseudoElement "after"
                         [ Css.property "content" """ " (" attr(href) ")" """
                         , backgroundImage none
-                        , minWidth maxContent
+                        , minWidth (pct 100)
                         ]
                     ]
             ]
@@ -234,6 +231,8 @@ globalStyles =
             , overflow hidden
             , width (pct 100)
             ]
+        , typeSelector "@page"
+            [ margin (cm 1.5) ]
         ]
 
 
