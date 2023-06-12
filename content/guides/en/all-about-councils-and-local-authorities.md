@@ -6,7 +6,7 @@ image:
   alt: Local maps and street atlases
   credit: Photo copyright Autumn Barlow/The Wildlife Trusts 2023
 video:
-  src: pZDv-ri2GOs
+  id: pZDv-ri2GOs
   title: "About Councils and Local Authorities: A Nextdoor Nature Video."
 category: admin-and-info
 ---
