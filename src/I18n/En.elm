@@ -16,7 +16,7 @@ enStrings key =
         -- Header
         ---
         ChangeLanguage ->
-            "[cCc] Switch to Welsh"
+            "Switch to Welsh"
 
         ---
         -- 404 content
@@ -37,22 +37,22 @@ enStrings key =
         -- Footer
         ---
         FooterTitleColumnA ->
-            "[cCc] Find out more"
+            "Find out more"
 
         FooterTitleColumnB ->
-            "[cCc] Explore the hub"
+            "Explore this hub"
 
         FooterGuidesLinkText ->
-            "[cCc] Browse our guides"
+            "Explore our guides"
 
         FooterGuidesLink ->
             "/guides"
 
         FooterTitleColumnC ->
-            "[cCc] Get involved"
+            "Get involved"
 
         FooterVisitWebsiteText ->
-            "[cCc] Visit the Wildlife Trusts' main website"
+            "Visit the Wildlife Trusts' website"
 
         FooterVisitWebsiteLink ->
             --[cCc]
@@ -65,14 +65,14 @@ enStrings key =
             "/about"
 
         FooterFindYourLocalTrustText ->
-            "[cCc] Find your local trust"
+            "Find your local Trust"
 
         FooterFindYourLocalTrustLink ->
             --[cCc]
             "https://www.wildlifetrusts.org/wildlife-trusts"
 
         FooterPrivacyPolicyText ->
-            "Privacy Policy"
+            "Privacy policy"
 
         FooterPrivacyPolicyLink ->
             "/privacy-policy"
@@ -87,7 +87,7 @@ enStrings key =
             "Nextdoor Nature"
 
         FooterCharityInfo ->
-            "[cCc] The Nextdoor Nature hub is a project by the Wildlife Trusts: Protecting Wildlife for the Future"
+            "The Nextdoor Nature Hub is a project by The Wildlife Trusts and funded by The National Lottery Heritage Fund"
 
         RegisteredCharityNumber ->
             "Registered charity number 20723"
@@ -100,11 +100,11 @@ enStrings key =
 
         CookieBannerP ->
             """
-            [cCc] Our website uses cookies and data to make sure you have the best experience and to help us fundraise efficiently to save wildlife. Some cookies are essential to make our website work.
+            Our website uses cookies and data to make sure you have the best experience and to help us fundraise efficiently to save wildlife. Some cookies are essential to make our website work.
             """
 
         CookieAcceptButtonText ->
-            "Okay, got it"
+            "Ok, got it"
 
         CookieDeclineButtonText ->
             "No thanks"
@@ -116,16 +116,16 @@ enStrings key =
         -- Index page
         ---
         HomeTitle ->
-            "Welcome to the nextdoor nature hub"
+            "Welcome to the Nextdoor Nature Hub"
 
         WelcomeP1 ->
-            "[cCc] Nextdoor Nature is an initiative launched by the Wilidlife Trusts in 2022. (Read more here) The aim of Nextdoor Nature is to equip everyone with the skills and knowledge they need to make a positive difference for nature - in their own area, and beyond."
+            "Nextdoor Nature is bringing communities together to help nature flourish where you live and work!"
 
         WelcomeP2 ->
-            "[cCc] With the climate and environmental crisis ever worsining, it's important to recognise that there are actions all of us can take that can meaniningfully make a difference. It's easy to feel powerless, but in fact, together we are powerful!"
+            "Thanks to £5million funding from The National Lottery Heritage Fund, Nextdoor Nature provides you with the advice and support you need to help nature on your doorstep, and leave a lasting natural legacy to mark The Queen’s Platinum Jubilee."
 
         WelcomeP3 ->
-            "[cCc] The goal of Nextdoor Nature is to get at least 1 in 4 people across the UK taking Action for Nature. This hub aims to support anyone who is interested in finding out what they can do, and how they can get other people involved."
+            "The guides on this Hub give you simple, straightforward information so you can take action for nation. And the stories are where you can find inspiration - and share your own experiences!"
 
         GuideHighlightsSubtitle ->
             "Guide highlights"
@@ -134,7 +134,7 @@ enStrings key =
             "Story highlights"
 
         CallForStoryHeading ->
-            "Share your story"
+            "Share your story!"
 
         CallForStoryP ->
             "[cCc] Have done something great for nature in your community? We would love to share your experience to help others, including any challenges you faced or hurdles you had to overcome."
@@ -146,10 +146,10 @@ enStrings key =
         -- Guide Page
         ---
         RelatedGuidesHeading ->
-            "Related Guides"
+            "Related guides"
 
         RelatedStoriesHeading ->
-            "Real Stories"
+            "Related stories"
 
         ---
         -- Guides Page
