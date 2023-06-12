@@ -202,8 +202,8 @@ globalStyles =
                 , width (em 1.0)
                 , marginLeft (em 0.3)
                 ]
-            , withMediaPrint <|
-                Just
+            , withMediaPrint
+                (Just
                     [ textDecoration underline
                     , pseudoElement "after"
                         [ Css.property "content" """ " (" attr(href) ")" """
@@ -211,6 +211,7 @@ globalStyles =
                         , minWidth (pct 100)
                         ]
                     ]
+                )
             ]
         , typeSelector "b"
             []
