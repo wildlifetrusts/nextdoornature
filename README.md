@@ -14,6 +14,7 @@ This is part of the [Wildlife Trusts](https://www.wildlifetrusts.org/) larger [T
 - [node](https://nodejs.org/)
 - [nvm for macOS & Linux](https://github.com/nvm-sh/nvm) or [nvm for Windows](https://github.com/coreybutler/nvm-windows)
 - After cloning the repo and running `npm i` you will also need to `npm run prepare` to install [husky](https://blog.typicode.com/husky-git-hooks-autoinstall/)
+- [Image Magick](https://imagemagick.org/index.php) (for image size fixing)
 
 ### Formatting
 
@@ -99,6 +100,16 @@ Rules live in `review/src/ReviewConfig.elm` and can be modified if needed. These
 - check the acceptance criteria have been met (with tests if appropriate)
 - add comments & questions
 - once approved, leave for the author to squash and merge
+
+### Bulk image resizing
+
+There is no hard limit on image size that can be uploaded. We want to keep
+this reasonable to make loading time as fast as possible for end users. So
+to bulk resize all images greater than '2000x2000' run:
+
+```
+mogrify -resize '2000x2000>' ./public/images/uploads/*.jpg
+```
 
 ## License
 
