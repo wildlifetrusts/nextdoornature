@@ -24,6 +24,34 @@ const app = Elm.Main.init({
   },
 });
 
+app.ports.setMetadata.subscribe(function (pageMetadata) {
+  const baseUrl =
+    import.meta.env.VITE_BASE_URL ?? "https://nextdoornaturehub.org.uk";
+  if (pageMetadata.hasOwnProperty("title")) {
+    document.title = pageMetadata.title;
+    document
+      .getElementsByTagName("meta")
+      .namedItem("og-title")
+      .setAttribute("content", pageMetadata.title);
+  }
+  if (pageMetadata.hasOwnProperty("description")) {
+    document
+      .getElementsByTagName("meta")
+      .namedItem("description")
+      .setAttribute("content", pageMetadata.description);
+    document
+      .getElementsByTagName("meta")
+      .namedItem("og-description")
+      .setAttribute("content", pageMetadata.description);
+  }
+  if (pageMetadata.hasOwnProperty("imageSrc")) {
+    document
+      .getElementsByTagName("meta")
+      .namedItem("og-image")
+      .setAttribute("content", baseUrl + pageMetadata.imageSrc);
+  }
+});
+
 app.ports.saveConsent.subscribe(function (hasConsented) {
   // User will have to re-consent every time browser is closed, but not on refresh.
   sessionStorage.setItem("ga-cookie-consent", hasConsented);

@@ -44,6 +44,7 @@ type Key
     | RelatedStoriesHeading
       --- Guides Page
     | GuidesTitle
+    | GuidesMetaDescription
     | GuidesTitleFiltered String String
     | SearchPlaceholder
     | ExploreGuidesListPlaceholder
