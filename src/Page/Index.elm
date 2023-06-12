@@ -1,6 +1,6 @@
 module Page.Index exposing (view)
 
-import Css exposing (Style, backgroundColor, backgroundImage, backgroundPosition, backgroundRepeat, batch, color, column, flexDirection, marginBottom, noRepeat, padding, paddingRight, pct, property, rem, right, row, url, width)
+import Css exposing (Style, backgroundColor, backgroundImage, backgroundPosition, backgroundRepeat, batch, color, column, flexDirection, fontWeight, int, marginBottom, noRepeat, padding, paddingRight, pct, property, rem, right, row, url, width)
 import Html.Styled exposing (Html, a, div, h1, h2, p, text)
 import Html.Styled.Attributes exposing (css, href)
 import I18n.Keys exposing (Key(..))
