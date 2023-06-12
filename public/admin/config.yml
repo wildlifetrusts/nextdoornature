@@ -91,10 +91,19 @@ collections:
           widget: "select",
           options:
             [
-              { label: "Community Groups - Admin and Information", value: "admin-and-info" },
-              { label: "Media, Publicity and Events", value: "media-publicity-events" },
+              {
+                label: "Community Groups - Admin and Information",
+                value: "admin-and-info",
+              },
+              {
+                label: "Media, Publicity and Events",
+                value: "media-publicity-events",
+              },
               { label: "Working with People", value: "working-with-people" },
-              { label: "Working with the Authorities", value: "working-with-the-authorities" },
+              {
+                label: "Working with the Authorities",
+                value: "working-with-the-authorities",
+              },
             ],
           default: "",
           i18n: false,

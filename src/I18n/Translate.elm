@@ -1,6 +1,5 @@
 module I18n.Translate exposing (Language(..), dictFromLanguage, languageToString, translate)
 
-import Dict exposing (Dict)
 import I18n.Cy exposing (cyStrings)
 import I18n.En exposing (enStrings)
 import I18n.Keys exposing (Key)
