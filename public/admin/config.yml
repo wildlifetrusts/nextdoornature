@@ -20,20 +20,6 @@ collections:
     fields: # The fields for each document
       - { label: "Title", name: "title", widget: "string", i18n: true }
       - {
-          label: "Category",
-          name: "Category",
-          widget: "select",
-          options:
-            [
-              "admin-and-info",
-              "media-publicity-events",
-              "working-with-people",
-              "working-with-the-authorities",
-            ],
-          default: "admin-and-info",
-          i18n: false,
-        }
-      - {
           label: "Who the story is about",
           name: "who",
           widget: "string",
@@ -99,6 +85,20 @@ collections:
           pattern: ["^.{50,160}$", "Must be between 50 and 160 characters"],
           i18n: true,
         }
+      - {
+          label: "Category",
+          name: "Category",
+          widget: "select",
+          options:
+            [
+              { label: "Community Groups - Admin and Information", value: "admin-and-info" },
+              { label: "Media, Publicity and Events", value: "media-publicity-events" },
+              { label: "Working with People", value: "working-with-people" },
+              { label: "Working with the Authorities", value: "working-with-the-authorities" },
+            ],
+          default: "",
+          i18n: false,
+        }
       - { label: "Body", name: "body", widget: "markdown", i18n: true }
       - label: "Image"
         name: "image"
@@ -126,15 +126,17 @@ collections:
               required: false,
               i18n: true,
             }
-      - label: "Video"
+      - label: "YouTube video"
         name: "video"
         widget: "object"
         i18n: true
         fields:
           - {
-              label: "URL",
-              name: "src",
+              label: "YouTube video ID",
+              name: "id",
               widget: "string",
+              hint: "Embed url will be added automatically as `https://youtube.com/embed/`. Save ID here only e.g. Ab123x456Yz",
+              pattern: ["^.{11}$", "Must be an 11 character code"],
               required: false,
               i18n: true,
             }

@@ -96,20 +96,24 @@ shuffleListHelper seed source result =
 
     else
         let
+            indexGenerator : Random.Generator Int
             indexGenerator =
                 Random.int 0 (List.length source - 1)
 
             ( index, nextSeed ) =
                 Random.step indexGenerator seed
 
+            valAtIndex : Maybe a
             valAtIndex =
                 Array.get index (Array.fromList source)
-
-            sourceWithoutIndex =
-                List.take index source ++ List.drop (index + 1) source
         in
         case valAtIndex of
             Just val ->
+                let
+                    sourceWithoutIndex : List a
+                    sourceWithoutIndex =
+                        List.take index source ++ List.drop (index + 1) source
+                in
                 shuffleListHelper nextSeed sourceWithoutIndex (val :: result)
 
             Nothing ->

@@ -1,19 +1,10 @@
-module Page.Shared.Data exposing (AudioMeta, Teaser, TeaserImage, VideoMeta, audioDecoder, defaultTeaserImage, guideTeaserDecoder, guideTeaserImageDecoder, videoDecoder)
+module Page.Shared.Data exposing (AudioMeta, Teaser, TeaserImage, VideoMeta, audioDecoder, defaultTeaserImage, guideTeaserImageDecoder, videoDecoder)
 
 import Json.Decode
 
 
 type alias TeaserImage =
     { src : String, alt : String }
-
-
-guideTeaserDecoder : Json.Decode.Decoder Teaser
-guideTeaserDecoder =
-    Json.Decode.map4 Teaser
-        (Json.Decode.field "title" Json.Decode.string)
-        (Json.Decode.field "basename" Json.Decode.string)
-        (Json.Decode.field "summary" Json.Decode.string)
-        (Json.Decode.maybe (Json.Decode.field "image" guideTeaserImageDecoder))
 
 
 defaultTeaserImage : TeaserImage
@@ -61,4 +52,13 @@ videoDecoder : Json.Decode.Decoder VideoMeta
 videoDecoder =
     Json.Decode.map2 VideoMeta
         (Json.Decode.field "title" Json.Decode.string)
-        (Json.Decode.field "src" Json.Decode.string)
+        (Json.Decode.field "id"
+            (Json.Decode.string
+                |> Json.Decode.andThen idToEmbedSrc
+            )
+        )
+
+
+idToEmbedSrc : String -> Json.Decode.Decoder String
+idToEmbedSrc videoId =
+    Json.Decode.succeed ("https://youtube.com/embed/" ++ videoId)

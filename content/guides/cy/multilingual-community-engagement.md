@@ -6,7 +6,7 @@ image:
   alt: A stack of small dictionaries in other languages
   credit: Photo copyright Autumn Barlow/The Wildlife Trusts 2023
 video:
-  src: Tk7InQgM7PE
+  id: Tk7InQgM7PE
   title: Ymgysylltu Cymunedol Amlieithog. Fideo Natur Drws Nesaf.
 category: admin-and-info
 ---

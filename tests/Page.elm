@@ -1,6 +1,5 @@
 module Page exposing (suite)
 
-import Html
 import Html.Styled
 import Message
 import Page.Data
@@ -27,13 +26,7 @@ suite =
     in
     describe "Guide Page"
         [ describe "View tests"
-            [ test "Page view has title" <|
-                \() ->
-                    queryFromStyledHtml (view page)
-                        |> Query.contains
-                            [ Html.h1 [] [ Html.text "A test page" ]
-                            ]
-            , test "Page view has body that is HTML" <|
+            [ test "Page view has body that is HTML" <|
                 \() ->
                     queryFromStyledHtml (view page)
                         |> Query.has

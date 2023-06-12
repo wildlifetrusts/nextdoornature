@@ -21,21 +21,22 @@ suite =
         guideMinimal =
             { title = "A minimal test guide"
             , slug = "a-guide"
-            , fullTextMarkdown = "# Some minimal test reource markdown"
-            , summary = "Some minimal test reource markdown"
+            , fullTextMarkdown = "## Some minimal test resource markdown"
+            , summary = "Some minimal test resource markdown"
             , maybeImage = Nothing
             , maybeVideo = Nothing
             , maybeAudio = Nothing
             , relatedStoryList = []
             , relatedGuideList = []
+            , categorySlug = "admin-and-info"
             }
 
         guideFull : Guide
         guideFull =
             { title = "A full test guide"
             , slug = "a-guide"
-            , fullTextMarkdown = "# Some full test reource markdown\n\nA small paragraph."
-            , summary = "Some full test reource markdown"
+            , fullTextMarkdown = "## Some full test resource markdown\n\nA small paragraph."
+            , summary = "Some full test resource markdown"
             , maybeImage = Just defaultGuideImage
             , maybeVideo =
                 Just
@@ -45,7 +46,7 @@ suite =
             , maybeAudio =
                 Just
                     { title = "An audio guide"
-                    , src = "https://an.aud io.guide"
+                    , src = "https://an.audio.guide"
                     }
             , relatedStoryList =
                 [ "A related story"
@@ -55,15 +56,48 @@ suite =
                 [ "A related guide"
                 , "Another related guide"
                 ]
+            , categorySlug = "admin-and-info"
             }
 
         allGuideList : List GuideListItem
         allGuideList =
-            []
+            [ { titleKey = "A related guide"
+              , slug = "a-guide"
+              , cy = { title = "" }
+              , en = { title = "A related guide" }
+              }
+            , { titleKey = "Another related guide"
+              , slug = "another-guide"
+              , cy = { title = "" }
+              , en = { title = "Another related guide" }
+              }
+            ]
 
         allStoryList : List StoryTeaser
         allStoryList =
-            []
+            [ { titleKey = "A related story"
+              , slug = "a-related-story"
+              , cy =
+                    { title = ""
+                    , maybeImage = Nothing
+                    }
+              , en =
+                    { title = "A related story"
+                    , maybeImage = Nothing
+                    }
+              }
+            , { titleKey = "Another related story"
+              , slug = "another-story"
+              , cy =
+                    { title = ""
+                    , maybeImage = Nothing
+                    }
+              , en =
+                    { title = "Another related story"
+                    , maybeImage = Nothing
+                    }
+              }
+            ]
 
         view :
             Guide
@@ -75,18 +109,19 @@ suite =
     in
     describe "Guide Page"
         [ describe "View tests"
-            [ test "Guide view has title" <|
+            [ test "Guide view has body that is HTML" <|
                 \() ->
                     queryFromStyledHtml (view guideMinimal allGuideList allStoryList)
-                        |> Query.contains
-                            [ Html.h1 [] [ Html.text guideMinimal.title ]
+                        |> Query.has
+                            [ tag "h2"
+                            , text "Some minimal test resource markdown"
                             ]
-            , test "Guide view has body that is HTML" <|
+            , test "Guide view has body with h2 and p" <|
                 \() ->
                     queryFromStyledHtml (view guideFull allGuideList allStoryList)
                         |> Query.has
-                            [ tag "h1"
-                            , text "Some full test reource markdown"
+                            [ tag "h2"
+                            , text "Some full test resource markdown"
                             , tag "p"
                             , text "A small paragraph."
                             ]
@@ -109,9 +144,11 @@ suite =
                 \() ->
                     queryFromStyledHtml (view guideFull allGuideList allStoryList)
                         |> Query.contains
-                            [ Html.ul []
-                                [ Html.li [] [ Html.a [ Html.Attributes.href "/a-guide" ] [ Html.text "A related guide" ] ]
-                                , Html.li [] [ Html.a [ Html.Attributes.href "/another-guide" ] [ Html.text "Another related guide" ] ]
+                            [ Html.li []
+                                [ Html.a [ Html.Attributes.href "/guides/a-guide" ] [ Html.text "A related guide" ]
+                                ]
+                            , Html.li []
+                                [ Html.a [ Html.Attributes.href "/guides/another-guide" ] [ Html.text "Another related guide" ]
                                 ]
                             ]
             ]
