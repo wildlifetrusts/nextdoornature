@@ -79,6 +79,12 @@ metadataFromPage page language content =
                 Nothing ->
                     defaultMetadata language
 
+        SubmitStory ->
+            { title = t SubmitStoryHeading
+            , description = t SubmitStoryP1
+            , imageSrc = defaultMetaImageSrc
+            }
+
 
 guideMetadataFromSlug :
     String
