@@ -24,6 +24,9 @@ cyStrings key =
         GuidesTitle ->
             "[cCc] Guides CY"
 
+        GuidesMetaDescription ->
+            "[cCc] Guides Description in Welsh"
+
         GuidesTitleFiltered num query ->
             num ++ " CY guides on '" ++ query ++ "' [cCc]"
 

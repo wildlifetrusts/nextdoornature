@@ -9,6 +9,9 @@ enStrings key =
         SiteTitle ->
             "The Nextdoor Nature Hub"
 
+        GuidesMetaDescription ->
+            "[cCc] Description for the guides search page"
+
         ---
         -- Header
         ---
