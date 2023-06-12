@@ -6,7 +6,7 @@ image:
   credit: Photo copyright Autumn Barlow/The Wildlife Trusts 2023
   alt: A pile of bank statements
 relatedGuides:
-  - Test guide
+  - How to Apply for Funding
 relatedStories:
   - Test story with minimal fields
 category: admin-and-info
@@ -59,13 +59,13 @@ Os ydych chi’n gwmni cyfyngedig, bydd arnoch angen eich Memorandwm a’ch Erth
 
 ## Dolenni defnyddiol i fanciau
 
-[CAF](https://www.cafonline.org/caf-bank/current-account "Charities Aid Foundation") – Charities Aid Foundation (rhaid rhoi blaendal o £1000)
-[Unity Trust Bank](https://www.unity.co.uk/business-banking/business-current-account/ "Unity Trust Bank") (rhaid rhoi blaendal o £500)
-[Royal Bank of Scotland](https://www.rbs.co.uk/business/bank-accounts/community-bank-account.html "Royal Bank of Scotland") (i gael bancio am ddim, rhaid i un llofnodwr fod yn gwsmer gyda’r RBS)
-[Virgin Money](https://uk.virginmoney.com/business/charities-clubs-and-societies/clubs-and-societies-account/ "Virgin Money") (dim angen blaendal ond dim ond 10 trafodiad y mis gewch chi eu gwneud)
-[Santander](https://www.santander.co.uk/business/current-accounts/treasurers-current-account "Santander") (yr enw arno yw Cyfrif Cyfredol Trysorydd)
-[Barclays](https://www.barclays.co.uk/business-banking/accounts/community-organisations/#accounts "Barclays") (mae grwpiau cymunedol newydd yn cael 12 mis o fancio am ddim – sgroliwch i lawr)
-[Co-operative Bank](https://www.co-operativebank.co.uk/business/products/current-accounts/community-directplus/ "Co-operative Bank") (ar gyfer elusennau cofrestredig, CICs a chydweithfeydd yn unig)
-[Lloyds Bank](https://www.lloydsbank.com/business/business-accounts/treasurers-account.html "Lloyds Bank") (yr enw arno yw Cyfrif Trysorydd)
-[Bank of Scotland](https://business.bankofscotland.co.uk/business-accounts/community-accounts/treasurers-account.html "Bank of Scotland") (yr enw arno hefyd yw Cyfrif Trysorydd; gall fod yn elusen gofrestredig neu ddim)
-[HSBC](https://www.business.hsbc.uk/en-gb/products/charity-banking-community-account "HSBC") (does dim rhaid i chi fod yn elusen ond cofiwch ddarllen y print mân yn ofalus)
+* [CAF](https://www.cafonline.org/caf-bank/current-account "Charities Aid Foundation") – Charities Aid Foundation (rhaid rhoi blaendal o £1000)
+* [Unity Trust Bank](https://www.unity.co.uk/business-banking/business-current-account/ "Unity Trust Bank") (rhaid rhoi blaendal o £500)
+* [Royal Bank of Scotland](https://www.rbs.co.uk/business/bank-accounts/community-bank-account.html "Royal Bank of Scotland") (i gael bancio am ddim, rhaid i un llofnodwr fod yn gwsmer gyda’r RBS)
+* [Virgin Money](https://uk.virginmoney.com/business/charities-clubs-and-societies/clubs-and-societies-account/ "Virgin Money") (dim angen blaendal ond dim ond 10 trafodiad y mis gewch chi eu gwneud)
+* [Santander](https://www.santander.co.uk/business/current-accounts/treasurers-current-account "Santander") (yr enw arno yw Cyfrif Cyfredol Trysorydd)
+* [Barclays](https://www.barclays.co.uk/business-banking/accounts/community-organisations/#accounts "Barclays") (mae grwpiau cymunedol newydd yn cael 12 mis o fancio am ddim – sgroliwch i lawr)
+* [Co-operative Bank](https://www.co-operativebank.co.uk/business/products/current-accounts/community-directplus/ "Co-operative Bank") (ar gyfer elusennau cofrestredig, CICs a chydweithfeydd yn unig)
+* [Lloyds Bank](https://www.lloydsbank.com/business/business-accounts/treasurers-account.html "Lloyds Bank") (yr enw arno yw Cyfrif Trysorydd)
+* [Bank of Scotland](https://business.bankofscotland.co.uk/business-accounts/community-accounts/treasurers-account.html "Bank of Scotland") (yr enw arno hefyd yw Cyfrif Trysorydd; gall fod yn elusen gofrestredig neu ddim)
+* [HSBC](https://www.business.hsbc.uk/en-gb/products/charity-banking-community-account "HSBC") (does dim rhaid i chi fod yn elusen ond cofiwch ddarllen y print mân yn ofalus)
