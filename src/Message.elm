@@ -18,3 +18,4 @@ type Msg
     | GotActions (Result Http.Error (List Page.Shared.Data.Teaser))
     | UpdateSeed Random.Seed
     | NoOp
+    | Print

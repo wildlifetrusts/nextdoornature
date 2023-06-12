@@ -1,12 +1,13 @@
-module Page.Guide.View exposing (view)
+port module Page.Guide.View exposing (print, view)
 
 import Css exposing (Style, auto, batch, borderBottom3, center, color, column, displayFlex, flexDirection, flexWrap, justifyContent, listStyle, margin2, marginBottom, marginTop, maxWidth, none, paddingLeft, px, rem, solid, wrap, zero)
-import Html.Styled exposing (Html, a, div, h2, img, li, p, text, ul)
+import Html.Styled exposing (Html, a, button, div, h2, img, li, p, text, ul)
 import Html.Styled.Attributes exposing (alt, css, href, src)
+import Html.Styled.Events exposing (onClick)
 import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (Language(..), translate)
 import List
-import Message exposing (Msg)
+import Message exposing (Msg(..))
 import Page.Guide.Data
 import Page.Shared.Data
 import Page.Shared.View
@@ -31,6 +32,7 @@ view language guide allGuides allStories =
                 ( viewImageColumn language guide
                 , [ viewMaybeVideo guide.maybeVideo
                   , viewMaybeAudio guide.maybeAudio
+                  , viewPrintGuide language
                   , viewRelatedGuideTeasers language guide.relatedGuideList allGuides
                   ]
                 , [ viewRelatedStoryTeasers language guide.relatedStoryList allStories ]
@@ -247,6 +249,19 @@ viewStoryImage maybeImage =
         []
 
 
+viewPrintGuide : Language -> Html Msg
+viewPrintGuide language =
+    div [ css [ hideFromPrint ] ]
+        [ h2 []
+            [ text "print some stuff" ]
+        , p
+            []
+            [ button [ onClick Print ] [ text "click here" ]
+            , text "for printable version of this page  which you can easily share with groups or anyone who does not have digital access."
+            ]
+        ]
+
+
 viewStoryTeasersStyle : Style
 viewStoryTeasersStyle =
     batch
@@ -292,3 +307,6 @@ imageCaptionStyle =
 guideTitleStyle : Style
 guideTitleStyle =
     batch [ margin2 (rem 0) auto ]
+
+
+port print : () -> Cmd msg
