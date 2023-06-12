@@ -7,7 +7,7 @@ import Html.Styled.Attributes exposing (css)
 import Message exposing (Msg)
 import Shared exposing (Model)
 import Theme.FooterTemplate as FooterTemplate
-import Theme.Global exposing (borderWrapper, globalStyles, lightTeal)
+import Theme.Global exposing (borderWrapper, globalStyles, lightTeal, withMediaPrint)
 import Theme.HeaderTemplate as HeaderTemplate
 
 
@@ -18,7 +18,7 @@ view model content =
         , div
             [ css [ pageWrapperStyles ] ]
             [ HeaderTemplate.view model
-            , main_ [ css [ mainContainerStyles ] ]
+            , main_ [ css [ mainContainerStyles, withMediaPrint Nothing ] ]
                 [ content
                 ]
             , FooterTemplate.view model.language

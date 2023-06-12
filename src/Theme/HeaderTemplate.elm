@@ -14,7 +14,7 @@ import Page.Shared.Data
 import Route exposing (Route(..))
 import Shared exposing (Model, Request(..))
 import Theme.FluidScale
-import Theme.Global exposing (borderWrapper, centerContent, purple, screenReaderOnly, teal, white, withMediaMobileUp)
+import Theme.Global exposing (borderWrapper, centerContent, hideFromPrint, purple, screenReaderOnly, teal, white, withMediaMobileUp, withMediaPrint)
 
 
 view : Model -> Html Msg
@@ -24,11 +24,11 @@ view model =
         t =
             translate model.language
     in
-    header [ css [ headerOuterStyle ] ]
+    header [ css [ headerOuterStyle, withMediaPrint Nothing ] ]
         [ div [ css [ centerContent ] ]
             [ div [ css [ headerContainerStyle ] ]
                 [ viewSiteTitle (t SiteTitle)
-                , div [ css [ searchButtonsContainerStyle ] ]
+                , div [ css [ searchButtonsContainerStyle, hideFromPrint ] ]
                     [ button [ css [ headerBtnStyle ], onClick LanguageChangeRequested ]
                         [ text (t ChangeLanguage) ]
                     , case model.page of

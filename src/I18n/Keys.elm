@@ -47,6 +47,9 @@ type Key
       --- Guide Page
     | RelatedGuidesHeading
     | RelatedStoriesHeading
+    | GuidePrintHeader
+    | GuideButtonText
+    | GuideParagraphText
       --- Guides Page
     | GuidesTitle
     | GuidesMetaDescription

@@ -1,25 +1,26 @@
-module Page.Guide.View exposing (view)
+port module Page.Guide.View exposing (print, view)
 
-import Css exposing (Style, auto, batch, borderBottom3, center, color, column, displayFlex, flexDirection, flexWrap, justifyContent, listStyle, margin2, marginBottom, marginTop, maxWidth, none, paddingLeft, px, rem, solid, wrap, zero)
-import Html.Styled exposing (Html, a, div, h2, img, li, p, text, ul)
+import Css exposing (Style, auto, backgroundColor, backgroundImage, backgroundPosition, backgroundRepeat, backgroundSize, batch, border, borderBottom3, center, color, column, contain, display, displayFlex, em, ex, flexDirection, flexWrap, fontFamilies, height, inlineBlock, justifyContent, listStyle, margin2, marginBottom, marginLeft, marginTop, maxWidth, noRepeat, none, padding, paddingLeft, paddingRight, property, pseudoElement, px, rem, solid, url, width, wrap, zero)
+import Html.Styled exposing (Html, a, button, div, h2, img, li, p, text, ul)
 import Html.Styled.Attributes exposing (alt, css, href, src)
+import Html.Styled.Events exposing (onClick)
 import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (Language(..), translate)
 import List
-import Message exposing (Msg)
+import Message exposing (Msg(..))
 import Page.Guide.Data
 import Page.Shared.Data
 import Page.Shared.View
 import Page.Story.Data
 import Route exposing (Route(..))
-import Theme.Global exposing (centerContent, contentWrapper, featureImageStyle, pageColumnBlockStyle, pageColumnStyle, primaryHeader, purple, teal, teaserImageStyle, topTwoColumnsWrapperStyle)
+import Theme.Global exposing (centerContent, contentWrapper, featureImageStyle, hideFromPrint, lightTeal, pageColumnBlockStyle, pageColumnStyle, primaryHeader, purple, teal, teaserImageStyle, topTwoColumnsWrapperStyle, withMediaPrint)
 import Theme.Markdown exposing (markdownToHtml)
 
 
 view : Language -> Page.Guide.Data.Guide -> List Page.Guide.Data.GuideListItem -> List Page.Story.Data.StoryTeaser -> Html Msg
 view language guide allGuides allStories =
     div []
-        [ div [ css [ outerBorderStyle ] ]
+        [ div [ css [ outerBorderStyle, withMediaPrint (Just [ marginBottom (rem 0) ]) ] ]
             [ div
                 [ css [ centerContent ] ]
                 [ primaryHeader [ css [ guideTitleStyle ] ] guide.title
@@ -31,6 +32,7 @@ view language guide allGuides allStories =
                 ( viewImageColumn language guide
                 , [ viewMaybeVideo guide.maybeVideo
                   , viewMaybeAudio guide.maybeAudio
+                  , viewPrintGuide language
                   , viewRelatedGuideTeasers language guide.relatedGuideList allGuides
                   ]
                 , [ viewRelatedStoryTeasers language guide.relatedStoryList allStories ]
@@ -77,7 +79,7 @@ viewImageColumn language guide =
                 _ ->
                     CategoryAdminAndInfoName
     in
-    [ div []
+    [ div [ css [ hideFromPrint ] ]
         [ img [ css [ featureImageStyle ], src image.src, alt image.alt ] []
         , case image.maybeCredit of
             Just aCredit ->
@@ -86,7 +88,7 @@ viewImageColumn language guide =
             Nothing ->
                 text ""
         ]
-    , div [] [ text (t InCategory ++ t (categorySlugToKey guide.categorySlug)) ]
+    , div [ css [ hideFromPrint ] ] [ text (t InCategory ++ t (categorySlugToKey guide.categorySlug)) ]
     , div [] (markdownToHtml guide.fullTextMarkdown)
     ]
 
@@ -143,7 +145,7 @@ viewRelatedGuideTeasers language guideTitleList allGuidesSlugTitleList =
             t =
                 translate language
         in
-        div []
+        div [ css [ hideFromPrint ] ]
             [ h2 [] [ text (t RelatedGuidesHeading) ]
             , ul [ css [ listStyleNone ] ]
                 (List.map
@@ -203,7 +205,7 @@ viewRelatedStoryTeasers language storyTitleList allStoryTeasers =
             t =
                 translate language
         in
-        div []
+        div [ css [ hideFromPrint ] ]
             [ h2 [ css [ marginTop zero ] ] [ text (t RelatedStoriesHeading) ]
             , div [ css [ viewStoryTeasersStyle ] ]
                 (relatedStoryItems
@@ -245,6 +247,24 @@ viewStoryImage maybeImage =
     img
         [ alt image.alt, src image.src, css [ teaserImageStyle ] ]
         []
+
+
+viewPrintGuide : Language -> Html Msg
+viewPrintGuide language =
+    let
+        t : Key -> String
+        t =
+            translate language
+    in
+    div [ css [ hideFromPrint ] ]
+        [ h2 []
+            [ text (t GuidePrintHeader) ]
+        , p
+            []
+            [ button [ onClick Print, css [ printButtonStyle ] ] [ text (t GuideButtonText) ]
+            , text (t GuideParagraphText)
+            ]
+        ]
 
 
 viewStoryTeasersStyle : Style
@@ -292,3 +312,29 @@ imageCaptionStyle =
 guideTitleStyle : Style
 guideTitleStyle =
     batch [ margin2 (rem 0) auto ]
+
+
+printButtonStyle : Style
+printButtonStyle =
+    batch
+        [ backgroundColor lightTeal
+        , border (rem 0)
+        , fontFamilies [ "Rubik", "sans-serif" ]
+        , padding (rem 0)
+        , paddingRight (rem 0.2)
+        , pseudoElement "after"
+            [ backgroundImage
+                (url "/images/arrow.svg")
+            , backgroundSize contain
+            , backgroundPosition center
+            , backgroundRepeat noRepeat
+            , display inlineBlock
+            , property "content" "' '"
+            , height (ex 1.5)
+            , width (em 1.0)
+            , marginLeft (em 0.3)
+            ]
+        ]
+
+
+port print : () -> Cmd msg

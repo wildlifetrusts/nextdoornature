@@ -8,18 +8,18 @@ import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (Language, translate)
 import Message exposing (Msg(..))
 import Shared exposing (CookieState)
-import Theme.Global exposing (centerContent, lightTeal, purple, white, withMediaMobileUp)
+import Theme.Global exposing (centerContent, hideFromPrint, lightTeal, purple, white, withMediaMobileUp)
 
 
 viewCookieBanner : Language -> CookieState -> Html Msg
 viewCookieBanner language cookieState =
     if cookieState.cookieBannerIsOpen then
-        div [ css [ viewCookieBannerStyles ] ]
+        div [ css [ viewCookieBannerStyles, hideFromPrint ] ]
             [ viewCookieBannerContent language
             ]
 
     else
-        div [ css [ viewCookieButtonStyles ] ]
+        div [ css [ viewCookieButtonStyles, hideFromPrint ] ]
             [ viewCookieSettingsButton language
             ]
 

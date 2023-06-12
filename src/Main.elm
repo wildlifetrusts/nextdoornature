@@ -228,6 +228,9 @@ update msg model =
         NoOp ->
             ( model, Cmd.none )
 
+        Print ->
+            ( model, Page.Guide.View.print () )
+
 
 openCookieBanner : CookieState -> CookieState
 openCookieBanner oldState =

@@ -7,7 +7,7 @@ import Html.Styled.Attributes exposing (css, href, src)
 import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (Language(..), translate)
 import Theme.FluidScale
-import Theme.Global exposing (centerContent, lightTeal, listStyleNone, purple, teal, white, withMediaMobileUp, withMediaTabletPortraitUp)
+import Theme.Global exposing (centerContent, hideFromPrint, lightTeal, listStyleNone, purple, teal, white, withMediaMobileUp, withMediaTabletPortraitUp)
 
 
 view : Language -> Html msg
@@ -18,7 +18,7 @@ view language =
             translate language
     in
     footer
-        []
+        [ css [ hideFromPrint ] ]
         [ div [ css [ navBorderStyle ] ]
             [ nav [ css [ centerContent, footerNavStyle ] ]
                 (List.map

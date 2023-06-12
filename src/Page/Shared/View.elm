@@ -5,11 +5,12 @@ import Html.Styled exposing (Html, div, iframe, text)
 import Html.Styled.Attributes exposing (attribute, autoplay, css, src, title)
 import Message exposing (Msg)
 import Page.Shared.Data
+import Theme.Global exposing (hideFromPrint)
 
 
 viewVideo : Page.Shared.Data.VideoMeta -> Html Msg
 viewVideo videoMeta =
-    div [ css [ videoContainerStyle ] ]
+    div [ css [ videoContainerStyle, hideFromPrint ] ]
         [ iframe
             [ src videoMeta.src
             , attribute "frameborder" "0"
@@ -25,7 +26,7 @@ viewVideo videoMeta =
 viewAudio : Page.Shared.Data.AudioMeta -> Html Msg
 viewAudio _ =
     div
-        [ css [ embeddedVideoStyle ]
+        [ css [ embeddedVideoStyle, hideFromPrint ]
         ]
         [ text "[fFf] render audio player" ]
 

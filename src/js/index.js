@@ -85,3 +85,7 @@ app.ports.updateAnalyticsEvent.subscribe(function (gaEvent) {
     });
   }
 });
+
+app.ports.print.subscribe(function () {
+  window.print();
+});

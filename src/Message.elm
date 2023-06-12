@@ -17,4 +17,5 @@ type Msg
     | SearchChanged (List Page.Shared.Data.Teaser) String
     | GotActions (Result Http.Error (List Page.Shared.Data.Teaser))
     | UpdateSeed Random.Seed
+    | Print
     | NoOp
