@@ -1,8 +1,8 @@
-module Theme.Global exposing (borderWrapper, centerContent, contentWrapper, featureImageStyle, globalStyles, lightTeal, listStyleNone, pageColumnBlockStyle, pageColumnStyle, primaryHeader, purple, roundedCornerStyle, screenReaderOnly, teal, teaserContainerStyle, teaserImageStyle, teaserRowStyle, topTwoColumnsWrapperStyle, white, withMediaDesktopUp, withMediaMobileUp, withMediaTabletLandscapeUp, withMediaTabletPortraitUp)
+module Theme.Global exposing (borderWrapper, centerContent, contentWrapper, featureImageStyle, globalStyles, hideFromPrint, lightTeal, listStyleNone, pageColumnBlockStyle, pageColumnStyle, primaryHeader, purple, roundedCornerStyle, screenReaderOnly, teal, teaserContainerStyle, teaserImageStyle, teaserRowStyle, topTwoColumnsWrapperStyle, white, withMediaDesktopUp, withMediaMobileUp, withMediaPrint, withMediaTabletLandscapeUp, withMediaTabletPortraitUp)
 
-import Css exposing (Color, Style, absolute, alignItems, auto, backgroundImage, backgroundPosition, backgroundRepeat, backgroundSize, batch, border3, borderBottomRightRadius, borderRadius4, borderTopLeftRadius, borderTopRightRadius, boxSizing, center, color, column, contain, contentBox, cover, cursor, display, displayFlex, em, ex, flex, flex3, flexDirection, flexStart, flexWrap, fontFamilies, height, hex, hidden, inherit, inlineBlock, int, justifyContent, lastChild, left, listStyle, margin, margin2, margin3, marginBottom, marginLeft, marginRight, marginTop, maxWidth, minWidth, noRepeat, noWrap, none, overflow, padding, padding2, paddingLeft, pct, pointer, position, property, pseudoElement, px, rem, row, solid, textDecoration, top, url, width, zero)
+import Css exposing (Color, Style, absolute, alignItems, auto, backgroundColor, backgroundImage, backgroundPosition, backgroundRepeat, backgroundSize, batch, border, border3, borderBottomRightRadius, borderRadius4, borderTopLeftRadius, borderTopRightRadius, boxSizing, center, color, column, contain, contentBox, cover, cursor, display, displayFlex, em, ex, flex, flex3, flexDirection, flexStart, flexWrap, fontFamilies, height, hex, hidden, inherit, inlineBlock, int, justifyContent, lastChild, left, listStyle, margin, margin2, margin3, marginBottom, marginLeft, marginRight, marginTop, maxContent, maxWidth, minWidth, noRepeat, noWrap, none, overflow, padding, padding2, paddingLeft, pct, pointer, position, property, pseudoElement, px, rem, row, solid, textDecoration, top, underline, url, width, zero)
 import Css.Global exposing (global, typeSelector)
-import Css.Media as Media exposing (only, screen, withMedia)
+import Css.Media as Media exposing (only, print, screen, withMedia)
 import Html.Styled exposing (Html, h1, text)
 import Html.Styled.Attributes exposing (id, tabindex)
 import Theme.FluidScale
@@ -68,6 +68,30 @@ withMediaDesktopUp =
     withMedia [ only screen [ Media.minWidth (px maxSmallDesktop) ] ]
 
 
+withMediaPrint : Maybe (List Style) -> Style
+withMediaPrint styles =
+    case styles of
+        Just s ->
+            withMedia [ only print [] ] <|
+                [ backgroundColor white
+                , color black
+                , border (px 0)
+                ]
+                    ++ s
+
+        Nothing ->
+            withMedia [ only print [] ]
+                [ backgroundColor white
+                , color black
+                , border (px 0)
+                ]
+
+
+hideFromPrint : Style
+hideFromPrint =
+    withMedia [ only print [] ] [ display none ]
+
+
 
 -- Colours
 
@@ -90,6 +114,11 @@ lightTeal =
 white : Color
 white =
     hex "ffffff"
+
+
+black : Color
+black =
+    hex "000000"
 
 
 
@@ -129,6 +158,7 @@ globalStyles =
         [ typeSelector "body"
             [ fontFamilies [ "Rubik", "sans-serif" ]
             , margin zero
+            , withMediaPrint Nothing
             ]
         , typeSelector "h1"
             [ fontFamilies [ "Adelle", "serif" ]
@@ -136,6 +166,7 @@ globalStyles =
             , margin3 (rem 0) auto (rem 1.5)
             , Theme.FluidScale.fontSizeExtraLarge
             , width (pct 100)
+            , withMediaPrint Nothing
             ]
         , typeSelector "h2"
             [ fontFamilies [ "Adelle", "serif" ]
@@ -143,18 +174,21 @@ globalStyles =
             , margin3 (rem 0) auto (rem 1.5)
             , Theme.FluidScale.fontSizeLarge
             , width (pct 100)
+            , withMediaPrint Nothing
             ]
         , typeSelector "h3"
             [ fontFamilies [ "Adelle", "serif" ]
             , color purple
             , margin3 (rem 0) auto (rem 1)
             , Theme.FluidScale.fontSizeMedium
+            , withMediaPrint Nothing
             ]
         , typeSelector "h4"
             [ fontFamilies [ "Adelle", "serif" ]
             , color purple
             , margin3 (rem 0) auto (rem 1)
             , Theme.FluidScale.fontSizeBase
+            , withMediaPrint Nothing
             ]
         , typeSelector "a"
             [ color purple
@@ -171,6 +205,15 @@ globalStyles =
                 , width (em 1.0)
                 , marginLeft (em 0.3)
                 ]
+            , withMediaPrint <|
+                Just
+                    [ textDecoration underline
+                    , pseudoElement "after"
+                        [ Css.property "content" """ " (" attr(href) ")" """
+                        , backgroundImage none
+                        , minWidth maxContent
+                        ]
+                    ]
             ]
         , typeSelector "b"
             []

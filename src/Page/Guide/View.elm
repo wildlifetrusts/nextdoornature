@@ -12,14 +12,14 @@ import Page.Shared.Data
 import Page.Shared.View
 import Page.Story.Data
 import Route exposing (Route(..))
-import Theme.Global exposing (centerContent, contentWrapper, featureImageStyle, pageColumnBlockStyle, pageColumnStyle, primaryHeader, purple, teal, teaserImageStyle, topTwoColumnsWrapperStyle)
+import Theme.Global exposing (centerContent, contentWrapper, featureImageStyle, hideFromPrint, pageColumnBlockStyle, pageColumnStyle, primaryHeader, purple, teal, teaserImageStyle, topTwoColumnsWrapperStyle, withMediaPrint)
 import Theme.Markdown exposing (markdownToHtml)
 
 
 view : Language -> Page.Guide.Data.Guide -> List Page.Guide.Data.GuideListItem -> List Page.Story.Data.StoryTeaser -> Html Msg
 view language guide allGuides allStories =
     div []
-        [ div [ css [ outerBorderStyle ] ]
+        [ div [ css [ outerBorderStyle, withMediaPrint <| Just [ marginBottom (rem 0) ] ] ]
             [ div
                 [ css [ centerContent ] ]
                 [ primaryHeader [ css [ guideTitleStyle ] ] guide.title
@@ -77,7 +77,7 @@ viewImageColumn language guide =
                 _ ->
                     CategoryAdminAndInfoName
     in
-    [ div []
+    [ div [ css [ hideFromPrint ] ]
         [ img [ css [ featureImageStyle ], src image.src, alt image.alt ] []
         , case image.maybeCredit of
             Just aCredit ->
@@ -86,7 +86,7 @@ viewImageColumn language guide =
             Nothing ->
                 text ""
         ]
-    , div [] [ text (t InCategory ++ t (categorySlugToKey guide.categorySlug)) ]
+    , div [ css [ hideFromPrint ] ] [ text (t InCategory ++ t (categorySlugToKey guide.categorySlug)) ]
     , div [] (markdownToHtml guide.fullTextMarkdown)
     ]
 
@@ -143,7 +143,7 @@ viewRelatedGuideTeasers language guideTitleList allGuidesSlugTitleList =
             t =
                 translate language
         in
-        div []
+        div [ css [ hideFromPrint ] ]
             [ h2 [] [ text (t RelatedGuidesHeading) ]
             , ul [ css [ listStyleNone ] ]
                 (List.map
@@ -203,7 +203,7 @@ viewRelatedStoryTeasers language storyTitleList allStoryTeasers =
             t =
                 translate language
         in
-        div []
+        div [ css [ hideFromPrint ] ]
             [ h2 [ css [ marginTop zero ] ] [ text (t RelatedStoriesHeading) ]
             , div [ css [ viewStoryTeasersStyle ] ]
                 (relatedStoryItems
