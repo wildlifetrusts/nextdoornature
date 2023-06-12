@@ -74,11 +74,11 @@ form model =
 
 imageList : List ( String, String )
 imageList =
-    [ ( "/images/submitStory/david-clode-eL4ADAsiOR8-unsplash.jpg", "" )
-    , ( "/images/submitStory/steve-adams-bY_q4VodUc0-unsplash.jpg", "" )
-    , ( "/images/submitStory/kenny-eliason-qo6_mo9dsYg-unsplash.jpg", "" )
-    , ( "/images/submitStory/sincerely-media-Agr1YTrzYPI-unsplash.jpg", "" )
-    , ( "/images/submitStory/ocg-saving-the-ocean-bWAArZ5M4Ag-unsplash.jpg", "" )
+    [ ( "david-clode-eL4ADAsiOR8-unsplash.jpg", "" )
+    , ( "steve-adams-bY_q4VodUc0-unsplash.jpg", "" )
+    , ( "kenny-eliason-qo6_mo9dsYg-unsplash.jpg", "" )
+    , ( "sincerely-media-Agr1YTrzYPI-unsplash.jpg", "" )
+    , ( "ocg-saving-the-ocean-bWAArZ5M4Ag-unsplash.jpg", "" )
     ]
 
 
@@ -118,4 +118,4 @@ imageGrid images =
 
 gridItem : String -> String -> Html Msg
 gridItem src alt =
-    div [] [ img [ css [ roundedCornerStyle, submitImgStyle ], Attr.src src, Attr.alt alt ] [] ]
+    div [] [ img [ css [ roundedCornerStyle, submitImgStyle ], Attr.src ("/images/submitStory/" ++ src), Attr.alt alt ] [] ]
