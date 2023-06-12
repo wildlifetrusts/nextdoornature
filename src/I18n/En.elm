@@ -18,29 +18,17 @@ enStrings key =
         ---
         -- 404 content
         ---
-        Guide404Title ->
-            "[cCc] Sorry, we can't find that guide"
+        ResourceNotFoundTitle ->
+            "[cCc] Oops!"
 
-        Guide404Slug ->
-            "guide-not-found"
+        ResourceNotFoundText ->
+            "[cCc] Looks like we've popped up on the wrong page"
 
-        Guide404Body ->
-            "[cCc] Try searching again [home](\"\\\")"
+        ResourceNotFoundLinkText ->
+            "[cCc] Back to home page"
 
-        Story404Title ->
-            "[cCc] Sorry, we can't find that story"
-
-        Story404Body ->
-            "[cCc] Try searching again [home](\"\\\")"
-
-        AncillaryPage404Title ->
-            "[cCc] Sorry, we can't find that page"
-
-        AncillaryPage404Slug ->
-            "page-not-found"
-
-        AncillaryPage404Body ->
-            "[cCc] Try searching again [home](\"\\\")"
+        ResourceNotFoundLinkPath ->
+            "/"
 
         ---
         -- Footer
@@ -136,6 +124,12 @@ enStrings key =
 
         WelcomeP3 ->
             "[cCc] The goal of Nextdoor Nature is to get at least 1 in 4 people across the UK taking Action for Nature. This hub aims to support anyone who is interested in finding out what they can do, and how they can get other people involved."
+
+        GuideHighlightsSubtitle ->
+            "Guide highlights"
+
+        StoryHighlightsSubtitle ->
+            "Story highlights"
 
         ---
         -- Guide Page

@@ -1,31 +1,31 @@
-module Page.Shared.Data exposing (AudioMeta, GuideTeaser, GuideTeaserImage, VideoMeta, audioDecoder, defaultTeaserImage, guideTeaserImageDecoder, videoDecoder)
+module Page.Shared.Data exposing (AudioMeta, Teaser, TeaserImage, VideoMeta, audioDecoder, defaultTeaserImage, guideTeaserImageDecoder, videoDecoder)
 
 import Json.Decode
 
 
-type alias GuideTeaserImage =
+type alias TeaserImage =
     { src : String, alt : String }
 
 
-defaultTeaserImage : GuideTeaserImage
+defaultTeaserImage : TeaserImage
 defaultTeaserImage =
     { src = "/images/default-guide-image.jpg", alt = "" }
 
 
-guideTeaserImageDecoder : Json.Decode.Decoder GuideTeaserImage
+guideTeaserImageDecoder : Json.Decode.Decoder TeaserImage
 guideTeaserImageDecoder =
-    Json.Decode.map2 GuideTeaserImage
+    Json.Decode.map2 TeaserImage
         (Json.Decode.field "src" Json.Decode.string)
         (Json.Decode.field "alt" Json.Decode.string)
 
 
-type alias GuideTeaser =
+type alias Teaser =
     { title : String
 
     -- This will maybe turn into Url.Url when we include external resources
     , url : String
     , summary : String
-    , maybeImage : Maybe GuideTeaserImage
+    , maybeImage : Maybe TeaserImage
     }
 
 

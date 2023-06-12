@@ -5,7 +5,7 @@ import Browser.Dom
 import Browser.Navigation
 import CookieBanner exposing (saveConsent)
 import GoogleAnalytics
-import Html.Styled exposing (Html, toUnstyled)
+import Html.Styled exposing (Html, div, text, toUnstyled)
 import Http
 import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (Language(..), translate)
@@ -17,10 +17,12 @@ import Page.Guide.View
 import Page.Guides.Data
 import Page.Guides.View
 import Page.Index
+import Page.NotFound exposing (resourceNotFound)
 import Page.Story.Data
 import Page.Story.View
 import Page.SubmitStory.View
 import Page.View
+import Random
 import Route exposing (Route(..))
 import Shared exposing (CookieState, Model, Request(..))
 import Task
@@ -76,8 +78,12 @@ init flags url key =
       , search = []
       , query = ""
       , externalActions = Loading
+      , seed = Nothing
       }
-    , getActions
+    , Cmd.batch
+        [ getActions
+        , Random.generate UpdateSeed Random.independentSeed
+        ]
     )
 
 
@@ -193,6 +199,9 @@ update msg model =
         SearchChanged searchResult query ->
             ( { model | search = searchResult, query = query }, Cmd.none )
 
+        UpdateSeed seed ->
+            ( { model | seed = Just seed }, Cmd.none )
+
         NoOp ->
             ( model, Cmd.none )
 
@@ -230,24 +239,34 @@ view model =
 
         Story slug ->
             let
-                story : Page.Story.Data.Story
-                story =
+                maybeStory : Maybe Page.Story.Data.Story
+                maybeStory =
                     Page.Story.Data.storyFromSlug model.language model.content.stories slug
             in
-            Theme.PageTemplate.view model (Page.Story.View.view model.language story)
+            Theme.PageTemplate.view model <|
+                case maybeStory of
+                    Just story ->
+                        Page.Story.View.view model.language story
+
+                    Nothing ->
+                        resourceNotFound model.language
 
         Guide slug ->
             let
-                guide : Page.Guide.Data.Guide
-                guide =
+                maybeGuide : Maybe Page.Guide.Data.Guide
+                maybeGuide =
                     Page.Guide.Data.guideFromSlug model.language model.content.guides slug
             in
-            Theme.PageTemplate.view model
-                (Page.Guide.View.view model.language
-                    guide
-                    (Page.Guide.Data.allGuidesSlugTitleList model.content.guides)
-                    (Page.Story.Data.allStoryTeaserList model.content.stories)
-                )
+            Theme.PageTemplate.view model <|
+                case maybeGuide of
+                    Just guide ->
+                        Page.Guide.View.view model.language
+                            guide
+                            (Page.Guide.Data.allGuidesSlugTitleList model.content.guides)
+                            (Page.Story.Data.allStoryTeaserList model.content.stories)
+
+                    Nothing ->
+                        resourceNotFound model.language
 
         SubmitStory ->
             Theme.PageTemplate.view model (Page.SubmitStory.View.view model)
@@ -257,8 +276,14 @@ view model =
 
         Page slug ->
             let
-                page : Page.Data.Page
-                page =
+                maybePage : Maybe Page.Data.Page
+                maybePage =
                     Page.Data.pageFromSlug model.language model.content.pages slug
             in
-            Theme.PageTemplate.view model (Page.View.view page)
+            Theme.PageTemplate.view model <|
+                case maybePage of
+                    Just page ->
+                        Page.View.view page
+
+                    Nothing ->
+                        resourceNotFound model.language

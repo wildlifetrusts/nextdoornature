@@ -3,7 +3,7 @@ title: Bank Accounts For Groups
 summary: Information about types of bank accounts for community groups, and what
   you need to open one.
 image:
-  src: /public/images/uploads/bank-accounts_orig-2-.jpg
+  src: /images/uploads/bank-accounts_orig-2-.jpg
   alt: A pile of bank statements
   credit: Photo copyright Autumn Barlow/The Wildlife Trusts 2023
 relatedGuides:

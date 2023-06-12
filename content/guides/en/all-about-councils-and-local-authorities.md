@@ -2,9 +2,12 @@
 title: All About Councils and Local Authorities
 summary: "A brief overview of how councils work in the UK            "
 image:
-  src: /public/images/uploads/councils-and-las_orig-2-.jpg
+  src: /images/uploads/councils-and-las_orig-2-.jpg
   alt: Local maps and street atlases
   credit: Photo copyright Autumn Barlow/The Wildlife Trusts 2023
+video:
+  src: https://youtu.be/pZDv-ri2GOs
+  title: About Councils and Local Authorities. A Nextdoor Nature Video.
 ---
 ## What do councils and Local Authorities do?
 

@@ -5,14 +5,10 @@ type Key
     = SiteTitle
     | ChangeLanguage
       --- 404 content
-    | Story404Title
-    | Story404Body
-    | Guide404Title
-    | Guide404Slug
-    | Guide404Body
-    | AncillaryPage404Slug
-    | AncillaryPage404Title
-    | AncillaryPage404Body
+    | ResourceNotFoundTitle
+    | ResourceNotFoundText
+    | ResourceNotFoundLinkText
+    | ResourceNotFoundLinkPath
       --- Footer
     | FooterTitleColumnA
     | FooterTitleColumnB
@@ -43,6 +39,8 @@ type Key
     | WelcomeP1
     | WelcomeP2
     | WelcomeP3
+    | GuideHighlightsSubtitle
+    | StoryHighlightsSubtitle
       --- Guide Page
     | RelatedGuidesHeading
     | RelatedStoriesHeading

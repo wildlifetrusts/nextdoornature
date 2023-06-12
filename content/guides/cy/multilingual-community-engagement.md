@@ -2,9 +2,12 @@
 title: Ymgysylltu Cymunedol Amlieithog
 summary: Crynodeb am weithio gyda grwpiau lle siaredir llawer o ieithoedd.
 image:
-  src: /public/images/uploads/workingwithmanylanguages_orig-2-.jpg
+  src: /images/uploads/workingwithmanylanguages_orig-2-.jpg
   alt: A stack of small dictionaries in other languages
   credit: Photo copyright Autumn Barlow/The Wildlife Trusts 2023
+video:
+  src: https://youtu.be/Tk7InQgM7PE
+  title: Ymgysylltu Cymunedol Amlieithog. Fideo Natur Drws Nesaf.
 ---
 ## Adnabod yr angen 
 

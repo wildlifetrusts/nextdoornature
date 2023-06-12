@@ -3,7 +3,7 @@ title: The Quaker Meeting House Garden
 who: Local communities and the Society of Friends
 location: Norton, Teesside
 images:
-  - src: /public/images/uploads/lornajones_rhiannonmurphy_seanmurphy_helendeehan_teeside_1-1-.jpg
+  - src: /images/uploads/lornajones_rhiannonmurphy_seanmurphy_helendeehan_teeside_1-1-.jpg
     alt: A group of local people sitting around a table covered in paperwork and
       plans
     credit: Photo copyright Autumn Barlow/The Wildlife Trusts 2022

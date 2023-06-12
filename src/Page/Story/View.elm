@@ -1,14 +1,14 @@
 module Page.Story.View exposing (view)
 
 import Css exposing (Style, batch, margin3, pct, rem, width)
-import Html.Styled exposing (Html, div, h1, h3, img, p, text)
+import Html.Styled exposing (Html, div, h3, img, p, text)
 import Html.Styled.Attributes exposing (alt, css, src)
 import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (Language(..), translate)
 import Message exposing (Msg)
 import Page.Guides.View
 import Page.Story.Data
-import Theme.Global exposing (centerContent, contentWrapper, featureImageStyle, pageColumnStyle, primaryHeader, roundedCornerStyle, topTwoColumnsWrapperStyle)
+import Theme.Global exposing (centerContent, contentWrapper, featureImageStyle, pageColumnStyle, primaryHeader, topTwoColumnsWrapperStyle)
 import Theme.Markdown exposing (markdownToHtml)
 
 
@@ -49,7 +49,7 @@ view language story =
                 , div [ css [ pageColumnStyle ] ]
                     (markdownToHtml story.fullTextMarkdown)
                 ]
-            , viewColumnWrapper (Page.Guides.View.viewGuideTeaserList False story.relatedGuideList)
+            , viewColumnWrapper (Page.Guides.View.viewTeaserList False story.relatedGuideList)
             ]
         ]
 
@@ -59,7 +59,7 @@ viewImages imageList =
     List.map
         (\image ->
             div []
-                [ img [ src image.src, alt image.alt, css [ roundedCornerStyle, featureImageStyle ] ] []
+                [ img [ src image.src, alt image.alt, css [ featureImageStyle ] ] []
                 , viewImageCaption (maybeCaptions image.maybeCaption image.maybeCredit)
                 ]
         )

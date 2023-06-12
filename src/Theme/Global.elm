@@ -1,6 +1,6 @@
 module Theme.Global exposing (borderWrapper, centerContent, contentWrapper, featureImageStyle, globalStyles, lightTeal, listStyleNone, pageColumnBlockStyle, pageColumnStyle, primaryHeader, purple, roundedCornerStyle, screenReaderOnly, teal, teaserContainerStyle, teaserImageStyle, teaserRowStyle, teasersContainerStyle, topTwoColumnsWrapperStyle, white, withMediaMobileUp, withMediaTabletPortraitUp)
 
-import Css exposing (Color, Style, absolute, alignItems, auto, backgroundImage, backgroundPosition, backgroundRepeat, backgroundSize, batch, border3, borderBottomRightRadius, borderTopLeftRadius, borderTopRightRadius, boxSizing, center, color, column, contain, contentBox, cover, cursor, display, displayFlex, em, ex, flex, flex3, flexDirection, flexStart, flexWrap, fontFamilies, height, hex, hidden, inherit, inlineBlock, int, justifyContent, lastChild, left, listStyle, margin, margin2, margin3, marginBottom, marginLeft, marginRight, marginTop, maxWidth, minWidth, noRepeat, noWrap, none, overflow, padding, padding2, paddingLeft, pct, pointer, position, property, pseudoElement, px, rem, row, solid, spaceBetween, textDecoration, top, url, width, wrap, zero)
+import Css exposing (Color, Style, absolute, alignItems, auto, backgroundImage, backgroundPosition, backgroundRepeat, backgroundSize, batch, border3, borderBottomRightRadius, borderRadius4, borderTopLeftRadius, borderTopRightRadius, boxSizing, center, color, column, contain, contentBox, cover, cursor, display, displayFlex, em, ex, flex, flex3, flexDirection, flexStart, flexWrap, fontFamilies, height, hex, hidden, inherit, inlineBlock, int, justifyContent, lastChild, left, listStyle, margin, margin2, margin3, marginBottom, marginLeft, marginRight, marginTop, maxWidth, minWidth, noRepeat, noWrap, none, overflow, padding, padding2, paddingLeft, pct, pointer, position, property, pseudoElement, px, rem, row, solid, spaceBetween, textDecoration, top, url, width, wrap, zero)
 import Css.Global exposing (global, typeSelector)
 import Css.Media as Media exposing (only, screen, withMedia)
 import Html.Styled exposing (Html, h1, text)
@@ -108,9 +108,7 @@ roundedCornerValue =
 roundedCornerStyle : Style
 roundedCornerStyle =
     batch
-        [ borderTopLeftRadius (rem roundedCornerValue)
-        , borderTopRightRadius (rem roundedCornerValue)
-        , borderBottomRightRadius (rem roundedCornerValue)
+        [ borderRadius4 (rem roundedCornerValue) (rem roundedCornerValue) (rem roundedCornerValue) (rem 0)
         , overflow hidden
         ]
 
@@ -270,9 +268,10 @@ teasersContainerStyle =
 featureImageStyle : Style
 featureImageStyle =
     batch
-        [ width (pct 100)
-        , height auto
+        [ height auto
+        , roundedCornerStyle
         , teaserRowStyle
+        , width (pct 100)
         ]
 
 
@@ -285,7 +284,9 @@ teaserImageStyle =
         , maxWidth (px (maxMobile / 3))
         , property "aspect-ratio" "1/1"
         , property "object-fit" "cover"
+        , roundedCornerStyle
         , width (pct 100)
+        , marginBottom (rem 1)
         ]
 
 
@@ -315,7 +316,7 @@ contentWrapper =
         , flexDirection column
         , flexWrap noWrap
         , justifyContent center
-        , width auto
+        , width (pct 100)
         , withMediaTabletLandscapeUp
             [ alignItems flexStart
             , flexDirection row

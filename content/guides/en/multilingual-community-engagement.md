@@ -2,9 +2,12 @@
 title: Multilingual Community Engagement
 summary: A summary about working with groups where many languages are spoken.
 image:
-  src: /public/images/uploads/workingwithmanylanguages_orig-2-.jpg
+  src: /images/uploads/workingwithmanylanguages_orig-2-.jpg
   alt: A stack of small dictionaries in other languages
   credit: Photo copyright Autumn Barlow/The Wildlife Trusts 2023
+video:
+  src: https://youtu.be/Tk7InQgM7PE
+  title: Working with many languages. A Nextdoor Nature Video.
 ---
 ## Identify the need
 
