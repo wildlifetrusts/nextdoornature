@@ -1,6 +1,6 @@
 port module Page.Guide.View exposing (print, view)
 
-import Css exposing (Style, auto, batch, borderBottom3, center, color, column, displayFlex, flexDirection, flexWrap, justifyContent, listStyle, margin2, marginBottom, marginTop, maxWidth, none, paddingLeft, px, rem, solid, wrap, zero)
+import Css exposing (Style, auto, backgroundColor, backgroundImage, backgroundPosition, backgroundRepeat, backgroundSize, batch, border, borderBottom3, center, color, column, contain, display, displayFlex, em, ex, flexDirection, flexWrap, fontFamilies, height, inlineBlock, justifyContent, listStyle, margin2, marginBottom, marginLeft, marginTop, maxWidth, noRepeat, none, padding, paddingLeft, paddingRight, property, pseudoElement, px, rem, solid, url, width, wrap, zero)
 import Html.Styled exposing (Html, a, button, div, h2, img, li, p, text, ul)
 import Html.Styled.Attributes exposing (alt, css, href, src)
 import Html.Styled.Events exposing (onClick)
@@ -13,7 +13,7 @@ import Page.Shared.Data
 import Page.Shared.View
 import Page.Story.Data
 import Route exposing (Route(..))
-import Theme.Global exposing (centerContent, contentWrapper, featureImageStyle, hideFromPrint, pageColumnBlockStyle, pageColumnStyle, primaryHeader, purple, teal, teaserImageStyle, topTwoColumnsWrapperStyle, withMediaPrint)
+import Theme.Global exposing (centerContent, contentWrapper, featureImageStyle, hideFromPrint, lightTeal, pageColumnBlockStyle, pageColumnStyle, primaryHeader, purple, teal, teaserImageStyle, topTwoColumnsWrapperStyle, withMediaPrint)
 import Theme.Markdown exposing (markdownToHtml)
 
 
@@ -251,13 +251,18 @@ viewStoryImage maybeImage =
 
 viewPrintGuide : Language -> Html Msg
 viewPrintGuide language =
+    let
+        t : Key -> String
+        t =
+            translate language
+    in
     div [ css [ hideFromPrint ] ]
         [ h2 []
-            [ text "print some stuff" ]
+            [ text (t GuidePrintHeader) ]
         , p
             []
-            [ button [ onClick Print ] [ text "click here" ]
-            , text "for printable version of this page  which you can easily share with groups or anyone who does not have digital access."
+            [ button [ onClick Print, css [ printButtonStyle ] ] [ text (t GuideButtonText) ]
+            , text (t GuideParagraphText)
             ]
         ]
 
@@ -307,6 +312,29 @@ imageCaptionStyle =
 guideTitleStyle : Style
 guideTitleStyle =
     batch [ margin2 (rem 0) auto ]
+
+
+printButtonStyle : Style
+printButtonStyle =
+    batch
+        [ backgroundColor lightTeal
+        , border (rem 0)
+        , fontFamilies [ "Rubik", "sans-serif" ]
+        , padding (rem 0)
+        , paddingRight (rem 0.2)
+        , pseudoElement "after"
+            [ backgroundImage
+                (url "/images/arrow.svg")
+            , backgroundSize contain
+            , backgroundPosition center
+            , backgroundRepeat noRepeat
+            , display inlineBlock
+            , property "content" "' '"
+            , height (ex 1.5)
+            , width (em 1.0)
+            , marginLeft (em 0.3)
+            ]
+        ]
 
 
 port print : () -> Cmd msg

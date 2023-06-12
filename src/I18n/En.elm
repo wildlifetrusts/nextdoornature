@@ -145,6 +145,15 @@ enStrings key =
         RelatedStoriesHeading ->
             "Real Stories"
 
+        GuidePrintHeader ->
+            "Printable verison"
+
+        GuideButtonText ->
+            "Click here"
+
+        GuideParagraphText ->
+            "for a printable version of this page, which you can easily share with groups or anyone who does not have digital access"
+
         ---
         -- Guides Page
         ---
