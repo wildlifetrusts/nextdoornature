@@ -23,6 +23,8 @@ type Key
     | FooterFindYourLocalTrustLink
     | FooterPrivacyPolicyText
     | FooterPrivacyPolicyLink
+    | FooterHowToUseThisSiteText
+    | FooterHowToUseThisSiteLink
     | FooterSiteLogo
     | FooterCharityInfo
     | RegisteredCharityNumber
