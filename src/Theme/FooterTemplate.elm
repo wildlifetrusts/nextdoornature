@@ -81,6 +81,7 @@ footerNavigationContent =
             [ { text = FooterVisitWebsiteText, href = FooterVisitWebsiteLink }
             , { text = FooterAboutText, href = FooterAboutLink }
             , { text = FooterPrivacyPolicyText, href = FooterPrivacyPolicyLink }
+            , { text = FooterHowToUseThisSiteText, href = FooterHowToUseThisSiteLink }
             ]
       }
     , { title = FooterTitleColumnB

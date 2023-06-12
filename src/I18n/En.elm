@@ -77,6 +77,12 @@ enStrings key =
         FooterPrivacyPolicyLink ->
             "/privacy-policy"
 
+        FooterHowToUseThisSiteText ->
+            "[cCc] How to use this site"
+
+        FooterHowToUseThisSiteLink ->
+            "/how-to-use-this-site"
+
         FooterSiteLogo ->
             "Nextdoor Nature"
 
