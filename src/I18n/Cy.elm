@@ -42,6 +42,12 @@ cyStrings key =
         FooterTitleColumnC ->
             "[cCc] 🦾🦾🦾🦾🦾🦾"
 
+        FooterHowToUseThisSiteText ->
+            "[cCc] How to use this site CY"
+
+        FooterHowToUseThisSiteLink ->
+            "/how-to-use-this-site"
+
         FooterVisitWebsiteText ->
             "[cCc] 🌳🌲🌲🌳🌳🌲🐿️🌳🌲🌳🌳"
 
