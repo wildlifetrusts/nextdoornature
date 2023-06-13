@@ -13,7 +13,9 @@ relatedGuides:
   - "Finding Funding "
 relatedStories:
   - Test story with minimal fields
+customCall: "[cCc] testing custom submission text"
 category: admin-and-info
+Category: admin-and-info
 ---
 
 \#﻿# Test guide with lots of info
