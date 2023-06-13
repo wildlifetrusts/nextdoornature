@@ -48,6 +48,9 @@ type Key
     | RelatedGuidesHeading
     | RelatedStoriesHeading
     | GuidePrintHeader
+    | GuideVideoHeader
+    | GuideAudioHeader
+    | GuideTextHeader
     | GuideButtonText
     | GuideParagraphText
       --- Guides Page

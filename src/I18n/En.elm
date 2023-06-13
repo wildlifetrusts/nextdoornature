@@ -154,6 +154,15 @@ enStrings key =
         GuidePrintHeader ->
             "Printable verison"
 
+        GuideVideoHeader ->
+            "[cCc] Video guide"
+
+        GuideAudioHeader ->
+            "[cCc] Audio guide"
+
+        GuideTextHeader ->
+            "[cCc] Text guide"
+
         GuideButtonText ->
             "Click here"
 
