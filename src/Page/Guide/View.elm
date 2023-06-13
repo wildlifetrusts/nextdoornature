@@ -19,6 +19,10 @@ import Theme.Markdown exposing (markdownToHtml)
 
 view : Language -> Page.Guide.Data.Guide -> List Page.Guide.Data.GuideListItem -> List Page.Story.Data.StoryTeaser -> Html Msg
 view language guide allGuides allStories =
+    let
+        call =
+            Maybe.withDefault (translate language HomeCallForStoryP) guide.customCall
+    in
     div []
         [ div [ css [ outerBorderStyle, withMediaPrint (Just [ marginBottom (rem 0) ]) ] ]
             [ div
@@ -35,7 +39,7 @@ view language guide allGuides allStories =
                   , viewPrintGuide language
                   , viewRelatedGuideTeasers language guide.relatedGuideList allGuides
                   ]
-                , [ viewRelatedStoryTeasers language guide.relatedStoryList allStories ]
+                , [ viewRelatedStoryTeasers language guide.relatedStoryList allStories, Page.Shared.View.viewCallForStory language call ]
                 )
             ]
         ]
