@@ -5,6 +5,7 @@ location: In the United Kingdom
 images: []
 summary: This is test story content, generated to populate the site before real
   content goes in.
+customCall: "[cCc] have you ever set up a test story?"
 ---
 
 A test story full of inspiration.
