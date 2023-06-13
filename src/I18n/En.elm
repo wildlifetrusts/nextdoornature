@@ -12,6 +12,9 @@ enStrings key =
         GuidesMetaDescription ->
             "[cCc] Description for the guides search page"
 
+        CallForStoryP ->
+            " If you would like to submit a case study like this we would love to hear from your [cCc]"
+
         ---
         -- Header
         ---
@@ -136,8 +139,8 @@ enStrings key =
         CallForStoryHeading ->
             "Share your story!"
 
-        CallForStoryP ->
-            "[cCc] Have done something great for nature in your community? We would love to share your experience to help others, including any challenges you faced or hurdles you had to overcome."
+        HomeCallForStoryP ->
+            "[cCc] Have you done something great for nature in your community? What challenges or hurdles did you overcome?"
 
         CallForStoryLinkText ->
             "Send us your story"
