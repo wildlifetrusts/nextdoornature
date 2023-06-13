@@ -30,12 +30,12 @@ view model =
     in
     div [ css [ centerContent ] ]
         [ primaryHeader [] page.title
-        , submitFlex model page
+        , viewSubmitFlex model page
         ]
 
 
-submitFlex : Model -> Page.Data.Page -> Html Msg
-submitFlex model page =
+viewSubmitFlex : Model -> Page.Data.Page -> Html Msg
+viewSubmitFlex model page =
     div
         [ css
             [ batch
@@ -45,26 +45,26 @@ submitFlex model page =
                 ]
             ]
         ]
-        [ description page
-        , form model
-        , imageGrid imageList
+        [ viewDescription page
+        , viewForm model
+        , viewImageGrid imageList
         ]
 
 
-description : Page.Data.Page -> Html Msg
-description page =
-    div [ css [ flexChild ] ]
+viewDescription : Page.Data.Page -> Html Msg
+viewDescription page =
+    div [ css [ flexChildStyle ] ]
         (markdownToHtml page.fullTextMarkdown)
 
 
-form : Model -> Html Msg
-form model =
+viewForm : Model -> Html Msg
+viewForm model =
     let
         t : Key -> String
         t =
             translate model.language
     in
-    div [ css [ batch [ width (pct 100) ], flexChild ] ]
+    div [ css [ batch [ width (pct 100) ], flexChildStyle ] ]
         [ h2 [] [ text (t SubmitFormHeading) ]
         , iframe
             [ Attr.src (t SubmitFormSrc)
@@ -95,8 +95,8 @@ submitImgStyle =
         ]
 
 
-submitImgGrid : Style
-submitImgGrid =
+submitImgGridStyle : Style
+submitImgGridStyle =
     batch
         [ property "display" "grid"
         , property "grid-template-columns" "repeat(auto-fit, minmax(290px, 1fr))"
@@ -104,8 +104,8 @@ submitImgGrid =
         ]
 
 
-flexChild : Style
-flexChild =
+flexChildStyle : Style
+flexChildStyle =
     batch
         [ flexShrink (int 1)
         , flexGrow (int 1)
@@ -113,12 +113,12 @@ flexChild =
         ]
 
 
-imageGrid : List ( String, String ) -> Html Msg
-imageGrid images =
-    div [ css [ submitImgGrid, flexChild ] ]
-        (List.map (\( src, alt ) -> gridItem src alt) images)
+viewImageGrid : List ( String, String ) -> Html Msg
+viewImageGrid images =
+    div [ css [ submitImgGridStyle, flexChildStyle ] ]
+        (List.map (\( src, alt ) -> viewGridItem src alt) images)
 
 
-gridItem : String -> String -> Html Msg
-gridItem src alt =
+viewGridItem : String -> String -> Html Msg
+viewGridItem src alt =
     div [] [ img [ css [ roundedCornerStyle, submitImgStyle ], Attr.src ("/images/submitStory/" ++ src), Attr.alt alt ] [] ]
