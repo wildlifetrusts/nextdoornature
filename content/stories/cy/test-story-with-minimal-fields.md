@@ -5,6 +5,7 @@ location: Yn y Deyrnas Unedig
 images: []
 summary: Dyma gynnwys straeon prawf, a gynhyrchir i boblogi'r safle cyn i
   gynnwys go iawn fynd i mewn.
+customCall: "[cCc] have you ever set up a test story in wales?"
 ---
 
 ## Fy stori
