@@ -1,14 +1,13 @@
-module Page.SubmitStory.View exposing (..)
+module Page.SubmitStory.View exposing (view)
 
 import Css exposing (Style, batch, border, displayFlex, flexGrow, flexShrink, flexWrap, height, hidden, int, overflow, pct, property, rem, width, wrap)
-import Html.Styled exposing (Html, div, h2, iframe, img, p, text)
+import Html.Styled exposing (Html, div, h2, iframe, img, text)
 import Html.Styled.Attributes as Attr exposing (css)
 import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (Language(..), translate)
 import Message exposing (Msg)
 import Page.Data
 import Shared exposing (Model)
-import Theme.FluidScale
 import Theme.Global exposing (centerContent, primaryHeader, roundedCornerStyle)
 import Theme.Markdown exposing (markdownToHtml)
 
@@ -24,10 +23,6 @@ missingPageWarning =
 view : Model -> Html Msg
 view model =
     let
-        t : Key -> String
-        t =
-            translate model.language
-
         page : Page.Data.Page
         page =
             Maybe.withDefault missingPageWarning
@@ -41,11 +36,6 @@ view model =
 
 submitFlex : Model -> Page.Data.Page -> Html Msg
 submitFlex model page =
-    let
-        t : Key -> String
-        t =
-            translate model.language
-    in
     div
         [ css
             [ batch
