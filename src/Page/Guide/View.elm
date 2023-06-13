@@ -89,7 +89,7 @@ viewImageColumn language guide =
                 text ""
         ]
     , div [ css [ hideFromPrint ] ] [ text (t InCategory ++ t (categorySlugToKey guide.categorySlug)) ]
-    , div [] ([ h2 [] [ viewHeaderIcon "../../../public/images/arrow.svg", text (t GuideTextHeader) ] ] ++ markdownToHtml guide.fullTextMarkdown)
+    , div [] ([ h2 [] [ viewHeaderIcon "../../../public/images/icons/NextDoorNature_icons-text.svg", text (t GuideTextHeader) ] ] ++ markdownToHtml guide.fullTextMarkdown)
     ]
 
 
@@ -115,7 +115,7 @@ viewMaybeVideo lang maybeVideoMeta =
     case maybeVideoMeta of
         Just aVideo ->
             div []
-                [ h2 [] [ viewHeaderIcon "../../../public/images/arrow.svg", text (t GuideVideoHeader) ]
+                [ h2 [] [ viewHeaderIcon "../../../public/images/icons/NextDoorNature_icons-video.svg", text (t GuideVideoHeader) ]
                 , Page.Shared.View.viewVideo aVideo
                 ]
 
@@ -133,7 +133,7 @@ viewMaybeAudio lang maybeAudioMeta =
     case maybeAudioMeta of
         Just anAudio ->
             div [ css [ pageColumnStyle ] ]
-                [ h2 [] [ viewHeaderIcon "../../../public/images/arrow.svg", text (t GuideAudioHeader) ]
+                [ h2 [] [ viewHeaderIcon "../../../public/images/icons/NextDoorNature_icons-audio.svg", text (t GuideAudioHeader) ]
                 , Page.Shared.View.viewAudio anAudio
                 ]
 
@@ -272,7 +272,7 @@ viewPrintGuide language =
     in
     div [ css [ hideFromPrint ] ]
         [ h2 []
-            [ viewHeaderIcon "../../../public/images/arrow.svg", text (t GuidePrintHeader) ]
+            [ viewHeaderIcon "../../../public/images/icons/NextDoorNature_icons-print.svg", text (t GuidePrintHeader) ]
         , p
             []
             [ button [ onClick Print, css [ printButtonStyle ] ] [ text (t GuideButtonText) ]
@@ -284,7 +284,7 @@ viewPrintGuide language =
 viewHeaderIcon : String -> Html Msg
 viewHeaderIcon url =
     span [ attribute "aria-hidden" "true" ]
-        [ img [ src url, css [ display inlineBlock, marginRight (rem 0.5) ] ] []
+        [ img [ src url, css [ display inlineBlock, marginRight (rem 0.5), maxWidth (em 1) ] ] []
         ]
 
 
