@@ -6,9 +6,19 @@ import Html.Styled.Attributes as Attr exposing (css)
 import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (Language(..), translate)
 import Message exposing (Msg)
+import Page.Data
 import Shared exposing (Model)
 import Theme.FluidScale
 import Theme.Global exposing (centerContent, primaryHeader, roundedCornerStyle)
+import Theme.Markdown exposing (markdownToHtml)
+
+
+missingPageWarning : Page.Data.Page
+missingPageWarning =
+    { title = "Missing submit page"
+    , slug = "Missing submit page"
+    , fullTextMarkdown = "Missing submit page"
+    }
 
 
 view : Model -> Html Msg
@@ -17,15 +27,20 @@ view model =
         t : Key -> String
         t =
             translate model.language
+
+        page : Page.Data.Page
+        page =
+            Maybe.withDefault missingPageWarning
+                (Page.Data.pageFromSlug model.language model.content.pages "submit-story")
     in
     div [ css [ centerContent ] ]
-        [ primaryHeader [] (t SubmitStoryHeading)
-        , submitFlex model
+        [ primaryHeader [] page.title
+        , submitFlex model page
         ]
 
 
-submitFlex : Model -> Html Msg
-submitFlex model =
+submitFlex : Model -> Page.Data.Page -> Html Msg
+submitFlex model page =
     let
         t : Key -> String
         t =
@@ -40,18 +55,16 @@ submitFlex model =
                 ]
             ]
         ]
-        [ description (t SubmitStoryP1) (t SubmitStoryP2)
+        [ description page
         , form model
         , imageGrid imageList
         ]
 
 
-description : String -> String -> Html Msg
-description p1 p2 =
+description : Page.Data.Page -> Html Msg
+description page =
     div [ css [ flexChild ] ]
-        [ p [ css [ Theme.FluidScale.fontSizeMedium ] ] [ text p1 ]
-        , p [] [ text p2 ]
-        ]
+        (markdownToHtml page.fullTextMarkdown)
 
 
 form : Model -> Html Msg

@@ -80,7 +80,7 @@ metadataFromPage page language content =
                     defaultMetadata language
 
         SubmitStory ->
-            { title = t SubmitStoryHeading
+            { title = t SubmitStoryTitle
             , description = t SubmitStoryP1
             , imageSrc = "/images/submit-meta-david-clode-eL4ADAsiOR8-unsplash.jpg"
             }
