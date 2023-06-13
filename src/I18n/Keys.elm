@@ -25,6 +25,7 @@ type Key
     | FooterPrivacyPolicyLink
     | FooterHowToUseThisSiteText
     | FooterHowToUseThisSiteLink
+    | NullPage
     | FooterSiteLogo
     | FooterCharityInfo
     | RegisteredCharityNumber

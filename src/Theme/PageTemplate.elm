@@ -21,7 +21,7 @@ view model content =
             , main_ [ css [ mainContainerStyles ] ]
                 [ content
                 ]
-            , FooterTemplate.view model.language
+            , FooterTemplate.view model.language model.page
             , CookieBanner.viewCookieBanner model.language model.cookieState
             ]
         ]

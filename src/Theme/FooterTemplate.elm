@@ -1,17 +1,18 @@
 module Theme.FooterTemplate exposing (view)
 
-import Css exposing (Style, alignItems, alignSelf, auto, backgroundColor, batch, border3, borderLeft3, borderTop, center, color, column, displayFlex, em, firstChild, fitContent, flexDirection, flexEnd, flexGrow, flexShrink, flexStart, flexWrap, fontFamilies, fontSize, height, int, justifyContent, lastChild, margin, margin2, marginBottom, marginLeft, marginRight, marginTop, maxWidth, minHeight, minWidth, nthChild, padding, padding2, paddingBottom, px, rem, row, solid, spaceBetween, unset, width, wrap)
+import Css exposing (Style, alignItems, alignSelf, auto, backgroundColor, batch, border3, borderLeft3, borderTop, center, color, column, displayFlex, em, firstChild, fitContent, flexDirection, flexEnd, flexGrow, flexShrink, flexStart, flexWrap, fontFamilies, fontSize, height, int, justifyContent, lastChild, margin, margin2, marginBottom, marginLeft, marginRight, marginTop, maxWidth, minHeight, minWidth, nthChild, padding, padding2, paddingBottom, px, rem, row, solid, spaceBetween, underline, unset, width, wrap)
 import Css.Media as Media exposing (only, screen, withMedia)
 import Html.Styled exposing (Html, a, div, footer, h3, img, li, nav, text, ul)
 import Html.Styled.Attributes exposing (css, href, src)
 import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (Language(..), translate)
+import Route exposing (Route)
 import Theme.FluidScale
 import Theme.Global exposing (centerContent, lightTeal, listStyleNone, purple, teal, white, withMediaMobileUp, withMediaTabletPortraitUp)
 
 
-view : Language -> Html msg
-view language =
+view : Language -> Route -> Html msg
+view language viewRoute =
     let
         t : Key -> String
         t =
@@ -22,7 +23,7 @@ view language =
         [ div [ css [ navBorderStyle ] ]
             [ nav [ css [ centerContent, footerNavStyle ] ]
                 (List.map
-                    (\column -> navigationColumn column language)
+                    (\column -> navigationColumn column language viewRoute)
                     footerNavigationContent
                 )
             ]
@@ -53,19 +54,48 @@ translatedLogoPath language fileName =
             "/images/" ++ fileName ++ "-cy.svg"
 
 
-navigationColumn : { title : Key, links : List { text : Key, href : Key } } -> Language -> Html msg
-navigationColumn column language =
+navigationColumn :
+    { title : Key, links : List { text : Key, href : Key, pageSlug : Key } }
+    -> Language
+    -> Route
+    -> Html msg
+navigationColumn column language viewRoute =
     let
         t : Key -> String
         t =
             translate language
+
+        activeNav : Key -> Style
+        activeNav pageSlug =
+            case viewRoute of
+                Route.Page slug ->
+                    if slug == String.dropLeft 1 (t pageSlug) then
+                        activeLinkStyle
+
+                    else
+                        batch []
+
+                _ ->
+                    batch []
     in
     div [ css [ footerColumnListStyle ] ]
         [ h3 [ css [ Theme.FluidScale.fontSizeLarge ] ]
             [ text (t column.title)
             ]
         , nav []
-            [ ul [ css [ listStyleNone ] ] (List.map (\link -> li [] [ a [ href (t link.href) ] [ text (t link.text) ] ]) column.links)
+            [ ul [ css [ listStyleNone ] ]
+                (List.map
+                    (\link ->
+                        li []
+                            [ a
+                                [ href (t link.href)
+                                , css [ activeNav link.pageSlug ]
+                                ]
+                                [ text (t link.text) ]
+                            ]
+                    )
+                    column.links
+                )
             ]
         ]
 
@@ -73,23 +103,23 @@ navigationColumn column language =
 footerNavigationContent :
     List
         { title : Key
-        , links : List { text : Key, href : Key }
+        , links : List { text : Key, href : Key, pageSlug : Key }
         }
 footerNavigationContent =
     [ { title = FooterTitleColumnA
       , links =
-            [ { text = FooterVisitWebsiteText, href = FooterVisitWebsiteLink }
-            , { text = FooterAboutText, href = FooterAboutLink }
-            , { text = FooterPrivacyPolicyText, href = FooterPrivacyPolicyLink }
-            , { text = FooterHowToUseThisSiteText, href = FooterHowToUseThisSiteLink }
+            [ { text = FooterVisitWebsiteText, href = FooterVisitWebsiteLink, pageSlug = NullPage }
+            , { text = FooterAboutText, href = FooterAboutLink, pageSlug = FooterAboutLink }
+            , { text = FooterPrivacyPolicyText, href = FooterPrivacyPolicyLink, pageSlug = FooterPrivacyPolicyLink }
+            , { text = FooterHowToUseThisSiteText, href = FooterHowToUseThisSiteLink, pageSlug = FooterHowToUseThisSiteLink }
             ]
       }
     , { title = FooterTitleColumnB
-      , links = [ { text = FooterGuidesLinkText, href = FooterGuidesLink } ]
+      , links = [ { text = FooterGuidesLinkText, href = FooterGuidesLink, pageSlug = NullPage } ]
       }
     , { title = FooterTitleColumnC
       , links =
-            [ { text = FooterFindYourLocalTrustText, href = FooterFindYourLocalTrustLink }
+            [ { text = FooterFindYourLocalTrustText, href = FooterFindYourLocalTrustLink, pageSlug = NullPage }
             ]
       }
     ]
@@ -232,4 +262,11 @@ nextdoorNatureTextStyle =
         , fontSize (rem 3)
         , width (px 250)
         , Css.lineHeight (em 1)
+        ]
+
+
+activeLinkStyle : Style
+activeLinkStyle =
+    batch
+        [ Css.textDecoration underline
         ]

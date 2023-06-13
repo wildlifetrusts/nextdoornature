@@ -83,6 +83,9 @@ enStrings key =
         FooterHowToUseThisSiteLink ->
             "/how-to-use-this-site"
 
+        NullPage ->
+            ""
+
         FooterSiteLogo ->
             "Nextdoor Nature"
 
