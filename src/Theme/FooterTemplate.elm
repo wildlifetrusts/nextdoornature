@@ -54,8 +54,17 @@ translatedLogoPath language fileName =
             "/images/" ++ fileName ++ "-cy.svg"
 
 
+type alias FooterNavigationLink =
+    { text : Key
+    , href : Key
+    , maybeRoute : Maybe Route
+    }
+
+
 navigationColumn :
-    { title : Key, links : List { text : Key, href : Key, pageSlug : Key } }
+    { title : String
+    , links : List FooterNavigationLink
+    }
     -> Language
     -> Route
     -> Html msg
@@ -65,17 +74,43 @@ navigationColumn column language viewRoute =
         t =
             translate language
 
-        activeNav : Key -> Style
-        activeNav pageSlug =
+        activeNav : Maybe Route -> Style
+        activeNav maybeNavLinkRoute =
             case viewRoute of
-                Route.Page slug ->
-                    if slug == String.dropLeft 1 (t pageSlug) then
-                        activeLinkStyle
+                Route.Page pageSlug ->
+                    -- user is on a Page
+                    case maybeNavLinkRoute of
+                        Just route ->
+                            case route of
+                                Route.Page navSlug ->
+                                    if pageSlug == navSlug then
+                                        activeLinkStyle
 
-                    else
-                        batch []
+                                    else
+                                        batch []
+
+                                _ ->
+                                    batch []
+
+                        Nothing ->
+                            batch []
+
+                Route.Guides ->
+                    -- user is on /guides
+                    case maybeNavLinkRoute of
+                        Just route ->
+                            case route of
+                                Route.Guides ->
+                                    activeLinkStyle
+
+                                _ ->
+                                    batch []
+
+                        Nothing ->
+                            batch []
 
                 _ ->
+                    -- something else
                     batch []
     in
     div [ css [ footerColumnListStyle ] ]
@@ -103,23 +138,51 @@ navigationColumn column language viewRoute =
 footerNavigationContent :
     List
         { title : Key
-        , links : List { text : Key, href : Key, pageSlug : Key }
+        , links : List FooterNavigationLink
         }
 footerNavigationContent =
+    let
+        makeNavRecord : Key -> Key -> Maybe Route -> FooterNavigationLink
+        makeNavRecord textKey hrefKey maybeRoute =
+            { text = textKey
+            , href = hrefKey
+            , maybeRoute = maybeRoute
+            }
+    in
     [ { title = FooterTitleColumnA
       , links =
-            [ { text = FooterVisitWebsiteText, href = FooterVisitWebsiteLink, pageSlug = NullPage }
-            , { text = FooterAboutText, href = FooterAboutLink, pageSlug = FooterAboutLink }
-            , { text = FooterPrivacyPolicyText, href = FooterPrivacyPolicyLink, pageSlug = FooterPrivacyPolicyLink }
-            , { text = FooterHowToUseThisSiteText, href = FooterHowToUseThisSiteLink, pageSlug = FooterHowToUseThisSiteLink }
+            [ makeNavRecord
+                FooterVisitWebsiteText
+                FooterVisitWebsiteLink
+                Nothing
+            , makeNavRecord
+                FooterAboutText
+                FooterAboutLink
+                (Just Route.Page "/about")
+            , makeNavRecord
+                FooterPrivacyPolicyText
+                FooterPrivacyPolicyLink
+                (Just Route.Page "/privacy-policy")
+            , makeNavRecord
+                FooterHowToUseThisSiteText
+                FooterHowToUseThisSiteLink
+                (Just Route.Page "/how-to-use-this-site")
             ]
       }
     , { title = FooterTitleColumnB
-      , links = [ { text = FooterGuidesLinkText, href = FooterGuidesLink, pageSlug = NullPage } ]
+      , links =
+            [ makeNavRecord
+                FooterGuidesLinkText
+                FooterGuidesLink
+                (Just Route.Guides)
+            ]
       }
     , { title = FooterTitleColumnC
       , links =
-            [ { text = FooterFindYourLocalTrustText, href = FooterFindYourLocalTrustLink, pageSlug = NullPage }
+            [ makeNavRecord
+                FooterFindYourLocalTrustText
+                FooterFindYourLocalTrustLink
+                Nothing
             ]
       }
     ]
