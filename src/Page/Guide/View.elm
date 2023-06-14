@@ -1,8 +1,8 @@
 port module Page.Guide.View exposing (print, view)
 
-import Css exposing (Style, auto, backgroundColor, backgroundImage, backgroundPosition, backgroundRepeat, backgroundSize, batch, border, borderBottom3, center, color, column, contain, display, displayFlex, em, ex, flexDirection, flexWrap, fontFamilies, height, inlineBlock, justifyContent, listStyle, margin2, marginBottom, marginLeft, marginTop, maxWidth, noRepeat, none, padding, paddingLeft, paddingRight, property, pseudoElement, px, rem, solid, url, width, wrap, zero)
-import Html.Styled exposing (Html, a, button, div, h2, img, li, p, text, ul)
-import Html.Styled.Attributes exposing (alt, css, href, src)
+import Css exposing (Style, auto, backgroundColor, backgroundImage, backgroundPosition, backgroundRepeat, backgroundSize, batch, border, borderBottom3, center, color, column, contain, display, displayFlex, em, ex, flexDirection, flexWrap, fontFamilies, height, inlineBlock, justifyContent, listStyle, margin2, marginBottom, marginLeft, marginRight, marginTop, maxWidth, noRepeat, none, padding, paddingLeft, paddingRight, property, pseudoElement, px, rem, solid, url, width, wrap, zero)
+import Html.Styled exposing (Html, a, button, div, h2, img, li, p, span, text, ul)
+import Html.Styled.Attributes exposing (alt, attribute, css, href, src)
 import Html.Styled.Events exposing (onClick)
 import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (Language(..), translate)
@@ -13,7 +13,7 @@ import Page.Shared.Data
 import Page.Shared.View
 import Page.Story.Data
 import Route exposing (Route(..))
-import Theme.Global exposing (centerContent, contentWrapper, featureImageStyle, hideFromPrint, lightTeal, pageColumnBlockStyle, pageColumnStyle, primaryHeader, purple, teal, teaserImageStyle, topTwoColumnsWrapperStyle, withMediaPrint)
+import Theme.Global exposing (centerContent, contentWrapper, featureImageStyle, hideFromPrint, lightTeal, pageColumnBlockStyle, pageColumnStyle, primaryHeader, purple, screenReaderOnly, teal, teaserImageStyle, topTwoColumnsWrapperStyle, withMediaPrint)
 import Theme.Markdown exposing (markdownToHtml)
 
 
@@ -30,8 +30,8 @@ view language guide allGuides allStories =
             [ css [ centerContent ] ]
             [ viewRow
                 ( viewImageColumn language guide
-                , [ viewMaybeVideo guide.maybeVideo
-                  , viewMaybeAudio guide.maybeAudio
+                , [ viewMaybeVideo language guide.maybeVideo
+                  , viewMaybeAudio language guide.maybeAudio
                   , viewPrintGuide language
                   , viewRelatedGuideTeasers language guide.relatedGuideList allGuides
                   ]
@@ -89,7 +89,7 @@ viewImageColumn language guide =
                 text ""
         ]
     , div [ css [ hideFromPrint ] ] [ text (t InCategory ++ t (categorySlugToKey guide.categorySlug)) ]
-    , div [] (markdownToHtml guide.fullTextMarkdown)
+    , div [] ([ h2 [] [ viewHeaderIcon (t GuideTextHeaderIconLink), text (t GuideTextHeader) ] ] ++ markdownToHtml guide.fullTextMarkdown)
     ]
 
 
@@ -105,22 +105,36 @@ viewRow ( content1, content2, content3 ) =
         ]
 
 
-viewMaybeVideo : Maybe Page.Shared.Data.VideoMeta -> Html Msg
-viewMaybeVideo maybeVideoMeta =
+viewMaybeVideo : Language -> Maybe Page.Shared.Data.VideoMeta -> Html Msg
+viewMaybeVideo language maybeVideoMeta =
+    let
+        t : Key -> String
+        t =
+            translate language
+    in
     case maybeVideoMeta of
         Just aVideo ->
-            Page.Shared.View.viewVideo aVideo
+            div []
+                [ h2 [] [ viewHeaderIcon (t GuideVideoHeaderIconLink), text (t GuideVideoHeader) ]
+                , Page.Shared.View.viewVideo aVideo
+                ]
 
         Nothing ->
             text ""
 
 
-viewMaybeAudio : Maybe Page.Shared.Data.AudioMeta -> Html Msg
-viewMaybeAudio maybeAudioMeta =
+viewMaybeAudio : Language -> Maybe Page.Shared.Data.AudioMeta -> Html Msg
+viewMaybeAudio language maybeAudioMeta =
+    let
+        t : Key -> String
+        t =
+            translate language
+    in
     case maybeAudioMeta of
         Just anAudio ->
             div [ css [ pageColumnStyle ] ]
-                [ Page.Shared.View.viewAudio anAudio
+                [ h2 [] [ viewHeaderIcon (t GuideAudioHeaderIconLink), text (t GuideAudioHeader) ]
+                , Page.Shared.View.viewAudio anAudio
                 ]
 
         Nothing ->
@@ -258,13 +272,25 @@ viewPrintGuide language =
     in
     div [ css [ hideFromPrint ] ]
         [ h2 []
-            [ text (t GuidePrintHeader) ]
+            [ viewHeaderIcon (t GuidePrintHeaderIconLink), text (t GuidePrintHeader) ]
         , p
             []
             [ button [ onClick Print, css [ printButtonStyle ] ] [ text (t GuideButtonText) ]
             , text (t GuideParagraphText)
             ]
         ]
+
+
+viewHeaderIcon : String -> Html Msg
+viewHeaderIcon url =
+    span [ attribute "aria-hidden" "true" ]
+        [ img [ src url, css [ headerIconStyle ] ] []
+        ]
+
+
+headerIconStyle : Style
+headerIconStyle =
+    batch [ display inlineBlock, marginRight (rem 0.5), maxWidth (em 1) ]
 
 
 viewStoryTeasersStyle : Style

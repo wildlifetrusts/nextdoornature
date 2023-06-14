@@ -48,6 +48,13 @@ type Key
     | RelatedGuidesHeading
     | RelatedStoriesHeading
     | GuidePrintHeader
+    | GuideVideoHeader
+    | GuideAudioHeader
+    | GuideTextHeader
+    | GuidePrintHeaderIconLink
+    | GuideVideoHeaderIconLink
+    | GuideAudioHeaderIconLink
+    | GuideTextHeaderIconLink
     | GuideButtonText
     | GuideParagraphText
       --- Guides Page
