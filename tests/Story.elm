@@ -20,6 +20,7 @@ suite =
         storyMinimal =
             { title = "A minimal test story"
             , slug = "slug"
+            , maybePullQuote = Nothing
             , fullTextMarkdown = "# Some minimal test resource markdown"
             , maybeLocation = Nothing
             , maybeGroupOrIndividual = Nothing
@@ -29,6 +30,7 @@ suite =
         storyFull : Story
         storyFull =
             { title = "A full test story"
+            , maybePullQuote = Just "A lovely pull quote"
             , fullTextMarkdown = "# Some full test resource markdown\n\nA small paragraph."
             , slug = "slug"
             , maybeLocation = Just "Test location"
