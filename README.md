@@ -66,6 +66,7 @@ Rules live in `review/src/ReviewConfig.elm` and can be modified if needed. These
 - `package.json` for node scripts and packages
 - `package-lock.json` for current versions of node packages
 - `src/*` contains app source files
+- `./formstackTheme.css` styles our formstack iframe, it can be applied by following these [instructions](https://help.formstack.com/s/article/Custom-Form-Themes-and-CSS)
 
 ### Content & Pages
 

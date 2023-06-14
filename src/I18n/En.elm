@@ -71,6 +71,13 @@ enStrings key =
             --[cCc]
             "https://www.wildlifetrusts.org/wildlife-trusts"
 
+        FooterShareYourStoryText ->
+            "[cCc] Share your story"
+
+        FooterShareYourStoryLink ->
+            --[cCc]
+            "/submit-story"
+
         FooterPrivacyPolicyText ->
             "Privacy policy"
 
@@ -204,6 +211,21 @@ enStrings key =
 
         WhoSubHeading ->
             "Who"
+
+        ---
+        -- SubmitStory Page
+        ---
+        SubmitFormSrc ->
+            "https://teamwildertest.formstack.com/forms/teamwilder_test"
+
+        SubmitFormTitle ->
+            "teamwilder_test"
+
+        SubmitFormHeading ->
+            "Your details"
+
+        SubmitStoryMetaImageLink ->
+            "/images/submit-meta-david-clode-eL4ADAsiOR8-unsplash.jpg"
 
         ---
         -- Category things

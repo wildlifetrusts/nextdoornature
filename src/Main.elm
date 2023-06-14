@@ -22,6 +22,7 @@ import Page.NotFound exposing (resourceNotFound)
 import Page.Shared.Data
 import Page.Story.Data
 import Page.Story.View
+import Page.SubmitStory.View
 import Page.View
 import Random
 import Route exposing (Route(..))
@@ -290,6 +291,20 @@ view model =
                             guide
                             (Page.Guide.Data.allGuidesSlugTitleList model.content.guides)
                             (Page.Story.Data.allStoryTeaserList model.content.stories)
+
+                    Nothing ->
+                        resourceNotFound model.language
+
+        SubmitStory ->
+            let
+                maybePage : Maybe Page.Data.Page
+                maybePage =
+                    Page.Data.pageFromSlug model.language model.content.pages "submit-story"
+            in
+            Theme.PageTemplate.view model <|
+                case maybePage of
+                    Just page ->
+                        Page.SubmitStory.View.view model page
 
                     Nothing ->
                         resourceNotFound model.language

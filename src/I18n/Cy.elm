@@ -98,5 +98,11 @@ cyStrings key =
         InCategory ->
             "[cCc] In category CY"
 
+        ---
+        -- SubmitStory Page
+        ---
+        SubmitStoryMetaImageLink ->
+            "/images/submit-meta-david-clode-eL4ADAsiOR8-unsplash.jpg"
+
         _ ->
             "[cCc] [fFf] to reminder to add all Welsh Keys back"
