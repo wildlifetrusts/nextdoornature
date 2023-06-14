@@ -163,6 +163,18 @@ enStrings key =
         GuideTextHeader ->
             "[cCc] Text guide"
 
+        GuidePrintHeaderIconLink ->
+            "/images/icons/NextDoorNature_icons-print.svg"
+
+        GuideVideoHeaderIconLink ->
+            "/images/icons/NextDoorNature_icons-video.svg"
+
+        GuideAudioHeaderIconLink ->
+            "/images/icons/NextDoorNature_icons-audio.svg"
+
+        GuideTextHeaderIconLink ->
+            "/images/icons/NextDoorNature_icons-text.svg"
+
         GuideButtonText ->
             "Click here"
 

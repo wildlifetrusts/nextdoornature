@@ -51,6 +51,10 @@ type Key
     | GuideVideoHeader
     | GuideAudioHeader
     | GuideTextHeader
+    | GuidePrintHeaderIconLink
+    | GuideVideoHeaderIconLink
+    | GuideAudioHeaderIconLink
+    | GuideTextHeaderIconLink
     | GuideButtonText
     | GuideParagraphText
       --- Guides Page

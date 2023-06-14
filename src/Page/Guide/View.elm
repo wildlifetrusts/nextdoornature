@@ -89,7 +89,7 @@ viewImageColumn language guide =
                 text ""
         ]
     , div [ css [ hideFromPrint ] ] [ text (t InCategory ++ t (categorySlugToKey guide.categorySlug)) ]
-    , div [] ([ h2 [] [ viewHeaderIcon "../../../public/images/icons/NextDoorNature_icons-text.svg", text (t GuideTextHeader) ] ] ++ markdownToHtml guide.fullTextMarkdown)
+    , div [] ([ h2 [] [ viewHeaderIcon (t GuideTextHeaderIconLink), text (t GuideTextHeader) ] ] ++ markdownToHtml guide.fullTextMarkdown)
     ]
 
 
@@ -106,16 +106,16 @@ viewRow ( content1, content2, content3 ) =
 
 
 viewMaybeVideo : Language -> Maybe Page.Shared.Data.VideoMeta -> Html Msg
-viewMaybeVideo lang maybeVideoMeta =
+viewMaybeVideo language maybeVideoMeta =
     let
         t : Key -> String
         t =
-            translate lang
+            translate language
     in
     case maybeVideoMeta of
         Just aVideo ->
             div []
-                [ h2 [] [ viewHeaderIcon "../../../public/images/icons/NextDoorNature_icons-video.svg", text (t GuideVideoHeader) ]
+                [ h2 [] [ viewHeaderIcon (t GuideVideoHeaderIconLink), text (t GuideVideoHeader) ]
                 , Page.Shared.View.viewVideo aVideo
                 ]
 
@@ -124,16 +124,16 @@ viewMaybeVideo lang maybeVideoMeta =
 
 
 viewMaybeAudio : Language -> Maybe Page.Shared.Data.AudioMeta -> Html Msg
-viewMaybeAudio lang maybeAudioMeta =
+viewMaybeAudio language maybeAudioMeta =
     let
         t : Key -> String
         t =
-            translate lang
+            translate language
     in
     case maybeAudioMeta of
         Just anAudio ->
             div [ css [ pageColumnStyle ] ]
-                [ h2 [] [ viewHeaderIcon "../../../public/images/icons/NextDoorNature_icons-audio.svg", text (t GuideAudioHeader) ]
+                [ h2 [] [ viewHeaderIcon (t GuideAudioHeaderIconLink), text (t GuideAudioHeader) ]
                 , Page.Shared.View.viewAudio anAudio
                 ]
 
@@ -272,7 +272,7 @@ viewPrintGuide language =
     in
     div [ css [ hideFromPrint ] ]
         [ h2 []
-            [ viewHeaderIcon "../../../public/images/icons/NextDoorNature_icons-print.svg", text (t GuidePrintHeader) ]
+            [ viewHeaderIcon (t GuidePrintHeaderIconLink), text (t GuidePrintHeader) ]
         , p
             []
             [ button [ onClick Print, css [ printButtonStyle ] ] [ text (t GuideButtonText) ]
@@ -284,8 +284,13 @@ viewPrintGuide language =
 viewHeaderIcon : String -> Html Msg
 viewHeaderIcon url =
     span [ attribute "aria-hidden" "true" ]
-        [ img [ src url, css [ display inlineBlock, marginRight (rem 0.5), maxWidth (em 1) ] ] []
+        [ img [ src url, css [ headerIconStyle ] ] []
         ]
+
+
+headerIconStyle : Style
+headerIconStyle =
+    batch [ display inlineBlock, marginRight (rem 0.5), maxWidth (em 1) ]
 
 
 viewStoryTeasersStyle : Style
