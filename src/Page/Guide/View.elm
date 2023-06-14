@@ -49,13 +49,9 @@ viewGuideHeader language guide =
     in
     div [ css [ outerBorderStyle, withMediaPrint (Just [ marginBottom (rem 0) ]) ] ]
         [ div
-            [ css [ centerContent ] ]
+            [ css [ headerContentStyle ] ]
             [ primaryHeader [ css [ guideTitleStyle ] ] guide.title
-            , viewRow
-                ( markdownToHtml guide.summary
-                , []
-                , []
-                )
+            , p [] [ text guide.summary ]
             ]
         ]
 
@@ -301,6 +297,11 @@ viewHeaderIcon url =
     span [ attribute "aria-hidden" "true" ]
         [ img [ src url, css [ headerIconStyle ] ] []
         ]
+
+
+headerContentStyle : Style
+headerContentStyle =
+    batch [ padding (rem 1) ]
 
 
 headerIconStyle : Style
