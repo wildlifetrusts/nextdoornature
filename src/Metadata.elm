@@ -19,7 +19,7 @@ type alias PageMetadata =
 
 defaultMetaImageSrc : String
 defaultMetaImageSrc =
-    "/images/default-meta-image.jpg"
+    "/images/default-meta-image.png"
 
 
 defaultMetadata : Language -> PageMetadata
