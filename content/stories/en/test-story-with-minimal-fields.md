@@ -3,6 +3,7 @@ title: Test story with minimal fields
 who: Test group
 location: In the United Kingdom
 images: []
+customCall: "[cCc] have you ever set up a test story?"
 ---
 
 A test story full of inspiration.

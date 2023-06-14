@@ -30,6 +30,18 @@ cyStrings key =
         GuidesTitleFiltered num query ->
             num ++ " CY guides on '" ++ query ++ "' [cCc]"
 
+        GuidePrintHeaderIconLink ->
+            "/images/icons/NextDoorNature_icons-print.svg"
+
+        GuideVideoHeaderIconLink ->
+            "/images/icons/NextDoorNature_icons-video.svg"
+
+        GuideAudioHeaderIconLink ->
+            "/images/icons/NextDoorNature_icons-audio.svg"
+
+        GuideTextHeaderIconLink ->
+            "/images/icons/NextDoorNature_icons-text.svg"
+
         ChangeLanguage ->
             "[cCc] Switch to English"
 

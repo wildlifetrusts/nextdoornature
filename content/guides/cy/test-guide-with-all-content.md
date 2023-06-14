@@ -5,4 +5,5 @@ relatedGuides:
 relatedStories:
   - Test story with minimal fields
 category: admin-and-info
+customCall: "[cCc] testing custom submission text in welsh"
 ---
