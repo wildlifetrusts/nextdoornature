@@ -80,10 +80,12 @@ metadataFromPage page language content =
                     defaultMetadata language
 
         SubmitStory ->
-            { title = t SubmitStoryTitle
-            , description = t SubmitStoryP1
-            , imageSrc = "/images/submit-meta-david-clode-eL4ADAsiOR8-unsplash.jpg"
-            }
+            case pageMetadataFromSlug "submit-story" (dictFromLanguage language content.pages) of
+                Just metadata ->
+                    { metadata | title = subPageTitle language metadata.title, imageSrc = t SubmitStoryMetaImageLink }
+
+                Nothing ->
+                    defaultMetadata language
 
 
 guideMetadataFromSlug :

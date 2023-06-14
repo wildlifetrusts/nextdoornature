@@ -57,8 +57,7 @@ type Key
     | WhoSubHeading
     | WhereSubHeading
       --- SubmitStory Page
-    | SubmitStoryTitle
-    | SubmitStoryP1
+    | SubmitStoryMetaImageLink
       {-
          from formstack iframe embed code
       -}

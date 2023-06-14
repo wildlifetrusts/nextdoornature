@@ -179,14 +179,6 @@ enStrings key =
         ---
         -- SubmitStory Page
         ---
-        SubmitStoryTitle ->
-            "Share your story!"
-
-        SubmitStoryP1 ->
-            """
-            Have you been inspired to take action for nature in your area? Tell everyone about it here! Your project can be small or large, finished or ongoing. You can give contact details or you can keep the location very vague and just say "Yorkshire" or "Salisbury". The most important thing is to share the useful information that will help others. What went well? What mistakes did you learn from?
-"""
-
         SubmitFormSrc ->
             "https://teamwildertest.formstack.com/forms/teamwilder_test"
 
@@ -195,6 +187,9 @@ enStrings key =
 
         SubmitFormHeading ->
             "Your details"
+
+        SubmitStoryMetaImageLink ->
+            "/images/submit-meta-david-clode-eL4ADAsiOR8-unsplash.jpg"
 
         ---
         -- Category things
