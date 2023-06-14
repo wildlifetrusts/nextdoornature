@@ -76,7 +76,7 @@ collections:
           i18n: true,
         }
       - {
-          label: "Call for story 1st sentance",
+          label: "Call for story 1st sentence",
           hint: "Make the call to action relevant to the content of the story e.g 'Have you started a community group?'",
           name: "customCall",
           widget: "string",
