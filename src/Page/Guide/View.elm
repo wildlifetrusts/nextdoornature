@@ -20,12 +20,7 @@ import Theme.Markdown exposing (markdownToHtml)
 view : Language -> Page.Guide.Data.Guide -> List Page.Guide.Data.GuideListItem -> List Page.Story.Data.StoryTeaser -> Html Msg
 view language guide allGuides allStories =
     div []
-        [ div [ css [ outerBorderStyle, withMediaPrint (Just [ marginBottom (rem 0) ]) ] ]
-            [ div
-                [ css [ centerContent ] ]
-                [ primaryHeader [ css [ guideTitleStyle ] ] guide.title
-                ]
-            ]
+        [ viewGuideHeader language guide
         , div
             [ css [ centerContent ] ]
             [ viewRow
@@ -43,6 +38,26 @@ view language guide allGuides allStories =
 
 
 -- viewCategorySubHeader : Language -> Page.Guide.Data.Guide -> List (Html Msg)
+
+
+viewGuideHeader : Language -> Page.Guide.Data.Guide -> Html Msg
+viewGuideHeader language guide =
+    let
+        t : Key -> String
+        t =
+            translate language
+    in
+    div [ css [ outerBorderStyle, withMediaPrint (Just [ marginBottom (rem 0) ]) ] ]
+        [ div
+            [ css [ centerContent ] ]
+            [ primaryHeader [ css [ guideTitleStyle ] ] guide.title
+            , viewRow
+                ( markdownToHtml guide.summary
+                , []
+                , []
+                )
+            ]
+        ]
 
 
 viewImageColumn : Language -> Page.Guide.Data.Guide -> List (Html Msg)
