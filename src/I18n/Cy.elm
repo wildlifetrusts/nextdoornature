@@ -7,28 +7,161 @@ cyStrings : Key -> String
 cyStrings key =
     case key of
         SiteTitle ->
-            "[cCc] Hwb Natur Drws-nesaf"
+            "Hwb Natur Drws Nesaf"
 
+        GuidesMetaDescription ->
+            ""
+
+        ---
+        -- Header
+        ---
+        ChangeLanguage ->
+            "Newid i Gymraeg"
+
+        ---
+        -- 404 content
+        ---
         ResourceNotFoundTitle ->
-            "[cCc] Oops! CY"
+            ""
 
         ResourceNotFoundText ->
-            "[cCc] Looks like we've popped up on the wrong page CY"
+            ""
 
         ResourceNotFoundLinkText ->
-            "[cCc] Back to home page CY"
+            ""
 
         ResourceNotFoundLinkPath ->
             "/"
 
-        GuidesTitle ->
-            "[cCc] Guides CY"
+        ---
+        -- Footer
+        ---
+        FooterTitleColumnA ->
+            "Mwy o wybodaeth"
 
-        GuidesMetaDescription ->
-            "[cCc] Guides Description in Welsh"
+        FooterTitleColumnB ->
+            "Archwilio’r hwb yma"
 
-        GuidesTitleFiltered num query ->
-            num ++ " CY guides on '" ++ query ++ "' [cCc]"
+        FooterGuidesLinkText ->
+            "Archwilio ein canllawiau"
+
+        FooterGuidesLink ->
+            "/guides"
+
+        FooterTitleColumnC ->
+            "Cymryd rhan"
+
+        FooterVisitWebsiteText ->
+            "Mynd i wefan yr Ymddiriedolaethau Natur"
+
+        FooterVisitWebsiteLink ->
+            --[cCc]
+            "https://www.wildlifetrusts.org/"
+
+        FooterAboutText ->
+            "Mwy o wybodaeth am y prosiect yma"
+
+        FooterAboutLink ->
+            "/about"
+
+        FooterFindYourLocalTrustText ->
+            "Dod o hyd i’ch Ymddiriedolaeth leol"
+
+        FooterFindYourLocalTrustLink ->
+            --[cCc]
+            "https://www.wildlifetrusts.org/wildlife-trusts"
+
+        FooterPrivacyPolicyText ->
+            "Polisi preifatrwydd"
+
+        FooterPrivacyPolicyLink ->
+            "/privacy-policy"
+
+        FooterHowToUseThisSiteText ->
+            ""
+
+        FooterHowToUseThisSiteLink ->
+            "/how-to-use-this-site"
+
+        FooterSiteLogo ->
+            "Natur Drws Nesaf"
+
+        FooterCharityInfo ->
+            "Mae Hwb Natur Drws Nesaf yn brosiect gan yr Ymddiriedolaethau Natur ac mae wedi’i gyllido gan Gronfa Dreftadaeth y Loteri Genedlaethol"
+
+        RegisteredCharityNumber ->
+            "Rhif elusen gofrestredig 20723"
+
+        ---
+        -- Cookie banner
+        ---
+        CookieBannerH2 ->
+            "Ydych chi’n iawn i fwrw ymlaen gyda'r holl gwcis a data?"
+
+        CookieBannerP ->
+            """
+            Mae ein gwefan ni’n defnyddio cwcis a data i wneud yn siŵr eich bod yn cael y profiad gorau ac i'n helpu ni i godi arian yn effeithlon i achub bywyd gwyllt. Mae rhai cwcis yn hanfodol i wneud i'n gwefan ni weithio.
+            """
+
+        CookieAcceptButtonText ->
+            "Iawn, rydw i’n deall"
+
+        CookieDeclineButtonText ->
+            "Dim Diolch"
+
+        CookieSettingsButtonText ->
+            "Gosodiadau cwcis"
+
+        ---
+        -- Index page
+        ---
+        HomeTitle ->
+            "Croeso i Hwb Natur Drws Nesaf"
+
+        WelcomeP1 ->
+            ""
+
+        WelcomeP2 ->
+            ""
+
+        WelcomeP3 ->
+            ""
+
+        GuideHighlightsSubtitle ->
+            "Uchafbwyntiau’r canllawiau"
+
+        StoryHighlightsSubtitle ->
+            "Uchafbwyntiau'r straeon"
+
+        CallForStoryHeading ->
+            "Rhannwch eich stori!"
+
+        CallForStoryP ->
+            ""
+
+        CallForStoryLinkText ->
+            ""
+
+        ---
+        -- Guide Page
+        ---
+        RelatedGuidesHeading ->
+            "Canllawiau cysylltiedig"
+
+        RelatedStoriesHeading ->
+            "Straeon cysylltiedig"
+
+        GuidePrintHeader ->
+            ""
+
+        GuideVideoHeader ->
+            ""
+
+        GuideAudioHeader ->
+            ""
+
+        GuideTextHeader ->
+            ""
 
         GuidePrintHeaderIconLink ->
             "/images/icons/NextDoorNature_icons-print.svg"
@@ -42,61 +175,53 @@ cyStrings key =
         GuideTextHeaderIconLink ->
             "/images/icons/NextDoorNature_icons-text.svg"
 
-        ChangeLanguage ->
-            "[cCc] Switch to English"
+        GuideButtonText ->
+            ""
 
-        FooterTitleColumnA ->
-            "[cCc] 🔎🔎🔎🔎🔎🔎"
+        GuideParagraphText ->
+            ""
 
-        FooterTitleColumnB ->
-            "[cCc] 📚📚📚📚📚📚📚"
+        ---
+        -- Guides Page
+        ---
+        GuidesTitle ->
+            "Canllawiau"
 
-        FooterTitleColumnC ->
-            "[cCc] 🦾🦾🦾🦾🦾🦾"
-
-        FooterHowToUseThisSiteText ->
-            "[cCc] How to use this site CY"
-
-        FooterHowToUseThisSiteLink ->
-            "/how-to-use-this-site"
-
-        FooterVisitWebsiteText ->
-            "[cCc] 🌳🌲🌲🌳🌳🌲🐿️🌳🌲🌳🌳"
-
-        FooterVisitWebsiteLink ->
-            --[cCc]
-            "https://www.wildlifetrusts.org/"
-
-        FooterFindYourLocalTrustText ->
-            "[cCc] 🌳🌲🌲🌳🌳🌲🐿️🌳🌲🌳🌳"
-
-        FooterFindYourLocalTrustLink ->
-            --[cCc]
-            "https://www.wildlifetrusts.org/wildlife-trusts"
-
-        FooterSiteLogo ->
-            "[cCc] Natur Drws-nesaf"
+        GuidesTitleFiltered num query ->
+            num ++ " guides on '" ++ query ++ "' [cCc]"
 
         SearchPlaceholder ->
-            "[cCc] Cy label"
+            "Chwilio’r hwb yma"
+
+        ExploreGuidesListPlaceholder ->
+            "Archwilio’r canllawiau yn ôl pwnc"
+
+        ---
+        -- Story Page
+        ---
+        WhereSubHeading ->
+            "Ble"
+
+        WhoSubHeading ->
+            "Pwy"
 
         ---
         -- Category things
         ---
         CategoryAdminAndInfoName ->
-            "Grwpiau Cymunedol - Gweinyddol a Gwybodaeth"
+            ""
 
         CategoryPublicityEventsName ->
-            "Cyfryngau, Cyhoeddusrwydd a Digwyddiadau"
+            ""
 
         CategoryWorkingWithPeopleName ->
-            "Gweithio gyda Phobl"
+            ""
 
         CategoryWorkingWithAuthoritiesName ->
-            "Gweithio gyda'r Awdurdodau"
+            ""
 
         InCategory ->
-            "[cCc] In category CY"
+            ""
 
         _ ->
             "[cCc] [fFf] to reminder to add all Welsh Keys back"

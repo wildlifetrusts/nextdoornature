@@ -22,10 +22,10 @@ enStrings key =
         -- 404 content
         ---
         ResourceNotFoundTitle ->
-            "[cCc] Oops!"
+            "Oops!"
 
         ResourceNotFoundText ->
-            "[cCc] Looks like we've popped up on the wrong page"
+            "Looks like we've popped up on the wrong page!"
 
         ResourceNotFoundLinkText ->
             "[cCc] Back to home page"
@@ -78,7 +78,7 @@ enStrings key =
             "/privacy-policy"
 
         FooterHowToUseThisSiteText ->
-            "[cCc] How to use this site"
+            "How to use this site"
 
         FooterHowToUseThisSiteLink ->
             "/how-to-use-this-site"
@@ -134,7 +134,7 @@ enStrings key =
             "Story highlights"
 
         CallForStoryHeading ->
-            "Share your story!"
+            "Share your story"
 
         CallForStoryP ->
             "[cCc] Have done something great for nature in your community? We would love to share your experience to help others, including any challenges you faced or hurdles you had to overcome."
@@ -191,10 +191,10 @@ enStrings key =
             num ++ " guides on '" ++ query ++ "' [cCc]"
 
         SearchPlaceholder ->
-            "Search the hub"
+            "Search this hub"
 
         ExploreGuidesListPlaceholder ->
-            "[cCc] Explore guides by theme"
+            "Explore guides by topic"
 
         ---
         -- Story Page
