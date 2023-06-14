@@ -12,22 +12,8 @@ import Theme.Global exposing (centerContent, primaryHeader, roundedCornerStyle)
 import Theme.Markdown exposing (markdownToHtml)
 
 
-missingPageWarning : Page.Data.Page
-missingPageWarning =
-    { title = "Missing submit page"
-    , slug = "Missing submit page"
-    , fullTextMarkdown = "Missing submit page"
-    }
-
-
-view : Model -> Html Msg
-view model =
-    let
-        page : Page.Data.Page
-        page =
-            Maybe.withDefault missingPageWarning
-                (Page.Data.pageFromSlug model.language model.content.pages "submit-story")
-    in
+view : Model -> Page.Data.Page -> Html Msg
+view model page =
     div [ css [ centerContent ] ]
         [ primaryHeader [] page.title
         , viewSubmitFlex model page

@@ -293,7 +293,18 @@ view model =
                         resourceNotFound model.language
 
         SubmitStory ->
-            Theme.PageTemplate.view model (Page.SubmitStory.View.view model)
+            let
+                maybePage : Maybe Page.Data.Page
+                maybePage =
+                    Page.Data.pageFromSlug model.language model.content.pages "submit-story"
+            in
+            Theme.PageTemplate.view model <|
+                case maybePage of
+                    Just page ->
+                        Page.SubmitStory.View.view model page
+
+                    Nothing ->
+                        resourceNotFound model.language
 
         Guides ->
             Theme.PageTemplate.view model (Page.Guides.View.view model)
