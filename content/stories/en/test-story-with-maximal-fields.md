@@ -2,16 +2,22 @@
 title: Test story with maximal fields
 who: Test group
 location: The United Kingdom
-images: 
-  - src: "/images/default-story-image.jpg"
-    alt: "alt text"
-    credit: "Test person"
-    caption: "This a test caption containing a lovely long description about this image, and all of the people and things in it, and the colours and the patterns and where it is and what they are all doing"
-  - src: "/images/default-story-image.jpg"
-    alt: "alt text"
-    caption: "Tiny test caption"
+images:
+  - src: /images/default-story-image.jpg
+    alt: alt text
+    credit: Test person
+    caption: This a test caption containing a lovely long description about this
+      image, and all of the people and things in it, and the colours and the
+      patterns and where it is and what they are all doing
+  - src: /images/default-story-image.jpg
+    alt: alt text
+    caption: Tiny test caption
 summary: This is test story content, generated to populate the site before real
   content goes in.
+pollQuote: Torquent ante odio suspendisse sagittis leo ullamcorper facilisis
+  mattis nostra faucibus, donec aliquet integer ad quam sed sodales sociosqu
+  bibendum tempor, posuere massa volutpat condimentum felis neque nisl interdum
+  elementum.
 ---
 
 A test story full of inspiration.
