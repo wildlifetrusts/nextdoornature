@@ -14,7 +14,7 @@ images:
     caption: Tiny test caption
 summary: This is test story content, generated to populate the site before real
   content goes in.
-pollQuote: Torquent ante odio suspendisse sagittis leo ullamcorper facilisis
+pullQuote: Torquent ante odio suspendisse sagittis leo ullamcorper facilisis
   mattis nostra faucibus, donec aliquet integer ad quam sed sodales sociosqu
   bibendum tempor, posuere massa volutpat condimentum felis neque nisl interdum
   elementum.

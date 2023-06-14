@@ -1,12 +1,13 @@
 module Page.Story.View exposing (view)
 
-import Css exposing (Style, batch, margin3, pct, rem, width)
-import Html.Styled exposing (Html, div, h3, img, p, text)
+import Css exposing (Style, batch, before, content, fontStyle, italic, margin3, paddingBottom, pct, rem, width)
+import Html.Styled exposing (Html, blockquote, div, h3, img, p, text)
 import Html.Styled.Attributes exposing (alt, css, src)
 import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (Language, translate)
 import Message exposing (Msg)
 import Page.Story.Data
+import Theme.FluidScale
 import Theme.Global exposing (centerContent, contentWrapper, featureImageStyle, pageColumnStyle, primaryHeader, topTwoColumnsWrapperStyle)
 import Theme.Markdown exposing (markdownToHtml)
 
@@ -46,10 +47,28 @@ view language story =
                     , div [] (viewImages story.images)
                     ]
                 , div [ css [ pageColumnStyle ] ]
-                    (markdownToHtml story.fullTextMarkdown)
+                    (viewPullQuote story.maybePullQuote
+                        :: markdownToHtml story.fullTextMarkdown
+                    )
                 ]
             ]
         ]
+
+
+viewPullQuote : Maybe String -> Html Msg
+viewPullQuote maybePullQuote =
+    case maybePullQuote of
+        Just aPullQuote ->
+            if String.length aPullQuote > 0 then
+                blockquote [ css [ pullQuoteStyle ] ]
+                    [ text ("\" " ++ aPullQuote ++ " \"")
+                    ]
+
+            else
+                text ""
+
+        Nothing ->
+            text ""
 
 
 viewImages : List Page.Story.Data.Image -> List (Html Msg)
@@ -112,6 +131,15 @@ viewImageCaption maybeCaption =
 
         Nothing ->
             text ""
+
+
+pullQuoteStyle : Style
+pullQuoteStyle =
+    batch
+        [ fontStyle italic
+        , paddingBottom (rem 1)
+        , Theme.FluidScale.fontSizeLarge
+        ]
 
 
 imageCaptionStyle : Style
