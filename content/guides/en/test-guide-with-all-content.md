@@ -1,19 +1,19 @@
 ---
-title: Test guide with all content
 summary: "This is a test guide with all possible fields filled in "
-image:
-  src: https://www.wildlifetrusts.org/sites/default/files/styles/scaled_8_col_desk/public/2021-10/Peatland%20%28C%29%20Mark%20Hamblin%202020%20VISION.webp?itok=IttJjlSo
-  alt: Peaty sunset
-  credit: Mark Hamblin/2020 VISION
-video:
-  id: Hgw9oXeWJFQ
-  title: Wildlife Trusts - Meet our staff
 relatedGuides:
   - All About Councils and Local Authorities
   - "Finding Funding "
 relatedStories:
   - Test story with minimal fields
 customCall: "[cCc] testing custom submission text"
+title: Test guide with all content
+image:
+  src: ""
+  alt: Peaty sunset
+  credit: Mark Hamblin/2020 VISION
+video:
+  id: Hgw9oXeWJFQ
+  title: Wildlife Trusts - Meet our staff
 category: admin-and-info
 Category: admin-and-info
 ---
