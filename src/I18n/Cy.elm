@@ -10,7 +10,7 @@ cyStrings key =
             "Hwb Natur Drws Nesaf"
 
         GuidesMetaDescription ->
-            ""
+            "[cCc]"
 
         ---
         -- Header
@@ -22,13 +22,13 @@ cyStrings key =
         -- 404 content
         ---
         ResourceNotFoundTitle ->
-            ""
+            "[cCc]"
 
         ResourceNotFoundText ->
-            ""
+            "[cCc]"
 
         ResourceNotFoundLinkText ->
-            ""
+            "[cCc]"
 
         ResourceNotFoundLinkPath ->
             "/"
@@ -78,7 +78,7 @@ cyStrings key =
             "/privacy-policy"
 
         FooterHowToUseThisSiteText ->
-            ""
+            "[cCc]"
 
         FooterHowToUseThisSiteLink ->
             "/how-to-use-this-site"
@@ -119,13 +119,13 @@ cyStrings key =
             "Croeso i Hwb Natur Drws Nesaf"
 
         WelcomeP1 ->
-            ""
+            "[cCc]"
 
         WelcomeP2 ->
-            ""
+            "[cCc]"
 
         WelcomeP3 ->
-            ""
+            "[cCc]"
 
         GuideHighlightsSubtitle ->
             "Uchafbwyntiau’r canllawiau"
@@ -137,10 +137,10 @@ cyStrings key =
             "Rhannwch eich stori!"
 
         CallForStoryP ->
-            ""
+            "[cCc]"
 
         CallForStoryLinkText ->
-            ""
+            "[cCc]"
 
         ---
         -- Guide Page
@@ -152,16 +152,16 @@ cyStrings key =
             "Straeon cysylltiedig"
 
         GuidePrintHeader ->
-            ""
+            "[cCc]"
 
         GuideVideoHeader ->
-            ""
+            "[cCc]"
 
         GuideAudioHeader ->
-            ""
+            "[cCc]"
 
         GuideTextHeader ->
-            ""
+            "[cCc]"
 
         GuidePrintHeaderIconLink ->
             "/images/icons/NextDoorNature_icons-print.svg"
@@ -176,10 +176,10 @@ cyStrings key =
             "/images/icons/NextDoorNature_icons-text.svg"
 
         GuideButtonText ->
-            ""
+            "[cCc]"
 
         GuideParagraphText ->
-            ""
+            "[cCc]"
 
         ---
         -- Guides Page
@@ -209,19 +209,16 @@ cyStrings key =
         -- Category things
         ---
         CategoryAdminAndInfoName ->
-            ""
+            "[cCc]"
 
         CategoryPublicityEventsName ->
-            ""
+            "[cCc]"
 
         CategoryWorkingWithPeopleName ->
-            ""
+            "[cCc]"
 
         CategoryWorkingWithAuthoritiesName ->
-            ""
+            "[cCc]"
 
         InCategory ->
-            ""
-
-        _ ->
-            "[cCc] [fFf] to reminder to add all Welsh Keys back"
+            "[cCc]"
