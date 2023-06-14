@@ -39,7 +39,9 @@ view language guide allGuides allStories =
                   , viewPrintGuide language
                   , viewRelatedGuideTeasers language guide.relatedGuideList allGuides
                   ]
-                , [ viewRelatedStoryTeasers language guide.relatedStoryList allStories, Page.Shared.View.viewCallForStory language call ]
+                , [ viewRelatedStoryTeasers language guide.relatedStoryList allStories
+                  , Page.Shared.View.viewCallForStory language call
+                  ]
                 )
             ]
         ]
