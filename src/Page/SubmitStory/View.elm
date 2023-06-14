@@ -24,12 +24,7 @@ viewSubmitFlex : Model -> Page.Data.Page -> Html Msg
 viewSubmitFlex model page =
     div
         [ css
-            [ batch
-                [ displayFlex
-                , property "gap" "1rem"
-                , flexWrap wrap
-                ]
-            ]
+            [ submitFlexStyle ]
         ]
         [ viewDescription page
         , viewForm model
@@ -87,6 +82,15 @@ submitImgGridStyle =
         [ property "display" "grid"
         , property "grid-template-columns" "repeat(auto-fit, minmax(290px, 1fr))"
         , property "gap" "1rem"
+        ]
+
+
+submitFlexStyle : Style
+submitFlexStyle =
+    batch
+        [ displayFlex
+        , property "gap" "1rem"
+        , flexWrap wrap
         ]
 
 
