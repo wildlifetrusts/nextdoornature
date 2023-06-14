@@ -21,6 +21,8 @@ type Key
     | FooterGuidesLink
     | FooterFindYourLocalTrustText
     | FooterFindYourLocalTrustLink
+    | FooterShareYourStoryText
+    | FooterShareYourStoryLink
     | FooterPrivacyPolicyText
     | FooterPrivacyPolicyLink
     | FooterHowToUseThisSiteText
@@ -66,6 +68,17 @@ type Key
       --- Story Page
     | WhoSubHeading
     | WhereSubHeading
+      --- SubmitStory Page
+    | SubmitStoryMetaImageLink
+      {-
+         from formstack iframe embed code
+      -}
+    | SubmitFormSrc
+      {-
+         from formstack iframe embed code
+      -}
+    | SubmitFormTitle
+    | SubmitFormHeading
       --- Category things
     | CategoryAdminAndInfoName
     | CategoryPublicityEventsName

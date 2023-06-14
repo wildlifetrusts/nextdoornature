@@ -79,6 +79,14 @@ metadataFromPage page language content =
                 Nothing ->
                     defaultMetadata language
 
+        SubmitStory ->
+            case pageMetadataFromSlug "submit-story" (dictFromLanguage language content.pages) of
+                Just metadata ->
+                    { metadata | title = subPageTitle language metadata.title, imageSrc = t SubmitStoryMetaImageLink }
+
+                Nothing ->
+                    defaultMetadata language
+
 
 guideMetadataFromSlug :
     String
