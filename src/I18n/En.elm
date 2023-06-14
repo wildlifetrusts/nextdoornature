@@ -201,3 +201,12 @@ enStrings key =
 
         InCategory ->
             "[cCc] In category "
+
+        ---
+        -- Metadata
+        ---
+        StoryMetaDescription title ->
+            "[cCc] A story about: " ++ title
+
+        StoryMetaDescriptionWithAuthor author title ->
+            "[cCc] A story about " ++ author ++ ": " ++ title

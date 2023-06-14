@@ -65,3 +65,6 @@ type Key
     | CategoryWorkingWithPeopleName
     | CategoryWorkingWithAuthoritiesName
     | InCategory
+      --- MetaData
+    | StoryMetaDescription String
+    | StoryMetaDescriptionWithAuthor String String
