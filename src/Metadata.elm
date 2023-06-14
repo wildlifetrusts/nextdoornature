@@ -158,23 +158,6 @@ descriptionFromBody bodyMarkdown =
         ++ "."
 
 
-storyDescription : Language -> String -> Maybe String -> String -> String
-storyDescription language summary maybeAuthor title =
-    if String.length summary > 0 then
-        summary
-
-    else
-        let
-            author =
-                Maybe.withDefault "" maybeAuthor
-        in
-        if String.length author > 0 then
-            translate language (StoryMetaDescriptionWithAuthor author title)
-
-        else
-            translate language (StoryMetaDescription title)
-
-
 imageSrcFromList : List { a | src : String } -> String
 imageSrcFromList imageList =
     imageSrcFromMaybeImage (List.head imageList)
