@@ -63,7 +63,7 @@ cyStrings key =
             "[cCc] Cy label"
 
         ---
-        -- category things
+        -- Category things
         ---
         CategoryAdminAndInfoName ->
             "Grwpiau Cymunedol - Gweinyddol a Gwybodaeth"
