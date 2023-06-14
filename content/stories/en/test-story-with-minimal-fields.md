@@ -3,8 +3,6 @@ title: Test story with minimal fields
 who: Test group
 location: In the United Kingdom
 images: []
-summary: This is test story content, generated to populate the site before real
-  content goes in.
 ---
 
 A test story full of inspiration.

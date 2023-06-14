@@ -14,8 +14,6 @@ type alias PageMetadata =
     { title : String
     , description : String
     , imageSrc : String
-    , summary : String
-    , maybeAuthor : Maybe String
     }
 
 
@@ -34,8 +32,6 @@ defaultMetadata language =
     { title = t SiteTitle
     , description = t WelcomeP1
     , imageSrc = defaultMetaImageSrc
-    , summary = ""
-    , maybeAuthor = Nothing
     }
 
 
@@ -51,8 +47,6 @@ metadataFromPage page language content =
             { title = t SiteTitle
             , description = t WelcomeP1
             , imageSrc = defaultMetaImageSrc
-            , summary = ""
-            , maybeAuthor = Nothing
             }
 
         Guide slug ->
@@ -67,17 +61,12 @@ metadataFromPage page language content =
             { title = subPageTitle language (t GuidesTitle)
             , description = t GuidesMetaDescription
             , imageSrc = defaultMetaImageSrc
-            , summary = ""
-            , maybeAuthor = Nothing
             }
 
         Story slug ->
-            case storyMetadataFromSlug slug (dictFromLanguage language content.stories) of
+            case storyMetadataFromSlug slug language (dictFromLanguage language content.stories) of
                 Just metadata ->
-                    { metadata
-                        | title = subPageTitle language metadata.title
-                        , description = storyDescription language metadata.summary metadata.maybeAuthor metadata.title
-                    }
+                    { metadata | title = subPageTitle language metadata.title }
 
                 Nothing ->
                     defaultMetadata language
@@ -102,8 +91,6 @@ guideMetadataFromSlug slug contentDict =
                 { title = content.title
                 , description = content.summary
                 , imageSrc = imageSrcFromMaybeImage content.maybeImage
-                , summary = ""
-                , maybeAuthor = Nothing
                 }
 
         Nothing ->
@@ -112,17 +99,32 @@ guideMetadataFromSlug slug contentDict =
 
 storyMetadataFromSlug :
     String
+    -> Language
     -> Dict.Dict String Page.Story.Data.Story
     -> Maybe PageMetadata
-storyMetadataFromSlug slug contentDict =
+storyMetadataFromSlug slug language contentDict =
     case Dict.get slug contentDict of
         Just content ->
+            let
+                descriptionText =
+                    if String.length content.summary > 0 then
+                        content.summary
+
+                    else
+                        let
+                            author =
+                                Maybe.withDefault "" content.maybeGroupOrIndividual
+                        in
+                        if String.length author > 0 then
+                            translate language (StoryMetaDescriptionWithAuthor author content.title)
+
+                        else
+                            translate language (StoryMetaDescription content.title)
+            in
             Just
                 { title = content.title
-                , description = content.summary
+                , description = descriptionText
                 , imageSrc = imageSrcFromList content.images
-                , summary = content.summary
-                , maybeAuthor = content.maybeGroupOrIndividual
                 }
 
         Nothing ->
@@ -140,8 +142,6 @@ pageMetadataFromSlug slug contentDict =
                 { title = content.title
                 , description = descriptionFromBody content.fullTextMarkdown
                 , imageSrc = defaultMetaImageSrc
-                , summary = ""
-                , maybeAuthor = Nothing
                 }
 
         Nothing ->
