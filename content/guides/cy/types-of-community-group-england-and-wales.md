@@ -4,6 +4,7 @@ summary: "Mathau o Grwpiau Cymunedol (Cymru a Lloegr)          "
 relatedGuides:
   - Setting up a basic community group
 category: admin-and-info
+customCall: How did you decide what sort of group to be? Tell us your story!
 ---
 ## Cymdeithas Anghorfforedig
 Os mai dim ond grŵp bach o wirfoddolwyr ydych chi, heb unrhyw gynlluniau i gyflogi staff neu rentu eiddo, dyma’r un i chi.
@@ -71,18 +72,8 @@ Defnyddiwch y “Map Llwybr” syml yn y Ganolfan Adnoddau [yma](https://www.res
 
 
 
-Os oedd y canllaw hwn yn rhy gymhleth, gallwch ei ddarllen mewn ffordd wahanol [yma.](https://mycommunity.org.uk/choosing-the-right-organisational-structure-for-your-group)
+Os oedd y canllaw hwn yn rhy gymhleth, gallwch ei ddarllen mewn ffordd wahanol [yma.]
 
-
-
-| **Math o grŵp** | **Corfforedig neu anghorfforedig?** | **Elusennol neu ddim?** | **Ydi’r aelodau’n pleidleisio?** | **A ydyw wedi’i reoleiddio?** | **Gwybodaeth arall** |
-| --- | --- | --- | --- | --- | --- |
-| Cymdeithas Anghorfforedig | Anghorfforedig | Gall fod yn elusennol neu beidio | Nac ydynt | Nac ydi (oni bai ei fod yn elusennol hefyd) | Y math symlaf o grŵp cymunedol |
-| Ymddiriedolaeth Elusennol | Anghorfforedig | Elusennol | Nac ydynt | Ydi – cofrestru gyda’r Comisiwn Elusennau os yw’r incwm dros £5,000 | Rhaid ysgrifennu gweithred ymddiriedaeth. Gweithredir gan grŵp bychan o bobl o’r enw ymddiriedolwyr. |
-| Sefydliad Corfforedig Elusennol (CIO)	| Anghorfforedig | Elusennol | Os yw'n Gymdeithas, bydd yr aelodau'n pleidleisio. Os yw'n Sefydliad, nid yw'r aelodau'n pleidleisio. | Ydi – cofrestru gyda’r Comisiwn Elusennau beth bynnag yw’r incwm	| Rhaid defnyddio cyfansoddiad enghreifftiol sydd wedi'i gymeradwyo gan y Comisiwn Elusennau. Mae cofrestru'n cymryd hyd at 40 diwrnod. Symlach a rhatach na Chwmni Elusennol. |
-| Cwmni Cyfyngedig trwy Warant (Cwmni Cyfyngedig) | Corfforedig | Gall fod yn elusennol neu beidio | Ydynt | Ydi - cofrestru a rheoleiddio gan Dŷ'r Cwmnïau | Rheolir gan gyfarwyddwyr. Dim cyfranddalwyr. Gall fod yn nid-er-elw, sy'n ailfuddsoddi incwm yn y grŵp. |
-| Cwmni Elusennol | Anghorfforedig | Elusennol | Ydynt | Ydi - cofrestru gyda Thŷ’r Cwmnïau A’R Comisiwn Elusennau | Gall CIO fod yn symlach. |
-| Cwmni Budd Cymunedol (CIC) | Corfforedig | Ddim yn elusennol, ond yn parhau i fod yn nid-er-elw fel menter gymdeithasol | Ydynt | Ydi - cofrestru gyda’r Rheoleiddiwr CIC, adran yn Nhŷ’r Cwmnïau | Mae asedau ac elw wedi'u hymrwymo i'r gymuned, ond gallwch gael cyfarwyddwyr sy’n cael tâl. |
 
 
 

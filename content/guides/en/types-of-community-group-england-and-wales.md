@@ -2,8 +2,10 @@
 title: Types of Community Group (England and Wales)
 summary: This guides explains the different types of group in England and Wales
 relatedGuides:
-  - Setting up a basic community group
+  - Setting up a Basic Community Group
 category: admin-and-info
+Category: admin-and-info
+customCall: How did you decide what sort of group to be? Tell us your story!
 ---
 ## An Unincorporated Association
 If you’re just a small group of volunteers, with no plans to employ staff or rent premises, this is the one for you.
@@ -72,13 +74,6 @@ If this guide was too complicated, you can read it in a different way [here.](ht
 
 
 
-| **Type of group** | **Incorporated or unincorporated?** | **Charitable or not?** | **Do the members vote?** | **Is it regulated?** | **Other information** |
-| --- | --- | --- | --- | --- | --- |
-| Unincorporated Association | Unincorporated | Can be charitable or not | No |	No (unless it is also charitable) | The simplest type of community group. |
-| Charitable Trust | Unincorporated | Charitable | No | Yes – register with Charity Commission if income over £5,000 | Must write a trust deed. Run by a small group of people called trustees. |
-| Charitable Incorporated Organisation (CIO) | Incorporated | Charitable | If an Association, members vote. If a Foundation, members do not vote. | Yes – register with Charity Commission whatever income. | Must use model constitution approved by Charity Commission. Registration takes up to 40 days. Simpler and cheaper than a Charitable Company.
-| Company Limited by Guarantee (Limited Company) | Incorporated | Can be charitable or not | Yes | Yes - registered and regulated by Companies House. | Controlled by directors. No shareholders. Can be not-for-profit, which reinvests income into the group. |
-| Charitable Company | Incorporated | Charitable | Yes | Yes – registered with Companies House AND Charity Commission | A CIO might be simpler. |
-| Community Interest Company (CIC) | Incorporated | Not charitable, but still not-for-profit such as a social enterprise | Yes | Yes – registered with CIC Regulator, a department at Companies House | Assets and profits are committed to the community, but you can have paid directors |
+
 
 
