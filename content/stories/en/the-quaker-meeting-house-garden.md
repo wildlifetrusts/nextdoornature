@@ -12,7 +12,7 @@ images:
 summary: The Friends (Quakers) Meeting House in Norton has unused land - they
   would like to see it benefiting local people and local wildlife.
 ---
-#﻿# A community garden in Teesside - with extra challenges!
+## A community garden in Teesside - with extra challenges!
 
 N﻿orton, in Teesside, has some wide wealth inequalities. It's a beautiful area of the country, with warm and generous people. And the Quakers in Norton wanted to do something to help nature and also help with the growing cost of living.
 

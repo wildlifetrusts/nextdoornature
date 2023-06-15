@@ -12,6 +12,9 @@ enStrings key =
         GuidesMetaDescription ->
             "[cCc] Description for the guides search page"
 
+        CallForStoryP ->
+            " If you would like to submit a case study like this we would love to hear from your [cCc]"
+
         ---
         -- Header
         ---
@@ -70,6 +73,13 @@ enStrings key =
         FooterFindYourLocalTrustLink ->
             --[cCc]
             "https://www.wildlifetrusts.org/wildlife-trusts"
+
+        FooterShareYourStoryText ->
+            "[cCc] Share your story"
+
+        FooterShareYourStoryLink ->
+            --[cCc]
+            "/submit-story"
 
         FooterPrivacyPolicyText ->
             "Privacy policy"
@@ -136,8 +146,8 @@ enStrings key =
         CallForStoryHeading ->
             "Share your story"
 
-        CallForStoryP ->
-            "[cCc] Have done something great for nature in your community? We would love to share your experience to help others, including any challenges you faced or hurdles you had to overcome."
+        HomeCallForStoryP ->
+            "[cCc] Have you done something great for nature in your community? What challenges or hurdles did you overcome?"
 
         CallForStoryLinkText ->
             "Send us your story"
@@ -204,6 +214,21 @@ enStrings key =
 
         WhoSubHeading ->
             "Who"
+
+        ---
+        -- SubmitStory Page
+        ---
+        SubmitFormSrc ->
+            "https://teamwildertest.formstack.com/forms/teamwilder_test"
+
+        SubmitFormTitle ->
+            "teamwilder_test"
+
+        SubmitFormHeading ->
+            "Your details"
+
+        SubmitStoryMetaImageLink ->
+            "/images/submit-meta-david-clode-eL4ADAsiOR8-unsplash.jpg"
 
         ---
         -- Category things

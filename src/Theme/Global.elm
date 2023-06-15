@@ -384,7 +384,7 @@ columnWidthStyle : Style
 columnWidthStyle =
     batch
         [ withMediaTabletPortraitUp
-            [ minWidth (px (maxTabletPortrait / 3))
+            [ minWidth (px (maxTabletPortrait / 3.6))
             ]
         ]
 

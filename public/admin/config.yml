@@ -75,6 +75,13 @@ collections:
           pattern: ["^.{50,160}$", "Must be between 50 and 160 characters"],
           i18n: true,
         }
+      - {
+          label: "Call for story 1st sentence",
+          hint: "Make the call to action relevant to the content of the story e.g 'Have you started a community group?'",
+          name: "customCall",
+          widget: "string",
+          i18n: true,
+        }
       - { label: "Body", name: "body", widget: "markdown", i18n: true }
   - name: "guides"
     label: "Guides"
@@ -183,6 +190,13 @@ collections:
         display_fields: ["title"]
         required: false
         i18n: false
+      - {
+          label: "Call for story 1st sentence",
+          hint: "Make the call to action relevant to the content of the story e.g 'Have you started a community group?'",
+          name: "customCall",
+          widget: "string",
+          i18n: true,
+        }
   - name: "pages"
     label: "Pages"
     folder: "content/pages"

@@ -19,6 +19,7 @@ type alias Story =
     , maybeGroupOrIndividual : Maybe String
     , images : List Image
     , fullTextMarkdown : String
+    , customCall : Maybe String
     }
 
 
@@ -59,6 +60,8 @@ storyDictDecoder =
                 (Json.Decode.field "images" (Json.Decode.list imageDecoder))
             |> Json.Decode.Extra.andMap
                 (Json.Decode.field "content" Json.Decode.string |> Json.Decode.Extra.withDefault "")
+            |> Json.Decode.Extra.andMap
+                (Json.Decode.maybe (Json.Decode.field "customCall" Json.Decode.string))
         )
 
 
