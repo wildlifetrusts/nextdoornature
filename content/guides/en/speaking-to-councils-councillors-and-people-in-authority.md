@@ -4,7 +4,7 @@ summary: How to feel more confident when you talk to your local council
 relatedGuides:
   - All About Councils and Local Authorities
   - How to contact your MP, MS (Wales), MLA (Northern Ireland) or MSP (Scotland)
-category: admin-and-info
+category: working-with-the-authorities
 ---
 ## Speaking to councils and councillors: Practical Tips
 

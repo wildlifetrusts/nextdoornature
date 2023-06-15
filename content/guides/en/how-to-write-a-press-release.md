@@ -5,7 +5,7 @@ image:
   src: /images/uploads/press-release_orig-2-.jpg
   alt: A newspaper and some green leaves
   credit: Photo copyright Autumn Barlow/The Wildlife Trusts 2023
-category: admin-and-info
+category: media-publicity-events
 ---
 
 ## How it looks:

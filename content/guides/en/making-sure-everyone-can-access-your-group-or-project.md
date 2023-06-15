@@ -5,7 +5,7 @@ image:
   src: /images/uploads/accessibility_orig-2-.jpg
   alt: A bolted, locked gate
   credit: Photo copyright Autumn Barlow/The Wildlife Trusts 2023
-category: admin-and-info
+category: working-with-people
 ---
 
 This information will not cover accessibility at events. That is a separate document.

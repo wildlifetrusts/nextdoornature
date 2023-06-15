@@ -3,6 +3,7 @@ module Guide exposing (suite)
 import Html
 import Html.Attributes
 import Html.Styled
+import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (Language(..))
 import Message
 import Page.Guide.Data exposing (Guide, GuideListItem, defaultGuideImage)
@@ -65,11 +66,13 @@ suite =
         allGuideList =
             [ { titleKey = "A related guide"
               , slug = "a-guide"
+              , categoryKey = CategoryAdminAndInfoName
               , cy = { title = "" }
               , en = { title = "A related guide" }
               }
             , { titleKey = "Another related guide"
               , slug = "another-guide"
+              , categoryKey = CategoryAdminAndInfoName
               , cy = { title = "" }
               , en = { title = "Another related guide" }
               }

@@ -65,7 +65,7 @@ type Key
     | GuidesMetaDescription
     | GuidesTitleFiltered String String
     | SearchPlaceholder
-    | ExploreGuidesListPlaceholder
+    | ExploreGuidesListHeading
       --- Story Page
     | WhoSubHeading
     | WhereSubHeading

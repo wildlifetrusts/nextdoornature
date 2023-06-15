@@ -193,9 +193,6 @@ cyStrings key =
         SearchPlaceholder ->
             "Chwilio’r hwb yma"
 
-        ExploreGuidesListPlaceholder ->
-            "Archwilio’r canllawiau yn ôl pwnc"
-
         ---
         -- Story Page
         ---

@@ -13,7 +13,7 @@ import Page.Shared.Data
 import Page.Shared.View
 import Page.Story.Data
 import Route exposing (Route(..))
-import Theme.Global exposing (centerContent, contentWrapper, featureImageStyle, hideFromPrint, lightTeal, pageColumnBlockStyle, pageColumnStyle, primaryHeader, purple, screenReaderOnly, teal, teaserImageStyle, topTwoColumnsWrapperStyle, withMediaPrint)
+import Theme.Global exposing (centerContent, contentWrapper, featureImageStyle, hideFromPrint, lightTeal, pageColumnBlockStyle, pageColumnStyle, primaryHeader, purple, teal, teaserImageStyle, topTwoColumnsWrapperStyle, withMediaPrint)
 import Theme.Markdown exposing (markdownToHtml)
 
 
@@ -77,24 +77,6 @@ viewImageColumn language guide =
 
                 Nothing ->
                     Page.Guide.Data.defaultGuideImage
-
-        categorySlugToKey : String -> Key
-        categorySlugToKey slug =
-            case slug of
-                "admin-and-info" ->
-                    CategoryAdminAndInfoName
-
-                "media-publicity-events" ->
-                    CategoryPublicityEventsName
-
-                "working-with-people" ->
-                    CategoryWorkingWithPeopleName
-
-                "working-with-the-authorities" ->
-                    CategoryWorkingWithAuthoritiesName
-
-                _ ->
-                    CategoryAdminAndInfoName
     in
     [ div [ css [ hideFromPrint ] ]
         [ img [ css [ featureImageStyle ], src image.src, alt image.alt ] []
@@ -105,8 +87,14 @@ viewImageColumn language guide =
             Nothing ->
                 text ""
         ]
-    , div [ css [ hideFromPrint ] ] [ text (t InCategory ++ t (categorySlugToKey guide.categorySlug)) ]
-    , div [] ([ h2 [] [ viewHeaderIcon (t GuideTextHeaderIconLink), text (t GuideTextHeader) ] ] ++ markdownToHtml guide.fullTextMarkdown)
+    , div [ css [ hideFromPrint ] ] [ text (t InCategory ++ t (Page.Guide.Data.categorySlugToKey guide.categorySlug)) ]
+    , div []
+        (h2 []
+            [ viewHeaderIcon (t GuideTextHeaderIconLink)
+            , text (t GuideTextHeader)
+            ]
+            :: markdownToHtml guide.fullTextMarkdown
+        )
     ]
 
 
@@ -124,13 +112,13 @@ viewRow ( content1, content2, content3 ) =
 
 viewMaybeVideo : Language -> Maybe Page.Shared.Data.VideoMeta -> Html Msg
 viewMaybeVideo language maybeVideoMeta =
-    let
-        t : Key -> String
-        t =
-            translate language
-    in
     case maybeVideoMeta of
         Just aVideo ->
+            let
+                t : Key -> String
+                t =
+                    translate language
+            in
             div []
                 [ h2 [] [ viewHeaderIcon (t GuideVideoHeaderIconLink), text (t GuideVideoHeader) ]
                 , Page.Shared.View.viewVideo aVideo
@@ -142,13 +130,13 @@ viewMaybeVideo language maybeVideoMeta =
 
 viewMaybeAudio : Language -> Maybe Page.Shared.Data.AudioMeta -> Html Msg
 viewMaybeAudio language maybeAudioMeta =
-    let
-        t : Key -> String
-        t =
-            translate language
-    in
     case maybeAudioMeta of
         Just anAudio ->
+            let
+                t : Key -> String
+                t =
+                    translate language
+            in
             div [ css [ pageColumnStyle ] ]
                 [ h2 [] [ viewHeaderIcon (t GuideAudioHeaderIconLink), text (t GuideAudioHeader) ]
                 , Page.Shared.View.viewAudio anAudio
@@ -181,7 +169,7 @@ viewRelatedGuideTeasers language guideTitleList allGuidesSlugTitleList =
             , ul [ css [ listStyleNone ] ]
                 (List.map
                     (\item ->
-                        li [] [ a [ href (Route.toString (Guide item.slug)) ] [ text (titleFromLanguage language item) ] ]
+                        li [] [ a [ href (Route.toString (Guide item.slug)) ] [ text (Page.Guide.Data.titleFromLanguage language item) ] ]
                     )
                     relatedGuideItems
                 )
@@ -189,23 +177,6 @@ viewRelatedGuideTeasers language guideTitleList allGuidesSlugTitleList =
 
     else
         text ""
-
-
-titleFromLanguage :
-    Language
-    ->
-        { item
-            | en : { a | title : String }
-            , cy : { a | title : String }
-        }
-    -> String
-titleFromLanguage language { en, cy } =
-    case language of
-        English ->
-            en.title
-
-        Welsh ->
-            cy.title
 
 
 teaserImageFromLanguage : Language -> Page.Story.Data.StoryTeaser -> Maybe Page.Story.Data.Image
@@ -245,7 +216,7 @@ viewRelatedStoryTeasers language storyTitleList allStoryTeasers =
                         (\teaser ->
                             div [ css [ storyteaserContainerStyle ] ]
                                 [ viewStoryImage (teaserImageFromLanguage language teaser)
-                                , a [ href (Route.toString (Story teaser.slug)) ] [ text (titleFromLanguage language teaser) ]
+                                , a [ href (Route.toString (Story teaser.slug)) ] [ text (Page.Guide.Data.titleFromLanguage language teaser) ]
                                 ]
                         )
                 )

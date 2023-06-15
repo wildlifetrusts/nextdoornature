@@ -5,7 +5,7 @@ image:
   src: /images/uploads/managingconflictingroup_orig-2-.jpg
   alt: A photo of a leaf with many holes eaten away at it
   credit: Photo copyright Autumn Barlow/The Wildlife Trusts 2023
-category: admin-and-info
+category: working-with-people
 ---
 Conflict is normal, and you can’t avoid it.
 

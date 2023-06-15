@@ -203,8 +203,8 @@ enStrings key =
         SearchPlaceholder ->
             "Search this hub"
 
-        ExploreGuidesListPlaceholder ->
-            "Explore guides by topic"
+        ExploreGuidesListHeading ->
+            "[cCc] Explore guides by theme"
 
         ---
         -- Story Page
