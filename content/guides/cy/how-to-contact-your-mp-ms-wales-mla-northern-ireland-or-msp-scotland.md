@@ -8,6 +8,10 @@ image:
 relatedGuides:
   - All About Councils and Local Authorities
 category: admin-and-info
+video:
+  id: BR0HfHGTQ9E
+  title: "How to Contact Your MP: A Nextdoor Nature Community Video"
+customCall: Have you contacted your MP or councillor? Tell us how it went!
 ---
 Mae aelod seneddol, neu AS, ar gyfer pob ardal yn y DU. Yr enw ar bob ardal yw ‘etholaeth’. Gallwch gysylltu â'ch AS drwy lythyr neu e-bost.
 
