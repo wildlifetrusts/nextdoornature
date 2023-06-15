@@ -1,10 +1,16 @@
 ---
 title: Managing conflict in a group
 summary: Understanding conflict and how to deal with it in groups
+Category: working-with-people
 image:
   src: /images/uploads/managingconflictingroup_orig-2-.jpg
   alt: A photo of a leaf with many holes eaten away at it
   credit: Photo copyright Autumn Barlow/The Wildlife Trusts 2023
+relatedGuides:
+  - "Making sure everyone can access your group or project "
+relatedStories:
+  - The Quaker Meeting House Garden
+customCall: "How have you handled conflict or disagreement? "
 category: working-with-people
 ---
 Conflict is normal, and you can’t avoid it.
