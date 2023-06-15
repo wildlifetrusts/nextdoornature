@@ -25,6 +25,7 @@ type alias Guide =
     , relatedStoryList : List String
     , relatedGuideList : List String
     , categorySlug : String
+    , customCall : Maybe String
     }
 
 
@@ -84,6 +85,8 @@ guideDictDecoder =
                 )
             |> Json.Decode.Extra.andMap
                 (Json.Decode.field "category" Json.Decode.string |> Json.Decode.Extra.withDefault "")
+            |> Json.Decode.Extra.andMap
+                (Json.Decode.maybe (Json.Decode.field "customCall" Json.Decode.string))
         )
 
 

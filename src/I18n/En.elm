@@ -12,6 +12,9 @@ enStrings key =
         GuidesMetaDescription ->
             "[cCc] Description for the guides search page"
 
+        CallForStoryP ->
+            " If you would like to submit a case study like this we would love to hear from your [cCc]"
+
         ---
         -- Header
         ---
@@ -22,10 +25,10 @@ enStrings key =
         -- 404 content
         ---
         ResourceNotFoundTitle ->
-            "[cCc] Oops!"
+            "Oops!"
 
         ResourceNotFoundText ->
-            "[cCc] Looks like we've popped up on the wrong page"
+            "Looks like we've popped up on the wrong page!"
 
         ResourceNotFoundLinkText ->
             "[cCc] Back to home page"
@@ -85,7 +88,7 @@ enStrings key =
             "/privacy-policy"
 
         FooterHowToUseThisSiteText ->
-            "[cCc] How to use this site"
+            "How to use this site"
 
         FooterHowToUseThisSiteLink ->
             "/how-to-use-this-site"
@@ -141,10 +144,10 @@ enStrings key =
             "Story highlights"
 
         CallForStoryHeading ->
-            "Share your story!"
+            "Share your story"
 
-        CallForStoryP ->
-            "[cCc] Have done something great for nature in your community? We would love to share your experience to help others, including any challenges you faced or hurdles you had to overcome."
+        HomeCallForStoryP ->
+            "[cCc] Have you done something great for nature in your community? What challenges or hurdles did you overcome?"
 
         CallForStoryLinkText ->
             "Send us your story"
@@ -198,10 +201,10 @@ enStrings key =
             num ++ " guides on '" ++ query ++ "' [cCc]"
 
         SearchPlaceholder ->
-            "Search the hub"
+            "Search this hub"
 
-        ExploreGuidesListHeading ->
-            "[cCc] Explore guides by theme"
+        ExploreGuidesListPlaceholder ->
+            "Explore guides by topic"
 
         ---
         -- Story Page
@@ -244,3 +247,12 @@ enStrings key =
 
         InCategory ->
             "[cCc] In category "
+
+        ---
+        -- Metadata
+        ---
+        StoryMetaDescription title ->
+            "[cCc] A story about: " ++ title
+
+        StoryMetaDescriptionWithAuthor author title ->
+            "[cCc] A story about " ++ author ++ ": " ++ title

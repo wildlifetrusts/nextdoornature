@@ -30,6 +30,7 @@ suite =
             , relatedStoryList = []
             , relatedGuideList = []
             , categorySlug = "admin-and-info"
+            , customCall = Nothing
             }
 
         guideFull : Guide
@@ -58,6 +59,7 @@ suite =
                 , "Another related guide"
                 ]
             , categorySlug = "admin-and-info"
+            , customCall = Just "First line of a call to submit story box"
             }
 
         allGuideList : List GuideListItem
