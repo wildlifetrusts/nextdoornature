@@ -6,22 +6,29 @@ import Html.Styled.Attributes exposing (attribute, autoplay, css, href, src, tit
 import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (Language, translate)
 import Message exposing (Msg)
-import Page.Shared.Data
+import Page.Shared.Data exposing (VideoMeta)
 import Theme.Global exposing (hideFromPrint, purple, white)
 
 
 viewVideo : Page.Shared.Data.VideoMeta -> Html Msg
 viewVideo videoMeta =
-    div [ css [ videoContainerStyle, hideFromPrint ] ]
-        [ iframe
-            [ src videoMeta.src
-            , attribute "frameborder" "0"
-            , attribute "allowfullscreen" "true"
-            , autoplay False
-            , title videoMeta.title
-            , css [ embeddedVideoStyle ]
+    div []
+        [ if String.length videoMeta.description > 0 then
+            p [] [ text videoMeta.description ]
+
+          else
+            text ""
+        , div [ css [ videoContainerStyle, hideFromPrint ] ]
+            [ iframe
+                [ src videoMeta.src
+                , attribute "frameborder" "0"
+                , attribute "allowfullscreen" "true"
+                , autoplay False
+                , title videoMeta.title
+                , css [ embeddedVideoStyle ]
+                ]
+                []
             ]
-            []
         ]
 
 

@@ -44,6 +44,7 @@ suite =
                 Just
                     { title = "A guide video"
                     , src = "https://a.video.test"
+                    , description = "A description of this video"
                     }
             , maybeAudio =
                 Just
