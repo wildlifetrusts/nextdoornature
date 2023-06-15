@@ -2,7 +2,7 @@
 title: Mathau o Grwpiau Cymunedol (Cymru a Lloegr)
 summary: "Mathau o Grwpiau Cymunedol (Cymru a Lloegr)          "
 relatedGuides:
-  - Setting up a basic community group
+  - Setting up a Basic Community Group
 category: admin-and-info
 customCall: How did you decide what sort of group to be? Tell us your story!
 ---
