@@ -69,10 +69,18 @@ collections:
             }
       - {
           label: "Summary",
-          hint: "Also used for SEO description",
+          hint: "Only used for SEO description",
           name: "summary",
           widget: "string",
           pattern: ["^.{50,160}$", "Must be between 50 and 160 characters"],
+          required: false,
+          i18n: true,
+        }
+      - {
+          label: "Pull quote",
+          name: "pullQuote",
+          widget: "string",
+          required: false,
           i18n: true,
         }
       - {
