@@ -8,6 +8,8 @@ image:
 relatedGuides:
   - Insurance for Local Groups
 category: admin-and-info
+relatedStories:
+  - The Mile Cross Community Garden at The Phoenix Centre, Norwich
 ---
 Canllawiau i Gymru yn unig. Mae gan yr Alban, Gogledd Iwerddon a Lloegr gyngor gwahanol. Edrychwch ar y dogfennau ar wahân.
 
