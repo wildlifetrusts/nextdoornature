@@ -1,13 +1,14 @@
 module Page.Story.View exposing (view)
 
-import Css exposing (Style, batch, before, content, fontStyle, italic, margin3, paddingBottom, pct, rem, width)
+import Css exposing (Style, alignItems, backgroundColor, batch, before, content, fontStyle, italic, margin3, paddingBottom, pct, rem, width)
 import Html.Styled exposing (Html, blockquote, div, h3, img, p, text)
 import Html.Styled.Attributes exposing (alt, css, src)
 import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (Language, translate)
 import Message exposing (Msg)
-import Page.Shared.View
+import Page.Shared.View exposing (viewBreadcrumbs)
 import Page.Story.Data
+import Route exposing (Route(..))
 import Theme.FluidScale
 import Theme.Global exposing (centerContent, contentWrapper, featureImageStyle, pageColumnStyle, primaryHeader, topTwoColumnsWrapperStyle)
 import Theme.Markdown exposing (markdownToHtml)
@@ -23,8 +24,13 @@ view language story =
         call =
             Maybe.withDefault (t HomeCallForStoryP) story.customCall
     in
-    div [ css [ centerContent ] ]
+    div [ css [ storyContainerStyle ] ]
         [ primaryHeader [] story.title
+        , viewBreadcrumbs
+            [ { text = "Home", href = Route.toString Index }
+            , { text = "Stories", href = Route.toString Guides }
+            , { text = story.title, href = "" }
+            ]
         , div [ css [ contentWrapper, width (pct 100) ] ]
             [ div [ css [ topTwoColumnsWrapperStyle ] ]
                 [ div [ css [ pageColumnStyle ] ]
@@ -151,3 +157,11 @@ imageCaptionStyle : Style
 imageCaptionStyle =
     batch
         [ margin3 (rem 0) (rem 0) (rem 1) ]
+
+
+storyContainerStyle : Style
+storyContainerStyle =
+    batch
+        [ centerContent
+        , alignItems Css.start
+        ]

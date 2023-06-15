@@ -1,7 +1,7 @@
-module Page.Shared.View exposing (viewAudio, viewCallForStory, viewVideo)
+module Page.Shared.View exposing (viewAudio, viewBreadcrumbs, viewCallForStory, viewVideo)
 
 import Css exposing (Style, absolute, backgroundColor, backgroundImage, backgroundPosition, backgroundRepeat, batch, color, fontWeight, height, int, left, noRepeat, padding, paddingBottom, paddingRight, pct, position, relative, rem, right, top, url, width, zero)
-import Html.Styled exposing (Html, a, div, h2, iframe, p, text)
+import Html.Styled exposing (Html, a, div, h2, iframe, p, span, text)
 import Html.Styled.Attributes exposing (attribute, autoplay, css, href, src, title)
 import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (Language, translate)
@@ -45,6 +45,21 @@ viewCallForStory language customCall =
         , p [] [ text (customCall ++ t CallForStoryP) ]
         , a [ href "submit story Route [cCc]", css [ callForStoryLinkStyle ] ] [ text (t CallForStoryLinkText) ]
         ]
+
+
+viewBreadcrumbs : List { text : String, href : String } -> Html Msg
+viewBreadcrumbs crumbs =
+    div [ css [ breadcrumbStyle ] ]
+        (List.map
+            (\link ->
+                if String.length link.href > 0 then
+                    a [ css [ breadcrumbLink ], href link.href ] [ text link.text ]
+
+                else
+                    span [ css [ breadcrumbFinal ] ] [ text link.text ]
+            )
+            crumbs
+        )
 
 
 callForStoryStyle : Style
@@ -91,4 +106,26 @@ videoContainerStyle =
         [ paddingBottom (pct 56.25)
         , position relative
         , width (pct 100)
+        ]
+
+
+breadcrumbStyle : Style
+breadcrumbStyle =
+    batch
+        [ Css.marginBottom (rem 1)
+        ]
+
+
+breadcrumbLink : Style
+breadcrumbLink =
+    batch
+        [ Css.marginRight (rem 0.5)
+        ]
+
+
+breadcrumbFinal : Style
+breadcrumbFinal =
+    batch
+        [ color purple
+        , fontWeight Css.bold
         ]

@@ -10,7 +10,7 @@ import List
 import Message exposing (Msg(..))
 import Page.Guide.Data
 import Page.Shared.Data
-import Page.Shared.View
+import Page.Shared.View exposing (viewBreadcrumbs)
 import Page.Story.Data
 import Route exposing (Route(..))
 import Theme.Global exposing (centerContent, contentWrapper, featureImageStyle, hideFromPrint, lightTeal, pageColumnBlockStyle, pageColumnStyle, primaryHeader, purple, teal, teaserImageStyle, topTwoColumnsWrapperStyle, withMediaPrint)
@@ -57,6 +57,11 @@ viewGuideHeader language guide =
         [ div
             [ css [ headerContentStyle ] ]
             [ primaryHeader [ css [ guideTitleStyle ] ] guide.title
+            , viewBreadcrumbs
+                [ { text = "Home", href = Route.toString Index }
+                , { text = "Guides", href = Route.toString Guides }
+                , { text = guide.title, href = "" }
+                ]
             , p [] [ text guide.summary ]
             ]
         ]
