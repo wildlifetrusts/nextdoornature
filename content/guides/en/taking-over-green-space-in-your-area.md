@@ -7,7 +7,7 @@ image:
   credit: Photo copyright Autumn Barlow / The Wildlife Trusts 2023
 relatedGuides:
   - Insurance for Local Groups
-category: admin-and-info
+category: working-with-the-authorities
 ---
 Guidance differs between England, Scotland, Wales and Northern Ireland. Please check carefully.
 

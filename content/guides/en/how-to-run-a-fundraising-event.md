@@ -3,7 +3,7 @@ title: How to Run a Fundraising Event
 summary: A quick list of ideas and hints for running a fundraising event
 relatedGuides:
   - Insurance for Local Groups
-category: admin-and-info
+category: media-publicity-events
 ---
 This advice is for you if you are planning a one-off event to raise money. If you want to apply for funding, see our other resources.
 

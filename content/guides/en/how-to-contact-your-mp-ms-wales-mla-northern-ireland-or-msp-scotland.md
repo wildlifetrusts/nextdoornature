@@ -7,7 +7,7 @@ image:
   credit: Photo copyright Autumn Barlow/The Wildlife Trusts 2023
 relatedGuides:
   - All About Councils and Local Authorities
-category: admin-and-info
+category: working-with-the-authorities
 ---
 There is a member of parliament, or MP, for every area in the UK. Each area is called a ‘constituency.’ You can contact your MP by letter or by email.
 

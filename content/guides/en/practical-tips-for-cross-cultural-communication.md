@@ -2,7 +2,7 @@
 title: Practical Tips for Cross-Cultural Communication
 summary: Helpful hints when you are working with people from diverse cultural
   backgrounds.
-category: admin-and-info
+category: working-with-people
 ---
 
 

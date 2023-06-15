@@ -8,7 +8,7 @@ image:
 video:
   id: pZDv-ri2GOs
   title: "About Councils and Local Authorities: A Nextdoor Nature Video."
-category: admin-and-info
+category: working-with-the-authorities
 ---
 ## What do councils and Local Authorities do?
 
