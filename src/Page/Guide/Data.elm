@@ -1,6 +1,7 @@
-module Page.Guide.Data exposing (Guide, GuideListItem, Guides, Image, allGuidesSlugTitleList, defaultGuideImage, guideFromSlug, guideLanguageDictDecoder, guidesInPreferredLanguage)
+module Page.Guide.Data exposing (Guide, GuideListItem, Guides, Image, allGuidesSlugTitleList, categorySlugToKey, defaultGuideImage, guideFromSlug, guideLanguageDictDecoder, guidesInPreferredLanguage, titleFromLanguage)
 
 import Dict exposing (Dict)
+import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (Language(..))
 import Json.Decode
 import Json.Decode.Extra
@@ -45,6 +46,7 @@ defaultGuideImage =
 type alias GuideListItem =
     { slug : String
     , titleKey : String
+    , categoryKey : Key
     , en : { title : String }
     , cy : { title : String }
     }
@@ -120,6 +122,23 @@ fallbackGuides language guides =
             guides.en
 
 
+titleFromLanguage :
+    Language
+    ->
+        { item
+            | en : { a | title : String }
+            , cy : { a | title : String }
+        }
+    -> String
+titleFromLanguage language { en, cy } =
+    case language of
+        English ->
+            en.title
+
+        Welsh ->
+            cy.title
+
+
 guideFromSlug : Language -> Guides -> String -> Maybe Guide
 guideFromSlug language guides slug =
     case Dict.get slug (guidesInPreferredLanguage language guides) of
@@ -128,6 +147,25 @@ guideFromSlug language guides slug =
 
         Nothing ->
             Dict.get slug (fallbackGuides language guides)
+
+
+categorySlugToKey : String -> Key
+categorySlugToKey slug =
+    case slug of
+        "admin-and-info" ->
+            CategoryAdminAndInfoName
+
+        "media-publicity-events" ->
+            CategoryPublicityEventsName
+
+        "working-with-people" ->
+            CategoryWorkingWithPeopleName
+
+        "working-with-the-authorities" ->
+            CategoryWorkingWithAuthoritiesName
+
+        _ ->
+            CategoryAdminAndInfoName
 
 
 allGuidesSlugTitleList : Guides -> List GuideListItem
@@ -139,6 +177,7 @@ allGuidesSlugTitleList guides =
             (\( _, guide ) ->
                 { slug = guide.slug
                 , titleKey = guide.title
+                , categoryKey = categorySlugToKey guide.categorySlug
                 , en =
                     { title = titleFromSlug guides.en guide }
                 , cy =

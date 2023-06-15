@@ -200,7 +200,7 @@ enStrings key =
         SearchPlaceholder ->
             "Search the hub"
 
-        ExploreGuidesListPlaceholder ->
+        ExploreGuidesListHeading ->
             "[cCc] Explore guides by theme"
 
         ---
