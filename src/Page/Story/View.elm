@@ -6,6 +6,7 @@ import Html.Styled.Attributes exposing (alt, css, src)
 import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (Language, translate)
 import Message exposing (Msg)
+import Page.Shared.View
 import Page.Story.Data
 import Theme.FluidScale
 import Theme.Global exposing (centerContent, contentWrapper, featureImageStyle, pageColumnStyle, primaryHeader, topTwoColumnsWrapperStyle)
@@ -18,6 +19,9 @@ view language story =
         t : Key -> String
         t =
             translate language
+
+        call =
+            Maybe.withDefault (t HomeCallForStoryP) story.customCall
     in
     div [ css [ centerContent ] ]
         [ primaryHeader [] story.title
@@ -47,9 +51,10 @@ view language story =
                     , div [] (viewImages story.images)
                     ]
                 , div [ css [ pageColumnStyle ] ]
-                    (viewPullQuote story.maybePullQuote
-                        :: markdownToHtml story.fullTextMarkdown
-                    )
+                    [ div [] [ viewPullQuote story.maybePullQuote ]
+                    , div [] (markdownToHtml story.fullTextMarkdown)
+                    , div [] [ Page.Shared.View.viewCallForStory language call ]
+                    ]
                 ]
             ]
         ]

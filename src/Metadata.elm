@@ -64,7 +64,7 @@ metadataFromPage page language content =
             }
 
         Story slug ->
-            case storyMetadataFromSlug slug (dictFromLanguage language content.stories) of
+            case storyMetadataFromSlug slug language (dictFromLanguage language content.stories) of
                 Just metadata ->
                     { metadata | title = subPageTitle language metadata.title }
 
@@ -107,14 +107,31 @@ guideMetadataFromSlug slug contentDict =
 
 storyMetadataFromSlug :
     String
+    -> Language
     -> Dict.Dict String Page.Story.Data.Story
     -> Maybe PageMetadata
-storyMetadataFromSlug slug contentDict =
+storyMetadataFromSlug slug language contentDict =
     case Dict.get slug contentDict of
         Just content ->
+            let
+                descriptionText =
+                    if String.length content.summary > 0 then
+                        content.summary
+
+                    else
+                        let
+                            author =
+                                Maybe.withDefault "" content.maybeGroupOrIndividual
+                        in
+                        if String.length author > 0 then
+                            translate language (StoryMetaDescriptionWithAuthor author content.title)
+
+                        else
+                            translate language (StoryMetaDescription content.title)
+            in
             Just
                 { title = content.title
-                , description = descriptionFromBody content.fullTextMarkdown
+                , description = descriptionText
                 , imageSrc = imageSrcFromList content.images
                 }
 
