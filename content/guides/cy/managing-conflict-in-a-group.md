@@ -9,7 +9,7 @@ category: admin-and-info
 relatedGuides:
   - "Making sure everyone can access your group or project "
 relatedStories:
-  - The Quaker Meeting House Garden
+  - Norton Grange Community Centre
 ---
 Mae gwrthdaro yn normal, ac ni allwch ei osgoi.
 

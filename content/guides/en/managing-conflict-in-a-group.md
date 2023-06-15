@@ -9,7 +9,7 @@ image:
 relatedGuides:
   - "Making sure everyone can access your group or project "
 relatedStories:
-  - The Quaker Meeting House Garden
+  - Norton Grange Community Centre
 customCall: "How have you handled conflict or disagreement? "
 category: working-with-people
 ---
