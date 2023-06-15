@@ -1,12 +1,16 @@
 ---
 title: Taking Over Green Space In Your Area
 summary: A summary of how to get started in taking over a patch of green space
+Category: admin-and-info
 image:
   src: /images/uploads/takingovergreenspace_orig-2-.jpg
   alt: A trowel in the dirt in front of a small green bushy plant
   credit: Photo copyright Autumn Barlow / The Wildlife Trusts 2023
 relatedGuides:
   - Insurance for Local Groups
+relatedStories:
+  - The Mile Cross Community Garden at The Phoenix Centre, Norwich
+customCall: Have you taken over some green space in your area? Tell us all about it!
 category: working-with-the-authorities
 ---
 Guidance differs between England, Scotland, Wales and Northern Ireland. Please check carefully.
