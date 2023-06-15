@@ -1,31 +1,29 @@
 ---
-title: The Quaker Meeting House Garden
-who: Local communities and the Society of Friends
+title: Norton Quaker Meeting House Community Garden
+who: "Local communities "
 location: Norton, Teesside
 images:
   - src: /images/uploads/lornajones_rhiannonmurphy_seanmurphy_helendeehan_teeside_1-1-.jpg
-    alt: A group of local people sitting around a table covered in paperwork and
-      plans
-    credit: Photo copyright Autumn Barlow/The Wildlife Trusts 2022
-    caption: Local people and Quakers plan how they want their garden to look in
-      late 2022
-summary: The Friends (Quakers) Meeting House in Norton has unused land - they
-  would like to see it benefiting local people and local wildlife.
-pullQuote: We plan to hold events in the park, clean up days, and planting days
-  to have the community involved in positive events in the park to build up
-  positive momentum about the park in the local community with events planned to
-  start in mid-summer.
-customCall: Have you faced conflict and challenge when starting a new project?
+    alt: A group of people sitting around a table of paperwork inside a simple
+      building
+    credit: Photo Autumn Barlow
+summary: How local Quakers and the community of Norton are working together to grow food
+pullQuote: Plans are afoot to help transform the grounds to help wildlife to
+  thrive and possibly support a small-scale food-growing area too.
+customCall: Have you tried to grow food or plants in an unusual place?
 ---
-## A community garden in Teesside - with extra challenges!
-
-Norton Grange community centre is right at the centre of the Blue Hall/Norton Grange estate which is in the top 10% most deprived in the UK. When the centre was first built there was very little consultation with the community and there was a significant amount of antisocial behaviour around the community centre including breaking windows on the centre. 
-Groundwork took over the running of the centre and began involving local people in the running of the centre and it has come a long way since then with the community becoming involved and all the after-school and HAF sessions run by the centre are now full or over-subscribed. The centre also runs a community pantry which was running low at the end of 2022 beginning of 2023 with much higher demand and a lower amount of donations than usual.
+Helen Deehan a local community organiser said about the project in Norton. 
+“The grounds were identified as a place where with a little love and attention this could be a place where local wildlife can prosper. Bees, butterflies, moths, 13 different species of birds, insects, dragonflies, ladybirds, bats, and hedgehogs have already been found to be in and around the grounds of the meeting house.”
+“Plans are afoot to help transform the grounds to help wildlife to thrive and possibly support a small-scale food-growing area too.”
+This is a community project and we will have days where local people can come along and help and be part of the transformation. We also hope to have 'wild' days once complete where you can come and wildlife watch and seed swap too! It will be a 'grow up' project, to ensure burial grounds are not disturbed but nature has a chance to flourish.”
+“The project is a great opportunity for children from the area to learn more about how important nature is and what we can do in our own gardens or schools to help not hinder nature recovery. We would love to hear from anyone who might have ideas for this early stage of planning. Also from local businesses who might want to help sponsor and support the project.”
+Setting: 
+Norton North and South in the top 10-20% most deprived in the UK. 
+Norton Quaker Meeting House is off The Green near the high street so is very accessible for those in Norton. 
 Conflict:
-North Park, deprived area, lack of skills and knowledge according to the IMD for the area. The staff at the community centre are brilliant at community engagement. They have a background in care work and adult education so is wonderful at community engagement. However there is a lack of knowledge or skills to do with growing or greenspaces but a lot of enthusiasm about this. 
-This enthusiasm is stoked by the fact that their local park which is a huge area of greenspace stretching from North Norton to Portrack. There is a high amount of antisocial behaviour related to the park particularly related to drugs. This has accelerated recently especially after the lockdowns. I have spoken to many residents about the park and many of them used to walk through the park regularly however many people who would have felt safe to walk through the park no longer feel safe to do so. 
-This behaviour used to just be centred in the part of the park that runs through the Norton Grange estate. Many of the residents I spoke to used to feel safe walking around the area of the park near the prison. However this antisocial behaviour seems to have spread across the park with scrambler bikes used across the whole park. The added issue with this is that this is Stockton Council land. All of the issues are compounded that this is Stockton Council land and despite multiple reports Stockton Council are not able to prioritise being involved in working on these issues. 
-Resolution:
-With the coordinated efforts of the Norton litterpicking group (Norton Clean Up Your Act), Nortong Community Centre, Local Police, Local Councillors, and other community groups we plan to hold events in the park, clean up days, and planting days to have the community involved in positive events in the park to build up positive momentum about the park in the local community with events planned to start in mid-summer. 
+Difficulties surrounding it being a burial ground, can’t dig, must be a grow up plan. 
+All of the group are over 75 so wouldn’t be able to do this on their own as they wouldn’t be able to do any of the heavy lifting for the project. 
+Resolution: 
+Helen Deehan had already been working with the Quakers and had come up with a plan with them for the garden but they still needed help to put the plan in place. I put them in touch with a local youth group Bright Minds Big Futures (BMBF) who were keen to do more work on their local nature sites. Helen also set up a Facebook Group to get the local community involved in the work. With the help of Helen, the local community, and BMBF the space has been transformed into a space for wildlife with a new growing area that has just been added this month.  
 
 I﻿n December 2022, we made a film about their plans and hopes - find it [here.](https://youtu.be/RwFBLlmjLeI)
