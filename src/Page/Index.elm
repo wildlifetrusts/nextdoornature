@@ -8,6 +8,7 @@ import I18n.Translate exposing (Language, translate)
 import Message exposing (Msg)
 import Page.Guides.Data
 import Page.Guides.View
+import Page.Shared.View exposing (viewCallForStory)
 import Shared exposing (Model, shuffleList)
 import Theme.FluidScale
 import Theme.Global exposing (centerContent, contentWrapper, pageColumnBlockStyle, pageColumnStyle, primaryHeader, purple, topTwoColumnsWrapperStyle, white, withMediaMobileUp, withMediaTabletPortraitUp)
@@ -49,7 +50,7 @@ view model =
                     , ExploreGuidesListPlaceholder
                     , ExploreGuidesListPlaceholder
                     ]
-                    ++ [ viewCallForStory model.language ]
+                    ++ [ viewCallForStory model.language (t HomeCallForStoryP) ]
                 )
             ]
         ]
@@ -58,20 +59,6 @@ view model =
 viewTextColumn : (Key -> String) -> List Key -> List (Html msg)
 viewTextColumn t paragraphs =
     List.map (\para -> p [ css [ pageColumnBlockStyle ] ] [ text (t para) ]) paragraphs
-
-
-viewCallForStory : Language -> Html Msg
-viewCallForStory language =
-    let
-        t : Key -> String
-        t =
-            translate language
-    in
-    div [ css [ callForStoryStyle, Theme.Global.roundedCornerStyle ] ]
-        [ h2 [ css [ callForStoryHeadingStyle ] ] [ text (t CallForStoryHeading) ]
-        , p [] [ text (t CallForStoryP) ]
-        , a [ href "submit story Route [cCc]", css [ callForStoryLinkStyle ] ] [ text (t CallForStoryLinkText) ]
-        ]
 
 
 teaserSubtitleStyle : Style
@@ -89,31 +76,4 @@ teaserColumnStyle =
         , property "gap" "1rem"
         , withMediaTabletPortraitUp [ flexDirection column ]
         , withMediaMobileUp [ flexDirection row ]
-        ]
-
-
-callForStoryStyle : Style
-callForStoryStyle =
-    batch
-        [ backgroundColor purple
-        , color white
-        , padding (rem 1)
-        , width (pct 100)
-        ]
-
-
-callForStoryHeadingStyle : Style
-callForStoryHeadingStyle =
-    color white
-
-
-callForStoryLinkStyle : Style
-callForStoryLinkStyle =
-    batch
-        [ backgroundImage (url "/images/arrow--white.svg")
-        , backgroundPosition right
-        , backgroundRepeat noRepeat
-        , color white
-        , fontWeight (int 500)
-        , paddingRight (rem 1.5)
         ]

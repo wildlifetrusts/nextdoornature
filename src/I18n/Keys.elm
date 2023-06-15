@@ -44,6 +44,7 @@ type Key
     | GuideHighlightsSubtitle
     | StoryHighlightsSubtitle
     | CallForStoryHeading
+    | HomeCallForStoryP
     | CallForStoryP
     | CallForStoryLinkText
       --- Guide Page

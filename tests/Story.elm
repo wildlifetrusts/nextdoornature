@@ -24,6 +24,7 @@ suite =
             , maybeLocation = Nothing
             , maybeGroupOrIndividual = Nothing
             , images = []
+            , customCall = Nothing
             }
 
         storyFull : Story
@@ -40,6 +41,7 @@ suite =
                   , maybeCredit = Just "credit"
                   }
                 ]
+            , customCall = Just "First line of a call to submit story box"
             }
 
         view : Story -> Html.Styled.Html Message.Msg

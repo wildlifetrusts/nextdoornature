@@ -1,11 +1,13 @@
-module Page.Shared.View exposing (viewAudio, viewVideo)
+module Page.Shared.View exposing (viewAudio, viewCallForStory, viewVideo)
 
-import Css exposing (Style, absolute, batch, height, left, paddingBottom, pct, position, relative, top, width, zero)
-import Html.Styled exposing (Html, div, iframe, text)
-import Html.Styled.Attributes exposing (attribute, autoplay, css, src, title)
+import Css exposing (Style, absolute, backgroundColor, backgroundImage, backgroundPosition, backgroundRepeat, batch, color, fontWeight, height, int, left, noRepeat, padding, paddingBottom, paddingRight, pct, position, relative, rem, right, top, url, width, zero)
+import Html.Styled exposing (Html, a, div, h2, iframe, p, text)
+import Html.Styled.Attributes exposing (attribute, autoplay, css, href, src, title)
+import I18n.Keys exposing (Key(..))
+import I18n.Translate exposing (Language, translate)
 import Message exposing (Msg)
 import Page.Shared.Data
-import Theme.Global exposing (hideFromPrint)
+import Theme.Global exposing (hideFromPrint, purple, white)
 
 
 viewVideo : Page.Shared.Data.VideoMeta -> Html Msg
@@ -29,6 +31,47 @@ viewAudio _ =
         [ css [ embeddedVideoStyle, hideFromPrint ]
         ]
         [ text "[fFf] render audio player" ]
+
+
+viewCallForStory : Language -> String -> Html Msg
+viewCallForStory language customCall =
+    let
+        t : Key -> String
+        t =
+            translate language
+    in
+    div [ css [ callForStoryStyle, Theme.Global.roundedCornerStyle ] ]
+        [ h2 [ css [ callForStoryHeadingStyle ] ] [ text (t CallForStoryHeading) ]
+        , p [] [ text (customCall ++ t CallForStoryP) ]
+        , a [ href "submit story Route [cCc]", css [ callForStoryLinkStyle ] ] [ text (t CallForStoryLinkText) ]
+        ]
+
+
+callForStoryStyle : Style
+callForStoryStyle =
+    batch
+        [ backgroundColor purple
+        , color white
+        , padding (rem 1)
+        , width (pct 100)
+        ]
+
+
+callForStoryHeadingStyle : Style
+callForStoryHeadingStyle =
+    color white
+
+
+callForStoryLinkStyle : Style
+callForStoryLinkStyle =
+    batch
+        [ backgroundImage (url "/images/arrow--white.svg")
+        , backgroundPosition right
+        , backgroundRepeat noRepeat
+        , color white
+        , fontWeight (int 500)
+        , paddingRight (rem 1.5)
+        ]
 
 
 embeddedVideoStyle : Style
