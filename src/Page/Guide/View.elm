@@ -24,12 +24,7 @@ view language guide allGuides allStories =
             Maybe.withDefault (translate language HomeCallForStoryP) guide.customCall
     in
     div []
-        [ div [ css [ outerBorderStyle, withMediaPrint (Just [ marginBottom (rem 0) ]) ] ]
-            [ div
-                [ css [ centerContent ] ]
-                [ primaryHeader [ css [ guideTitleStyle ] ] guide.title
-                ]
-            ]
+        [ viewGuideHeader language guide
         , div
             [ css [ centerContent ] ]
             [ viewRow
@@ -49,6 +44,22 @@ view language guide allGuides allStories =
 
 
 -- viewCategorySubHeader : Language -> Page.Guide.Data.Guide -> List (Html Msg)
+
+
+viewGuideHeader : Language -> Page.Guide.Data.Guide -> Html Msg
+viewGuideHeader language guide =
+    let
+        t : Key -> String
+        t =
+            translate language
+    in
+    div [ css [ outerBorderStyle, withMediaPrint (Just [ marginBottom (rem 0) ]) ] ]
+        [ div
+            [ css [ headerContentStyle ] ]
+            [ primaryHeader [ css [ guideTitleStyle ] ] guide.title
+            , p [] [ text guide.summary ]
+            ]
+        ]
 
 
 viewImageColumn : Language -> Page.Guide.Data.Guide -> List (Html Msg)
@@ -292,6 +303,11 @@ viewHeaderIcon url =
     span [ attribute "aria-hidden" "true" ]
         [ img [ src url, css [ headerIconStyle ] ] []
         ]
+
+
+headerContentStyle : Style
+headerContentStyle =
+    batch [ padding (rem 1) ]
 
 
 headerIconStyle : Style
