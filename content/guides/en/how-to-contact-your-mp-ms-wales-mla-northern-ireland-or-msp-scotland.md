@@ -1,12 +1,17 @@
 ---
 title: How to contact your MP, MS (Wales), MLA (Northern Ireland) or MSP (Scotland)
 summary: How to find your MP and how to get in touch with them
+Category: working-with-the-authorities
 image:
   src: /images/uploads/contact-your-mp_orig-2-.jpg
   alt: An address book, an envelope and a stamp
   credit: Photo copyright Autumn Barlow/The Wildlife Trusts 2023
+video:
+  id: BR0HfHGTQ9E
+  title: "How to Contact Your MP: A Nextdoor Nature Community Video"
 relatedGuides:
   - All About Councils and Local Authorities
+customCall: Have you contacted your MP or councillor? Tell us how it went!
 category: working-with-the-authorities
 ---
 There is a member of parliament, or MP, for every area in the UK. Each area is called a ‘constituency.’ You can contact your MP by letter or by email.
