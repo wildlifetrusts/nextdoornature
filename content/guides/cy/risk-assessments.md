@@ -1,12 +1,15 @@
 ---
 title: Asesiadau Risg
-summary: Y gwahanol fathau o yswiriant, beth ydyn nhw a pham mae ei angen arnoch chi
+summary: "Popeth am asesiadau risg a sut i reoli
+  risg                                                      "
 image:
   src: /images/uploads/basic-risk-assessments_orig-2-.jpg
   alt: A photo of a warning sign
 video:
   id: TxoGySN9AiI
   title: A Nextdoor Nature video about risk assessments
+relatedGuides:
+  - Insurance for Local Groups
 customCall: A oedd asesiadau risg yn ddefnyddiol i chi?
 ---
 Rydych chi'n gwneud asesiad risg cyn i chi wneud unrhyw beth ac mae'n debyg nad ydych chi hyd yn oed yn sylweddoli eich bod chi'n ei wneud! Mae'n cyfeirio at yr hyn rydych chi'n ei feddwl cyn i chi wneud rhywbeth. Byddwch chi'n eu gwneud nhw drwy'r amser - cyn i chi groesi'r ffordd, er enghraifft. Gelwir asesiad risg nad ydych yn ei ysgrifennu, ac yn ei wneud yn eich pen, yn “asesiad risg deinamig”.

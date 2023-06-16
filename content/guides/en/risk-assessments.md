@@ -1,6 +1,6 @@
 ---
 title: Risk Assessments
-summary: The different types of insurance, what they are and why you need it
+summary: "All about risk assessments and how to manage risk                   "
 Category: admin-and-info
 image:
   src: /images/uploads/basic-risk-assessments_orig-2-.jpg
