@@ -1,6 +1,7 @@
 ---
-title: Multilingual Community Engagement
+title: Working with Many Languages
 summary: A summary about working with groups where many languages are spoken.
+Category: working-with-people
 image:
   src: /images/uploads/workingwithmanylanguages_orig-2-.jpg
   alt: A stack of small dictionaries in other languages
@@ -8,6 +9,10 @@ image:
 video:
   id: Tk7InQgM7PE
   title: Working with many languages. A Nextdoor Nature Video.
+relatedGuides:
+  - "Making sure everyone can access your group or project "
+customCall: Do you have a story to share or helpful advice about working with
+  lots of languages?
 category: working-with-people
 ---
 ## Identify the need
