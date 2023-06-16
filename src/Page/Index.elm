@@ -9,6 +9,7 @@ import Message exposing (Msg)
 import Page.Guide.Data
 import Page.Guides.Data
 import Page.Guides.View
+import Route
 import Shared exposing (Model, shuffleList)
 import Theme.FluidScale
 import Theme.Global exposing (centerContent, contentWrapper, listStyleNone, pageColumnBlockStyle, pageColumnStyle, primaryHeader, purple, topTwoColumnsWrapperStyle, white, withMediaMobileUp, withMediaTabletPortraitUp)
@@ -97,7 +98,7 @@ viewGuideCategoryList language guides =
     ul [ css [ listStyleNone ] ]
         (List.map
             (\guide ->
-                li [] [ a [ href guide.slug ] [ text (Page.Guide.Data.titleFromLanguage language guide) ] ]
+                li [] [ a [ href (Route.toString (Route.Guide guide.slug)) ] [ text (Page.Guide.Data.titleFromLanguage language guide) ] ]
             )
             guides
         )
