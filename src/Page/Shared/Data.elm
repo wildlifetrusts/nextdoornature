@@ -45,18 +45,20 @@ audioDecoder =
 type alias VideoMeta =
     { title : String
     , src : String
+    , description : String
     }
 
 
 videoDecoder : Json.Decode.Decoder VideoMeta
 videoDecoder =
-    Json.Decode.map2 VideoMeta
+    Json.Decode.map3 VideoMeta
         (Json.Decode.field "title" Json.Decode.string)
         (Json.Decode.field "id"
             (Json.Decode.string
                 |> Json.Decode.andThen idToEmbedSrc
             )
         )
+        (Json.Decode.field "description" Json.Decode.string)
 
 
 idToEmbedSrc : String -> Json.Decode.Decoder String
