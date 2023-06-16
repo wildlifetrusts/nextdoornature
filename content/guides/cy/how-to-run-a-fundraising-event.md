@@ -4,6 +4,8 @@ summary: Rhestr gyflym o syniadau ac awgrymiadau ar gyfer cynnal digwyddiad codi
 relatedGuides:
   - Insurance for Local Groups
 category: admin-and-info
+video:
+  id: kpYYHd-mSgE
 ---
 Mae'r cyngor yma ar eich cyfer chi os ydych chi'n cynllunio digwyddiad untro i godi arian. Os ydych chi eisiau gwneud cais am arian, edrychwch ar ein hadnoddau eraill.
 
