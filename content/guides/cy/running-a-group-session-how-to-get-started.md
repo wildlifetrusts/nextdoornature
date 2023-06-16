@@ -6,6 +6,9 @@ image:
   alt: A group of people in a hall having a meeting around a table
   credit: Photo Autumn Barlow 2022 The Wildlife Trusts
 video: null
+relatedGuides:
+  - Types of Community Group (England and Wales)
+  - Setting up a Basic Community Group
 customCall: Have you run group sessions or meetings?
 ---
 
