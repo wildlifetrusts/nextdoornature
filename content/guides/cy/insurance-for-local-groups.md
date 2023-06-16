@@ -6,6 +6,10 @@ image:
   credit: Photo copyright Autumn Barlow/The Wildlife Trusts 2023
   alt: Some insurance paperwork
 category: admin-and-info
+video:
+  id: zyTZUjiipxM
+  title: All About Insurance for Groups
+customCall: "How easy have you found insurance? "
 ---
 Nid yw hwn yn gyngor yswiriant ffurfiol.
 

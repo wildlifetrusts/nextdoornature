@@ -1,10 +1,17 @@
 ---
 title: Insurance for Local Groups
 summary: Types of insurance for local groups and why you need it.
+Category: admin-and-info
 image:
   src: /images/uploads/insurance_orig-2-.jpg
   alt: Some insurance paperwork
   credit: Photo copyright Autumn Barlow/The Wildlife Trusts 2023
+video:
+  id: zyTZUjiipxM
+  title: All About Insurance for Groups
+relatedGuides:
+  - Bank Accounts For Groups
+customCall: "How easy have you found insurance? "
 category: admin-and-info
 ---
 
