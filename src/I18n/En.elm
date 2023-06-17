@@ -160,7 +160,7 @@ enStrings key =
             "Related stories"
 
         GuidePrintHeader ->
-            "Printable verison"
+            "Printable version"
 
         GuideVideoHeader ->
             "[cCc] Video guide"
