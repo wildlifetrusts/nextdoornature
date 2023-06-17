@@ -207,16 +207,16 @@ cyStrings key =
         -- Category things
         ---
         CategoryAdminAndInfoName ->
-            "[cCc]"
+            "Grwpiau Cymunedol – Gweinyddol a Gwybodaeth"
 
         CategoryPublicityEventsName ->
-            "[cCc]"
+            "Cyfryngau, Cyhoeddusrwydd a Digwyddiadau"
 
         CategoryWorkingWithPeopleName ->
-            "[cCc]"
+            "Gweithio gyda Phobl"
 
         CategoryWorkingWithAuthoritiesName ->
-            "[cCc]"
+            "Gweithio gyda'r Awdurdodau"
 
         InCategory ->
             "[cCc]"
