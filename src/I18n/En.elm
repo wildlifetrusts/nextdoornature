@@ -58,7 +58,6 @@ enStrings key =
             "Visit the Wildlife Trusts' website"
 
         FooterVisitWebsiteLink ->
-            --[cCc]
             "https://www.wildlifetrusts.org/"
 
         FooterAboutText ->
@@ -71,11 +70,10 @@ enStrings key =
             "Find your local Trust"
 
         FooterFindYourLocalTrustLink ->
-            --[cCc]
             "https://www.wildlifetrusts.org/wildlife-trusts"
 
         FooterShareYourStoryText ->
-            "[cCc] Share your story"
+            "Share your story"
 
         FooterShareYourStoryLink ->
             --[cCc]
@@ -204,7 +202,7 @@ enStrings key =
             "Search this hub"
 
         ExploreGuidesListHeading ->
-            "[cCc] Explore guides by theme"
+            "Explore guides by topic"
 
         ---
         -- Story Page
@@ -246,7 +244,7 @@ enStrings key =
             "Working with the Authorities"
 
         InCategory ->
-            "[cCc] In category "
+            "[cCc] Topic "
 
         ---
         -- Metadata
