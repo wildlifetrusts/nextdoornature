@@ -1,5 +1,7 @@
 ---
-title: "Submit your story!"
+title: Share your story!
+summary: Have you been inspired to take action for nature in your area? Tell
+  everyone about it here!
 ---
 
 Have you been inspired to take action for nature in your area? Tell everyone about it here! Your project can be small or large, finished or ongoing. You can give contact details or you can keep the location very vague and just say "Yorkshire" or "Salisbury". The most important thing is to share the useful information that will help others. What went well? What mistakes did you learn from?
