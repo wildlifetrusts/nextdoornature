@@ -13,7 +13,7 @@ enStrings key =
             "[cCc] Description for the guides search page"
 
         CallForStoryP ->
-            " If you would like to submit a case study like this we would love to hear from your [cCc]"
+            " If you would like to submit a case study like this we would love to hear from you [cCc]"
 
         ---
         -- Header
@@ -98,7 +98,7 @@ enStrings key =
             "The Nextdoor Nature Hub is a project by The Wildlife Trusts and funded by The National Lottery Heritage Fund"
 
         RegisteredCharityNumber ->
-            "Registered charity number 20723"
+            "Registered charity number 207238"
 
         ---
         -- Cookie banner
