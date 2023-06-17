@@ -55,7 +55,6 @@ cyStrings key =
             "Mynd i wefan yr Ymddiriedolaethau Natur"
 
         FooterVisitWebsiteLink ->
-            --[cCc]
             "https://www.wildlifetrusts.org/"
 
         FooterAboutText ->
@@ -68,7 +67,6 @@ cyStrings key =
             "Dod o hyd i’ch Ymddiriedolaeth leol"
 
         FooterFindYourLocalTrustLink ->
-            --[cCc]
             "https://www.wildlifetrusts.org/wildlife-trusts"
 
         FooterPrivacyPolicyText ->
@@ -85,6 +83,9 @@ cyStrings key =
 
         FooterSiteLogo ->
             "Natur Drws Nesaf"
+
+        FooterShareYourStoryText ->
+            "Rhannwch eich stori!"
 
         FooterCharityInfo ->
             "Mae Hwb Natur Drws Nesaf yn brosiect gan yr Ymddiriedolaethau Natur ac mae wedi’i gyllido gan Gronfa Dreftadaeth y Loteri Genedlaethol"
