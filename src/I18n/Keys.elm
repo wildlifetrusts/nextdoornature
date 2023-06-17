@@ -60,10 +60,10 @@ type Key
     | GuideTextHeaderIconLink
     | GuideButtonText
     | GuideParagraphText
-      --- Guides Page
-    | GuidesTitle
-    | GuidesMetaDescription
-    | GuidesTitleFiltered String String
+      --- Search Page
+    | SearchTitle
+    | SearchMetaDescription
+    | SearchTitleFiltered String String
     | SearchPlaceholder
     | ExploreGuidesListHeading
       --- Story Page

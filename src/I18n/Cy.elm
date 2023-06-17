@@ -9,9 +9,6 @@ cyStrings key =
         SiteTitle ->
             "Hwb Natur Drws Nesaf"
 
-        GuidesMetaDescription ->
-            "[cCc]"
-
         ---
         -- Header
         ---
@@ -185,10 +182,13 @@ cyStrings key =
         ---
         -- Guides Page
         ---
-        GuidesTitle ->
+        SearchTitle ->
             "Canllawiau"
 
-        GuidesTitleFiltered num query ->
+        SearchMetaDescription ->
+            "[cCc] Search page description in Welsh"
+
+        SearchTitleFiltered num query ->
             num ++ " guides on '" ++ query ++ "' [cCc]"
 
         SearchPlaceholder ->

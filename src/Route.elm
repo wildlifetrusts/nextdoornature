@@ -9,7 +9,7 @@ type Route
     | Story String
     | SubmitStory
     | Guide String
-    | Guides
+    | Search
     | Page String
 
 
@@ -34,8 +34,8 @@ toString route =
         Guide s ->
             "/guides" ++ "/" ++ s
 
-        Guides ->
-            "/guides"
+        Search ->
+            "/search"
 
         Page s ->
             "/" ++ s
@@ -48,6 +48,6 @@ routeParser =
         , map Story (s "stories" </> string)
         , map SubmitStory (s "submit-story")
         , map Guide (s "guides" </> string)
-        , map Guides (s "guides")
+        , map Search (s "search")
         , map Page string
         ]
