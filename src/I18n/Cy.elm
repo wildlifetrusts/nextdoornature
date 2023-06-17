@@ -16,7 +16,7 @@ cyStrings key =
         -- Header
         ---
         ChangeLanguage ->
-            "Newid i Gymraeg"
+            "Newid i Saesneg"
 
         ---
         -- 404 content
@@ -91,7 +91,7 @@ cyStrings key =
             "Mae Hwb Natur Drws Nesaf yn brosiect gan yr Ymddiriedolaethau Natur ac mae wedi’i gyllido gan Gronfa Dreftadaeth y Loteri Genedlaethol"
 
         RegisteredCharityNumber ->
-            "Rhif elusen gofrestredig 20723"
+            "Rhif elusen gofrestredig 207238"
 
         ---
         -- Cookie banner
