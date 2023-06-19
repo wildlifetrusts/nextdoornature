@@ -77,7 +77,7 @@ enStrings key =
 
         FooterShareYourStoryLink ->
             --[cCc]
-            "/submit-story"
+            "/share-story"
 
         FooterPrivacyPolicyText ->
             "Privacy policy"

@@ -29,7 +29,7 @@ toString route =
             "/stories" ++ "/" ++ s
 
         SubmitStory ->
-            "/submit-story"
+            "/share-story"
 
         Guide s ->
             "/guides" ++ "/" ++ s
@@ -46,7 +46,7 @@ routeParser =
     oneOf
         [ map Index top
         , map Story (s "stories" </> string)
-        , map SubmitStory (s "submit-story")
+        , map SubmitStory (s "share-story")
         , map Guide (s "guides" </> string)
         , map Guides (s "guides")
         , map Page string

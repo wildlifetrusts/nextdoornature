@@ -299,7 +299,7 @@ view model =
             let
                 maybePage : Maybe Page.Data.Page
                 maybePage =
-                    Page.Data.pageFromSlug model.language model.content.pages "submit-story"
+                    Page.Data.pageFromSlug model.language model.content.pages "share-story"
             in
             Theme.PageTemplate.view model <|
                 case maybePage of
