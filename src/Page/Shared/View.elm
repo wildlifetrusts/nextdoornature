@@ -7,7 +7,7 @@ import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (Language, translate)
 import Message exposing (Msg)
 import Page.Shared.Data
-import Theme.Global exposing (hideFromPrint, purple, roundedCornerStyle, white, withMediaTabletLandscapeUp, withMediaTabletPortraitUp)
+import Theme.Global exposing (hideFromPrint, purple, roundedCornerStyle, white, withMediaTabletPortraitUp)
 
 
 viewVideo : Page.Shared.Data.VideoMeta -> Html Msg
