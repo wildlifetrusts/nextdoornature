@@ -161,6 +161,7 @@ globalStyles =
             [ fontFamilies [ "Adelle", "serif" ]
             , color purple
             , margin3 (rem 0) (rem 0) (rem 1.5)
+            , textDecoration none
             , Theme.FluidScale.fontSizeExtraLarge
             , width (pct 100)
             , withMediaPrint Nothing
@@ -169,6 +170,7 @@ globalStyles =
             [ fontFamilies [ "Adelle", "serif" ]
             , color purple
             , margin3 (rem 0) (rem 0) (rem 1.5)
+            , textDecoration none
             , Theme.FluidScale.fontSizeLarge
             , width (pct 100)
             , withMediaPrint Nothing
@@ -177,6 +179,7 @@ globalStyles =
             [ fontFamilies [ "Adelle", "serif" ]
             , color purple
             , margin3 (rem 0) (rem 0) (rem 1)
+            , textDecoration none
             , Theme.FluidScale.fontSizeMedium
             , withMediaPrint Nothing
             ]
@@ -184,12 +187,12 @@ globalStyles =
             [ fontFamilies [ "Adelle", "serif" ]
             , color purple
             , margin3 (rem 0) (rem 0) (rem 1)
+            , textDecoration none
             , Theme.FluidScale.fontSizeBase
             , withMediaPrint Nothing
             ]
         , typeSelector "a"
             [ color purple
-            , textDecoration none
             , withMediaPrint
                 (Just
                     [ textDecoration underline

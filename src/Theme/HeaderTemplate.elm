@@ -1,6 +1,6 @@
 module Theme.HeaderTemplate exposing (view)
 
-import Css exposing (Style, alignItems, backgroundColor, backgroundImage, backgroundPosition, backgroundPosition2, backgroundRepeat, backgroundSize, baseline, batch, border, border3, borderRadius, boxShadow, center, color, column, contain, display, displayFlex, em, flexDirection, flexEnd, flexStart, flexWrap, focus, fontFamilies, fontSize, fontWeight, height, inlineBlock, int, justifyContent, left, lineHeight, margin, margin2, marginBottom, marginLeft, marginRight, marginTop, minWidth, noRepeat, noWrap, none, normal, outline, padding, padding4, pct, pseudoElement, px, rem, right, row, solid, spaceBetween, textAlign, url, width, zero)
+import Css exposing (Style, alignItems, backgroundColor, backgroundImage, backgroundPosition, backgroundPosition2, backgroundRepeat, backgroundSize, baseline, batch, border, border3, borderRadius, boxShadow, center, color, column, contain, display, displayFlex, em, flexDirection, flexEnd, flexStart, flexWrap, focus, fontFamilies, fontSize, fontWeight, height, inlineBlock, int, justifyContent, left, lineHeight, margin, margin2, marginBottom, marginLeft, marginRight, marginTop, minWidth, noRepeat, noWrap, none, normal, outline, padding, padding4, pct, pseudoElement, px, rem, right, row, solid, spaceBetween, textAlign, textDecoration, url, width, zero)
 import Html.Styled exposing (Html, a, button, div, header, input, label, node, text)
 import Html.Styled.Attributes exposing (attribute, css, for, href, id, placeholder, type_)
 import Html.Styled.Events exposing (on, onClick)
@@ -157,6 +157,7 @@ headerLinkStyle =
         [ color white
         , marginBottom (rem 0.3)
         , textAlign left
+        , textDecoration none
         , withMediaMobileUp
             [ textAlign right
             ]
