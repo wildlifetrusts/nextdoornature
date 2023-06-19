@@ -7,6 +7,7 @@ import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (Language, translate)
 import Message exposing (Msg)
 import Page.Shared.Data exposing (VideoMeta)
+import Route exposing (Route(..))
 import Theme.Global exposing (hideFromPrint, purple, white)
 
 
@@ -50,7 +51,7 @@ viewCallForStory language customCall =
     div [ css [ callForStoryStyle, Theme.Global.roundedCornerStyle ] ]
         [ h2 [ css [ callForStoryHeadingStyle ] ] [ text (t CallForStoryHeading) ]
         , p [] [ text (customCall ++ t CallForStoryP) ]
-        , a [ href "submit story Route [cCc]", css [ callForStoryLinkStyle ] ] [ text (t CallForStoryLinkText) ]
+        , a [ href (Route.toString SubmitStory), css [ callForStoryLinkStyle ] ] [ text (t CallForStoryLinkText) ]
         ]
 
 

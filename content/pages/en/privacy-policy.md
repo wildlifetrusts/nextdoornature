@@ -276,7 +276,7 @@ You can learn more about all the cookies we use below.
 
 **Cookie provider:** The Wildlife Trusts \
 **Purpose:** Used by the website to remember cookie preferences. \
-**Cookies:** cookie-agreed, MCPopupClosed
+**Cookies:** ga-cookie-consent
 
 **Cookie provider:** Google \
 **Purpose:** Used to understand website usage including how users found and explored our site and how their experience can be enhanced. Google also provides campaign tracking, advertising and website functionality services. \
