@@ -19,6 +19,8 @@ type Key
     | FooterAboutLink
     | FooterGuidesLinkText
     | FooterGuidesLink
+    | FooterStoriesLink
+    | FooterStoriesLinkText
     | FooterFindYourLocalTrustText
     | FooterFindYourLocalTrustLink
     | FooterShareYourStoryText

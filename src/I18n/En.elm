@@ -51,6 +51,12 @@ enStrings key =
         FooterGuidesLink ->
             "/guides"
 
+        FooterStoriesLink ->
+            "/guides"
+
+        FooterStoriesLinkText ->
+            "Explore our stories [cCc]"
+
         FooterTitleColumnC ->
             "Get involved"
 
