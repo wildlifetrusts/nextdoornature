@@ -19,7 +19,7 @@ viewVideo videoMeta =
 
           else
             text ""
-        , div [ css [ videoContainerStyle, hideFromPrint ] ]
+        , div [ css [ hideFromPrint ] ]
             [ iframe
                 [ src videoMeta.src
                 , attribute "frameborder" "0"
@@ -80,12 +80,6 @@ callForStoryLinkStyle =
         , fontWeight (int 500)
         , paddingRight (rem 1.5)
         ]
-
-
-videoContainerStyle : Style
-videoContainerStyle =
-    batch
-        []
 
 
 embeddedVideoStyle : Style
