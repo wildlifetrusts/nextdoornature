@@ -1,12 +1,12 @@
 module Page.Shared.View exposing (viewAudio, viewCallForStory, viewVideo)
 
-import Css exposing (Style, absolute, backgroundColor, backgroundImage, backgroundPosition, backgroundRepeat, batch, color, fontWeight, height, int, left, noRepeat, padding, paddingBottom, paddingRight, pct, position, relative, rem, right, top, url, width, zero)
+import Css exposing (Style, backgroundColor, backgroundImage, backgroundPosition, backgroundRepeat, batch, color, fontWeight, int, noRepeat, padding, paddingRight, pct, rem, right, url, width)
 import Html.Styled exposing (Html, a, div, h2, iframe, p, text)
 import Html.Styled.Attributes exposing (attribute, autoplay, css, href, src, title)
 import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (Language, translate)
 import Message exposing (Msg)
-import Page.Shared.Data exposing (VideoMeta)
+import Page.Shared.Data exposing (AudioMeta, VideoMeta)
 import Theme.Global exposing (hideFromPrint, purple, white)
 
 
@@ -81,21 +81,15 @@ callForStoryLinkStyle =
         ]
 
 
-embeddedVideoStyle : Style
-embeddedVideoStyle =
-    batch
-        [ height (pct 100)
-        , left zero
-        , position absolute
-        , top zero
-        , width (pct 100)
-        ]
-
-
 videoContainerStyle : Style
 videoContainerStyle =
     batch
-        [ paddingBottom (pct 56.25)
-        , position relative
-        , width (pct 100)
+        []
+
+
+embeddedVideoStyle : Style
+embeddedVideoStyle =
+    batch
+        [ width (pct 100)
+        , Css.property "aspect-ratio" "16 / 9"
         ]

@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --host 0.0.0.0",
     "build": "npm run generate && vite build",
     "generate": "npm run generate_guides && npm run generate_stories && npm run generate_pages",
     "generate_pages": "mkdir -p ./data/pages && m2j -o ./data/pages/en.json -c ./content/pages/en/*.md && m2j -o ./data/pages/cy.json -c ./content/pages/cy/*.md",

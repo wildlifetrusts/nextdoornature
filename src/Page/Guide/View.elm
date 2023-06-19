@@ -1,6 +1,6 @@
 port module Page.Guide.View exposing (print, view)
 
-import Css exposing (Style, auto, backgroundColor, backgroundImage, backgroundPosition, backgroundRepeat, backgroundSize, batch, border, borderBottom3, center, color, column, contain, display, displayFlex, em, ex, flexDirection, flexWrap, fontFamilies, height, inlineBlock, justifyContent, listStyle, margin2, marginBottom, marginLeft, marginRight, marginTop, maxWidth, noRepeat, none, padding, paddingLeft, paddingRight, property, pseudoElement, px, rem, solid, url, width, wrap, zero)
+import Css exposing (Style, auto, backgroundColor, backgroundImage, backgroundPosition, backgroundRepeat, backgroundSize, batch, border, borderBottom3, center, color, column, contain, display, displayFlex, em, ex, flexDirection, flexWrap, fontFamilies, height, inlineBlock, justifyContent, listStyle, margin2, marginBottom, marginLeft, marginRight, marginTop, maxWidth, noRepeat, none, padding, paddingLeft, paddingRight, pct, property, pseudoElement, px, rem, solid, url, width, wrap, zero)
 import Html.Styled exposing (Html, a, button, div, h2, img, li, p, span, text, ul)
 import Html.Styled.Attributes exposing (alt, attribute, css, href, src)
 import Html.Styled.Events exposing (onClick)
@@ -119,7 +119,7 @@ viewMaybeVideo language maybeVideoMeta =
                 t =
                     translate language
             in
-            div []
+            div [ css [ outerVideoContainerStyle ] ]
                 [ h2 [] [ viewHeaderIcon (t GuideVideoHeaderIconLink), text (t GuideVideoHeader) ]
                 , Page.Shared.View.viewVideo aVideo
                 ]
@@ -353,6 +353,13 @@ printButtonStyle =
             , width (em 1.0)
             , marginLeft (em 0.3)
             ]
+        ]
+
+
+outerVideoContainerStyle : Style
+outerVideoContainerStyle =
+    batch
+        [ width (pct 100)
         ]
 
 
