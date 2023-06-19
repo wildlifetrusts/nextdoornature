@@ -160,7 +160,7 @@ globalStyles =
         , typeSelector "h1"
             [ fontFamilies [ "Adelle", "serif" ]
             , color purple
-            , margin3 (rem 0) auto (rem 1.5)
+            , margin3 (rem 0) (rem 0) (rem 1.5)
             , Theme.FluidScale.fontSizeExtraLarge
             , width (pct 100)
             , withMediaPrint Nothing
@@ -168,7 +168,7 @@ globalStyles =
         , typeSelector "h2"
             [ fontFamilies [ "Adelle", "serif" ]
             , color purple
-            , margin3 (rem 0) auto (rem 1.5)
+            , margin3 (rem 0) (rem 0) (rem 1.5)
             , Theme.FluidScale.fontSizeLarge
             , width (pct 100)
             , withMediaPrint Nothing
@@ -176,14 +176,14 @@ globalStyles =
         , typeSelector "h3"
             [ fontFamilies [ "Adelle", "serif" ]
             , color purple
-            , margin3 (rem 0) auto (rem 1)
+            , margin3 (rem 0) (rem 0) (rem 1)
             , Theme.FluidScale.fontSizeMedium
             , withMediaPrint Nothing
             ]
         , typeSelector "h4"
             [ fontFamilies [ "Adelle", "serif" ]
             , color purple
-            , margin3 (rem 0) auto (rem 1)
+            , margin3 (rem 0) (rem 0) (rem 1)
             , Theme.FluidScale.fontSizeBase
             , withMediaPrint Nothing
             ]
@@ -216,7 +216,7 @@ globalStyles =
         , typeSelector "b"
             []
         , typeSelector "p"
-            [ margin3 (rem 0) auto (rem 1)
+            [ margin3 (rem 0) (rem 0) (rem 1)
             ]
         , typeSelector "blockquote"
             []
