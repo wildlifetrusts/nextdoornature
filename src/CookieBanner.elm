@@ -95,18 +95,7 @@ innerContainer =
 cookieBtnStyle : Style
 cookieBtnStyle =
     batch
-        [ pseudoElement "after"
-            [ backgroundImage (url "/images/arrow--white.svg")
-            , backgroundSize contain
-            , backgroundPosition center
-            , backgroundRepeat noRepeat
-            , display inlineBlock
-            , Css.property "content" "' '"
-            , height (ex 1.5)
-            , width (em 1.0)
-            , marginLeft (em 0.3)
-            ]
-        , color white
+        [ color white
         , backgroundColor purple
         , border (px 0)
         , fontSize (rem 1)

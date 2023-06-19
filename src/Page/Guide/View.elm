@@ -341,18 +341,6 @@ printButtonStyle =
         , fontFamilies [ "Rubik", "sans-serif" ]
         , padding (rem 0)
         , paddingRight (rem 0.2)
-        , pseudoElement "after"
-            [ backgroundImage
-                (url "/images/arrow.svg")
-            , backgroundSize contain
-            , backgroundPosition center
-            , backgroundRepeat noRepeat
-            , display inlineBlock
-            , property "content" "' '"
-            , height (ex 1.5)
-            , width (em 1.0)
-            , marginLeft (em 0.3)
-            ]
         ]
 
 

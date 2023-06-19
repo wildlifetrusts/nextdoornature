@@ -77,10 +77,7 @@ callForStoryHeadingStyle =
 callForStoryLinkStyle : Style
 callForStoryLinkStyle =
     batch
-        [ backgroundImage (url "/images/arrow--white.svg")
-        , backgroundPosition right
-        , backgroundRepeat noRepeat
-        , color white
+        [ color white
         , fontWeight (int 500)
         , paddingRight (rem 1.5)
         ]
