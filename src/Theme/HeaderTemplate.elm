@@ -154,19 +154,7 @@ searchButtonsContainerStyle =
 headerLinkStyle : Style
 headerLinkStyle =
     batch
-        [ pseudoElement "after"
-            [ backgroundImage
-                (url "/images/arrow--white.svg")
-            , backgroundSize contain
-            , backgroundPosition center
-            , backgroundRepeat noRepeat
-            , display inlineBlock
-            , Css.property "content" "' '"
-            , height (em 1)
-            , width (em 1.2)
-            , marginLeft (rem 0.3)
-            ]
-        , color white
+        [ color white
         , marginBottom (rem 0.3)
         , textAlign left
         , withMediaMobileUp
@@ -178,19 +166,7 @@ headerLinkStyle =
 headerBtnStyle : Style
 headerBtnStyle =
     batch
-        [ pseudoElement "after"
-            [ backgroundImage
-                (url "/images/arrow--white.svg")
-            , backgroundSize contain
-            , backgroundPosition center
-            , backgroundRepeat noRepeat
-            , display inlineBlock
-            , Css.property "content" "' '"
-            , height (em 1)
-            , width (em 1.2)
-            , marginLeft (em 0.3)
-            ]
-        , color white
+        [ color white
         , backgroundColor teal
         , border (px 0)
         , fontSize (rem 1)

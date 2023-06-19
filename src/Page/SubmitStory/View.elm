@@ -1,6 +1,6 @@
 module Page.SubmitStory.View exposing (view)
 
-import Css exposing (Style, batch, border, displayFlex, flexGrow, flexShrink, flexWrap, height, hidden, int, overflow, pct, property, rem, width, wrap)
+import Css exposing (Style, batch, border, displayFlex, flexGrow, flexShrink, flexWrap, height, hidden, int, margin, margin2, overflow, pct, property, rem, width, wrap)
 import Html.Styled exposing (Html, div, h2, iframe, img, text)
 import Html.Styled.Attributes as Attr exposing (css)
 import I18n.Keys exposing (Key(..))
@@ -8,7 +8,7 @@ import I18n.Translate exposing (translate)
 import Message exposing (Msg)
 import Page.Data
 import Shared exposing (Model)
-import Theme.Global exposing (centerContent, primaryHeader, roundedCornerStyle)
+import Theme.Global exposing (centerContent, primaryHeader, roundedCornerStyle, withMediaTabletLandscapeUp)
 import Theme.Markdown exposing (markdownToHtml)
 
 
@@ -89,8 +89,12 @@ submitFlexStyle : Style
 submitFlexStyle =
     batch
         [ displayFlex
-        , property "gap" "1rem"
+        , property "gap" "3rem"
         , flexWrap wrap
+        , margin (rem 0)
+        , withMediaTabletLandscapeUp
+            [ margin2 (rem 3) (rem 0)
+            ]
         ]
 
 

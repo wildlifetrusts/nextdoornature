@@ -8,7 +8,7 @@ import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (Language(..), translate)
 import Route exposing (Route)
 import Theme.FluidScale
-import Theme.Global exposing (centerContent, hideFromPrint, lightTeal, listStyleNone, purple, teal, white, withMediaMobileUp, withMediaTabletPortraitUp)
+import Theme.Global exposing (centerContent, hideFromPrint, lightTeal, listStyleNone, purple, teal, white, withMediaDesktopUp, withMediaMobileUp, withMediaTabletLandscapeUp, withMediaTabletPortraitUp)
 
 
 view : Language -> Route -> Html msg
@@ -181,8 +181,6 @@ bottomFooterContainerStyle =
         , withMediaTabletPortraitUp
             [ alignItems flexStart
             , flexDirection row
-
-            -- must be higher than cookie banner button
             , paddingBottom (rem 3)
             ]
         ]
@@ -202,7 +200,7 @@ logoStyle =
                 ]
             , nthChild "3"
                 [ borderLeft3 (px 1) solid purple
-                , withMedia [ only screen [ Media.minWidth (px 1139) ] ]
+                , withMedia [ only screen [ Media.minWidth (px 992) ] ]
                     [ borderLeft3 (px 1) solid white
                     ]
                 ]
@@ -219,8 +217,8 @@ charityInfoStyle =
         , maxWidth (rem 32)
         , withMediaTabletPortraitUp
             [ marginLeft (rem 0)
-            , minWidth (rem 17)
-            , width (rem 17)
+            , minWidth (rem 20)
+            , width (rem 20)
             ]
         ]
 
@@ -233,7 +231,7 @@ logosContainerStyle =
         , flexDirection row
         , flexWrap wrap
         , justifyContent center
-        , maxWidth (rem 40)
+        , maxWidth (rem 36)
         , padding (rem 2)
         , withMediaTabletPortraitUp
             [ justifyContent flexEnd

@@ -9,11 +9,13 @@ import Message exposing (Msg)
 import Page.Data
 import Page.Guide.Data
 import Page.Search.Data
+import Page.Search.View
 import Page.Shared.Data
+import Page.Shared.View
 import Route
 import Shared exposing (Model, shuffleList)
 import Theme.FluidScale
-import Theme.Global exposing (centerContent, contentWrapper, listStyleNone, pageColumnStyle, primaryHeader, purple, topTwoColumnsWrapperStyle, white, withMediaMobileUp, withMediaTabletPortraitUp)
+import Theme.Global exposing (centerContent, contentWrapper, listStyleNone, pageColumnStyle, primaryHeader, topTwoColumnsWrapperStyle, withMediaMobileUp, withMediaTabletPortraitUp)
 import Theme.Markdown exposing (markdownToHtml)
 
 
@@ -45,7 +47,7 @@ view model page =
                             |> List.take 2
                             |> viewTeaserList
                         ]
-                    , viewCallForStory model.language
+                    , Page.Shared.View.viewCallForStory model.language ""
                     ]
                 ]
             , div [ css [ pageColumnStyle ] ]
@@ -139,20 +141,6 @@ viewGuideCategoryList language guides =
         )
 
 
-viewCallForStory : Language -> Html Msg
-viewCallForStory language =
-    let
-        t : Key -> String
-        t =
-            translate language
-    in
-    div [ css [ callForStoryStyle, Theme.Global.roundedCornerStyle ] ]
-        [ h2 [ css [ callForStoryHeadingStyle ] ] [ text (t CallForStoryHeading) ]
-        , p [] [ text (t CallForStoryP) ]
-        , a [ href (Route.toString Route.SubmitStory), css [ callForStoryLinkStyle ] ] [ text (t CallForStoryLinkText) ]
-        ]
-
-
 teaserSubtitleStyle : Style
 teaserSubtitleStyle =
     batch
@@ -180,31 +168,4 @@ teaserListLayoutStyle =
         , property "grid-template-columns" "repeat(2, 1fr)"
         , property "gap" "1rem"
         , width (pct 100)
-        ]
-
-
-callForStoryStyle : Style
-callForStoryStyle =
-    batch
-        [ backgroundColor purple
-        , color white
-        , padding (rem 1)
-        , width (pct 100)
-        ]
-
-
-callForStoryHeadingStyle : Style
-callForStoryHeadingStyle =
-    color white
-
-
-callForStoryLinkStyle : Style
-callForStoryLinkStyle =
-    batch
-        [ backgroundImage (url "/images/arrow--white.svg")
-        , backgroundPosition right
-        , backgroundRepeat noRepeat
-        , color white
-        , fontWeight (int 500)
-        , paddingRight (rem 1.5)
         ]
