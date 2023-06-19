@@ -6,28 +6,30 @@ import Html.Styled.Attributes exposing (css, href)
 import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (Language, translate)
 import Message exposing (Msg)
+import Page.Data
 import Page.Guide.Data
 import Page.Search.Data
 import Page.Search.View
 import Route
 import Shared exposing (Model, shuffleList)
 import Theme.FluidScale
-import Theme.Global exposing (centerContent, contentWrapper, listStyleNone, pageColumnBlockStyle, pageColumnStyle, primaryHeader, purple, topTwoColumnsWrapperStyle, white, withMediaMobileUp, withMediaTabletPortraitUp)
+import Theme.Global exposing (centerContent, contentWrapper, listStyleNone, pageColumnStyle, primaryHeader, purple, topTwoColumnsWrapperStyle, white, withMediaMobileUp, withMediaTabletPortraitUp)
+import Theme.Markdown exposing (markdownToHtml)
 
 
-view : Model -> Html Msg
-view model =
+view : Model -> Page.Data.Page -> Html Msg
+view model page =
     let
         t : Key -> String
         t =
             translate model.language
     in
     div [ css [ centerContent ] ]
-        [ primaryHeader [] (t HomeTitle)
+        [ primaryHeader [] page.title
         , div [ css [ contentWrapper ] ]
             [ div [ css [ topTwoColumnsWrapperStyle ] ]
                 [ div [ css [ pageColumnStyle ] ]
-                    (viewTextColumn t [ WelcomeP1, WelcomeP2, WelcomeP3 ])
+                    (markdownToHtml page.fullTextMarkdown)
                 , div [ css [ teaserColumnStyle ] ]
                     [ div []
                         [ h2 [ css [ teaserSubtitleStyle ] ] [ text (t GuideHighlightsSubtitle) ]
@@ -52,11 +54,6 @@ view model =
                 )
             ]
         ]
-
-
-viewTextColumn : (Key -> String) -> List Key -> List (Html msg)
-viewTextColumn t paragraphs =
-    List.map (\para -> p [ css [ pageColumnBlockStyle ] ] [ text (t para) ]) paragraphs
 
 
 viewGuidesByCategory : Language -> List Page.Guide.Data.GuideListItem -> List (Html msg)
