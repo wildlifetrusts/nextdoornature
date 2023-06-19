@@ -115,7 +115,7 @@ enStrings key =
             "Ok, got it"
 
         CookieDeclineButtonText ->
-            "No thanks"
+            "Use only essential cookies"
 
         CookieSettingsButtonText ->
             "Cookie settings"
