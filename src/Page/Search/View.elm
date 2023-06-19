@@ -73,10 +73,22 @@ viewTeaserList language searchString teasers =
         t : Key -> String
         t =
             translate language
+
+        numberOfResultsString : String
+        numberOfResultsString =
+            String.fromInt (List.length teasers)
+
+        sectionHeader : String
+        sectionHeader =
+            if String.length searchString > 0 then
+                t (SearchTitleFiltered numberOfResultsString searchString)
+
+            else
+                ""
     in
     if List.length teasers > 0 then
         section []
-            [ h2 [ id "guides" ] [ text (t (SearchTitleFiltered (String.fromInt (List.length teasers)) searchString)) ]
+            [ h2 [ id "guides" ] [ text sectionHeader ]
             , ul [ css [ guidesPageLayoutStyle ] ]
                 (teasers
                     |> List.map
