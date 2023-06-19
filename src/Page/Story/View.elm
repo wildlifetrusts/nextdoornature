@@ -1,6 +1,6 @@
 module Page.Story.View exposing (view)
 
-import Css exposing (Style, batch, before, content, fontStyle, italic, margin3, paddingBottom, pct, rem, width)
+import Css exposing (Style, batch, fontStyle, italic, margin3, paddingBottom, pct, rem, width)
 import Html.Styled exposing (Html, blockquote, div, h3, img, p, text)
 import Html.Styled.Attributes exposing (alt, css, src)
 import I18n.Keys exposing (Key(..))
@@ -20,6 +20,7 @@ view language story =
         t =
             translate language
 
+        call : String
         call =
             Maybe.withDefault (t HomeCallForStoryP) story.customCall
     in

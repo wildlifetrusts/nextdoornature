@@ -114,12 +114,14 @@ storyMetadataFromSlug slug language contentDict =
     case Dict.get slug contentDict of
         Just content ->
             let
+                descriptionText : String
                 descriptionText =
                     if String.length content.summary > 0 then
                         content.summary
 
                     else
                         let
+                            author : String
                             author =
                                 Maybe.withDefault "" content.maybeGroupOrIndividual
                         in
