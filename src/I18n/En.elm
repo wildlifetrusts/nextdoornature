@@ -51,6 +51,12 @@ enStrings key =
         FooterGuidesLink ->
             "/guides"
 
+        FooterStoriesLink ->
+            "/search#stories"
+
+        FooterStoriesLinkText ->
+            "Explore our stories [cCc]"
+
         FooterTitleColumnC ->
             "Get involved"
 
@@ -77,7 +83,7 @@ enStrings key =
 
         FooterShareYourStoryLink ->
             --[cCc]
-            "/submit-story"
+            "/share-story"
 
         FooterPrivacyPolicyText ->
             "Privacy policy"
