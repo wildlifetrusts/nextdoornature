@@ -13,7 +13,7 @@ import Page.Shared.View exposing (viewCallForStory)
 import Route
 import Shared exposing (Model, shuffleList)
 import Theme.FluidScale
-import Theme.Global exposing (centerContent, contentWrapper, listStyleNone, pageColumnBlockStyle, pageColumnStyle, primaryHeader, topTwoColumnsWrapperStyle, withMediaMobileUp, withMediaTabletPortraitUp)
+import Theme.Global exposing (centerContent, contentWrapper, listStyleNone, pageColumnStyle, primaryHeader, topTwoColumnsWrapperStyle, withMediaMobileUp, withMediaTabletPortraitUp)
 
 
 view : Model -> Html Msg
@@ -58,7 +58,7 @@ view model =
 
 viewTextColumn : (Key -> String) -> List Key -> List (Html msg)
 viewTextColumn t paragraphs =
-    List.map (\para -> p [ css [ pageColumnBlockStyle ] ] [ text (t para) ]) paragraphs
+    List.map (\para -> p [] [ text (t para) ]) paragraphs
 
 
 viewGuidesByCategory : Language -> List Page.Guide.Data.GuideListItem -> List (Html msg)

@@ -1,4 +1,4 @@
-module Theme.Global exposing (borderWrapper, centerContent, contentWrapper, featureImageStyle, globalStyles, hideFromPrint, lightTeal, listStyleNone, pageColumnBlockStyle, pageColumnStyle, primaryHeader, purple, roundedCornerStyle, screenReaderOnly, teal, teaserContainerStyle, teaserImageStyle, teaserRowStyle, topTwoColumnsWrapperStyle, white, withMediaDesktopUp, withMediaMobileUp, withMediaPrint, withMediaTabletLandscapeUp, withMediaTabletPortraitUp)
+module Theme.Global exposing (borderWrapper, centerContent, contentWrapper, featureImageStyle, globalStyles, hideFromPrint, lightTeal, listStyleNone, pageColumnStyle, primaryHeader, purple, roundedCornerStyle, screenReaderOnly, teal, teaserContainerStyle, teaserImageStyle, teaserRowStyle, topTwoColumnsWrapperStyle, white, withMediaDesktopUp, withMediaMobileUp, withMediaPrint, withMediaTabletLandscapeUp, withMediaTabletPortraitUp)
 
 import Css exposing (Color, Style, absolute, alignItems, auto, backgroundColor, backgroundImage, backgroundPosition, backgroundRepeat, backgroundSize, batch, border, border3, borderBottomRightRadius, borderRadius4, borderTopLeftRadius, borderTopRightRadius, boxSizing, breakWord, center, cm, color, column, contain, contentBox, cover, cursor, display, displayFlex, em, ex, flex, flex3, flexDirection, flexStart, flexWrap, fontFamilies, height, hex, hidden, inherit, inlineBlock, int, justifyContent, lastChild, left, listStyle, margin, margin2, margin3, marginBottom, marginLeft, marginRight, marginTop, maxWidth, minWidth, noRepeat, noWrap, none, overflow, overflowWrap, padding, padding2, paddingLeft, pct, pointer, position, property, pseudoElement, px, rem, row, solid, textDecoration, top, underline, url, width, zero)
 import Css.Global exposing (global, typeSelector)
@@ -325,10 +325,15 @@ contentWrapper =
         , flexDirection column
         , flexWrap noWrap
         , justifyContent center
+        , property "gap" "1rem"
         , width (pct 100)
         , withMediaTabletLandscapeUp
             [ alignItems flexStart
             , flexDirection row
+            , property "gap" "3rem"
+            ]
+        , withMediaTabletPortraitUp
+            [ property "gap" "2rem"
             ]
         ]
 
@@ -341,29 +346,16 @@ topTwoColumnsWrapperStyle =
         , flexDirection column
         , flexWrap noWrap
         , justifyContent center
-        , marginBottom (rem 3)
+        , justifyContent center
+        , property "gap" "1rem"
         , width (pct 100)
         , withMediaTabletLandscapeUp
-            [ marginRight (rem 3)
+            [ property "gap" "3rem"
             ]
         , withMediaTabletPortraitUp
             [ flex (int 2)
             , flexDirection row
-            ]
-        ]
-
-
-pageColumnMarginStyle : Style
-pageColumnMarginStyle =
-    batch
-        [ marginBottom (rem 3)
-        , marginRight (rem 3)
-        , lastChild
-            [ marginBottom (rem 0)
-            , marginRight (rem 0)
-            ]
-        , withMediaTabletPortraitUp
-            [ marginBottom (rem 0)
+            , property "gap" "2rem"
             ]
         ]
 
@@ -386,19 +378,8 @@ pageColumnStyle =
         , flex (int 1)
         , flexDirection column
         , justifyContent center
-        , pageColumnMarginStyle
+        , property "gap" "1rem"
         , width (pct 100)
-        ]
-
-
-pageColumnBlockStyle : Style
-pageColumnBlockStyle =
-    batch
-        [ marginBottom (rem 1)
-        , marginTop (rem 0)
-        , withMediaTabletPortraitUp
-            [ marginBottom (rem 2)
-            ]
         ]
 
 
