@@ -57,9 +57,9 @@ metadataFromPage page language content =
                 Nothing ->
                     defaultMetadata language
 
-        Guides ->
-            { title = subPageTitle language (t GuidesTitle)
-            , description = t GuidesMetaDescription
+        Search ->
+            { title = subPageTitle language (t SearchTitle)
+            , description = t SearchMetaDescription
             , imageSrc = defaultMetaImageSrc
             }
 

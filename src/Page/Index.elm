@@ -7,8 +7,8 @@ import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (Language, translate)
 import Message exposing (Msg)
 import Page.Guide.Data
-import Page.Guides.Data
-import Page.Guides.View
+import Page.Search.Data
+import Page.Search.View
 import Route
 import Shared exposing (Model, shuffleList)
 import Theme.FluidScale
@@ -31,17 +31,17 @@ view model =
                 , div [ css [ teaserColumnStyle ] ]
                     [ div []
                         [ h2 [ css [ teaserSubtitleStyle ] ] [ text (t GuideHighlightsSubtitle) ]
-                        , Page.Guides.Data.teaserListFromGuideDict model.language model.content.guides
+                        , Page.Search.Data.teaserListFromGuideDict model.language model.content.guides
                             |> shuffleList model.seed
                             |> List.take 2
-                            |> Page.Guides.View.viewTeaserList False Page.Guides.View.homePageLayoutStyle
+                            |> Page.Search.View.viewTeaserList False Page.Search.View.homePageLayoutStyle
                         ]
                     , div []
                         [ h2 [ css [ teaserSubtitleStyle ] ] [ text (t StoryHighlightsSubtitle) ]
-                        , Page.Guides.Data.teaserListFromStoryDict model.language model.content.stories
+                        , Page.Search.Data.teaserListFromStoryDict model.language model.content.stories
                             |> shuffleList model.seed
                             |> List.take 2
-                            |> Page.Guides.View.viewTeaserList False Page.Guides.View.homePageLayoutStyle
+                            |> Page.Search.View.viewTeaserList False Page.Search.View.homePageLayoutStyle
                         ]
                     , viewCallForStory model.language
                     ]

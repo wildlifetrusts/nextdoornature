@@ -9,7 +9,7 @@ enStrings key =
         SiteTitle ->
             "The Nextdoor Nature Hub"
 
-        GuidesMetaDescription ->
+        SearchMetaDescription ->
             "[cCc] Description for the guides search page"
 
         CallForStoryP ->
@@ -190,12 +190,12 @@ enStrings key =
             "for a printable version of this page, which you can easily share with groups or anyone who does not have digital access"
 
         ---
-        -- Guides Page
+        -- Search Page
         ---
-        GuidesTitle ->
-            "Guides"
+        SearchTitle ->
+            "Search"
 
-        GuidesTitleFiltered num query ->
+        SearchTitleFiltered num query ->
             num ++ " guides on '" ++ query ++ "' [cCc]"
 
         SearchPlaceholder ->

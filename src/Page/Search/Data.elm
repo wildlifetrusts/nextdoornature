@@ -1,4 +1,4 @@
-module Page.Guides.Data exposing (actionTeaserDecoder, actionTeaserListDecoder, guideTeaserListEncoder, guideTeaserListString, internalGuideTeaserDecoder, internalGuideTeaserListDecoder, teaserListFromGuideDict, teaserListFromStoryDict)
+module Page.Search.Data exposing (actionTeaserDecoder, actionTeaserListDecoder, guideTeaserListEncoder, guideTeaserListString, internalGuideTeaserDecoder, internalGuideTeaserListDecoder, teaserListFromGuideDict, teaserListFromStoryDict)
 
 import Dict
 import I18n.Translate exposing (Language)
