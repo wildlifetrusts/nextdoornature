@@ -4,7 +4,7 @@ import Css exposing (Style, batch, border, displayFlex, flexGrow, flexShrink, fl
 import Html.Styled exposing (Html, div, h2, iframe, img, text)
 import Html.Styled.Attributes as Attr exposing (css)
 import I18n.Keys exposing (Key(..))
-import I18n.Translate exposing (Language(..), translate)
+import I18n.Translate exposing (translate)
 import Message exposing (Msg)
 import Page.Data
 import Shared exposing (Model)
