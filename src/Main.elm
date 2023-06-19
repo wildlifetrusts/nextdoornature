@@ -15,10 +15,10 @@ import Metadata
 import Page.Data
 import Page.Guide.Data
 import Page.Guide.View
-import Page.Guides.Data
-import Page.Guides.View
 import Page.Index
 import Page.NotFound exposing (resourceNotFound)
+import Page.Search.Data
+import Page.Search.View
 import Page.Shared.Data
 import Page.Story.Data
 import Page.Story.View
@@ -102,7 +102,7 @@ getActions : Cmd Msg
 getActions =
     Http.get
         { url = "/API.json"
-        , expect = Http.expectJson GotActions Page.Guides.Data.actionTeaserListDecoder
+        , expect = Http.expectJson GotActions Page.Search.Data.actionTeaserListDecoder
         }
 
 
@@ -262,7 +262,18 @@ view : Model -> Html Msg
 view model =
     case model.page of
         Index ->
-            Theme.PageTemplate.view model (Page.Index.view model)
+            let
+                maybePage : Maybe Page.Data.Page
+                maybePage =
+                    Page.Data.pageFromSlug model.language model.content.pages "index"
+            in
+            Theme.PageTemplate.view model <|
+                case maybePage of
+                    Just page ->
+                        Page.Index.view model page
+
+                    Nothing ->
+                        resourceNotFound model.language
 
         Story slug ->
             let
@@ -299,7 +310,7 @@ view model =
             let
                 maybePage : Maybe Page.Data.Page
                 maybePage =
-                    Page.Data.pageFromSlug model.language model.content.pages "submit-story"
+                    Page.Data.pageFromSlug model.language model.content.pages "share-story"
             in
             Theme.PageTemplate.view model <|
                 case maybePage of
@@ -309,8 +320,8 @@ view model =
                     Nothing ->
                         resourceNotFound model.language
 
-        Guides ->
-            Theme.PageTemplate.view model (Page.Guides.View.view model)
+        Search ->
+            Theme.PageTemplate.view model (Page.Search.View.view model)
 
         Page slug ->
             let

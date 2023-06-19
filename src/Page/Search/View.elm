@@ -1,4 +1,4 @@
-module Page.Guides.View exposing (homePageLayoutStyle, view, viewTeaserList)
+module Page.Search.View exposing (homePageLayoutStyle, view, viewTeaserList)
 
 import Css exposing (Style, batch, fontWeight, int, margin, padding, pct, property, rem, width)
 import Html.Styled exposing (Html, a, div, img, li, p, text, ul)
@@ -7,7 +7,7 @@ import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (Language(..), translate)
 import List
 import Message exposing (Msg)
-import Page.Guides.Data
+import Page.Search.Data
 import Page.Shared.Data
 import Shared exposing (Model, Request(..))
 import Theme.Global exposing (centerContent, contentWrapper, primaryHeader, withMediaDesktopUp, withMediaMobileUp, withMediaTabletLandscapeUp, withMediaTabletPortraitUp)
@@ -26,26 +26,26 @@ view model =
                 model.search
 
             else if model.language == Welsh then
-                Page.Guides.Data.teaserListFromGuideDict model.language model.content.guides
+                Page.Search.Data.teaserListFromGuideDict model.language model.content.guides
 
             else
                 case model.externalActions of
                     Failure ->
-                        Page.Guides.Data.teaserListFromGuideDict model.language model.content.guides
+                        Page.Search.Data.teaserListFromGuideDict model.language model.content.guides
 
                     Loading ->
-                        Page.Guides.Data.teaserListFromGuideDict model.language model.content.guides
+                        Page.Search.Data.teaserListFromGuideDict model.language model.content.guides
 
                     Success list ->
-                        List.concat [ Page.Guides.Data.teaserListFromGuideDict model.language model.content.guides, list ]
+                        List.concat [ Page.Search.Data.teaserListFromGuideDict model.language model.content.guides, list ]
 
         headerText : String
         headerText =
             if String.length model.query > 0 then
-                t <| GuidesTitleFiltered (String.fromInt <| List.length model.search) model.query
+                t <| SearchTitleFiltered (String.fromInt <| List.length model.search) model.query
 
             else
-                t GuidesTitle
+                t SearchTitle
     in
     div [ css [ centerContent ] ]
         [ primaryHeader [ attribute "aria-live" "alert", css [ guidesSearchTitleStyle ] ] headerText

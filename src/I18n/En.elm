@@ -9,7 +9,7 @@ enStrings key =
         SiteTitle ->
             "The Nextdoor Nature Hub"
 
-        GuidesMetaDescription ->
+        SearchMetaDescription ->
             "[cCc] Description for the guides search page"
 
         CallForStoryP ->
@@ -51,6 +51,12 @@ enStrings key =
         FooterGuidesLink ->
             "/guides"
 
+        FooterStoriesLink ->
+            "/search#stories"
+
+        FooterStoriesLinkText ->
+            "Explore our stories [cCc]"
+
         FooterTitleColumnC ->
             "Get involved"
 
@@ -77,7 +83,7 @@ enStrings key =
 
         FooterShareYourStoryLink ->
             --[cCc]
-            "/submit-story"
+            "/share-story"
 
         FooterPrivacyPolicyText ->
             "Privacy policy"
@@ -123,17 +129,8 @@ enStrings key =
         ---
         -- Index page
         ---
-        HomeTitle ->
-            "Welcome to the Nextdoor Nature Hub"
-
         WelcomeP1 ->
             "Nextdoor Nature is bringing communities together to help nature flourish where you live and work!"
-
-        WelcomeP2 ->
-            "Thanks to £5million funding from The National Lottery Heritage Fund, Nextdoor Nature provides you with the advice and support you need to help nature on your doorstep, and leave a lasting natural legacy to mark The Queen’s Platinum Jubilee."
-
-        WelcomeP3 ->
-            "The guides on this Hub give you simple, straightforward information so you can take action for nation. And the stories are where you can find inspiration - and share your own experiences!"
 
         GuideHighlightsSubtitle ->
             "Guide highlights"
@@ -190,12 +187,12 @@ enStrings key =
             "for a printable version of this page, which you can easily share with groups or anyone who does not have digital access"
 
         ---
-        -- Guides Page
+        -- Search Page
         ---
-        GuidesTitle ->
-            "Guides"
+        SearchTitle ->
+            "Search"
 
-        GuidesTitleFiltered num query ->
+        SearchTitleFiltered num query ->
             num ++ " guides on '" ++ query ++ "' [cCc]"
 
         SearchPlaceholder ->

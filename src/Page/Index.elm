@@ -1,64 +1,60 @@
 module Page.Index exposing (view)
 
 import Css exposing (Style, batch, column, flexDirection, marginBottom, property, rem, row)
-import Html.Styled exposing (Html, a, div, h2, h3, li, p, section, text, ul)
+import Html.Styled exposing (Html, a, div, h2, h3, li, section, text, ul)
 import Html.Styled.Attributes exposing (css, href)
 import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (Language, translate)
 import Message exposing (Msg)
+import Page.Data
 import Page.Guide.Data
-import Page.Guides.Data
-import Page.Guides.View
-import Page.Shared.View exposing (viewCallForStory)
+import Page.Search.Data
+import Page.Search.View
+import Page.Shared.View
 import Route
 import Shared exposing (Model, shuffleList)
 import Theme.FluidScale
 import Theme.Global exposing (centerContent, contentWrapper, listStyleNone, pageColumnStyle, primaryHeader, topTwoColumnsWrapperStyle, withMediaMobileUp, withMediaTabletPortraitUp)
+import Theme.Markdown exposing (markdownToHtml)
 
 
-view : Model -> Html Msg
-view model =
+view : Model -> Page.Data.Page -> Html Msg
+view model page =
     let
         t : Key -> String
         t =
             translate model.language
     in
     div [ css [ centerContent ] ]
-        [ primaryHeader [] (t HomeTitle)
+        [ primaryHeader [] page.title
         , div [ css [ contentWrapper ] ]
             [ div [ css [ topTwoColumnsWrapperStyle ] ]
                 [ div [ css [ pageColumnStyle ] ]
-                    (viewTextColumn t [ WelcomeP1, WelcomeP2, WelcomeP3 ])
+                    (markdownToHtml page.fullTextMarkdown)
                 , div [ css [ teaserColumnStyle ] ]
                     [ div []
                         [ h2 [ css [ teaserSubtitleStyle ] ] [ text (t GuideHighlightsSubtitle) ]
-                        , Page.Guides.Data.teaserListFromGuideDict model.language model.content.guides
+                        , Page.Search.Data.teaserListFromGuideDict model.language model.content.guides
                             |> shuffleList model.seed
                             |> List.take 2
-                            |> Page.Guides.View.viewTeaserList False Page.Guides.View.homePageLayoutStyle
+                            |> Page.Search.View.viewTeaserList False Page.Search.View.homePageLayoutStyle
                         ]
                     , div []
                         [ h2 [ css [ teaserSubtitleStyle ] ] [ text (t StoryHighlightsSubtitle) ]
-                        , Page.Guides.Data.teaserListFromStoryDict model.language model.content.stories
+                        , Page.Search.Data.teaserListFromStoryDict model.language model.content.stories
                             |> shuffleList model.seed
                             |> List.take 2
-                            |> Page.Guides.View.viewTeaserList False Page.Guides.View.homePageLayoutStyle
+                            |> Page.Search.View.viewTeaserList False Page.Search.View.homePageLayoutStyle
                         ]
+                    , Page.Shared.View.viewCallForStory model.language ""
                     ]
                 ]
             , div [ css [ pageColumnStyle ] ]
                 (h2 [] [ text (t ExploreGuidesListHeading) ]
-                    :: (viewGuidesByCategory model.language (Page.Guide.Data.allGuidesSlugTitleList model.content.guides)
-                            ++ [ viewCallForStory model.language "" ]
-                       )
+                    :: viewGuidesByCategory model.language (Page.Guide.Data.allGuidesSlugTitleList model.content.guides)
                 )
             ]
         ]
-
-
-viewTextColumn : (Key -> String) -> List Key -> List (Html msg)
-viewTextColumn t paragraphs =
-    List.map (\para -> p [] [ text (t para) ]) paragraphs
 
 
 viewGuidesByCategory : Language -> List Page.Guide.Data.GuideListItem -> List (Html msg)
