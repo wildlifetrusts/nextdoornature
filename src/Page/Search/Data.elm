@@ -1,4 +1,4 @@
-module Page.Search.Data exposing (actionTeaserDecoder, actionTeaserListDecoder, guideTeaserListEncoder, guideTeaserListString, internalGuideTeaserDecoder, internalGuideTeaserListDecoder, teaserListFromGuideDict, teaserListFromStoryDict)
+module Page.Search.Data exposing (SearchData, actionTeaserDecoder, actionTeaserListDecoder, guideTeaserListEncoder, guideTeaserListString, internalGuideTeaserDecoder, internalGuideTeaserListDecoder, teaserListFromGuideDict, teaserListFromStoryDict)
 
 import Dict
 import I18n.Translate exposing (Language)
@@ -10,6 +10,13 @@ import Page.Guide.Data
 import Page.Shared.Data
 import Page.Story.Data
 import Route
+
+
+type alias SearchData =
+    { actions : List Page.Shared.Data.Teaser
+    , guides : List Page.Shared.Data.Teaser
+    , stories : List String
+    }
 
 
 guideTeaserEncoder : Page.Shared.Data.Teaser -> Encode.Value

@@ -1,8 +1,8 @@
-module Page.Search.View exposing (homePageLayoutStyle, view, viewTeaserList)
+module Page.Search.View exposing (view)
 
 import Css exposing (Style, batch, fontWeight, int, margin, padding, pct, property, rem, width)
-import Html.Styled exposing (Html, a, div, img, li, p, text, ul)
-import Html.Styled.Attributes exposing (alt, attribute, css, href, src)
+import Html.Styled exposing (Html, a, div, h2, img, li, p, section, text, ul)
+import Html.Styled.Attributes exposing (alt, attribute, css, href, id, src)
 import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (Language(..), translate)
 import List
@@ -38,17 +38,9 @@ view model =
 
                     Success list ->
                         List.concat [ Page.Search.Data.teaserListFromGuideDict model.language model.content.guides, list ]
-
-        headerText : String
-        headerText =
-            if String.length model.query > 0 then
-                t <| SearchTitleFiltered (String.fromInt <| List.length model.search) model.query
-
-            else
-                t SearchTitle
     in
     div [ css [ centerContent ] ]
-        [ primaryHeader [ attribute "aria-live" "alert", css [ guidesSearchTitleStyle ] ] headerText
+        [ primaryHeader [ attribute "aria-live" "alert", css [ guidesSearchTitleStyle ] ] (t SearchTitle)
         , div
             [ css [ contentWrapper ] ]
             [ viewTeaserList True guidesPageLayoutStyle teaserList
@@ -101,11 +93,15 @@ viewGuideTeaserSummary summary =
 viewTeaserList : Bool -> Style -> List Page.Shared.Data.Teaser -> Html Msg
 viewTeaserList includeSummary style teasers =
     if List.length teasers > 0 then
-        ul [ css [ style ] ]
-            (teasers
-                |> List.map
-                    (\teaser -> viewGuideTeaser includeSummary teaser)
-            )
+        section []
+            --t SearchTitleFiltered (String.fromInt List.length model.search) model.query
+            [ h2 [ id "guides" ] [ text "section" ]
+            , ul [ css [ style ] ]
+                (teasers
+                    |> List.map
+                        (\teaser -> viewGuideTeaser includeSummary teaser)
+                )
+            ]
 
     else
         text ""
@@ -145,18 +141,6 @@ guidesPageLayoutStyle =
         , withMediaMobileUp
             [ property "grid-template-columns" "repeat(3, 1fr)"
             ]
-        ]
-
-
-homePageLayoutStyle : Style
-homePageLayoutStyle =
-    batch
-        [ property "display" "grid"
-        , margin (rem 0)
-        , padding (rem 0)
-        , property "grid-template-columns" "repeat(2, 1fr)"
-        , property "gap" "1rem"
-        , width (pct 100)
         ]
 
 

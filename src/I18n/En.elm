@@ -49,7 +49,7 @@ enStrings key =
             "Explore our guides"
 
         FooterGuidesLink ->
-            "/guides"
+            "/search#guides"
 
         FooterTitleColumnC ->
             "Get involved"
