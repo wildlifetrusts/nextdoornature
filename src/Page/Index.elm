@@ -6,6 +6,7 @@ import Html.Styled.Attributes exposing (alt, css, href, src)
 import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (Language, translate)
 import Message exposing (Msg)
+import Page.Data
 import Page.Guide.Data
 import Page.Search.Data
 import Page.Shared.Data
@@ -13,21 +14,22 @@ import Route
 import Shared exposing (Model, shuffleList)
 import Theme.FluidScale
 import Theme.Global exposing (centerContent, contentWrapper, listStyleNone, pageColumnBlockStyle, pageColumnStyle, primaryHeader, purple, topTwoColumnsWrapperStyle, white, withMediaMobileUp, withMediaTabletPortraitUp)
+import Theme.Markdown exposing (markdownToHtml)
 
 
-view : Model -> Html Msg
-view model =
+view : Model -> Page.Data.Page -> Html Msg
+view model page =
     let
         t : Key -> String
         t =
             translate model.language
     in
     div [ css [ centerContent ] ]
-        [ primaryHeader [] (t HomeTitle)
+        [ primaryHeader [] page.title
         , div [ css [ contentWrapper ] ]
             [ div [ css [ topTwoColumnsWrapperStyle ] ]
                 [ div [ css [ pageColumnStyle ] ]
-                    (viewTextColumn t [ WelcomeP1, WelcomeP2, WelcomeP3 ])
+                    (markdownToHtml page.fullTextMarkdown)
                 , div [ css [ teaserColumnStyle ] ]
                     [ div []
                         [ h2 [ css [ teaserSubtitleStyle ] ] [ text (t GuideHighlightsSubtitle) ]

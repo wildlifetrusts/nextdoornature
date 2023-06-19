@@ -19,6 +19,8 @@ type Key
     | FooterAboutLink
     | FooterGuidesLinkText
     | FooterGuidesLink
+    | FooterStoriesLink
+    | FooterStoriesLinkText
     | FooterFindYourLocalTrustText
     | FooterFindYourLocalTrustLink
     | FooterShareYourStoryText
@@ -37,10 +39,7 @@ type Key
     | CookieDeclineButtonText
     | CookieSettingsButtonText
       --- Index Page
-    | HomeTitle
     | WelcomeP1
-    | WelcomeP2
-    | WelcomeP3
     | GuideHighlightsSubtitle
     | StoryHighlightsSubtitle
     | CallForStoryHeading

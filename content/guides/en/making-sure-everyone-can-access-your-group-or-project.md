@@ -6,6 +6,12 @@ image:
   alt: A bolted, locked gate
   credit: Photo copyright Autumn Barlow/The Wildlife Trusts 2023
 category: working-with-people
+Category: working-with-people
+video:
+  id: 2VU0xTqm0XQ
+  title: "How to make sure everyone can access your project: A Nextdoor Nature
+    Community Video"
+customCall: How do you make sure your projects are accessible?
 ---
 
 This information will not cover accessibility at events. That is a separate document.

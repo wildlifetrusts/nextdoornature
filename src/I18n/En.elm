@@ -51,6 +51,12 @@ enStrings key =
         FooterGuidesLink ->
             "/search#guides"
 
+        FooterStoriesLink ->
+            "/search#stories"
+
+        FooterStoriesLinkText ->
+            "Explore our stories [cCc]"
+
         FooterTitleColumnC ->
             "Get involved"
 
@@ -77,7 +83,7 @@ enStrings key =
 
         FooterShareYourStoryLink ->
             --[cCc]
-            "/submit-story"
+            "/share-story"
 
         FooterPrivacyPolicyText ->
             "Privacy policy"
@@ -123,17 +129,8 @@ enStrings key =
         ---
         -- Index page
         ---
-        HomeTitle ->
-            "Welcome to the Nextdoor Nature Hub"
-
         WelcomeP1 ->
             "Nextdoor Nature is bringing communities together to help nature flourish where you live and work!"
-
-        WelcomeP2 ->
-            "Thanks to £5million funding from The National Lottery Heritage Fund, Nextdoor Nature provides you with the advice and support you need to help nature on your doorstep, and leave a lasting natural legacy to mark The Queen’s Platinum Jubilee."
-
-        WelcomeP3 ->
-            "The guides on this Hub give you simple, straightforward information so you can take action for nation. And the stories are where you can find inspiration - and share your own experiences!"
 
         GuideHighlightsSubtitle ->
             "Guide highlights"

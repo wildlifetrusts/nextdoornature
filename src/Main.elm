@@ -273,7 +273,18 @@ view : Model -> Html Msg
 view model =
     case model.page of
         Index ->
-            Theme.PageTemplate.view model (Page.Index.view model)
+            let
+                maybePage : Maybe Page.Data.Page
+                maybePage =
+                    Page.Data.pageFromSlug model.language model.content.pages "index"
+            in
+            Theme.PageTemplate.view model <|
+                case maybePage of
+                    Just page ->
+                        Page.Index.view model page
+
+                    Nothing ->
+                        resourceNotFound model.language
 
         Story slug ->
             let
@@ -310,7 +321,7 @@ view model =
             let
                 maybePage : Maybe Page.Data.Page
                 maybePage =
-                    Page.Data.pageFromSlug model.language model.content.pages "submit-story"
+                    Page.Data.pageFromSlug model.language model.content.pages "share-story"
             in
             Theme.PageTemplate.view model <|
                 case maybePage of
