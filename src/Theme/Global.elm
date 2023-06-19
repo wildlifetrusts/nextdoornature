@@ -406,10 +406,10 @@ pageColumnStyle =
 pageColumnBlockStyle : Style
 pageColumnBlockStyle =
     batch
-        [ marginBottom (rem 4)
+        [ marginBottom (rem 1)
         , marginTop (rem 0)
-        , lastChild
-            [ marginBottom (rem 0)
+        , withMediaTabletPortraitUp
+            [ marginBottom (rem 2)
             ]
         ]
 
