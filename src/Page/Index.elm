@@ -1,6 +1,6 @@
 module Page.Index exposing (view)
 
-import Css exposing (Style, backgroundColor, backgroundImage, backgroundPosition, backgroundRepeat, batch, color, column, flexDirection, fontWeight, int, margin, marginBottom, noRepeat, padding, paddingRight, pct, property, rem, right, row, url, width)
+import Css exposing (Style, batch, column, flexDirection, fontWeight, int, margin, marginBottom, padding, pct, property, rem, row, width)
 import Html.Styled exposing (Html, a, div, h2, h3, img, li, p, section, text, ul)
 import Html.Styled.Attributes exposing (alt, css, href, src)
 import I18n.Keys exposing (Key(..))
@@ -9,7 +9,6 @@ import Message exposing (Msg)
 import Page.Data
 import Page.Guide.Data
 import Page.Search.Data
-import Page.Search.View
 import Page.Shared.Data
 import Page.Shared.View
 import Route

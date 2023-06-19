@@ -15,7 +15,7 @@ import Route
 type alias SearchData =
     { actions : List Page.Shared.Data.Teaser
     , guides : List Page.Shared.Data.Teaser
-    , stories : List String
+    , stories : List Page.Shared.Data.Teaser
     }
 
 
