@@ -274,13 +274,9 @@ We do NOT use cookies to:
 
 You can learn more about all the cookies we use below.
 
-**Cookie provider:** The Wildlife Trusts \
-**Purpose:** Used by the website to remember cookie preferences. \
-**Cookies:** ga-cookie-consent
-
 **Cookie provider:** Google \
 **Purpose:** Used to understand website usage including how users found and explored our site and how their experience can be enhanced. Google also provides campaign tracking, advertising and website functionality services. \
-**Cookies:** IDE, _ga, _gat, _gat_UA-xxxxxxx-xx, _gid \
+**Cookies:** _ga, _ga_XXXXXXXXXX \
 **Provider policy:** [Google](https://policies.google.com/technologies/cookies?hl=en-US)
 
 **Cookie provider:** Hotjar \
