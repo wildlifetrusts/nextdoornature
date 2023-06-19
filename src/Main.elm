@@ -126,7 +126,7 @@ setFocusAndScrollViewport route =
     case route of
         Search (Just _) ->
             -- On the seach page, we have anchors to sections
-            -- Need to verify that fous is set correctly when we use them
+            -- Need to verify that focus is set correctly when we use them
             []
 
         _ ->

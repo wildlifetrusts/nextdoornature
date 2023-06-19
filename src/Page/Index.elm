@@ -13,7 +13,7 @@ import Page.Shared.Data
 import Route
 import Shared exposing (Model, shuffleList)
 import Theme.FluidScale
-import Theme.Global exposing (centerContent, contentWrapper, listStyleNone, pageColumnBlockStyle, pageColumnStyle, primaryHeader, purple, topTwoColumnsWrapperStyle, white, withMediaMobileUp, withMediaTabletPortraitUp)
+import Theme.Global exposing (centerContent, contentWrapper, listStyleNone, pageColumnStyle, primaryHeader, purple, topTwoColumnsWrapperStyle, white, withMediaMobileUp, withMediaTabletPortraitUp)
 import Theme.Markdown exposing (markdownToHtml)
 
 
@@ -93,11 +93,6 @@ viewGuideTeaser teaser =
         , p [ css [ Theme.Global.teaserRowStyle ] ]
             [ a [ css [ fontWeight (int 600) ], href teaser.url ] [ text teaser.title ] ]
         ]
-
-
-viewTextColumn : (Key -> String) -> List Key -> List (Html msg)
-viewTextColumn t paragraphs =
-    List.map (\para -> p [ css [ pageColumnBlockStyle ] ] [ text (t para) ]) paragraphs
 
 
 viewGuidesByCategory : Language -> List Page.Guide.Data.GuideListItem -> List (Html msg)
