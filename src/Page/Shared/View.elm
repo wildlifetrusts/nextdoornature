@@ -1,13 +1,13 @@
 module Page.Shared.View exposing (viewAudio, viewCallForStory, viewVideo)
 
-import Css exposing (Style, absolute, backgroundColor, backgroundImage, backgroundPosition, backgroundRepeat, batch, color, fontWeight, height, int, left, noRepeat, padding, paddingBottom, paddingRight, pct, position, relative, rem, right, top, url, width, zero)
+import Css exposing (Style, absolute, backgroundColor, backgroundImage, backgroundPosition, backgroundRepeat, batch, color, fontWeight, height, int, left, margin2, margin3, noRepeat, padding, paddingBottom, paddingRight, pct, position, relative, rem, right, top, url, width, zero)
 import Html.Styled exposing (Html, a, div, h2, iframe, p, text)
 import Html.Styled.Attributes exposing (attribute, autoplay, css, href, src, title)
 import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (Language, translate)
 import Message exposing (Msg)
-import Page.Shared.Data exposing (VideoMeta)
-import Theme.Global exposing (hideFromPrint, purple, white)
+import Page.Shared.Data
+import Theme.Global exposing (hideFromPrint, purple, roundedCornerStyle, white, withMediaTabletLandscapeUp, withMediaTabletPortraitUp)
 
 
 viewVideo : Page.Shared.Data.VideoMeta -> Html Msg
@@ -47,7 +47,7 @@ viewCallForStory language customCall =
         t =
             translate language
     in
-    div [ css [ callForStoryStyle, Theme.Global.roundedCornerStyle ] ]
+    div [ css [ callForStoryStyle ] ]
         [ h2 [ css [ callForStoryHeadingStyle ] ] [ text (t CallForStoryHeading) ]
         , p [] [ text (customCall ++ t CallForStoryP) ]
         , a [ href "submit story Route [cCc]", css [ callForStoryLinkStyle ] ] [ text (t CallForStoryLinkText) ]
@@ -59,8 +59,13 @@ callForStoryStyle =
     batch
         [ backgroundColor purple
         , color white
+        , margin2 (rem 0) (rem 0)
         , padding (rem 1)
+        , roundedCornerStyle
         , width (pct 100)
+        , withMediaTabletPortraitUp
+            [ margin3 (rem 0) (rem 0) (rem 2)
+            ]
         ]
 
 

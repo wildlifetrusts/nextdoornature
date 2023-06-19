@@ -1,6 +1,6 @@
 module Page.Index exposing (view)
 
-import Css exposing (Style, backgroundColor, backgroundImage, backgroundPosition, backgroundRepeat, batch, color, column, flexDirection, fontWeight, int, marginBottom, noRepeat, padding, paddingRight, pct, property, rem, right, row, url, width)
+import Css exposing (Style, batch, column, flexDirection, marginBottom, property, rem, row)
 import Html.Styled exposing (Html, a, div, h2, h3, li, p, section, text, ul)
 import Html.Styled.Attributes exposing (css, href)
 import I18n.Keys exposing (Key(..))
@@ -9,10 +9,11 @@ import Message exposing (Msg)
 import Page.Guide.Data
 import Page.Guides.Data
 import Page.Guides.View
+import Page.Shared.View exposing (viewCallForStory)
 import Route
 import Shared exposing (Model, shuffleList)
 import Theme.FluidScale
-import Theme.Global exposing (centerContent, contentWrapper, listStyleNone, pageColumnBlockStyle, pageColumnStyle, primaryHeader, purple, topTwoColumnsWrapperStyle, white, withMediaMobileUp, withMediaTabletPortraitUp)
+import Theme.Global exposing (centerContent, contentWrapper, listStyleNone, pageColumnBlockStyle, pageColumnStyle, primaryHeader, topTwoColumnsWrapperStyle, withMediaMobileUp, withMediaTabletPortraitUp)
 
 
 view : Model -> Html Msg
@@ -48,7 +49,7 @@ view model =
             , div [ css [ pageColumnStyle ] ]
                 (h2 [] [ text (t ExploreGuidesListHeading) ]
                     :: (viewGuidesByCategory model.language (Page.Guide.Data.allGuidesSlugTitleList model.content.guides)
-                            ++ [ viewCallForStory model.language ]
+                            ++ [ viewCallForStory model.language "" ]
                        )
                 )
             ]
@@ -104,20 +105,6 @@ viewGuideCategoryList language guides =
         )
 
 
-viewCallForStory : Language -> Html Msg
-viewCallForStory language =
-    let
-        t : Key -> String
-        t =
-            translate language
-    in
-    div [ css [ callForStoryStyle, Theme.Global.roundedCornerStyle ] ]
-        [ h2 [ css [ callForStoryHeadingStyle ] ] [ text (t CallForStoryHeading) ]
-        , p [] [ text (t CallForStoryP) ]
-        , a [ href "submit story Route [cCc]", css [ callForStoryLinkStyle ] ] [ text (t CallForStoryLinkText) ]
-        ]
-
-
 teaserSubtitleStyle : Style
 teaserSubtitleStyle =
     batch
@@ -133,31 +120,4 @@ teaserColumnStyle =
         , property "gap" "1rem"
         , withMediaTabletPortraitUp [ flexDirection column ]
         , withMediaMobileUp [ flexDirection row ]
-        ]
-
-
-callForStoryStyle : Style
-callForStoryStyle =
-    batch
-        [ backgroundColor purple
-        , color white
-        , padding (rem 1)
-        , width (pct 100)
-        ]
-
-
-callForStoryHeadingStyle : Style
-callForStoryHeadingStyle =
-    color white
-
-
-callForStoryLinkStyle : Style
-callForStoryLinkStyle =
-    batch
-        [ backgroundImage (url "/images/arrow--white.svg")
-        , backgroundPosition right
-        , backgroundRepeat noRepeat
-        , color white
-        , fontWeight (int 500)
-        , paddingRight (rem 1.5)
         ]
