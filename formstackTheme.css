@@ -1,11 +1,13 @@
 .fsBody {
   background-color: #e7f2f4;
+  padding: 0;
 }
 
 .fsBody .fsForm {
   font-family: Rubik, sans-serif;
   background-color: #e7f2f4;
   color: black;
+  padding: 0;
 }
 
 .fsRowBody {
@@ -32,4 +34,16 @@
 
 .fsSubmitButton {
   background-color: #54257f !important;
+}
+
+.fsRowBody input[type="text"],
+.fsRowBody input[type="email"],
+.fsRowBody input[type="number"],
+.fsRowBody input[type="tel"],
+.fsForm select,
+.fsForm textarea,
+.fsSignature {
+  border-radius: 2rem 2rem 2rem 0rem;
+  border: 2px solid #54257f;
+  box-sizing: border-box;
 }
