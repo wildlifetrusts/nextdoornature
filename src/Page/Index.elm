@@ -43,13 +43,12 @@ view model =
                             |> List.take 2
                             |> Page.Guides.View.viewTeaserList False Page.Guides.View.homePageLayoutStyle
                         ]
+                    , viewCallForStory model.language
                     ]
                 ]
             , div [ css [ pageColumnStyle ] ]
                 (h2 [] [ text (t ExploreGuidesListHeading) ]
-                    :: (viewGuidesByCategory model.language (Page.Guide.Data.allGuidesSlugTitleList model.content.guides)
-                            ++ [ viewCallForStory model.language ]
-                       )
+                    :: viewGuidesByCategory model.language (Page.Guide.Data.allGuidesSlugTitleList model.content.guides)
                 )
             ]
         ]
