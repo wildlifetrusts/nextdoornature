@@ -4,12 +4,12 @@ import Css exposing (Style, batch, fontWeight, int, margin, padding, pct, proper
 import Html.Styled exposing (Html, a, div, h2, img, li, p, section, text, ul)
 import Html.Styled.Attributes exposing (alt, attribute, css, href, id, src)
 import I18n.Keys exposing (Key(..))
-import I18n.Translate exposing (Language(..), translate)
+import I18n.Translate exposing (Language, translate)
 import List
 import Message exposing (Msg)
 import Page.Search.Data
 import Page.Shared.Data
-import Shared exposing (Model, Request(..))
+import Shared exposing (Model)
 import Theme.Global exposing (centerContent, contentWrapper, primaryHeader, withMediaDesktopUp, withMediaMobileUp, withMediaTabletLandscapeUp, withMediaTabletPortraitUp)
 
 
@@ -69,24 +69,25 @@ viewGuideTeaserSummary summary =
 
 viewTeaserList : Language -> String -> List Page.Shared.Data.Teaser -> Html Msg
 viewTeaserList language searchString teasers =
-    let
-        t : Key -> String
-        t =
-            translate language
-
-        numberOfResultsString : String
-        numberOfResultsString =
-            String.fromInt (List.length teasers)
-
-        sectionHeader : String
-        sectionHeader =
-            if String.length searchString > 0 then
-                t (SearchTitleFiltered numberOfResultsString searchString)
-
-            else
-                ""
-    in
     if List.length teasers > 0 then
+        let
+            sectionHeader : String
+            sectionHeader =
+                if String.length searchString > 0 then
+                    let
+                        t : Key -> String
+                        t =
+                            translate language
+
+                        numberOfResultsString : String
+                        numberOfResultsString =
+                            String.fromInt (List.length teasers)
+                    in
+                    t (SearchTitleFiltered numberOfResultsString searchString)
+
+                else
+                    ""
+        in
         section []
             [ h2 [ id "guides" ] [ text sectionHeader ]
             , ul [ css [ guidesPageLayoutStyle ] ]
