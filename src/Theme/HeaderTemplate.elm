@@ -9,7 +9,7 @@ import I18n.Translate exposing (Language(..), translate)
 import Json.Decode
 import List
 import Message exposing (Msg(..))
-import Page.Guides.Data
+import Page.Search.Data
 import Page.Shared.Data
 import Route exposing (Route(..))
 import Shared exposing (Model, Request(..))
@@ -32,11 +32,11 @@ view model =
                     [ button [ css [ headerBtnStyle ], onClick LanguageChangeRequested ]
                         [ text (t ChangeLanguage) ]
                     , case model.page of
-                        Guides ->
+                        Search ->
                             searchInput model
 
                         _ ->
-                            a [ href (Route.toString Guides), css [ headerLinkStyle ] ] [ text (t FooterGuidesLinkText) ]
+                            a [ href (Route.toString Search), css [ headerLinkStyle ] ] [ text (t FooterGuidesLinkText) ]
                     ]
                 ]
             ]
@@ -69,27 +69,27 @@ searchInput model =
         teaserList : List Page.Shared.Data.Teaser
         teaserList =
             if model.language == Welsh then
-                Page.Guides.Data.teaserListFromGuideDict model.language model.content.guides
+                Page.Search.Data.teaserListFromGuideDict model.language model.content.guides
 
             else
                 case model.externalActions of
                     Failure ->
-                        Page.Guides.Data.teaserListFromGuideDict model.language model.content.guides
+                        Page.Search.Data.teaserListFromGuideDict model.language model.content.guides
 
                     Loading ->
-                        Page.Guides.Data.teaserListFromGuideDict model.language model.content.guides
+                        Page.Search.Data.teaserListFromGuideDict model.language model.content.guides
 
                     Success list ->
-                        List.concat [ Page.Guides.Data.teaserListFromGuideDict model.language model.content.guides, list ]
+                        List.concat [ Page.Search.Data.teaserListFromGuideDict model.language model.content.guides, list ]
     in
     div []
         [ label [ for "search", css [ screenReaderOnly ] ]
             [ text (t SearchPlaceholder) ]
         , node "search-input"
-            [ Html.Styled.Attributes.property "searchResult" <| Page.Guides.Data.guideTeaserListEncoder model.search
-            , attribute "search-input" <| Page.Guides.Data.guideTeaserListString teaserList
+            [ Html.Styled.Attributes.property "searchResult" <| Page.Search.Data.guideTeaserListEncoder model.search
+            , attribute "search-input" <| Page.Search.Data.guideTeaserListString teaserList
             , on "resultChanged" <|
-                Json.Decode.map2 Message.SearchChanged (Json.Decode.at [ "target", "searchResult" ] (Json.Decode.list Page.Guides.Data.internalGuideTeaserDecoder)) (Json.Decode.at [ "target", "_input", "value" ] Json.Decode.string)
+                Json.Decode.map2 Message.SearchChanged (Json.Decode.at [ "target", "searchResult" ] (Json.Decode.list Page.Search.Data.internalGuideTeaserDecoder)) (Json.Decode.at [ "target", "_input", "value" ] Json.Decode.string)
             ]
             [ input [ id "search", type_ "text", placeholder (t SearchPlaceholder), css [ searchInputStyle ] ] [] ]
         ]

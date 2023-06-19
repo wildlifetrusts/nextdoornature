@@ -2,7 +2,7 @@ module API exposing (suite)
 
 import Expect exposing (equal)
 import Json.Decode
-import Page.Guides.Data exposing (actionTeaserDecoder, actionTeaserListDecoder, guideTeaserListString, internalGuideTeaserListDecoder)
+import Page.Search.Data exposing (actionTeaserDecoder, actionTeaserListDecoder, guideTeaserListString, internalGuideTeaserListDecoder)
 import Test exposing (Test, describe, test)
 import TestData exposing (actionsAPI, singleActionFromAPI, teaserFromResult, teaserFromResult2)
 

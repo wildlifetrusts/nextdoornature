@@ -57,9 +57,9 @@ metadataFromPage page language content =
                 Nothing ->
                     defaultMetadata language
 
-        Guides ->
-            { title = subPageTitle language (t GuidesTitle)
-            , description = t GuidesMetaDescription
+        Search ->
+            { title = subPageTitle language (t SearchTitle)
+            , description = t SearchMetaDescription
             , imageSrc = defaultMetaImageSrc
             }
 
@@ -80,7 +80,7 @@ metadataFromPage page language content =
                     defaultMetadata language
 
         SubmitStory ->
-            case pageMetadataFromSlug "submit-story" (dictFromLanguage language content.pages) of
+            case pageMetadataFromSlug "share-story" (dictFromLanguage language content.pages) of
                 Just metadata ->
                     { metadata | title = subPageTitle language metadata.title, imageSrc = t SubmitStoryMetaImageLink }
 
