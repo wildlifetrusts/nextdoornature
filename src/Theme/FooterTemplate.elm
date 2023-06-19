@@ -8,7 +8,7 @@ import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (Language(..), translate)
 import Route exposing (Route)
 import Theme.FluidScale
-import Theme.Global exposing (centerContent, hideFromPrint, lightTeal, listStyleNone, purple, teal, white, withMediaDesktopUp, withMediaMobileUp, withMediaTabletLandscapeUp, withMediaTabletPortraitUp)
+import Theme.Global exposing (centerContent, hideFromPrint, lightTeal, listStyleNone, purple, teal, white, withMediaMobileUp, withMediaTabletPortraitUp)
 
 
 view : Language -> Route -> Html msg
