@@ -113,7 +113,7 @@ viewCallForStory language =
     div [ css [ callForStoryStyle, Theme.Global.roundedCornerStyle ] ]
         [ h2 [ css [ callForStoryHeadingStyle ] ] [ text (t CallForStoryHeading) ]
         , p [] [ text (t CallForStoryP) ]
-        , a [ href "submit story Route [cCc]", css [ callForStoryLinkStyle ] ] [ text (t CallForStoryLinkText) ]
+        , a [ href (Route.toString Route.SubmitStory), css [ callForStoryLinkStyle ] ] [ text (t CallForStoryLinkText) ]
         ]
 
 
