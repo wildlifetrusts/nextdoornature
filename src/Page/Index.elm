@@ -1,33 +1,36 @@
 module Page.Index exposing (view)
 
-import Css exposing (Style, backgroundColor, backgroundImage, backgroundPosition, backgroundRepeat, batch, color, column, flexDirection, fontWeight, int, marginBottom, noRepeat, padding, paddingRight, pct, property, rem, right, row, url, width)
-import Html.Styled exposing (Html, a, div, h2, h3, li, p, section, text, ul)
+import Css exposing (Style, batch, column, flexDirection, marginBottom, property, rem, row)
+import Html.Styled exposing (Html, a, div, h2, h3, li, section, text, ul)
 import Html.Styled.Attributes exposing (css, href)
 import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (Language, translate)
 import Message exposing (Msg)
+import Page.Data
 import Page.Guide.Data
 import Page.Search.Data
 import Page.Search.View
+import Page.Shared.View
 import Route
 import Shared exposing (Model, shuffleList)
 import Theme.FluidScale
-import Theme.Global exposing (centerContent, contentWrapper, listStyleNone, pageColumnBlockStyle, pageColumnStyle, primaryHeader, purple, topTwoColumnsWrapperStyle, white, withMediaMobileUp, withMediaTabletPortraitUp)
+import Theme.Global exposing (centerContent, contentWrapper, listStyleNone, pageColumnStyle, primaryHeader, topTwoColumnsWrapperStyle, withMediaMobileUp, withMediaTabletPortraitUp)
+import Theme.Markdown exposing (markdownToHtml)
 
 
-view : Model -> Html Msg
-view model =
+view : Model -> Page.Data.Page -> Html Msg
+view model page =
     let
         t : Key -> String
         t =
             translate model.language
     in
     div [ css [ centerContent ] ]
-        [ primaryHeader [] (t HomeTitle)
+        [ primaryHeader [] page.title
         , div [ css [ contentWrapper ] ]
             [ div [ css [ topTwoColumnsWrapperStyle ] ]
                 [ div [ css [ pageColumnStyle ] ]
-                    (viewTextColumn t [ WelcomeP1, WelcomeP2, WelcomeP3 ])
+                    (markdownToHtml page.fullTextMarkdown)
                 , div [ css [ teaserColumnStyle ] ]
                     [ div []
                         [ h2 [ css [ teaserSubtitleStyle ] ] [ text (t GuideHighlightsSubtitle) ]
@@ -43,7 +46,7 @@ view model =
                             |> List.take 2
                             |> Page.Search.View.viewTeaserList False Page.Search.View.homePageLayoutStyle
                         ]
-                    , viewCallForStory model.language
+                    , Page.Shared.View.viewCallForStory model.language ""
                     ]
                 ]
             , div [ css [ pageColumnStyle ] ]
@@ -52,11 +55,6 @@ view model =
                 )
             ]
         ]
-
-
-viewTextColumn : (Key -> String) -> List Key -> List (Html msg)
-viewTextColumn t paragraphs =
-    List.map (\para -> p [ css [ pageColumnBlockStyle ] ] [ text (t para) ]) paragraphs
 
 
 viewGuidesByCategory : Language -> List Page.Guide.Data.GuideListItem -> List (Html msg)
@@ -103,20 +101,6 @@ viewGuideCategoryList language guides =
         )
 
 
-viewCallForStory : Language -> Html Msg
-viewCallForStory language =
-    let
-        t : Key -> String
-        t =
-            translate language
-    in
-    div [ css [ callForStoryStyle, Theme.Global.roundedCornerStyle ] ]
-        [ h2 [ css [ callForStoryHeadingStyle ] ] [ text (t CallForStoryHeading) ]
-        , p [] [ text (t CallForStoryP) ]
-        , a [ href (Route.toString Route.SubmitStory), css [ callForStoryLinkStyle ] ] [ text (t CallForStoryLinkText) ]
-        ]
-
-
 teaserSubtitleStyle : Style
 teaserSubtitleStyle =
     batch
@@ -132,31 +116,4 @@ teaserColumnStyle =
         , property "gap" "1rem"
         , withMediaTabletPortraitUp [ flexDirection column ]
         , withMediaMobileUp [ flexDirection row ]
-        ]
-
-
-callForStoryStyle : Style
-callForStoryStyle =
-    batch
-        [ backgroundColor purple
-        , color white
-        , padding (rem 1)
-        , width (pct 100)
-        ]
-
-
-callForStoryHeadingStyle : Style
-callForStoryHeadingStyle =
-    color white
-
-
-callForStoryLinkStyle : Style
-callForStoryLinkStyle =
-    batch
-        [ backgroundImage (url "/images/arrow--white.svg")
-        , backgroundPosition right
-        , backgroundRepeat noRepeat
-        , color white
-        , fontWeight (int 500)
-        , paddingRight (rem 1.5)
         ]

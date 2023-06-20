@@ -1,6 +1,6 @@
 module Theme.HeaderTemplate exposing (view)
 
-import Css exposing (Style, alignItems, backgroundColor, backgroundImage, backgroundPosition, backgroundPosition2, backgroundRepeat, backgroundSize, baseline, batch, border, border3, borderRadius, boxShadow, center, color, column, contain, display, displayFlex, em, flexDirection, flexEnd, flexStart, flexWrap, focus, fontFamilies, fontSize, fontWeight, height, inlineBlock, int, justifyContent, left, lineHeight, margin, margin2, marginBottom, marginLeft, marginRight, marginTop, minWidth, noRepeat, noWrap, none, normal, outline, padding, padding4, pct, pseudoElement, px, rem, right, row, solid, spaceBetween, textAlign, url, width, zero)
+import Css exposing (Style, alignItems, backgroundColor, backgroundImage, backgroundPosition2, backgroundRepeat, backgroundSize, baseline, batch, border, border3, borderRadius, boxShadow, center, color, column, display, displayFlex, em, flexDirection, flexEnd, flexStart, flexWrap, focus, fontFamilies, fontSize, fontWeight, int, justifyContent, left, lineHeight, margin, margin2, marginBottom, marginRight, marginTop, minWidth, noRepeat, noWrap, none, normal, outline, padding, padding4, pct, pseudoElement, px, rem, right, row, solid, spaceBetween, textAlign, url, width, zero)
 import Html.Styled exposing (Html, a, button, div, header, input, label, node, text)
 import Html.Styled.Attributes exposing (attribute, css, for, href, id, placeholder, type_)
 import Html.Styled.Events exposing (on, onClick)
@@ -154,19 +154,7 @@ searchButtonsContainerStyle =
 headerLinkStyle : Style
 headerLinkStyle =
     batch
-        [ pseudoElement "after"
-            [ backgroundImage
-                (url "/images/arrow--white.svg")
-            , backgroundSize contain
-            , backgroundPosition center
-            , backgroundRepeat noRepeat
-            , display inlineBlock
-            , Css.property "content" "' '"
-            , height (em 1)
-            , width (em 1.2)
-            , marginLeft (rem 0.3)
-            ]
-        , color white
+        [ color white
         , marginBottom (rem 0.3)
         , textAlign left
         , withMediaMobileUp
@@ -178,19 +166,7 @@ headerLinkStyle =
 headerBtnStyle : Style
 headerBtnStyle =
     batch
-        [ pseudoElement "after"
-            [ backgroundImage
-                (url "/images/arrow--white.svg")
-            , backgroundSize contain
-            , backgroundPosition center
-            , backgroundRepeat noRepeat
-            , display inlineBlock
-            , Css.property "content" "' '"
-            , height (em 1)
-            , width (em 1.2)
-            , marginLeft (em 0.3)
-            ]
-        , color white
+        [ color white
         , backgroundColor teal
         , border (px 0)
         , fontSize (rem 1)

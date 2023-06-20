@@ -7,6 +7,11 @@ image:
   alt: A bolted, locked gate
   credit: Photo copyright Autumn Barlow/The Wildlife Trusts 2023
 category: admin-and-info
+video:
+  id: 2VU0xTqm0XQ
+  title: "How to make sure everyone can access your project: A Nextdoor Nature
+    Community Video"
+customCall: " Sut ydych chi'n sicrhau bod eich prosiectau'n hygyrch?"
 ---
 Ni fydd yr wybodaeth yma'n ymdrin â hygyrchedd mewn digwyddiadau. Mae honno’n ddogfen ar wahân.
 

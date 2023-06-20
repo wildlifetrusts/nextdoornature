@@ -113,16 +113,7 @@ cyStrings key =
         ---
         -- Index page
         ---
-        HomeTitle ->
-            "Croeso i Hwb Natur Drws Nesaf"
-
         WelcomeP1 ->
-            "[cCc]"
-
-        WelcomeP2 ->
-            "[cCc]"
-
-        WelcomeP3 ->
             "[cCc]"
 
         GuideHighlightsSubtitle ->

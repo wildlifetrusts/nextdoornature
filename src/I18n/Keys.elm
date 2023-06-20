@@ -39,10 +39,7 @@ type Key
     | CookieDeclineButtonText
     | CookieSettingsButtonText
       --- Index Page
-    | HomeTitle
     | WelcomeP1
-    | WelcomeP2
-    | WelcomeP3
     | GuideHighlightsSubtitle
     | StoryHighlightsSubtitle
     | CallForStoryHeading

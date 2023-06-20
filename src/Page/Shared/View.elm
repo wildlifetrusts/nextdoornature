@@ -1,14 +1,14 @@
 module Page.Shared.View exposing (viewAudio, viewCallForStory, viewVideo)
 
-import Css exposing (Style, backgroundColor, backgroundImage, backgroundPosition, backgroundRepeat, batch, color, fontWeight, int, noRepeat, padding, paddingRight, pct, rem, right, url, width)
+import Css exposing (Style, backgroundColor, batch, color, fontWeight, int, margin2, margin3, padding, paddingRight, pct, rem, width)
 import Html.Styled exposing (Html, a, div, h2, iframe, p, text)
 import Html.Styled.Attributes exposing (attribute, autoplay, css, href, src, title)
 import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (Language, translate)
 import Message exposing (Msg)
-import Page.Shared.Data exposing (VideoMeta)
+import Page.Shared.Data
 import Route exposing (Route(..))
-import Theme.Global exposing (hideFromPrint, purple, white)
+import Theme.Global exposing (hideFromPrint, purple, roundedCornerStyle, white, withMediaTabletPortraitUp)
 
 
 viewVideo : Page.Shared.Data.VideoMeta -> Html Msg
@@ -48,7 +48,7 @@ viewCallForStory language customCall =
         t =
             translate language
     in
-    div [ css [ callForStoryStyle, Theme.Global.roundedCornerStyle ] ]
+    div [ css [ callForStoryStyle ] ]
         [ h2 [ css [ callForStoryHeadingStyle ] ] [ text (t CallForStoryHeading) ]
         , p [] [ text (customCall ++ t CallForStoryP) ]
         , a [ href (Route.toString SubmitStory), css [ callForStoryLinkStyle ] ] [ text (t CallForStoryLinkText) ]
@@ -60,8 +60,13 @@ callForStoryStyle =
     batch
         [ backgroundColor purple
         , color white
+        , margin2 (rem 0) (rem 0)
         , padding (rem 1)
+        , roundedCornerStyle
         , width (pct 100)
+        , withMediaTabletPortraitUp
+            [ margin3 (rem 0) (rem 0) (rem 2)
+            ]
         ]
 
 
@@ -73,10 +78,7 @@ callForStoryHeadingStyle =
 callForStoryLinkStyle : Style
 callForStoryLinkStyle =
     batch
-        [ backgroundImage (url "/images/arrow--white.svg")
-        , backgroundPosition right
-        , backgroundRepeat noRepeat
-        , color white
+        [ color white
         , fontWeight (int 500)
         , paddingRight (rem 1.5)
         ]
