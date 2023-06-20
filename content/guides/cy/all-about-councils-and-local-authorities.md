@@ -8,7 +8,10 @@ image:
 video:
   id: pZDv-ri2GOs
   title: Beth mae cynghorau ac awdurdodau lleol yn ei wneud? Fideo Natur Drws Nesaf.
+  description: Fideo wedi'i hanimeiddio yw hwn i egluro sut mae'r DU wedi'i
+    rhannu'n wahanol feysydd, a sut maen nhw'n cael eu rhedeg.
 category: admin-and-info
+customCall: Ydych chi wedi gweithio gyda'ch awdurdod lleol?
 ---
 ## A pham ddylwn i boeni?
 
