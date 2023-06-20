@@ -1,6 +1,6 @@
 port module Page.Guide.View exposing (print, view)
 
-import Css exposing (Style, alignItems, auto, backgroundColor, batch, border, borderBottom3, center, color, column, contain, display, displayFlex, em, ex, flexDirection, flexStart, flexWrap, fontFamilies, height, inlineBlock, justifyContent, listStyle, margin2, marginBottom, marginLeft, marginRight, marginTop, maxWidth, noRepeat, none, padding, paddingLeft, paddingRight, property, pseudoElement, px, rem, solid, url, width, wrap, zero)
+import Css exposing (Style, alignItems, auto, backgroundColor, batch, border, borderBottom3, center, color, column, display, displayFlex, em, flexDirection, flexStart, flexWrap, fontFamilies, inlineBlock, justifyContent, listStyle, margin2, marginBottom, marginRight, marginTop, maxWidth, none, padding, paddingLeft, paddingRight, pct, px, rem, solid, width, wrap, zero)
 import Html.Styled exposing (Html, a, button, div, h2, img, li, p, span, text, ul)
 import Html.Styled.Attributes exposing (alt, attribute, css, href, src)
 import Html.Styled.Events exposing (onClick)
@@ -20,11 +20,12 @@ import Theme.Markdown exposing (markdownToHtml)
 view : Language -> Page.Guide.Data.Guide -> List Page.Guide.Data.GuideListItem -> List Page.Story.Data.StoryTeaser -> Html Msg
 view language guide allGuides allStories =
     let
+        call : String
         call =
             Maybe.withDefault (translate language HomeCallForStoryP) guide.customCall
     in
     div []
-        [ viewGuideHeader language guide
+        [ viewGuideHeader guide
         , div
             [ css [ centerContent ] ]
             [ viewRow
@@ -42,17 +43,8 @@ view language guide allGuides allStories =
         ]
 
 
-
--- viewCategorySubHeader : Language -> Page.Guide.Data.Guide -> List (Html Msg)
-
-
-viewGuideHeader : Language -> Page.Guide.Data.Guide -> Html Msg
-viewGuideHeader language guide =
-    let
-        t : Key -> String
-        t =
-            translate language
-    in
+viewGuideHeader : Page.Guide.Data.Guide -> Html Msg
+viewGuideHeader guide =
     div [ css [ outerBorderStyle, withMediaPrint (Just [ marginBottom (rem 0) ]) ] ]
         [ div
             [ css [ headerContentStyle ] ]
@@ -119,7 +111,7 @@ viewMaybeVideo language maybeVideoMeta =
                 t =
                     translate language
             in
-            div []
+            div [ css [ outerVideoContainerStyle ] ]
                 [ h2 [] [ viewHeaderIcon (t GuideVideoHeaderIconLink), text (t GuideVideoHeader) ]
                 , Page.Shared.View.viewVideo aVideo
                 ]
@@ -341,6 +333,13 @@ printButtonStyle =
         , fontFamilies [ "Rubik", "sans-serif" ]
         , padding (rem 0)
         , paddingRight (rem 0.2)
+        ]
+
+
+outerVideoContainerStyle : Style
+outerVideoContainerStyle =
+    batch
+        [ width (pct 100)
         ]
 
 

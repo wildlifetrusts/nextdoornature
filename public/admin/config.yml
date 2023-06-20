@@ -178,6 +178,14 @@ collections:
               required: false,
               i18n: true,
             }
+          - {
+              label: "Description",
+              name: "description",
+              widget: "string",
+              hint: "Short description of video topic, appears above video on Guide page",
+              required: false,
+              i18n: true,
+            }
       - label: "Related Guides"
         name: "relatedGuides"
         widget: "relation"

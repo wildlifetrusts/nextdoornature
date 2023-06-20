@@ -1,6 +1,6 @@
 module Theme.HeaderTemplate exposing (view)
 
-import Css exposing (Style, alignItems, backgroundColor, backgroundImage, backgroundPosition, backgroundPosition2, backgroundRepeat, backgroundSize, baseline, batch, border, border3, borderRadius, boxShadow, center, color, column, contain, display, displayFlex, em, flexDirection, flexEnd, flexStart, flexWrap, focus, fontFamilies, fontSize, fontWeight, height, hover, inlineBlock, int, justifyContent, left, lineHeight, margin, margin2, marginBottom, marginLeft, marginRight, marginTop, minWidth, noRepeat, noWrap, none, normal, outline, padding, padding4, pct, pseudoElement, px, rem, right, row, solid, spaceBetween, textAlign, textDecoration, url, width, zero)
+import Css exposing (Style, alignItems, backgroundColor, backgroundImage, backgroundPosition2, backgroundRepeat, backgroundSize, baseline, batch, border, border3, borderRadius, boxShadow, center, color, column, display, displayFlex, em, flexDirection, flexEnd, flexStart, flexWrap, focus, fontFamilies, fontSize, fontWeight, hover, int, justifyContent, left, lineHeight, margin, margin2, marginBottom, marginRight, marginTop, minWidth, noRepeat, noWrap, none, normal, outline, padding, padding4, pct, pseudoElement, px, rem, right, row, solid, spaceBetween, textAlign, textDecoration, url, width, zero)
 import Html.Styled exposing (Html, a, button, div, header, input, label, node, text)
 import Html.Styled.Attributes exposing (attribute, css, for, href, id, placeholder, type_)
 import Html.Styled.Events exposing (on, onClick)
@@ -32,11 +32,11 @@ view model =
                     [ button [ css [ headerBtnStyle ], onClick LanguageChangeRequested ]
                         [ text (t ChangeLanguage) ]
                     , case model.page of
-                        Search ->
+                        Search _ ->
                             searchInput model
 
                         _ ->
-                            a [ href (Route.toString Search), css [ headerLinkStyle ] ] [ text (t FooterGuidesLinkText) ]
+                            a [ href (Route.toString (Search (Just "#guides"))), css [ headerLinkStyle ] ] [ text (t FooterGuidesLinkText) ]
                     ]
                 ]
             ]

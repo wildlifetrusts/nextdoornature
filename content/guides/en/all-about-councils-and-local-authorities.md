@@ -8,7 +8,7 @@ image:
 video:
   id: pZDv-ri2GOs
   title: "About Councils and Local Authorities: A Nextdoor Nature Video."
-  description: This the description of the video in text form describing what the video is about
+  description: "[cCc] This the description of the video in text form describing what the video is about"
 category: working-with-the-authorities
 ---
 ## What do councils and Local Authorities do?

@@ -1,6 +1,6 @@
 module Page.Shared.View exposing (viewAudio, viewCallForStory, viewVideo)
 
-import Css exposing (Style, absolute, backgroundColor, batch, color, fontWeight, height, hover, int, left, margin2, margin3, padding, paddingBottom, paddingRight, pct, position, relative, rem, solid, textDecoration3, top, underline, width, zero)
+import Css exposing (Style, backgroundColor, batch, color, fontWeight, hover, int, margin2, margin3, padding, paddingRight, pct, rem, solid, textDecoration3, underline, width)
 import Html.Styled exposing (Html, a, div, h2, iframe, p, text)
 import Html.Styled.Attributes exposing (attribute, autoplay, css, href, src, title)
 import I18n.Keys exposing (Key(..))
@@ -19,7 +19,7 @@ viewVideo videoMeta =
 
           else
             text ""
-        , div [ css [ videoContainerStyle, hideFromPrint ] ]
+        , div [ css [ hideFromPrint ] ]
             [ iframe
                 [ src videoMeta.src
                 , attribute "frameborder" "0"
@@ -90,18 +90,6 @@ callForStoryLinkStyle =
 embeddedVideoStyle : Style
 embeddedVideoStyle =
     batch
-        [ height (pct 100)
-        , left zero
-        , position absolute
-        , top zero
-        , width (pct 100)
-        ]
-
-
-videoContainerStyle : Style
-videoContainerStyle =
-    batch
-        [ paddingBottom (pct 56.25)
-        , position relative
-        , width (pct 100)
+        [ width (pct 100)
+        , Css.property "aspect-ratio" "16 / 9"
         ]

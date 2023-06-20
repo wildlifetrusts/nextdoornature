@@ -1,6 +1,6 @@
 module Theme.FooterTemplate exposing (view)
 
-import Css exposing (Style, alignItems, alignSelf, auto, backgroundColor, batch, border3, borderLeft3, borderTop, center, color, column, cursor, default, disabled, displayFlex, em, firstChild, fitContent, flexDirection, flexEnd, flexGrow, flexShrink, flexStart, flexWrap, fontFamilies, fontSize, height, int, justifyContent, lastChild, margin, margin2, marginBottom, marginLeft, marginRight, marginTop, maxWidth, minHeight, minWidth, none, nthChild, padding, padding2, paddingBottom, px, rem, row, solid, spaceBetween, textDecoration, underline, unset, width, wrap)
+import Css exposing (Style, alignItems, alignSelf, auto, backgroundColor, batch, border3, borderLeft3, borderTop, center, color, column, cursor, default, displayFlex, em, firstChild, fitContent, flexDirection, flexEnd, flexGrow, flexShrink, flexStart, flexWrap, fontFamilies, fontSize, height, int, justifyContent, lastChild, margin, margin2, marginBottom, marginLeft, marginRight, marginTop, maxWidth, minHeight, minWidth, none, nthChild, padding, padding2, paddingBottom, px, rem, row, solid, spaceBetween, textDecoration, underline, unset, width, wrap)
 import Css.Media as Media exposing (only, screen, withMedia)
 import Html.Styled exposing (Html, a, div, footer, h3, img, li, nav, text, ul)
 import Html.Styled.Attributes exposing (css, href, src)
@@ -8,7 +8,7 @@ import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (Language(..), translate)
 import Route exposing (Route)
 import Theme.FluidScale
-import Theme.Global exposing (centerContent, hideFromPrint, lightTeal, listStyleNone, purple, teal, white, withMediaDesktopUp, withMediaMobileUp, withMediaTabletLandscapeUp, withMediaTabletPortraitUp)
+import Theme.Global exposing (centerContent, hideFromPrint, lightTeal, listStyleNone, purple, teal, white, withMediaMobileUp, withMediaTabletPortraitUp)
 
 
 view : Language -> Route -> Html msg

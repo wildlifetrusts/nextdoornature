@@ -1,7 +1,7 @@
-module Page.Search.Data exposing (actionTeaserDecoder, actionTeaserListDecoder, guideTeaserListEncoder, guideTeaserListString, internalGuideTeaserDecoder, internalGuideTeaserListDecoder, teaserListFromGuideDict, teaserListFromStoryDict)
+module Page.Search.Data exposing (actionTeaserDecoder, actionTeaserListDecoder, getTeaserListFromSearch, guideTeaserListEncoder, guideTeaserListString, internalGuideTeaserDecoder, internalGuideTeaserListDecoder, teaserListFromGuideDict, teaserListFromStoryDict)
 
 import Dict
-import I18n.Translate exposing (Language)
+import I18n.Translate exposing (Language(..))
 import Json.Decode
 import Json.Decode.Extra
 import Json.Encode as Encode
@@ -10,6 +10,14 @@ import Page.Guide.Data
 import Page.Shared.Data
 import Page.Story.Data
 import Route
+import Shared exposing (Request(..))
+
+
+type alias SearchData =
+    { actions : List Page.Shared.Data.Teaser
+    , guides : List Page.Shared.Data.Teaser
+    , stories : List Page.Shared.Data.Teaser
+    }
 
 
 guideTeaserEncoder : Page.Shared.Data.Teaser -> Encode.Value
@@ -37,6 +45,26 @@ guideTeaserListString guideTeaserList =
 guideTeaserListEncoder : List Page.Shared.Data.Teaser -> Encode.Value
 guideTeaserListEncoder guideTeasers =
     Encode.list guideTeaserEncoder guideTeasers
+
+
+getTeaserListFromSearch : Shared.Model -> List Page.Shared.Data.Teaser
+getTeaserListFromSearch model =
+    if String.length model.query > 0 then
+        model.search
+
+    else if model.language == Welsh then
+        teaserListFromGuideDict model.language model.content.guides
+
+    else
+        case model.externalActions of
+            Failure ->
+                teaserListFromGuideDict model.language model.content.guides
+
+            Loading ->
+                teaserListFromGuideDict model.language model.content.guides
+
+            Success list ->
+                List.concat [ teaserListFromGuideDict model.language model.content.guides, list ]
 
 
 teaserListFromGuideDict :
