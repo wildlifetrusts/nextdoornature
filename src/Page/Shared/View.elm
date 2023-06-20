@@ -48,7 +48,7 @@ viewCallForStory language customCall =
         t =
             translate language
     in
-    div [ css [ callForStoryStyle ] ]
+    div [ css [ hideFromPrint, callForStoryStyle ] ]
         [ h2 [ css [ callForStoryHeadingStyle ] ] [ text (t CallForStoryHeading) ]
         , p [] [ text (customCall ++ t CallForStoryP) ]
         , a [ href (Route.toString SubmitStory), css [ callForStoryLinkStyle ] ] [ text (t CallForStoryLinkText) ]
