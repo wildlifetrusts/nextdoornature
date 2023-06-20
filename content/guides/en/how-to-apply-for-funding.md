@@ -1,6 +1,6 @@
 ---
 title: How to Apply for Funding
-summary: A summary of what you need to do when you are thinking of applying for funding
+summary: A summary of what you need to do when you are thinking of applying for funding.
 image:
   src: /images/uploads/how-to-apply-for-funding_orig-2-.jpg
   alt: A brown notebook with the word "plans" on the front surrounded by green
@@ -11,6 +11,8 @@ relatedGuides:
   - Bank Accounts For Groups
   - Faith Groups and Lottery Funding
 category: admin-and-info
+Category: admin-and-info
+customCall: Do you have any tips for applying for funding?
 ---
 ## Preparation
 
