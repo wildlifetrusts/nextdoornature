@@ -1,6 +1,7 @@
 ---
 title: All About Councils and Local Authorities
 summary: "A brief overview of how councils work in the UK            "
+Category: working-with-the-authorities
 image:
   src: /images/uploads/councils-and-las_orig-2-.jpg
   alt: Local maps and street atlases
@@ -8,7 +9,11 @@ image:
 video:
   id: pZDv-ri2GOs
   title: "About Councils and Local Authorities: A Nextdoor Nature Video."
-  description: "[cCc] This the description of the video in text form describing what the video is about"
+  description: This is an animated video to explain how the UK is split into
+    different areas, and how they are run.
+relatedGuides:
+  - How to contact your MP, MS (Wales), MLA (Northern Ireland) or MSP (Scotland)
+customCall: "Have you worked with your local authority? "
 category: working-with-the-authorities
 ---
 ## What do councils and Local Authorities do?

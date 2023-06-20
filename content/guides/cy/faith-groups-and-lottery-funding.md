@@ -10,6 +10,7 @@ video: null
 relatedGuides:
   - "Finding Funding "
 category: admin-and-info
+customCall: A ydych yn rhan o grŵp ffydd sydd wedi gwneud cais am arian loteri?
 ---
 
 

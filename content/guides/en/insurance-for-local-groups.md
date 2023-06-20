@@ -9,6 +9,7 @@ image:
 video:
   id: zyTZUjiipxM
   title: All About Insurance for Groups
+  description: Eve from Sleaford talks about why insurance is so important.
 relatedGuides:
   - Bank Accounts For Groups
 customCall: "How easy have you found insurance? "

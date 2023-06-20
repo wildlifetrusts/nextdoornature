@@ -13,7 +13,7 @@ cyStrings key =
         -- Header
         ---
         ChangeLanguage ->
-            "Newid i Saesneg"
+            "Switch to English"
 
         ---
         -- 404 content
@@ -89,6 +89,15 @@ cyStrings key =
 
         RegisteredCharityNumber ->
             "Rhif elusen gofrestredig 207238"
+
+        HeritageFundLogoAlt ->
+            ""
+
+        PlatiJubesLogoAlt ->
+            ""
+
+        WildLifeTrustLogoAlt ->
+            ""
 
         ---
         -- Cookie banner

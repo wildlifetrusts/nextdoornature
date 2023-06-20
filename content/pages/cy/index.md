@@ -1,16 +1,24 @@
 ---
 title: Croeso i Hwb Natur Drws Nesaf
+summary: Mae Hyb Natur Nextdoor yn gasgliad o ganllawiau (gwybodaeth) a straeon
+  (astudiaethau achos)
 ---
-## This website will help you to help nature.
+## Bydd y wefan hon yn eich helpu i helpu byd natur.
 
-Please explore our website. You can choose Welsh by clicking the button at the top. If you want to get in touch, please email us on [nextdoornature@wildlifetrust.org](mailto:nextdoornature@wildlifetrust.org). We’d love to hear from you!
+Yma, fe welwch **canllawiau** a **straeon.** 
 
-## Here, you will find GUIDES and STORIES. Guides are full of simple, easy-to-understand information in words and videos to help you to take action for nature.
+Mae **canllawiau** yn llawn gwybodaeth syml, hawdd ei deall mewn geiriau a fideos i'ch helpu i weithredu dros natur. Mae'r canllawiau hyn yn dweud wrthych sut i ddechrau grŵp, sut i ddod o hyd i gyllid, popeth sydd angen i chi ei wybod am yswiriant, banciau, a mwy!
 
-Nextdoor Nature is a project from The Wildlife Trusts. We’re working with communities to bring people together and give everyone the power to help nature flourish – everywhere.
+Mae gennym hefyd lawer o gyngor ymarferol ar sut y gallwch helpu byd natur ar wefan yr Ymddiriedolaethau Natur. [Dilynwch y ddolen hon i ddarganfod sut i adeiladu blwch adar, cloddio pwll neu hau blodau gwyllt.](<https://www.wildlifetrusts. org/camau gweithredu>) 
 
-## Stories are where you can read all about what other people are doing where they live and work. They are full of ideas to show you how everyday communities can help nature and wildlife all over the UK. And you can share your story here too!
+**Straeon** yw lle gallwch ddarllen popeth am yr hyn y mae pobl eraill yn ei wneud lle maent yn byw ac yn gweithio. Maent yn llawn syniadau i ddangos i chi sut y gall cymunedau bob dydd helpu natur a bywyd gwyllt ledled y DU. A gallwch chi rannu eich stori yma hefyd!
 
-Thanks to £5million funding from The National Lottery Heritage Fund, Nextdoor Nature provides you with the advice and support you need to help nature on your doorstep, and leave a lasting natural legacy to mark The Queen’s Platinum Jubilee.
+**Archwiliwch ein gwefan**. Gallwch ddewis Saesneg trwy glicio ar y botwm ar y brig. Os ydych chi eisiau mynd yn ôl i'r brif dudalen, cliciwch ar y geiriau Hwb Natur Drws Nesaf ar frig pob tudalen. Mae blwch chwilio ar y dde uchaf. Teipiwch yr hyn rydych chi am ei ddarganfod!
 
+Os ydych am gysylltu, anfonwch e-bost atom ar [nextdoornature@wildlifetrust.org](mailto:nextdoornature@wildlifetrust.org). Byddem wrth ein bodd yn clywed gennych!
 
+Ewch i'r dde i waelod unrhyw dudalen i ddod o hyd i wybodaeth am ein polisi preifatrwydd.
+
+***Prosiect gan yr Ymddiriedolaethau Natur yw Natur Drws Nesaf***. Rydym yn gweithio gyda chymunedau i ddod â phobl ynghyd a rhoi’r pŵer i bawb helpu byd natur i ffynnu – ym mhobman.
+
+Diolch i £5 miliwn o gyllid gan Gronfa Dreftadaeth y Loteri Genedlaethol, mae Natur Drws Nesaf yn rhoi’r cyngor a’r cymorth sydd eu hangen arnoch i helpu byd natur ar garreg eich drws, a gadael etifeddiaeth naturiol barhaus i nodi Jiwbilî Platinwm y Frenhines.

@@ -9,7 +9,10 @@ category: admin-and-info
 video:
   id: zyTZUjiipxM
   title: All About Insurance for Groups
-customCall: "How easy have you found insurance? "
+  description: Eve o Sleaford yn siarad am pam fod yswiriant mor bwysig.
+relatedGuides:
+  - Bank Accounts For Groups
+customCall: Pa mor hawdd ydych chi wedi dod o hyd i yswiriant?
 ---
 Nid yw hwn yn gyngor yswiriant ffurfiol.
 

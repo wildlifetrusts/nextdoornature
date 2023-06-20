@@ -1,5 +1,5 @@
 ---
-title: "Making sure everyone can access your group or project "
+title: "Making Sure Everyone Can Access Your Group or Project "
 summary: Information about ensuring your projects are accessible to everyone.
 image:
   src: /images/uploads/accessibility_orig-2-.jpg
@@ -11,6 +11,8 @@ video:
   id: 2VU0xTqm0XQ
   title: "How to make sure everyone can access your project: A Nextdoor Nature
     Community Video"
+  description: Aaron from Lincolnshire Voluntary Centre Services talks about how
+    to make sure everyone can access your project.
 customCall: How do you make sure your projects are accessible?
 ---
 

@@ -1,6 +1,6 @@
 port module Page.Guide.View exposing (print, view)
 
-import Css exposing (Style, alignItems, auto, backgroundColor, batch, border, borderBottom3, center, color, column, display, displayFlex, em, flexDirection, flexStart, flexWrap, fontFamilies, inlineBlock, justifyContent, listStyle, margin2, marginBottom, marginRight, marginTop, maxWidth, none, padding, paddingLeft, paddingRight, pct, px, rem, solid, width, wrap, zero)
+import Css exposing (Style, alignItems, auto, backgroundColor, batch, border, borderBottom3, center, color, column, display, displayFlex, em, flexDirection, flexStart, flexWrap, fontFamilies, hover, inlineBlock, justifyContent, listStyle, margin2, marginBottom, marginRight, marginTop, maxWidth, none, padding, paddingLeft, paddingRight, pct, px, rem, solid, textDecoration3, underline, width, wrap, zero)
 import Html.Styled exposing (Html, a, button, div, h2, img, li, p, span, text, ul)
 import Html.Styled.Attributes exposing (alt, attribute, css, href, src)
 import Html.Styled.Events exposing (onClick)
@@ -13,7 +13,7 @@ import Page.Shared.Data
 import Page.Shared.View
 import Page.Story.Data
 import Route exposing (Route(..))
-import Theme.Global exposing (centerContent, contentWrapper, featureImageStyle, hideFromPrint, lightTeal, pageColumnStyle, primaryHeader, purple, teal, teaserImageStyle, topTwoColumnsWrapperStyle, withMediaPrint)
+import Theme.Global exposing (centerContent, contentWrapper, featureImageStyle, hideFromPrint, lightPurple, lightTeal, pageColumnStyle, primaryHeader, purple, teal, teaserImageStyle, topTwoColumnsWrapperStyle, withMediaPrint)
 import Theme.Markdown exposing (markdownToHtml)
 
 
@@ -29,7 +29,7 @@ view language guide allGuides allStories =
         , div
             [ css [ centerContent ] ]
             [ viewRow
-                ( viewImageColumn language guide
+                ( viewGuideContentColumn language guide
                 , [ viewMaybeVideo language guide.maybeVideo
                   , viewMaybeAudio language guide.maybeAudio
                   , viewPrintGuide language
@@ -45,22 +45,7 @@ view language guide allGuides allStories =
 
 viewGuideHeader : Page.Guide.Data.Guide -> Html Msg
 viewGuideHeader guide =
-    div [ css [ outerBorderStyle, withMediaPrint (Just [ marginBottom (rem 0) ]) ] ]
-        [ div
-            [ css [ headerContentStyle ] ]
-            [ primaryHeader [ css [ guideTitleStyle ] ] guide.title
-            , p [] [ text guide.summary ]
-            ]
-        ]
-
-
-viewImageColumn : Language -> Page.Guide.Data.Guide -> List (Html Msg)
-viewImageColumn language guide =
     let
-        t : Key -> String
-        t =
-            translate language
-
         image : Page.Guide.Data.Image
         image =
             case guide.maybeImage of
@@ -70,24 +55,37 @@ viewImageColumn language guide =
                 Nothing ->
                     Page.Guide.Data.defaultGuideImage
     in
-    [ div [ css [ hideFromPrint ] ]
-        [ img [ css [ featureImageStyle ], src image.src, alt image.alt ] []
-        , case image.maybeCredit of
-            Just aCredit ->
-                p [ css [ imageCaptionStyle ] ] [ text aCredit ]
+    div [ css [ outerBorderStyle, withMediaPrint (Just [ marginBottom (rem 0) ]) ] ]
+        [ div
+            [ css [ headerContentStyle ] ]
+            [ primaryHeader [ css [ guideTitleStyle ] ] guide.title
+            , viewRow
+                ( [ p [] [ text guide.summary ] ]
+                , [ img [ css [ hideFromPrint, featureImageStyle ], src image.src, alt image.alt ] [] ]
+                , [ case image.maybeCredit of
+                        Just aCredit ->
+                            p [ css [ hideFromPrint, imageCaptionStyle ] ] [ text aCredit ]
 
-            Nothing ->
-                text ""
-        ]
-    , div [ css [ hideFromPrint ] ] [ text (t InCategory ++ t (Page.Guide.Data.categorySlugToKey guide.categorySlug)) ]
-    , div []
-        (h2 [ css [ hideFromPrint ] ]
-            [ viewHeaderIcon (t GuideTextHeaderIconLink)
-            , text (t GuideTextHeader)
+                        Nothing ->
+                            text ""
+                  ]
+                )
             ]
-            :: markdownToHtml guide.fullTextMarkdown
-        )
-    ]
+        ]
+
+
+viewGuideContentColumn : Language -> Page.Guide.Data.Guide -> List (Html Msg)
+viewGuideContentColumn language guide =
+    let
+        t : Key -> String
+        t =
+            translate language
+    in
+    h2 [ css [ hideFromPrint ] ]
+        [ viewHeaderIcon (t GuideTextHeaderIconLink)
+        , text (t GuideTextHeader)
+        ]
+        :: markdownToHtml guide.fullTextMarkdown
 
 
 viewRow : ( List (Html Msg), List (Html Msg), List (Html Msg) ) -> Html Msg
@@ -317,7 +315,8 @@ outerBorderStyle =
 imageCaptionStyle : Style
 imageCaptionStyle =
     batch
-        [ color purple, margin2 (rem 1) (rem 0) ]
+        [ color purple
+        ]
 
 
 guideTitleStyle : Style
@@ -331,8 +330,10 @@ printButtonStyle =
         [ backgroundColor lightTeal
         , border (rem 0)
         , fontFamilies [ "Rubik", "sans-serif" ]
+        , hover [ textDecoration3 underline solid purple ]
         , padding (rem 0)
         , paddingRight (rem 0.2)
+        , textDecoration3 underline solid lightPurple
         ]
 
 
