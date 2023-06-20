@@ -131,6 +131,12 @@ cyStrings key =
         CallForStoryLinkText ->
             "[cCc]"
 
+        HomeYoutubeLink ->
+            "https://youtube.com/embed/pZDv-ri2GOs"
+
+        HomeVideoTitle ->
+            "[cCc] welsh video title for accessibility"
+
         ---
         -- Guide Page
         ---

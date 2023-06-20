@@ -147,6 +147,12 @@ enStrings key =
         CallForStoryLinkText ->
             "Send us your story"
 
+        HomeYoutubeLink ->
+            "https://youtube.com/embed/pZDv-ri2GOs"
+
+        HomeVideoTitle ->
+            "About Councils and Local Authorities: A Nextdoor Nature Video."
+
         ---
         -- Guide Page
         ---
