@@ -91,7 +91,10 @@ init flags url key =
       , seed = Nothing
       }
     , Cmd.batch
-        [ Metadata.setMetadata (Metadata.metadataFromPage page English content)
+        [ Metadata.setMetadata
+            ( I18n.Translate.languageToString English
+            , Metadata.metadataFromPage page English content
+            )
         , getActions
         , Random.generate UpdateSeed Random.independentSeed
         ]
@@ -156,7 +159,10 @@ update msg model =
             in
             ( { model | page = newRoute }
             , Cmd.batch
-                (Metadata.setMetadata (Metadata.metadataFromPage newRoute model.language model.content)
+                (Metadata.setMetadata
+                    ( I18n.Translate.languageToString model.language
+                    , Metadata.metadataFromPage newRoute model.language model.content
+                    )
                     :: setFocusAndScrollViewport newRoute
                 )
             )
@@ -185,7 +191,7 @@ update msg model =
             in
             ( { model | language = newLanguage }
             , Cmd.batch
-                [ Metadata.setMetadata (Metadata.metadataFromPage model.page newLanguage model.content)
+                [ Metadata.setMetadata ( I18n.Translate.languageToString newLanguage, Metadata.metadataFromPage model.page newLanguage model.content )
                 , GoogleAnalytics.updateAnalytics model.cookieState.enableAnalytics
                     (GoogleAnalytics.updateAnalyticsEvent
                         { category = Route.toString model.page

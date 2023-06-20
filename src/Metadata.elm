@@ -194,4 +194,8 @@ subPageTitle language title =
     title ++ " | " ++ t SiteTitle
 
 
-port setMetadata : PageMetadata -> Cmd msg
+
+-- this String will represent the language
+
+
+port setMetadata : ( String, PageMetadata ) -> Cmd msg

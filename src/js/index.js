@@ -24,7 +24,7 @@ const app = Elm.Main.init({
   },
 });
 
-app.ports.setMetadata.subscribe(function (pageMetadata) {
+app.ports.setMetadata.subscribe(function ([lang, pageMetadata]) {
   const baseUrl =
     import.meta.env.VITE_BASE_URL ?? "https://nextdoornaturehub.org.uk";
   if (pageMetadata.hasOwnProperty("title")) {
@@ -49,6 +49,12 @@ app.ports.setMetadata.subscribe(function (pageMetadata) {
       .getElementsByTagName("meta")
       .namedItem("og-image")
       .setAttribute("content", baseUrl + pageMetadata.imageSrc);
+  }
+  if (lang === "English") {
+    document.documentElement.lang = "en";
+  }
+  if (lang === "Welsh") {
+    document.documentElement.lang = "cy";
   }
 });
 
