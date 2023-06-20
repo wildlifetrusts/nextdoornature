@@ -13,7 +13,7 @@ enStrings key =
             "[cCc] Description for the guides search page"
 
         CallForStoryP ->
-            " If you would like to submit a case study like this we would love to hear from you [cCc]"
+            "If you want to tell us your story, we'd love to hear from you."
 
         ---
         -- Header
@@ -31,7 +31,7 @@ enStrings key =
             "Looks like we've popped up on the wrong page!"
 
         ResourceNotFoundLinkText ->
-            "[cCc] Back to home page"
+            "Back to home page"
 
         ResourceNotFoundLinkPath ->
             "/"
@@ -55,7 +55,7 @@ enStrings key =
             "/search#stories"
 
         FooterStoriesLinkText ->
-            "Explore our stories [cCc]"
+            "Explore our stories"
 
         FooterTitleColumnC ->
             "Get involved"
@@ -130,7 +130,7 @@ enStrings key =
             "Ok, got it"
 
         CookieDeclineButtonText ->
-            "Use only essential cookies"
+            "No thanks"
 
         CookieSettingsButtonText ->
             "Cookie settings"
@@ -151,7 +151,7 @@ enStrings key =
             "Share your story"
 
         HomeCallForStoryP ->
-            "[cCc] Have you done something great for nature in your community? What challenges or hurdles did you overcome?"
+            "Have you done something great for nature in your community? What challenges did you overcome?"
 
         CallForStoryLinkText ->
             "Send us your story"
@@ -169,13 +169,13 @@ enStrings key =
             "Printable version"
 
         GuideVideoHeader ->
-            "[cCc] Video guide"
+            "Video guide"
 
         GuideAudioHeader ->
             "[cCc] Audio guide"
 
         GuideTextHeader ->
-            "[cCc] Text guide"
+            "Text guide"
 
         GuidePrintHeaderIconLink ->
             "/images/icons/NextDoorNature_icons-print.svg"
@@ -190,10 +190,10 @@ enStrings key =
             "/images/icons/NextDoorNature_icons-text.svg"
 
         GuideButtonText ->
-            "Click here"
+            "Click here for a printable version of this guide,"
 
         GuideParagraphText ->
-            "for a printable version of this page, which you can easily share with groups or anyone who does not have digital access"
+            "which you can easily share with groups or anyone who does not have digital access"
 
         ---
         -- Search Page
@@ -202,7 +202,7 @@ enStrings key =
             "Search"
 
         SearchTitleFiltered num query ->
-            num ++ " guides on '" ++ query ++ "' [cCc]"
+            num ++ " guides on " ++ query
 
         SearchPlaceholder ->
             "Search this hub"
@@ -256,7 +256,7 @@ enStrings key =
         -- Metadata
         ---
         StoryMetaDescription title ->
-            "[cCc] A story about: " ++ title
+            "A story about: " ++ title
 
         StoryMetaDescriptionWithAuthor author title ->
-            "[cCc] A story about " ++ author ++ ": " ++ title
+            "A story about " ++ author ++ ": " ++ title
