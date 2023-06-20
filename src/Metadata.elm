@@ -57,7 +57,8 @@ metadataFromPage page language content =
                 Nothing ->
                     defaultMetadata language
 
-        Search ->
+        Search _ ->
+            -- Search URL has optional fragment but we won't alter the meta
             { title = subPageTitle language (t SearchTitle)
             , description = t SearchMetaDescription
             , imageSrc = defaultMetaImageSrc

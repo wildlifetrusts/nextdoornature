@@ -32,11 +32,11 @@ view model =
                     [ button [ css [ headerBtnStyle ], onClick LanguageChangeRequested ]
                         [ text (t ChangeLanguage) ]
                     , case model.page of
-                        Search ->
+                        Search _ ->
                             searchInput model
 
                         _ ->
-                            a [ href (Route.toString Search), css [ headerLinkStyle ] ] [ text (t FooterGuidesLinkText) ]
+                            a [ href (Route.toString (Search (Just "#guides"))), css [ headerLinkStyle ] ] [ text (t FooterGuidesLinkText) ]
                     ]
                 ]
             ]

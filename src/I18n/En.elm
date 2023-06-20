@@ -49,7 +49,7 @@ enStrings key =
             "Explore our guides"
 
         FooterGuidesLink ->
-            "/guides"
+            "/search#guides"
 
         FooterStoriesLink ->
             "/search#stories"

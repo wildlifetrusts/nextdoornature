@@ -1,15 +1,15 @@
-module Page.Search.View exposing (homePageLayoutStyle, view, viewTeaserList)
+module Page.Search.View exposing (view)
 
 import Css exposing (Style, batch, fontWeight, int, margin, padding, pct, property, rem, width)
-import Html.Styled exposing (Html, a, div, img, li, p, text, ul)
-import Html.Styled.Attributes exposing (alt, attribute, css, href, src)
+import Html.Styled exposing (Html, a, div, h2, img, li, p, section, text, ul)
+import Html.Styled.Attributes exposing (alt, attribute, css, href, id, src)
 import I18n.Keys exposing (Key(..))
-import I18n.Translate exposing (Language(..), translate)
+import I18n.Translate exposing (Language, translate)
 import List
 import Message exposing (Msg)
 import Page.Search.Data
 import Page.Shared.Data
-import Shared exposing (Model, Request(..))
+import Shared exposing (Model)
 import Theme.Global exposing (centerContent, contentWrapper, primaryHeader, withMediaDesktopUp, withMediaMobileUp, withMediaTabletLandscapeUp, withMediaTabletPortraitUp)
 
 
@@ -19,45 +19,18 @@ view model =
         t : Key -> String
         t =
             translate model.language
-
-        teaserList : List Page.Shared.Data.Teaser
-        teaserList =
-            if String.length model.query > 0 then
-                model.search
-
-            else if model.language == Welsh then
-                Page.Search.Data.teaserListFromGuideDict model.language model.content.guides
-
-            else
-                case model.externalActions of
-                    Failure ->
-                        Page.Search.Data.teaserListFromGuideDict model.language model.content.guides
-
-                    Loading ->
-                        Page.Search.Data.teaserListFromGuideDict model.language model.content.guides
-
-                    Success list ->
-                        List.concat [ Page.Search.Data.teaserListFromGuideDict model.language model.content.guides, list ]
-
-        headerText : String
-        headerText =
-            if String.length model.query > 0 then
-                t <| SearchTitleFiltered (String.fromInt <| List.length model.search) model.query
-
-            else
-                t SearchTitle
     in
     div [ css [ centerContent ] ]
-        [ primaryHeader [ attribute "aria-live" "alert", css [ guidesSearchTitleStyle ] ] headerText
+        [ primaryHeader [ attribute "aria-live" "alert", css [ guidesSearchTitleStyle ] ] (t SearchTitle)
         , div
             [ css [ contentWrapper ] ]
-            [ viewTeaserList True guidesPageLayoutStyle teaserList
+            [ viewTeaserList model.language model.query (Page.Search.Data.getTeaserListFromSearch model)
             ]
         ]
 
 
-viewGuideTeaser : Bool -> Page.Shared.Data.Teaser -> Html Msg
-viewGuideTeaser includeSummary teaser =
+viewGuideTeaser : Page.Shared.Data.Teaser -> Html Msg
+viewGuideTeaser teaser =
     let
         image : Page.Shared.Data.TeaserImage
         image =
@@ -79,11 +52,7 @@ viewGuideTeaser includeSummary teaser =
             []
         , p [ css [ Theme.Global.teaserRowStyle ] ]
             [ a [ css [ fontWeight (int 600) ], href teaser.url ] [ text teaser.title ] ]
-        , if includeSummary then
-            viewGuideTeaserSummary teaser.summary
-
-          else
-            text ""
+        , viewGuideTeaserSummary teaser.summary
         ]
 
 
@@ -98,14 +67,35 @@ viewGuideTeaserSummary summary =
         text ""
 
 
-viewTeaserList : Bool -> Style -> List Page.Shared.Data.Teaser -> Html Msg
-viewTeaserList includeSummary style teasers =
+viewTeaserList : Language -> String -> List Page.Shared.Data.Teaser -> Html Msg
+viewTeaserList language searchString teasers =
     if List.length teasers > 0 then
-        ul [ css [ style ] ]
-            (teasers
-                |> List.map
-                    (\teaser -> viewGuideTeaser includeSummary teaser)
-            )
+        let
+            sectionHeader : String
+            sectionHeader =
+                if String.length searchString > 0 then
+                    let
+                        t : Key -> String
+                        t =
+                            translate language
+
+                        numberOfResultsString : String
+                        numberOfResultsString =
+                            String.fromInt (List.length teasers)
+                    in
+                    t (SearchTitleFiltered numberOfResultsString searchString)
+
+                else
+                    ""
+        in
+        section []
+            [ h2 [ id "guides" ] [ text sectionHeader ]
+            , ul [ css [ guidesPageLayoutStyle ] ]
+                (teasers
+                    |> List.map
+                        (\teaser -> viewGuideTeaser teaser)
+                )
+            ]
 
     else
         text ""
@@ -145,18 +135,6 @@ guidesPageLayoutStyle =
         , withMediaMobileUp
             [ property "grid-template-columns" "repeat(3, 1fr)"
             ]
-        ]
-
-
-homePageLayoutStyle : Style
-homePageLayoutStyle =
-    batch
-        [ property "display" "grid"
-        , margin (rem 0)
-        , padding (rem 0)
-        , property "grid-template-columns" "repeat(2, 1fr)"
-        , property "gap" "1rem"
-        , width (pct 100)
         ]
 
 

@@ -121,6 +121,18 @@ flagsConsentDecoder =
     Json.Decode.field "hasConsented" Json.Decode.string
 
 
+setFocusAndScrollViewport : Route -> List (Cmd Msg)
+setFocusAndScrollViewport route =
+    case route of
+        Search (Just _) ->
+            -- On the seach page, we have anchors to sections
+            -- Need to verify that focus is set correctly when we use them
+            []
+
+        _ ->
+            [ resetFocusTop, resetViewportTop ]
+
+
 resetViewportTop : Cmd Msg
 resetViewportTop =
     Task.perform (\_ -> NoOp) (Browser.Dom.setViewport 0 0)
@@ -144,10 +156,9 @@ update msg model =
             in
             ( { model | page = newRoute }
             , Cmd.batch
-                [ Metadata.setMetadata (Metadata.metadataFromPage newRoute model.language model.content)
-                , resetFocusTop
-                , resetViewportTop
-                ]
+                (Metadata.setMetadata (Metadata.metadataFromPage newRoute model.language model.content)
+                    :: setFocusAndScrollViewport newRoute
+                )
             )
 
         LinkClicked urlRequest ->
@@ -320,7 +331,7 @@ view model =
                     Nothing ->
                         resourceNotFound model.language
 
-        Search ->
+        Search _ ->
             Theme.PageTemplate.view model (Page.Search.View.view model)
 
         Page slug ->

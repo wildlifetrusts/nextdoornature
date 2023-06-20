@@ -1,7 +1,7 @@
 module Route exposing (Route(..), fromUrl, toString)
 
 import Url
-import Url.Parser as Parser exposing ((</>), Parser, map, oneOf, s, string, top)
+import Url.Parser as Parser exposing ((</>), Parser, fragment, map, oneOf, s, string, top)
 
 
 type Route
@@ -9,7 +9,7 @@ type Route
     | Story String
     | SubmitStory
     | Guide String
-    | Search
+    | Search (Maybe String)
     | Page String
 
 
@@ -34,8 +34,13 @@ toString route =
         Guide s ->
             "/guides" ++ "/" ++ s
 
-        Search ->
-            "/search"
+        Search maybeFragment ->
+            case maybeFragment of
+                Just aFragment ->
+                    "/search" ++ aFragment
+
+                Nothing ->
+                    "/search"
 
         Page s ->
             "/" ++ s
@@ -48,6 +53,6 @@ routeParser =
         , map Story (s "stories" </> string)
         , map SubmitStory (s "share-story")
         , map Guide (s "guides" </> string)
-        , map Search (s "search")
+        , map Search (s "search" </> fragment identity)
         , map Page string
         ]
