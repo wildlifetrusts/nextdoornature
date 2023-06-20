@@ -107,7 +107,7 @@ cyStrings key =
         ---
         -- Index page
         ---
-        WelcomeP1 ->
+        IndexMetaDescription ->
             "[cCc]"
 
         GuideHighlightsSubtitle ->
@@ -144,7 +144,7 @@ cyStrings key =
             "Canllaw fideo"
 
         GuideAudioHeader ->
-            "[cCc]"
+            "Canllaw sain"
 
         GuideTextHeader ->
             "Canllaw testun"

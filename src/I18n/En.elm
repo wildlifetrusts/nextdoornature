@@ -113,7 +113,7 @@ enStrings key =
         ---
         -- Index page
         ---
-        WelcomeP1 ->
+        IndexMetaDescription ->
             "Nextdoor Nature is bringing communities together to help nature flourish where you live and work!"
 
         GuideHighlightsSubtitle ->
@@ -147,7 +147,7 @@ enStrings key =
             "Video guide"
 
         GuideAudioHeader ->
-            "[cCc] Audio guide"
+            "Audio guide"
 
         GuideTextHeader ->
             "Text guide"

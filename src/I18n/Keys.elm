@@ -34,7 +34,7 @@ type Key
     | CookieDeclineButtonText
     | CookieSettingsButtonText
       --- Index Page
-    | WelcomeP1
+    | IndexMetaDescription
     | GuideHighlightsSubtitle
     | StoryHighlightsSubtitle
     | CallForStoryHeading

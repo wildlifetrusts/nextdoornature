@@ -7,8 +7,6 @@ image:
   alt: A pile of bank statements
 relatedGuides:
   - How to Apply for Funding
-relatedStories:
-  - Test story with minimal fields
 category: admin-and-info
 ---
 

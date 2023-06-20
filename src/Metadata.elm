@@ -30,7 +30,7 @@ defaultMetadata language =
             translate language
     in
     { title = t SiteTitle
-    , description = t WelcomeP1
+    , description = t IndexMetaDescription
     , imageSrc = defaultMetaImageSrc
     }
 
@@ -45,7 +45,7 @@ metadataFromPage page language content =
     case page of
         Index ->
             { title = t SiteTitle
-            , description = t WelcomeP1
+            , description = t IndexMetaDescription
             , imageSrc = defaultMetaImageSrc
             }
 
