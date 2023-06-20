@@ -1,6 +1,6 @@
 port module Page.Guide.View exposing (print, view)
 
-import Css exposing (Style, alignItems, auto, backgroundColor, batch, border, borderBottom3, center, color, column, display, displayFlex, em, flexDirection, flexStart, flexWrap, fontFamilies, inlineBlock, justifyContent, listStyle, margin2, marginBottom, marginRight, marginTop, maxWidth, none, padding, paddingLeft, paddingRight, pct, px, rem, solid, width, wrap, zero)
+import Css exposing (Style, alignItems, auto, backgroundColor, batch, border, borderBottom3, center, color, column, display, displayFlex, em, flexDirection, flexStart, flexWrap, fontFamilies, hover, inlineBlock, justifyContent, listStyle, margin2, marginBottom, marginRight, marginTop, maxWidth, none, padding, paddingLeft, paddingRight, pct, px, rem, solid, textDecoration3, underline, width, wrap, zero)
 import Html.Styled exposing (Html, a, button, div, h2, img, li, p, span, text, ul)
 import Html.Styled.Attributes exposing (alt, attribute, css, href, src)
 import Html.Styled.Events exposing (onClick)
@@ -13,7 +13,7 @@ import Page.Shared.Data
 import Page.Shared.View
 import Page.Story.Data
 import Route exposing (Route(..))
-import Theme.Global exposing (centerContent, contentWrapper, featureImageStyle, hideFromPrint, lightTeal, pageColumnStyle, primaryHeader, purple, teal, teaserImageStyle, topTwoColumnsWrapperStyle, withMediaPrint)
+import Theme.Global exposing (centerContent, contentWrapper, featureImageStyle, hideFromPrint, lightPurple, lightTeal, pageColumnStyle, primaryHeader, purple, teal, teaserImageStyle, topTwoColumnsWrapperStyle, withMediaPrint)
 import Theme.Markdown exposing (markdownToHtml)
 
 
@@ -331,8 +331,10 @@ printButtonStyle =
         [ backgroundColor lightTeal
         , border (rem 0)
         , fontFamilies [ "Rubik", "sans-serif" ]
+        , hover [ textDecoration3 underline solid purple ]
         , padding (rem 0)
         , paddingRight (rem 0.2)
+        , textDecoration3 underline solid lightPurple
         ]
 
 

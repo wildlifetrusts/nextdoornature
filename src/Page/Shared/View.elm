@@ -1,6 +1,6 @@
 module Page.Shared.View exposing (viewAudio, viewCallForStory, viewVideo)
 
-import Css exposing (Style, backgroundColor, batch, color, fontWeight, int, margin2, margin3, padding, paddingRight, pct, rem, width)
+import Css exposing (Style, backgroundColor, batch, color, fontWeight, hover, int, margin2, margin3, padding, paddingRight, pct, rem, solid, textDecoration3, underline, width)
 import Html.Styled exposing (Html, a, div, h2, iframe, p, text)
 import Html.Styled.Attributes exposing (attribute, autoplay, css, href, src, title)
 import I18n.Keys exposing (Key(..))
@@ -81,6 +81,9 @@ callForStoryLinkStyle =
         [ color white
         , fontWeight (int 500)
         , paddingRight (rem 1.5)
+        , hover
+            [ textDecoration3 underline solid white
+            ]
         ]
 
 
