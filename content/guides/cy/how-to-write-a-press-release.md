@@ -1,11 +1,12 @@
 ---
 title: Datganiadau i'r Wasg – cyfarwyddyd
-summary: Awgrymiadau sylfaenol ar sut i ysgrifennu datganiad i'r wasg
+summary: Awgrymiadau sylfaenol ar sut i ysgrifennu datganiad i'r wasg.
 image:
   src: /images/uploads/press-release_orig-2-.jpg
   alt: A newspaper and some green leaves
   credit: Photo copyright Autumn Barlow/The Wildlife Trusts 2023
 category: admin-and-info
+customCall: Ydy ysgrifennu datganiad i'r wasg yn hawdd i chi?
 ---
 ## Sut mae’n edrych:
 
