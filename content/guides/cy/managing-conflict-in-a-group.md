@@ -1,6 +1,6 @@
 ---
 title: Rheoli gwrthdaro mewn grŵp
-summary: "Deall gwrthdaro a sut i ddelio ag ef mewn grwpiau               "
+summary: "Deall gwrthdaro a sut i ddelio ag ef mewn grwpiau.               "
 image:
   src: /images/uploads/managingconflictingroup_orig-2-.jpg
   alt: A photo of a leaf with many holes eaten away at it
@@ -10,6 +10,7 @@ relatedGuides:
   - "Making sure everyone can access your group or project "
 relatedStories:
   - Norton Grange Community Centre
+customCall: Sut ydych chi wedi delio â gwrthdaro neu anghytundeb?
 ---
 Mae gwrthdaro yn normal, ac ni allwch ei osgoi.
 
