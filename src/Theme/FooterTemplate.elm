@@ -54,7 +54,7 @@ translatedLogoPath language fileName =
             "/images/" ++ fileName ++ "-cy.svg"
 
 
-navigationColumn : { title : Key, links : List { text : Key, href : Key } } -> Language -> Route -> Html msg
+navigationColumn : { title : Key, links : List { text : Key, href : String } } -> Language -> Route -> Html msg
 navigationColumn column language route =
     let
         t : Key -> String
@@ -66,7 +66,7 @@ navigationColumn column language route =
             [ text (t column.title)
             ]
         , nav []
-            [ ul [ css [ listStyleNone ] ] (List.map (\link -> li [] [ a [ href (t link.href), activeClass (t link.href) route ] [ text (t link.text) ] ]) column.links)
+            [ ul [ css [ listStyleNone ] ] (List.map (\link -> li [] [ a [ href link.href, activeClass link.href route ] [ text (t link.text) ] ]) column.links)
             ]
         ]
 
@@ -83,27 +83,30 @@ activeClass path route =
 footerNavigationContent :
     List
         { title : Key
-        , links : List { text : Key, href : Key }
+        , links : List { text : Key, href : String }
         }
 footerNavigationContent =
     [ { title = FooterTitleColumnA
       , links =
-            [ { text = FooterVisitWebsiteText, href = FooterVisitWebsiteLink }
-            , { text = FooterAboutText, href = FooterAboutLink }
-            , { text = FooterPrivacyPolicyText, href = FooterPrivacyPolicyLink }
+            [ { text = FooterVisitWebsiteText, href = "https://www.wildlifetrusts.org/" }
+            , { text = FooterAboutText, href = "/about" }
+            , { text = FooterPrivacyPolicyText, href = "/privacy-policy" }
             ]
       }
     , { title = FooterTitleColumnB
       , links =
-            [ { text = FooterGuidesLinkText, href = FooterGuidesLink }
-            , { text = FooterStoriesLinkText, href = FooterStoriesLink }
-            , { text = FooterHowToUseThisSiteText, href = FooterHowToUseThisSiteLink }
+            [ { text = FooterGuidesLinkText, href = "/search#guides" }
+            , { text = FooterStoriesLinkText, href = "/search#stories" }
+            , { text = FooterHowToUseThisSiteText, href = "/how-to-use-this-site" }
             ]
       }
     , { title = FooterTitleColumnC
       , links =
-            [ { text = FooterFindYourLocalTrustText, href = FooterFindYourLocalTrustLink }
-            , { text = FooterShareYourStoryText, href = FooterShareYourStoryLink }
+            [ { text = FooterFindYourLocalTrustText
+              , href =
+                    "https://www.wildlifetrusts.org/wildlife-trusts"
+              }
+            , { text = FooterShareYourStoryText, href = "/share-story" }
             ]
       }
     ]

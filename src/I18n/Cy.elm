@@ -42,41 +42,23 @@ cyStrings key =
         FooterGuidesLinkText ->
             "Archwilio ein canllawiau"
 
-        FooterGuidesLink ->
-            "/guides"
-
         FooterTitleColumnC ->
             "Cymryd rhan"
 
         FooterVisitWebsiteText ->
             "Mynd i wefan yr Ymddiriedolaethau Natur"
 
-        FooterVisitWebsiteLink ->
-            "https://www.wildlifetrusts.org/"
-
         FooterAboutText ->
             "Mwy o wybodaeth am y prosiect yma"
-
-        FooterAboutLink ->
-            "/about"
 
         FooterFindYourLocalTrustText ->
             "Dod o hyd i'ch Ymddiriedolaeth leol"
 
-        FooterFindYourLocalTrustLink ->
-            "https://www.wildlifetrusts.org/wildlife-trusts"
-
         FooterPrivacyPolicyText ->
             "Polisi preifatrwydd"
 
-        FooterPrivacyPolicyLink ->
-            "/privacy-policy"
-
         FooterHowToUseThisSiteText ->
             "Sut i ddefnyddio'r wefan hon"
-
-        FooterHowToUseThisSiteLink ->
-            "/how-to-use-this-site"
 
         FooterSiteLogo ->
             "Natur Drws Nesaf"
@@ -239,5 +221,8 @@ cyStrings key =
         StoryMetaDescriptionWithAuthor author title ->
             "Stori am " ++ author ++ ": " ++ title
 
-        _ ->
-            "[cCc] [fFf] to reminder to add all Welsh Keys back"
+        ExploreGuidesListHeading ->
+            "Archwilio'r canllawiau yn ôl pwnc"
+
+        SubmitFormHeading ->
+            "[cCc]"

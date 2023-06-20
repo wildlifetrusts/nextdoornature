@@ -48,8 +48,8 @@ viewForm model =
     div [ css [ batch [ width (pct 100) ], flexChildStyle ] ]
         [ h2 [] [ text (t SubmitFormHeading) ]
         , iframe
-            [ Attr.src (t SubmitFormSrc)
-            , Attr.title (t SubmitFormTitle)
+            [ Attr.src "https://teamwildertest.formstack.com/forms/teamwilder_test"
+            , Attr.title "teamwilder_test"
             , css [ border (rem 0), width (pct 100), height (rem 77) ]
             ]
             []

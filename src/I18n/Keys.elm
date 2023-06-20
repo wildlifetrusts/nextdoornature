@@ -14,21 +14,13 @@ type Key
     | FooterTitleColumnB
     | FooterTitleColumnC
     | FooterVisitWebsiteText
-    | FooterVisitWebsiteLink
     | FooterAboutText
-    | FooterAboutLink
     | FooterGuidesLinkText
-    | FooterGuidesLink
-    | FooterStoriesLink
     | FooterStoriesLinkText
     | FooterFindYourLocalTrustText
-    | FooterFindYourLocalTrustLink
     | FooterShareYourStoryText
-    | FooterShareYourStoryLink
     | FooterPrivacyPolicyText
-    | FooterPrivacyPolicyLink
     | FooterHowToUseThisSiteText
-    | FooterHowToUseThisSiteLink
     | FooterSiteLogo
     | FooterCharityInfo
     | RegisteredCharityNumber
@@ -73,14 +65,6 @@ type Key
     | WhereSubHeading
       --- SubmitStory Page
     | SubmitStoryMetaImageLink
-      {-
-         from formstack iframe embed code
-      -}
-    | SubmitFormSrc
-      {-
-         from formstack iframe embed code
-      -}
-    | SubmitFormTitle
     | SubmitFormHeading
       --- Category things
     | CategoryAdminAndInfoName

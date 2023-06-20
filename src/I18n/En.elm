@@ -48,12 +48,6 @@ enStrings key =
         FooterGuidesLinkText ->
             "Explore our guides"
 
-        FooterGuidesLink ->
-            "/search#guides"
-
-        FooterStoriesLink ->
-            "/search#stories"
-
         FooterStoriesLinkText ->
             "Explore our stories"
 
@@ -63,27 +57,14 @@ enStrings key =
         FooterVisitWebsiteText ->
             "Visit the Wildlife Trusts' website"
 
-        FooterVisitWebsiteLink ->
-            "https://www.wildlifetrusts.org/"
-
         FooterAboutText ->
             "Find out more about this project"
-
-        FooterAboutLink ->
-            "/about"
 
         FooterFindYourLocalTrustText ->
             "Find your local Trust"
 
-        FooterFindYourLocalTrustLink ->
-            "https://www.wildlifetrusts.org/wildlife-trusts"
-
         FooterShareYourStoryText ->
             "Share your story"
-
-        FooterShareYourStoryLink ->
-            --[cCc]
-            "/share-story"
 
         HeritageFundLogoAlt ->
             "Logo for the national lottery heritage fund"
@@ -97,14 +78,8 @@ enStrings key =
         FooterPrivacyPolicyText ->
             "Privacy policy"
 
-        FooterPrivacyPolicyLink ->
-            "/privacy-policy"
-
         FooterHowToUseThisSiteText ->
             "How to use this site"
-
-        FooterHowToUseThisSiteLink ->
-            "/how-to-use-this-site"
 
         FooterSiteLogo ->
             "Nextdoor Nature"
@@ -222,12 +197,6 @@ enStrings key =
         ---
         -- SubmitStory Page
         ---
-        SubmitFormSrc ->
-            "https://teamwildertest.formstack.com/forms/teamwilder_test"
-
-        SubmitFormTitle ->
-            "teamwilder_test"
-
         SubmitFormHeading ->
             "Your details"
 
