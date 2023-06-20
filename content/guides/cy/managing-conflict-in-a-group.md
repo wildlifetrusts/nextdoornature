@@ -1,5 +1,5 @@
 ---
-title: Rheoli gwrthdaro mewn grŵp
+title: Rheoli Gwrthdaro mewn Grŵp
 summary: "Deall gwrthdaro a sut i ddelio ag ef mewn grwpiau.               "
 image:
   src: /images/uploads/managingconflictingroup_orig-2-.jpg
