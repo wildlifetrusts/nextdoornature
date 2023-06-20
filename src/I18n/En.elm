@@ -85,10 +85,10 @@ enStrings key =
             --[cCc]
             "/share-story"
 
-        HerritageFundLogoAlt ->
+        HeritageFundLogoAlt ->
             "Logo for the national lottery heritage fund"
 
-        PLatiJubesLogoAlt ->
+        PlatiJubesLogoAlt ->
             "Logo for the queens platinum jubilee 2022"
 
         WildLifeTrustLogoAlt ->

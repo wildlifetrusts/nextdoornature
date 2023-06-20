@@ -90,10 +90,10 @@ cyStrings key =
         RegisteredCharityNumber ->
             "Rhif elusen gofrestredig 207238"
 
-        HerritageFundLogoAlt ->
+        HeritageFundLogoAlt ->
             ""
 
-        PLatiJubesLogoAlt ->
+        PlatiJubesLogoAlt ->
             ""
 
         WildLifeTrustLogoAlt ->
