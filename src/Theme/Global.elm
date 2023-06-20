@@ -1,6 +1,6 @@
 module Theme.Global exposing (borderWrapper, centerContent, contentWrapper, featureImageStyle, globalStyles, hideFromPrint, lightTeal, listStyleNone, maxTabletPortrait, pageColumnStyle, primaryHeader, purple, roundedCornerStyle, screenReaderOnly, teal, teaserContainerStyle, teaserImageStyle, teaserRowStyle, topTwoColumnsWrapperStyle, white, withMediaDesktopUp, withMediaMobileUp, withMediaPrint, withMediaTabletLandscapeUp, withMediaTabletPortraitUp)
 
-import Css exposing (Color, Style, absolute, alignItems, auto, backgroundColor, backgroundImage, backgroundPosition, backgroundRepeat, backgroundSize, batch, border, border3, borderBottomRightRadius, borderRadius4, borderTopLeftRadius, borderTopRightRadius, boxSizing, breakWord, center, cm, color, column, contain, contentBox, cover, cursor, display, displayFlex, em, ex, flex, flex3, flexDirection, flexStart, flexWrap, fontFamilies, height, hex, hidden, inherit, inlineBlock, int, justifyContent, lastChild, left, listStyle, margin, margin2, margin3, marginBottom, marginLeft, marginRight, marginTop, maxWidth, minWidth, noRepeat, noWrap, none, overflow, overflowWrap, padding, padding2, paddingLeft, pct, pointer, position, property, pseudoElement, px, rem, row, solid, textDecoration, top, underline, url, width, zero)
+import Css exposing (Color, Style, absolute, alignItems, auto, backgroundColor, backgroundImage, backgroundPosition, backgroundRepeat, backgroundSize, batch, border, border3, borderBottomRightRadius, borderRadius4, borderTopLeftRadius, borderTopRightRadius, boxSizing, breakWord, center, cm, color, column, contain, contentBox, cover, cursor, display, displayFlex, em, ex, flex, flex3, flexDirection, flexStart, flexWrap, fontFamilies, height, hex, hidden, hover, inherit, inlineBlock, int, justifyContent, lastChild, left, listStyle, margin, margin2, margin3, marginBottom, marginLeft, marginRight, marginTop, maxWidth, minWidth, noRepeat, noWrap, none, overflow, overflowWrap, padding, padding2, paddingLeft, pct, pointer, position, property, pseudoElement, px, rem, row, solid, textDecoration, textDecoration3, top, underline, url, width, zero)
 import Css.Global exposing (global, typeSelector)
 import Css.Media as Media exposing (only, print, screen, withMedia)
 import Html.Styled exposing (Html, h1, text)
@@ -98,6 +98,11 @@ purple =
     hex "54257F"
 
 
+lightPurple : Color
+lightPurple =
+    hex "AA92bf"
+
+
 teal : Color
 teal =
     hex "058295"
@@ -160,6 +165,7 @@ globalStyles =
         , typeSelector "h1"
             [ fontFamilies [ "Adelle", "serif" ]
             , color purple
+            , hover [ textDecoration none ]
             , margin3 (rem 0) (rem 0) (rem 1.5)
             , textDecoration none
             , Theme.FluidScale.fontSizeExtraLarge
@@ -169,6 +175,7 @@ globalStyles =
         , typeSelector "h2"
             [ fontFamilies [ "Adelle", "serif" ]
             , color purple
+            , hover [ textDecoration none ]
             , margin3 (rem 0) (rem 0) (rem 1.5)
             , textDecoration none
             , Theme.FluidScale.fontSizeLarge
@@ -178,6 +185,7 @@ globalStyles =
         , typeSelector "h3"
             [ fontFamilies [ "Adelle", "serif" ]
             , color purple
+            , hover [ textDecoration none ]
             , margin3 (rem 0) (rem 0) (rem 1)
             , textDecoration none
             , Theme.FluidScale.fontSizeMedium
@@ -186,6 +194,7 @@ globalStyles =
         , typeSelector "h4"
             [ fontFamilies [ "Adelle", "serif" ]
             , color purple
+            , hover [ textDecoration none ]
             , margin3 (rem 0) (rem 0) (rem 1)
             , textDecoration none
             , Theme.FluidScale.fontSizeBase
@@ -193,6 +202,10 @@ globalStyles =
             ]
         , typeSelector "a"
             [ color purple
+            , textDecoration3 underline solid lightPurple
+            , hover
+                [ textDecoration3 underline solid purple
+                ]
             , withMediaPrint
                 (Just
                     [ textDecoration underline

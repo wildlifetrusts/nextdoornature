@@ -66,7 +66,7 @@ navigationColumn column language route =
             [ text (t column.title)
             ]
         , nav []
-            [ ul [ css [ listStyleNone ] ] (List.map (\link -> li [] [ a [ href (t link.href), activeClass (t link.href) route, css [ textDecoration none ] ] [ text (t link.text) ] ]) column.links)
+            [ ul [ css [ listStyleNone ] ] (List.map (\link -> li [] [ a [ href (t link.href), activeClass (t link.href) route ] [ text (t link.text) ] ]) column.links)
             ]
         ]
 
