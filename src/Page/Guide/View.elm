@@ -79,7 +79,7 @@ viewImageColumn language guide =
             Nothing ->
                 text ""
         ]
-    , div [ css [ hideFromPrint ] ] [ text (t InCategory ++ t (Page.Guide.Data.categorySlugToKey guide.categorySlug)) ]
+    , div [ css [ hideFromPrint ] ] [ text (t (Page.Guide.Data.categorySlugToKey guide.categorySlug)) ]
     , div []
         (h2 []
             [ viewHeaderIcon (t GuideTextHeaderIconLink)

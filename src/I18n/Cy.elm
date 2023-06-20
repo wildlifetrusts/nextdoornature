@@ -76,13 +76,13 @@ cyStrings key =
             "Rhif elusen gofrestredig 207238"
 
         HeritageFundLogoAlt ->
-            ""
+            "Logo for the national lottery heritage fund"
 
         PlatiJubesLogoAlt ->
-            ""
+            "Logo for the queens platinum jubilee 2022"
 
         WildLifeTrustLogoAlt ->
-            ""
+            "Logo for the wildlife trust"
 
         ---
         -- Cookie banner
@@ -91,9 +91,7 @@ cyStrings key =
             "Ydych chi'n iawn i fwrw ymlaen gyda'r holl gwcis a data?"
 
         CookieBannerP ->
-            """
-            Mae ein gwefan ni'n defnyddio cwcis a data i wneud yn siŵr eich bod yn cael y profiad gorau ac i'n helpu ni i godi arian yn effeithlon i achub bywyd gwyllt. Mae rhai cwcis yn hanfodol i wneud i'n gwefan ni weithio.
-            """
+            "Mae ein gwefan ni'n defnyddio cwcis a data i wneud yn siŵr eich bod yn cael y profiad gorau ac i'n helpu ni i godi arian yn effeithlon i achub bywyd gwyllt. Mae rhai cwcis yn hanfodol i wneud i'n gwefan ni weithio.\n"
 
         CookieAcceptButtonText ->
             "Iawn, rydw i'n deall"
@@ -206,9 +204,6 @@ cyStrings key =
         CategoryWorkingWithAuthoritiesName ->
             "Gweithio gyda'r Awdurdodau"
 
-        InCategory ->
-            "[cCc]"
-
         ---
         -- SubmitStory Page
         ---
@@ -223,6 +218,3 @@ cyStrings key =
 
         ExploreGuidesListHeading ->
             "Archwilio'r canllawiau yn ôl pwnc"
-
-        SubmitFormHeading ->
-            "[cCc]"

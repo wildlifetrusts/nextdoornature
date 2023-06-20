@@ -197,9 +197,6 @@ enStrings key =
         ---
         -- SubmitStory Page
         ---
-        SubmitFormHeading ->
-            "Your details"
-
         SubmitStoryMetaImageLink ->
             "/images/submit-meta-david-clode-eL4ADAsiOR8-unsplash.jpg"
 
@@ -217,9 +214,6 @@ enStrings key =
 
         CategoryWorkingWithAuthoritiesName ->
             "Working with the Authorities"
-
-        InCategory ->
-            "[cCc] Topic "
 
         ---
         -- Metadata

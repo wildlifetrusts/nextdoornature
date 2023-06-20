@@ -65,13 +65,11 @@ type Key
     | WhereSubHeading
       --- SubmitStory Page
     | SubmitStoryMetaImageLink
-    | SubmitFormHeading
       --- Category things
     | CategoryAdminAndInfoName
     | CategoryPublicityEventsName
     | CategoryWorkingWithPeopleName
     | CategoryWorkingWithAuthoritiesName
-    | InCategory
       --- MetaData
     | StoryMetaDescription String
     | StoryMetaDescriptionWithAuthor String String
