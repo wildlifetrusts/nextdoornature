@@ -19,7 +19,7 @@ enStrings key =
         -- Header
         ---
         ChangeLanguage ->
-            "Switch to Welsh"
+            "Newid i'r Gymraeg"
 
         ---
         -- 404 content
