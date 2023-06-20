@@ -81,7 +81,7 @@ viewImageColumn language guide =
         ]
     , div [ css [ hideFromPrint ] ] [ text (t InCategory ++ t (Page.Guide.Data.categorySlugToKey guide.categorySlug)) ]
     , div []
-        (h2 []
+        (h2 [ css [ hideFromPrint ] ]
             [ viewHeaderIcon (t GuideTextHeaderIconLink)
             , text (t GuideTextHeader)
             ]
@@ -111,7 +111,7 @@ viewMaybeVideo language maybeVideoMeta =
                 t =
                     translate language
             in
-            div [ css [ outerVideoContainerStyle ] ]
+            div [ css [ hideFromPrint, outerVideoContainerStyle ] ]
                 [ h2 [] [ viewHeaderIcon (t GuideVideoHeaderIconLink), text (t GuideVideoHeader) ]
                 , Page.Shared.View.viewVideo aVideo
                 ]
