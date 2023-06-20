@@ -61,10 +61,10 @@ viewGuideHeader guide =
             [ primaryHeader [ css [ guideTitleStyle ] ] guide.title
             , viewRow
                 ( [ p [] [ text guide.summary ] ]
-                , [ img [ css [ featureImageStyle ], src image.src, alt image.alt ] [] ]
+                , [ img [ css [ hideFromPrint, featureImageStyle ], src image.src, alt image.alt ] [] ]
                 , [ case image.maybeCredit of
                         Just aCredit ->
-                            p [ css [ imageCaptionStyle ] ] [ text aCredit ]
+                            p [ css [ hideFromPrint, imageCaptionStyle ] ] [ text aCredit ]
 
                         Nothing ->
                             text ""
