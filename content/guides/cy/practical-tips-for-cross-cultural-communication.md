@@ -3,6 +3,7 @@ title: Cynghorion Ymarferol ar gyfer Cyfathrebu Traws-ddiwylliannol
 summary: " Syniadau defnyddiol pan fyddwch chi'n gweithio gyda phobl o
   gefndiroedd diwylliannol amrywiol."
 category: admin-and-info
+customCall: Oes gennych chi unrhyw awgrymiadau am weithio ar draws diwylliannau?
 ---
 Gall gweithio gyda phobl o gefndiroedd diwylliannol gwahanol fod yn ddiddorol, yn werth chweil ac yn heriol. Edrychwch ar yr awgrymiadau hyn. Nid yw’n rhestr gyflawn, ond gobeithio y bydd yn rhoi man cychwyn i chi.
 
