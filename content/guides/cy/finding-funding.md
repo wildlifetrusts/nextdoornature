@@ -9,10 +9,12 @@ image:
 video:
   id: b32JWimgF2w
   title: Dod o Hyd i Gyllid. Fideo Natur Drws Nesaf.
+  description: Animeiddiad byr am sut i ddod o hyd i gyllid ar gyfer eich grŵp.
 relatedGuides:
   - Bank Accounts For Groups
   - How to Apply for Funding
 category: admin-and-info
+customCall: Pa mor hawdd yw dod o hyd i gyllid i chi?
 ---
 ## Cyngor cyffredinol am gyllid
 
