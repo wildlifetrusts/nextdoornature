@@ -1,6 +1,6 @@
 ---
 title: "Running a Group Session: How to Get Started"
-summary: Advice about how to run a group session and facilitate a meeting
+summary: Advice about how to run a group session and facilitate a meeting.
 Category: working-with-people
 image:
   src: /images/uploads/ndn_tongueend_3-2-.jpg
