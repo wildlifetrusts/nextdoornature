@@ -32,6 +32,9 @@ type Key
     | FooterSiteLogo
     | FooterCharityInfo
     | RegisteredCharityNumber
+    | HerritageFundLogoAlt
+    | PLatiJubesLogoAlt
+    | WildLifeTrustLogoAlt
       --- Cookie banner
     | CookieBannerH2
     | CookieBannerP
