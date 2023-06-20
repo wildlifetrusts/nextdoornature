@@ -6,7 +6,7 @@ import Html.Styled.Attributes exposing (attribute, autoplay, css, href, src, tit
 import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (Language, translate)
 import Message exposing (Msg)
-import Page.Shared.Data exposing (AudioMeta, VideoMeta)
+import Page.Shared.Data exposing (VideoMeta)
 import Route exposing (Route(..))
 import Theme.Global exposing (hideFromPrint, purple, white)
 
