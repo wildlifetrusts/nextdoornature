@@ -1,5 +1,5 @@
 ---
-title: "Sicrhau bod pawb yn gallu cael mynediad at eich grŵp neu brosiect "
+title: "Sicrhau Bod Pawb yn Gallu Cael Mynediad at Eich Grŵp neu Brosiect "
 summary: "Mae angen pethau gwahanol ar wahanol bobl i'w helpu i gymryd rhan yn
   gyfartal mewn grŵp. "
 image:
