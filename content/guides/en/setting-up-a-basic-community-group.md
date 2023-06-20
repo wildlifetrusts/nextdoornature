@@ -9,6 +9,8 @@ image:
 relatedGuides:
   - Types of Community Group (England and Wales)
 category: admin-and-info
+Category: admin-and-info
+customCall: Have you set up a community group?
 ---
 The easiest group to set up is called an “unincorporated association”. You need to write a “constitution” or “governing document”. This is a list of rules for the group. It also says what your group’s going to do, and how it’s going to do it.
 
