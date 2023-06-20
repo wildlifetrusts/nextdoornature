@@ -12,6 +12,7 @@ relatedGuides:
   - Bank Accounts For Groups
   - Faith Groups and Lottery Funding
 category: admin-and-info
+customCall: A oes gennych unrhyw awgrymiadau ar gyfer gwneud cais am gyllid?
 ---
 ## Paratoi
 

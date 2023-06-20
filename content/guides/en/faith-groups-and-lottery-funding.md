@@ -9,6 +9,8 @@ image:
 relatedGuides:
   - "Finding Funding "
 category: admin-and-info
+Category: admin-and-info
+customCall: Are you part of a faith group that has applied for lottery funding?
 ---
 
 

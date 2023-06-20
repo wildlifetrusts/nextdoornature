@@ -8,6 +8,7 @@ image:
 relatedGuides:
   - How to Apply for Funding
 category: admin-and-info
+customCall: Oes gennych chi brofiad o gyfrifon banc i'w rhannu?
 ---
 
 Bydd arnoch angen cyfrif banc os yw eich grŵp yn gwneud cais am grantiau. Bydd arnoch angen un hefyd os byddwch yn casglu rhoddion neu ffioedd ac yn defnyddio’r arian hwnnw i brynu pethau ar gyfer eich prosiect. Peidiwch â chael eich temtio i ddefnyddio cyfrif personol! Mae'n mynd yn flêr iawn yn gyflym iawn.

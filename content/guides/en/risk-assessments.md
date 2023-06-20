@@ -1,13 +1,15 @@
 ---
 title: Risk Assessments
-summary: "All about risk assessments and how to manage risk                   "
+summary: "All about risk assessments and how to manage risk.                   "
 Category: admin-and-info
 image:
   src: /images/uploads/basic-risk-assessments_orig-2-.jpg
   alt: A photo of a warning sign
 video:
   id: TxoGySN9AiI
-  title: A Nextdoor Nature video about risk assessments
+  title: "Risk Assessments: A Nextdoor Nature Community Guide."
+  description: A short animation about risk assessments, why they are important,
+    and how to do one.
 relatedGuides:
   - Insurance for Local Groups
 customCall: Have you found risk assessments useful?

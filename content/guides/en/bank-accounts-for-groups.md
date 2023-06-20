@@ -2,12 +2,14 @@
 title: Bank Accounts For Groups
 summary: Information about types of bank accounts for community groups, and what
   you need to open one.
+Category: admin-and-info
 image:
   src: /images/uploads/bank-accounts_orig-2-.jpg
   alt: A pile of bank statements
   credit: Photo copyright Autumn Barlow/The Wildlife Trusts 2023
 relatedGuides:
   - How to Apply for Funding
+customCall: Do you have experience about bank accounts to share?
 category: admin-and-info
 ---
 You’ll need a bank account if your group’s applying for grants. You’ll also need one if you collect donations or fees and use that money to buy things for your project. Don’t be tempted to use a personal account! It gets very messy very quickly.

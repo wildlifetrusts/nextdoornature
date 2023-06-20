@@ -6,6 +6,9 @@ image:
   alt: An image of a notebook with pens
   credit: Image copyright Autumn Barlow/The Wildlife Trusts 2023
 category: admin-and-info
+relatedGuides:
+  - Types of Community Group (England and Wales)
+customCall: Ydych chi wedi sefydlu grŵp cymunedol?
 ---
 Yr enw ar y grŵp hawsaf i’w sefydlu yw “cymdeithas anghorfforedig”. Mae angen i chi ysgrifennu “cyfansoddiad” neu “ddogfen lywodraethu”. Dyma restr o reolau ar gyfer y grŵp. Mae hefyd yn dweud beth mae eich grŵp yn mynd i’w wneud, a sut mae’n mynd i’w wneud.
 

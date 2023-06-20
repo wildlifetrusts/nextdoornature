@@ -1,13 +1,14 @@
 ---
 title: Asesiadau Risg
 summary: "Popeth am asesiadau risg a sut i reoli
-  risg                                                      "
+  risg.                                                      "
 image:
   src: /images/uploads/basic-risk-assessments_orig-2-.jpg
   alt: A photo of a warning sign
 video:
   id: TxoGySN9AiI
-  title: A Nextdoor Nature video about risk assessments
+  title: "Asesiadau Risg: Arweinlyfr Cymunedol Natur Nextdoor."
+  description: Animeiddiad byr am asesiadau risg, pam eu bod yn bwysig, a sut i wneud un.
 relatedGuides:
   - Insurance for Local Groups
 customCall: A oedd asesiadau risg yn ddefnyddiol i chi?

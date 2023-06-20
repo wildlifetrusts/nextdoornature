@@ -13,7 +13,7 @@ cyStrings key =
         -- Header
         ---
         ChangeLanguage ->
-            "Newid i Saesneg"
+            "Switch to English"
 
         ---
         -- 404 content

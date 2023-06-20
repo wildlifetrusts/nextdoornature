@@ -3,6 +3,10 @@ title: Practical Tips for Cross-Cultural Communication
 summary: Helpful hints when you are working with people from diverse cultural
   backgrounds.
 category: working-with-people
+Category: working-with-people
+relatedGuides:
+  - Working with Many Languages
+customCall: Do you have any hints or tips about working across cultures?
 ---
 
 

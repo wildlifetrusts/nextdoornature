@@ -1,10 +1,10 @@
 ---
 title: Mathau o Grwpiau Cymunedol (Cymru a Lloegr)
-summary: "Mathau o Grwpiau Cymunedol (Cymru a Lloegr)          "
+summary: "Mathau o Grwpiau Cymunedol (Cymru a Lloegr).          "
 relatedGuides:
   - Setting up a Basic Community Group
 category: admin-and-info
-customCall: How did you decide what sort of group to be? Tell us your story!
+customCall: Sut wnaethoch chi benderfynu pa fath o grŵp i fod?
 ---
 ## Cymdeithas Anghorfforedig
 Os mai dim ond grŵp bach o wirfoddolwyr ydych chi, heb unrhyw gynlluniau i gyflogi staff neu rentu eiddo, dyma’r un i chi.

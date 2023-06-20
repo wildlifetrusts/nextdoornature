@@ -1,10 +1,12 @@
 ---
 title: Speaking to Councils, Councillors and People in Authority
-summary: How to feel more confident when you talk to your local council
+summary: How to feel more confident when you talk to your local council.
 relatedGuides:
   - All About Councils and Local Authorities
   - How to contact your MP, MS (Wales), MLA (Northern Ireland) or MSP (Scotland)
 category: working-with-the-authorities
+Category: working-with-the-authorities
+customCall: How easy is it for you to speak to councils?
 ---
 ## Speaking to councils and councillors: Practical Tips
 

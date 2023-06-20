@@ -11,7 +11,9 @@ category: admin-and-info
 video:
   id: BR0HfHGTQ9E
   title: "How to Contact Your MP: A Nextdoor Nature Community Video"
-customCall: Have you contacted your MP or councillor? Tell us how it went!
+  description: Louise o Ymddiriedolaeth Bywyd Gwyllt Teesside yn siarad am sut i
+    gysylltu â'ch AS. Mae'r fideo yma yn Saesneg.
+customCall: Ydych chi wedi cysylltu â'ch AS neu gynghorydd?
 ---
 Mae aelod seneddol, neu AS, ar gyfer pob ardal yn y DU. Yr enw ar bob ardal yw ‘etholaeth’. Gallwch gysylltu â'ch AS drwy lythyr neu e-bost.
 
