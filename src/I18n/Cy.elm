@@ -90,6 +90,15 @@ cyStrings key =
         RegisteredCharityNumber ->
             "Rhif elusen gofrestredig 207238"
 
+        HeritageFundLogoAlt ->
+            ""
+
+        PlatiJubesLogoAlt ->
+            ""
+
+        WildLifeTrustLogoAlt ->
+            ""
+
         ---
         -- Cookie banner
         ---
