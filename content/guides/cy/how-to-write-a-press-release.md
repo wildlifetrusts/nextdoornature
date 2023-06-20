@@ -6,6 +6,8 @@ image:
   alt: A newspaper and some green leaves
   credit: Photo copyright Autumn Barlow/The Wildlife Trusts 2023
 category: admin-and-info
+relatedGuides:
+  - How to Run a Fundraising Event
 customCall: Ydy ysgrifennu datganiad i'r wasg yn hawdd i chi?
 ---
 ## Sut mae’n edrych:
