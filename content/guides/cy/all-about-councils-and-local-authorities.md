@@ -11,6 +11,8 @@ video:
   description: Fideo wedi'i hanimeiddio yw hwn i egluro sut mae'r DU wedi'i
     rhannu'n wahanol feysydd, a sut maen nhw'n cael eu rhedeg.
 category: admin-and-info
+relatedGuides:
+  - How to contact your MP, MS (Wales), MLA (Northern Ireland) or MSP (Scotland)
 customCall: Ydych chi wedi gweithio gyda'ch awdurdod lleol?
 ---
 ## A pham ddylwn i boeni?
