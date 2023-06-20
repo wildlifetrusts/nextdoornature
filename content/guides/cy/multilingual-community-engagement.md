@@ -8,7 +8,13 @@ image:
 video:
   id: Tk7InQgM7PE
   title: Ymgysylltu Cymunedol Amlieithog. Fideo Natur Drws Nesaf.
+  description: Jill o Hampshire ac Ymddiriedolaeth Natur Ynys Wyth yn siarad am
+    weithio gyda llawer o ieithoedd.
 category: admin-and-info
+relatedGuides:
+  - "Making sure everyone can access your group or project "
+customCall: Oes gennych chi stori i'w rhannu neu gyngor defnyddiol am weithio
+  gyda llawer o ieithoedd?
 ---
 ## Adnabod yr angen 
 
