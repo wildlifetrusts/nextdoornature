@@ -1,6 +1,7 @@
 ---
 title: "Finding Funding "
 summary: General hints and tips for finding funding for your projects
+Category: admin-and-info
 image:
   src: /images/uploads/finding-funding_orig-2-.jpg
   alt: An open planner with the words "find funding" circled
@@ -8,9 +9,11 @@ image:
 video:
   id: b32JWimgF2w
   title: Finding Funding. A Nextdoor Nature Video.
+  description: Finding funding description.
 relatedGuides:
   - Bank Accounts For Groups
   - How to Apply for Funding
+customCall: Have you started a community group?
 category: admin-and-info
 ---
 ## General advice about funding
