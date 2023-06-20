@@ -1,7 +1,7 @@
 ---
 title: Businesses - How They Can Help You (and how you can help them)
 summary: How groups and charities can work with local businesses, how to
-  approach them and what to offer them
+  approach them and what to offer them.
 Category: admin-and-info
 image:
   src: /images/uploads/support-from-business_orig-2-.jpg

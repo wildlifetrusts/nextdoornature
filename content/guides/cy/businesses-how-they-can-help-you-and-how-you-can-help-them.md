@@ -6,6 +6,8 @@ image:
   src: /images/uploads/support-from-business_orig-2-.jpg
   alt: A pile of coins surrounded by plants
 video: null
+relatedGuides:
+  - "Finding Funding "
 customCall: Have you worked with a local business?
 ---
 Local groups, voluntary organisations and small charities can all work together with businesses. Here’s how to get started.
