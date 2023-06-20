@@ -1,6 +1,7 @@
 module Page.Shared.Data exposing (AudioMeta, Teaser, TeaserImage, VideoMeta, audioDecoder, defaultTeaserImage, guideTeaserImageDecoder, videoDecoder)
 
 import Json.Decode
+import Json.Decode.Extra
 
 
 type alias TeaserImage =
@@ -58,7 +59,7 @@ videoDecoder =
                 |> Json.Decode.andThen idToEmbedSrc
             )
         )
-        (Json.Decode.field "description" Json.Decode.string)
+        (Json.Decode.field "description" Json.Decode.string |> Json.Decode.Extra.withDefault "")
 
 
 idToEmbedSrc : String -> Json.Decode.Decoder String
