@@ -9,8 +9,6 @@ image:
 video:
   id: pZDv-ri2GOs
   title: "About Councils and Local Authorities: A Nextdoor Nature Video."
-  description: This is an animated video to explain how the UK is split into
-    different areas, and how they are run.
 relatedGuides:
   - How to contact your MP, MS (Wales), MLA (Northern Ireland) or MSP (Scotland)
 customCall: "Have you worked with your local authority? "
