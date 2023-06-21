@@ -1,6 +1,6 @@
 module Page.NotFound exposing (resourceNotFound)
 
-import Css exposing (Style, alignItems, batch, center, column, display, displayFlex, flexDirection, justifyContent, marginBottom, maxWidth, pct, rem, row, spaceBetween, width)
+import Css exposing (Style, alignItems, batch, center, column, display, displayFlex, flexDirection, flexStart, justifyContent, marginBottom, maxWidth, pct, rem, row, spaceBetween, width)
 import Html.Styled exposing (Html, a, div, img, p, text)
 import Html.Styled.Attributes exposing (css, href, src)
 import I18n.Keys exposing (Key(..))
@@ -33,7 +33,7 @@ badgerImageStyle : Style
 badgerImageStyle =
     batch
         [ maxWidth (rem 20)
-        , marginBottom (rem 2)
+        , marginBottom (rem 1)
         ]
 
 
@@ -45,7 +45,8 @@ simpleTwoColumnsFlexStyle =
         , flexDirection column
         , width (pct 100)
         , withMediaMobileUp
-            [ flexDirection row
+            [ alignItems flexStart
+            , flexDirection row
             , justifyContent spaceBetween
             ]
         ]
