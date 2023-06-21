@@ -6,6 +6,9 @@ image:
   alt: Grŵp o bobl yn sefyll y tu allan i faner mewn rhandir
   src: /images/uploads/img_3374.jpg
   credit: Back on the Map community, Hendon, Sunderland. Photo Autumn Barlow 2022
+relatedGuides:
+  - Businesses - How They Can Help You (and how you can help them)
+  - How To Write a Press Release
 customCall: Sut ydych chi wedi cael gair allan i'ch cymuned leol?
 ---
 Yn aml mae’n anodd gwybod ble i ddechrau pan fyddwch chi eisiau cael pobl i ymuno â chi i weithredu. Mae angen i chi fynd i ble mae pobl. Fe allwch chi gyrraedd eich cymuned wyneb yn wyneb a thrwy ddefnyddio dulliau eraill fel posteri neu ar-lein.
