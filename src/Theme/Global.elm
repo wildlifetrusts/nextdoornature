@@ -1,6 +1,6 @@
-module Theme.Global exposing (borderWrapper, centerContent, contentWrapper, featureImageStyle, globalStyles, hideFromPrint, lightPurple, lightTeal, listStyleNone, maxTabletPortrait, mediumTeal, pageColumnStyle, primaryHeader, purple, roundedCornerStyle, screenReaderOnly, teal, teaserContainerStyle, teaserImageStyle, teaserRowStyle, topTwoColumnsWrapperStyle, white, withMediaDesktopUp, withMediaMobileUp, withMediaPrint, withMediaTabletLandscapeUp, withMediaTabletPortraitUp)
+module Theme.Global exposing (borderWrapper, centerContent, contentWrapper, featureImageStyle, globalStyles, hideFromPrint, lightPurple, lightTeal, listStyleNone, maxTabletPortrait, mediumTeal, pageColumnStyle, primaryHeader, purple, roundedCornerStyle, screenReaderOnly, simpleThreeColumnFlexChildStyle, simpleThreeColumnFlexStyle, teal, teaserContainerStyle, teaserImageStyle, teaserRowStyle, topTwoColumnsWrapperStyle, white, withMediaDesktopUp, withMediaMobileUp, withMediaPrint, withMediaTabletLandscapeUp, withMediaTabletPortraitUp)
 
-import Css exposing (Color, Style, absolute, alignItems, auto, backgroundColor, backgroundImage, backgroundPosition, backgroundRepeat, backgroundSize, batch, border, border3, borderBottomRightRadius, borderRadius4, borderTopLeftRadius, borderTopRightRadius, boxSizing, breakWord, center, cm, color, column, contentBox, cover, cursor, display, displayFlex, flex, flex3, flexDirection, flexStart, flexWrap, fontFamilies, height, hex, hidden, hover, inherit, int, justifyContent, lastChild, left, listStyle, margin, margin2, margin3, marginBottom, marginRight, maxWidth, minWidth, noRepeat, noWrap, none, overflow, overflowWrap, padding, padding2, paddingLeft, pct, pointer, position, property, pseudoElement, px, rem, row, solid, textDecoration, textDecoration3, top, underline, width, zero)
+import Css exposing (Color, Style, absolute, alignItems, auto, backgroundColor, backgroundImage, backgroundPosition, backgroundRepeat, backgroundSize, batch, border, border3, borderBottomRightRadius, borderRadius4, borderTopLeftRadius, borderTopRightRadius, boxSizing, breakWord, center, cm, color, column, contentBox, cover, cursor, display, displayFlex, flex, flex3, flexDirection, flexGrow, flexShrink, flexStart, flexWrap, fontFamilies, height, hex, hidden, hover, inherit, int, justifyContent, lastChild, left, listStyle, margin, margin2, margin3, marginBottom, marginRight, maxWidth, minWidth, noRepeat, noWrap, none, overflow, overflowWrap, padding, padding2, paddingLeft, pct, pointer, position, property, pseudoElement, px, rem, row, solid, textDecoration, textDecoration3, top, underline, width, wrap, zero)
 import Css.Global exposing (global, typeSelector)
 import Css.Media as Media exposing (only, print, screen, withMedia)
 import Html.Styled exposing (Html, h1, text)
@@ -408,4 +408,23 @@ borderWrapper : Style
 borderWrapper =
     batch
         [ border3 (rem 0.5) solid teal
+        ]
+
+
+simpleThreeColumnFlexStyle : Style
+simpleThreeColumnFlexStyle =
+    batch
+        [ displayFlex
+        , property "gap" "3rem"
+        , flexWrap wrap
+        , margin (rem 0)
+        ]
+
+
+simpleThreeColumnFlexChildStyle : Style
+simpleThreeColumnFlexChildStyle =
+    batch
+        [ flexShrink (int 1)
+        , flexGrow (int 1)
+        , property "flex-basis" "25rem"
         ]

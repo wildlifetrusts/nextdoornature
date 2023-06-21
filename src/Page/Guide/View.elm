@@ -1,6 +1,6 @@
 port module Page.Guide.View exposing (print, view)
 
-import Css exposing (Style, alignItems, auto, backgroundColor, batch, border, borderBottom3, center, color, column, display, displayFlex, em, flexDirection, flexStart, flexWrap, fontFamilies, hover, inlineBlock, justifyContent, listStyle, margin2, marginBottom, marginRight, marginTop, maxWidth, none, padding, paddingLeft, paddingRight, pct, px, rem, solid, textDecoration3, underline, width, wrap, zero)
+import Css exposing (Style, alignItems, auto, backgroundColor, batch, border, borderBottom3, center, color, column, display, displayFlex, em, flexBasis, flexDirection, flexEnd, flexStart, flexWrap, fontFamilies, fontWeight, hover, inlineBlock, int, justifyContent, listStyle, margin2, marginBottom, marginRight, marginTop, maxWidth, none, padding, paddingLeft, paddingRight, pct, property, px, rem, solid, textDecoration3, underline, unset, width, wrap, zero)
 import Html.Styled exposing (Html, a, button, div, h2, img, li, p, span, text, ul)
 import Html.Styled.Attributes exposing (alt, attribute, css, href, src)
 import Html.Styled.Events exposing (onClick)
@@ -13,7 +13,8 @@ import Page.Shared.Data
 import Page.Shared.View
 import Page.Story.Data
 import Route exposing (Route(..))
-import Theme.Global exposing (centerContent, contentWrapper, featureImageStyle, hideFromPrint, lightPurple, lightTeal, pageColumnStyle, primaryHeader, purple, teal, teaserImageStyle, topTwoColumnsWrapperStyle, withMediaPrint)
+import Theme.FluidScale
+import Theme.Global exposing (centerContent, contentWrapper, featureImageStyle, hideFromPrint, lightPurple, lightTeal, pageColumnStyle, primaryHeader, purple, simpleThreeColumnFlexChildStyle, simpleThreeColumnFlexStyle, teal, teaserImageStyle, topTwoColumnsWrapperStyle, withMediaPrint, withMediaTabletLandscapeUp, withMediaTabletPortraitUp)
 import Theme.Markdown exposing (markdownToHtml)
 
 
@@ -59,8 +60,8 @@ viewGuideHeader guide =
         [ div
             [ css [ headerContentStyle ] ]
             [ primaryHeader [ css [ guideTitleStyle ] ] guide.title
-            , viewRow
-                ( [ p [] [ text guide.summary ] ]
+            , viewHeaderRow
+                [ [ h2 [ css [ headerRowSubtitleStyle ] ] [ text guide.summary ] ]
                 , [ img [ css [ hideFromPrint, featureImageStyle ], src image.src, alt image.alt ] [] ]
                 , [ case image.maybeCredit of
                         Just aCredit ->
@@ -69,7 +70,7 @@ viewGuideHeader guide =
                         Nothing ->
                             text ""
                   ]
-                )
+                ]
             ]
         ]
 
@@ -81,7 +82,7 @@ viewGuideContentColumn language guide =
         t =
             translate language
     in
-    h2 []
+    h2 [ css [ hideFromPrint ] ]
         [ viewHeaderIcon (t GuideTextHeaderIconLink)
         , text (t GuideTextHeader)
         ]
@@ -100,6 +101,36 @@ viewRow ( content1, content2, content3 ) =
         ]
 
 
+viewHeaderRow : List (List (Html Msg)) -> Html Msg
+viewHeaderRow contents =
+    div [ css [ simpleThreeColumnFlexStyle, headerRowMarginStyle ] ]
+        (List.map
+            (\content -> div [ css [ simpleThreeColumnFlexChildStyle ] ] content)
+            contents
+        )
+
+
+headerRowMarginStyle : Style
+headerRowMarginStyle =
+    batch
+        [ margin2 (rem 1) (rem 0)
+        , property "gap" "1rem 2rem"
+        , withMediaTabletLandscapeUp
+            [ margin2 (rem 2) (rem 0)
+            , property "gap" "3rem"
+            ]
+        ]
+
+
+headerRowSubtitleStyle : Style
+headerRowSubtitleStyle =
+    batch
+        [ color unset
+        , fontWeight (int 300)
+        , Theme.FluidScale.fontSizeMedium
+        ]
+
+
 viewMaybeVideo : Language -> Maybe Page.Shared.Data.VideoMeta -> Html Msg
 viewMaybeVideo language maybeVideoMeta =
     case maybeVideoMeta of
@@ -109,7 +140,7 @@ viewMaybeVideo language maybeVideoMeta =
                 t =
                     translate language
             in
-            div [ css [ outerVideoContainerStyle ] ]
+            div [ css [ hideFromPrint, outerVideoContainerStyle ] ]
                 [ h2 [] [ viewHeaderIcon (t GuideVideoHeaderIconLink), text (t GuideVideoHeader) ]
                 , Page.Shared.View.viewVideo aVideo
                 ]
