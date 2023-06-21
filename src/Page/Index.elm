@@ -35,8 +35,7 @@ view model page =
                                 []
 
                             else
-                                [ Page.Shared.View.viewVideo { title = t HomeVideoTitle, src = t HomeYoutubeLink, description = "" }
-                                ]
+                                [ div [ css [ marginBottom (rem 1), width (pct 100) ] ] [ Page.Shared.View.viewVideo { title = t HomeVideoTitle, src = t HomeYoutubeLink, description = "" } ] ]
                            )
                     )
                 , div [ css [ teaserColumnStyle ] ]
