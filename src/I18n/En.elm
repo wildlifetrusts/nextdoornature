@@ -131,6 +131,12 @@ enStrings key =
         CallForStoryLinkText ->
             "Send us your story"
 
+        HomeYoutubeLink ->
+            "https://youtube.com/embed/5n-L1HUg_3E"
+
+        HomeVideoTitle ->
+            "Tash from Northumberland tells us how we can all take action for nature"
+
         ---
         -- Guide Page
         ---

@@ -41,6 +41,8 @@ type Key
     | HomeCallForStoryP
     | CallForStoryP
     | CallForStoryLinkText
+    | HomeYoutubeLink
+    | HomeVideoTitle
       --- Guide Page
     | RelatedGuidesHeading
     | RelatedStoriesHeading

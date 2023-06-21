@@ -13,7 +13,7 @@ import Theme.Global exposing (hideFromPrint, purple, roundedCornerStyle, white, 
 
 viewVideo : Page.Shared.Data.VideoMeta -> Html Msg
 viewVideo videoMeta =
-    div []
+    div [ css [ width (pct 100) ] ]
         [ if String.length videoMeta.description > 0 then
             p [] [ text videoMeta.description ]
 

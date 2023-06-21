@@ -30,7 +30,14 @@ view model page =
         , div [ css [ contentWrapper ] ]
             [ div [ css [ topTwoColumnsWrapperStyle ] ]
                 [ div [ css [ pageColumnStyle ] ]
-                    (markdownToHtml page.fullTextMarkdown)
+                    (markdownToHtml page.fullTextMarkdown
+                        ++ (if String.length (t HomeYoutubeLink) == 0 then
+                                []
+
+                            else
+                                [ div [ css [ marginBottom (rem 1), width (pct 100) ] ] [ Page.Shared.View.viewVideo { title = t HomeVideoTitle, src = t HomeYoutubeLink, description = "" } ] ]
+                           )
+                    )
                 , div [ css [ teaserColumnStyle ] ]
                     [ div []
                         [ h2 [ css [ teaserSubtitleStyle ] ] [ text (t GuideHighlightsSubtitle) ]
