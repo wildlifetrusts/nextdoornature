@@ -1,9 +1,9 @@
 ---
 title: How to contact your MP, MS (Wales), MLA (Northern Ireland) or MSP (Scotland)
-summary: How to find your MP and how to get in touch with them
+summary: How to find your MP and how to get in touch with them.
 Category: working-with-the-authorities
 image:
-  src: /images/uploads/contact-your-mp_orig-2-.jpg
+  src: /images/uploads/contact-your-mp_orig-3-.jpg
   alt: An address book, an envelope and a stamp
   credit: Photo copyright Autumn Barlow/The Wildlife Trusts 2023
 video:
@@ -12,6 +12,7 @@ video:
   description: "Louise from Teesside Wildlife Trust talks about how to contact your MP. "
 relatedGuides:
   - All About Councils and Local Authorities
+  - Speaking to Councils, Councillors and People in Authority
 customCall: "Have you contacted your MP or councillor? "
 category: working-with-the-authorities
 ---
