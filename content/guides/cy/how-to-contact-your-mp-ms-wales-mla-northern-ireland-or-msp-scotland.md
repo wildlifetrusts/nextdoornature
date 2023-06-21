@@ -1,17 +1,20 @@
 ---
 title: Sut i gysylltu â'ch AS
-summary: "Sut i ddod o hyd i'ch AS a sut i gysylltu ag ef             "
+summary: "Sut i ddod o hyd i'ch AS a sut i gysylltu ag ef.             "
 image:
-  src: /images/uploads/contact-your-mp_orig-2-.jpg
+  src: /images/uploads/contact-your-mp_orig-3-.jpg
   credit: Photo copyright Autumn Barlow/The Wildlife Trusts 2023
   alt: An address book, an envelope and a stamp
 relatedGuides:
   - All About Councils and Local Authorities
+  - Speaking to Councils, Councillors and People in Authority
 category: admin-and-info
 video:
   id: BR0HfHGTQ9E
   title: "How to Contact Your MP: A Nextdoor Nature Community Video"
-customCall: Have you contacted your MP or councillor? Tell us how it went!
+  description: Louise o Ymddiriedolaeth Bywyd Gwyllt Teesside yn siarad am sut i
+    gysylltu â'ch AS. Mae'r fideo yma yn Saesneg.
+customCall: Ydych chi wedi cysylltu â'ch AS neu gynghorydd?
 ---
 Mae aelod seneddol, neu AS, ar gyfer pob ardal yn y DU. Yr enw ar bob ardal yw ‘etholaeth’. Gallwch gysylltu â'ch AS drwy lythyr neu e-bost.
 

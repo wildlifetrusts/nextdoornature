@@ -3,9 +3,14 @@ title: "Sut i Gynnal Digwyddiad Codi Arian "
 summary: Rhestr gyflym o syniadau ac awgrymiadau ar gyfer cynnal digwyddiad codi arian
 relatedGuides:
   - Insurance for Local Groups
+  - Risk Assessments
 category: admin-and-info
 video:
   id: kpYYHd-mSgE
+  title: "Sut i Gynnal Digwyddiad Codi Arian: Fideo Cymunedol Natur Drew Nesaf"
+  description: Aaron o Lincolnshire Voluntary Centre Services yn sôn am gynnal
+    digwyddiad codi arian.
+customCall: Sut ydych chi'n codi arian?
 ---
 Mae'r cyngor yma ar eich cyfer chi os ydych chi'n cynllunio digwyddiad untro i godi arian. Os ydych chi eisiau gwneud cais am arian, edrychwch ar ein hadnoddau eraill.
 

@@ -13,19 +13,19 @@ cyStrings key =
         -- Header
         ---
         ChangeLanguage ->
-            "Newid i Saesneg"
+            "Switch to English"
 
         ---
         -- 404 content
         ---
         ResourceNotFoundTitle ->
-            "[cCc]"
+            "Wps!"
 
         ResourceNotFoundText ->
-            "[cCc]"
+            "Mae'n edrych fel ein bod ni wedi ymddangos ar y dudalen anghywir!"
 
         ResourceNotFoundLinkText ->
-            "[cCc]"
+            "Ewch yn ôl i'r dudalen gartref"
 
         ResourceNotFoundLinkPath ->
             "/"
@@ -37,7 +37,7 @@ cyStrings key =
             "Mwy o wybodaeth"
 
         FooterTitleColumnB ->
-            "Archwilio’r hwb yma"
+            "Archwilio'r hwb yma"
 
         FooterGuidesLinkText ->
             "Archwilio ein canllawiau"
@@ -48,32 +48,17 @@ cyStrings key =
         FooterVisitWebsiteText ->
             "Mynd i wefan yr Ymddiriedolaethau Natur"
 
-        FooterVisitWebsiteLink ->
-            "https://www.wildlifetrusts.org/"
-
         FooterAboutText ->
             "Mwy o wybodaeth am y prosiect yma"
 
-        FooterAboutLink ->
-            "/about"
-
         FooterFindYourLocalTrustText ->
-            "Dod o hyd i’ch Ymddiriedolaeth leol"
-
-        FooterFindYourLocalTrustLink ->
-            "https://www.wildlifetrusts.org/wildlife-trusts"
+            "Dod o hyd i'ch Ymddiriedolaeth leol"
 
         FooterPrivacyPolicyText ->
             "Polisi preifatrwydd"
 
-        FooterPrivacyPolicyLink ->
-            "/privacy-policy"
-
         FooterHowToUseThisSiteText ->
-            "[cCc]"
-
-        FooterHowToUseThisSiteLink ->
-            "/how-to-use-this-site"
+            "Sut i ddefnyddio'r wefan hon"
 
         FooterSiteLogo ->
             "Natur Drws Nesaf"
@@ -81,25 +66,35 @@ cyStrings key =
         FooterShareYourStoryText ->
             "Rhannwch eich stori!"
 
+        FooterStoriesLinkText ->
+            "Archwilio ein straeon"
+
         FooterCharityInfo ->
-            "Mae Hwb Natur Drws Nesaf yn brosiect gan yr Ymddiriedolaethau Natur ac mae wedi’i gyllido gan Gronfa Dreftadaeth y Loteri Genedlaethol"
+            "Mae Hwb Natur Drws Nesaf yn brosiect gan yr Ymddiriedolaethau Natur ac mae wedi'i gyllido gan Gronfa Dreftadaeth y Loteri Genedlaethol"
 
         RegisteredCharityNumber ->
             "Rhif elusen gofrestredig 207238"
+
+        HeritageFundLogoAlt ->
+            "Logo for the national lottery heritage fund"
+
+        PlatiJubesLogoAlt ->
+            "Logo for the queens platinum jubilee 2022"
+
+        WildLifeTrustLogoAlt ->
+            "Logo for the wildlife trust"
 
         ---
         -- Cookie banner
         ---
         CookieBannerH2 ->
-            "Ydych chi’n iawn i fwrw ymlaen gyda'r holl gwcis a data?"
+            "Ydych chi'n iawn i fwrw ymlaen gyda'r holl gwcis a data?"
 
         CookieBannerP ->
-            """
-            Mae ein gwefan ni’n defnyddio cwcis a data i wneud yn siŵr eich bod yn cael y profiad gorau ac i'n helpu ni i godi arian yn effeithlon i achub bywyd gwyllt. Mae rhai cwcis yn hanfodol i wneud i'n gwefan ni weithio.
-            """
+            "Mae ein gwefan ni'n defnyddio cwcis a data i wneud yn siŵr eich bod yn cael y profiad gorau ac i'n helpu ni i godi arian yn effeithlon i achub bywyd gwyllt. Mae rhai cwcis yn hanfodol i wneud i'n gwefan ni weithio.\n"
 
         CookieAcceptButtonText ->
-            "Iawn, rydw i’n deall"
+            "Iawn, rydw i'n deall"
 
         CookieDeclineButtonText ->
             "Dim Diolch"
@@ -110,11 +105,11 @@ cyStrings key =
         ---
         -- Index page
         ---
-        WelcomeP1 ->
+        IndexMetaDescription ->
             "[cCc]"
 
         GuideHighlightsSubtitle ->
-            "Uchafbwyntiau’r canllawiau"
+            "Uchafbwyntiau'r canllawiau"
 
         StoryHighlightsSubtitle ->
             "Uchafbwyntiau'r straeon"
@@ -123,10 +118,19 @@ cyStrings key =
             "Rhannwch eich stori!"
 
         CallForStoryP ->
-            "[cCc]"
+            "Os ydych chi eisiau dweud eich stori wrthym, byddem wrth ein bodd yn clywed gennych."
 
         CallForStoryLinkText ->
-            "[cCc]"
+            "Anfonwch eich stori atom"
+
+        HomeCallForStoryP ->
+            "Ydych chi wedi gwneud rhywbeth gwych dros natur yn eich cymuned? Pa heriau wnaethoch chi eu goresgyn?"
+
+        HomeYoutubeLink ->
+            "https://youtube.com/embed/5n-L1HUg_3E"
+
+        HomeVideoTitle ->
+            "Tash from Northumberland tells us how we can all take action for nature"
 
         ---
         -- Guide Page
@@ -138,16 +142,16 @@ cyStrings key =
             "Straeon cysylltiedig"
 
         GuidePrintHeader ->
-            "[cCc]"
+            "Fersiwn argraffadwy"
 
         GuideVideoHeader ->
-            "[cCc]"
+            "Canllaw fideo"
 
         GuideAudioHeader ->
-            "[cCc]"
+            "Canllaw sain"
 
         GuideTextHeader ->
-            "[cCc]"
+            "Canllaw testun"
 
         GuidePrintHeaderIconLink ->
             "/images/icons/NextDoorNature_icons-print.svg"
@@ -162,10 +166,10 @@ cyStrings key =
             "/images/icons/NextDoorNature_icons-text.svg"
 
         GuideButtonText ->
-            "[cCc]"
+            "Cliciwch yma am fersiwn argraffadwy o'r canllaw hwn"
 
         GuideParagraphText ->
-            "[cCc]"
+            ""
 
         ---
         -- Guides Page
@@ -177,10 +181,10 @@ cyStrings key =
             "[cCc] Search page description in Welsh"
 
         SearchTitleFiltered num query ->
-            num ++ " guides on '" ++ query ++ "' [cCc]"
+            num ++ " canllawiau ar " ++ query
 
         SearchPlaceholder ->
-            "Chwilio’r hwb yma"
+            "Chwilio'r hwb yma"
 
         ---
         -- Story Page
@@ -206,14 +210,17 @@ cyStrings key =
         CategoryWorkingWithAuthoritiesName ->
             "Gweithio gyda'r Awdurdodau"
 
-        InCategory ->
-            "[cCc]"
-
         ---
         -- SubmitStory Page
         ---
         SubmitStoryMetaImageLink ->
             "/images/submit-meta-david-clode-eL4ADAsiOR8-unsplash.jpg"
 
-        _ ->
-            "[cCc] [fFf] to reminder to add all Welsh Keys back"
+        StoryMetaDescription title ->
+            "Stori am: " ++ title
+
+        StoryMetaDescriptionWithAuthor author title ->
+            "Stori am " ++ author ++ ": " ++ title
+
+        ExploreGuidesListHeading ->
+            "Archwilio'r canllawiau yn ôl pwnc"

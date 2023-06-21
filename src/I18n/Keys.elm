@@ -14,22 +14,19 @@ type Key
     | FooterTitleColumnB
     | FooterTitleColumnC
     | FooterVisitWebsiteText
-    | FooterVisitWebsiteLink
     | FooterAboutText
-    | FooterAboutLink
     | FooterGuidesLinkText
     | FooterStoriesLinkText
     | FooterFindYourLocalTrustText
-    | FooterFindYourLocalTrustLink
     | FooterShareYourStoryText
-    | FooterShareYourStoryLink
     | FooterPrivacyPolicyText
-    | FooterPrivacyPolicyLink
     | FooterHowToUseThisSiteText
-    | FooterHowToUseThisSiteLink
     | FooterSiteLogo
     | FooterCharityInfo
     | RegisteredCharityNumber
+    | HeritageFundLogoAlt
+    | PlatiJubesLogoAlt
+    | WildLifeTrustLogoAlt
       --- Cookie banner
     | CookieBannerH2
     | CookieBannerP
@@ -37,13 +34,15 @@ type Key
     | CookieDeclineButtonText
     | CookieSettingsButtonText
       --- Index Page
-    | WelcomeP1
+    | IndexMetaDescription
     | GuideHighlightsSubtitle
     | StoryHighlightsSubtitle
     | CallForStoryHeading
     | HomeCallForStoryP
     | CallForStoryP
     | CallForStoryLinkText
+    | HomeYoutubeLink
+    | HomeVideoTitle
       --- Guide Page
     | RelatedGuidesHeading
     | RelatedStoriesHeading
@@ -68,21 +67,11 @@ type Key
     | WhereSubHeading
       --- SubmitStory Page
     | SubmitStoryMetaImageLink
-      {-
-         from formstack iframe embed code
-      -}
-    | SubmitFormSrc
-      {-
-         from formstack iframe embed code
-      -}
-    | SubmitFormTitle
-    | SubmitFormHeading
       --- Category things
     | CategoryAdminAndInfoName
     | CategoryPublicityEventsName
     | CategoryWorkingWithPeopleName
     | CategoryWorkingWithAuthoritiesName
-    | InCategory
       --- MetaData
     | StoryMetaDescription String
     | StoryMetaDescriptionWithAuthor String String

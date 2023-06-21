@@ -1,6 +1,6 @@
 ---
-title: Managing conflict in a group
-summary: Understanding conflict and how to deal with it in groups
+title: Managing Conflict in a Group
+summary: Understanding conflict and how to deal with it in groups.
 Category: working-with-people
 image:
   src: /images/uploads/managingconflictingroup_orig-2-.jpg

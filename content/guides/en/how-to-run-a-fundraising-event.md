@@ -8,6 +8,9 @@ category: media-publicity-events
 Category: media-publicity-events
 video:
   id: kpYYHd-mSgE
+  title: "How to Run a Fundraising Event: A Nextdoor Nature Community Video"
+  description: Aaron from Lincolnshire Voluntary Centre Services talks about
+    running a fundraising event.
 customCall: How do you fundraise?
 ---
 This advice is for you if you are planning a one-off event to raise money. If you want to apply for funding, see our other resources.

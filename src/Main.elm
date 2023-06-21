@@ -91,7 +91,10 @@ init flags url key =
       , seed = Nothing
       }
     , Cmd.batch
-        [ Metadata.setMetadata (Metadata.metadataFromPage page English content)
+        [ Metadata.setMetadata
+            ( I18n.Translate.languageToString English
+            , Metadata.metadataFromPage page English content
+            )
         , getActions
         , Random.generate UpdateSeed Random.independentSeed
         ]
@@ -127,7 +130,7 @@ setFocusAndScrollViewport route =
         Search (Just fragment) ->
             -- On the seach page, we have anchors to sections
             -- Need to verify that focus is set correctly when we use them
-            [ resetFocusToId fragment ]
+            [ resetFocusToId fragment, resetViewportToId fragment ]
 
         _ ->
             [ resetFocusToId "focus-target", resetViewportTop ]
@@ -136,6 +139,13 @@ setFocusAndScrollViewport route =
 resetViewportTop : Cmd Msg
 resetViewportTop =
     Task.perform (\_ -> NoOp) (Browser.Dom.setViewport 0 0)
+
+
+resetViewportToId : String -> Cmd Msg
+resetViewportToId id =
+    Browser.Dom.getElement id
+        |> Task.andThen (\info -> Browser.Dom.setViewport info.element.x info.element.y)
+        |> Task.attempt (\_ -> NoOp)
 
 
 resetFocusToId : String -> Cmd Msg
@@ -156,7 +166,10 @@ update msg model =
             in
             ( { model | page = newRoute }
             , Cmd.batch
-                (Metadata.setMetadata (Metadata.metadataFromPage newRoute model.language model.content)
+                (Metadata.setMetadata
+                    ( I18n.Translate.languageToString model.language
+                    , Metadata.metadataFromPage newRoute model.language model.content
+                    )
                     :: setFocusAndScrollViewport newRoute
                 )
             )
@@ -185,7 +198,7 @@ update msg model =
             in
             ( { model | language = newLanguage }
             , Cmd.batch
-                [ Metadata.setMetadata (Metadata.metadataFromPage model.page newLanguage model.content)
+                [ Metadata.setMetadata ( I18n.Translate.languageToString newLanguage, Metadata.metadataFromPage model.page newLanguage model.content )
                 , GoogleAnalytics.updateAnalytics model.cookieState.enableAnalytics
                     (GoogleAnalytics.updateAnalyticsEvent
                         { category = Route.toString model.page

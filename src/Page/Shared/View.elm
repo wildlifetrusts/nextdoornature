@@ -1,6 +1,6 @@
 module Page.Shared.View exposing (viewAudio, viewCallForStory, viewVideo)
 
-import Css exposing (Style, absolute, backgroundColor, batch, color, fontWeight, height, int, left, margin2, margin3, padding, paddingBottom, paddingRight, pct, position, relative, rem, top, width, zero)
+import Css exposing (Style, backgroundColor, batch, color, fontWeight, hover, int, margin2, margin3, padding, paddingRight, pct, rem, solid, textDecoration3, underline, width)
 import Html.Styled exposing (Html, a, div, h2, iframe, p, text)
 import Html.Styled.Attributes exposing (attribute, autoplay, css, href, src, title)
 import I18n.Keys exposing (Key(..))
@@ -13,13 +13,13 @@ import Theme.Global exposing (hideFromPrint, purple, roundedCornerStyle, white, 
 
 viewVideo : Page.Shared.Data.VideoMeta -> Html Msg
 viewVideo videoMeta =
-    div []
+    div [ css [ width (pct 100) ] ]
         [ if String.length videoMeta.description > 0 then
             p [] [ text videoMeta.description ]
 
           else
             text ""
-        , div [ css [ videoContainerStyle, hideFromPrint ] ]
+        , div [ css [ hideFromPrint ] ]
             [ iframe
                 [ src videoMeta.src
                 , attribute "frameborder" "0"
@@ -48,9 +48,9 @@ viewCallForStory language customCall =
         t =
             translate language
     in
-    div [ css [ callForStoryStyle ] ]
+    div [ css [ hideFromPrint, callForStoryStyle ] ]
         [ h2 [ css [ callForStoryHeadingStyle ] ] [ text (t CallForStoryHeading) ]
-        , p [] [ text (customCall ++ t CallForStoryP) ]
+        , p [] [ text (String.join " " [ String.trim customCall, t CallForStoryP ]) ]
         , a [ href (Route.toString SubmitStory), css [ callForStoryLinkStyle ] ] [ text (t CallForStoryLinkText) ]
         ]
 
@@ -81,24 +81,15 @@ callForStoryLinkStyle =
         [ color white
         , fontWeight (int 500)
         , paddingRight (rem 1.5)
+        , hover
+            [ textDecoration3 underline solid white
+            ]
         ]
 
 
 embeddedVideoStyle : Style
 embeddedVideoStyle =
     batch
-        [ height (pct 100)
-        , left zero
-        , position absolute
-        , top zero
-        , width (pct 100)
-        ]
-
-
-videoContainerStyle : Style
-videoContainerStyle =
-    batch
-        [ paddingBottom (pct 56.25)
-        , position relative
-        , width (pct 100)
+        [ width (pct 100)
+        , Css.property "aspect-ratio" "16 / 9"
         ]

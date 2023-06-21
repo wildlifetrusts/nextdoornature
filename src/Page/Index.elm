@@ -1,6 +1,6 @@
 module Page.Index exposing (view)
 
-import Css exposing (Style, batch, column, flexDirection, fontWeight, int, margin, marginBottom, padding, pct, property, rem, row, width)
+import Css exposing (Style, batch, column, flex, flexDirection, fontWeight, int, margin, marginBottom, padding, pct, property, rem, row, width)
 import Html.Styled exposing (Html, a, div, h2, h3, img, li, p, section, text, ul)
 import Html.Styled.Attributes exposing (alt, css, href, src)
 import I18n.Keys exposing (Key(..))
@@ -30,21 +30,30 @@ view model page =
         , div [ css [ contentWrapper ] ]
             [ div [ css [ topTwoColumnsWrapperStyle ] ]
                 [ div [ css [ pageColumnStyle ] ]
-                    (markdownToHtml page.fullTextMarkdown)
-                , div [ css [ teaserColumnStyle ] ]
-                    [ div []
-                        [ h2 [ css [ teaserSubtitleStyle ] ] [ text (t GuideHighlightsSubtitle) ]
-                        , Page.Search.Data.teaserListFromGuideDict model.language model.content.guides
-                            |> shuffleList model.seed
-                            |> List.take 2
-                            |> viewTeaserList
-                        ]
-                    , div []
-                        [ h2 [ css [ teaserSubtitleStyle ] ] [ text (t StoryHighlightsSubtitle) ]
-                        , Page.Search.Data.teaserListFromStoryDict model.language model.content.stories
-                            |> shuffleList model.seed
-                            |> List.take 2
-                            |> viewTeaserList
+                    (markdownToHtml page.fullTextMarkdown
+                        ++ (if String.length (t HomeYoutubeLink) == 0 then
+                                []
+
+                            else
+                                [ div [ css [ marginBottom (rem 1), width (pct 100) ] ] [ Page.Shared.View.viewVideo { title = t HomeVideoTitle, src = t HomeYoutubeLink, description = "" } ] ]
+                           )
+                    )
+                , div [ css [ pageColumnStyle ] ]
+                    [ div [ css [ teaserColumnStyle ] ]
+                        [ div [ css [ teaserBlockStyle ] ]
+                            [ h2 [ css [ teaserSubtitleStyle ] ] [ text (t GuideHighlightsSubtitle) ]
+                            , Page.Search.Data.teaserListFromGuideDict model.language model.content.guides
+                                |> shuffleList model.seed
+                                |> List.take 2
+                                |> viewTeaserList
+                            ]
+                        , div [ css [ teaserBlockStyle ] ]
+                            [ h2 [ css [ teaserSubtitleStyle ] ] [ text (t StoryHighlightsSubtitle) ]
+                            , Page.Search.Data.teaserListFromStoryDict model.language model.content.stories
+                                |> shuffleList model.seed
+                                |> List.take 2
+                                |> viewTeaserList
+                            ]
                         ]
                     , Page.Shared.View.viewCallForStory model.language ""
                     ]
@@ -68,6 +77,13 @@ viewTeaserList teasers =
 
     else
         text ""
+
+
+teaserBlockStyle : Style
+teaserBlockStyle =
+    batch
+        [ flex (int 1)
+        ]
 
 
 viewGuideTeaser : Page.Shared.Data.Teaser -> Html Msg

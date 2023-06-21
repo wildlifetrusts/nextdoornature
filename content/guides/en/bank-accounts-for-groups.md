@@ -2,14 +2,15 @@
 title: Bank Accounts For Groups
 summary: Information about types of bank accounts for community groups, and what
   you need to open one.
+Category: admin-and-info
 image:
-  src: /images/uploads/bank-accounts_orig-2-.jpg
+  src: /images/uploads/bank-accounts_orig-3-.jpg
   alt: A pile of bank statements
   credit: Photo copyright Autumn Barlow/The Wildlife Trusts 2023
 relatedGuides:
   - How to Apply for Funding
-relatedStories:
-  - Test story with minimal fields
+  - "Finding Funding "
+customCall: Do you have experience about bank accounts to share?
 category: admin-and-info
 ---
 You’ll need a bank account if your group’s applying for grants. You’ll also need one if you collect donations or fees and use that money to buy things for your project. Don’t be tempted to use a personal account! It gets very messy very quickly.
@@ -60,7 +61,8 @@ If you’re a limited company, you’ll need your Memorandum and Articles of Ass
 
 ## Useful links to banks
 
-* [CAF](https://www.cafonline.org/caf-bank/current-account "Charities Aid Foundation") – Charities Aid Foundation (minimum deposit is £1000) 
+* [CAF](https://www.cafonline.org/caf-bank/current-account "Charities Aid Foundation") – Charities Aid Foundation (minimum deposit is £1000)
+ 
 * [Unity Trust Bank](https://www.unity.co.uk/business-banking/business-current-account/ "Unity Trust Bank") (minimum deposit is £500)
 * [Royal Bank of Scotland](https://www.rbs.co.uk/business/bank-accounts/community-bank-account.html "Royal Bank of Scotland") (to get free banking, one of the signatories must be a RBS customer)
 * [Virgin Money](https://uk.virginmoney.com/business/charities-clubs-and-societies/clubs-and-societies-account/ "Virgin Money") (no minimum deposit but you can only make 10 transactions a month)

@@ -1,6 +1,6 @@
 module Theme.HeaderTemplate exposing (view)
 
-import Css exposing (Style, alignItems, backgroundColor, backgroundImage, backgroundPosition2, backgroundRepeat, backgroundSize, baseline, batch, border, border3, borderRadius, boxShadow, center, color, column, display, displayFlex, em, flexDirection, flexEnd, flexStart, flexWrap, focus, fontFamilies, fontSize, fontWeight, int, justifyContent, left, lineHeight, margin, margin2, marginBottom, marginRight, marginTop, minWidth, noRepeat, noWrap, none, normal, outline, padding, padding4, pct, pseudoElement, px, rem, right, row, solid, spaceBetween, textAlign, url, width, zero)
+import Css exposing (Style, alignItems, backgroundColor, backgroundImage, backgroundPosition2, backgroundRepeat, backgroundSize, baseline, batch, border, border3, borderRadius, boxShadow, center, color, column, display, displayFlex, em, flexDirection, flexEnd, flexStart, flexWrap, focus, fontFamilies, fontSize, fontWeight, hover, int, justifyContent, left, lineHeight, margin, margin2, marginBottom, marginRight, marginTop, minWidth, noRepeat, noWrap, none, normal, outline, padding, padding4, pct, pseudoElement, px, rem, right, row, solid, spaceBetween, textAlign, textDecoration, textDecoration3, underline, url, width, zero)
 import Html.Styled exposing (Html, a, button, div, header, input, label, node, text)
 import Html.Styled.Attributes exposing (attribute, css, for, href, id, placeholder, type_)
 import Html.Styled.Events exposing (on, onClick)
@@ -14,7 +14,7 @@ import Page.Shared.Data
 import Route exposing (Route(..))
 import Shared exposing (Model, Request(..))
 import Theme.FluidScale
-import Theme.Global exposing (borderWrapper, centerContent, hideFromPrint, purple, screenReaderOnly, teal, white, withMediaMobileUp, withMediaPrint)
+import Theme.Global exposing (borderWrapper, centerContent, hideFromPrint, mediumTeal, purple, screenReaderOnly, teal, white, withMediaMobileUp, withMediaPrint)
 
 
 view : Model -> Html Msg
@@ -155,8 +155,10 @@ headerLinkStyle : Style
 headerLinkStyle =
     batch
         [ color white
+        , hover [ textDecoration none ]
         , marginBottom (rem 0.3)
         , textAlign left
+        , textDecoration none
         , withMediaMobileUp
             [ textAlign right
             ]
@@ -170,8 +172,12 @@ headerBtnStyle =
         , backgroundColor teal
         , border (px 0)
         , fontSize (rem 1)
+        , hover
+            [ textDecoration3 underline solid white
+            ]
         , padding (px 0)
         , textAlign left
+        , textDecoration3 underline solid mediumTeal
         , withMediaMobileUp
             [ textAlign right
             ]

@@ -1,10 +1,11 @@
 ---
 title: Siarad â Chynghorau, Cynghorwyr a Phobl mewn Awdurdod
-summary: Sut i deimlo'n fwy hyderus pan fyddwch chi'n siarad â'ch cyngor lleol
+summary: Sut i deimlo'n fwy hyderus pan fyddwch chi'n siarad â'ch cyngor lleol.
 category: admin-and-info
 relatedGuides:
   - All About Councils and Local Authorities
   - How to contact your MP, MS (Wales), MLA (Northern Ireland) or MSP (Scotland)
+customCall: Pa mor hawdd yw hi i chi siarad â chynghorau?
 ---
 ## Siarad â chynghorau a chynghorwyr: Cyngor Ymarferol
 

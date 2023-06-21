@@ -13,13 +13,13 @@ enStrings key =
             "[cCc] Description for the guides search page"
 
         CallForStoryP ->
-            " If you would like to submit a case study like this we would love to hear from you [cCc]"
+            "If you want to tell us your story, we'd love to hear from you."
 
         ---
         -- Header
         ---
         ChangeLanguage ->
-            "Switch to Welsh"
+            "Newid i'r Gymraeg"
 
         ---
         -- 404 content
@@ -31,7 +31,7 @@ enStrings key =
             "Looks like we've popped up on the wrong page!"
 
         ResourceNotFoundLinkText ->
-            "[cCc] Back to home page"
+            "Back to home page"
 
         ResourceNotFoundLinkPath ->
             "/"
@@ -49,7 +49,7 @@ enStrings key =
             "Explore our guides"
 
         FooterStoriesLinkText ->
-            "Explore our stories [cCc]"
+            "Explore our stories"
 
         FooterTitleColumnC ->
             "Get involved"
@@ -57,39 +57,29 @@ enStrings key =
         FooterVisitWebsiteText ->
             "Visit the Wildlife Trusts' website"
 
-        FooterVisitWebsiteLink ->
-            "https://www.wildlifetrusts.org/"
-
         FooterAboutText ->
             "Find out more about this project"
-
-        FooterAboutLink ->
-            "/about"
 
         FooterFindYourLocalTrustText ->
             "Find your local Trust"
 
-        FooterFindYourLocalTrustLink ->
-            "https://www.wildlifetrusts.org/wildlife-trusts"
-
         FooterShareYourStoryText ->
             "Share your story"
 
-        FooterShareYourStoryLink ->
-            --[cCc]
-            "/share-story"
+        HeritageFundLogoAlt ->
+            "Logo for the national lottery heritage fund"
+
+        PlatiJubesLogoAlt ->
+            "Logo for the queens platinum jubilee 2022"
+
+        WildLifeTrustLogoAlt ->
+            "Logo for the wildlife trust"
 
         FooterPrivacyPolicyText ->
             "Privacy policy"
 
-        FooterPrivacyPolicyLink ->
-            "/privacy-policy"
-
         FooterHowToUseThisSiteText ->
             "How to use this site"
-
-        FooterHowToUseThisSiteLink ->
-            "/how-to-use-this-site"
 
         FooterSiteLogo ->
             "Nextdoor Nature"
@@ -115,7 +105,7 @@ enStrings key =
             "Ok, got it"
 
         CookieDeclineButtonText ->
-            "Use only essential cookies"
+            "No thanks"
 
         CookieSettingsButtonText ->
             "Cookie settings"
@@ -123,7 +113,7 @@ enStrings key =
         ---
         -- Index page
         ---
-        WelcomeP1 ->
+        IndexMetaDescription ->
             "Nextdoor Nature is bringing communities together to help nature flourish where you live and work!"
 
         GuideHighlightsSubtitle ->
@@ -136,10 +126,16 @@ enStrings key =
             "Share your story"
 
         HomeCallForStoryP ->
-            "[cCc] Have you done something great for nature in your community? What challenges or hurdles did you overcome?"
+            "Have you done something great for nature in your community? What challenges did you overcome?"
 
         CallForStoryLinkText ->
             "Send us your story"
+
+        HomeYoutubeLink ->
+            "https://youtube.com/embed/5n-L1HUg_3E"
+
+        HomeVideoTitle ->
+            "Tash from Northumberland tells us how we can all take action for nature"
 
         ---
         -- Guide Page
@@ -154,13 +150,13 @@ enStrings key =
             "Printable version"
 
         GuideVideoHeader ->
-            "[cCc] Video guide"
+            "Video guide"
 
         GuideAudioHeader ->
-            "[cCc] Audio guide"
+            "Audio guide"
 
         GuideTextHeader ->
-            "[cCc] Text guide"
+            "Text guide"
 
         GuidePrintHeaderIconLink ->
             "/images/icons/NextDoorNature_icons-print.svg"
@@ -175,10 +171,10 @@ enStrings key =
             "/images/icons/NextDoorNature_icons-text.svg"
 
         GuideButtonText ->
-            "Click here"
+            "Click here for a printable version of this guide,"
 
         GuideParagraphText ->
-            "for a printable version of this page, which you can easily share with groups or anyone who does not have digital access"
+            "which you can easily share with groups or anyone who does not have digital access"
 
         ---
         -- Search Page
@@ -187,7 +183,7 @@ enStrings key =
             "Search"
 
         SearchTitleFiltered num query ->
-            num ++ " guides on '" ++ query ++ "' [cCc]"
+            num ++ " guides on " ++ query
 
         SearchPlaceholder ->
             "Search this hub"
@@ -207,15 +203,6 @@ enStrings key =
         ---
         -- SubmitStory Page
         ---
-        SubmitFormSrc ->
-            "https://teamwildertest.formstack.com/forms/teamwilder_test"
-
-        SubmitFormTitle ->
-            "teamwilder_test"
-
-        SubmitFormHeading ->
-            "Your details"
-
         SubmitStoryMetaImageLink ->
             "/images/submit-meta-david-clode-eL4ADAsiOR8-unsplash.jpg"
 
@@ -234,14 +221,11 @@ enStrings key =
         CategoryWorkingWithAuthoritiesName ->
             "Working with the Authorities"
 
-        InCategory ->
-            "[cCc] Topic "
-
         ---
         -- Metadata
         ---
         StoryMetaDescription title ->
-            "[cCc] A story about: " ++ title
+            "A story about: " ++ title
 
         StoryMetaDescriptionWithAuthor author title ->
-            "[cCc] A story about " ++ author ++ ": " ++ title
+            "A story about " ++ author ++ ": " ++ title

@@ -1,6 +1,6 @@
 ---
 title: Rheoli gofod gwyrdd yn eich ardal
-summary: Crynodeb o sut i ddechrau cymryd drosodd darn o fannau gwyrdd
+summary: Crynodeb o sut i ddechrau cymryd drosodd darn o fannau gwyrdd.
 image:
   src: /images/uploads/takingovergreenspace_orig-2-.jpg
   alt: A trowel in the dirt in front of a small green bushy plant
@@ -10,6 +10,7 @@ relatedGuides:
 category: admin-and-info
 relatedStories:
   - The Mile Cross Community Garden at The Phoenix Centre, Norwich
+customCall: Ydych chi wedi cymryd drosodd rhai mannau gwyrdd yn eich ardal?
 ---
 Canllawiau i Gymru yn unig. Mae gan yr Alban, Gogledd Iwerddon a Lloegr gyngor gwahanol. Edrychwch ar y dogfennau ar wahân.
 

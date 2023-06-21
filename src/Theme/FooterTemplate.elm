@@ -1,9 +1,9 @@
 module Theme.FooterTemplate exposing (view)
 
-import Css exposing (Style, alignItems, alignSelf, auto, backgroundColor, batch, border3, borderLeft3, borderTop, center, color, column, cursor, default, displayFlex, em, firstChild, fitContent, flexDirection, flexEnd, flexGrow, flexShrink, flexStart, flexWrap, fontFamilies, fontSize, height, int, justifyContent, lastChild, margin, margin2, marginBottom, marginLeft, marginRight, marginTop, maxWidth, minHeight, minWidth, nthChild, padding, padding2, paddingBottom, px, rem, row, solid, spaceBetween, textDecoration, underline, unset, width, wrap)
+import Css exposing (Style, alignItems, alignSelf, auto, backgroundColor, batch, bold, border3, borderLeft3, borderTop, center, color, column, cursor, default, displayFlex, em, firstChild, fitContent, flexDirection, flexEnd, flexGrow, flexShrink, flexStart, flexWrap, fontFamilies, fontSize, fontWeight, height, int, justifyContent, lastChild, margin, margin2, marginBottom, marginLeft, marginRight, marginTop, maxWidth, minHeight, minWidth, none, nthChild, padding, padding2, paddingBottom, px, rem, row, solid, spaceBetween, textDecoration, underline, unset, width, wrap)
 import Css.Media as Media exposing (only, screen, withMedia)
 import Html.Styled exposing (Html, a, div, footer, h3, img, li, nav, text, ul)
-import Html.Styled.Attributes exposing (css, href, src)
+import Html.Styled.Attributes exposing (alt, css, href, src)
 import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (Language(..), translate)
 import Route exposing (Route(..))
@@ -35,9 +35,9 @@ view language route =
                     , div [ css [ marginTop (rem 0.5) ] ] [ text (t RegisteredCharityNumber) ]
                     ]
                 , div [ css [ logosContainerStyle ] ]
-                    [ img [ css [ logoStyle ], src (translatedLogoPath language "logo-heritage-fund") ] []
-                    , img [ css [ logoStyle ], src (translatedLogoPath language "logo-queens-platinum-jubilee") ] []
-                    , img [ css [ logoStyle ], src (translatedLogoPath language "logo-wildlife-trusts") ] []
+                    [ img [ css [ logoStyle ], src (translatedLogoPath language "logo-heritage-fund"), alt (t HeritageFundLogoAlt) ] []
+                    , img [ css [ logoStyle ], src (translatedLogoPath language "logo-queens-platinum-jubilee"), alt (t PlatiJubesLogoAlt) ] []
+                    , img [ css [ logoStyle ], src (translatedLogoPath language "logo-wildlife-trusts"), alt (t WildLifeTrustLogoAlt) ] []
                     , div [ css [ nextdoorNatureTextStyle, logoStyle ] ] [ text (t FooterSiteLogo) ]
                     ]
                 ]
@@ -91,15 +91,9 @@ footerNavigationContent :
 footerNavigationContent t =
     [ { title = FooterTitleColumnA
       , links =
-            [ { text = FooterVisitWebsiteText
-              , href = t FooterVisitWebsiteLink
-              }
-            , { text = FooterAboutText
-              , href = t FooterAboutLink
-              }
-            , { text = FooterPrivacyPolicyText
-              , href = t FooterPrivacyPolicyLink
-              }
+            [ { text = FooterVisitWebsiteText, href = "https://www.wildlifetrusts.org/" }
+            , { text = FooterAboutText, href = Route.toString (Page "about") }
+            , { text = FooterPrivacyPolicyText, href = Route.toString (Page "privacy-policy") }
             ]
       }
     , { title = FooterTitleColumnB
@@ -110,19 +104,16 @@ footerNavigationContent t =
             , { text = FooterStoriesLinkText
               , href = Route.toString (Search (Just "stories"))
               }
-            , { text = FooterHowToUseThisSiteText
-              , href = t FooterHowToUseThisSiteLink
-              }
+            , { text = FooterHowToUseThisSiteText, href = Route.toString (Page "how-to-use-this-site") }
             ]
       }
     , { title = FooterTitleColumnC
       , links =
             [ { text = FooterFindYourLocalTrustText
-              , href = t FooterFindYourLocalTrustLink
+              , href =
+                    "https://www.wildlifetrusts.org/wildlife-trusts"
               }
-            , { text = FooterShareYourStoryText
-              , href = t FooterShareYourStoryLink
-              }
+            , { text = FooterShareYourStoryText, href = Route.toString (Page "share-story") }
             ]
       }
     ]
@@ -169,7 +160,8 @@ activeLinkStyle : Style
 activeLinkStyle =
     batch
         [ cursor default
-        , textDecoration underline
+        , textDecoration none
+        , fontWeight bold
         ]
 
 

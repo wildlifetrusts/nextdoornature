@@ -1,6 +1,6 @@
 ---
 title: Working with Many Languages
-summary: A summary about working with groups where many languages are spoken.
+summary: A guide about working with groups where many languages are spoken.
 Category: working-with-people
 image:
   src: /images/uploads/workingwithmanylanguages_orig-2-.jpg
@@ -9,6 +9,8 @@ image:
 video:
   id: Tk7InQgM7PE
   title: Working with many languages. A Nextdoor Nature Video.
+  description: Jill from Hampshire and Isle of Wight Wildlife Trust talks about
+    working with many languages.
 relatedGuides:
   - "Making sure everyone can access your group or project "
 customCall: Do you have a story to share or helpful advice about working with

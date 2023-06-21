@@ -1,7 +1,7 @@
 module Page.Story.View exposing (view)
 
 import Css exposing (Style, batch, fontStyle, italic, margin3, paddingBottom, pct, rem, width)
-import Html.Styled exposing (Html, blockquote, div, h3, img, p, text)
+import Html.Styled exposing (Html, blockquote, div, h2, img, p, text)
 import Html.Styled.Attributes exposing (alt, css, src)
 import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (Language, translate)
@@ -33,7 +33,7 @@ view language story =
                         [ case story.maybeGroupOrIndividual of
                             Just groupOrIndividual ->
                                 div []
-                                    [ h3 [] [ text (t WhoSubHeading) ]
+                                    [ h2 [ css [ Theme.FluidScale.fontSizeMedium ] ] [ text (t WhoSubHeading) ]
                                     , p [] [ text groupOrIndividual ]
                                     ]
 
@@ -42,7 +42,7 @@ view language story =
                         , case story.maybeLocation of
                             Just location ->
                                 div []
-                                    [ h3 [] [ text (t WhereSubHeading) ]
+                                    [ h2 [ css [ Theme.FluidScale.fontSizeMedium ] ] [ text (t WhereSubHeading) ]
                                     , p [] [ text location ]
                                     ]
 

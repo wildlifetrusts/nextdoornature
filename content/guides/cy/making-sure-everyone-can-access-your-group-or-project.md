@@ -1,5 +1,5 @@
 ---
-title: "Sicrhau bod pawb yn gallu cael mynediad at eich grŵp neu brosiect "
+title: "Sicrhau Bod Pawb yn Gallu Cael Mynediad at Eich Grŵp neu Brosiect "
 summary: "Mae angen pethau gwahanol ar wahanol bobl i'w helpu i gymryd rhan yn
   gyfartal mewn grŵp. "
 image:
@@ -11,6 +11,8 @@ video:
   id: 2VU0xTqm0XQ
   title: "How to make sure everyone can access your project: A Nextdoor Nature
     Community Video"
+  description: Aaron o Lincolnshire Voluntary Centre Services yn siarad am sut i
+    wneud yn siŵr bod pawb yn gallu cael mynediad at eich prosiect.
 customCall: " Sut ydych chi'n sicrhau bod eich prosiectau'n hygyrch?"
 ---
 Ni fydd yr wybodaeth yma'n ymdrin â hygyrchedd mewn digwyddiadau. Mae honno’n ddogfen ar wahân.

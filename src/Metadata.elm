@@ -30,7 +30,7 @@ defaultMetadata language =
             translate language
     in
     { title = t SiteTitle
-    , description = t WelcomeP1
+    , description = t IndexMetaDescription
     , imageSrc = defaultMetaImageSrc
     }
 
@@ -45,7 +45,7 @@ metadataFromPage page language content =
     case page of
         Index ->
             { title = t SiteTitle
-            , description = t WelcomeP1
+            , description = t IndexMetaDescription
             , imageSrc = defaultMetaImageSrc
             }
 
@@ -194,4 +194,8 @@ subPageTitle language title =
     title ++ " | " ++ t SiteTitle
 
 
-port setMetadata : PageMetadata -> Cmd msg
+
+-- this String will represent the language
+
+
+port setMetadata : ( String, PageMetadata ) -> Cmd msg

@@ -1,18 +1,20 @@
 ---
 title: Dod o Hyd i Gyllid
 summary: Syniadau cyffredinol ac awgrymiadau ar gyfer dod o hyd i gyllid ar
-  gyfer eich prosiectau
+  gyfer eich prosiectau.
 image:
   alt: An open planner with the words "find funding" circled
   credit: Photo copyright Autumn Barlow/The Wildlife Trusts 2023
-  src: /images/uploads/finding-funding_orig-2-.jpg
+  src: /images/uploads/finding-funding_orig-3-.jpg
 video:
   id: b32JWimgF2w
   title: Dod o Hyd i Gyllid. Fideo Natur Drws Nesaf.
+  description: Animeiddiad byr am sut i ddod o hyd i gyllid ar gyfer eich grŵp.
 relatedGuides:
   - Bank Accounts For Groups
   - How to Apply for Funding
 category: admin-and-info
+customCall: Pa mor hawdd yw dod o hyd i gyllid i chi?
 ---
 ## Cyngor cyffredinol am gyllid
 
