@@ -46,8 +46,7 @@ viewForm model =
             translate model.language
     in
     div [ css [ batch [ width (pct 100) ], simpleThreeColumnFlexChildStyle ] ]
-        [ h2 [] [ text (t SubmitFormHeading) ]
-        , iframe
+        [ iframe
             [ Attr.src "https://teamwildertest.formstack.com/forms/teamwilder_test"
             , Attr.title "teamwilder_test"
             , css [ border (rem 0), width (pct 100), height (rem 77) ]
