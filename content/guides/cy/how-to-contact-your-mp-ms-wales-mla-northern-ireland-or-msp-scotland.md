@@ -7,6 +7,7 @@ image:
   alt: An address book, an envelope and a stamp
 relatedGuides:
   - All About Councils and Local Authorities
+  - Speaking to Councils, Councillors and People in Authority
 category: admin-and-info
 video:
   id: BR0HfHGTQ9E
