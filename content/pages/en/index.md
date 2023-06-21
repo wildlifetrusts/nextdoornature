@@ -1,5 +1,5 @@
 ---
-title: Welcome to this Nextdoor Nature Hub
+title: Welcome to the Nextdoor Nature Hub
 summary: The Nextdoor Nature Hub is a collection of guides (information) and
   stories (case studies)
 ---
