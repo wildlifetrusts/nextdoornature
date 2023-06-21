@@ -7,6 +7,7 @@ image:
   alt: A pile of bank statements
 relatedGuides:
   - How to Apply for Funding
+  - "Finding Funding "
 category: admin-and-info
 customCall: Oes gennych chi brofiad o gyfrifon banc i'w rhannu?
 ---
