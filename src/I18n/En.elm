@@ -206,6 +206,12 @@ enStrings key =
         SubmitStoryMetaImageLink ->
             "/images/submit-meta-david-clode-eL4ADAsiOR8-unsplash.jpg"
 
+        SubmitFormSrc ->
+            "https://teamwildertest.formstack.com/forms/teamwilder_test"
+
+        SubmitFormTitle ->
+            "[cCc] teamwilder_test"
+
         ---
         -- Category things
         ---

@@ -1,7 +1,7 @@
 module Page.SubmitStory.View exposing (view)
 
 import Css exposing (Style, batch, border, height, hidden, margin2, overflow, pct, property, rem, width)
-import Html.Styled exposing (Html, div, h2, iframe, img, text)
+import Html.Styled exposing (Html, div, iframe, img)
 import Html.Styled.Attributes as Attr exposing (css)
 import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (translate)
@@ -47,8 +47,8 @@ viewForm model =
     in
     div [ css [ batch [ width (pct 100) ], simpleThreeColumnFlexChildStyle ] ]
         [ iframe
-            [ Attr.src "https://teamwildertest.formstack.com/forms/teamwilder_test"
-            , Attr.title "teamwilder_test"
+            [ Attr.src (t SubmitFormSrc)
+            , Attr.title (t SubmitFormTitle)
             , css [ border (rem 0), width (pct 100), height (rem 77) ]
             ]
             []
