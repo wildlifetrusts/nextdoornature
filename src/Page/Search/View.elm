@@ -71,13 +71,14 @@ viewTeaserList : Language -> String -> List Page.Shared.Data.Teaser -> Html Msg
 viewTeaserList language searchString teasers =
     if List.length teasers > 0 then
         let
-            t : Key -> String
-            t =
-                translate language
-
             sectionHeader : String
             sectionHeader =
                 if String.length searchString > 0 then
+                    let
+                        t : Key -> String
+                        t =
+                            translate language
+                    in
                     t (teaserListTitleKey (List.length teasers) searchString)
 
                 else
