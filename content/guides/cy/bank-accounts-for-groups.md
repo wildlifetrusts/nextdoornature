@@ -2,11 +2,12 @@
 title: Cyfrifon Banc ar gyfer Grwpiau
 summary: Bydd arnoch angen cyfrif banc os yw eich grŵp yn gwneud cais am grantiau.
 image:
-  src: /images/uploads/bank-accounts_orig-2-.jpg
+  src: /images/uploads/bank-accounts_orig-3-.jpg
   credit: Photo copyright Autumn Barlow/The Wildlife Trusts 2023
   alt: A pile of bank statements
 relatedGuides:
   - How to Apply for Funding
+  - "Finding Funding "
 category: admin-and-info
 customCall: Oes gennych chi brofiad o gyfrifon banc i'w rhannu?
 ---
