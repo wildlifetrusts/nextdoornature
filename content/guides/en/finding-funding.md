@@ -1,9 +1,9 @@
 ---
 title: "Finding Funding "
-summary: General hints and tips for finding funding for your projects
+summary: General hints and tips for finding funding for your projects.
 Category: admin-and-info
 image:
-  src: /images/uploads/finding-funding_orig-2-.jpg
+  src: /images/uploads/finding-funding_orig-3-.jpg
   alt: An open planner with the words "find funding" circled
   credit: Photo copyright Autumn Barlow/The Wildlife Trusts 2023
 video:
