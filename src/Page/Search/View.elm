@@ -71,10 +71,14 @@ viewTeaserList : Language -> String -> List Page.Shared.Data.Teaser -> Html Msg
 viewTeaserList language searchString teasers =
     if List.length teasers > 0 then
         let
+            t : Key -> String
+            t =
+                translate language
+
             sectionHeader : String
             sectionHeader =
                 if String.length searchString > 0 then
-                    viewTeaserListTitle (List.length teasers) language searchString
+                    t (teaserListTitleKey (List.length teasers) searchString)
 
                 else
                     ""
@@ -92,22 +96,18 @@ viewTeaserList language searchString teasers =
         text ""
 
 
-viewTeaserListTitle : Int -> Language -> String -> String
-viewTeaserListTitle length language searchString =
+teaserListTitleKey : Int -> String -> Key
+teaserListTitleKey length searchString =
     let
-        t : Key -> String
-        t =
-            translate language
-
         numberOfResultsString : String
         numberOfResultsString =
             String.fromInt length
     in
     if length > 1 then
-        t (SearchTitleFiltered numberOfResultsString searchString)
+        SearchTitleFiltered numberOfResultsString searchString
 
     else
-        t (SearchTitleFilteredSingleResult searchString)
+        SearchTitleFilteredSingleResult searchString
 
 
 limitContent : String -> Int -> String
