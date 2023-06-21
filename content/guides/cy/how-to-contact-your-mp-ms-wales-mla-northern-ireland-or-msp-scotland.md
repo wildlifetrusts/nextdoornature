@@ -1,8 +1,8 @@
 ---
 title: Sut i gysylltu â'ch AS
-summary: "Sut i ddod o hyd i'ch AS a sut i gysylltu ag ef             "
+summary: "Sut i ddod o hyd i'ch AS a sut i gysylltu ag ef.             "
 image:
-  src: /images/uploads/contact-your-mp_orig-2-.jpg
+  src: /images/uploads/contact-your-mp_orig-3-.jpg
   credit: Photo copyright Autumn Barlow/The Wildlife Trusts 2023
   alt: An address book, an envelope and a stamp
 relatedGuides:
