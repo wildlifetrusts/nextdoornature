@@ -48,12 +48,6 @@ enStrings key =
         FooterGuidesLinkText ->
             "Explore our guides"
 
-        FooterGuidesLink ->
-            "/search#guides"
-
-        FooterStoriesLink ->
-            "/search#stories"
-
         FooterStoriesLinkText ->
             "Explore our stories [cCc]"
 

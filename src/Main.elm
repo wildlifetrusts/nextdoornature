@@ -124,13 +124,13 @@ flagsConsentDecoder =
 setFocusAndScrollViewport : Route -> List (Cmd Msg)
 setFocusAndScrollViewport route =
     case route of
-        Search (Just _) ->
+        Search (Just fragment) ->
             -- On the seach page, we have anchors to sections
             -- Need to verify that focus is set correctly when we use them
-            []
+            [ resetFocusToId fragment ]
 
         _ ->
-            [ resetFocusTop, resetViewportTop ]
+            [ resetFocusToId "focus-target", resetViewportTop ]
 
 
 resetViewportTop : Cmd Msg
@@ -138,9 +138,9 @@ resetViewportTop =
     Task.perform (\_ -> NoOp) (Browser.Dom.setViewport 0 0)
 
 
-resetFocusTop : Cmd Msg
-resetFocusTop =
-    Task.attempt (\_ -> NoOp) (Browser.Dom.focus "focus-target")
+resetFocusToId : String -> Cmd Msg
+resetFocusToId id =
+    Task.attempt (\_ -> NoOp) (Browser.Dom.focus id)
 
 
 update : Msg -> Model -> ( Model, Cmd Msg )

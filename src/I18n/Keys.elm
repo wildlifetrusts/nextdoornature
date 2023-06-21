@@ -18,8 +18,6 @@ type Key
     | FooterAboutText
     | FooterAboutLink
     | FooterGuidesLinkText
-    | FooterGuidesLink
-    | FooterStoriesLink
     | FooterStoriesLinkText
     | FooterFindYourLocalTrustText
     | FooterFindYourLocalTrustLink

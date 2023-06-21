@@ -6,9 +6,10 @@ import Html.Styled exposing (Html, a, div, footer, h3, img, li, nav, text, ul)
 import Html.Styled.Attributes exposing (css, href, src)
 import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (Language(..), translate)
-import Route exposing (Route)
+import Route exposing (Route(..))
 import Theme.FluidScale
 import Theme.Global exposing (centerContent, hideFromPrint, lightTeal, listStyleNone, purple, teal, white, withMediaMobileUp, withMediaTabletPortraitUp)
+import Url
 
 
 view : Language -> Route -> Html msg
@@ -24,7 +25,7 @@ view language route =
             [ nav [ css [ centerContent, footerNavStyle ] ]
                 (List.map
                     (\column -> navigationColumn column language route)
-                    footerNavigationContent
+                    (footerNavigationContent t)
                 )
             ]
         , div [ css [ bottomFooterOuterContainerStyle ] ]
@@ -54,7 +55,7 @@ translatedLogoPath language fileName =
             "/images/" ++ fileName ++ "-cy.svg"
 
 
-navigationColumn : { title : Key, links : List { text : Key, href : Key } } -> Language -> Route -> Html msg
+navigationColumn : { title : Key, links : List { text : Key, href : String } } -> Language -> Route -> Html msg
 navigationColumn column language route =
     let
         t : Key -> String
@@ -66,7 +67,7 @@ navigationColumn column language route =
             [ text (t column.title)
             ]
         , nav []
-            [ ul [ css [ listStyleNone ] ] (List.map (\link -> li [] [ a [ href (t link.href), activeClass (t link.href) route ] [ text (t link.text) ] ]) column.links)
+            [ ul [ css [ listStyleNone ] ] (List.map (\link -> li [] [ a [ href link.href, activeClass link.href route ] [ text (t link.text) ] ]) column.links)
             ]
         ]
 
@@ -81,29 +82,47 @@ activeClass path route =
 
 
 footerNavigationContent :
-    List
-        { title : Key
-        , links : List { text : Key, href : Key }
-        }
-footerNavigationContent =
+    (Key -> String)
+    ->
+        List
+            { title : Key
+            , links : List { text : Key, href : String }
+            }
+footerNavigationContent t =
     [ { title = FooterTitleColumnA
       , links =
-            [ { text = FooterVisitWebsiteText, href = FooterVisitWebsiteLink }
-            , { text = FooterAboutText, href = FooterAboutLink }
-            , { text = FooterPrivacyPolicyText, href = FooterPrivacyPolicyLink }
+            [ { text = FooterVisitWebsiteText
+              , href = t FooterVisitWebsiteLink
+              }
+            , { text = FooterAboutText
+              , href = t FooterAboutLink
+              }
+            , { text = FooterPrivacyPolicyText
+              , href = t FooterPrivacyPolicyLink
+              }
             ]
       }
     , { title = FooterTitleColumnB
       , links =
-            [ { text = FooterGuidesLinkText, href = FooterGuidesLink }
-            , { text = FooterStoriesLinkText, href = FooterStoriesLink }
-            , { text = FooterHowToUseThisSiteText, href = FooterHowToUseThisSiteLink }
+            [ { text = FooterGuidesLinkText
+              , href = Route.toString (Search (Just "guides"))
+              }
+            , { text = FooterStoriesLinkText
+              , href = Route.toString (Search (Just "stories"))
+              }
+            , { text = FooterHowToUseThisSiteText
+              , href = t FooterHowToUseThisSiteLink
+              }
             ]
       }
     , { title = FooterTitleColumnC
       , links =
-            [ { text = FooterFindYourLocalTrustText, href = FooterFindYourLocalTrustLink }
-            , { text = FooterShareYourStoryText, href = FooterShareYourStoryLink }
+            [ { text = FooterFindYourLocalTrustText
+              , href = t FooterFindYourLocalTrustLink
+              }
+            , { text = FooterShareYourStoryText
+              , href = t FooterShareYourStoryLink
+              }
             ]
       }
     ]

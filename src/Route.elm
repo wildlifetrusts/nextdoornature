@@ -37,7 +37,7 @@ toString route =
         Search maybeFragment ->
             case maybeFragment of
                 Just aFragment ->
-                    "/search" ++ aFragment
+                    "/search#" ++ aFragment
 
                 Nothing ->
                     "/search"

@@ -42,9 +42,6 @@ cyStrings key =
         FooterGuidesLinkText ->
             "Archwilio ein canllawiau"
 
-        FooterGuidesLink ->
-            "/guides"
-
         FooterTitleColumnC ->
             "Cymryd rhan"
 

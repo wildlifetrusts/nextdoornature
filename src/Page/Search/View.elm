@@ -1,7 +1,7 @@
 module Page.Search.View exposing (view)
 
 import Css exposing (Style, batch, fontWeight, int, margin, padding, pct, property, rem, width)
-import Html.Styled exposing (Html, a, div, h2, img, li, p, section, text, ul)
+import Html.Styled exposing (Html, a, div, h2, h3, img, li, p, section, text, ul)
 import Html.Styled.Attributes exposing (alt, attribute, css, href, id, src)
 import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (Language, translate)
@@ -89,7 +89,8 @@ viewTeaserList language searchString teasers =
                     ""
         in
         section []
-            [ h2 [ id "guides" ] [ text sectionHeader ]
+            [ h2 [ id "guides" ] [ text "Guides" ]
+            , h3 [] [ text sectionHeader ]
             , ul [ css [ guidesPageLayoutStyle ] ]
                 (teasers
                     |> List.map
