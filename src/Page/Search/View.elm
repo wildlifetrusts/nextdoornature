@@ -74,16 +74,7 @@ viewTeaserList language searchString teasers =
             sectionHeader : String
             sectionHeader =
                 if String.length searchString > 0 then
-                    let
-                        t : Key -> String
-                        t =
-                            translate language
-
-                        numberOfResultsString : String
-                        numberOfResultsString =
-                            String.fromInt (List.length teasers)
-                    in
-                    t (SearchTitleFiltered numberOfResultsString searchString)
+                    viewTeaserListTitle (List.length teasers) language searchString
 
                 else
                     ""
@@ -99,6 +90,24 @@ viewTeaserList language searchString teasers =
 
     else
         text ""
+
+
+viewTeaserListTitle : Int -> Language -> String -> String
+viewTeaserListTitle length language searchString =
+    let
+        t : Key -> String
+        t =
+            translate language
+
+        numberOfResultsString : String
+        numberOfResultsString =
+            String.fromInt length
+    in
+    if length > 1 then
+        t (SearchTitleFiltered numberOfResultsString searchString)
+
+    else
+        t (SearchTitleFilteredSingleResult searchString)
 
 
 limitContent : String -> Int -> String

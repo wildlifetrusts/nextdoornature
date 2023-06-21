@@ -60,6 +60,7 @@ type Key
     | SearchTitle
     | SearchMetaDescription
     | SearchTitleFiltered String String
+    | SearchTitleFilteredSingleResult String
     | SearchPlaceholder
     | ExploreGuidesListHeading
       --- Story Page

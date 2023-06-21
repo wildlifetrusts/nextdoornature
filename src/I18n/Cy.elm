@@ -183,6 +183,9 @@ cyStrings key =
         SearchTitleFiltered num query ->
             num ++ " canllawiau ar " ++ query
 
+        SearchTitleFilteredSingleResult query ->
+            " canllaw ar " ++ query
+
         SearchPlaceholder ->
             "Chwilio'r hwb yma"
 

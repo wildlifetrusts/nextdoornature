@@ -185,6 +185,9 @@ enStrings key =
         SearchTitleFiltered num query ->
             num ++ " guides on " ++ query
 
+        SearchTitleFilteredSingleResult query ->
+            "1 guide on " ++ query
+
         SearchPlaceholder ->
             "Search this hub"
 
