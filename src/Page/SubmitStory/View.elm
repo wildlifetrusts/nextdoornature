@@ -1,6 +1,6 @@
 module Page.SubmitStory.View exposing (view)
 
-import Css exposing (Style, batch, border, displayFlex, flexGrow, flexShrink, flexWrap, height, hidden, int, margin, margin2, overflow, pct, property, rem, width, wrap)
+import Css exposing (Style, batch, border, height, hidden, margin2, overflow, pct, property, rem, width)
 import Html.Styled exposing (Html, div, h2, iframe, img, text)
 import Html.Styled.Attributes as Attr exposing (css)
 import I18n.Keys exposing (Key(..))
@@ -8,7 +8,7 @@ import I18n.Translate exposing (translate)
 import Message exposing (Msg)
 import Page.Data
 import Shared exposing (Model)
-import Theme.Global exposing (centerContent, primaryHeader, roundedCornerStyle, withMediaTabletLandscapeUp)
+import Theme.Global exposing (centerContent, primaryHeader, roundedCornerStyle, simpleThreeColumnFlexChildStyle, simpleThreeColumnFlexStyle, withMediaTabletLandscapeUp)
 import Theme.Markdown exposing (markdownToHtml)
 
 
@@ -24,7 +24,7 @@ viewSubmitFlex : Model -> Page.Data.Page -> Html Msg
 viewSubmitFlex model page =
     div
         [ css
-            [ submitFlexStyle ]
+            [ simpleThreeColumnFlexStyle, outerMarginStyle ]
         ]
         [ viewDescription page
         , viewForm model
@@ -34,7 +34,7 @@ viewSubmitFlex model page =
 
 viewDescription : Page.Data.Page -> Html Msg
 viewDescription page =
-    div [ css [ flexChildStyle ] ]
+    div [ css [ simpleThreeColumnFlexChildStyle ] ]
         (markdownToHtml page.fullTextMarkdown)
 
 
@@ -45,7 +45,7 @@ viewForm model =
         t =
             translate model.language
     in
-    div [ css [ batch [ width (pct 100) ], flexChildStyle ] ]
+    div [ css [ batch [ width (pct 100) ], simpleThreeColumnFlexChildStyle ] ]
         [ h2 [] [ text (t SubmitFormHeading) ]
         , iframe
             [ Attr.src (t SubmitFormSrc)
@@ -85,31 +85,18 @@ submitImgGridStyle =
         ]
 
 
-submitFlexStyle : Style
-submitFlexStyle =
+outerMarginStyle : Style
+outerMarginStyle =
     batch
-        [ displayFlex
-        , property "gap" "3rem"
-        , flexWrap wrap
-        , margin (rem 0)
-        , withMediaTabletLandscapeUp
+        [ withMediaTabletLandscapeUp
             [ margin2 (rem 3) (rem 0)
             ]
         ]
 
 
-flexChildStyle : Style
-flexChildStyle =
-    batch
-        [ flexShrink (int 1)
-        , flexGrow (int 1)
-        , property "flex-basis" "25rem"
-        ]
-
-
 viewImageGrid : List ( String, String ) -> Html Msg
 viewImageGrid images =
-    div [ css [ submitImgGridStyle, flexChildStyle ] ]
+    div [ css [ submitImgGridStyle, simpleThreeColumnFlexChildStyle ] ]
         (List.map (\( src, alt ) -> viewGridItem src alt) images)
 
 
