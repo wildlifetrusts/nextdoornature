@@ -183,10 +183,19 @@ enStrings key =
             "Search"
 
         SearchTitleFiltered num query ->
-            num ++ " guides on " ++ query
+            String.join " " [ num, "results for", query ]
 
         SearchPlaceholder ->
             "Search this hub"
+
+        GuidesHeading ->
+            "Guides"
+
+        StoriesHeading ->
+            "Stories"
+
+        ActionsHeading ->
+            "Actions"
 
         ExploreGuidesListHeading ->
             "Explore guides by topic"
