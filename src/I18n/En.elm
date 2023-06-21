@@ -148,10 +148,10 @@ enStrings key =
             "Send us your story"
 
         HomeYoutubeLink ->
-            "https://youtube.com/embed/pZDv-ri2GOs"
+            "https://youtube.com/embed/5n-L1HUg_3E"
 
         HomeVideoTitle ->
-            "About Councils and Local Authorities: A Nextdoor Nature Video."
+            "Tash from Northumberland tells us how we can all take action for nature"
 
         ---
         -- Guide Page

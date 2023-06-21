@@ -132,10 +132,10 @@ cyStrings key =
             "[cCc]"
 
         HomeYoutubeLink ->
-            ""
+            "https://youtube.com/embed/5n-L1HUg_3E"
 
         HomeVideoTitle ->
-            "[cCc] welsh video title for accessibility"
+            "Tash from Northumberland tells us how we can all take action for nature"
 
         ---
         -- Guide Page
