@@ -1,8 +1,8 @@
 ---
 title: Popeth Am Gynghorau ac Awdurdodau Lleol
-summary: Trosolwg byr o sut mae cynghorau yn gweithio yn y DU
+summary: Trosolwg byr o sut mae cynghorau yn gweithio yn y DU.
 image:
-  src: /images/uploads/councils-and-las_orig-2-.jpg
+  src: /images/uploads/councils-and-las_orig-3-.jpg
   alt: Local maps and street atlases
   credit: Photo copyright Autumn Barlow/The Wildlife Trusts 2023
 video:
