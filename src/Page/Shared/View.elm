@@ -50,7 +50,7 @@ viewCallForStory language customCall =
     in
     div [ css [ hideFromPrint, callForStoryStyle ] ]
         [ h2 [ css [ callForStoryHeadingStyle ] ] [ text (t CallForStoryHeading) ]
-        , p [] [ text (customCall ++ t CallForStoryP) ]
+        , p [] [ text (String.join " " [ String.trim customCall, t CallForStoryP ]) ]
         , a [ href (Route.toString SubmitStory), css [ callForStoryLinkStyle ] ] [ text (t CallForStoryLinkText) ]
         ]
 
