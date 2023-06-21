@@ -216,10 +216,10 @@ cyStrings key =
         SubmitStoryMetaImageLink ->
             "/images/submit-meta-david-clode-eL4ADAsiOR8-unsplash.jpg"
 
-        SubmitFormSrc ->
+        SubmitStoryFormSrc ->
             "[cCc]"
 
-        SubmitFormTitle ->
+        SubmitStoryFormTitle ->
             "[cCc]"
 
         StoryMetaDescription title ->

@@ -47,8 +47,8 @@ viewForm model =
     in
     div [ css [ batch [ width (pct 100) ], simpleThreeColumnFlexChildStyle ] ]
         [ iframe
-            [ Attr.src (t SubmitFormSrc)
-            , Attr.title (t SubmitFormTitle)
+            [ Attr.src (t SubmitStoryFormSrc)
+            , Attr.title (t SubmitStoryFormTitle)
             , css [ border (rem 0), width (pct 100), height (rem 77) ]
             ]
             []
