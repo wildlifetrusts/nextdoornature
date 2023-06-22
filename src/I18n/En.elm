@@ -184,10 +184,10 @@ enStrings key =
 
         SearchTitleFiltered count query ->
             if count > 1 then
-                String.fromInt count ++ " guides on " ++ query
+                String.join " " [ String.fromInt count, "guides on", query ]
 
             else
-                "1 guide on " ++ query
+                String.join " " [ "1 guide on ", query ]
 
         SearchPlaceholder ->
             "Search this hub"
