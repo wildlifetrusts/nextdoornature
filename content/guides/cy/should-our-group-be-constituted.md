@@ -1,11 +1,14 @@
 ---
-title: A ddylai ein grŵp ni gael cyfansoddiad?
+title: A Ddylai ein Grŵp ni Gael Cyfansoddiad?
 summary: Beth mae bod yn grŵp cyfansoddiadol yn ei olygu? Dim ond i grwpiau
   cyfansoddiadol y mae rhai cyllidwyr yn rhoi arian. Sut gallwch chi ddod yn un?
 image:
   src: /images/uploads/img_3590-2-.jpg
   alt: Ffolder agored mewn cae o laswellt.
   credit: Photo copyright Autumn Barlow/The Wildlife Trusts 2023
+relatedGuides:
+  - Types of Community Group (England and Wales)
+  - Setting up a Basic Community Group
 customCall: Ydy'ch grŵp wedi dod yn gyfansoddiadol?
 ---
 ## A ddylai ein grŵp ni gael cyfansoddiad?

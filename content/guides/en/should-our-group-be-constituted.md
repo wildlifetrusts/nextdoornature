@@ -1,7 +1,7 @@
 ---
-title: Should our group be constituted?
-summary: What does it mean to be a constituted group? Some funders only give
-  money to constituted groups. How can you become one?
+title: Should our Group be Constituted?
+summary: This guide tells you what it means to be a constituted group. Some
+  funders only give money to constituted groups. How can you become one?
 Category: admin-and-info
 image:
   src: /images/uploads/img_3590-2-.jpg
