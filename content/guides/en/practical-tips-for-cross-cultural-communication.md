@@ -1,9 +1,14 @@
 ---
 title: Practical Tips for Cross-Cultural Communication
 summary: Helpful hints when you are working with people from diverse cultural
-  backgrounds.
+  backgrounds. It's useful to know that people from around the world have
+  different ways of being polite.
 category: working-with-people
 Category: working-with-people
+image:
+  src: /images/uploads/cross-cultural.png
+  alt: Cards with species on them in different languages.
+  credit: ""
 relatedGuides:
   - Working with Many Languages
 customCall: Do you have any hints or tips about working across cultures?
