@@ -83,6 +83,7 @@ suite =
         allStoryList =
             [ { titleKey = "A related story"
               , slug = "a-related-story"
+              , summary = "test summary"
               , cy =
                     { title = ""
                     , maybeImage = Nothing
@@ -94,6 +95,7 @@ suite =
               }
             , { titleKey = "Another related story"
               , slug = "another-story"
+              , summary = "test summary"
               , cy =
                     { title = ""
                     , maybeImage = Nothing

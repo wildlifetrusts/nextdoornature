@@ -41,6 +41,7 @@ defaultStoryImageSrc =
 type alias StoryTeaser =
     { titleKey : String
     , slug : String
+    , summary : String
     , en : { title : String, maybeImage : Maybe Image }
     , cy : { title : String, maybeImage : Maybe Image }
     }
@@ -126,6 +127,7 @@ allStoryTeaserList stories =
             (\( _, story ) ->
                 { slug = story.slug
                 , titleKey = story.title
+                , summary = story.summary
                 , en = translationsFromSlug stories.en story
                 , cy = translationsFromSlug stories.cy story
                 }
