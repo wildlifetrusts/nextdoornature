@@ -187,7 +187,7 @@ enStrings key =
                 String.join " " [ String.fromInt count, "guides on", query ]
 
             else
-                String.join " " [ "1 guide on ", query ]
+                String.join " " [ "1 guide on", query ]
 
         SearchPlaceholder ->
             "Search this hub"

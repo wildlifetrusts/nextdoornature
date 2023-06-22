@@ -182,10 +182,10 @@ cyStrings key =
 
         SearchTitleFiltered count query ->
             if count > 1 then
-                String.fromInt count ++ " canllawiau ar " ++ query
+                String.join " " [ String.fromInt count, "canllawiau ar", query ]
 
             else
-                "1 canllaw ar " ++ query
+                String.join " " [ "1 canllaw ar", query ]
 
         SearchPlaceholder ->
             "Chwilio'r hwb yma"
