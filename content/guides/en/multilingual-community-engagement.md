@@ -3,7 +3,7 @@ title: Working with Many Languages
 summary: A guide about working with groups where many languages are spoken.
 Category: working-with-people
 image:
-  src: /images/uploads/workingwithmanylanguages_orig-2-.jpg
+  src: /images/uploads/workingwithmanylanguages_orig-3-.jpg
   alt: A stack of small dictionaries in other languages
   credit: Photo copyright Autumn Barlow/The Wildlife Trusts 2023
 video:
@@ -12,7 +12,7 @@ video:
   description: Jill from Hampshire and Isle of Wight Wildlife Trust talks about
     working with many languages.
 relatedGuides:
-  - "Making sure everyone can access your group or project "
+  - Practical Tips for Cross-Cultural Communication
 customCall: Do you have a story to share or helpful advice about working with
   lots of languages?
 category: working-with-people
