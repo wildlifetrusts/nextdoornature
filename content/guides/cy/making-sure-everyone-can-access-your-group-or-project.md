@@ -3,7 +3,7 @@ title: "Sicrhau Bod Pawb yn Gallu Cael Mynediad at Eich Grŵp neu Brosiect "
 summary: "Mae angen pethau gwahanol ar wahanol bobl i'w helpu i gymryd rhan yn
   gyfartal mewn grŵp. "
 image:
-  src: /images/uploads/accessibility_orig-2-.jpg
+  src: /images/uploads/accessibility_orig-3-.jpg
   alt: A bolted, locked gate
   credit: Photo copyright Autumn Barlow/The Wildlife Trusts 2023
 category: admin-and-info
