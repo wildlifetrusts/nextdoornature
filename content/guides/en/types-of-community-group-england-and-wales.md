@@ -1,10 +1,15 @@
 ---
 title: Types of Community Group (England and Wales)
-summary: This guides explains the different types of group in England and Wales.
+summary: This guides explains the different types of community group in England
+  and Wales. It will help you decide what's best for you.
 relatedGuides:
   - Setting up a Basic Community Group
 category: admin-and-info
 Category: admin-and-info
+image:
+  src: /images/uploads/types-of-community-group.jpg
+  alt: A group of people in a room waving at the camera.
+  credit: Photo copyright Autumn Barlow/The Wildlife Trusts 2023
 customCall: "How did you decide what sort of group to be? "
 ---
 ## An Unincorporated Association
