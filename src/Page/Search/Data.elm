@@ -1,4 +1,4 @@
-module Page.Search.Data exposing (actionTeaserDecoder, actionTeaserListDecoder, getTeaserListFromSearch, guideTeaserListEncoder, guideTeaserListString, internalGuideTeaserDecoder, internalGuideTeaserListDecoder, teaserListFromGuideDict, teaserListFromStoryDict)
+module Page.Search.Data exposing (actionTeaserDecoder, actionTeaserListDecoder, getTeaserListsFromSearch, guideTeaserListEncoder, guideTeaserListString, internalGuideTeaserDecoder, internalGuideTeaserListDecoder, teaserListFromGuideDict, teaserListFromStoryDict)
 
 import Dict
 import I18n.Translate exposing (Language(..))
@@ -47,24 +47,36 @@ guideTeaserListEncoder guideTeasers =
     Encode.list guideTeaserEncoder guideTeasers
 
 
-getTeaserListFromSearch : Shared.Model -> List Page.Shared.Data.Teaser
-getTeaserListFromSearch model =
-    if String.length model.query > 0 then
-        model.search
+getTeaserListsFromSearch : Shared.Model -> SearchData
+getTeaserListsFromSearch model =
+    { actions = actionsListFromApi model.externalActions
+    , guides = teaserListFromGuideDict model.language model.content.guides
+    , stories = teaserListFromStoryDict model.language model.content.stories
+    }
+
+
+actionsListFromApi : Request -> List Page.Shared.Data.Teaser
+actionsListFromApi requestActions =
+    case requestActions of
+        Failure ->
+            []
+
+        Loading ->
+            []
+
+        Success list ->
+            list
+
+
+
+{--if String.length model.query > 0 then
+        model.searchResults
 
     else if model.language == Welsh then
         teaserListFromGuideDict model.language model.content.guides
 
-    else
-        case model.externalActions of
-            Failure ->
-                teaserListFromGuideDict model.language model.content.guides
 
-            Loading ->
-                teaserListFromGuideDict model.language model.content.guides
-
-            Success list ->
-                List.concat [ teaserListFromGuideDict model.language model.content.guides, list ]
+                --}
 
 
 teaserListFromGuideDict :

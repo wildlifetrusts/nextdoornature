@@ -183,6 +183,15 @@ cyStrings key =
         SearchTitleFiltered num query ->
             num ++ " canllawiau ar " ++ query
 
+        GuidesHeading ->
+            "[cCc]"
+
+        StoriesHeading ->
+            "[cCc]"
+
+        ActionsHeading ->
+            "[cCc]"
+
         SearchPlaceholder ->
             "Chwilio'r hwb yma"
 

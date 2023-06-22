@@ -10,7 +10,7 @@ enStrings key =
             "The Nextdoor Nature Hub"
 
         SearchMetaDescription ->
-            "[cCc] Description for the guides search page"
+            "Guides to help you. Stories to inspire you. Practical actions you can take."
 
         CallForStoryP ->
             "If you want to tell us your story, we'd love to hear from you."
@@ -180,13 +180,22 @@ enStrings key =
         -- Search Page
         ---
         SearchTitle ->
-            "Search"
+            "Take action for nature"
 
         SearchTitleFiltered num query ->
-            num ++ " guides on " ++ query
+            String.join " " [ num, "results for", query ]
 
         SearchPlaceholder ->
             "Search this hub"
+
+        GuidesHeading ->
+            "Guides: information to help you"
+
+        StoriesHeading ->
+            "Stories: real life inspiration"
+
+        ActionsHeading ->
+            "Actions: practical things you can do"
 
         ExploreGuidesListHeading ->
             "Explore guides by topic"
