@@ -13,6 +13,8 @@ video:
     Community Video"
   description: Aaron o Lincolnshire Voluntary Centre Services yn siarad am sut i
     wneud yn siŵr bod pawb yn gallu cael mynediad at eich prosiect.
+relatedGuides:
+  - How to Run a Fundraising Event
 customCall: " Sut ydych chi'n sicrhau bod eich prosiectau'n hygyrch?"
 ---
 Ni fydd yr wybodaeth yma'n ymdrin â hygyrchedd mewn digwyddiadau. Mae honno’n ddogfen ar wahân.
