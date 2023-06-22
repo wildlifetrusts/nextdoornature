@@ -27,7 +27,6 @@ export default class extends HTMLElement {
     this._input = this.firstChild;
     this._input.oninput = () => this.updateSearch();
     this.searchInput = JSON.parse(this.getAttribute("search-input"));
-    console.log("INPUT***:", this.searchInput);
     this.fuse = new Fuse(this.searchInput, searchOpts);
   }
 
