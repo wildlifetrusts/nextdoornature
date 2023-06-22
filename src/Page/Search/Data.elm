@@ -244,6 +244,12 @@ searchableFromStringDecoder itemType =
         "action" ->
             Json.Decode.succeed Shared.Action
 
+        "guide" ->
+            Json.Decode.succeed Shared.Guide
+
+        "story" ->
+            Json.Decode.succeed Shared.Guide
+
         _ ->
             Json.Decode.succeed Shared.Guide
 
