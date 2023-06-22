@@ -152,7 +152,7 @@ teaserListFromStoryDict language stories =
             (\s ->
                 { title = s.title
                 , url = Route.toString (Route.Story s.slug)
-                , summary = ""
+                , summary = s.summary
                 , maybeImage = storyImagefromTeaserImage s.images
                 }
             )

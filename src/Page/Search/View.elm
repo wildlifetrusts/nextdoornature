@@ -1,6 +1,7 @@
 module Page.Search.View exposing (view)
 
-import Css exposing (Style, batch, fontWeight, int, margin, marginBottom, padding, pct, property, rem, width)
+import Css exposing (Style, batch, fontWeight, int, margin, margin3, marginBottom, padding, pct, property, rem, width)
+import Css.Transitions exposing (columnCount)
 import Html.Styled exposing (Html, a, div, h2, h3, img, li, p, section, text, ul)
 import Html.Styled.Attributes exposing (alt, attribute, css, href, id, src)
 import I18n.Keys exposing (Key(..))
@@ -10,7 +11,7 @@ import Message exposing (Msg)
 import Page.Search.Data
 import Page.Shared.Data
 import Shared exposing (Model)
-import Theme.Global exposing (centerContent, primaryHeader, withMediaDesktopUp, withMediaMobileUp, withMediaTabletLandscapeUp, withMediaTabletPortraitUp)
+import Theme.Global exposing (centerContent, listStyleNone, primaryHeader, withMediaDesktopUp, withMediaMobileUp, withMediaTabletLandscapeUp, withMediaTabletPortraitUp)
 
 
 view : Model -> Html Msg
@@ -73,7 +74,7 @@ viewGuideStoryActionLists model =
     List.map (\viewList -> viewList)
         [ viewTeaserList ( "guides", GuidesHeading, teaserData.guides ) model.language model.query
         , viewTeaserList ( "stories", StoriesHeading, teaserData.stories ) model.language model.query
-        , viewTeaserList ( "actions", ActionsHeading, teaserData.actions ) model.language model.query
+        , viewActionsList ( "actions", ActionsHeading, teaserData.actions ) model.language model.query
         ]
 
 
@@ -84,18 +85,10 @@ viewTeaserList ( sectionId, sectionName, teasers ) language searchString =
             t : Key -> String
             t =
                 translate language
-
-            sectionHeader : String
-            sectionHeader =
-                if String.length searchString > 0 then
-                    t (SearchTitleFiltered (List.length teasers) searchString)
-
-                else
-                    ""
         in
         section [ css [ marginBottom (rem 4) ] ]
             [ h2 [ id sectionId ] [ text (t sectionName) ]
-            , h3 [] [ text sectionHeader ]
+            , h3 [] [ text (viewSectionHeader searchString t teasers) ]
             , ul [ css [ guidesPageLayoutStyle ] ]
                 (teasers
                     |> List.map
@@ -105,6 +98,41 @@ viewTeaserList ( sectionId, sectionName, teasers ) language searchString =
 
     else
         text ""
+
+
+viewActionsList : ( String, Key, List Page.Shared.Data.Teaser ) -> Language -> String -> Html Msg
+viewActionsList ( sectionId, sectionName, teasers ) language searchString =
+    if List.length teasers > 0 then
+        let
+            t : Key -> String
+            t =
+                translate language
+        in
+        section [ css [ marginBottom (rem 4) ] ]
+            [ h2 [ id sectionId ] [ text (t sectionName) ]
+            , h3 [] [ text (viewSectionHeader searchString t teasers) ]
+            , ul [ css [ actionTeasersPageLayoutStyle ] ]
+                (teasers
+                    |> List.map
+                        (\teaser ->
+                            li [ css [ listStyleNone ] ]
+                                [ a [ href teaser.url ] [ text teaser.title ]
+                                ]
+                        )
+                )
+            ]
+
+    else
+        text ""
+
+
+viewSectionHeader : String -> (Key -> String) -> List Page.Shared.Data.Teaser -> String
+viewSectionHeader searchString t teasers =
+    if String.length searchString > 0 then
+        t (SearchTitleFiltered (List.length teasers) searchString)
+
+    else
+        ""
 
 
 limitContent : String -> String
@@ -138,6 +166,22 @@ guidesPageLayoutStyle =
             ]
         , withMediaMobileUp
             [ property "grid-template-columns" "repeat(3, 1fr)"
+            ]
+        ]
+
+
+actionTeasersPageLayoutStyle : Style
+actionTeasersPageLayoutStyle =
+    batch
+        [ margin3 (rem 2) (rem 0) (rem 0)
+        , padding (rem 0)
+        , width (pct 100)
+        , withMediaTabletLandscapeUp
+            [ property "column-count" "3"
+            ]
+        , withMediaMobileUp
+            [ property "column-count" "2"
+            , property "column-gap" "2rem"
             ]
         ]
 
