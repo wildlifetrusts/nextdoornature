@@ -12,7 +12,7 @@ video:
     weithio gyda llawer o ieithoedd.
 category: admin-and-info
 relatedGuides:
-  - "Making sure everyone can access your group or project "
+  - Practical Tips for Cross-Cultural Communication
 customCall: Oes gennych chi stori i'w rhannu neu gyngor defnyddiol am weithio
   gyda llawer o ieithoedd?
 ---
