@@ -1,10 +1,15 @@
 ---
 title: "Sut i Gynnal Digwyddiad Codi Arian "
-summary: Rhestr gyflym o syniadau ac awgrymiadau ar gyfer cynnal digwyddiad codi arian
+summary: Dyma rai awgrymiadau os ydych yn ystyried cynnal digwyddiad codi arian.
+  Mae rhai syniadau i'ch helpu i ddechrau arni.
 relatedGuides:
   - Insurance for Local Groups
   - Risk Assessments
 category: admin-and-info
+image:
+  src: /images/uploads/fundraising_image.jpg
+  alt: Grŵp o bobl mewn cyfarfod y tu mewn.
+  credit: Photo copyright Autumn Barlow/The Wildlife Trusts 2023
 video:
   id: kpYYHd-mSgE
   title: "Sut i Gynnal Digwyddiad Codi Arian: Fideo Cymunedol Natur Drew Nesaf"

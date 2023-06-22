@@ -1,10 +1,11 @@
 ---
 title: "Running a Group Session: How to Get Started"
-summary: Advice about how to run a group session and facilitate a meeting.
+summary: Advice about how to run a group session and facilitate a meeting. What
+  does facilitation mean, and how can you make sure your meetings run well?
 Category: working-with-people
 image:
   src: /images/uploads/ndn_tongueend_3-2-.jpg
-  alt: A group of people in a hall having a meeting around a table
+  alt: A group of people in a hall having a meeting around a table.
   credit: Photo Autumn Barlow 2022 The Wildlife Trusts
 relatedGuides:
   - Types of Community Group (England and Wales)

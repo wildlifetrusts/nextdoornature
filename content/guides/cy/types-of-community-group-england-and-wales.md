@@ -1,6 +1,11 @@
 ---
 title: Mathau o Grwpiau Cymunedol (Cymru a Lloegr)
-summary: "Mathau o Grwpiau Cymunedol (Cymru a Lloegr).          "
+summary: Mae'r canllaw hwn yn esbonio'r gwahanol fathau o grwpiau cymunedol yng
+  Nghymru a Lloegr. Bydd yn eich helpu i benderfynu beth sydd orau i chi.
+image:
+  src: /images/uploads/types-of-community-group.jpg
+  alt: Grŵp o bobl mewn ystafell yn chwifio at y camera.
+  credit: Photo copyright Autumn Barlow/The Wildlife Trusts 2023
 relatedGuides:
   - Setting up a Basic Community Group
 category: admin-and-info

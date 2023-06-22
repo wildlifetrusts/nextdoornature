@@ -1,257 +1,200 @@
 ---
-title: "Running a Group Session: How to Get Started"
-summary: Advice about how to run a group session and facilitate a meeting
+title: "Cynnal Sesiwn Grŵp: Sut i Ddechrau Arni"
+summary: Cyngor ar sut i redeg sesiwn grŵp a hwyluso cyfarfod. Beth mae hwyluso
+  yn ei olygu, a sut allwch chi sicrhau bod eich cyfarfodydd yn rhedeg yn dda?
 image:
   src: /images/uploads/ndn_tongueend_3-2-.jpg
-  alt: A group of people in a hall having a meeting around a table
+  alt: Grŵp o bobl mewn neuadd yn cyfarfod o amgylch bwrdd.
   credit: Photo Autumn Barlow 2022 The Wildlife Trusts
 video: null
 relatedGuides:
   - Types of Community Group (England and Wales)
   - Setting up a Basic Community Group
-customCall: Have you run group sessions or meetings?
+customCall: Ydych chi wedi cynnal sesiynau grŵp neu gyfarfodydd?
 ---
 
 
-This advice is for communities who are starting to come together and hold meetings. How do you make sure everyone gets listened to? How do you make it worth your time? How do you get to a decision?
+Mae’r cyngor hwn ar gyfer cymunedau sy’n dechrau dod at ei gilydd a chynnal cyfarfodydd. Sut ydych chi'n sicrhau bod pawb yn cael gwrandawiad? Sut ydych chi'n ei wneud yn werth eich amser? Sut mae dod i benderfyniad?
 
 
+Mae'r canllaw hwn yn hir. Mae wedi’i rannu i’r adrannau canlynol:
 
-This guide is long. It is split into the following sections:
 
+* Cyflwyniad
+* Beth mae hwylusydd yn ei wneud?
+* Pwy all fod yn hwylusydd?
+* Gall pobl eraill yn y cyfarfod gymryd swyddi
+* Paratoi'r cyfarfod
+* Dechrau'r cyfarfod
+* Yn ystod y cyfarfod
+* Ar ddiwedd y cyfarfod
+* Adnoddau eraill
 
 
-* Introduction
-* What does a facilitator do?
-* Who can be a facilitator?
-* Other people at the meeting can take on jobs
-* Preparing the meeting
-* Starting the meeting
-* During the meeting
-* At the end of the meeting
-* Other resources
+## Cyflwyniad 
 
 
+Gall fod yn anodd cael grŵp o bobl i gytuno ar beth i'w wneud. Y ffordd arferol, neu draddodiadol, yw gwneud un person yn arweinydd – a elwir yn aml yn gadeirydd. Mae'r cadeirydd yn gwrando ar bawb arall ac wedyn maent yn gwneud penderfyniad neu mae pleidlais. Y broblem gyda hyn yw mai'r bobl sy'n hyderus i siarad neu sy'n siarad y mwyaf neu uchaf fydd yn cael eu clywed. Ond nid yw pobl dawel, sydd hefyd â syniadau da, yn cael rhannu.
 
-## Introduction
 
+Mae'r canllaw yma’n ymwneud â ffordd well.
 
 
-It can be hard to get a group of people to agree on what to do. The usual, or traditional, way is to make one person a leader – often called the chair or chairperson. The chair listens to everyone else then they make a decision or there is a vote. The problem with this is that people who are confident at speaking or who speak the most or the loudest will be heard. But quiet people, who also have good ideas, don’t get to share.
+Yn lle cadeirydd, rydych chi’n cael “hwylusydd.” Nid yw wrth y llyw. Mae’n gwneud yn siŵr bod pawb yn cael eu clywed yn deg.
 
 
+Gelwir hyn yn “wneud penderfyniadau cytûn”. Mae hyn yn golygu bod pawb yn cael penderfynu a chytuno ar y canlyniadau.
 
-This guide is about a better way. 
 
+Mae “agenda” yn rhestr o bethau y mae’r bobl yn y cyfarfod eisiau eu trafod. Yn aml, bydd yr hwylusydd yn gofyn i bobl ymlaen llaw a oes unrhyw beth maent eisiau siarad amdano, ac wedyn bydd yr hwylusydd yn “pennu’r agenda”. Bydd yn ei hanfon at bawb cyn y cyfarfod. Bydd rhywfaint o amser ar y diwedd o’r enw “unrhyw fater arall”.
 
 
-Instead of a chair, there is a “facilitator.” They are not in charge. They just make sure that everyone gets heard fairly.
+Daw “pwynt gweithredu” o’r drafodaeth ac mae’n golygu bod angen gwneud rhywbeth. Mae'n cael ei ysgrifennu yn y cofnodion ynghyd â'r person sy'n gorfod ei wneud, a'r dyddiad y bydd yn ei wneud.
 
 
+Mae “cofnodion” yn nodiadau o'r hyn a ddywedwyd. Gallant hefyd sicrhau bod pwyntiau gweithredu’n cael eu hysgrifennu'n gywir a bod y person cywir yn cael y swydd.
 
-This is called “consensus decision making.” This means that everyone gets to decide and agree on the outcomes. 
 
+## Beth mae hwylusydd yn ei wneud?
 
 
-An “agenda” is a list of things that the people at the meeting want to discuss. Often, the facilitator will ask people beforehand if there is anything they want to talk about, and then the facilitator “sets the agenda”. They will send it to everyone before the meeting. There will be some time at the end called “AOB” or “any other business.”
+Mae'r hwylusydd yn cadw amser fel bod gan bopeth ar yr agenda ddigon o amser i gael ei drafod yn iawn.
 
 
+Mae’r hwylusydd yn sicrhau bod pawb yn cael cyfle i siarad, ac nad  oes un person yn siarad gormod. Mae awgrymiadau ar gyfer gwneud hyn isod.
 
-An “action point” comes out of the discussion and it means that something needs to be done. It is written down along with the person who has to do it, and the date they will do it.
 
+Gall yr hwylusydd grynhoi'r pwyntiau allweddol a'u hailadrodd i'r grŵp. Mae hyn yn sicrhau bod pawb yn deall cyn iddynt wneud penderfyniad.
 
 
-“Minutes” are notes of what has been said. They can also make sure that action points are properly written down and the right person is given the job.
+Mae'r hwylusydd yn cadw llygad am wrthdaro ac yn helpu'r grŵp i ddelio ag ef.
 
 
+Mae'r hwylusydd yn sicrhau bod unrhyw bwyntiau gweithredu a phenderfyniadau'n cael eu hysgrifennu, ond efallai y bydd yn gofyn i rywun arall ysgrifennu.
 
-## What does a facilitator do?
 
+Cyn y cyfarfod, mae angen i'r hwylusydd wirio hygyrchedd. Os yw’r cyfarfod ar-lein, ydi hynny’n addas i bawb? Oes angen capsiynau caeedig? Os yw'r cyfarfod yn un wyneb yn wyneb, oes stepiau? Toiledau hygyrch? Cyfleuster newid babanod? Oes ffordd o gael pobl i fynychu ar-lein hefyd?
 
 
-The facilitator keeps the timings so that everything on the agenda has enough time to be discussed properly. 
+## Pwy all fod yn hwylusydd?
 
 
+Unrhyw un! Ond peidiwch â chymryd yn ganiataol ei fod yn “hawdd” neu y gall rhai pobl ei wneud yn “naturiol.”
 
-The facilitator makes sure everyone has a chance to speak, and one person doesn’t speak too much. Tips for doing this are below.
 
+Mae'n sgil y gallwch chi ei dysgu, a gallwch chi wella arni.
 
 
-The facilitator might sum up the key points and repeat them to the group. This checks that everyone understands before they make a decision.
+Mae’n dda gadael i wahanol bobl yn y grŵp fod yn hwylusydd a chymryd eu tro. Efallai y gallwch ddod o hyd i hyfforddiant arno - siaradwch â'ch rhwydwaith Gwasanaethau Gwirfoddol lleol.
 
 
+Gallwch ddysgu sut i fod yn hwylusydd da drwy fod mewn cyfarfodydd a gwylio a gwrando. Beth sy'n mynd yn dda? Sut gallai pethau fod yn well?
 
-The facilitator watches for conflict and helps the group deal with it.
 
+Bydd arnoch chi angen y sgiliau hanfodol yma, ond gall unrhyw un wella ar y pethau hyn:
 
 
-The facilitator makes sure that any action points and decisions are written down, but they might ask someone else to do the writing.
+* Parchu pawb – dangos diddordeb ym mhawb ond byddwch yn niwtral. Ni allwch gymryd ochr. Os yw'n rhywbeth rydych chi'n teimlo'n gryf yn ei gylch, gwnewch hynny’n glir pan fyddwch chi'n mynegi barn. Os yw'n bwnc pwysig iawn i chi yna dylech gamu o'r neilltu a gadael i rywun arall hwyluso.
+* Sgiliau gwrando da – defnyddiwch gwestiynau agored. Dim ond gydag “ie” neu “na” y gellir ateb cwestiwn caeedig (Ydych chi'n hoffi cacen?) ond mae'n rhaid ateb cwestiwn agored gyda gwybodaeth (Beth ydych chi'n hoffi ei fwyta?)
+* Pendantrwydd a hyder – weithiau bydd rhaid i chi fod yn gadarn gyda phobl.
+* Talu sylw i'r hyn sy'n digwydd. Os oes gennych chi niwroamrywiaeth neu sgiliau meddwl gwahanol, efallai y bydd angen i chi ddefnyddio rhai o'ch mecanweithiau ymdopi arferol i'ch helpu i aros ar y trywydd iawn ond ni ddylai hyn eich atal chi rhag bod yn hwylusydd da.
 
 
+## Gall pobl eraill yn y cyfarfod gael swyddi hefyd       
 
-Before the meeting, the facilitator needs to check accessibility. If the meeting is online, is that suitable for everyone? Does there need to be closed captions? If the meeting is in person, are there steps? Accessible toilets? A baby change facility? Is there a way of having people attend online too? 
 
+Ceidwad amser – i fod yng ngofal yr agenda a sicrhau bod y trafodaethau’n cadw at yr amseriadau.
 
 
-## Who can be a facilitator?
+Cymryd cofnodion – i wneud nodiadau o bopeth sy'n cael ei ddweud.
 
 
+Ceidwaid drysau – defnyddiol mewn cyfarfodydd mawr neu rai sy’n agored i’r cyhoedd. Os bydd rhywun yn cyrraedd yn hwyr, gall ceidwad y drws eu cyfarch, dweud wrthynt bod y cyfarfod wedi dechrau, a'u hebrwng i sedd heb darfu ar y cyfarfod.
 
-Anyone! But don’t assume that it is “easy” or that some people can do it “naturally.”
 
-It is a skill that you can learn, and you can get better at. 
+## Paratoi ar gyfer cyfarfod  
 
 
+Gallwch rannu'r tasgau hyn. Nid oes angen i'r hwylusydd wneud popeth. Gwnewch yn siŵr eich bod yn nodi pwy sy'n gwneud beth.
 
-It is good to let different people in the group be a facilitator and take it in turns. You might be able to find training on it – speak to your local Voluntary Services network.
 
+Chwilio am le i gyfarfod (“lleoliad”).
 
 
-You can learn how to be a good facilitator by just being in meetings and watching and listening. What is going well? How could things be better?
+Cytuno ar yr amser gorau i gyfarfod (oes angen i bobl ofalu am eu plant? Ydi pobl yn gweithio? Bydd angen i chi feddwl am y bobl sy'n dod, a siarad â nhw am yr amser gorau i'r rhan fwyaf o bobl, ond does dim posib plesio pawb).
 
 
+Gwnewch yn siŵr ei fod yn hygyrch i bawb.
 
-You will need these essential skills, but anyone can get better at these things:
 
+Paratowch yr agenda.
 
-* Respect everyone – be interested in everyone but be neutral. You cannot take sides. If it is something you feel strongly about, make it clear when you are expressing an opinion. If it is a very important topic to you then you should step aside and let someone else facilitate.
-* Good listening skills – use open questions. A closed question can only be answered with “yes” or “no” (Do you like cake?) but an open question has to be answered with information (What do you like to eat?)
-* Assertiveness and confidence – sometimes you will have to be firm with people.
-* Paying attention to what is going on. If you have neurodivergency or different thinking skills, you may need to draw on some of your established coping mechanisms to help you stay on track but this should not stop you being a good facilitator.
 
+Casglwch unrhyw ddeunyddiau sydd eu hangen. Oes angen fflipsiart, beiros, camera?
 
+Rhaid cael hwylusydd wrth gefn! Peidiwch â dibynnu ar un person. Mae pethau'n digwydd!
 
-## Other people at the meeting can take on jobs, too
 
+## Dechrau’r cyfarfod
 
 
-Timekeeper – they will have the agenda and make sure discussions stick to the timings
+Rhaid estyn croeso i bawb a rhoi gwybod i bobl ble mae'r toiledau a'r allanfeydd tân.
 
+Bydd rhai pobl yn cael sesiwn torri'r garw ar y pwynt hwn. Mae hyn yn dibynnu ar eich grŵp chi, gan fod llawer o bobl yn dweud nad ydynt yn ei hoffi. Fodd bynnag, cynigiwch gyfle i bawb gyflwyno eu hunain o leiaf. Gall fod yn ddefnyddiol cyflwyno eich hun yn gyntaf, gosod y patrwm, a chynnig rhagenw (beth ydych chi? Hi? Fo? Nhw? neu ragenw arall?) ond gwnewch yn glir nad oes angen i bobl gynnig eu rhai eu hunain, oherwydd ni fydd rhai pobl yn teimlo'n gyfforddus yn gwneud hynny.
 
 
-Minute takers – they take notes of everything that is said
+Gosodwch rai canllawiau. Dywedwch wrth bawb beth yw pwrpas y cyfarfod ac eglurwch sut bydd y cyfarfod yn cael ei gynnal, ac os ydych chi wedi argraffu agenda, ewch ati i’w dosbarthu. Cytunwch gyda'r grŵp os oes rhyw ymddygiad nad yw'n dderbyniol. Gallwch ysgrifennu'r cytundeb grŵp fel bod pawb yn gallu ei weld.
 
 
+## Yn ystod y cyfarfod
 
-Doorkeepers – useful in large meetings or ones that are open to the public. If someone arrives late, the doorkeeper can greet them, tell them the meeting has started, and show them to a seat without disturbing the meeting.
 
+Os nad oes gennych chi geidwad amser ar wahân, chi fydd yn cadw'r cyfarfod ar y trywydd iawn.
 
 
-## Preparing for a meeting
+Ewch drwy'r agenda fesul un.
 
 
+Gwnewch yn siŵr bod y pwyntiau gweithredu’n cael eu hysgrifennu a bod rhywun yn cael y dasg. Ond cadwch lygad ar hyn - peidiwch â gadael i bopeth fod yn gyfrifoldeb un person.
 
-You can split these jobs up. The facilitator doesn’t need to do everything. Make sure you note who is doing what.
+Gwnewch yn siŵr bod pawb yn dal ati i siarad a gwnewch yn siŵr bod pawb yn cael eu clywed. Efallai y bydd angen i chi ofyn i rywun sydd wedi gwneud llawer o siarad adael i rywun arall siarad yn gyntaf.
 
 
+Byddwch yn gadarnhaol a gadewch i bawb wybod eu bod yn cael eu gwerthfawrogi.
 
-Find a place to meet (“venue”).
 
+Heriwch iaith wahaniaethol a niweidiol ar unwaith, ond yn barchus. Tynnwch sylw at yr ymddygiad, nid y person.
 
 
-Agree on the best time to meet (do people need to look after their children? Do people work? You will need to think about the people who are coming, and talk to them about the best time for the most people, but you can never make absolutely everyone happy).
+## Ar ddiwedd y cyfarfod 
 
 
+Gwnewch yn siŵr bod y cofnodion neu'r nodiadau wedi'u hysgrifennu ac y byddant yn cael eu hanfon at bawb a oedd yn y cyfarfod.
 
-Make sure it is accessible for everyone.
 
+Cytunwch ar amser a lle ar gyfer y cyfarfod nesaf.
 
 
-Prepare the agenda.
+Crynhowch bopeth os gallwch chi. Atgoffwch bawb sydd wedi cael tasg – pwynt gweithredu – o’r hyn maent wedi cytuno i’w wneud.
 
 
+Gallech ofyn am werthusiad – mae hyn yn golygu gofyn i bobl beth aeth yn dda yn y cyfarfod a beth allai fod yn well.
 
-Gather any materials that are needed. Do you need a flipchart, pens, a camera?
 
+Mae'n braf gorffen gyda rhywbeth cymdeithasol. Rhannu pryd o fwyd neu ychydig o luniaeth, er enghraifft.
 
 
-Have a back-up facilitator! Don’t rely on one person. Things happen!
+## Gwybodaeth arall 
 
 
+Mae adnodd da iawn [yma ar Seeds For Change.](https://www.seedsforchange.org.uk/facilitationmeeting) Mae hefyd yn cynnwys cyngor ar sut i grynhoi / cloi, sut i wrando, a sut i weithio gyda grwpiau mwy. Mae’n cynnwys help hefyd pan fydd pethau’n mynd o chwith.
 
-## Starting the meeting
 
+Hefyd [mae gan y wefan Seeds for Change](https://www.seedsforchange.org.uk/tools) dudalen o adnoddau ar gyfer cyfarfodydd. Mae'r rhain yn weithgareddau a ffyrdd o gynnal cyfarfod.
 
 
-Welcome everyone and let people know where the toilets and fire exits are. 
+Mae crynodeb byr o gynnal [cyfarfod ar gael yma.](https://www.ksl-training.co.uk/free-resources/facilitation-techniques/tips-for-facilitating-groups/) Mae hwn yn ddefnyddiol i'ch atgoffa chi o'r pwyntiau allweddol.
 
 
-
-Some people will do an icebreaker at this point. This depends on your group as many people say they dislike them. At least, however, offer everyone the chance to introduce themselves. It can be helpful to introduce yourself first, to set the pattern, and to offer your pronouns (are you she? He? They? Or another pronoun?) but make it clear that people do not need to offer their own, as some people will not feel comfortable doing that.
-
-
-
-Set some guidelines. Tell everyone what the meeting is about and explain how the meeting will run, and if you have printed off an agenda, give that out. Agree with the group if there is some behaviour that is not acceptable. You can write up the group agreement so everyone can see it. 
-
-
-
-## During the meeting
-
-
-
-If you don’t have a separate timekeeper, you will keep the meeting on track.
-
-
-
-Go through the agenda one by one.
-
-
-
-Make sure that action points are written down and that someone is given the task. But keep an eye on this – don’t let everything fall onto one person.
-
-
-
-Keep everyone talking and make sure that everyone gets heard. You might need to ask someone who has done a lot of talking to let someone else speak first.
-
-
-
-Be positive and let everyone know that they are appreciated.
-
-
-
-Challenge discriminatory and hurtful language immediately, but respectfully. Call out the behaviour, not the person. 
-
-
-
-## At the end of the meeting
-
-
-
-Make sure that the minutes or notes are written up and will be sent to everyone who was at the meeting.
-
-
-
-Agree a time and place for the next meeting.
-
-
-
-Sum everything up if you can. Remind everyone who has been given a job – an action point – of what they have agreed to do.
-
-
-
-You could ask for evaluation – this just means ask people what went well about the meeting and what could be better.
-
-
-
-It’s nice to finish on something social. Sharing a meal or some refreshments, for example.
-
-
-
-## Other information
-
-
-
-A really good resource is here on [Seeds For Change.](https://www.seedsforchange.org.uk/facilitationmeeting) It also has advice on how to summarise/sum up, how to listen, and how to work with larger groups. It also has help for when things go wrong.
-
-
-
-The Seeds for Change website also has a [page of tools](https://www.seedsforchange.org.uk/tools) for meetings. These are activities and ways of running a meeting.
-
-
-
-A short summary of running a [meeting is here.](https://www.ksl-training.co.uk/free-resources/facilitation-techniques/tips-for-facilitating-groups/) This is a useful reminder of the key points.
-
-
-
-[Bradford VTS](https://www.bradfordvts.co.uk/teaching-learning/facilitating-groups/) is a difficult website to use, but they have a great list of resources.
+Mae [Bradford VTS yn wefan anodd](https://www.bradfordvts.co.uk/teaching-learning/facilitating-groups/) ei defnyddio, ond mae ganddyn nhw restr wych o adnoddau.
 
