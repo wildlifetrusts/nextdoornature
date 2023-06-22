@@ -1,17 +1,22 @@
 ---
 title: How to Run a Fundraising Event
-summary: A quick list of ideas and hints for running a fundraising event
-relatedGuides:
-  - Insurance for Local Groups
-  - Risk Assessments
-category: media-publicity-events
+summary: Here are some hints if you are thinking of running a fundraising event.
+  There are some ideas to help you get started.
 Category: media-publicity-events
+image:
+  src: /images/uploads/fundraising_image.jpg
+  alt: A group of people in a meeting inside.
+  credit: Photo copyright Autumn Barlow/The Wildlife Trusts 2023
 video:
   id: kpYYHd-mSgE
   title: "How to Run a Fundraising Event: A Nextdoor Nature Community Video"
   description: Aaron from Lincolnshire Voluntary Centre Services talks about
     running a fundraising event.
+relatedGuides:
+  - Insurance for Local Groups
+  - Risk Assessments
 customCall: How do you fundraise?
+category: media-publicity-events
 ---
 This advice is for you if you are planning a one-off event to raise money. If you want to apply for funding, see our other resources.
 
