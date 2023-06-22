@@ -1,6 +1,7 @@
 module Page.Search.View exposing (view)
 
 import Css exposing (Style, batch, fontWeight, int, margin, margin3, marginBottom, padding, pct, property, rem, width)
+import Css.Transitions exposing (columnCount)
 import Html.Styled exposing (Html, a, div, h2, h3, img, li, p, section, text, ul)
 import Html.Styled.Attributes exposing (alt, attribute, css, href, id, src)
 import I18n.Keys exposing (Key(..))
@@ -10,7 +11,7 @@ import Message exposing (Msg)
 import Page.Search.Data
 import Page.Shared.Data
 import Shared exposing (Model)
-import Theme.Global exposing (centerContent, primaryHeader, withMediaDesktopUp, withMediaMobileUp, withMediaTabletLandscapeUp, withMediaTabletPortraitUp)
+import Theme.Global exposing (centerContent, listStyleNone, primaryHeader, withMediaDesktopUp, withMediaMobileUp, withMediaTabletLandscapeUp, withMediaTabletPortraitUp)
 
 
 view : Model -> Html Msg
@@ -114,8 +115,9 @@ viewActionsList ( sectionId, sectionName, teasers ) language searchString =
                 (teasers
                     |> List.map
                         (\teaser ->
-                            p []
-                                [ a [ css [ fontWeight (int 600) ], href teaser.url ] [ text teaser.title ] ]
+                            li [ css [ listStyleNone ] ]
+                                [ a [ href teaser.url ] [ text teaser.title ]
+                                ]
                         )
                 )
             ]
@@ -175,12 +177,11 @@ actionTeasersPageLayoutStyle =
         , padding (rem 0)
         , width (pct 100)
         , withMediaTabletLandscapeUp
-            [ property "grid-template-columns" "repeat(3, 1fr)"
+            [ property "column-count" "3"
             ]
         , withMediaMobileUp
-            [ property "display" "grid"
-            , property "gap" "0rem 2rem"
-            , property "grid-template-columns" "repeat(2, 1fr)"
+            [ property "column-count" "2"
+            , property "column-gap" "2rem"
             ]
         ]
 
