@@ -10,7 +10,7 @@ import Message exposing (Msg)
 import Page.Search.Data
 import Page.Shared.Data
 import Shared exposing (Model)
-import Theme.Global exposing (centerContent, contentWrapper, primaryHeader, withMediaDesktopUp, withMediaMobileUp, withMediaTabletLandscapeUp, withMediaTabletPortraitUp)
+import Theme.Global exposing (centerContent, primaryHeader, withMediaDesktopUp, withMediaMobileUp, withMediaTabletLandscapeUp, withMediaTabletPortraitUp)
 
 
 view : Model -> Html Msg
@@ -88,12 +88,7 @@ viewTeaserList ( sectionId, sectionName, teasers ) language searchString =
             sectionHeader : String
             sectionHeader =
                 if String.length searchString > 0 then
-                    let
-                        numberOfResultsString : String
-                        numberOfResultsString =
-                            String.fromInt (List.length teasers)
-                    in
-                    t (SearchTitleFiltered numberOfResultsString searchString)
+                    t (SearchTitleFiltered (List.length teasers) searchString)
 
                 else
                     ""

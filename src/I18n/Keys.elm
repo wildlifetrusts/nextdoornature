@@ -59,7 +59,7 @@ type Key
       --- Search Page
     | SearchTitle
     | SearchMetaDescription
-    | SearchTitleFiltered String String
+    | SearchTitleFiltered Int String
     | GuidesHeading
     | StoriesHeading
     | ActionsHeading
