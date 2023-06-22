@@ -98,12 +98,20 @@ guideMetadataFromSlug slug contentDict =
         Just content ->
             Just
                 { title = content.title
-                , description = content.summary
+                , description = shortDescriptionFromSummary content.summary
                 , imageSrc = imageSrcFromMaybeImage content.maybeImage
                 }
 
         Nothing ->
             Nothing
+
+
+shortDescriptionFromSummary : String -> String
+shortDescriptionFromSummary summary =
+    (List.head (String.split "." summary)
+        |> Maybe.withDefault summary
+    )
+        ++ "."
 
 
 storyMetadataFromSlug :
