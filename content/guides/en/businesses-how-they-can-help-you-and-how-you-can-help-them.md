@@ -1,11 +1,12 @@
 ---
 title: Businesses - How They Can Help You (and how you can help them)
-summary: How groups and charities can work with local businesses, how to
-  approach them and what to offer them.
+summary: "How groups and charities can work with local businesses, how to
+  approach them and what to offer them. "
 Category: admin-and-info
 image:
   src: /images/uploads/support-from-business_orig-3-.jpg
   alt: A pile of coins surrounded by plants
+  credit: Photo copyright Autumn Barlow/The Wildlife Trusts 2023
 relatedGuides:
   - "Finding Funding "
 customCall: Have you worked with a local business?

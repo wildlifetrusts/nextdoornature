@@ -1,128 +1,108 @@
 ---
-title: Businesses - How They Can Help You (and how you can help them)
-summary: How groups and charities can work with local businesses, how to
-  approach them and what to offer them
+title: "Busnesau: Sut Gallant Eich Helpu Chi (a sut gallwch chi eu helpu hwy)"
+summary: Sut y gall grwpiau ac elusennau weithio gyda busnesau lleol, sut i fynd
+  atynt a beth i'w gynnig iddynt.
 image:
   src: /images/uploads/support-from-business_orig-3-.jpg
-  alt: A pile of coins surrounded by plants
+  alt: Pentwr o ddarnau arian wedi'u hamgylchynu gan blanhigion
+  credit: Photo copyright Autumn Barlow/The Wildlife Trusts 2023
 video: null
 relatedGuides:
   - "Finding Funding "
-customCall: Have you worked with a local business?
+customCall: Ydych chi wedi gweithio gyda busnes lleol?
 ---
-Local groups, voluntary organisations and small charities can all work together with businesses. Here’s how to get started.
 
 
+Gall grwpiau lleol, sefydliadau gwirfoddol ac elusennau bychain gydweithio â busnesau. Dyma sut i ddechrau arni.
 
-## What does it mean?
 
+## Beth mae hyn yn ei olygu?
 
 
-You can ask a business for money to help you with an event. This will usually be called “sponsorship.” You can ask for ongoing help over time. This might be called a “charity partnership”.
+Gallwch ofyn i fusnes am arian i'ch helpu gyda digwyddiad. Gelwir hyn fel arfer yn “nawdd.” 
+Gallwch ofyn am help parhaus dros amser. Gallai hyn gael ei alw’n “bartneriaeth elusen”.
 
 
+Gallai’r busnes gael ei alw’n “gefnogwr corfforaethol”, “partner cyllido” neu’n “gyfranogwr masnachol.” Gelwir yr elusen neu’r grŵp yn “bartner elusennol.”
 
-The business might be called a “corporate supporter”, “funding partner” or “commercial participator.” The charity or group will be called the “charity partner.”
 
+Dylai fod gennych Gytundeb Cyfranogiad Masnachol os yw busnes yn codi arian i chi drwy werthiant, gan eu bod yn “codi arian” i chi. [Edrychwch ar Work For Good yma](https://workforgood.co.uk/work-for-good-blog/how-businesses-can-support-a-charity-and-why-they-may-need-a-commercial-participation-agreement/#:~:text=Known%20as%20a%20'commercial%20participator,proceeds%20will%20go%20to%20charity) am fersiwn hawdd (ond byddwch yn ymwybodol eu bod yn ceisio eich cael chi i gofrestru - nid oes angen i chi wneud hynny). Mae’r [canllawiau swyddogol yma](https://www.dsc.org.uk/wp-content/uploads/2016/11/StandardFormofAgreementGuidanceNotes.doIoF-c.pdf) ac [yma.](https://www.fundraisingregulator.org.uk/code/working-with-others/professional-fundraisers-commercial-participators-and-partners) (Sylwer NAD yw'r rhwymedigaeth gyfreithiol yn berthnasol i Ogledd Iwerddon).
 
 
-You should have a Commercial Participation Agreement if a business is raising money for you through sales, as they are “fundraising” for you. See Work For Good [here](https://workforgood.co.uk/work-for-good-blog/how-businesses-can-support-a-charity-and-why-they-may-need-a-commercial-participation-agreement/) for an easy version (but be aware they are trying to get you to sign up – you don’t need to). The official guidance is [here](https://www.dsc.org.uk/wp-content/uploads/2016/11/StandardFormofAgreementGuidanceNotes.doIoF-c.pdf) and [here.](https://www.fundraisingregulator.org.uk/code/working-with-others/professional-fundraisers-commercial-participators-and-partners) (Note the legal obligation does NOT apply to Northern Ireland).
+## I ba fath o fusnesau ddylem ni ofyn?  
 
 
+Mae gan bob cwmni y potensial i'ch cefnogi, mawr neu fach, cenedlaethol neu leol. Peidiwch â phoeni am gysylltu â chwmnïau cenedlaethol neu ryngwladol mwy gyda swyddfeydd lleol. Mae ganddynt gysylltiad lleol â'ch ardal o hyd a byddant yn cyflogi llawer o bobl leol. Meddyliwch am fusnesau mawr fel y rhain:
 
-## What sort of businesses should we ask?
 
+* Brandiau bwyd fel Greggs, Muller, Heinz, Pepsico
+* Diwydiannau mawr fel gweithgynhyrchwyr ceir
+* TG a meddalwedd fel Sage, DXC a mwy.
 
 
-All companies have the potential to support you, large or small, national or local. Don’t be worried about approaching larger national or international companies with local offices.
+Gall fod yn haws ffurfio perthynas â chwmnïau llai, neu ganghennau bychain o gwmnïau mawr, ond efallai na fyddant yn gallu cynnig cymorth ariannol. Ond meddyliwch am fathau eraill o gymorth - gall cwmni technoleg helpu gyda hyfforddiant neu offer, er enghraifft.
 
-They still have a local connection to your area and will employ lots of local people. Think about big businesses like these:
 
+## Sut mae dod o hyd iddyn nhw? 
 
 
-* Food brands such as Greggs, Muller, Heinz, Pepsico
-* Big industry like car manufacturers
-* IT and software such as Sage, DXC and more.
+Edrychwch ar fap – beth sydd yn eich ardal chi? Mae chwilio am fusnesau, boed fawr neu fach, o amgylch eich ardal yn fan cychwyn gwych ar gyfer ymchwil ac yn helpu i adeiladu rhestr o gwmnïau posibl i’w holi. Os ydyn nhw'n lleol iawn i chi, efallai bod gennych chi gysylltiadau eisoes drwy ffrindiau neu eich cyflogaeth eich hun. Gofynnwch yn eich grŵp. Efallai bod rhywun yn adnabod neu'n perthyn i rywun mewn busnes lleol.
 
 
+Gallwch gwrdd â busnesau mewn digwyddiadau rhwydweithio lleol. Ewch i weld eich [Siambr Fasnach](https://www.britishchambers.org.uk/) (mae'n haws gwglo “siambr fasnach” ac enw eich tref). Chwiliwch hefyd am glybiau [Busnes dros Frecwast.](https://www.bobclubs.com/)
 
-Smaller companies, or small branches of large companies, can be easier to form a relationship with, but may not be able to offer monetary support. But think about other forms of support - a tech company can help with training or equipment, for example.
 
+Edrychwch ar bwy sy’n hysbysebu yn y wasg leol a chylchgronau am ddim, a chadwch eich llygaid ar agor wrth i chi fynd o gwmpas – ewch am dro o amgylch stad ddiwydiannol neu ardal fenter leol a byddwch yn synnu at ba gwmnïau sydd yno nad oeddech yn gwybod eu bod yn bodoli.
 
 
-## How do we find them?
+Deilliodd y [National Business Response Network](https://nbrn.org.uk/) o bandemig Covid-19. Maent yn uno busnesau â grwpiau cymunedol sydd angen cymorth. Maen nhw’n dweud: “Mae pob sefydliad sy’n canolbwyntio ar wneud gwahaniaeth cadarnhaol yn y gymuned yn gymwys. Os ydych chi’n sefydliad nid-er-elw, elusen, cymuned neu sefydliad gwirfoddol, cofrestrwch eich diddordeb, a bydd aelod o’r tîm yn gweithio gyda chi i weld sut gallwn gefnogi eich anghenion.” Mae’n rhan o sefydliad [Busnes yn y Gymuned / Rhwydwaith Busnes Cyfrifol y Tywysog.](https://www.bitc.org.uk/national-business-response-network-2023/)  
 
 
+Edrychwch hefyd ar [Neighbourly,](https://www.neighbourly.com/faqs) sef platfform digidol sy'n cysylltu busnesau â sefydliadau lleol. Maen nhw’n dweud, “Rydym yn helpu busnesau i gael effaith gadarnhaol yn eu cymunedau drwy gyfrannu amser gwirfoddolwyr, arian a chynnyrch dros ben i achosion lleol, i gyd mewn un lle.” Os nad ydych chi’n elusen gofrestredig neu’n CBC, gallwch ofyn am help nad yw’n arian yr un fath – gallwch ofyn am amser gwirfoddolwyr, cynnyrch dros ben neu gyngor.
 
-Look at a map – what’s in your area? Looking for businesses, whether large or small, around your area is a great starting point for research and helps to build a list of potential companies to approach. If they are very local to you, you might have connections already through friends or your own employment. Ask in your group. Someone might know or be related to someone in a local business. 
 
+## Am beth ddylem ni ofyn?
 
 
-You can meet businesses at local networking events. See your [Chamber of Commerce](https://www.britishchambers.org.uk/) (it is easiest to google “chamber of commerce” and your town name). Also look for [Business over Breakfast](https://www.bobclubs.com/) clubs.
+Nid oes rhaid i gymorth busnes fod yn ariannol. Gallech ofyn am hyfforddiant, profiad gwaith, man cyfarfod, neu roddion ar ffurf eitemau. Gallai hyn fod yn adnoddau, offer technoleg neu fwy.
 
 
+Gall busnesau annog cyflogeion i godi arian drwy ddigwyddiadau ac elusennau ac mae hyn yn arbennig o effeithiol pan ymgynghorir â’r cyflogeion ynghylch pa grŵp lleol i’w gefnogi, neu pan fydd ganddynt gysylltiad personol.
 
-Look at who is advertising in local press and free magazines, and simply keep your eyes open as you go around – have a walk around an industrial estate or local enterprise zone and you’ll be surprised at what companies are there that you didn’t know existed. 
 
+## Beth allwn ni ei gynnig iddynt?
 
 
-The [National Business Response Network](https://nbrn.org.uk/) came out of the Covid-19 pandemic. They join businesses with community groups who need support. They say: “All organisations focused on making a positive difference in the community are eligible. Whether you are a non-profit, charity, community, or voluntary organisation, register your interest, and a team member will work with you to see how we can support your needs.” It’s part of [The Business in the Community organisation/The Prince’s Responsible Business Network.](https://www.bitc.org.uk/national-business-response-network-2023/) 
+Mae angen i chi eu perswadio sut gallwch fod o fudd iddyn nhw. Gallech ddweud:
 
 
+* Mae partneriaeth yn adeiladu “ymwybyddiaeth brand” oherwydd gallwch roi eu henw ar eich gwefan ac ar daflenni. Os ydyn nhw'n noddi pot plannu, gallwch chi roi eu henw arno!
+* Gall agor mwy o gyfleoedd rhwydweithio iddynt mewn digwyddiadau elusennol.
 
-Also look at [Neighbourly](https://www.neighbourly.com/faqs) which is a digital platform that connects businesses with local organisations. They say, “We help businesses make a positive impact in their communities by donating volunteer time, money and surplus products to local causes, all in one place.” If you are not a registered charity or CIC, you can still ask for help that isn’t money – you can ask for volunteer time, surplus products or advice. 
 
+Rhowch gymaint o enghreifftiau penodol ag y gallwch chi at ei gilydd. Ac ymarfer siarad amdanyn nhw yn uchel, fel eich bod yn barod pan fyddan nhw'n gofyn i chi.
 
 
-## What do we ask for? 
+Cofiwch ddweud wrthyn nhw beth mae eich grŵp yn ei wneud, a rhannu straeon emosiynol gyda nhw fel eu bod yn deall pa mor bwysig yw eich gwaith. Gwnewch bethau'n real iddyn nhw.
 
 
+## Sut mae gofyn?
 
-Business support doesn’t have to be monetary. You could ask for training, work experience, a space to meet, or the donations of items. This could be tools, tech equipment or more. 
 
-Businesses can encourage employees to fundraise through events and charities and this is particularly effective when the employees have been consulted about which local group to support, or they have a personal connection.
+Gwnewch eich ymchwil i ddechrau, drwy edrych ar eu gwefan ac ar LinkedIn. Ar eu gwefan, edrychwch ar eu hadran “Amdanom Ni” neu “Cwrdd â’r Tîm” – yn aml mae hwn yn y darn troedyn bach ar y gwaelod.
 
 
+Gall y person y mae angen i chi siarad ag ef amrywio. Mewn cwmni mawr gall fod yn “rheolwr perthnasoedd” neu “reolwr cyfrifoldeb cymdeithasol corfforaethol.” Mewn cwmni canolig, gallech siarad â rhywun yn y byd marchnata, cyfathrebu neu gysylltiadau cyhoeddus. Os yw'r cwmni'n fach iawn, fe allech chi gysylltu ag un o'r partneriaid neu'r penaethiaid.
 
-## What can we offer them?
 
+Mae’n wych os gallwch chi siarad â rhywun yn gyntaf mewn digwyddiad, ond os na allwch chi, anfonwch e-bost. Cadwch ef yn eithaf byr ond cynhwyswch yr holl brif bwyntiau am yr hyn y gallwch ei gynnig iddynt, a pham mae eich grŵp mor bwysig. Gofynnwch a hoffent gwrdd am baned a sgwrs, neu gael galwad fideo neu alwad ffôn. Os na chewch ateb, gallwch fynd ar ôl hyn wythnos neu ddwy yn ddiweddarach.
 
 
-You need to persuade them how you can be good for them. You could say:
+Os ydych chi wedi ymarfer siarad am eich grŵp, byddwch yn ei chael yn haws. Ewch ati i ymarfer gyda ffrind, aelod o'r teulu, neu degan wedi'i stwffio!
 
 
+Canolbwyntiwch ar sut gallwch chi eu cefnogi a siaradwch am y cysylltiad clir rhwng eich grŵp a nodau neu werthoedd y busnes.
 
-* A partnership builds “brand awareness” because you can put them on your website and flyers. If they sponsor a planter you can put their name on it!
-* It can open more networking opportunities for them at charity events.
 
+Mae rhagor o wybodaeth i fusnesau [yma ar wefan yr Ymddiriedolaethau Natur.](https://www.wildlifetrusts.org/partnerships/working-businesses)
 
-
-Put as many specific examples as you can together. And practice talking about it out loud, so you are ready when they ask you.
-
-
-
-Remember to tell them what your group does, and share emotional stories with them so that they understand how important your work is. Make it real for them.
-
-
-
-## How do we ask?
-
-
-
-Do your research first, by looking at their website and on LinkedIn. On their website, look at their “About us” or “Meet the Team” section – often this is in the small footer bit at the bottom.
-
-
-
-The person you need to speak to can vary. In a big company there can be a “relationship manager” or “corporate social responsibility manager.” In a medium company, you could speak to someone in marketing, communications or PR (Public Relations). If the company is very small, you could contact one of the partners or bosses.
-
-
-
-It’s great if you can speak to someone first at an event, but if you can’t, then send an email. Keep it quite short but include all the main points about what you can offer them, and why your group is so important. Ask if they would like to meet up for a coffee and a chat, or have a video call or phone call. If you don’t get a reply, you can follow up a week or two later.
-
-
-
-If you have practised talking about your group, you will find it easier. Practice on a friend, family member, or stuffed toy! 
-
-
-
-Focus on how you can support them and talk about the clear link between your group and the business’s aims or values. 
