@@ -114,7 +114,16 @@ teasersFromSearchableType itemType teasers =
 
 getTeaserListsFromSearch : Shared.Model -> Shared.SearchData
 getTeaserListsFromSearch model =
-    if String.length model.query > 0 then
+    let
+        hasResults =
+            List.length model.searchResult.actions
+                > 0
+                || List.length model.searchResult.guides
+                > 0
+                || List.length model.searchResult.stories
+                > 0
+    in
+    if String.length model.query > 0 && hasResults then
         let
             actionResults : List Page.Shared.Data.Teaser
             actionResults =

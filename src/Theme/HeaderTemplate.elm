@@ -69,7 +69,7 @@ searchInput model =
             [ text (t SearchPlaceholder) ]
         , node "search-input"
             [ Html.Styled.Attributes.property "searchResult" (Page.Search.Data.searchResultEncoder (Page.Search.Data.searchableTeaserListFromSearchData model.searchResult))
-            , attribute "search-input" (searchableStringFromSearchData model.searchResult)
+            , attribute "search-input" (searchableStringFromSearchData (Page.Search.Data.getTeaserListsFromSearch model))
             , on "resultChanged"
                 (Json.Decode.map2 Message.SearchChanged
                     (Json.Decode.at [ "target", "searchResult" ]
