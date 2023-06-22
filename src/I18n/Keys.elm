@@ -59,8 +59,7 @@ type Key
       --- Search Page
     | SearchTitle
     | SearchMetaDescription
-    | SearchTitleFiltered String String
-    | SearchTitleFilteredSingleResult String
+    | SearchTitleFiltered Int String
     | SearchPlaceholder
     | ExploreGuidesListHeading
       --- Story Page

@@ -79,7 +79,7 @@ viewTeaserList language searchString teasers =
                         t =
                             translate language
                     in
-                    t (teaserListTitleKey (List.length teasers) searchString)
+                    t (SearchTitleFiltered (List.length teasers) searchString)
 
                 else
                     ""
@@ -95,20 +95,6 @@ viewTeaserList language searchString teasers =
 
     else
         text ""
-
-
-teaserListTitleKey : Int -> String -> Key
-teaserListTitleKey length searchString =
-    let
-        numberOfResultsString : String
-        numberOfResultsString =
-            String.fromInt length
-    in
-    if length > 1 then
-        SearchTitleFiltered numberOfResultsString searchString
-
-    else
-        SearchTitleFilteredSingleResult searchString
 
 
 limitContent : String -> Int -> String

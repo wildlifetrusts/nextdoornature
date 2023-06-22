@@ -182,11 +182,12 @@ enStrings key =
         SearchTitle ->
             "Search"
 
-        SearchTitleFiltered num query ->
-            num ++ " guides on " ++ query
+        SearchTitleFiltered count query ->
+            if count > 1 then
+                String.fromInt count ++ " guides on " ++ query
 
-        SearchTitleFilteredSingleResult query ->
-            "1 guide on " ++ query
+            else
+                "1 guide on " ++ query
 
         SearchPlaceholder ->
             "Search this hub"

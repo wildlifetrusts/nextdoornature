@@ -180,11 +180,12 @@ cyStrings key =
         SearchMetaDescription ->
             "[cCc] Search page description in Welsh"
 
-        SearchTitleFiltered num query ->
-            num ++ " canllawiau ar " ++ query
+        SearchTitleFiltered count query ->
+            if count > 1 then
+                String.fromInt count ++ " canllawiau ar " ++ query
 
-        SearchTitleFilteredSingleResult query ->
-            " canllaw ar " ++ query
+            else
+                "1 canllaw ar " ++ query
 
         SearchPlaceholder ->
             "Chwilio'r hwb yma"
