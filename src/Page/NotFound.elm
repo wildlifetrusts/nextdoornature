@@ -1,11 +1,11 @@
 module Page.NotFound exposing (resourceNotFound)
 
-import Css exposing (Style, alignItems, batch, center, column, display, displayFlex, flexDirection, flexStart, justifyContent, marginBottom, maxWidth, pct, rem, row, spaceBetween, width)
+import Css exposing (Style, alignItems, batch, center, column, displayFlex, flexDirection, flexStart, justifyContent, marginBottom, maxWidth, pct, rem, row, spaceBetween, width)
 import Html.Styled exposing (Html, a, div, img, p, text)
 import Html.Styled.Attributes exposing (css, href, src)
 import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (Language, translate)
-import Theme.Global exposing (centerContent, contentWrapper, pageColumnStyle, primaryHeader, simplePageContentContainerStyle, topTwoColumnsWrapperStyle, withMediaMobileUp, withMediaTabletPortraitUp)
+import Theme.Global exposing (centerContent, pageColumnStyle, primaryHeader, simplePageContentContainerStyle, withMediaMobileUp)
 
 
 resourceNotFound : Language -> Html msg

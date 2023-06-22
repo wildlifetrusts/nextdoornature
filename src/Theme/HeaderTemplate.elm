@@ -5,14 +5,12 @@ import Html.Styled exposing (Html, a, button, div, header, input, label, node, t
 import Html.Styled.Attributes exposing (attribute, css, for, href, id, placeholder, type_)
 import Html.Styled.Events exposing (on, onClick)
 import I18n.Keys exposing (Key(..))
-import I18n.Translate exposing (Language(..), translate)
+import I18n.Translate exposing (translate)
 import Json.Decode
-import List
 import Message exposing (Msg(..))
 import Page.Search.Data
-import Page.Shared.Data
 import Route exposing (Route(..))
-import Shared exposing (Model, Request(..))
+import Shared exposing (Model)
 import Theme.FluidScale
 import Theme.Global exposing (borderWrapper, centerContent, hideFromPrint, mediumTeal, purple, screenReaderOnly, teal, white, withMediaMobileUp, withMediaPrint)
 

@@ -1,4 +1,4 @@
-module Shared exposing (Content, CookieState, Model, Request(..), SearchData, Searchable(..), contentDictDecoder, searchableFromString, searchableToString, shuffleList)
+module Shared exposing (Content, CookieState, Model, Request(..), SearchData, Searchable(..), contentDictDecoder, searchableToString, shuffleList)
 
 import Array
 import Browser.Navigation
@@ -43,22 +43,6 @@ searchableToString itemType =
 
         Story ->
             "story"
-
-
-searchableFromString : String -> Searchable
-searchableFromString itemType =
-    case itemType of
-        "action" ->
-            Action
-
-        "guide" ->
-            Guide
-
-        "story" ->
-            Story
-
-        _ ->
-            Guide
 
 
 type alias SearchData =
