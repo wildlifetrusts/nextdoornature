@@ -4,6 +4,7 @@ import Browser
 import Http
 import Page.Shared.Data
 import Random
+import Shared
 import Url
 
 
@@ -14,7 +15,7 @@ type Msg
     | CookieSettingsButtonClicked
     | CookiesAccepted
     | CookiesDeclined
-    | SearchChanged (List Page.Shared.Data.Teaser) String
+    | SearchChanged Shared.SearchData String
     | GotActions (Result Http.Error (List Page.Shared.Data.Teaser))
     | UpdateSeed Random.Seed
     | Print

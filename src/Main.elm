@@ -85,7 +85,7 @@ init flags url key =
             }
       , content = content
       , language = English
-      , search = []
+      , searchResult = { actions = [], guides = [], stories = [] }
       , query = ""
       , externalActions = Loading
       , seed = Nothing
@@ -244,8 +244,8 @@ update msg model =
                 Cmd.none
             )
 
-        SearchChanged searchResult query ->
-            ( { model | search = searchResult, query = query }, Cmd.none )
+        SearchChanged newSearchResult query ->
+            ( { model | searchResult = newSearchResult, query = query }, Cmd.none )
 
         UpdateSeed seed ->
             ( { model | seed = Just seed }, Cmd.none )

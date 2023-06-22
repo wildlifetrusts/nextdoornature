@@ -65,34 +65,30 @@ searchInput model =
         t : Key -> String
         t =
             I18n.Translate.translate model.language
-
-        teaserList : List Page.Shared.Data.Teaser
-        teaserList =
-            if model.language == Welsh then
-                Page.Search.Data.teaserListFromGuideDict model.language model.content.guides
-
-            else
-                case model.externalActions of
-                    Failure ->
-                        Page.Search.Data.teaserListFromGuideDict model.language model.content.guides
-
-                    Loading ->
-                        Page.Search.Data.teaserListFromGuideDict model.language model.content.guides
-
-                    Success list ->
-                        List.concat [ Page.Search.Data.teaserListFromGuideDict model.language model.content.guides, list ]
     in
     div []
         [ label [ for "search", css [ screenReaderOnly ] ]
             [ text (t SearchPlaceholder) ]
         , node "search-input"
-            [ Html.Styled.Attributes.property "searchResult" <| Page.Search.Data.guideTeaserListEncoder model.search
-            , attribute "search-input" <| Page.Search.Data.guideTeaserListString teaserList
-            , on "resultChanged" <|
-                Json.Decode.map2 Message.SearchChanged (Json.Decode.at [ "target", "searchResult" ] (Json.Decode.list Page.Search.Data.internalGuideTeaserDecoder)) (Json.Decode.at [ "target", "_input", "value" ] Json.Decode.string)
+            [ Html.Styled.Attributes.property "searchResult" (Page.Search.Data.searchResultEncoder (Page.Search.Data.searchableTeaserListFromSearchData model.searchResult))
+            , attribute "search-input" (searchableStringFromSearchData model.searchResult)
+            , on "resultChanged"
+                (Json.Decode.map2 Message.SearchChanged
+                    (Json.Decode.at [ "target", "searchResult" ]
+                        (Json.Decode.list Page.Search.Data.searchableTeaserDecoder)
+                        |> Page.Search.Data.searchDataFromSearchableTeaserList
+                    )
+                    (Json.Decode.at [ "target", "_input", "value" ] Json.Decode.string)
+                )
             ]
             [ input [ id "search", type_ "text", placeholder (t SearchPlaceholder), css [ searchInputStyle ] ] [] ]
         ]
+
+
+searchableStringFromSearchData : Shared.SearchData -> String
+searchableStringFromSearchData searchData =
+    Page.Search.Data.searchableTeaserListFromSearchData searchData
+        |> Page.Search.Data.searchTeaserListString
 
 
 headerBrandStyle : Style

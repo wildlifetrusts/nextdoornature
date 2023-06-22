@@ -1,4 +1,4 @@
-module Page.Search.Data exposing (actionTeaserDecoder, actionTeaserListDecoder, getTeaserListsFromSearch, guideTeaserListEncoder, guideTeaserListString, internalGuideTeaserDecoder, internalGuideTeaserListDecoder, teaserListFromGuideDict, teaserListFromStoryDict)
+module Page.Search.Data exposing (actionTeaserDecoder, actionTeaserListDecoder, getTeaserListsFromSearch, internalGuideTeaserDecoder, internalGuideTeaserListDecoder, searchDataFromSearchableTeaserList, searchResultEncoder, searchTeaserListString, searchableTeaserDecoder, searchableTeaserListFromSearchData, teaserListFromGuideDict, teaserListFromStoryDict)
 
 import Dict
 import I18n.Translate exposing (Language(..))
@@ -13,41 +13,87 @@ import Route
 import Shared exposing (Request(..))
 
 
-type alias SearchData =
-    { actions : List Page.Shared.Data.Teaser
-    , guides : List Page.Shared.Data.Teaser
-    , stories : List Page.Shared.Data.Teaser
+type alias SearchableTeaser =
+    { itemType : Shared.Searchable
+    , title : String
+    , url : String
+    , summary : String
+    , maybeImage : Maybe { src : String, alt : String }
     }
 
 
-guideTeaserEncoder : Page.Shared.Data.Teaser -> Encode.Value
-guideTeaserEncoder guideTeaser =
+searchTeaserEncoder : SearchableTeaser -> Encode.Value
+searchTeaserEncoder teaser =
     Encode.object
-        [ ( "title", Encode.string guideTeaser.title )
-        , ( "url", Encode.string guideTeaser.url )
-        , ( "summary", Encode.string guideTeaser.summary )
+        [ ( "title", Encode.string teaser.title )
+        , ( "url", Encode.string teaser.url )
+        , ( "summary", Encode.string teaser.summary )
         , ( "maybeImage"
-          , case guideTeaser.maybeImage of
+          , case teaser.maybeImage of
                 Just image ->
                     Encode.object [ ( "src", Encode.string image.src ), ( "alt", Encode.string image.alt ) ]
 
                 Nothing ->
                     Encode.null
           )
+        , ( "itemType", Encode.string (Shared.searchableToString teaser.itemType) )
         ]
 
 
-guideTeaserListString : List Page.Shared.Data.Teaser -> String
-guideTeaserListString guideTeaserList =
-    Encode.encode 0 (Encode.list guideTeaserEncoder guideTeaserList)
+searchResultEncoder : List SearchableTeaser -> Encode.Value
+searchResultEncoder combinedTeaserList =
+    Encode.list searchTeaserEncoder combinedTeaserList
 
 
-guideTeaserListEncoder : List Page.Shared.Data.Teaser -> Encode.Value
-guideTeaserListEncoder guideTeasers =
-    Encode.list guideTeaserEncoder guideTeasers
+searchTeaserListString : List SearchableTeaser -> String
+searchTeaserListString teaserList =
+    Encode.encode 0 (Encode.list searchTeaserEncoder teaserList)
 
 
-getTeaserListsFromSearch : Shared.Model -> SearchData
+searchTeaserListEncoder : List SearchableTeaser -> Encode.Value
+searchTeaserListEncoder teasers =
+    Encode.list searchTeaserEncoder teasers
+
+
+searchableTeaserListFromSearchData : Shared.SearchData -> List SearchableTeaser
+searchableTeaserListFromSearchData searchData =
+    let
+        s =
+            Debug.log "search data: " searchData
+    in
+    [ { itemType = Shared.Guide
+      , title = "hello"
+      , url = ""
+      , summary = "Summary"
+      , maybeImage = Nothing
+      }
+    ]
+
+
+searchDataFromSearchableTeaserList : Json.Decode.Decoder (List SearchableTeaser) -> Json.Decode.Decoder Shared.SearchData
+searchDataFromSearchableTeaserList teasers =
+    teasers
+        |> Json.Decode.andThen
+            (\teaserList ->
+                let
+                    _ =
+                        Debug.log "teaser list: " teaserList
+                in
+                Json.Decode.succeed
+                    { actions = []
+                    , guides =
+                        [ { title = "hello again"
+                          , url = ""
+                          , summary = "Summary"
+                          , maybeImage = Nothing
+                          }
+                        ]
+                    , stories = []
+                    }
+            )
+
+
+getTeaserListsFromSearch : Shared.Model -> Shared.SearchData
 getTeaserListsFromSearch model =
     { actions = actionsListFromApi model.externalActions
     , guides = teaserListFromGuideDict model.language model.content.guides
@@ -131,6 +177,26 @@ storyImagefromTeaserImage maybeImages =
 
         Nothing ->
             Just Page.Shared.Data.defaultTeaserImage
+
+
+searchableTeaserDecoder : Json.Decode.Decoder SearchableTeaser
+searchableTeaserDecoder =
+    Json.Decode.map5 SearchableTeaser
+        (Json.Decode.field "itemType" Json.Decode.string |> Json.Decode.andThen searchableFromStringDecoder)
+        (Json.Decode.field "title" Json.Decode.string)
+        (Json.Decode.field "url" Json.Decode.string)
+        (Json.Decode.field "summary" Json.Decode.string |> Json.Decode.Extra.withDefault "")
+        (Json.Decode.maybe (Json.Decode.field "maybeImage" Page.Shared.Data.guideTeaserImageDecoder))
+
+
+searchableFromStringDecoder : String -> Json.Decode.Decoder Shared.Searchable
+searchableFromStringDecoder itemType =
+    case itemType of
+        "action" ->
+            Json.Decode.succeed Shared.Action
+
+        _ ->
+            Json.Decode.succeed Shared.Guide
 
 
 internalGuideTeaserDecoder : Json.Decode.Decoder Page.Shared.Data.Teaser
