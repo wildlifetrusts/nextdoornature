@@ -61,7 +61,7 @@ viewGuideTeaserSummary summary =
     if String.length summary > 0 then
         p
             [ css [ Theme.Global.teaserRowStyle ] ]
-            [ text <| limitContent summary 240 ]
+            [ text (limitContent summary) ]
 
     else
         text ""
@@ -101,15 +101,13 @@ viewTeaserList language searchString teasers =
         text ""
 
 
-limitContent : String -> Int -> String
-limitContent summary limit =
-    if String.length summary > limit then
-        summary
-            |> String.slice 0 (limit - 3)
-            |> String.padRight limit '.'
-
-    else
-        summary
+limitContent : String -> String
+limitContent summary =
+    -- Grab the first (or only sentence) and add a fullstop
+    (List.head (String.split "." summary)
+        |> Maybe.withDefault summary
+    )
+        ++ "."
 
 
 guidesPageLayoutStyle : Style

@@ -103,7 +103,7 @@ collections:
           label: "Summary",
           name: "summary",
           widget: "string",
-          pattern: ["^.{50,160}$", "Must be between 50 and 160 characters"],
+          pattern: ["^.{50,480}$", "Must be between 50 and 480 characters"],
           i18n: true,
         }
       - {
