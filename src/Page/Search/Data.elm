@@ -249,7 +249,7 @@ searchableFromStringDecoder itemType =
             Json.Decode.succeed Shared.Guide
 
         "story" ->
-            Json.Decode.succeed Shared.Guide
+            Json.Decode.succeed Shared.Story
 
         _ ->
             Json.Decode.succeed Shared.Guide
