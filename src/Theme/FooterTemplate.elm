@@ -1,14 +1,15 @@
 module Theme.FooterTemplate exposing (view)
 
-import Css exposing (Style, alignItems, alignSelf, auto, backgroundColor, batch, bold, border3, borderLeft3, borderTop, center, color, column, cursor, default, displayFlex, em, firstChild, fitContent, flexDirection, flexEnd, flexGrow, flexShrink, flexStart, flexWrap, fontFamilies, fontSize, fontWeight, height, int, justifyContent, lastChild, margin, margin2, marginBottom, marginLeft, marginRight, marginTop, maxWidth, minHeight, minWidth, none, nthChild, padding, padding2, paddingBottom, px, rem, row, solid, spaceBetween, textDecoration, underline, unset, width, wrap)
+import Css exposing (Style, alignItems, alignSelf, auto, backgroundColor, batch, bold, border3, borderLeft3, borderTop, center, color, column, cursor, default, displayFlex, em, firstChild, fitContent, flexDirection, flexEnd, flexGrow, flexShrink, flexStart, flexWrap, fontFamilies, fontSize, fontWeight, height, int, justifyContent, lastChild, margin, margin2, marginBottom, marginLeft, marginRight, marginTop, maxWidth, minHeight, minWidth, none, nthChild, padding, padding2, paddingBottom, px, rem, row, solid, spaceBetween, textDecoration, unset, width, wrap)
 import Css.Media as Media exposing (only, screen, withMedia)
 import Html.Styled exposing (Html, a, div, footer, h3, img, li, nav, text, ul)
 import Html.Styled.Attributes exposing (alt, css, href, src)
 import I18n.Keys exposing (Key(..))
 import I18n.Translate exposing (Language(..), translate)
-import Route exposing (Route)
+import Route exposing (Route(..))
 import Theme.FluidScale
 import Theme.Global exposing (centerContent, hideFromPrint, lightTeal, listStyleNone, purple, teal, white, withMediaMobileUp, withMediaTabletPortraitUp)
+import Url
 
 
 view : Language -> Route -> Html msg
@@ -24,7 +25,7 @@ view language route =
             [ nav [ css [ centerContent, footerNavStyle ] ]
                 (List.map
                     (\column -> navigationColumn column language route)
-                    footerNavigationContent
+                    (footerNavigationContent t)
                 )
             ]
         , div [ css [ bottomFooterOuterContainerStyle ] ]
@@ -81,23 +82,29 @@ activeClass path route =
 
 
 footerNavigationContent :
-    List
-        { title : Key
-        , links : List { text : Key, href : String }
-        }
-footerNavigationContent =
+    (Key -> String)
+    ->
+        List
+            { title : Key
+            , links : List { text : Key, href : String }
+            }
+footerNavigationContent t =
     [ { title = FooterTitleColumnA
       , links =
             [ { text = FooterVisitWebsiteText, href = "https://www.wildlifetrusts.org/" }
-            , { text = FooterAboutText, href = "/about" }
-            , { text = FooterPrivacyPolicyText, href = "/privacy-policy" }
+            , { text = FooterAboutText, href = Route.toString (Page "about") }
+            , { text = FooterPrivacyPolicyText, href = Route.toString (Page "privacy-policy") }
             ]
       }
     , { title = FooterTitleColumnB
       , links =
-            [ { text = FooterGuidesLinkText, href = "/search#guides" }
-            , { text = FooterStoriesLinkText, href = "/search#stories" }
-            , { text = FooterHowToUseThisSiteText, href = "/how-to-use-this-site" }
+            [ { text = FooterGuidesLinkText
+              , href = Route.toString (Search (Just "guides"))
+              }
+            , { text = FooterStoriesLinkText
+              , href = Route.toString (Search (Just "stories"))
+              }
+            , { text = FooterHowToUseThisSiteText, href = Route.toString (Page "how-to-use-this-site") }
             ]
       }
     , { title = FooterTitleColumnC
@@ -106,7 +113,7 @@ footerNavigationContent =
               , href =
                     "https://www.wildlifetrusts.org/wildlife-trusts"
               }
-            , { text = FooterShareYourStoryText, href = "/share-story" }
+            , { text = FooterShareYourStoryText, href = Route.toString (Page "share-story") }
             ]
       }
     ]

@@ -2,7 +2,7 @@
 title: Rheoli gofod gwyrdd yn eich ardal
 summary: Crynodeb o sut i ddechrau cymryd drosodd darn o fannau gwyrdd.
 image:
-  src: /images/uploads/takingovergreenspace_orig-2-.jpg
+  src: /images/uploads/takingovergreenspace_orig-3-.jpg
   alt: A trowel in the dirt in front of a small green bushy plant
   credit: Photo copyright Autumn Barlow / The Wildlife Trusts 2023
 relatedGuides:

@@ -3,7 +3,7 @@ title: "Sicrhau Bod Pawb yn Gallu Cael Mynediad at Eich Grŵp neu Brosiect "
 summary: "Mae angen pethau gwahanol ar wahanol bobl i'w helpu i gymryd rhan yn
   gyfartal mewn grŵp. "
 image:
-  src: /images/uploads/accessibility_orig-2-.jpg
+  src: /images/uploads/accessibility_orig-3-.jpg
   alt: A bolted, locked gate
   credit: Photo copyright Autumn Barlow/The Wildlife Trusts 2023
 category: admin-and-info
@@ -13,6 +13,8 @@ video:
     Community Video"
   description: Aaron o Lincolnshire Voluntary Centre Services yn siarad am sut i
     wneud yn siŵr bod pawb yn gallu cael mynediad at eich prosiect.
+relatedGuides:
+  - How to Run a Fundraising Event
 customCall: " Sut ydych chi'n sicrhau bod eich prosiectau'n hygyrch?"
 ---
 Ni fydd yr wybodaeth yma'n ymdrin â hygyrchedd mewn digwyddiadau. Mae honno’n ddogfen ar wahân.

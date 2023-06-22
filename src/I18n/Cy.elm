@@ -187,6 +187,15 @@ cyStrings key =
             else
                 String.join " " [ "1 canllaw ar", query ]
 
+        GuidesHeading ->
+            "[cCc]"
+
+        StoriesHeading ->
+            "[cCc]"
+
+        ActionsHeading ->
+            "[cCc]"
+
         SearchPlaceholder ->
             "Chwilio'r hwb yma"
 
@@ -219,6 +228,12 @@ cyStrings key =
         ---
         SubmitStoryMetaImageLink ->
             "/images/submit-meta-david-clode-eL4ADAsiOR8-unsplash.jpg"
+
+        SubmitStoryFormSrc ->
+            "[cCc]"
+
+        SubmitStoryFormTitle ->
+            "[cCc]"
 
         StoryMetaDescription title ->
             "Stori am: " ++ title

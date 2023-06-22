@@ -1,9 +1,9 @@
 ---
 title: Faith Groups and Lottery Funding
-summary: A summary of some of the faith groups in the UK and their religious
-  position on gambling and lottery funds.
+summary: "Find out here about some of the faith groups in the UK and their
+  religious position on gambling and lottery funds. "
 image:
-  src: /images/uploads/faithgroupsfunding_orig-2-.jpg
+  src: /images/uploads/faithgroupsfunding_orig-3-.jpg
   alt: An image of two holy books surrounded by green plants
   credit: Image copyright Autumn Barlow/The Wildlife Trusts 2023
 relatedGuides:

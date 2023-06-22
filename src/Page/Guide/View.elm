@@ -1,6 +1,6 @@
 port module Page.Guide.View exposing (print, view)
 
-import Css exposing (Style, alignItems, auto, backgroundColor, batch, border, borderBottom3, center, color, column, display, displayFlex, em, flexBasis, flexDirection, flexEnd, flexStart, flexWrap, fontFamilies, fontWeight, hover, inlineBlock, int, justifyContent, listStyle, margin2, marginBottom, marginRight, marginTop, maxWidth, none, padding, paddingLeft, paddingRight, pct, property, px, rem, solid, textDecoration3, underline, unset, width, wrap, zero)
+import Css exposing (Style, alignItems, auto, backgroundColor, batch, border, borderBottom3, center, color, column, display, displayFlex, em, flexDirection, flexStart, flexWrap, fontFamilies, fontWeight, hover, inlineBlock, int, justifyContent, listStyle, margin2, marginBottom, marginRight, marginTop, maxWidth, none, padding, paddingLeft, paddingRight, pct, property, px, rem, solid, textDecoration3, underline, unset, width, wrap, zero)
 import Html.Styled exposing (Html, a, button, div, h2, img, li, p, span, text, ul)
 import Html.Styled.Attributes exposing (alt, attribute, css, href, src)
 import Html.Styled.Events exposing (onClick)
@@ -14,7 +14,7 @@ import Page.Shared.View
 import Page.Story.Data
 import Route exposing (Route(..))
 import Theme.FluidScale
-import Theme.Global exposing (centerContent, contentWrapper, featureImageStyle, hideFromPrint, lightPurple, lightTeal, pageColumnStyle, primaryHeader, purple, simpleThreeColumnFlexChildStyle, simpleThreeColumnFlexStyle, teal, teaserImageStyle, topTwoColumnsWrapperStyle, withMediaPrint, withMediaTabletLandscapeUp, withMediaTabletPortraitUp)
+import Theme.Global exposing (centerContent, contentWrapper, featureImageStyle, hideFromPrint, lightPurple, lightTeal, pageColumnStyle, primaryHeader, purple, simpleThreeColumnFlexChildStyle, simpleThreeColumnFlexStyle, teal, teaserImageStyle, topTwoColumnsWrapperStyle, withMediaPrint, withMediaTabletLandscapeUp)
 import Theme.Markdown exposing (markdownToHtml)
 
 

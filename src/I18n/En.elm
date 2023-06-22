@@ -10,7 +10,7 @@ enStrings key =
             "The Nextdoor Nature Hub"
 
         SearchMetaDescription ->
-            "[cCc] Description for the guides search page"
+            "Guides to help you. Stories to inspire you. Practical actions you can take."
 
         CallForStoryP ->
             "If you want to tell us your story, we'd love to hear from you."
@@ -180,17 +180,26 @@ enStrings key =
         -- Search Page
         ---
         SearchTitle ->
-            "Search"
+            "Take action for nature"
 
         SearchTitleFiltered count query ->
             if count > 1 then
-                String.join " " [ String.fromInt count, "guides on", query ]
+                String.join " " [ String.fromInt count, "results for", query ]
 
             else
-                String.join " " [ "1 guide on", query ]
+                String.join " " [ "1 result for", query ]
 
         SearchPlaceholder ->
             "Search this hub"
+
+        GuidesHeading ->
+            "Guides: information to help you"
+
+        StoriesHeading ->
+            "Stories: real life inspiration"
+
+        ActionsHeading ->
+            "Actions: practical things you can do"
 
         ExploreGuidesListHeading ->
             "Explore guides by topic"
@@ -209,6 +218,12 @@ enStrings key =
         ---
         SubmitStoryMetaImageLink ->
             "/images/submit-meta-david-clode-eL4ADAsiOR8-unsplash.jpg"
+
+        SubmitStoryFormSrc ->
+            "https://teamwildertest.formstack.com/forms/teamwilder_test"
+
+        SubmitStoryFormTitle ->
+            "[cCc] teamwilder_test"
 
         ---
         -- Category things

@@ -60,6 +60,9 @@ type Key
     | SearchTitle
     | SearchMetaDescription
     | SearchTitleFiltered Int String
+    | GuidesHeading
+    | StoriesHeading
+    | ActionsHeading
     | SearchPlaceholder
     | ExploreGuidesListHeading
       --- Story Page
@@ -67,6 +70,8 @@ type Key
     | WhereSubHeading
       --- SubmitStory Page
     | SubmitStoryMetaImageLink
+    | SubmitStoryFormSrc
+    | SubmitStoryFormTitle
       --- Category things
     | CategoryAdminAndInfoName
     | CategoryPublicityEventsName
