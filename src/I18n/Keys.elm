@@ -70,6 +70,8 @@ type Key
     | WhereSubHeading
       --- SubmitStory Page
     | SubmitStoryMetaImageLink
+    | SubmitStoryFormSrc
+    | SubmitStoryFormTitle
       --- Category things
     | CategoryAdminAndInfoName
     | CategoryPublicityEventsName
