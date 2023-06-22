@@ -2,7 +2,7 @@
 title: Rheoli Gwrthdaro mewn Grŵp
 summary: "Deall gwrthdaro a sut i ddelio ag ef mewn grwpiau.               "
 image:
-  src: /images/uploads/managingconflictingroup_orig-2-.jpg
+  src: /images/uploads/managingconflictingroup_orig-3-.jpg
   alt: A photo of a leaf with many holes eaten away at it
   credit: Photo copyright Autumn Barlow/The Wildlife Trusts 2023
 category: admin-and-info

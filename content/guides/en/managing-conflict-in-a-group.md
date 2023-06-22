@@ -1,9 +1,10 @@
 ---
 title: Managing Conflict in a Group
-summary: Understanding conflict and how to deal with it in groups.
+summary: Understanding conflict and how to deal with it in groups. What causes
+  conflict, and what are some good ways of tackling it?
 Category: working-with-people
 image:
-  src: /images/uploads/managingconflictingroup_orig-2-.jpg
+  src: /images/uploads/managingconflictingroup_orig-3-.jpg
   alt: A photo of a leaf with many holes eaten away at it
   credit: Photo copyright Autumn Barlow/The Wildlife Trusts 2023
 relatedGuides:
