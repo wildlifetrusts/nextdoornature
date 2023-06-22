@@ -3,7 +3,7 @@ title: Asesiadau Risg
 summary: "Popeth am asesiadau risg a sut i reoli
   risg.                                                      "
 image:
-  src: /images/uploads/basic-risk-assessments_orig-2-.jpg
+  src: /images/uploads/basic-risk-assessments_orig-3-.jpg
   alt: A photo of a warning sign
 video:
   id: TxoGySN9AiI

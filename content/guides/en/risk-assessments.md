@@ -3,7 +3,7 @@ title: Risk Assessments
 summary: "All about risk assessments and how to manage risk.                   "
 Category: admin-and-info
 image:
-  src: /images/uploads/basic-risk-assessments_orig-2-.jpg
+  src: /images/uploads/basic-risk-assessments_orig-3-.jpg
   alt: A photo of a warning sign
 video:
   id: TxoGySN9AiI
