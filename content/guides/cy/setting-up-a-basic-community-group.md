@@ -2,7 +2,7 @@
 title: Sefydlu Grŵp Cymunedol Sylfaenol
 summary: Yr enw ar y grŵp hawsaf i’w sefydlu yw “cymdeithas anghorfforedig”.
 image:
-  src: /images/uploads/setting-up-community-group_orig-2-.jpg
+  src: /images/uploads/setting-up-community-group_orig-3-.jpg
   alt: An image of a notebook with pens
   credit: Image copyright Autumn Barlow/The Wildlife Trusts 2023
 category: admin-and-info
