@@ -181,11 +181,11 @@ cyStrings key =
             "[cCc] Search page description in Welsh"
 
         SearchTitleFiltered count query ->
-            if count > 1 then
-                String.join " " [ String.fromInt count, "canllawiau ar", query ]
+            if count == 1 then
+                String.join " " [ "1 canllaw ar", query ]
 
             else
-                String.join " " [ "1 canllaw ar", query ]
+                String.join " " [ String.fromInt count, "canllawiau ar", query ]
 
         GuidesHeading ->
             "[cCc]"
