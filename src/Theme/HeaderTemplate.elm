@@ -34,7 +34,7 @@ view model =
                             searchInput model
 
                         _ ->
-                            a [ href (Route.toString (Search (Just "#guides"))), css [ headerLinkStyle ] ] [ text (t FooterGuidesLinkText) ]
+                            a [ href (Route.toString (Search (Just "#guides"))), css [ headerBtnStyle ] ] [ text (t SearchPlaceholder) ]
                     ]
                 ]
             ]
@@ -69,7 +69,7 @@ searchInput model =
             [ text (t SearchPlaceholder) ]
         , node "search-input"
             [ Html.Styled.Attributes.property "searchResult" (Page.Search.Data.searchResultEncoder (Page.Search.Data.searchableTeaserListFromSearchData model.searchResult))
-            , attribute "search-input" (searchableStringFromSearchData (Page.Search.Data.getTeaserListsFromSearch model))
+            , attribute "search-input" (searchableStringFromSearchData (Page.Search.Data.getTeaserListsForSearch model))
             , on "resultChanged"
                 (Json.Decode.map2 Message.SearchChanged
                     (Json.Decode.at [ "target", "searchResult" ]
