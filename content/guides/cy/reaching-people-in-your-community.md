@@ -9,6 +9,8 @@ image:
 relatedGuides:
   - Businesses - How They Can Help You (and how you can help them)
   - How To Write a Press Release
+relatedStories:
+  - St Ann's Allotments, Nottingham - a training day with the local community
 customCall: Sut ydych chi wedi cael gair allan i'ch cymuned leol?
 ---
 Yn aml mae’n anodd gwybod ble i ddechrau pan fyddwch chi eisiau cael pobl i ymuno â chi i weithredu. Mae angen i chi fynd i ble mae pobl. Fe allwch chi gyrraedd eich cymuned wyneb yn wyneb a thrwy ddefnyddio dulliau eraill fel posteri neu ar-lein.

@@ -10,6 +10,8 @@ image:
 relatedGuides:
   - Businesses - How They Can Help You (and how you can help them)
   - How To Write a Press Release
+relatedStories:
+  - St Ann's Allotments, Nottingham - a training day with the local community
 customCall: How have you got word out to your local community?
 ---
 It’s often hard to know where to start when you want to get people to join you in action. 
