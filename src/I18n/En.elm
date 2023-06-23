@@ -183,11 +183,11 @@ enStrings key =
             "Take action for nature"
 
         SearchTitleFiltered count query ->
-            if count > 1 then
-                String.join " " [ String.fromInt count, "results for", query ]
+            if count == 1 then
+                String.join " " [ "1 result for", query ]
 
             else
-                String.join " " [ "1 result for", query ]
+                String.join " " [ String.fromInt count, "results for", query ]
 
         SearchPlaceholder ->
             "Search this hub"

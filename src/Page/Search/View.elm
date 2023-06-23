@@ -22,7 +22,7 @@ view model =
     in
     div [ css [ centerContent ] ]
         [ primaryHeader [ attribute "aria-live" "alert", css [ guidesSearchTitleStyle ] ] (t SearchTitle)
-        , div [] (viewGuideStoryActionLists model)
+        , div [ css [ width (pct 100) ] ] (viewGuideStoryActionLists model)
         ]
 
 
@@ -74,6 +74,7 @@ viewGuideStoryActionLists model =
     [ viewTeaserList ( "guides", GuidesHeading, teaserData.guides ) model.language model.query
     , viewTeaserList ( "stories", StoriesHeading, teaserData.stories ) model.language model.query
     , viewActionsList ( "actions", ActionsHeading, teaserData.actions ) model.language model.query
+    , viewNoResults teaserData model.language model.query
     ]
 
 
@@ -93,6 +94,31 @@ viewTeaserList ( sectionId, sectionName, teasers ) language searchString =
                     |> List.map
                         (\teaser -> viewGuideTeaser teaser)
                 )
+            ]
+
+    else
+        text ""
+
+
+viewNoResults : Shared.SearchData -> Language -> String -> Html Msg
+viewNoResults teasers language searchString =
+    if
+        String.length searchString
+            > 0
+            && List.length teasers.guides
+            == 0
+            && List.length teasers.actions
+            == 0
+            && List.length teasers.stories
+            == 0
+    then
+        let
+            t : Key -> String
+            t =
+                translate language
+        in
+        section [ css [ marginBottom (rem 4) ] ]
+            [ h2 [] [ text (t (SearchTitleFiltered 0 searchString)) ]
             ]
 
     else
