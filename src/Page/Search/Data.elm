@@ -1,4 +1,4 @@
-module Page.Search.Data exposing (SearchableTeaser, actionTeaserDecoder, actionTeaserListDecoder, getTeaserListsFromSearch, internalGuideTeaserListDecoder, searchDataFromSearchableTeaserList, searchResultEncoder, searchTeaserListString, searchableTeaserDecoder, searchableTeaserListFromSearchData, teaserListFromGuideDict, teaserListFromStoryDict)
+module Page.Search.Data exposing (SearchableTeaser, actionTeaserDecoder, actionTeaserListDecoder, getTeaserListsForSearch, getTeaserListsFromSearch, internalGuideTeaserListDecoder, searchDataFromSearchableTeaserList, searchResultEncoder, searchTeaserListString, searchableTeaserDecoder, searchableTeaserListFromSearchData, teaserListFromGuideDict, teaserListFromStoryDict)
 
 import Dict
 import I18n.Translate exposing (Language)
@@ -110,6 +110,14 @@ teasersFromSearchableType itemType teasers =
                 , maybeImage = item.maybeImage
                 }
             )
+
+
+getTeaserListsForSearch : Shared.Model -> Shared.SearchData
+getTeaserListsForSearch model =
+    { actions = actionsListFromApi model.externalActions
+    , guides = teaserListFromGuideDict model.language model.content.guides
+    , stories = teaserListFromStoryDict model.language model.content.stories
+    }
 
 
 getTeaserListsFromSearch : Shared.Model -> Shared.SearchData
