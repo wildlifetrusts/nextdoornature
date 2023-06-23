@@ -2,7 +2,7 @@ module API exposing (suite)
 
 import Expect exposing (equal)
 import Json.Decode
-import Page.Search.Data exposing (actionTeaserDecoder, actionTeaserListDecoder, guideTeaserListString, internalGuideTeaserListDecoder)
+import Page.Search.Data exposing (actionTeaserDecoder, actionTeaserListDecoder, internalGuideTeaserListDecoder, searchTeaserListString)
 import Test exposing (Test, describe, test)
 import TestData exposing (actionsAPI, singleActionFromAPI, teaserFromResult, teaserFromResult2)
 
@@ -31,7 +31,7 @@ suite =
                 let
                     json : String
                     json =
-                        guideTeaserListString [ teaserFromResult, teaserFromResult2 ]
+                        searchTeaserListString [ teaserFromResult, teaserFromResult2 ]
                 in
                 case Json.Decode.decodeString internalGuideTeaserListDecoder json of
                     Ok list ->

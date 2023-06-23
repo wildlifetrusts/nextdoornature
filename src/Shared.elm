@@ -1,4 +1,4 @@
-module Shared exposing (Content, CookieState, Model, Request(..), contentDictDecoder, shuffleList)
+module Shared exposing (Content, CookieState, Model, Request(..), SearchData, Searchable(..), contentDictDecoder, searchableToString, shuffleList)
 
 import Array
 import Browser.Navigation
@@ -19,10 +19,36 @@ type alias Model =
     , cookieState : CookieState
     , language : Language
     , content : Content
-    , search : List Page.Shared.Data.Teaser
+    , searchResult : SearchData
     , query : String
     , externalActions : Request
     , seed : Maybe Random.Seed
+    }
+
+
+type Searchable
+    = Action
+    | Guide
+    | Story
+
+
+searchableToString : Searchable -> String
+searchableToString itemType =
+    case itemType of
+        Action ->
+            "action"
+
+        Guide ->
+            "guide"
+
+        Story ->
+            "story"
+
+
+type alias SearchData =
+    { actions : List Page.Shared.Data.Teaser
+    , guides : List Page.Shared.Data.Teaser
+    , stories : List Page.Shared.Data.Teaser
     }
 
 

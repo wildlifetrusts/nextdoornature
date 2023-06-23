@@ -9,7 +9,6 @@ import I18n.Translate exposing (Language(..), translate)
 import Route exposing (Route(..))
 import Theme.FluidScale
 import Theme.Global exposing (centerContent, hideFromPrint, lightTeal, listStyleNone, purple, teal, white, withMediaMobileUp, withMediaTabletPortraitUp)
-import Url
 
 
 view : Language -> Route -> Html msg
@@ -25,7 +24,7 @@ view language route =
             [ nav [ css [ centerContent, footerNavStyle ] ]
                 (List.map
                     (\column -> navigationColumn column language route)
-                    (footerNavigationContent t)
+                    footerNavigationContent
                 )
             ]
         , div [ css [ bottomFooterOuterContainerStyle ] ]
@@ -82,13 +81,11 @@ activeClass path route =
 
 
 footerNavigationContent :
-    (Key -> String)
-    ->
-        List
-            { title : Key
-            , links : List { text : Key, href : String }
-            }
-footerNavigationContent t =
+    List
+        { title : Key
+        , links : List { text : Key, href : String }
+        }
+footerNavigationContent =
     [ { title = FooterTitleColumnA
       , links =
             [ { text = FooterVisitWebsiteText, href = "https://www.wildlifetrusts.org/" }

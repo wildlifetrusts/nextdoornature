@@ -1,7 +1,6 @@
 module Page.Search.View exposing (view)
 
 import Css exposing (Style, batch, fontWeight, int, margin, margin3, marginBottom, padding, pct, property, rem, width)
-import Css.Transitions exposing (columnCount)
 import Html.Styled exposing (Html, a, div, h2, h3, img, li, p, section, text, ul)
 import Html.Styled.Attributes exposing (alt, attribute, css, href, id, src)
 import I18n.Keys exposing (Key(..))
@@ -68,14 +67,14 @@ viewGuideTeaserSummary summary =
 viewGuideStoryActionLists : Model -> List (Html Msg)
 viewGuideStoryActionLists model =
     let
+        teaserData : Shared.SearchData
         teaserData =
             Page.Search.Data.getTeaserListsFromSearch model
     in
-    List.map (\viewList -> viewList)
-        [ viewTeaserList ( "guides", GuidesHeading, teaserData.guides ) model.language model.query
-        , viewTeaserList ( "stories", StoriesHeading, teaserData.stories ) model.language model.query
-        , viewActionsList ( "actions", ActionsHeading, teaserData.actions ) model.language model.query
-        ]
+    [ viewTeaserList ( "guides", GuidesHeading, teaserData.guides ) model.language model.query
+    , viewTeaserList ( "stories", StoriesHeading, teaserData.stories ) model.language model.query
+    , viewActionsList ( "actions", ActionsHeading, teaserData.actions ) model.language model.query
+    ]
 
 
 viewTeaserList : ( String, Key, List Page.Shared.Data.Teaser ) -> Language -> String -> Html Msg
