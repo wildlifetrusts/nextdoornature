@@ -36,3 +36,5 @@ Next, we headed outside for another hands-on activity. This time, we headed to a
 After a stint in the rain, we headed back to the straw-bale building to say our farewells, where everyone seemed inspired and motivated. Overall, the day struck me as a very open experience, led by the community groups themselves, allowing them to get exactly what they needed out of the day to make the difference they want to see in their local area. I found it inspiring that we can help to facilitate this through Nextdoor Nature as a Trust!
 
 Christine and Paul from St Aidan’s Church thoroughly enjoyed the experience, and were left so inspired, that they decided to have a go at constructing raised beds for their church garden following the workshop!
+
+[F﻿ind out more about Nottinghamshire's Nextdoor Nature project on their webpage here.](https://www.nottinghamshirewildlife.org/nextdoor-nature)
