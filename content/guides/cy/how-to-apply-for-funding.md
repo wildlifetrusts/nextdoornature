@@ -1,12 +1,18 @@
 ---
 title: Sut i Wneud Cais am Gyllid
-summary: Crynodeb o'r hyn sydd angen i chi ei wneud pan fyddwch yn ystyried
-  gwneud cais am gyllid
+summary: Beth sydd angen i chi ei wneud pan fyddwch yn ystyried gwneud cais am
+  gyllid. Syniadau ac awgrymiadau ar gyfer gwneud cais!
 image:
   alt: A brown notebook with the word "plans" on the front surrounded by green
     plants
   credit: Photo copyright Autumn Barlow/The Wildlife Trusts 2023
   src: /images/uploads/how-to-apply-for-funding_orig-3-.jpg
+video:
+  id: S1MeIs4II4I
+  title: " Sut i wneud cais am arian: Fideo Cymunedol Natur Drws Nesaf"
+  description: Mae Jen o VCS Swydd Lincoln yn rhoi cyngor manwl ar geisiadau am
+    arian. Mae'r fideo hwn yn cynnwys hyd yn oed mwy o help na'r ddogfen
+    ysgrifenedig! (Saesneg yn unig)
 relatedGuides:
   - "Finding Funding "
   - Bank Accounts For Groups

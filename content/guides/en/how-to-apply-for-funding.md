@@ -1,18 +1,24 @@
 ---
 title: How to Apply for Funding
-summary: A summary of what you need to do when you are thinking of applying for funding.
+summary: What do you need to do when you are thinking of applying for funding.
+  Hints and tips for making an application!
+Category: admin-and-info
 image:
   src: /images/uploads/how-to-apply-for-funding_orig-3-.jpg
   alt: A brown notebook with the word "plans" on the front surrounded by green
     plants
   credit: Photo copyright Autumn Barlow/The Wildlife Trusts 2023
+video:
+  id: S1MeIs4II4I
+  title: "How to apply for funding: A Nextdoor Nature Community Video"
+  description: Jen from Lincolnshire VCS gives in-depth advice on funding
+    applications. This video contains even more help than the written document!
 relatedGuides:
   - "Finding Funding "
   - Bank Accounts For Groups
   - Faith Groups and Lottery Funding
-category: admin-and-info
-Category: admin-and-info
 customCall: Do you have any tips for applying for funding?
+category: admin-and-info
 ---
 ## Preparation
 
