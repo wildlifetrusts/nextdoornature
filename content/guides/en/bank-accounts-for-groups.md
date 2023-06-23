@@ -1,12 +1,17 @@
 ---
 title: Bank Accounts For Groups
-summary: Information about types of bank accounts for community groups, and what
-  you need to open one.
+summary: Information about types of bank accounts for community groups. You need
+  one to get money or grants. This tells you what you need to open one.
 Category: admin-and-info
 image:
   src: /images/uploads/bank-accounts_orig-3-.jpg
   alt: A pile of bank statements
   credit: Photo copyright Autumn Barlow/The Wildlife Trusts 2023
+video:
+  id: Rvb6b0UTvBU
+  title: "All about bank accounts for groups: a Nextdoor Nature Community Video"
+  description: Lisa from Lincolnshire Voluntary Centre Services tells us all about
+    bank accounts. Please see the guide for links.
 relatedGuides:
   - How to Apply for Funding
   - "Finding Funding "

@@ -5,6 +5,11 @@ image:
   src: /images/uploads/bank-accounts_orig-3-.jpg
   credit: Photo copyright Autumn Barlow/The Wildlife Trusts 2023
   alt: A pile of bank statements
+video:
+  id: Rvb6b0UTvBU
+  description: Mae Lisa o Lincolnshire Voluntary Centre Services yn dweud popeth
+    wrthym am gyfrifon banc. Gweler y canllaw am ddolenni.
+  title: "Popeth am gyfrifon banc ar gyfer grwpiau: Fideo Cymunedol Natur Drws Nesaf"
 relatedGuides:
   - How to Apply for Funding
   - "Finding Funding "
