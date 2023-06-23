@@ -118,7 +118,7 @@ viewNoResults teasers language searchString =
                 translate language
         in
         section [ css [ marginBottom (rem 4) ] ]
-            [ h2 [] [ text (viewSectionHeader searchString t teasers.guides) ]
+            [ h2 [] [ text (t (SearchTitleFiltered 0 searchString)) ]
             ]
 
     else
