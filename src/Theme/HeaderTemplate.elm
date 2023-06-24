@@ -34,7 +34,7 @@ view model =
                             searchInput model
 
                         _ ->
-                            a [ href (Route.toString (Search (Just "#guides"))), css [ headerBtnStyle ] ] [ text (t SearchPlaceholder) ]
+                            a [ href (Route.toString (Search (Just "guides"))), css [ headerBtnStyle ] ] [ text (t SearchPlaceholder) ]
                     ]
                 ]
             ]
