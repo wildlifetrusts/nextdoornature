@@ -13,12 +13,8 @@ Mae gennym hefyd lawer o gyngor ymarferol ar sut y gallwch helpu byd natur ar we
 
 **Straeon** yw lle gallwch ddarllen popeth am yr hyn y mae pobl eraill yn ei wneud lle maent yn byw ac yn gweithio. Maent yn llawn syniadau i ddangos i chi sut y gall cymunedau bob dydd helpu natur a bywyd gwyllt ledled y DU. A gallwch chi rannu eich stori yma hefyd!
 
-**Archwiliwch ein gwefan**. Gallwch ddewis Saesneg trwy glicio ar y botwm ar y brig. Os ydych chi eisiau mynd yn ôl i'r brif dudalen, cliciwch ar y geiriau Hwb Natur Drws Nesaf ar frig pob tudalen. Mae blwch chwilio ar y dde uchaf. Teipiwch yr hyn rydych chi am ei ddarganfod!
+Archwiliwch ein gwefan. Gallwch ddewis Saesneg trwy glicio ar y botwm ar y brig. Os ydych chi eisiau mynd yn ôl i'r brif dudalen, cliciwch ar y geiriau Hwb Natur Drws Nesaf ar frig pob tudalen. Mae blwch chwilio ar y dde uchaf. Teipiwch yr hyn rydych chi am ei ddarganfod!
 
 Os ydych am gysylltu, anfonwch e-bost atom ar [nextdoornature@wildlifetrust.org](mailto:nextdoornature@wildlifetrust.org). Byddem wrth ein bodd yn clywed gennych!
 
 Ewch i'r dde i waelod unrhyw dudalen i ddod o hyd i wybodaeth am ein polisi preifatrwydd.
-
-***Prosiect gan yr Ymddiriedolaethau Natur yw Natur Drws Nesaf***. Rydym yn gweithio gyda chymunedau i ddod â phobl ynghyd a rhoi’r pŵer i bawb helpu byd natur i ffynnu – ym mhobman.
-
-Diolch i £5 miliwn o gyllid gan Gronfa Dreftadaeth y Loteri Genedlaethol, mae Natur Drws Nesaf yn rhoi’r cyngor a’r cymorth sydd eu hangen arnoch i helpu byd natur ar garreg eich drws, a gadael etifeddiaeth naturiol barhaus i nodi Jiwbilî Platinwm y Frenhines.
