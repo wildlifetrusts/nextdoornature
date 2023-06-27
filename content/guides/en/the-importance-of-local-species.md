@@ -7,8 +7,15 @@ image:
   src: /images/uploads/roadsidenaturereservenorfolkerica-olsenflpa.jpg
   alt: A photo of summer wild flowers on a roadside nature reserve.
   credit: Photo Credit Erica Olsen/FLPA
+video:
+  id: 3q5FisSeeqQ
+  title: The Importance of Local Species - a Nextdoor Nature Community Video
+  description: Kei from Lincolnshire tells us all about wildflowers, meadows and
+    local species.
 relatedGuides:
   - Taking Over Green Space In Your Area
+relatedStories:
+  - Planning a Greening Project with the Over-55s of Hastings
 customCall: Have you sown wild flowers?
 ---
 ## Sowing wild flowers? READ THIS!
