@@ -14,6 +14,8 @@ relatedGuides:
   - Insurance for Local Groups
 relatedStories:
   - The Mile Cross Community Garden at The Phoenix Centre, Norwich
+  - Planning a Greening Project with the Over-55s of Hastings
+  - St Ann's Allotments, Nottingham - a training day with the local community
 customCall: Ydych chi wedi cymryd drosodd rhai mannau gwyrdd yn eich ardal?
 category: admin-and-info
 ---
