@@ -6,6 +6,14 @@ image:
   credit: Photo Credit Erica Olsen/FLPA
   alt: Ffotograff o flodau gwyllt yr haf ar warchodfa natur ymyl ffordd.
   src: /images/uploads/roadsidenaturereservenorfolkerica-olsenflpa.jpg
+video:
+  id: 3q5FisSeeqQ
+  description: Mae Kei o Swydd Lincoln yn dweud popeth wrthym am flodau gwyllt,
+    dolydd a rhywogaethau lleol. (yn Saesneg)
+  title: Pwysigrwydd Rhywogaethau Lleol - Fideo Cymunedol Natur Drws Nesaf (yn
+    Saesneg)
+relatedGuides:
+  - Taking Over Green Space In Your Area
 customCall: Ydych chi wedi hau blodau gwyllt?
 ---
 ## Hau blodau gwyllt? DARLLENWCH HWN!
