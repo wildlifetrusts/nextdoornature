@@ -1,6 +1,6 @@
 module Theme.Global exposing (borderWrapper, centerContent, contentWrapper, featureImageStyle, globalStyles, hideFromPrint, lightPurple, lightTeal, listStyleNone, mediumTeal, pageColumnStyle, primaryHeader, purple, roundedCornerStyle, screenReaderOnly, simplePageContentContainerStyle, simpleThreeColumnFlexChildStyle, simpleThreeColumnFlexStyle, teal, teaserContainerStyle, teaserImageStyle, teaserRowStyle, topTwoColumnsWrapperStyle, white, withMediaDesktopUp, withMediaMobileUp, withMediaPrint, withMediaTabletLandscapeUp, withMediaTabletPortraitUp)
 
-import Css exposing (Color, Style, absolute, alignItems, auto, backgroundColor, backgroundImage, backgroundPosition, backgroundRepeat, backgroundSize, batch, border, border3, borderBottomRightRadius, borderRadius4, borderTopLeftRadius, borderTopRightRadius, boxSizing, breakWord, center, cm, color, column, contentBox, cover, cursor, display, displayFlex, flex, flex3, flexDirection, flexGrow, flexShrink, flexStart, flexWrap, fontFamilies, height, hex, hidden, hover, inherit, int, justifyContent, lastChild, left, listStyle, margin, margin2, margin3, marginBottom, marginRight, maxWidth, minHeight, minWidth, noRepeat, noWrap, none, overflow, overflowWrap, padding, padding2, paddingLeft, pct, pointer, position, property, pseudoElement, px, rem, row, solid, textDecoration, textDecoration3, top, underline, width, wrap, zero)
+import Css exposing (Color, Style, absolute, alignItems, auto, backgroundColor, backgroundImage, backgroundPosition, backgroundRepeat, backgroundSize, batch, border, border3, borderBottomRightRadius, borderRadius4, borderTopLeftRadius, borderTopRightRadius, boxSizing, breakWord, center, cm, color, column, contentBox, cover, cursor, display, displayFlex, flex, flex3, flexDirection, flexGrow, flexShrink, flexStart, flexWrap, fontFamilies, height, hex, hidden, hover, inherit, int, justifyContent, lastChild, left, lineHeight, listStyle, margin, margin2, margin3, marginBottom, marginRight, maxWidth, minHeight, minWidth, noRepeat, noWrap, none, num, overflow, overflowWrap, padding, padding2, paddingLeft, pct, pointer, position, property, pseudoElement, px, rem, row, solid, textDecoration, textDecoration3, top, underline, width, wrap, zero)
 import Css.Global exposing (global, typeSelector)
 import Css.Media as Media exposing (only, print, screen, withMedia)
 import Html.Styled exposing (Html, h1, text)
@@ -171,6 +171,7 @@ globalStyles =
             [ fontFamilies [ "Adelle", "serif" ]
             , color purple
             , hover [ textDecoration none ]
+            , lineHeight (num 1.2)
             , margin3 (rem 0) (rem 0) (rem 1.5)
             , textDecoration none
             , Theme.FluidScale.fontSizeExtraLarge
@@ -181,6 +182,7 @@ globalStyles =
             [ fontFamilies [ "Adelle", "serif" ]
             , color purple
             , hover [ textDecoration none ]
+            , lineHeight (num 1.2)
             , margin3 (rem 0) (rem 0) (rem 1.5)
             , textDecoration none
             , Theme.FluidScale.fontSizeLarge
@@ -191,6 +193,7 @@ globalStyles =
             [ fontFamilies [ "Adelle", "serif" ]
             , color purple
             , hover [ textDecoration none ]
+            , lineHeight (num 1.2)
             , margin3 (rem 0) (rem 0) (rem 1)
             , textDecoration none
             , Theme.FluidScale.fontSizeMedium
