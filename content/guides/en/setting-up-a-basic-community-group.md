@@ -1,16 +1,26 @@
 ---
 title: Setting up a Basic Community Group
 summary: This guide explains how to set up a basic community group or
-  unincorporated association.
+  unincorporated association. It covers meetings, constitutions, money and
+  rules.
+Category: admin-and-info
 image:
   src: /images/uploads/setting-up-community-group_orig-3-.jpg
   alt: An image of a notebook with pens
   credit: Image copyright Autumn Barlow/The Wildlife Trusts 2023
+video:
+  id: pD3c1OVsL5Q
+  title: Setting up a basic community group - a Nextdoor Nature Community Video
+  description: Les from Lincolnshire Voluntary Centre Services explains how to
+    start a community group.
 relatedGuides:
   - Types of Community Group (England and Wales)
-category: admin-and-info
-Category: admin-and-info
+relatedStories:
+  - The Mile Cross Community Garden at The Phoenix Centre, Norwich
+  - "Alderman Kneeshaw Park, Hull: a community making a local park a better
+    place to be"
 customCall: Have you set up a community group?
+category: admin-and-info
 ---
 The easiest group to set up is called an “unincorporated association”. You need to write a “constitution” or “governing document”. This is a list of rules for the group. It also says what your group’s going to do, and how it’s going to do it.
 
