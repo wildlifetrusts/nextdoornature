@@ -6,7 +6,6 @@ image:
   src: /images/uploads/setting-up-community-group_orig-3-.jpg
   alt: Delwedd o lyfr nodiadau gyda beiros
   credit: Image copyright Autumn Barlow/The Wildlife Trusts 2023
-category: admin-and-info
 video:
   id: pD3c1OVsL5Q
   title: Sefydlu grŵp cymunedol sylfaenol - Fideo Cymunedol Natur Drws Nesaf (yn
@@ -15,7 +14,12 @@ video:
     ddechrau grŵp cymunedol. (yn Saesneg)
 relatedGuides:
   - Types of Community Group (England and Wales)
+relatedStories:
+  - The Mile Cross Community Garden at The Phoenix Centre, Norwich
+  - "Alderman Kneeshaw Park, Hull: a community making a local park a better
+    place to be"
 customCall: Ydych chi wedi sefydlu grŵp cymunedol?
+category: admin-and-info
 ---
 Yr enw ar y grŵp hawsaf i’w sefydlu yw “cymdeithas anghorfforedig”. Mae angen i chi ysgrifennu “cyfansoddiad” neu “ddogfen lywodraethu”. Dyma restr o reolau ar gyfer y grŵp. Mae hefyd yn dweud beth mae eich grŵp yn mynd i’w wneud, a sut mae’n mynd i’w wneud.
 
