@@ -230,7 +230,7 @@ cyStrings key =
             "/images/submit-meta-david-clode-eL4ADAsiOR8-unsplash.jpg"
 
         SubmitStoryFormSrc ->
-            "[cCc]"
+            "https://wildlifetrusts.formstack.com/forms/team_wilder_cy"
 
         SubmitStoryFormTitle ->
             "[cCc]"
