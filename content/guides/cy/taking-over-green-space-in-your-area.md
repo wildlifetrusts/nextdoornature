@@ -3,14 +3,19 @@ title: Rheoli gofod gwyrdd yn eich ardal
 summary: Crynodeb o sut i ddechrau cymryd drosodd darn o fannau gwyrdd.
 image:
   src: /images/uploads/takingovergreenspace_orig-3-.jpg
-  alt: A trowel in the dirt in front of a small green bushy plant
+  alt: Trywel yn y baw o flaen planhigyn bach gwyrdd trwchus
   credit: Photo copyright Autumn Barlow / The Wildlife Trusts 2023
+video:
+  id: dEbN9hsFXUQ
+  title: Meddiannu Man Gwyrdd - Fideo Cymuned Natur Drws Nesaf (yn Saesneg)
+  description: Mae pobl ifanc Keeping it Wild, Swydd Nottingham, yn dangos i ni
+    sut i gymryd drosodd mannau gwyrdd. (yn Saesneg)
 relatedGuides:
   - Insurance for Local Groups
-category: admin-and-info
 relatedStories:
   - The Mile Cross Community Garden at The Phoenix Centre, Norwich
 customCall: Ydych chi wedi cymryd drosodd rhai mannau gwyrdd yn eich ardal?
+category: admin-and-info
 ---
 Canllawiau i Gymru yn unig. Mae gan yr Alban, Gogledd Iwerddon a Lloegr gyngor gwahanol. Edrychwch ar y dogfennau ar wahân.
 
