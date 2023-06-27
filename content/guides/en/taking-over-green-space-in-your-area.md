@@ -1,15 +1,23 @@
 ---
 title: Taking Over Green Space In Your Area
-summary: A summary of how to get started in taking over a patch of green space.
+summary: If you want to know how to get started in taking over a patch of green
+  space, read this and watch the video from the young people of Keeping it Wild!
 Category: admin-and-info
 image:
   src: /images/uploads/takingovergreenspace_orig-3-.jpg
   alt: A trowel in the dirt in front of a small green bushy plant
   credit: Photo copyright Autumn Barlow / The Wildlife Trusts 2023
+video:
+  id: dEbN9hsFXUQ
+  title: Taking Over Green Space - A Nextdoor Nature Community Video
+  description: The young people of Keeping it Wild, Nottinghamshire, show us how
+    to take over green space.
 relatedGuides:
   - Insurance for Local Groups
 relatedStories:
   - The Mile Cross Community Garden at The Phoenix Centre, Norwich
+  - Planning a Greening Project with the Over-55s of Hastings
+  - St Ann's Allotments, Nottingham - a training day with the local community
 customCall: "Have you taken over some green space in your area? "
 category: working-with-the-authorities
 ---
