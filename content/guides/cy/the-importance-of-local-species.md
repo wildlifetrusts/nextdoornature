@@ -14,6 +14,8 @@ video:
     Saesneg)
 relatedGuides:
   - Taking Over Green Space In Your Area
+relatedStories:
+  - Planning a Greening Project with the Over-55s of Hastings
 customCall: Ydych chi wedi hau blodau gwyllt?
 ---
 ## Hau blodau gwyllt? DARLLENWCH HWN!
