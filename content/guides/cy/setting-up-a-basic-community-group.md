@@ -1,11 +1,18 @@
 ---
 title: Sefydlu Grŵp Cymunedol Sylfaenol
 summary: Yr enw ar y grŵp hawsaf i’w sefydlu yw “cymdeithas anghorfforedig”.
+  Mae'n cwmpasu cyfarfodydd, cyfansoddiadau, arian a rheolau.
 image:
   src: /images/uploads/setting-up-community-group_orig-3-.jpg
-  alt: An image of a notebook with pens
+  alt: Delwedd o lyfr nodiadau gyda beiros
   credit: Image copyright Autumn Barlow/The Wildlife Trusts 2023
 category: admin-and-info
+video:
+  id: pD3c1OVsL5Q
+  title: Sefydlu grŵp cymunedol sylfaenol - Fideo Cymunedol Natur Drws Nesaf (yn
+    Saesneg)
+  description: Mae Les o Lincolnshire Voluntary Centre Services yn esbonio sut i
+    ddechrau grŵp cymunedol. (yn Saesneg)
 relatedGuides:
   - Types of Community Group (England and Wales)
 customCall: Ydych chi wedi sefydlu grŵp cymunedol?
