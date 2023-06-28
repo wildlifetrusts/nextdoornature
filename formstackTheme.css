@@ -36,6 +36,12 @@
   background-color: #54257f !important;
 }
 
+.fsRowBody input[type="text"].fsRequired,
+.fsRowBody input[type="email"].fsRequired,
+.fsRowBody input[type="number"].fsRequired,
+.fsRowBody input[type="tel"].fsRequired,
+.fsForm select.fsRequired,
+.fsForm textarea.fsRequired,
 .fsRowBody input[type="text"],
 .fsRowBody input[type="email"],
 .fsRowBody input[type="number"],
