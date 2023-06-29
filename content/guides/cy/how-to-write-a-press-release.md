@@ -3,9 +3,14 @@ title: Datganiadau i'r Wasg – cyfarwyddyd
 summary: Awgrymiadau sylfaenol ar sut i ysgrifennu datganiad i'r wasg.
 image:
   src: /images/uploads/press-release_orig-3-.jpg
-  alt: A newspaper and some green leaves
+  alt: Papur newydd a rhai dail gwyrdd
   credit: Photo copyright Autumn Barlow/The Wildlife Trusts 2023
 category: admin-and-info
+video:
+  id: _gYTrCHVWwc
+  title: "Sut i Ysgrifennu Datganiad i'r Wasg: Fideo Cymunedol Natur Drws Nesaf
+    (yn Saesneg)"
+  description: Mae'r hydref yn esbonio sut i ysgrifennu datganiad i'r wasg. (yn Saesneg)
 relatedGuides:
   - How to Run a Fundraising Event
 customCall: Ydy ysgrifennu datganiad i'r wasg yn hawdd i chi?
