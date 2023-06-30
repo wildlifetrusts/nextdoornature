@@ -3,14 +3,19 @@ title: Rheoli Gwrthdaro mewn Grŵp
 summary: "Deall gwrthdaro a sut i ddelio ag ef mewn grwpiau.               "
 image:
   src: /images/uploads/managingconflictingroup_orig-3-.jpg
-  alt: A photo of a leaf with many holes eaten away at it
+  alt: Llun o ddeilen gyda llawer o dyllau wedi'i bwyta i ffwrdd ohoni
   credit: Photo copyright Autumn Barlow/The Wildlife Trusts 2023
-category: admin-and-info
+video:
+  id: I3BzOsBYEqI
+  title: Rheoli Gwrthdaro Mewn Grŵp - Fideo Cymunedol Natur Drws Nesaf (yn Saesneg)
+  description: Kei o Swydd Lincoln yn siarad am sut i reoli anghytundeb mewn grŵp.
+    (yn Saesneg)
 relatedGuides:
   - "Making sure everyone can access your group or project "
 relatedStories:
   - Norton Grange Community Centre
 customCall: Sut ydych chi wedi delio â gwrthdaro neu anghytundeb?
+category: admin-and-info
 ---
 Mae gwrthdaro yn normal, ac ni allwch ei osgoi.
 
