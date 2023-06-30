@@ -6,7 +6,11 @@ image:
   src: /images/uploads/support-from-business_orig-3-.jpg
   alt: Pentwr o ddarnau arian wedi'u hamgylchynu gan blanhigion
   credit: Photo copyright Autumn Barlow/The Wildlife Trusts 2023
-video: null
+video:
+  id: wzH-0mv9rU0
+  title: "Busnesau: Sut Gallant Eich Helpu Chi (yn Saesneg)"
+  description: Mae Isla o Newark yn esbonio beth all busnesau ei wneud i chi, a
+    beth allwch chi ei wneud iddyn nhw. (yn Saesneg)
 relatedGuides:
   - "Finding Funding "
 customCall: Ydych chi wedi gweithio gyda busnes lleol?

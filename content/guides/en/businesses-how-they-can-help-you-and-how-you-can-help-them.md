@@ -7,6 +7,11 @@ image:
   src: /images/uploads/support-from-business_orig-3-.jpg
   alt: A pile of coins surrounded by plants
   credit: Photo copyright Autumn Barlow/The Wildlife Trusts 2023
+video:
+  id: wzH-0mv9rU0
+  title: Businesses - How They Can Help You
+  description: Isla from Newark explains what businesses can do for you, and what
+    you can do for them.
 relatedGuides:
   - "Finding Funding "
 customCall: Have you worked with a local business?
