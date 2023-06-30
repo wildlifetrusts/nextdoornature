@@ -7,8 +7,12 @@ image:
   src: /images/uploads/managingconflictingroup_orig-3-.jpg
   alt: A photo of a leaf with many holes eaten away at it
   credit: Photo copyright Autumn Barlow/The Wildlife Trusts 2023
+video:
+  id: I3BzOsBYEqI
+  title: Managing Conflict in a Group - A Nextdoor Nature Community Video
+  description: Kei from Lincolnshire talks about how to manage disagreement in a group.
 relatedGuides:
-  - "Making sure everyone can access your group or project "
+  - "Running a Group Session: How to Get Started"
 relatedStories:
   - Norton Grange Community Centre
 customCall: "How have you handled conflict or disagreement? "
