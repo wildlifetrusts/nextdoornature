@@ -5,11 +5,13 @@ summary: The Nextdoor Nature Hub is a collection of guides (information) and
 ---
 ## This website will help you to help nature.
 
-Here, you will find ***guides*** and ***stories.*** 
+We’re in a nature crisis. This means that without our help, we will lose more and more wildlife – animals, plants, birds and insects. So this website will tell you how to help!
+
+If you are looking for practical advice about how you can help nature, you will find everything on The Wildlife Trusts website. [Go to this link to find out how to do things like build a birdbox, dig a pond, sow wildflowers and lots more.](https://www.wildlifetrusts.org/actions)
+
+On this website, you will find ***guides*** and ***stories.***
 
 ***Guides*** are full of simple, easy-to-understand information in words and videos to help you to take action for nature. These guides tell you how to start a group, how to find funding, everything you need to know about insurance, banks, and more! 
-
-W﻿e also have lots of practical advice about how you can help nature on The Wildlife Trusts website.[ Follow this link to discover how to build a birdbox, dig a pond or sow wildflowers.](https://www.wildlifetrusts.org/actions)
 
 ***Stories*** are where you can read all about what other people are doing where they live and work. They are full of ideas to show you how everyday communities can help nature and wildlife all over the UK. And you can share your story here too! 
 
