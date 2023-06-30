@@ -1,5 +1,5 @@
 ---
-title: The Importance of Local Species
+title: The Importance of Local Wildlife
 summary: It's a great idea to grow more wild plants but we need to make sure
   that they are the right plants for the right places.
 Category: admin-and-info
