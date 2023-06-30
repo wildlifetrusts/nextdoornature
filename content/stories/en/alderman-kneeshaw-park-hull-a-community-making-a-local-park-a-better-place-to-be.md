@@ -14,6 +14,10 @@ images:
     alt: A group of volunteers working outside on building wooden planters
     credit: Photo copyright Rachel Hardy/Yorkshire Wildlife Trust
     caption: "The Friends of Alderman Kneeshaw Park "
+  - src: /images/uploads/orchard-work-litterpick-tree-gaurds-d-27-04-23-rachel-hardy.jpg
+    alt: Two people planting a tree.
+    credit: Photo copyright Rachel Hardy/The Yorkshire Wildlife Trust
+    caption: Planting trees and protecting them, and litterpicking.
 summary: The Friends of Alderman Kneeshaw Park are a group of dedicated
   volunteers with a passion for regenerating and reigniting local people’s love
   of the park.
