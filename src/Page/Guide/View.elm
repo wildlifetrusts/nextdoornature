@@ -1,6 +1,6 @@
 port module Page.Guide.View exposing (print, view)
 
-import Css exposing (Style, alignItems, auto, backgroundColor, batch, border, borderBottom3, center, color, column, display, displayFlex, em, flexDirection, flexStart, flexWrap, fontFamilies, fontWeight, hover, inlineBlock, int, justifyContent, listStyle, margin2, marginBottom, marginRight, marginTop, maxWidth, none, padding, paddingLeft, paddingRight, pct, property, px, rem, solid, textDecoration3, underline, unset, width, wrap, zero)
+import Css exposing (Style, alignItems, auto, backgroundColor, batch, border, borderBottom3, color, column, display, displayFlex, em, flexDirection, flexStart, flexWrap, fontFamilies, fontWeight, hover, inlineBlock, int, justifyContent, lastChild, listStyle, margin2, marginBottom, marginRight, marginTop, maxWidth, minWidth, none, padding, paddingBottom, paddingLeft, paddingRight, pct, property, px, rem, solid, spaceBetween, textDecoration3, underline, unset, width, wrap, zero)
 import Html.Styled exposing (Html, a, button, div, h2, img, li, p, span, text, ul)
 import Html.Styled.Attributes exposing (alt, attribute, css, href, src)
 import Html.Styled.Events exposing (onClick)
@@ -14,7 +14,7 @@ import Page.Shared.View
 import Page.Story.Data
 import Route exposing (Route(..))
 import Theme.FluidScale
-import Theme.Global exposing (centerContent, contentWrapper, featureImageStyle, hideFromPrint, lightPurple, lightTeal, pageColumnStyle, primaryHeader, purple, simpleThreeColumnFlexChildStyle, simpleThreeColumnFlexStyle, teal, teaserImageStyle, topTwoColumnsWrapperStyle, withMediaPrint, withMediaTabletLandscapeUp)
+import Theme.Global exposing (centerContent, contentWrapper, featureImageStyle, hideFromPrint, lightPurple, lightTeal, pageColumnStyle, primaryHeader, purple, simpleThreeColumnFlexChildStyle, simpleThreeColumnFlexStyle, teal, teaserImageStyle, topTwoColumnsWrapperStyle, withMediaMobileUp, withMediaPrint, withMediaTabletLandscapeUp, withMediaTabletPortraitUp)
 import Theme.Markdown exposing (markdownToHtml)
 
 
@@ -230,12 +230,12 @@ viewRelatedStoryTeasers language storyTitleList allStoryTeasers =
         in
         div [ css [ hideFromPrint ] ]
             [ h2 [ css [ marginTop zero ] ] [ text (t RelatedStoriesHeading) ]
-            , div [ css [ viewStoryTeasersStyle ] ]
+            , ul [ css [ listStyleNone, relatedStoriesContainerStyle ] ]
                 (relatedStoryItems
                     |> List.sortBy .slug
                     |> List.map
                         (\teaser ->
-                            div [ css [ storyteaserContainerStyle ] ]
+                            li [ css [ storyTeaserContainerStyle ] ]
                                 [ viewStoryImage (teaserImageFromLanguage language teaser)
                                 , a [ href (Route.toString (Story teaser.slug)) ] [ text (Page.Guide.Data.titleFromLanguage language teaser) ]
                                 ]
@@ -307,23 +307,35 @@ headerIconStyle =
     batch [ display inlineBlock, marginRight (rem 0.5), maxWidth (em 1) ]
 
 
-viewStoryTeasersStyle : Style
-viewStoryTeasersStyle =
+relatedStoriesContainerStyle : Style
+relatedStoriesContainerStyle =
     batch
-        [ justifyContent center
+        [ justifyContent spaceBetween
         , displayFlex
         , flexWrap wrap
+        , property "gap" "1rem"
         , maxWidth (px 400)
         ]
 
 
-storyteaserContainerStyle : Style
-storyteaserContainerStyle =
+storyTeaserContainerStyle : Style
+storyTeaserContainerStyle =
     batch
-        [ justifyContent center
+        [ alignItems flexStart
         , displayFlex
         , flexDirection column
-        , maxWidth (px 150)
+        , listStyle none
+        , paddingBottom (rem 2)
+        , width (pct 100)
+        , lastChild
+            [ marginBottom (rem 0)
+            , marginRight (rem 0)
+            ]
+        , withMediaMobileUp
+            [ maxWidth (pct 47)
+            , minWidth (px 100)
+            , paddingBottom zero
+            ]
         ]
 
 
