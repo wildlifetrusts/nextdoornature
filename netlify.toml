@@ -6,3 +6,8 @@
 
 [context.production]
     command = "mv robots-production.txt robots.txt"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
