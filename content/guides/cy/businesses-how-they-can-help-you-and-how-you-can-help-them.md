@@ -8,9 +8,9 @@ image:
   credit: Photo copyright Autumn Barlow/The Wildlife Trusts 2023
 video:
   id: wzH-0mv9rU0
-  title: "Busnesau: Sut Gallant Eich Helpu Chi (yn Saesneg)"
+  title: "Busnesau: Sut Gallant Eich Helpu Chi (yn Saesneg)."
   description: Mae Isla o Newark yn esbonio beth all busnesau ei wneud i chi, a
-    beth allwch chi ei wneud iddyn nhw. (yn Saesneg)
+    beth allwch chi ei wneud iddyn nhw (yn Saesneg).
 relatedGuides:
   - "Finding Funding "
 customCall: Ydych chi wedi gweithio gyda busnes lleol?
