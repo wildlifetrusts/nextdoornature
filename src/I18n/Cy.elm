@@ -181,13 +181,13 @@ cyStrings key =
             "Canllawiau cymunedol Natur Drws Nesaf, help a gwybodaeth i bawb allu gweithredu dros fyd natur."
 
         SearchTitleFiltered count query ->
-            i
-                --if count == 1 then
-                -- String.join " " [ "1 canlyniad ar gyfer", query ]
-                --else
+            if count == 1 then
+                String.join " " [ "1 canlyniad ar gyfer", query ]
+
+            else
                 String.join
-                " "
-                [ String.fromInt count, "canlyniad ar gyfer", query ]
+                    " "
+                    [ String.fromInt count, "canlyniadau ar gyfer", query ]
 
         GuidesHeading ->
             "Canllawiau: gwybodaeth i'ch helpu"
