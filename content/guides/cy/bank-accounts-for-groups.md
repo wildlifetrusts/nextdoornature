@@ -8,8 +8,9 @@ image:
 video:
   id: Rvb6b0UTvBU
   description: Mae Lisa o Lincolnshire Voluntary Centre Services yn dweud popeth
-    wrthym am gyfrifon banc. Gweler y canllaw am ddolenni.
-  title: "Popeth am gyfrifon banc ar gyfer grwpiau: Fideo Cymunedol Natur Drws Nesaf"
+    wrthym am gyfrifon banc. Gweler y canllaw am ddolenni (yn Saesneg.)
+  title: "Popeth am gyfrifon banc ar gyfer grwpiau: Fideo Cymunedol Natur Drws
+    Nesaf (yn Saesneg.)"
 relatedGuides:
   - How to Apply for Funding
   - "Finding Funding "
