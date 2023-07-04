@@ -76,13 +76,13 @@ cyStrings key =
             "Rhif elusen gofrestredig 207238"
 
         HeritageFundLogoAlt ->
-            "Logo for the national lottery heritage fund"
+            "Logo Cronfa Dreftadaeth y Loteri Genedlaethol"
 
         PlatiJubesLogoAlt ->
-            "Logo for the queens platinum jubilee 2022"
+            "Logo Jiwbilî Platinwm 2022 y Frenhines"
 
         WildLifeTrustLogoAlt ->
-            "Logo for the wildlife trust"
+            "Logo'r Ymddiriedolaethau Natur"
 
         ---
         -- Cookie banner
@@ -106,7 +106,7 @@ cyStrings key =
         -- Index page
         ---
         IndexMetaDescription ->
-            "[cCc]"
+            "Prosiect gan yr Ymddiriedolaethau Natur yw Natur Drws Nesaf. Mae’n helpu cymunedau a phobl i ddod at ei gilydd i fynd i’r afael â’r argyfwng hinsawdd a natur. Mae'n eich grymuso i helpu natur i ffynnu ble bynnag yr ydych yn byw ac yn gweithio."
 
         GuideHighlightsSubtitle ->
             "Uchafbwyntiau'r canllawiau"
@@ -175,26 +175,28 @@ cyStrings key =
         -- Guides Page
         ---
         SearchTitle ->
-            "Canllawiau"
+            "Gweithredwch dros natur"
 
         SearchMetaDescription ->
-            "[cCc] Search page description in Welsh"
+            "Canllawiau cymunedol Natur Drws Nesaf, help a gwybodaeth i bawb allu gweithredu dros fyd natur."
 
         SearchTitleFiltered count query ->
-            if count == 1 then
-                String.join " " [ "1 canllaw ar", query ]
-
-            else
-                String.join " " [ String.fromInt count, "canllawiau ar", query ]
+            i
+                --if count == 1 then
+                -- String.join " " [ "1 canlyniad ar gyfer", query ]
+                --else
+                String.join
+                " "
+                [ String.fromInt count, "canlyniad ar gyfer", query ]
 
         GuidesHeading ->
-            "[cCc]"
+            "Canllawiau: gwybodaeth i'ch helpu"
 
         StoriesHeading ->
-            "[cCc]"
+            "Straeon: ysbrydoliaeth bywyd go iawn"
 
         ActionsHeading ->
-            "[cCc]"
+            "Camau gweithredu: pethau ymarferol y gallwch eu gwneud"
 
         SearchPlaceholder ->
             "Chwilio'r hwb yma"
@@ -233,7 +235,7 @@ cyStrings key =
             "https://wildlifetrusts.formstack.com/forms/team_wilder_cy"
 
         SubmitStoryFormTitle ->
-            "[cCc]"
+            "Online Form"
 
         StoryMetaDescription title ->
             "Stori am: " ++ title
