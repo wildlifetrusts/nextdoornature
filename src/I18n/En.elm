@@ -10,7 +10,7 @@ enStrings key =
             "The Nextdoor Nature Hub"
 
         SearchMetaDescription ->
-            "Guides to help you. Stories to inspire you. Practical actions you can take."
+            "Nextdoor Nature community guides, help and information for everyone to take action for nature. "
 
         CallForStoryP ->
             "If you want to tell us your story, we'd love to hear from you."
@@ -67,13 +67,13 @@ enStrings key =
             "Share your story"
 
         HeritageFundLogoAlt ->
-            "Logo for the national lottery heritage fund"
+            "National Lottery Heritage Fund logo"
 
         PlatiJubesLogoAlt ->
-            "Logo for the queens platinum jubilee 2022"
+            "The Queen's Platinum Jubilee 2022 logo"
 
         WildLifeTrustLogoAlt ->
-            "Logo for the wildlife trust"
+            "The Wildlife Trusts logo"
 
         FooterPrivacyPolicyText ->
             "Privacy policy"
@@ -114,7 +114,7 @@ enStrings key =
         -- Index page
         ---
         IndexMetaDescription ->
-            "Nextdoor Nature is bringing communities together to help nature flourish where you live and work!"
+            "Nextdoor Nature is a project from The Wildlife Trusts to help communities and people to come together and tackle the climate and nature crisis by empowering everyone to help nature flourish wherever you live and work."
 
         GuideHighlightsSubtitle ->
             "Guide highlights"
@@ -223,7 +223,7 @@ enStrings key =
             "https://wildlifetrusts.formstack.com/forms/team_wilder"
 
         SubmitStoryFormTitle ->
-            "[cCc] teamwilder_test"
+            "Online Form"
 
         ---
         -- Category things
