@@ -97,7 +97,7 @@ headerBrandStyle =
         , color white
         , fontFamilies [ "Ludicrous" ]
         , fontWeight normal
-        , lineHeight (em 1.2)
+        , lineHeight (em 1)
         , margin zero
         , withMediaMobileUp
             [ marginRight (rem 3) ]
