@@ -1,6 +1,8 @@
 ---
-title: How to use this site CY
+title: Sut i ddefnyddio'r wefan hon
+summary: "Mae dwy brif ran i'r wefan hon. Mae tywyswyr yn llawn gwybodaeth
+  gyflym, hawdd i bawb. Mae straeon yn ymwneud â chi i gyd! "
 ---
-\[cCc] This site has two main parts. **Guides** are full of quick, easy information for everyone. They are written in English and Welsh and most of them also have a video if you prefer to watch and listen.
+Mae dwy brif ran i'r wefan hon. Mae **Canllawiau** yn llawn gwybodaeth gyflym, hawdd i bawb. Maen nhw wedi'u hysgrifennu yn Gymraeg a Saesneg ac mae gan y rhan fwyaf ohonyn nhw fideo hefyd os yw'n well gennych wylio a gwrando.
 
-\[cCc] **Stories** are all about you! Anyone can send us a story about a community project. Find other stories that inspire you, and connect with groups in your area. You can submit your story [here](/submit-story).
+Mae **Straeon** yn ymwneud â chi! Gall unrhyw un anfon stori atom am brosiect cymunedol. Chwiliwch am straeon eraill sy'n eich ysbrydoli, a chysylltwch â grwpiau yn eich ardal. Gallwch gyflwyno eich stori [yma.](https://nextdoornaturehub.org.uk/share-story)
