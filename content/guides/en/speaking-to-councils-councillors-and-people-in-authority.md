@@ -3,16 +3,22 @@ title: Speaking to Councils, Councillors and People in Authority
 summary: How to feel more confident when you talk to your local council. It can
   be scary if you haven't spoken to people in authority very much. Here are some
   hints and tips.
-relatedGuides:
-  - All About Councils and Local Authorities
-  - How to contact your MP, MS (Wales), MLA (Northern Ireland) or MSP (Scotland)
-category: working-with-the-authorities
 Category: working-with-the-authorities
 image:
   src: /images/uploads/speaking-with-confidence.jpg
   alt: A woman in pink speaking to a camera crew in a snowy garden.
   credit: Photo copyright Autumn Barlow/The Wildlife Trusts 2023
+video:
+  id: y-MKs9g3SWA
+  title: Speaking to Councils and Councillors with Confidence
+  description: Isla from Newark has some hints and tips about speaking with confidence.
+relatedGuides:
+  - All About Councils and Local Authorities
+  - How to contact your MP, MS (Wales), MLA (Northern Ireland) or MSP (Scotland)
+relatedStories:
+  - Norton Grange Community Centre
 customCall: How easy is it for you to speak to councils?
+category: working-with-the-authorities
 ---
 ## Speaking to councils and councillors: Practical Tips
 

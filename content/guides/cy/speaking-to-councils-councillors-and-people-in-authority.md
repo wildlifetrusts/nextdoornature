@@ -3,15 +3,21 @@ title: Siarad â Chynghorau, Cynghorwyr a Phobl mewn Awdurdod
 summary: Sut i deimlo'n fwy hyderus pan fyddwch chi'n siarad â'ch cyngor lleol.
   Gall fod yn frawychus os nad ydych wedi siarad llawer iawn â phobl mewn
   awdurdod. Dyma rai awgrymiadau ac awgrymiadau.
-category: admin-and-info
 image:
   src: /images/uploads/speaking-with-confidence.jpg
   alt: Gwraig mewn pinc yn siarad â chriw camera mewn gardd eira.
   credit: Photo copyright Autumn Barlow/The Wildlife Trusts 2023
+video:
+  id: y-MKs9g3SWA
+  title: Siarad â Chynghorau, Cynghorwyr a Phobl mewn Awdurdod (yn Saesneg)
+  description: Mae gan Isla o Newark rai awgrymiadau am siarad yn hyderus (yn Saesneg)
 relatedGuides:
   - All About Councils and Local Authorities
   - How to contact your MP, MS (Wales), MLA (Northern Ireland) or MSP (Scotland)
+relatedStories:
+  - Norton Grange Community Centre
 customCall: Pa mor hawdd yw hi i chi siarad â chynghorau?
+category: admin-and-info
 ---
 ## Siarad â chynghorau a chynghorwyr: Cyngor Ymarferol
 
