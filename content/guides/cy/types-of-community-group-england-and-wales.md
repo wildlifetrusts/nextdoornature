@@ -6,6 +6,11 @@ image:
   src: /images/uploads/types-of-community-group.jpg
   alt: Grŵp o bobl mewn ystafell yn chwifio at y camera.
   credit: Photo copyright Autumn Barlow/The Wildlife Trusts 2023
+video:
+  id: IZFwvwvZhDo
+  title: Mathau o Grwpiau Cymunedol (yn Saesneg).
+  description: Mae Les o Swydd Lincoln yn esbonio'r gwahanol fathau o grwpiau
+    cymunedol (yn Saesneg)
 relatedGuides:
   - Setting up a Basic Community Group
 category: admin-and-info
