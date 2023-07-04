@@ -2,7 +2,7 @@
 
 This is part of the [Wildlife Trusts](https://www.wildlifetrusts.org/) larger [TeamWilder](https://www.hiwwt.org.uk/team-wilder) projects.
 
-[Current release](https://team-wilder-proto.pages.dev/)
+[Release https://nextdoornaturehub.org.uk](https://nextdoornaturehub.org.uk/)
 
 [Current content editor](https://team-wilder-content.netlify.app/admin)
 
@@ -13,7 +13,7 @@ This is part of the [Wildlife Trusts](https://www.wildlifetrusts.org/) larger [T
 - [elm](http://elm-lang.org/) 0.19
 - [node](https://nodejs.org/)
 - [nvm for macOS & Linux](https://github.com/nvm-sh/nvm) or [nvm for Windows](https://github.com/coreybutler/nvm-windows)
-- After cloning the repo and running `npm i` you will also need to `npm run prepare` to install [husky](https://blog.typicode.com/husky-git-hooks-autoinstall/)
+- After cloning the repo and running `npm install` you will also need to `npm run prepare` to install [husky](https://blog.typicode.com/husky-git-hooks-autoinstall/)
 - [Image Magick](https://imagemagick.org/index.php) (for image size fixing)
 
 ### Formatting
@@ -22,7 +22,7 @@ We recommend integrating `elm-format@0.8.6` and `prettier` into your code editor
 
 ### Build
 
-- `npm run dev` for a hot reload server at [http://localhost:3000](http://localhost:3000)
+- `npm run dev` for a hot reload server which defaults to [http://localhost:5173](http://localhost:5173)
 - `npm run build` to generate a production build in `dist`
 
 ### Test
@@ -35,47 +35,45 @@ We aim to cover any exposed API in our modules and things with potential to fail
 
 ### Linting
 
-You can run [elm-review](https://github.com/jfmengels/elm-review) on your code with the following command.
+You can run [elm-review](https://github.com/jfmengels/elm-review) on your code with `npm run lint`
 
-```sh
-npm run lint
-```
+We use rules provided by [jfmengels/elm-review-config/application](https://github.com/jfmengels/elm-review-config) to improve code quality.
 
-We use rules provided by [jfmengels/elm-review-config/application](https://github.com/jfmengels/elm-review-config).
-
-Rules live in `review/src/ReviewConfig.elm` and can be modified if needed. These are suggestions to improve code quality but not acceptance criteria.
+Rules live in `review/src/ReviewConfig.elm` and can be modified if needed.
 
 ## Deployment
 
 - When a pull request is created against `main`, cloudflare builds a preview site
 - When code is merged into `main` it is deployed to https://team-wilder-proto.pages.dev/
 
-## Using the CMS
+## Editing content
 
-- The netlify admin for the site can be accessed at https://team-wilder-content.netlify.app/admin
+- The CMS can be accessed at https://team-wilder-content.netlify.app/admin
 - To log in you'll need to use your github account and have write permission to this repo to make changes.
-- Any changes made & published here will be pushed to main
+- Any changes drafted will generate a preview site which can be accessed by opening the [pull request linked to the change](https://github.com/geeksforsocialchange/teamwilder/pulls)
+- Any changes marked ready and then published will be released to the public site at https://nextdoornaturehub.org.uk
 
 ## Code and configs
 
 ### What it's for
 
-- Static code generated with [elm](https://elm-lang.org/docs) and [[cCc]]()
-- Deployed and hosted by [Cloudflare](https://www.cloudflare.com/)
+#### Project configuration
+
 - `elm.json` for elm packages
 - `package.json` for node scripts and packages
 - `package-lock.json` for current versions of node packages
 - `src/*` contains app source files
 - `./formstackTheme.css` styles our formstack iframe, it can be applied by following these [instructions](https://help.formstack.com/s/article/Custom-Form-Themes-and-CSS)
+- `netlify.toml` for [Netlify deploy configuration](https://docs.netlify.com/configure-builds/file-based-configuration/)
 
-### Content & Pages
+#### Content & Pages
 
 - Pages are in `Page/`
+- Assets to be copied to deploy bundle root are in `public/`
 - Markdown content is in `content/`
 - Markdown content is compiled to `.json` files with `generate` script
 - Copy not in `content/` (e.g. UI copy) is in language files like `I18n/En.elm`
 - We use `[cCc] to denote placeholder copy`
-- We use `[fFf] to denote placeholder UI feature or section`
 
 ### Styling & layouts
 
