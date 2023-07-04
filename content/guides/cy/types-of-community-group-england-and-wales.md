@@ -13,8 +13,10 @@ video:
     cymunedol (yn Saesneg)
 relatedGuides:
   - Setting up a Basic Community Group
-category: admin-and-info
+relatedStories:
+  - St Ann's Allotments, Nottingham - a training day with the local community
 customCall: Sut wnaethoch chi benderfynu pa fath o grŵp i fod?
+category: admin-and-info
 ---
 ## Cymdeithas Anghorfforedig
 Os mai dim ond grŵp bach o wirfoddolwyr ydych chi, heb unrhyw gynlluniau i gyflogi staff neu rentu eiddo, dyma’r un i chi.
