@@ -14,7 +14,7 @@ import Page.Shared.View
 import Page.Story.Data
 import Route exposing (Route(..))
 import Theme.FluidScale
-import Theme.Global exposing (centerContent, contentWrapper, featureImageStyle, hideFromPrint, lightPurple, lightTeal, pageColumnStyle, primaryHeader, purple, simpleThreeColumnFlexChildStyle, simpleThreeColumnFlexStyle, teal, teaserImageStyle, topTwoColumnsWrapperStyle, withMediaMobileUp, withMediaPrint, withMediaTabletLandscapeUp, withMediaTabletPortraitUp)
+import Theme.Global exposing (centerContent, contentWrapper, featureImageStyle, hideFromPrint, lightPurple, lightTeal, pageColumnStyle, primaryHeader, purple, simpleThreeColumnFlexChildStyle, simpleThreeColumnFlexStyle, teal, teaserImageStyle, topTwoColumnsWrapperStyle, withMediaMobileUp, withMediaPrint, withMediaTabletLandscapeUp)
 import Theme.Markdown exposing (markdownToHtml)
 
 
