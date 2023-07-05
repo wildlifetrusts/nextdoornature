@@ -6,6 +6,11 @@ image:
   src: /images/uploads/img_3590-2-.jpg
   alt: Ffolder agored mewn cae o laswellt.
   credit: Photo copyright Autumn Barlow/The Wildlife Trusts 2023
+video:
+  id: KA-zJk4CmtE
+  title: A ddylai ein grŵp ni gael cyfansoddiad? (yn Saesneg).
+  description: Mae Autumn o Lincoln yn sôn am yr hyn y mae bod yn grŵp
+    cyfansoddiadol yn ei olygu (yn Saesneg)
 relatedGuides:
   - Types of Community Group (England and Wales)
   - Setting up a Basic Community Group
