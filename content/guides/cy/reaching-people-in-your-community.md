@@ -6,6 +6,11 @@ image:
   alt: Grŵp o bobl yn sefyll y tu allan i faner mewn rhandir
   src: /images/uploads/img_3374.jpg
   credit: Back on the Map community, Hendon, Sunderland. Photo Autumn Barlow 2022
+video:
+  id: FxcR408bH48
+  title: Cyrraedd Pobl yn eich Cymuned (yn Saesneg).
+  description: Mae Autumn o Lincoln yn sôn am sut i estyn allan a chysylltu â'ch
+    cymuned (yn Saesneg).
 relatedGuides:
   - Businesses - How They Can Help You (and how you can help them)
   - How To Write a Press Release
