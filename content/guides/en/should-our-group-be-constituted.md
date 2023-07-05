@@ -7,6 +7,10 @@ image:
   src: /images/uploads/img_3590-2-.jpg
   alt: An open folder in a field of grass.
   credit: Photo copyright Autumn Barlow/The Wildlife Trusts 2023
+video:
+  id: KA-zJk4CmtE
+  title: Should our group become constituted?
+  description: Autumn from Lincoln talks about what it means to be a constituted group.
 relatedGuides:
   - Types of Community Group (England and Wales)
   - Setting up a Basic Community Group
