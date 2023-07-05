@@ -1,11 +1,11 @@
 [build.environment]
 
 [context.production.branch-deploy]
-    command = "mv robots-disallow.txt robots.txt"
+    command = "mv robots-disallow.txt robots.txt & npm run build"
 
 
 [context.production]
-    command = "mv robots-production.txt robots.txt"
+    command = "mv robots-production.txt robots.txt & npm run build"
 
 [[redirects]]
   from = "/*"
