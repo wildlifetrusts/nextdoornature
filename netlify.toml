@@ -1,3 +1,8 @@
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
 [build.environment]
 
 [context.production.branch-deploy]
@@ -6,8 +11,3 @@
 
 [context.production]
     command = "mv robots-production.txt robots.txt & npm run build"
-
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
