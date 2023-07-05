@@ -2,6 +2,7 @@
 
 This is part of the [Wildlife Trusts](https://www.wildlifetrusts.org/) larger [TeamWilder](https://www.hiwwt.org.uk/team-wilder) projects.
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/383058cb-d638-4810-ba58-38139d1fdde0/deploy-status)](https://app.netlify.com/sites/team-wilder-content/deploys)
 [Release https://nextdoornaturehub.org.uk](https://nextdoornaturehub.org.uk/)
 
 [Current content editor](https://team-wilder-content.netlify.app/admin)
