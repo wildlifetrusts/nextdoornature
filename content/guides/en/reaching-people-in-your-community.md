@@ -7,6 +7,11 @@ image:
   src: /images/uploads/img_3374.jpg
   alt: "A group of people standing outside a banner at an allotment "
   credit: Back on the Map community, Hendon, Sunderland. Photo Autumn Barlow 2022
+video:
+  id: FxcR408bH48
+  title: Reaching People in your Community
+  description: Autumn from Lincoln talks about how to reach out and connect with
+    your community.
 relatedGuides:
   - Businesses - How They Can Help You (and how you can help them)
   - How To Write a Press Release
