@@ -71,9 +71,7 @@ app.ports.updateAnalyticsPage.subscribe(function (page) {
       dataLayer.push(arguments);
     }
     gtag("js", new Date());
-
-    // TODO this is temporarily @katjam dev account
-    gtag("config", "G-D3VTD4SBDZ", { page_path: page });
+    gtag("config", "G-SQY2BT7M1K", { page_path: page });
   }
 });
 
