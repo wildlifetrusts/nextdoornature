@@ -1,6 +1,6 @@
 ---
 title: "Beacon Seedlings - Community Gardening "
-who: A community group of new gardeners in Exeter
+who: A community group of new gardeners in Exeter.
 location: The Beacon Centre, Exeter
 postcode: EX4 8LZ
 images:
