@@ -1,6 +1,7 @@
 ---
 title: How to contact your MP, MS (Wales), MLA (Northern Ireland) or MSP (Scotland)
-summary: How to find your MP and how to get in touch with them.
+summary: How to find your MP and how to get in touch with them. What is the best
+  way to get in touch? You can email, phone or write.
 Category: working-with-the-authorities
 image:
   src: /images/uploads/contact-your-mp_orig-3-.jpg
