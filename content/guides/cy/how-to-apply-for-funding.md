@@ -9,10 +9,10 @@ image:
   src: /images/uploads/how-to-apply-for-funding_orig-3-.jpg
 video:
   id: S1MeIs4II4I
-  title: " Sut i wneud cais am arian: Fideo Cymunedol Natur Drws Nesaf"
+  title: " Sut i wneud cais am arian: Fideo Cymunedol Natur Drws Nesaf (yn Saesneg)."
   description: Mae Jen o VCS Swydd Lincoln yn rhoi cyngor manwl ar geisiadau am
     arian. Mae'r fideo hwn yn cynnwys hyd yn oed mwy o help na'r ddogfen
-    ysgrifenedig! (Saesneg yn unig)
+    ysgrifenedig! (Saesneg yn unig).
 relatedGuides:
   - "Finding Funding "
   - Bank Accounts For Groups
