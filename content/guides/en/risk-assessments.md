@@ -1,10 +1,12 @@
 ---
 title: Risk Assessments
-summary: "All about risk assessments and how to manage risk.                   "
+summary: "All about risk assessments. What is a risk assessment, how do you do
+  one, and how can you manage risk.                   "
 Category: admin-and-info
 image:
   src: /images/uploads/basic-risk-assessments_orig-3-.jpg
   alt: A photo of a warning sign
+  credit: Photo copyright Autumn Barlow/The Wildlife Trusts 2023
 video:
   id: TxoGySN9AiI
   title: "Risk Assessments: A Nextdoor Nature Community Guide."
