@@ -9,8 +9,8 @@ image:
   credit: Photo copyright Autumn Barlow/The Wildlife Trusts 2023
 video:
   id: y-MKs9g3SWA
-  title: Siarad â Chynghorau, Cynghorwyr a Phobl mewn Awdurdod (yn Saesneg)
-  description: Mae gan Isla o Newark rai awgrymiadau am siarad yn hyderus (yn Saesneg)
+  title: Siarad â Chynghorau, Cynghorwyr a Phobl mewn Awdurdod (yn Saesneg).
+  description: Mae gan Isla o Newark rai awgrymiadau am siarad yn hyderus (yn Saesneg).
 relatedGuides:
   - All About Councils and Local Authorities
   - How to contact your MP, MS (Wales), MLA (Northern Ireland) or MSP (Scotland)
