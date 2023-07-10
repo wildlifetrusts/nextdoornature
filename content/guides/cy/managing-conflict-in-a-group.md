@@ -7,11 +7,11 @@ image:
   credit: Photo copyright Autumn Barlow/The Wildlife Trusts 2023
 video:
   id: I3BzOsBYEqI
-  title: Rheoli Gwrthdaro Mewn Grŵp - Fideo Cymunedol Natur Drws Nesaf (yn Saesneg)
-  description: Kei o Swydd Lincoln yn siarad am sut i reoli anghytundeb mewn grŵp.
-    (yn Saesneg)
+  title: Rheoli Gwrthdaro Mewn Grŵp - Fideo Cymunedol Natur Drws Nesaf (yn Saesneg).
+  description: Kei o Swydd Lincoln yn siarad am sut i reoli anghytundeb mewn grŵp
+    (yn Saesneg).
 relatedGuides:
-  - "Making sure everyone can access your group or project "
+  - "Running a Group Session: How to Get Started"
 relatedStories:
   - Norton Grange Community Centre
 customCall: Sut ydych chi wedi delio â gwrthdaro neu anghytundeb?

@@ -135,7 +135,7 @@ Avoid labelling anyone’s opinions or comments as “wrong” and discourage an
 
 
 
-A useful and simple guide with more tips is [here.](https://www.clarke.edu/campus-life/health-wellness/counseling/articles-advice/tips-for-managing-conflict/)
+A useful and simple guide with more tips is [here on this academic website.](https://www.clarke.edu/campus-life/health-wellness/counseling/articles-advice/tips-for-managing-conflict/)
 
 
-[This](https://www.doc.govt.nz/get-involved/run-a-project/community-project-guidelines/manage-conflict-in-a-group/) is an excellent guide with tips on what to do if someone is hostile directly at you.
+[This website from New Zealand](https://www.doc.govt.nz/get-involved/run-a-project/community-project-guidelines/manage-conflict-in-a-group/) is an excellent guide with tips on what to do if someone is hostile directly at you.
