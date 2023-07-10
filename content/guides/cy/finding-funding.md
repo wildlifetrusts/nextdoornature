@@ -8,8 +8,8 @@ image:
   src: /images/uploads/finding-funding_orig-3-.jpg
 video:
   id: b32JWimgF2w
-  title: Dod o Hyd i Gyllid. Fideo Natur Drws Nesaf.
-  description: Animeiddiad byr am sut i ddod o hyd i gyllid ar gyfer eich grŵp.
+  title: Dod o Hyd i Gyllid. Fideo Natur Drws Nesaf (yn Saesneg).
+  description: Animeiddiad byr am sut i ddod o hyd i gyllid ar gyfer eich grŵp (yn Saesneg).
 relatedGuides:
   - Bank Accounts For Groups
   - How to Apply for Funding
