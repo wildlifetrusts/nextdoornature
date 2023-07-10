@@ -9,9 +9,9 @@ image:
 video:
   id: 3q5FisSeeqQ
   description: Mae Kei o Swydd Lincoln yn dweud popeth wrthym am flodau gwyllt,
-    dolydd a rhywogaethau lleol. (yn Saesneg)
+    dolydd a rhywogaethau lleol (yn Saesneg).
   title: Pwysigrwydd Rhywogaethau Lleol - Fideo Cymunedol Natur Drws Nesaf (yn
-    Saesneg)
+    Saesneg).
 relatedGuides:
   - Taking Over Green Space In Your Area
 relatedStories:
