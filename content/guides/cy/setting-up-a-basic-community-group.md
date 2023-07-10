@@ -9,9 +9,9 @@ image:
 video:
   id: pD3c1OVsL5Q
   title: Sefydlu grŵp cymunedol sylfaenol - Fideo Cymunedol Natur Drws Nesaf (yn
-    Saesneg)
+    Saesneg).
   description: Mae Les o Lincolnshire Voluntary Centre Services yn esbonio sut i
-    ddechrau grŵp cymunedol. (yn Saesneg)
+    ddechrau grŵp cymunedol (yn Saesneg).
 relatedGuides:
   - Types of Community Group (England and Wales)
 relatedStories:
