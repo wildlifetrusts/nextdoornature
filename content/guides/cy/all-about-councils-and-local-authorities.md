@@ -7,9 +7,10 @@ image:
   credit: Photo copyright Autumn Barlow/The Wildlife Trusts 2023
 video:
   id: pZDv-ri2GOs
-  title: Beth mae cynghorau ac awdurdodau lleol yn ei wneud? Fideo Natur Drws Nesaf.
+  title: Beth mae cynghorau ac awdurdodau lleol yn ei wneud? Fideo Natur Drws
+    Nesaf (yn Saesneg).
   description: Fideo wedi'i hanimeiddio yw hwn i egluro sut mae'r DU wedi'i
-    rhannu'n wahanol feysydd, a sut maen nhw'n cael eu rhedeg.
+    rhannu'n wahanol feysydd, a sut maen nhw'n cael eu rhedeg (yn Saesneg)..
 category: admin-and-info
 relatedGuides:
   - How to contact your MP, MS (Wales), MLA (Northern Ireland) or MSP (Scotland)
