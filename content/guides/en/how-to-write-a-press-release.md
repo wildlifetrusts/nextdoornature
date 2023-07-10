@@ -1,6 +1,7 @@
 ---
 title: How To Write a Press Release
-summary: "Basic tips on how to write a press release.                 "
+summary: "Basic tips on how to write a press release. What should it look like?
+  How long should it be? "
 Category: media-publicity-events
 image:
   src: /images/uploads/press-release_orig-3-.jpg

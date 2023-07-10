@@ -9,8 +9,8 @@ category: admin-and-info
 video:
   id: _gYTrCHVWwc
   title: "Sut i Ysgrifennu Datganiad i'r Wasg: Fideo Cymunedol Natur Drws Nesaf
-    (yn Saesneg)"
-  description: Mae'r hydref yn esbonio sut i ysgrifennu datganiad i'r wasg. (yn Saesneg)
+    (yn Saesneg)."
+  description: Mae'r hydref yn esbonio sut i ysgrifennu datganiad i'r wasg (yn Saesneg).
 relatedGuides:
   - How to Run a Fundraising Event
 customCall: Ydy ysgrifennu datganiad i'r wasg yn hawdd i chi?
