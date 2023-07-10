@@ -7,9 +7,9 @@ image:
   credit: Photo copyright Autumn Barlow/The Wildlife Trusts 2023
 video:
   id: Tk7InQgM7PE
-  title: Ymgysylltu Cymunedol Amlieithog. Fideo Natur Drws Nesaf.
+  title: Ymgysylltu Cymunedol Amlieithog. Fideo Natur Drws Nesaf (yn Saesneg).
   description: Jill o Hampshire ac Ymddiriedolaeth Natur Ynys Wyth yn siarad am
-    weithio gyda llawer o ieithoedd.
+    weithio gyda llawer o ieithoedd (yn Saesneg)..
 category: admin-and-info
 relatedGuides:
   - Practical Tips for Cross-Cultural Communication

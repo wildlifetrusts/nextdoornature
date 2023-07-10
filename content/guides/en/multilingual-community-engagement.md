@@ -1,6 +1,7 @@
 ---
 title: Working with Many Languages
-summary: A guide about working with groups where many languages are spoken.
+summary: A guide about working with groups where many languages are spoken. Some
+  hints and tips so that everyone can understand one another, and be understood.
 Category: working-with-people
 image:
   src: /images/uploads/workingwithmanylanguages_orig-3-.jpg
