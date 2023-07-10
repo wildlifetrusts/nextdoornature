@@ -8,8 +8,8 @@ image:
 category: admin-and-info
 video:
   id: zyTZUjiipxM
-  title: All About Insurance for Groups
-  description: Eve o Sleaford yn siarad am pam fod yswiriant mor bwysig.
+  title: " Yswiriant ar Gyfer Grwpiau Lleol (yn Saesneg)."
+  description: Eve o Sleaford yn siarad am pam fod yswiriant mor bwysig (yn Saesneg).
 relatedGuides:
   - Bank Accounts For Groups
 customCall: Pa mor hawdd ydych chi wedi dod o hyd i yswiriant?
