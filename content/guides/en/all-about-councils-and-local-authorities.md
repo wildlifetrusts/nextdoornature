@@ -1,6 +1,7 @@
 ---
 title: All About Councils and Local Authorities
-summary: "A brief overview of how councils work in the UK.                            "
+summary: "A brief overview of how councils work in the UK. What does a Local
+  Authority do, and how are they different around the devolved nations?    "
 Category: working-with-the-authorities
 image:
   src: /images/uploads/councils-and-las_orig-3-.jpg
