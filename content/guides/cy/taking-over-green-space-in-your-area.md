@@ -7,9 +7,9 @@ image:
   credit: Photo copyright Autumn Barlow / The Wildlife Trusts 2023
 video:
   id: dEbN9hsFXUQ
-  title: Meddiannu Man Gwyrdd - Fideo Cymuned Natur Drws Nesaf (yn Saesneg)
+  title: Meddiannu Man Gwyrdd - Fideo Cymuned Natur Drws Nesaf (yn Saesneg).
   description: Mae pobl ifanc Keeping it Wild, Swydd Nottingham, yn dangos i ni
-    sut i gymryd drosodd mannau gwyrdd. (yn Saesneg)
+    sut i gymryd drosodd mannau gwyrdd (yn Saesneg).
 relatedGuides:
   - Insurance for Local Groups
 relatedStories:
