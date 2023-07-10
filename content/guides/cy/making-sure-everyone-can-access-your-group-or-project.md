@@ -9,10 +9,10 @@ image:
 category: admin-and-info
 video:
   id: 2VU0xTqm0XQ
-  title: "How to make sure everyone can access your project: A Nextdoor Nature
-    Community Video"
+  title: "Sut i sicrhau bod pawb yn gallu cael mynediad i'ch prosiect: Fideo
+    Cymunedol Natur Drws Nesaf (yn Saesneg)."
   description: Aaron o Lincolnshire Voluntary Centre Services yn siarad am sut i
-    wneud yn siŵr bod pawb yn gallu cael mynediad at eich prosiect.
+    wneud yn siŵr bod pawb yn gallu cael mynediad at eich prosiect (yn Saesneg).
 relatedGuides:
   - How to Run a Fundraising Event
 customCall: " Sut ydych chi'n sicrhau bod eich prosiectau'n hygyrch?"
