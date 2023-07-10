@@ -12,9 +12,10 @@ image:
   credit: Photo copyright Autumn Barlow/The Wildlife Trusts 2023
 video:
   id: kpYYHd-mSgE
-  title: "Sut i Gynnal Digwyddiad Codi Arian: Fideo Cymunedol Natur Drew Nesaf"
+  title: "Sut i Gynnal Digwyddiad Codi Arian: Fideo Cymunedol Natur Drew Nesaf (yn
+    Saesneg)."
   description: Aaron o Lincolnshire Voluntary Centre Services yn sôn am gynnal
-    digwyddiad codi arian.
+    digwyddiad codi arian (yn Saesneg).
 customCall: Sut ydych chi'n codi arian?
 ---
 Mae'r cyngor yma ar eich cyfer chi os ydych chi'n cynllunio digwyddiad untro i godi arian. Os ydych chi eisiau gwneud cais am arian, edrychwch ar ein hadnoddau eraill.
