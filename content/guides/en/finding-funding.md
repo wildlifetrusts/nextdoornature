@@ -1,6 +1,7 @@
 ---
 title: "Finding Funding "
-summary: General hints and tips for finding funding for your projects.
+summary: General hints and tips for finding funding for your projects. What you
+  need to think about when you want to find money for your project.
 Category: admin-and-info
 image:
   src: /images/uploads/finding-funding_orig-3-.jpg
