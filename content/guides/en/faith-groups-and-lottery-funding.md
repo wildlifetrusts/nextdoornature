@@ -12,15 +12,9 @@ category: admin-and-info
 Category: admin-and-info
 customCall: Are you part of a faith group that has applied for lottery funding?
 ---
-
-
-
 There are many faiths within the UK and they take various positions on gambling and using the proceeds of gambling. However, it’s important to note that The National Lottery Community Fund and The National Lottery Heritage Fund don’t run The National Lottery itself. This separation means that some faith groups are able to accept funding from The National Lottery Heritage Fund even if they object to gambling.
 
 A summary is presented below but please remember that individual groups, communities and congregations will be guided by varying principles and may have different opinions. Conversation is encouraged – do talk to people and listen to their concerns – but remember that we are not here to persuade anyone.
-
-
-
 
 ## Islam
 
@@ -32,22 +26,13 @@ Many Muslim groups will refuse funding from The National Lottery. However, this 
 
 "If the only source of funds the Arts Council receives is from the Lottery or most of their funds, then it is not permissible for you to receive their funding unless you are a worthy charitable cause, and Allah knows best." See [here.](https://seekersguidance.org/uncategorized/can-i-accept-national-lottery-fund/ "Seekersguidance.org")
 
-
-
-
 ## The Society of Friends (Quakers)
 
 Friends do not have a set of binding universal rules, and it is up to each group (or "meeting") to decide each cause on its merits. They gave a briefing in 2004 [here](https://www.quaker.org.uk/documents/quakers-national-lottery-briefing-2004 "Quaker.org"). They remain opposed in principle to gambling and will seek to argue against it wherever possible. There is an example of one of the first Quaker groups to accept funding [here,](https://www.thirdsector.co.uk/quaker-group-puts-aside-principle-accept-grant/finance/article/657334 "Thirdsector.co.uk") and their arguments and reasons for and against.
 
-
-
-
 ## Methodism
 
 Methodist Churches have been allowed to apply for money from the National Lottery since 1999. Further information is [here.](https://www.methodist.org.uk/about-us/the-methodist-church/views-of-the-church/the-national-lottery/ "Methodist.org.uk")
-
-
-
 
 ## Baptist Churches
 
@@ -55,17 +40,11 @@ In principle, Baptists are opposed to receiving money from the National Lottery.
 
 They say: "Please note that the Baptist Union of Great Britain is opposed to the National Lottery and therefore does not recommend that church groups apply for funds from this source and is unable to offer advice on how to do so. However it is important to note that Lottery proceeds are often applied to a number of locally administered grant bodies such as community chests / children’s fund etc."
 
-
-
 Find out more [here.](https://www.baptist.org.uk/Publisher/File.aspx?ID=111248&view=browser "Baptist.org.uk")
-
 
 ## Other Christian Denominations
 
 The matter tends to be one for individual Churches and congregations. See [here.](https://www.stewardship.org.uk/sites/default/files/2021-05/bp-should-my-church-use-national-lottery-funding.pdf "Stewardship.org.uk")
-
-
-
 
 ## Judaism
 
@@ -73,17 +52,14 @@ There are no specific prohibitions against gambling. Therefore, there are no dis
 
 "Lotteries, raffles and the like, when undertaken for charitable purposes, are not considered forbidden and there are many examples, both historic and current, of Jewish communities running lotteries for fundraising purposes." See [here.](https://www.myjewishlearning.com/article/gambling/ "Myjewishlearning.com")
 
-
-
-
 ## Buddhism
 
 There are no specific prohibitions against gambling, although Buddhists are urged to avoid addictions and the Buddha recommended against it. However, there are no discussions for or against using money from the National Lottery, and faith groups are free to apply for this funding.
-
-
-
 
 ## Hinduism
 
 There are no specific prohibitions against gambling although it is seen as wrong to take money from another in this way. There are no discussions for or against using money from the National Lottery, and faith groups are free to apply for this funding.
 
+## Sikhism
+
+G﻿ambling is generally prohibited in the Sikh faith, as per the Sikh Reyat Maryada (the Code of Conduct and Conventions for Sikhism which states 'A Sikh shall not steal, form dubious associations or engage in gambling'). However, there is no prohibition against the use of funds from the National Lottery and many projects have benefited from Lottery funding across the UK.
