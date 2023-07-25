@@ -24,7 +24,7 @@ Mae 37 o Ymddiriedolaethau unigol yn cwmpasu Lloegr, pump yng Nghymru ac Ymddiri
 
 Mae’r Ymddiriedolaethau’n cael eu cefnogi i wneud hyn gan yr elusen ganolog, RSWT (Cymdeithas Frenhinol yr Ymddiriedolaethau Natur), sydd â’r diben o “arwain datblygiad y mudiad, adeiladu ymddiriedaeth a chynrychioli buddiannau’r mudiad pryd bynnag y ceir llais unedig cryf. yn ofynnol”.
 
-Mae'r polisi hwn yn berthnasol i'ch rhyngweithiadau â'r elusen ganolog, mae gan bob Ymddiriedolaeth Natur ei pholisi preifatrwydd ei hun (am ragor o fanylion, ewch i wefan yr Ymddiriedolaeth dan sylw).
+Mae'r polisi hwn yn berthnasol i'ch rhyngweithiadau â'r elusen ganolog, mae gan bob Ymddiriedolaeth Natur ei pholisi preifatrwydd ei hun (am ragor o fanylion, ewch i wefan yr Ymddiriedolaeth dan sylw)
 
 ### 2. Ein hymrwymiad i'ch preifatrwydd
 
