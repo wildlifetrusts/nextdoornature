@@ -4,6 +4,8 @@ This is part of the [Wildlife Trusts](https://www.wildlifetrusts.org/) larger [T
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/383058cb-d638-4810-ba58-38139d1fdde0/deploy-status)](https://app.netlify.com/sites/team-wilder-content/deploys)
 
+Test deploy to Azure
+
 [Release https://nextdoornaturehub.org.uk](https://nextdoornaturehub.org.uk/)
 
 [Current content editor](https://team-wilder-content.netlify.app/admin)
