@@ -3,11 +3,11 @@ title: How Community Groups Can Go Peat-Free - and Why it's Important
 summary: Community gardens and high street planting projects often use peat in
   pots and borders. But going peat-free is easy and will make a huge difference
   to climate, flooding and biodiversity.
-Category: admin-and-info
 image:
   src: /images/uploads/compostbin1_smaller.jpg
   credit: Rachel Hackett, The Wildlife Trusts, 2023
   alt: A compost bin nestling in a green shady part of the garden.
+video: null
 customCall: Tell us about your passion for peat-free products!
 ---
 ## What is peat?
