@@ -12,6 +12,8 @@ video:
   title: Working With Under-18s - A Nextdoor Nature Community Video from
     Staffordshire Wildlife Trust
   description: ""
+relatedGuides:
+  - Risk Assessments
 customCall: Do you have advice about working with young people?
 ---
 W﻿elsh text coming soon.
