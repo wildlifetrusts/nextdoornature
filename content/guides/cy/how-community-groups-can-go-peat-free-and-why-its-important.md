@@ -10,6 +10,7 @@ image:
 video: null
 customCall: Tell us about your passion for peat-free products!
 ---
+(W﻿elsh translation coming soon)
 ## What is peat?
 Peat has formed over millions of years. It builds up very slowly, about 1mm a year. It’s a fantastic habitat for many amazing plants and insects, but it also contains 30% of the world’s soil carbon – even though it only covers 3% of the world’s surface! But that carbon is sent into the atmosphere when we dig up peat, and that contributes to climate change. 
 Peat also holds water and helps to keep towns safe from flooding. 
