@@ -8,6 +8,8 @@ image:
   credit: Rachel Hackett, The Wildlife Trusts, 2023
   alt: A compost bin nestling in a green shady part of the garden.
 video: null
+relatedGuides:
+  - How to contact your MP, MS (Wales), MLA (Northern Ireland) or MSP (Scotland)
 customCall: Tell us about your passion for peat-free products!
 ---
 (W﻿elsh translation coming soon)
