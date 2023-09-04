@@ -9,11 +9,11 @@ Fancy making your community a little bit greener, and that little bit wilder? Yo
 
 If you are looking for practical tips about how you can help nature, you will find everything on The Wildlife Trusts website. [Go to this link to find out how to do things like build a birdbox, dig a pond, sow wildflowers and lots more.](https://www.wildlifetrusts.org/actions)
 
-On this website, you will find ***guides*** and ***stories.***
+On this website, you will find ***[guides](https://nextdoornaturehub.org.uk/search#guides)*** and ***[stories](https://nextdoornaturehub.org.uk/search#stories).***
 
-***Guides*** are full of simple, easy-to-understand information in words and videos to help you to take action for nature. These guides tell you how to start a group, how to find funding, everything you need to know about insurance, banks, and more! 
+***[Guides](https://nextdoornaturehub.org.uk/search#guides)*** are full of simple, easy-to-understand information in words and videos to help you to take action for nature. These guides tell you how to start a group, how to find funding, everything you need to know about insurance, banks, and more! 
 
-***Stories*** are where you can read all about what other people are doing where they live and work. They are full of ideas to show you how everyday communities can help nature and wildlife all over the UK. And you can share your story here too! 
+***[Stories](https://nextdoornaturehub.org.uk/search#stories)*** are where you can read all about what other people are doing where they live and work. They are full of ideas to show you how everyday communities can help nature and wildlife all over the UK. And you can share your story here too! 
 
 Please explore our website. You can choose Welsh by clicking the button at the top. If you want to go back to the main page, just click on the words Nextdoor Nature Hub at the top of every page. There is a search box at the top right. Just type in what you want to find!
 
