@@ -24,7 +24,7 @@ summary: The Friends of Alderman Kneeshaw Park are a group of dedicated
 pullQuote: Working in partnership with the community, we listen to their voices
   and ideas and strive to turn ideas into reality, to create a place where
   everyone feels safe, families can grow, and memories are made.
-customCall: Have you come together with others to improve a local park?
+customCall: Have you come together with others to improve a local park
 ---
 T﻿he Friends of Alderman Kneeshaw Park are a group of volunteers. Here, they tell us a bit about what they're doing:
 
