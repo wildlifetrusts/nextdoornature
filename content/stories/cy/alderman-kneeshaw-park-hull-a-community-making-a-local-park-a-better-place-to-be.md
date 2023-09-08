@@ -1,6 +1,6 @@
 ---
 title: "Alderman Kneeshaw Park, Hull: a community making a local park a better
-  place to be."
+  place to be"
 who: The Friends of Alderman Kneeshaw Park, residents of Hull, Yorkshire
   Wildlife Trust
 location: Alderman Kneeshaw Park, Hull
