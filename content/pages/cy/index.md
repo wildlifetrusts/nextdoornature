@@ -15,6 +15,6 @@ Mae gennym hefyd lawer o gyngor ymarferol ar sut y gallwch helpu byd natur ar we
 
 Archwiliwch ein gwefan. Gallwch ddewis Saesneg trwy glicio ar y botwm ar y brig. Os ydych chi eisiau mynd yn ôl i'r brif dudalen, cliciwch ar y geiriau Hwb Natur Drws Nesaf ar frig pob tudalen. Mae blwch chwilio ar y dde uchaf. Teipiwch yr hyn rydych chi am ei ddarganfod!
 
-Os ydych am gysylltu, anfonwch e-bost atom ar [nextdoornature@wildlifetrust.org](mailto:nextdoornature@wildlifetrust.org). Byddem wrth ein bodd yn clywed gennych!
+Os ydych am gysylltu, anfonwch e-bost atom ar [nextdoornature@wildlifetrusts.org](mailto:nextdoornature@wildlifetrust.org). Byddem wrth ein bodd yn clywed gennych!
 
 Ewch i'r dde i waelod unrhyw dudalen i ddod o hyd i wybodaeth am ein polisi preifatrwydd.
