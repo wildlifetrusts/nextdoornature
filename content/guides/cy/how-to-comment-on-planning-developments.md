@@ -8,6 +8,9 @@ image:
   alt: Photo of houses surrounded by trees.
   credit: Image copyright Ben Hall / 2020Vision 2018
 video: null
+relatedGuides:
+  - Speaking to Councils, Councillors and People in Authority
+  - All About Councils and Local Authorities
 customCall: Have you ever commented on a local planning development?
 ---
 ##### *W﻿elsh translation coming soon*
