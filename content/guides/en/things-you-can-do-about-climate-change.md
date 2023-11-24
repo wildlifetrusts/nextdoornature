@@ -26,7 +26,7 @@ T﻿he energy used in buildings creates around 17 per cent of total UK emissions
 
 ## 4﻿. Recycle and reuse.
 
-R﻿ecycle, upcycle, make do and mend![ For hints and tips to get you started, click here.](https://www.wildlifetrusts.org/actions/recycle-and-reuse)
+R﻿ecycle, upcycle, make do and mend! [For hints and tips to get you started, click here.](https://www.wildlifetrusts.org/actions/recycle-and-reuse)
 
 ## 5﻿. Reduce your flood risk.
 
