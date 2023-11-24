@@ -7,6 +7,9 @@ image:
   src: /images/uploads/planetb.png
   alt: A sign saying there is no planet b
 video: null
+relatedGuides:
+  - How to contact your MP, MS (Wales), MLA (Northern Ireland) or MSP (Scotland)
+  - Speaking to Councils, Councillors and People in Authority
 customCall: How are you making small changes to help the planet?
 ---
 ## 1﻿. Change what you eat.
