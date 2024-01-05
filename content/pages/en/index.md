@@ -17,6 +17,8 @@ On this website, you will find ***[guides](https://nextdoornaturehub.org.uk/sear
 
 Please explore our website. You can choose Welsh by clicking the button at the top. If you want to go back to the main page, just click on the words Nextdoor Nature Hub at the top of every page. There is a search box at the top right. Just type in what you want to find!
 
+Have you taken part in a Nextdoor Nature project? We want to learn from your experience! Please take a couple of minutes to [complete this survey here.](https://survey.euro.confirmit.com/wix/2/p456319485922.aspx)
+
 If you want to get in touch, please email us on [nextdoornature@wildlifetrusts.org](mailto:nextdoornature@wildlifetrust.org). We’d love to hear from you!
 
 G﻿o right to the bottom of any page to find information about our privacy policy.
