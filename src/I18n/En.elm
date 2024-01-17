@@ -220,7 +220,7 @@ enStrings key =
             "/images/submit-meta-david-clode-eL4ADAsiOR8-unsplash.jpg"
 
         SubmitStoryFormSrc ->
-            "https://wildlifetrusts.formstack.com/forms/team_wilder"
+            "https://wildlifetrusts.formstack.com/forms/team_wilder_copy"
 
         SubmitStoryFormTitle ->
             "Online Form"
