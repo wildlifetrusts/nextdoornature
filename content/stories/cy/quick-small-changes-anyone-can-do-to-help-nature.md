@@ -3,7 +3,10 @@ title: Quick small changes anyone can do to help nature
 who: Everyone can do one of these things
 location: All around the UK
 postcode: null
-images: null
+images:
+  - src: /images/uploads/hedgehog2_smaller_jonhawkins.jpg
+    alt: A hedgehog in leaves
+    credit: Copyright Jon Hawkins
 summary: A growing collection of tips and advice from around the UK
 pullQuote: If we all pledge one small change, think of the difference we can
   make for wildlife!
