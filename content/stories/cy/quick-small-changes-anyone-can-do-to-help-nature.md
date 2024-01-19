@@ -7,6 +7,9 @@ images:
   - src: /images/uploads/hedgehog2_smaller_jonhawkins.jpg
     alt: A hedgehog in leaves
     credit: Copyright Jon Hawkins
+  - src: /images/uploads/robin_cjonhawkins0065.jpg
+    alt: A robin on the handle of a garden fork
+    credit: Copyright Jon Hawkins
 summary: A growing collection of tips and advice from around the UK
 pullQuote: If we all pledge one small change, think of the difference we can
   make for wildlife!
