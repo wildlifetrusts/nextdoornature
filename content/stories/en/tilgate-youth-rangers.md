@@ -21,7 +21,7 @@ customCall: Are you aged 16-25 and working with wildlife in your area? Tell us m
 ---
 ## Tilgate Youth Rangers
 
-About 15 young people, ages 16 to 25, volunteer twice a month to grow food and create wildlife gardening features in a garden at Tilgate Park in Sussex. They have sown wildflower beds, created beetle banks, planted and laid a hedge, maintain a pond, hoverfly lagoons and created numerous wood piles as well as bird feeders made from willow. 
+About 15 young people, ages 16 to 25, volunteer twice a month to carry out practical conservation tasks, grow food and create wildlife gardening features in a garden at Tilgate Park in Sussex. They have sown wildflower beds, created beetle banks, planted and laid a hedge, maintain a pond, hoverfly lagoons and created numerous wood piles as well as bird feeders made from willow. 
 
 Tamara Jewell, community project officer, and the youth rangers had a great day in the wildlife garden for their first session back in the autumn term. “It was a busy day, we sampled carrots and cucumber which were delicious with hummous, a salad of rocket and nasturtium which had a fiery kick, and the tomatoes were deliciously sweet. 
 
