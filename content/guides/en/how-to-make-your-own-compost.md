@@ -9,9 +9,7 @@ image:
   credit: Image copyright 2024 Lauren Heather
 relatedGuides:
   - How Community Groups Can Go Peat-Free - and Why it's Important
-customCall: Do you have a story to share or helpful advice about working with
-  lots of languages? If you want to tell us your story, we'd love to hear from
-  you.
+customCall: "Share your top tips on creating the perfect compost heap. "
 ---
 'Composting' is a natural process that takes bits of vegetables or plants, plus paper and cardboard, and lets it rot down to become compost – which is lovely stuff that can help make your soil better. Everything decays naturally anyway, but composting uses tricks and tips to make it happen faster. 
 
