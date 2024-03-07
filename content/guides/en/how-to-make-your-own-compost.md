@@ -13,6 +13,8 @@ customCall: Do you have a story to share or helpful advice about working with
   lots of languages? If you want to tell us your story, we'd love to hear from
   you.
 ---
+'Composting' is a natural process that takes bits of vegetables or plants, plus paper and cardboard, and lets it rot down to become compost – which is lovely stuff that can help make your soil better. Everything decays naturally anyway, but composting uses tricks and tips to make it happen faster. 
+
 ## Why do you need compost?
 
 Over time, growing things will take some of the nutrients out of soil. Compost is like a snack for your garden, giving it a boost of energy. 
