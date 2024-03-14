@@ -11,6 +11,7 @@ images:
 summary: "From unnamed eco group to funded community project. Find out how
   residents in Irthlingborough are growing their community group and taking
   action for nature. "
+pullQuote: null
 customCall: "Have you been involved in setting up a community garden? "
 ---
 ### Background
