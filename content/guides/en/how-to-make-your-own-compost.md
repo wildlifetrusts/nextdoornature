@@ -19,7 +19,9 @@ Over time, growing things will take some of the nutrients out of soil. Compost i
 
 Making your own compost is also a great way to reduce how much rubbish you send to landfill. 
 
-And it makes a great habitat for a wide range of wildlife in your garden, too! Slugs and snails are vital to a working compost heap because they help to munch their way through the decaying matter and they speed the process up. Then those slugs and snails become food for garden visitors like birds and hedgehogs, attracting more wildlife to your garden.  
+And it makes a great habitat for a wide range of wildlife in your garden, too! Slugs and snails are vital to a working compost heap because they help to munch their way through the decaying matter and they speed the process up. Then those slugs and snails become food for garden visitors like birds and hedgehogs, attracting more wildlife to your garden.
+
+In fact, this year, our Wild About Gardens campaign in association with the RHS is all about celebrating these unsung heroes! There are many different types and most of them aren't interested in your lettuces at all. They're vital for making good compost, for cleaning up decaying matter, and they make tasty snacks for birds and other wildlife too. Why not find out how to [make friends with molluscs here?](https://www.wildaboutgardens.org.uk/)
 
 Making your own compost means you can save money on buying it, and is a great way to ensure you’re [always peat-free.](https://nextdoornaturehub.org.uk/guides/how-community-groups-can-go-peat-free-and-why-its-important) 
 
