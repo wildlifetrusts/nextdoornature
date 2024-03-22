@@ -40,7 +40,7 @@ Building on this success, we worked with North and East Yorkshire Ecological Dat
 
 We endeavour to source all our packaging for events from environmentally focused organisations to ensure that plates, cutlery, cups, etc, are biodegradable, thus reducing our carbon footprint when holding events.
 
-We worked in collaboration with Yorkshire Wildlife Trust and Child Dynamix, to co-create a nature trail for visitors to the park, including interpretation boards to give more details about key species that people can observe at different spots around the site, internet linked QR codes for people to find out more in-depth information, and free online challenges which enhance people’s engagement with the site and its wildlife in a fun, interactive way.
+We worked in collaboration with Yorkshire Wildlife Trust and Child Dynamix, to co-create a nature trail for visitors to the park, including interpretation boards to give more details about key species that people can observe at different spots around the site, internet linked QR codes for people to find out more in-depth information, and free online challenges which enhance people’s engagement with the site and its wildlife in a fun, interactive way. 
 
 ## What resources or support have you used?
 
