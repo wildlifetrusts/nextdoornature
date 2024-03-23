@@ -32,7 +32,7 @@ We support events in the park, encourage local groups to collaborate with us, an
 
 We want to increase biodiversity within our park and encourage other people to engage with the living environment of the park. This will help to raise people’s awareness of how important the natural ecosystem is and why we are striving to make positive changes within the landscape to contribute to an enhanced ecosystem. By encouraging local people to understand and look after the park’s ecosystem and its biodiversity we hope to attract more people to spend time in the park whilst caring for it.
 
-So far, we’ve worked with Hull Butterfly City to plant over 80 Alder Buckthorn saplings as part of the Buckthorn Corridor for yellow brimstone butterflies. We have also planted various wildflowers, and wild garlic. We have built and planted up some raised beds to create a mini community allotment on site. Some of the beds have been given over to herbs and perennial wildflowers, some of which can serve as a good food source to bees, hover flies and other pollinators. 
+So far, we’ve worked with Hull Butterfly City to plant over 80 Alder Buckthorn saplings as part of the Buckthorn Corridor for yellow brimstone butterflies. We have also planted various wildflowers, and wild garlic. We have built and planted up some raised beds to create a mini community allotment on site. Some of the beds have been given over to herbs and perennial wildflowers, some of which can serve as a good food source to bees, hover flies and other pollinators.   
 
 To help us identify different species of flora and fauna on the park we undertook training in the use of iNaturalist and Seek apps to empower people to identify and log species themselves. Following this training, we have carried out Bioblitz events where we brought our community together to record wildlife in the park. The first event in 2022 saw more than 120 species observed and recorded! 
 
@@ -40,7 +40,7 @@ Building on this success, we worked with North and East Yorkshire Ecological Dat
 
 We endeavour to source all our packaging for events from environmentally focused organisations to ensure that plates, cutlery, cups, etc, are biodegradable, thus reducing our carbon footprint when holding events.
 
-We worked in collaboration with Yorkshire Wildlife Trust and Child Dynamix, to co-create a nature trail for visitors to the park, including interpretation boards to give more details about key species that people can observe at different spots around the site, internet linked QR codes for people to find out more in-depth information, and free online challenges which enhance people’s engagement with the site and its wildlife in a fun, interactive way.
+We worked in collaboration with Yorkshire Wildlife Trust and Child Dynamix, to co-create a nature trail for visitors to the park, including interpretation boards to give more details about key species that people can observe at different spots around the site, internet linked QR codes for people to find out more in-depth information, and free online challenges which enhance people’s engagement with the site and its wildlife in a fun, interactive way. 
 
 ## What resources or support have you used?
 
