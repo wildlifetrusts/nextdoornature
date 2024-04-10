@@ -75,10 +75,18 @@ storyDictDecoder =
 imageDecoder : Json.Decode.Decoder Image
 imageDecoder =
     Json.Decode.map4 Image
-        (Json.Decode.field "alt" Json.Decode.string)
+        (Json.Decode.maybe
+            (Json.Decode.field "alt" Json.Decode.string)
+            |> Json.Decode.andThen emptyStringFromMaybe
+        )
         (Json.Decode.field "src" Json.Decode.string)
         (Json.Decode.maybe (Json.Decode.field "caption" Json.Decode.string))
         (Json.Decode.maybe (Json.Decode.field "credit" Json.Decode.string))
+
+
+emptyStringFromMaybe : Maybe String -> Json.Decode.Decoder String
+emptyStringFromMaybe maybeAltText =
+    Json.Decode.succeed (Maybe.withDefault "" maybeAltText)
 
 
 storyLanguageDictDecoder : Json.Decode.Decoder Stories
