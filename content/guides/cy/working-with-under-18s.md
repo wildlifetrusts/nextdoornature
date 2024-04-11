@@ -1,8 +1,8 @@
 ---
-title: Working With Under-18s
-summary: If your group includes people under the age of 18, you need to think
-  carefully about safeguarding. Learn about consent, risk assessments, policies
-  and procedures in this article and video.
+title: Gweithio gydag ieuenctid o dan 18 oed
+summary: Os yw eich grŵp yn cynnwys ieuenctid o dan 18 oed, mae angen i chi
+  feddwl yn ofalus am ddiogelu. Dysgwch am ganiatâd, asesiadau risg, polisïau a
+  gweithdrefnau yn yr erthygl a'r fideo yma.
 image:
   src: /images/uploads/comingsoon_orig-3-.jpg
   alt: A seedling growing in a pot.
@@ -14,83 +14,78 @@ video:
   description: ""
 relatedGuides:
   - Risk Assessments
-customCall: Do you have advice about working with young people?
+customCall: Oes gennych chi gyngor ar weithio gyda phobl ifanc?
 ---
-W﻿elsh text coming soon.
+* Mae diogelu yn ymwneud â sicrhau bod pawb yn cael eu cadw’n ddiogel rhag cam-drin ac esgeulustod.
+* Rhaid i ni gymryd pob cam rhesymol i warchod y bobl yn ein gofal ni.
+* Mae diogelu yn gyfrifoldeb i bawb. Mae'n berthnasol i bob grŵp os ydych chi’n ffurfiol (cyfansoddiadol) ai peidio.
 
-Safeguarding is about ensuring everyone is kept safe from abuse and neglect. 
+### Diwylliant o ddiogelu
 
-* We must take all reasonable steps to protect the people in our care. 
-* Safeguarding is everyone’s responsibility. It applies to all groups whether you are formal (constituted) or not.
+Beth bynnag rydych chi'n ei wneud, mae angen i bawb deimlo'n ddiogel. Os ydych chi'n trefnu digwyddiad, mae'n rhaid i chi wneud popeth o fewn eich gallu i sicrhau ei fod mor ddiogel â phosib. Mae angen i bawb gael eu hyfforddi i adnabod problemau, ac i wybod beth i'w wneud.
 
-## A culture of safeguarding
+Os oes gan eich grŵp chi deimlad diogel a chroesawgar, efallai y gwelwch chi bod pobl ifanc yn fwy tebygol o fod yn agored gyda chi neu rywun yn eich grŵp. Os bydd honiad yn cael ei wneud, mae gennych chi ddyletswydd i roi gwybod amdano – edrychwch isod. Ond gall hyn hefyd gynnwys achosion lle mae person ifanc eisiau siarad am bethau anodd, fel marwolaeth neu ryfel, yn enwedig os yw hynny yn y newyddion. Gallwch ddod o hyd i gefnogaeth a chymorth ar gyfer y sgyrsiau anodd hynny ar [wefan yr NSPCC yma](https://learning.nspcc.org.uk/safeguarding-child-protection/how-to-have-difficult-conversations-with-children?).
 
-Whatever you’re doing, everyone needs to feel safe. If you’re organising an event, you have to do everything you can to make sure it’s all as safe as possible. Everyone needs to be trained to spot problems, and to know what to do.
+Ond cofiwch hefyd nad ydych chi a'ch grŵp yn arbenigwyr iechyd meddwl. Defnyddiwch yr adran adnoddau isod i wneud yn siŵr bod pobl yn gallu cael eu cyfeirio at yr help priodol iddyn nhw.
 
-If your group has a safe, welcoming feeling, you may find that young people are more likely to open up to you or someone in your group. If an allegation is made, you have a duty to report it – see below. But this can also include cases where a young person just wants to talk about difficult things, like death or war, especially if it’s in the news. You can find support and help for those tricky chats at [the NSPCC's website here.](https://learning.nspcc.org.uk/safeguarding-child-protection/how-to-have-difficult-conversations-with-children?) 
+Rhaid i chi sicrhau eich bod wedi gosod ffiniau clir a bod pawb yn ymwybodol ohonyn nhw. Mae gwahaniaeth rhwng bod yn gyfeillgar – fel y dylech chi fod – a bod yn ffrindiau – sydd ddim yn briodol. Meddyliwch am sut gall pobl gysylltu â chi. Efallai y byddai’n well cael cyfeiriad e-bost ar wahân ar gyfer y grŵp.
 
-But also remember that you and your group are not mental health experts. Use the resources section below to make sure people can be pointed to the right help for them.
+Cofiwch na allwch chi fyth addo cadw cyfrinach. Os bydd rhywun yn dweud rhywbeth wrthych chi sy'n dangos bod rhywun mewn perygl o niwed, mae’n rhaid i chi weithredu. Dilynwch yr hyn sydd wedi’i nodi yn eich polisïau – mewn achosion brys pan mae’r risg o niwed yn bodoli ar unwaith, ffoniwch yr heddlu.
 
-You must ensure that you have set clear boundaries and everyone is aware of them. There is a difference between being friendly – which you should be – and being friends – which is not appropriate. Think about how people can contact you. It might be best to have a separate email address for the group.
+Peidiwch byth â chaniatáu i blant dan 11 oed fod heb oruchwyliaeth.
 
-Remember, you can never promise to keep a secret. If someone tells you something which shows that someone is at risk of harm, you must act. Follow what is set out in your policies – in urgent cases when that risk of harm is immediate, phone the police.
+Peidiwch byth â chaniatáu i rywun dan 18 oed oruchwylio person ifanc arall.
 
-Never allow under 11s to be unsupervised.
+Dynodwch yn glir pa oedolion sy'n gyfrifol a gwnewch yn siŵr eu bod yn weladwy ac yn hawdd dod o hyd iddyn nhw. Dylech nodi eich cymarebau – sy’n golygu faint o oedolion sy’n gofalu am faint o bobl ifanc – yn eich asesiadau risg.
 
-Never allow someone under 18 to supervise another young person.
+Does dim cyfraith sy'n nodi faint o oedolion ddylai weithio gyda phlant. Mae’r NSPCC yn cynghori hyn
 
-Clearly designate which adults are responsible and make sure they are visible and easy to find. Your ratios – which means how many adults take care of how many young people – should be noted in your risk assessments.
+* 4 - 8 oed - un oedolyn i chwech o blant
+* 9 - 12 oed - un oedolyn i wyth o blant
+* 13 - 18 oed - un oedolyn i ddeg o blant
 
-There is no law which sets out how many adults should work with children. The NSPCC advises this:
+Ond dylai fod o leiaf ddau oedolyn gydag unrhyw grŵp, beth bynnag yw maint y grŵp. Os oes gan y grŵp fechgyn a merched, dylai fod un oedolyn gwrywaidd ac un oedolyn benywaidd, i gynorthwyo gydag ymweliadau toiled.
 
-* 4 - 8 years - one adult to six children
-* 9 - 12 years - one adult to eight children
-* 13 - 18 years - one adult to ten children
+Rhaid i bob oedolyn a fydd ar ei ben ei hun gyda phobl ifanc gael ei ddilysu’n briodol, yn dibynnu ar y rôl (edrychwch isod). Ac argymhellir cael Swyddog Cymorth Cyntaf cymwys hefyd.
 
-But there should always be at least two adults with any group, as a minimum, whatever the size of the group. If the group has boys and girls, there should be one male and one female adult, to assist with toilet visits. 
+### Cyngor cyffredinol ar gyfryngau cymdeithasol
 
-All adults that will be alone with young people must be vetted appropriately, dependent on the role (see below). And a trained First Aider is recommended.
+Gwnewch yn siŵr bod gennych chi ganllawiau fel rhan o'ch cod ymddygiad ysgrifenedig. Gallai’r canllawiau hyn gynnwys:
 
-## General social media advice
+* Dim ond drwy ddefnyddio'r cyfeiriad e-bost sy’n cael ei rannu / grŵp ddylech chi gyfathrebu gyda phobl ifanc a dylech osgoi cyswllt un i un.
+* Peidiwch byth â rhannu gwybodaeth bersonol.
+* Peidiwch byth â derbyn ceisiadau ffrind gan bobl ifanc.
 
-Make sure you have guidelines as part of your written code of conduct. These guidelines might include:
+Wrth rannu gweithgareddau grŵp ar gyfryngau cymdeithasol, rhaid i chi gael caniatâd gan bawb a ddangosir. Edrychwch[ yma am ffurflen ganiatâd](https://www.nya.org.uk/safeguarding-asset/consent-form-template/). Mae canllawiau ar [wahân ar ganiatâd yma](https://www.nya.org.uk/safeguarding-asset/informed-consent/). Cofiwch y bydd angen i chi hefyd ystyried y Ddeddf Diogelu Data os ydych chi’n storio gwybodaeth bersonol. Edrychwch ar [wefan yr ICO yma](https://ico.org.uk/for-the-public/).
 
-Only communicate with young people using the shared/group email address and avoid one to one contact.
+### Eich polisïau a’ch gweithdrefnau
 
-Never give out personal information.
+Dylai fod gennych Bolisi a Gweithdrefn Diogelu yn ogystal â chod ymddygiad sy'n amlinellu eich safonau disgwyliedig. Mae'r NSPCC yn darparu templedi ar gyfer y rhain, [sydd i'w gweld yma](https://learning.nspcc.org.uk/research-resources/templates/example-safeguarding-policy-statement).
 
-Never accept friend requests from young people. 
+Bydd eich dogfennau yn cynnwys beth yw eich polisi ar weithio ar eich pen eich hun gyda phobl ifanc a chefnogaeth y tu allan i oriau.
 
-When sharing group activities on social media, you must have consent from everyone shown. See [here for a consent form.](https://www.nya.org.uk/safeguarding-asset/consent-form-template/) There is separate [guidance on consent here.](https://www.nya.org.uk/safeguarding-asset/informed-consent/) Remember that you will also need to consider the Data Protection Act if you are storing personal information. See [the ICO's website here.](https://ico.org.uk/for-the-public/)
+Byddant hefyd yn cynnwys beth i'w wneud os gwneir honiad - fel arfer mae hwn yn siart llif gyda'r bobl gyfrifol wedi’u henwi a dylai eu manylion cyswllt fod yn gyfredol.
 
-## Your policies and procedures
+Bydd arnoch angen cynlluniau ar wahân, a allai gael eu galw’n gynlluniau lles neu asesiadau risg, ar gyfer unrhyw weithgareddau neu ddigwyddiadau rydych chi eisiau eu gwneud. Bydd hyn yn cynnwys beth i'w wneud os bydd plentyn ar goll, neu os bydd rhywbeth yn digwydd. Edrychwch ar ein canllaw cysylltiedig ar [Asesiadau Risg ar-lein yma](https://nextdoornaturehub.org.uk/guides/risk-assessments). Edrychwch hefyd ar [ganllawiau’r llywodraeth ar gynnal digwyddiadau yma](https://www.gov.uk/government/publications/can-do-guide-for-organisers-of-voluntary-events/the-can-do-guide-to-organising-and-running-voluntary-and-community-events), a chael caniatâd ar gyfer gwahanol weithgareddau ar [wefan yr NSPCC yma](https://learning.nspcc.org.uk/research-resources/templates/example-consent-form), sy’n cynnwys diogelu yn ogystal â deddfwriaeth.
 
-You should have a Safeguarding Policy and Procedure as well as a code of conduct which outlines your expected standards. The NSPCC provide templates for these, [which can be found here.](https://learning.nspcc.org.uk/research-resources/templates/example-safeguarding-policy-statement)
+### Eich pobl
 
-Your documents will include what your policy is on working alone with young people and out of hours support.
+Mae gan grwpiau gyfrifoldeb i sicrhau bod ganddynt y bobl iawn yn gweithio gyda nhw i gadw plant ac oedolion sy'n wynebu risg yn ddiogel. Efallai y bydd ambell rôl yn eich grŵp yn gofyn am archwiliad gan y DBS (archwiliad cofnodion troseddol), neu eirdaon. Mae hyn yn wahanol rhwng Cymru a Lloegr, yr Alban a Gogledd Iwerddon, felly [edrychwch ar wefan y llywodraeth yma](https://www.gov.uk/request-copy-criminal-record).
 
-They will also include what to do if an allegation is made – usually this is a flowchart with the responsible people named and their contact details should be up to date.
+Efallai y bydd angen i chi hyfforddi rhai pobl. Bydd hyn yn eich cod ymddygiad. Mae rhagor o help yn y dolenni yn yr adnoddau isod neu yma ar [wefan hyfforddi’r NSPCC](https://learning.nspcc.org.uk/training/introductory-basic-courses).
 
-You will need separate plans, which might be called welfare plans or risk assessments, for any activities or events you want to do. This will include what to do if a child is lost, or something happens. See our related guide about [Risk Assessments online here.](https://nextdoornaturehub.org.uk/guides/risk-assessments) Also look at the [government’s guidance on running events here,](https://www.gov.uk/government/publications/can-do-guide-for-organisers-of-voluntary-events/the-can-do-guide-to-organising-and-running-voluntary-and-community-events) and gaining consent for different activities [on the NSPCC website here,](https://learning.nspcc.org.uk/research-resources/templates/example-consent-form) which includes safeguarding as well as legislation.
+Dylech osgoi defnyddio ceir preifat i gludo pobl ifanc. Efallai y bydd angen i chi sefydlu system neu annog rhieni / gofalwyr i wneud trefniadau preifat gyda’i gilydd.
 
-## Your people
+Mae gan yr [NSPCC gyngor yma hefyd am ddigwyddiadau](https://learning.nspcc.org.uk/safeguarding-child-protection/safer-activities-events) a gweithgareddau gyda phobl ifanc, gan gynnwys mwy am gludiant ac aros dros nos.
 
-Groups have a responsibility to ensure that they have the right people working with them to keep children and adults at risk safe. Some roles in your group might need someone to have a DBS check (criminal record check), or references. This differs between England and Wales, Scotland and Northern Ireland, so [check the government website here.](https://www.gov.uk/request-copy-criminal-record) 
+Mae angen adolygu eich holl ddogfennau ysgrifenedig yn rheolaidd. Gwnewch yn siŵr bod dyddiad arnyn nhw, a'ch bod wedi nodi ar y calendr pryd bydd angen edrych arnyn nhw a'u diweddaru.
 
-You might need to train some people. This will be in your code of conduct. Find more help in the links in the resources below or here on the [NSPCC’s training site here.](https://learning.nspcc.org.uk/training/introductory-basic-courses)
+### Adnoddau pellach
 
-Avoid using private cars to transport young people. You may need to set up a system or encourage parents/carers to make private arrangements with one another.
+Hwb [Diogelu a Rheoli Risg y National Youth Agency yma](https://www.nya.org.uk/skills/safeguarding-and-risk-management-hub/) ddylai fod y lle cyntaf i chi edrych. Mae ganddo ganllawiau a chyngor ar bopeth, gan gynnwys gweithio ar eich pen eich hun, polisïau, hyfforddiant a gweithdrefnau.
 
-The [NSPCC also has advice here about events](https://learning.nspcc.org.uk/safeguarding-child-protection/safer-activities-events) and activities with young people, including more about transport and staying overnight.
+Mae gan [wefan Voluntary Impact Northamptonshire yma](https://voluntaryimpact.org.uk/community/training-resources/) rai podlediadau hygyrch am ddiogelu.
 
-All your written documents need regular reviews. Make sure they are dated, and you have marked in the calendar when they need to be looked at and updated.
+Mae canllaw RoSPA ar gyfer ymweliadau anturus, [ar-lein yma](https://www.rospa.com/rospaweb/docs/advice-services/school-college-safety/school-visits-guide.pdf), ar gyfer ysgolion ond mae’n cynnwys gwybodaeth ddefnyddiol ar gyfer gweithgareddau a allai fod â mwy o risg.
 
-## Further resources
-
-The [National Youth Agency’s Safeguarding and Risk Management Hub here](https://www.nya.org.uk/skills/safeguarding-and-risk-management-hub/) should be the first place you look. It has guides and advice on everything, including lone working, policies, training and procedures.
-
-[Voluntary Impact Northamptonshire's website here](https://voluntaryimpact.org.uk/community/training-resources/) has some accessible podcasts about safeguarding.
-
-[RoSPA’s guide for adventurous visits, online here,](https://www.rospa.com/rospaweb/docs/advice-services/school-college-safety/school-visits-guide.pdf) is for schools but contains useful information for activities that might carry more risk.
-
-The [NSPCC has guidance on safeguarding standards here](https://learning.nspcc.org.uk/research-resources/2019/safeguarding-child-protection-standards) specifically for community and voluntary groups.
+Mae gan yr [NSPCC ganllawiau ar safonau diogelu yma](<[NSPCC has guidance on safeguarding standards here](https://learning.nspcc.org.uk/research-resources/2019/safeguarding-child-protection-standards)>) yn benodol ar gyfer grwpiau cymunedol a gwirfoddol.
