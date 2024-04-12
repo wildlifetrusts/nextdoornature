@@ -29,7 +29,7 @@ With newfound confidence, the group officially became “Friends of Irth”, and
 
 As their plans and membership became more fully formed, Friends of Irth became a constituted group, complete with committee, bank account and regular meetings. Ellen attended some of their meetings and helped to get the word out while door knocking and speaking to local people. In just a couple of months, Friends of Irth had trebled!
 
-### Resources and support
+### Resources and Support
 
 The Friends wanted to get started on creating two community gardens but needed funding and professional support. They approached the town council and successfully secured £1,500! The Wildlife Trust looked at lending tools to the group and helped them find suitable contractors to prepare the land.
 
@@ -37,9 +37,7 @@ The group also came up with fundraising ideas like selling daffodil bulbs for pl
 
 ### Challenges
 
-The group is bursting with great ideas, and occasionally needs a gentle reminder not to get ahead of themselves – simple details like not buying trees before knowing where they’re going to be planted. Ellen has also learned to clearly communicate the support that she’s able to offer as a Wildlife Trust community organiser. Things like liaising with partner organisations, attending events and helping to draft documents or write bids are absolutely in scope, but running the project or being a “member” is not!
-
-### Successes
+The group is bursting with great ideas, and occasionally needs a gentle reminder not to get ahead of themselves – simple details like not buying trees before knowing where they’re going to be planted. 
 
 Since first meeting the original members of the group, Ellen has seen them grow in confidence. They have lots of ambitions, and with the support and guidance of Ellen and other Wildlife Trust colleagues, they are able to see them becoming a reality.
 
