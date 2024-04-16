@@ -1,8 +1,8 @@
 ---
-title: How Community Groups Can Go Peat-Free - and Why it's Important
-summary: Community gardens and high street planting projects often use peat in
-  pots and borders. But going peat-free is easy and will make a huge difference
-  to climate, flooding and biodiversity.
+title: Sut Gall Grwpiau Cymunedol Fod yn Ddi-Fawn - a Pham Mae'n Bwysig
+summary: Mae gerddi cymunedol a phrosiectau plannu’r stryd fawr yn aml yn
+  defnyddio mawn mewn potiau a borderi. Ond mae peidio â defnyddio mawn yn hawdd
+  a bydd yn gwneud gwahaniaeth enfawr i’r hinsawdd, llifogydd a bioamrywiaeth.
 image:
   src: /images/uploads/compostbin1_smaller.jpg
   credit: Image copyright Rachel Hackett, The Wildlife Trusts, 2023
@@ -15,25 +15,22 @@ video:
     peat-free
 relatedGuides:
   - How to contact your MP, MS (Wales), MLA (Northern Ireland) or MSP (Scotland)
-customCall: Tell us about your passion for peat-free products!
+customCall: Dywedwch wrthym ni am eich angerdd dros gynhyrchion di-fawn!
 ---
-#### *T﻿ranslation coming soon*
+### Beth yw mawn?
 
-## What is peat?
+Mae mawn wedi ffurfio dros filiynau o flynyddoedd. Mae'n cronni'n araf iawn, tua 1mm y flwyddyn. Mae’n gynefin gwych i lawer o blanhigion a phryfed rhyfeddol, ond mae hefyd yn cynnwys 30% o garbon pridd y byd – er mai dim ond 3% o arwyneb y byd mae’n ei orchuddio! Ond mae’r carbon hwnnw’n cael ei anfon i’r atmosffer pan fyddwn ni’n cloddio’r mawn, ac mae hynny’n cyfrannu at newid hinsawdd.
 
-Peat has formed over millions of years. It builds up very slowly, about 1mm a year. It’s a fantastic habitat for many amazing plants and insects, but it also contains 30% of the world’s soil carbon – even though it only covers 3% of the world’s surface! But that carbon is sent into the atmosphere when we dig up peat, and that contributes to climate change. 
+Mae mawn hefyd yn dal dŵr ac yn helpu i gadw trefi yn ddiogel rhag llifogydd.
 
-Peat also holds water and helps to keep towns safe from flooding. 
+Heb fawn yn hidlo dŵr, bydd eich biliau dŵr yn uwch!
 
-Without peat filtering water, your water bills will be higher!
+Ac mae mawndiroedd yn anhygoel o ran bioamrywiaeth gyda rhywogaethau prin a hynod ddiddorol, fel gwlithlys, sef planhigion sy’n bwyta pryfed, gwyrddling, tafod-y-gors, ac adar fel yr ehedydd, y cwtiad aur a chorhedydd y waun.
 
-And peatlands are incredible for biodiversity with rare and fascinating species, like sundews which are plants that eat insects, bog myrtle, butterwort, and birds like the skylark, golden plover and the meadow pipet.
+### Pa ddewisiadau allwch chi eu gwneud?
 
-## What choices can you make?
+Edrychwch yn ofalus ar y brand o gompost rydych chi’n ei brynu. Mae gan wefan yr Ymddiriedolaethau Natur restr o fanwerthwyr sy'n ceisio rhoi'r gorau i werthu compost mawn felly edrychwch ar [y dudalen we ym](https://www.wildlifetrusts.org/actions/how-go-peat-free)a.
 
-Look carefully at the brand of compost you are buying. The Wildlife Trusts website has a list of retailers that are trying to stop selling peat compost so [see this webpage here.](https://www.wildlifetrusts.org/actions/how-go-peat-free) 
+Mae mawn yn cael ei ddefnyddio’n aml mewn eginblanhigion a phlanhigion dan do. Edrychwch ar y labeli yn ofalus. Mae gan yr Ymddiriedolaethau Natur ganllaw am ddim i fod yn ddi-fawn [y gallwch chi ei lawrlwytho yma](https://www.wildlifetrusts.org/download-our-guide-going-peat-free). Bydd yn eich helpu i wneud eich compost eich hun hyd yn oed!
 
-Peat is often used in plug plants and indoor plants. Look at the labels carefully. 
-The Wildlife Trusts has a free guide to going peat free that [you can download here.](https://www.wildlifetrusts.org/download-our-guide-going-peat-free) It will even help you to make your own compost!
-
-Find out more about the ban on the sale of peat [on our webpage here](https://www.wildlifetrusts.org/news/peat-banned-2024) and consider writing to your MP/MSP/MS/AS to ask them to ban ALL peat sales. See our related guide about writing to your councillors. You could also [take our pledge on this page](https://www.wildlifetrusts.org/pledge-peat-free) to go peat-free and we can use this to show government that people are concerned about peat and the climate.
+Dysgwch fwy am y gwaharddiad ar werthu mawn ar ein tudalen we ni [yma ](https://www.wildlifetrusts.org/news/peat-banned-2024)ac ystyriwch ysgrifennu at eich AS/MSP/MS i ofyn iddo ef neu hi wahardd POB gwerthiant mawn. Edrychwch ar ein canllaw cysylltiedig ni ar ysgrifennu at eich cynghorwyr. Gallech hefyd [wneud addewid ar y dudalen yma ](https://www.wildlifetrusts.org/pledge-peat-free)i fod yn ddi-fawn a gallem ddefnyddio hyn i ddangos i'r llywodraeth bod pobl yn poeni am fawn a'r hinsawdd.
