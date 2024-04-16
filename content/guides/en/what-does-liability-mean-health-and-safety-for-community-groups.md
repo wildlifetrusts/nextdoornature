@@ -14,7 +14,7 @@ relatedGuides:
   - Risk Assessments
 customCall: What do you think about liability?
 ---
-## This is not specific legal advice. 
+## This is not specific legal advice.
 
 This is a guide to get you started. We recommend that you consult proper legal advice. Look for a solicitor who provides 'pro bono' (free) help or contact the [Environmental Law Foundation here](https://elflaw.org/).
 
@@ -23,6 +23,7 @@ Start with a risk assessment - see our related guide about that below.
 You may need public liability insurance or other insurances. See our related guide below for more information.
 
 You can use warning signs but remember two things:
+
 * Children may not understand them. They might also be unclear for people who have different literacy levels or who don't speak English.
 * A sign doesn't mean you're not liable (not responsible) if someone gets injured. These signs have no legal standing and won't let you off the hook if you are to blame.
 

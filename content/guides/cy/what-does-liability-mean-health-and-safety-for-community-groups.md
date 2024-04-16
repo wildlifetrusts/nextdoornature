@@ -1,53 +1,57 @@
 ---
-title: What Does Liability Mean? Health and Safety for Community Groups
-summary: Liability means that you are responsible for something or someone. If
-  someone on your project, or visiting your project, gets hurt, are you going to
-  be blamed? This guide looks at what this all means.
+title: Beth Mae Atebolrwydd yn ei Olygu? Iechyd a Diogelwch ar gyfer Grwpiau Cymunedol
+summary: Mae atebolrwydd yn golygu eich bod yn gyfrifol am rywbeth neu rywun. Os
+  bydd rhywun yn eich prosiect, neu'n ymweld â'ch prosiect, yn cael ei frifo, a
+  fyddwch chi'n cael eich beio? Mae'r canllaw yma’n edrych ar beth mae hyn i gyd
+  yn ei olygu.
 image:
   src: /images/uploads/liability_benhall2020vision.jpg
   alt: Children from Lochinver primary school planting trees at Culag Wood with
     Andy Summers
   credit: Image copyright Ben Hall/2020VISION
 video: null
-customCall: What do you think about liability?
+relatedGuides:
+  - Insurance for Local Groups
+  - Risk Assessments
+customCall: Beth yw eich barn chi am atebolrwydd?
 ---
-## This is not specific legal advice. 
+### Nid yw hwn yn gyngor cyfreithiol penodol.
 
-This is a guide to get you started. We recommend that you consult proper legal advice. Look for a solicitor who provides 'pro bono' (free) help or contact the [Environmental Law Foundation here](https://elflaw.org/).
+Canllaw i'ch rhoi chi ar ben ffordd ydi hwn. Rydym yn argymell eich bod yn ymgynghori â chyngor cyfreithiol priodol. Chwiliwch am gyfreithiwr sy'n darparu cymorth 'pro bono' (am ddim) neu gysylltu â'r Sefydliad Cyfraith Amgylcheddol yma.
 
-Start with a risk assessment - see our related guide about that below.
+Dechreuwch gydag asesiad risg – edrychwch ar ein canllaw cysylltiedig am hynny isod.
+Efallai y bydd arnoch angen yswiriant atebolrwydd cyhoeddus neu yswiriant arall. Edrychwch ar ein canllaw cysylltiedig isod am ragor o wybodaeth.
 
-You may need public liability insurance or other insurances. See our related guide below for more information.
+Gallwch ddefnyddio arwyddion rhybudd ond cofiwch ddau beth:
 
-You can use warning signs but remember two things:
-* Children may not understand them. They might also be unclear for people who have different literacy levels or who don't speak English.
-* A sign doesn't mean you're not liable (not responsible) if someone gets injured. These signs have no legal standing and won't let you off the hook if you are to blame.
+* Efallai na fydd plant yn eu deall. Gallant hefyd fod yn aneglur i bobl sydd â lefelau llythrennedd gwahanol neu sydd ddim yn siarad Saesneg.
+* Nid yw arwydd yn golygu nad ydych yn atebol (ddim yn gyfrifol) os bydd rhywun yn cael ei anafu. Nid oes gan yr arwyddion hyn unrhyw statws cyfreithiol ac ni fyddant yn golygu nad oes gennych gyfrifoldeb os mai chi sydd ar fai.
 
-## Your liability (responsibility) to the public
+### Eich atebolrwydd (cyfrifoldeb) i'r cyhoedd
 
-Unless you set out to actually create a risk, or you're reckless about whether a risk is created, you’re not liable for any injury caused by:
+Oni bai eich bod yn mynd ati i greu risg, neu os ydych chi’n ddi-hid ynghylch a oes risg yn cael ei chreu, nid ydych yn atebol am unrhyw anaf a achosir gan:
 
-* any natural feature of the landscape including any tree, shrub, plant, river or stream
-* any ditch or pond, whether natural or not
-* people passing over, under or through a wall, fence or gate, except if they’re making proper use of a gate or stile
+* unrhyw nodwedd naturiol o’r dirwedd gan gynnwys unrhyw goeden, llwyn, planhigyn, afon neu nant
+* unrhyw ffos neu bwll, boed yn naturiol ai peidio
+* pobl yn pasio dros, o dan neu drwy wal, ffens neu giât, ac eithrio os ydynt yn gwneud defnydd priodol o giât neu gamfa
 
-This comes from the [UK Government's online guidance here](https://www.gov.uk/guidance/open-access-land-management-rights-and-responsibilities#your-liability-to-the-public).
+Daw hyn o [ganllawiau ar-lein Llywodraeth y DU ym](https://www.gov.uk/guidance/open-access-land-management-rights-and-responsibilities#your-liability-to-the-public)a.
 
-But you do have a 'duty of care' which means you must look after anyone who comes onto the site and its boundaries, including staff, volunteers, members of the public, visitors and even intruders.
+Ond mae gennych chi 'ddyletswydd o ofal' sy'n golygu bod rhaid i chi ofalu am unrhyw un sy'n dod i'r safle ac o fewn ei ffiniau, gan gynnwys staff, gwirfoddolwyr, aelodau'r cyhoedd, ymwelwyr a hyd yn oed tresmaswyr.
 
-Look at the [Occupiers' Liability Act 1957, amended 2005](https://www.legislation.gov.uk/ukpga/Eliz2/5-6/31/contents) to read the official law.
+Edrychwch ar [Ddeddf Atebolrwydd Preswylwyr 1957, a ddiwygiwyd yn 2005](https://www.legislation.gov.uk/ukpga/Eliz2/5-6/31/contents), i ddarllen y gyfraith swyddogol.
 
-Basically, you need to do a risk assessment and make sure everything is as safe as it can be.
+Yn sylfaenol, mae angen i chi gynnal asesiad risg a gwneud yn siŵr bod popeth mor ddiogel ag y gall fod.
 
-If you are using harmful chemicals such as weedkillers, you must take care that no one is harmed. But it is even better if you can reduce or stop using insecticides, herbicides and pesticides totally. See our related guide below about taking action for insects.
+Os ydych chi'n defnyddio cemegau niweidiol fel chwynladdwyr, rhaid i chi ofalu nad oes unrhyw un yn cael ei niweidio. Ond mae’n well fyth os gallwch chi leihau neu roi'r gorau i ddefnyddio pryfladdwyr, chwynladdwyr a phlaladdwyr yn llwyr. Edrychwch ar ein canllaw cysylltiedig ni isod ynglŷn â gweithredu dros bryfed.
 
-Ponds are great for wildlife. But some community groups worry that they will get into trouble if someone is injured, or worse. The [Federation of City Farms and Gardens has a lot of in-depth advice here](https://www.farmgarden.org.uk/system/files/hscommgrowingsites_0.pdf) about ponds, and how you can still have a pond without any problems.
+Mae pyllau yn wych ar gyfer bywyd gwyllt. Ond mae rhai grwpiau cymunedol yn poeni y byddan nhw'n mynd i drafferthion os bydd rhywun yn cael ei anafu, neu waeth. [Mae gan y Ffederasiwn o Ffermydd a Gerddi Dinesig lawer o gyngor manwl yma](https://www.farmgarden.org.uk/system/files/hscommgrowingsites_0.pdf) am byllau, a sut gallwch chi gael pwll heb unrhyw broblemau.
 
-This is a very complicated topic and each community group and project is slightly different. So remember these key points:
+Mae hwn yn bwnc cymhleth iawn ac mae pob grŵp a phrosiect cymunedol ychydig yn wahanol. Felly cofiwch y pwyntiau allweddol yma:
 
-* Do risk assessments, and review them regularly.
-* ACT on the results of your risk assessment! Put control measures in place.
-* Don't assume putting a sign up means you're free to do anything you like. You MUST make the area as safe as it can be.
-* Get free advice from the [Environmental Law Foundation here](https://elflaw.org/).
-* Make sure you have the right insurance.
-* But don't let a fear of being sued stop you from doing your projects. Visit other projects and ask how they are coping - they will be able to help you!
+* Ewch ati i gynnal asesiadau risg, a'u hadolygu'n rheolaidd.
+* GWEITHREDWCH ar ganlyniadau eich asesiad risg! Rhowch fesurau rheoli ar waith.
+* Peidiwch â chymryd yn ganiataol bod codi arwydd yn golygu eich bod chi’n rhydd i wneud unrhyw beth yr hoffech chi. MAE’N RHAID i chi wneud yr ardal mor ddiogel ag y gall fod.
+* Holwch am gyngor am ddim gan y [Sefydliad Cyfraith Amgylcheddol yma](https://elflaw.org/).
+* Gwnewch yn siŵr bod gennych chi yswiriant addas.
+* Ond peidiwch â gadael i ofni cael eich erlyn eich atal chi rhag gwneud eich prosiectau. Ewch i ymweld â phrosiectau eraill a gofynnwch sut maen nhw'n ymdopi – fe fyddan nhw'n gallu eich helpu chi!
