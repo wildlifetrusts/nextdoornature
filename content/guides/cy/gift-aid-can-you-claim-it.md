@@ -1,34 +1,37 @@
 ---
-title: "Gift Aid - Can You Claim It? "
-summary: Most of the community groups working in local areas aren't charities.
-  But if you are, you can claim extra money on top of donations - this is called
-  Gift Aid.
+title: Rhodd Cymorth - Allwch Chi Ei Hawlio?
+summary: Nid yw'r rhan fwyaf o'r grwpiau cymunedol sy'n gweithio mewn ardaloedd
+  lleol yn elusennau. Ond os ydych chi’n elusen, gallwch hawlio arian ychwanegol
+  ar ben rhoddion – yr enw ar hyn yw Rhodd Cymorth.
 image:
   src: /images/uploads/giftaid_katrinamartin202vision.jpg
-  alt: Planting wildlife-friendly plants at the Langriggs; Cumbernauld; overcast
-    with occasional drizzle; afternoon; 26.06.2011
+  alt: Plannu planhigion sy'n gyfeillgar i fywyd gwyllt yn y Langriggs;
+    Cumbernauld; cymylog gyda glaw mân nawr ac yn y man; prynhawn; 26.06.2011
   credit: Image copyright Katrina Martin/2020VISION
 video: null
+relatedGuides:
+  - Types of Community Group (England and Wales)
+  - Should our Group be Constituted?
 customCall: "Do you claim Gift Aid? "
 ---
-## You must be a charity
+### Rhaid i chi fod yn elusen
 
-There are a few different types of community group in the UK. Please see our related guide for information about this. Being a charity is a very specific thing with certain rules and regulations that you must follow. If you're not sure, then you're probably not a charity.
+Mae ychydig o wahanol fathau o grwpiau cymunedol yn y DU. Edrychwch ar ein canllaw cysylltiedig am wybodaeth am hyn. Mae bod yn elusen yn rhywbeth penodol iawn gyda rhai rheolau a rheoliadau y mae'n rhaid i chi eu dilyn. Os nad ydych chi'n siŵr, mae'n debyg nad ydych chi'n elusen.
 
-However, if you are a charity, then you can claim back extra money when people make a donation to you.
+Fodd bynnag, os ydych chi’n elusen, gallwch hawlio arian ychwanegol yn ôl pan fydd pobl yn rhoi rhodd i chi.
 
-## What can you claim?
+### Beth allwch chi ei hawlio
 
-When someone makes a donation to your charity, you can apply to the UK Government for extra money. For every £1 someone donates, you get a further 25p.
+Pan fydd rhywun yn rhoi rhodd i’ch elusen, gallwch wneud cais i Lywodraeth y DU am arian ychwanegol. Am bob £1 y mae rhywun yn ei rhoi, cewch 25c arall.
 
-However, the person making the donation must have paid income tax or capital gains tax in that year which matches or is more than what you are claiming.
+Fodd bynnag, mae'n rhaid i’r person sy'n gwneud y rhodd fod wedi talu treth incwm neu dreth enillion cyfalaf yn ystod y flwyddyn honno sy'n cyfateb i, neu'n fwy na'r hyn rydych chi’n ei hawlio.
 
-The person making the donation needs to make a Gift Aid Declaration. You can download some example forms from the [UK Government website here](https://www.gov.uk/claim-gift-aid/gift-aid-declarations).
+Mae angen i'r person sy'n rhoi'r rhodd wneud Datganiad Rhodd Cymorth. Gallwch lawrlwytho rhai ffurflenni enghreifftiol o wefan Llywodraeth y DU yma.
 
-There is also a special scheme, called the Gift Aid Small Donations Scheme (GASDS), which means you can collect small donations - such as in a collection tin - that don't need a Gift Aid Declaration. Find out more about [GASDS online here](https://www.gov.uk/claim-gift-aid/small-donations-scheme).
+Hefyd mae cynllun arbennig ar gael, o’r enw Cynllun Rhoddion Bach Rhodd Cymorth (GASDS), sy’n golygu y gallwch chi gasglu rhoddion bach – fel mewn tun casglu – heb fod angen Datganiad Rhodd Cymorth. Mae mwy o wybodaeth am GASDS ar gael ar-lein yma.
 
-## How do you claim?
+### Sut ydych chi'n hawlio?
 
-You can make your claim online or by post using a special form, ChR1, which you can get by contacting [HMRC here](https://www.gov.uk/government/organisations/hm-revenue-customs/contact/charities-and-community-amateur-sports-clubs-cascs). To claim online, your charity will need an account on Charities Online which is the [UK Government's web portal here](https://www.gov.uk/guidance/claim-tax-back-on-donations-using-charities-online).
+Gallwch wneud eich cais ar-lein neu drwy’r post gan ddefnyddio ffurflen arbennig, ChR1, y gallwch ei chael drwy gysylltu â CThEM yma. I hawlio ar-lein, bydd angen cyfrif ar eich elusen ar Charities Online, sef porthol gwe Llywodraeth y DU yma.
 
-You will get the money back within four weeks if you applied online, and five weeks if you did it by post.
+Byddwch yn cael yr arian yn ôl o fewn pedair wythnos os gwnaethoch chi gais ar-lein, a phum wythnos os gwnaethoch chi hynny drwy'r post.
