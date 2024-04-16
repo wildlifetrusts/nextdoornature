@@ -1,55 +1,53 @@
 ---
-title: "Friends of Irth, Northamptonshire: Growing a community garden from the
-  ground up"
+title: "Friends of Irth, Northampton: Swydd Northampton: Tyfu gardd gymunedol
+  o'r gwaelod i fyny"
 who: Friends of Irth
 location: "Irthlingborough, Northamptonshire "
 postcode: "NN9 "
 images:
   - src: /images/uploads/friends-of-irth-badger-carnival.jpeg
-    alt: Friends of Irth Nextdoor Nature Wildlife Trust BCN
-    credit: Ellen Pentland / Wildlife Trust BCN 2024
+    alt: "Ymddiriedolaeth Natur BCN, Nextdoor Nature Friends of Irth  "
+    credit: Ellen Pentland / Ymddiriedolaeth Natur BCN 2024
 summary: "From unnamed eco group to funded community project. Find out how
   residents in Irthlingborough are growing their community group and taking
   action for nature. "
 pullQuote: null
-customCall: "Have you been involved in setting up a community garden? "
+customCall: Ydych chi wedi bod yn rhan o sefydlu gardd gymunedol?
 ---
-### Background
+### Cefndir
 
-When Wildlife Trust BCN started promoting Team Wilder and their Nextdoor Nature project, they caught the attention of the yet-to-be-named “Friends of Irth”. This small eco group from Irthlingborough, a town with limited space for wildlife, had been doing activities like litter picking – but was struggling to get more people involved.
+Pan ddechreuodd Ymddiriedolaeth Natur BCN hyrwyddo Team Wilder a’u prosiect Nextdoor Nature, fe wnaethon nhw ddal sylw “Friends of Irth”, sydd eto i’w enwi. Roedd y grŵp eco bach yma o Irthlingborough, tref sydd â lle cyfyngedig ar gyfer bywyd gwyllt, wedi bod yn gwneud gweithgareddau fel casglu sbwriel - ond roedd yn cael anhawster cael mwy o bobl i gymryd rhan.
 
-### Listening
+### Gwrando
 
-Friends of Irth members came to a listening exercise run by Wilder Communities Officer Ellen Pentland. Through sharing their aims and ambitions with Ellen, the group gained confidence in their ideas and felt they could take things forward. 
+Daeth aelodau Friends of Irth i ymarfer gwrando a gynhaliwyd gan y Swyddog Cymunedau Gwylltach, Ellen Pentland. Trwy rannu eu nodau a’u huchelgeisiau gydag Ellen, fe wnaeth y grŵp fagu hyder yn eu syniadau a theimlo y gallent symud pethau ymlaen.
 
-They began to think about how they could involve more people with the local environment, through transforming neglected areas of land around town into wildlife and community growing spaces.
+Fe wnaethon nhw ddechrau meddwl sut gallen nhw gynnwys mwy o bobl yn yr amgylchedd lleol, trwy drawsnewid ardaloedd o dir wedi'i esgeuluso o amgylch y dref yn fannau bywyd gwyllt a thyfu chymunedol.
 
-### Early progress
+### Cynnydd cynnar
 
-With newfound confidence, the group officially became “Friends of Irth”, and began reaching out to the community for support and new members – through door knocking, leafleting and advertising at local events. They also contacted landowners about the spaces they wanted to transform and got the necessary permission.
+Gyda hyder o’r newydd, daeth y grŵp yn “Friends of Irth” yn swyddogol, a dechreuodd estyn allan i’r gymuned am gefnogaeth ac aelodau newydd – trwy gnocio ar ddrysau, dosbarthu taflenni a hysbysebu mewn digwyddiadau lleol. Fe wnaethon nhw hefyd gysylltu â pherchnogion tir am y mannau roedden nhw eisiau eu trawsnewid a chael y caniatâd angenrheidiol.
 
-As their plans and membership became more fully formed, Friends of Irth became a constituted group, complete with committee, bank account and regular meetings. Ellen attended some of their meetings and helped to get the word out while door knocking and speaking to local people. In just a couple of months, Friends of Irth had trebled!
+Wrth i'w cynlluniau a'u haelodaeth ffurfio’n llawnach, daeth Friends of Irth yn grŵp cyfansoddiadol, gyda phwyllgor, cyfrif banc a chyfarfodydd rheolaidd. Mynychodd Ellen rai o'u cyfarfodydd a helpodd i gael y gair ar led drwy gnocio ar ddrysau a siarad gyda phobl leol. Mewn mis neu ddau yn unig, roedd Friends of Irth wedi treblu!
 
-### Resources and support
+### Adnoddau a Chefnogaeth
 
-The Friends wanted to get started on creating two community gardens but needed funding and professional support. They approached the town council and successfully secured £1,500! The Wildlife Trust looked at lending tools to the group and helped them find suitable contractors to prepare the land.
+Roedd Friends of Irth eisiau dechrau ar greu dwy ardd gymunedol ond roedd angen cyllid a chefnogaeth broffesiynol arnyn nhw. Aethant at y cyngor tref a llwyddo i sicrhau £1,500! Edrychodd yr Ymddiriedolaeth Natur ar fenthyca offer i'r grŵp a'u helpu i ddod o hyd i gontractwyr addas i baratoi'r tir.
 
-The group also came up with fundraising ideas like selling daffodil bulbs for planting in verges around town. They’ve even had a familiar mascot cheering them on! This has helped them gain more support whilst encouraging people to see more nature on their doorsteps.
+Meddyliodd y grŵp hefyd am syniadau codi arian fel gwerthu bylbiau cennin Pedr i'w plannu ar ymylon ffyrdd o gwmpas y dref. Maen nhw hyd yn oed wedi cael masgot cyfarwydd yn eu hannog i ddal ati! Mae hyn wedi eu helpu i gael mwy o gefnogaeth a hefyd wedi annog pobl i weld mwy o fyd natur ar garreg eu drws.
 
-### Challenges
+### Heriau and Successes
 
-The group is bursting with great ideas, and occasionally needs a gentle reminder not to get ahead of themselves – simple details like not buying trees before knowing where they’re going to be planted. Ellen has also learned to clearly communicate the support that she’s able to offer as a Wildlife Trust community organiser. Things like liaising with partner organisations, attending events and helping to draft documents or write bids are absolutely in scope, but running the project or being a “member” is not!
+Mae’r grŵp yn llawn syniadau gwych, ac o bryd i’w gilydd mae angen cael ei atgoffa’n garedig i beidio â cheisio cerdded cyn cropian – manylion syml fel peidio â phrynu coed cyn gwybod ble maen nhw’n mynd i gael eu plannu. 
 
-### Successes
+Ers cyfarfod ag aelodau gwreiddiol y grŵp am y tro cyntaf, mae Ellen wedi eu gweld yn cynyddu mewn hyder. Mae ganddyn nhw lawer o uchelgeisiau, a chyda chymorth ac arweiniad Ellen a chydweithwyr eraill yn yr Ymddiriedolaeth Natur, gallant eu gweld yn cael eu gwireddu.
 
-Since first meeting the original members of the group, Ellen has seen them grow in confidence. They have lots of ambitions, and with the support and guidance of Ellen and other Wildlife Trust colleagues, they are able to see them becoming a reality.
+Mae’n ymddangos bod cael grŵp gweithredol Friends of Irth yn gweithio yn y gymuned wedi agor meddyliau pobl, gyda llawer yn dangos diddordeb yn y bywyd gwyllt yn y dref a’r warchodfa gyfagos gan yr Ymddiriedolaeth Natur. Mae pobl yn falch iawn o weld darnau o dir a oedd wedi’u hesgeuluso’n flaenorol yn cael eu troi’n ofod cadarnhaol a chynhyrchiol i’r gymuned.
 
-Having an active Friends of Irth group working in the community seems to have opened people’s minds, with many showing an interest in the wildlife in town and the neighbouring Wildlife Trust reserve. People are very pleased to see previously neglected pieces of land turned into a positive and productive space for the community. 
+### Y camau nesaf
 
-### Next steps
+Gyda chontractwyr wedi’u penodi i baratoi’r tir, mae Friends of Irth nawr yn bwriadu ymgysylltu ag ysgolion lleol a grwpiau eraill i ddylunio’r ardd gymunedol a’r gofod bywyd gwyllt.
 
-With contractors appointed to prepare the land, the Friends are now planning to engage with local schools and other groups to design the community garden and wildlife space. 
+Mae’r Ymddiriedolaeth Natur yn eu cefnogi nhw i wneud dewisiadau dylunio sy’n ystyried beth sydd orau i fywyd gwyllt, yn ogystal â hygyrchedd i wahanol ddefnyddwyr.
 
-The Wildlife Trust is supporting them in making design choices that consider what’s best for wildlife, as well as accessibility for different users. 
-
-Once designs have been agreed, the group will start looking for further funding pots.
+Unwaith y bydd wedi cytuno ar y dyluniadau, bydd y grŵp yn dechrau chwilio am gronfeydd cyllid pellach.
