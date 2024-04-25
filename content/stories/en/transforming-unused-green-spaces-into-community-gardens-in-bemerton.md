@@ -21,9 +21,9 @@ images:
     credit: "Copyright / Zosia Durniat Wiltshire Wildlife Trust "
 summary: In Bemerton Heath, a new project is transforming unused grass and green
   spaces into vibrant community gardens.
-pullQuote: “We are looking forward to seeing the garden flourish this summer,
-  and to helping more community members learn self-sufficiency, and skills in
-  growing healthy food."
+pullQuote: We are looking forward to seeing the garden flourish this summer, and
+  to helping more community members learn self-sufficiency, and skills in
+  growing healthy food.
 customCall: "Do you have experience of building a community garden? "
 ---
 In Bemerton Heath, a new project is transforming unused grass and [green spaces ](https://nextdoornaturehub.org.uk/guides/taking-over-green-space-in-your-area)into vibrant community gardens. The first of these gardens came to life at Pinewood Way after volunteers spent months of hard work planning, fundraising and obtaining various permissions.  

@@ -21,9 +21,9 @@ images:
       and ended the second day of the build with a well-timed wassail.  "
 summary: In Bemerton Heath, a new project is transforming unused grass and green
   spaces into vibrant community gardens.
-pullQuote: “We are looking forward to seeing the garden flourish this summer,
-  and to helping more community members learn self-sufficiency, and skills in
-  growing healthy food."
+pullQuote: We are looking forward to seeing the garden flourish this summer, and
+  to helping more community members learn self-sufficiency, and skills in
+  growing healthy food.
 customCall: "Do you have experience of building a community garden? "
 ---
 ### Welsh translation coming soon.
