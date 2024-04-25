@@ -1,4 +1,19 @@
 ---
+title: "Taking action for nature through photography and nature spotting "
+who: Kevin Ford
+location: Nuneaton, Warwickshire
+images:
+  - src: /images/uploads/redfox~1.jpg
+    alt: Fox walks across meadow carrying large fish in its mouth
+    credit: Photo Copyright / Kevin Ford
+    caption: " A remarkable photograph Kevin took shows a Fox carrying a large pike. "
+  - src: /images/uploads/foxesb~1.jpg
+    alt: "A fox and its cub photographed in a grass meadow. "
+    credit: Photo Copyright / Kevin Ford
+    caption: "Another incredible shot shows another fox with its cub. "
+summary: Spotting wildlife is a great way to take action for nature.
+pullQuote: Reporting your local sightings or sharing your wildlife photos online
+  can help build up a snapshot of what wildlife is around and where it lives.
 customCall: "Have you tried wildlife spotting? "
 ---
 Nuneaton resident Kevin Ford has been photographing local wildlife for many years on his early morning walks around Attleborough.  The Coventry and Ashby Canals have produced some incredible mammal sightings including difficult-to-spot species like water voles, stoats, weasels and otters. Foxes are regular sightings, along with birds such as grey heron and buzzard. 
