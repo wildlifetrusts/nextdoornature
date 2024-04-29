@@ -6,22 +6,22 @@ images:
   - src: /images/uploads/recent-group-image-washington-mind.jpg
     alt: Washington Mind Gardening Group in their community garden
     credit: Photo copyright Tom Parkin/Durham Wildlife Trust 2023
-    caption: "Ruth (second from right), Tom (far right) and members of the
-      Washington Mind Community Group. "
+    caption: Ruth (second from right), Tom (far right) and members of the Washington
+      Mind Community Group
   - src: /images/uploads/chrissy-and-steve-fruit-trees.jpg
     caption: "Volunteers Chrissy and Steve get ready to plant fruit trees in the
-      garden. "
+      garden "
     credit: Photo copyright Tom Parkin/Durham Wildlife Trust 2023
     alt: Washington Mind Gardening Group prepare to plant fruit trees
   - src: /images/uploads/washington-mind-8.jpeg
     alt: No mow zone at Washington Mind Community Garden
     credit: Photo copyright Tom Parkin/Durham Wildlife Trust 2023
-    caption: A no mow zone is declared at Washington Mind Community Garden.
+    caption: A no mow zone is declared at Washington Mind Community Garden
   - src: /images/uploads/washington-mind-2.jpg
     alt: "A proud Ruth stands with one of her thriving vegetable beds at Washington
       Mind Community Garden. "
     credit: Photo copyright Tom Parkin/Durham Wildlife Trust 2023
-    caption: "A proud Ruth stands with one of her thriving vegetable beds. "
+    caption: "A proud Ruth stands with one of her thriving vegetable beds "
 summary: "Washington Mind Gardening Group is helping local people connect with
   nature, meet new friends and manage their mental health. "
 pullQuote: I've been outdoors and connecting with nature and connecting with
