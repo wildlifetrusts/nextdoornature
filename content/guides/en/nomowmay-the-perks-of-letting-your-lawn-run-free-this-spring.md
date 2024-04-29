@@ -20,7 +20,7 @@ Why, you ask? Because allowing your lawn to grow a little wild and unkempt durin
 
 This is all part of the #NoMowMay movement. A simple concept, it calls on households to avoid mowing for the entire month and allow the grass, flowers and other plants to shoot up. In doing so, you're providing a much-needed early-season feast and habitat for [bees](https://www.wildlifetrusts.org/actions/how-attract-bumblebees-your-garden), [butterflies](https://www.wildlifetrusts.org/actions/how-attract-butterflies-your-garden) and other important pollinators.  
 
-### The benefits of long grass 
+### The benefits of long grass
 
 A new [UK study](https://www.theguardian.com/environment/2024/apr/19/letting-grass-grow-long-boosts-butterfly-numbers-uk-study-proves) has revealed just how impactful this lazy gardening approach can be. Analysing butterfly sightings across 600 gardens over 6 years, researchers found that yards with long grass had up to 93% more butterflies fluttering around and a greater variety of species.  
 
@@ -32,17 +32,16 @@ One survey from the charity, [Garden Organic](https://www.gardenorganic.org.uk/e
 
 When May comes to an end, you can go back to mowing as and when you need to. A monthly trim will keep things tidy while also supporting biodiversity. To make the biggest impact, try leaving a few patches of grass completely wild for the entire summer.  
 
-### Go a step further and plant a wildflower meadow  
+### Go a step further and plant a wildflower meadow
 
 If you want to go the extra mile for nature, consider growing your lawn into a wildlife-friendly meadow, rich in wildflowers.  
 
-There are several factors to consider before planting a wildflower meadow if you want the best chance of success. First, get to know your soil. Most wildflowers prefer nutrient-poor soil with low fertility. This helps them compete against plants and other “problem plants” like nettle, thistle and dock. Head to [this resource by Plantlife](https://meadows.plantlife.org.uk/making-meadows/principles-of-meadow-making/soil/) to learn how to check your soil.  
+There are several factors to consider before planting a wildflower meadow if you want the best chance of success. 
 
-You will also want to look at the plants you already have on your lawn. If you can spot more than four wildflower species, you may just need to sit back and let your meadow restore itself naturally.  
-
-To do this, you will need to put away the mower for the entirety of spring and summer. You can clear patches of grass if you want to create a path or small play area, but the majority of your grass should be kept long until the flowers have set seeds.  
-
-At this point, fire up the mower, cut the lawn down to a few inches and remove the clippings. You can leave patches of longer grass to house invertebrates, but the majority should be kept at ankle height throughout the winter months.  
+* First, get to know your soil. Most wildflowers prefer nutrient-poor soil with low fertility. This helps them compete against plants and other “problem plants” like nettle, thistle and dock. Head to [this resource by Plantlife](https://meadows.plantlife.org.uk/making-meadows/principles-of-meadow-making/soil/) to learn how to check your soil.  
+* You will also want to look at the plants you already have on your lawn. If you can spot more than four wildflower species, you may just need to sit back and let your meadow restore itself naturally.  
+* To do this, you will need to put away the mower for the entirety of spring and summer. You can clear patches of grass if you want to create a path or small play area, but the majority of your grass should be kept long until the flowers have set seeds.  
+* At this point, fire up the mower, cut the lawn down to a few inches and remove the clippings. You can leave patches of longer grass to house invertebrates, but the majority should be kept at ankle height throughout the winter months.  
 
 If your lawn is lacking in plant diversity, you may need to start from scratch. This process starts in late summer or Autumn. Read all about creating a new wildflower meadow in this handy [PDF guide from Plantlife](https://www.plantlife.org.uk/wp-content/uploads/2024/04/How_to_make_a_meadow_with_native_wildflowers.pdf).  
 
@@ -52,7 +51,7 @@ Your local Wildlife Trust or other conservation organisations may be able to adv
 
 If you’re thinking about planting wildflowers somewhere other than your garden, be sure to read our [guide to growing wild plants here](https://nextdoornaturehub.org.uk/guides/the-importance-of-local-species).  
 
-### Why do we love lawns so much, anyway?  
+### Why do we love lawns so much, anyway?
 
 The concept of a neatly kept grass lawn can be traced back to the early 18th century. At this time, grass was a vital source of food for grazing livestock, so employing skilled labourers to cut and dispose of such a valuable resource was a luxury reserved only for the elite.  
 
