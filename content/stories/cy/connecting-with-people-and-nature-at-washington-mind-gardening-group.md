@@ -24,9 +24,9 @@ images:
     caption: "A proud Ruth stands with one of her thriving vegetable beds "
 summary: "Washington Mind Gardening Group is helping local people connect with
   nature, meet new friends and manage their mental health. "
-pullQuote: I've been outdoors and connecting with nature and connecting with
-  other people. That's why I started initially, and then like-minded people
-  started to come in. You make great friendships in the garden.
+pullQuote: I'm outdoors connecting with nature and connecting with other people.
+  That's why I started initially, and then like-minded people started to come
+  in. You make great friendships in the garden.
 customCall: "Have you set up your own communal garden? "
 ---
 #### W﻿elsh translation coming soon.
@@ -36,7 +36,7 @@ A small gardening group is working with Durham Wildlife Trust to build a nature-
 Ruth had the ambition to expand the gardening group to include members of the wider community while also making better use of their space to grow fruit and vegetables that could be taken home and sold for fundraising. 
 “I started the gardening group initially for my mental health,” said Ruth. “I've been here as a service user and volunteer for 11 years now. Getting my hands in the soil was just great for me.
 
-“I've been outdoors and connecting with nature and connecting with other people. That's why I started initially, and then like-minded people started to come in. You make great friendships in the garden.”
+“I'm outdoors connecting with nature and connecting with other people. That's why I started initially, and then like-minded people started to come in. You make great friendships in the garden.” 
 
 ### Bringing in Support
 

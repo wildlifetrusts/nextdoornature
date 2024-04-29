@@ -24,9 +24,9 @@ images:
     caption: "A proud Ruth stands with one of her thriving vegetable beds "
 summary: "Washington Mind Gardening Group is helping local people connect with
   nature, meet new friends and manage their mental health. "
-pullQuote: I've been outdoors and connecting with nature and connecting with
-  other people. That's why I started initially, and then like-minded people
-  started to come in. You make great friendships in the garden.
+pullQuote: I'm outdoors connecting with nature and connecting with other people.
+  That's why I started initially, and then like-minded people started to come
+  in. You make great friendships in the garden.
 customCall: "Have you set up your own communal garden? "
 ---
 A small gardening group is working with Durham Wildlife Trust to build a nature-friendly community garden. The group is connected to the local mental health charity, Washington Mind and is led by one of its service users, Ruth. 
@@ -34,7 +34,7 @@ A small gardening group is working with Durham Wildlife Trust to build a nature-
 Ruth had the ambition to expand the gardening group to include members of the [wider community](https://nextdoornaturehub.org.uk/guides/reaching-people-in-your-community) while also making better use of their space to grow fruit and vegetables that could be taken home and sold for [fundraising](https://nextdoornaturehub.org.uk/guides/how-to-run-a-fundraising-event). 
 “I started the gardening group initially for my mental health,” said Ruth. “I've been here as a service user and volunteer for 11 years now. Getting my hands in the soil was just great for me.
 
-“I've been outdoors and connecting with nature and connecting with other people. That's why I started initially, and then like-minded people started to come in. You make great friendships in the garden.”
+“I'm outdoors connecting with nature and connecting with other people. That's why I started initially, and then like-minded people started to come in. You make great friendships in the garden.”
 
 ### Bringing in Support
 
@@ -44,7 +44,7 @@ Ruth met with Tom weekly, building her skills in collecting evidence, using spre
 
 The hard work paid off. In April 2023, the group was awarded £5,000 from the National Garden Scheme. It allowed them to buy the plants, tools and equipment they needed to transform the space and achieve their vision. 
 
-“When I started out, there were only three of us,” Ruth said. “We didn't really have very much and then Tom came along and helped us get [funding ](https://nextdoornaturehub.org.uk/guides/finding-funding)and taught us about how to bring wildlife into the area. It's been fabulous; we've learned so much.”
+> “When I started out, there were only three of us,” Ruth said. “We didn't really have very much and then Tom came along and helped us get [funding ](https://nextdoornaturehub.org.uk/guides/finding-funding)and taught us about how to bring wildlife into the area. It's been fabulous; we've learned so much.”
 
 ### Getting to Work
 
@@ -52,13 +52,13 @@ Since then, the project has taken off. The rundown raised beds have been cleared
 
 When ready to harvest, the produce is taken home by volunteers and used in the Washington Mind Café. Even the nettles don’t go to waste. When Spring comes around, the young leaves are picked and made into a hearty nettle soup and delicious tea. 
 
-“A lot of the members here are very keen gardeners so it's all very peer-led and we all learn from each other, which is just fabulous,” said Sue, a staff member at Washington Mind and regular participant in the garden. “We're growing the produce and we're eating it, which is fantastic.”
+> “A lot of the members here are very keen gardeners so it's all very peer-led and we all learn from each other, which is just fabulous,” said Sue, a staff member at Washington Mind and regular participant in the garden. “We're growing the produce and we're eating it, which is fantastic.”
 
 ### Growing the Project
 
 As the garden has grown, so too has the support. The [community group](https://nextdoornaturehub.org.uk/guides/setting-up-a-basic-community-group) has expanded with new members joining from the local community and businesses offering their support. A local resident has even donated trees that she no longer had space for.
 
-Jim, a regular volunteer, said he started attending the group to learn more about gardening. “I've got a large garden at home, and I do enjoy it but I’ve never really known what I've been doing for most of the time. It's just potluck. I'm enjoying everything that we're doing here; the landscaping aspects and even shovelling the manure today.”
+> Jim, a regular volunteer, said he started attending the group to learn more about gardening. “I've got a large garden at home, and I do enjoy it but I’ve never really known what I've been doing for most of the time. It's just potluck. I'm enjoying everything that we're doing here; the landscaping aspects and even shovelling the manure today.”
 
 Vicky, another volunteer, originally came to the group for the social connection but since then has enjoyed learning about nature-friendly gardening techniques. 
 
