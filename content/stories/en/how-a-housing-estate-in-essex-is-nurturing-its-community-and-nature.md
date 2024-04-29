@@ -1,5 +1,5 @@
 ---
-title: "How a housing estate in Essex is nurturing its community and nature  "
+title: "How a Housing Estate in Essex is Nurturing its Community and Nature  "
 who: Residents of Clayburn Gardens
 location: Thurrock, Essex
 images:
