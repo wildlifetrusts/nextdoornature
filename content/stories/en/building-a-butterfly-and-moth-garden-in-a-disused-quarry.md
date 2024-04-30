@@ -28,7 +28,7 @@ For years, the centre has been a haven for wildlife. It started off as an abando
 
 The volunteer group wanted to take things a step further by growing a butterfly and moth garden, or ‘Cafe’ as they call it. They started by carefully removing a small area of bramble before getting to work on building a meadow of wildflowers to attract butterflies, moths, bees and other insects. 
 
-The existing ground consisted of heavy clay. Wildflowers need a lighter soil to thrive so the group hauled a couple of tonnes of topsoil to cover the ground before scattering the seeds. They also built a path running through the garden so that visitors can see the butterflies and moths at close quarters. 
+The existing ground consisted of heavy clay. Wildflowers need a lighter soil to thrive so the group hauled a couple of tonnes of topsoil to cover the ground before planting. They also built a path running through the garden so that visitors can see the butterflies and moths at close quarters.
 
 “We've always tried to be on the education side,” Jean said. “We've got lots of information boards around the place to educate people and particularly children so that they can get close to nature and get close to the butterflies and the bees.”
 
@@ -40,7 +40,7 @@ Jean said one of the biggest challenges has been covering such a large area with
 
 But what the team lacks in numbers it more than makes up for in dedication. Despite record-breaking wet weather over the winter months, the group were able to create a beautiful 40 square-metre garden complete with paths and educational signs. 
 
-As a self-funded organisation, finances can also be a challenge. The Centre has a cafe which has been the primary funder for its work, but with maintenance costs increasing over the last year, it now charges an entrance fee. Determined to keep the site accessible, the entry cost is £2 for adults and £1 for children. 
+As a self-funded organisation, finances can also be a challenge. The Centre has a cafe which has been the primary funder for its work, but with maintenance costs increasing over the last year, it now charges an entrance fee. Determined to keep the site accessible, the entry cost is kept as low as possible: £2 for adults and £1 for children. 
 
 Jean and her team are always looking for ways to improve biodiversity across the site and educate local people about the importance and value of nature. 
 
