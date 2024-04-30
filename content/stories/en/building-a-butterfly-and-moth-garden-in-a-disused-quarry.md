@@ -28,7 +28,7 @@ For years, the centre has been a haven for wildlife. It started off as an abando
 
 The volunteer group wanted to take things a step further by growing a butterfly and moth garden, or ‘Cafe’ as they call it. They started by carefully removing a small area of bramble before getting to work on building a meadow of wildflowers to attract butterflies, moths, bees and other insects. 
 
-The existing ground consisted of heavy clay. Wildflowers need a lighter soil to thrive so the group hauled a couple of tonnes of topsoil to cover the ground before scattering the seeds. They also built a path running through the garden so that visitors can see the butterflies and moths at close quarters. 
+The existing ground consisted of heavy clay. Wildflowers need a lighter soil to thrive so the group hauled a couple of tonnes of topsoil to cover the ground before planting. They also built a path running through the garden so that visitors can see the butterflies and moths at close quarters.
 
 “We've always tried to be on the education side,” Jean said. “We've got lots of information boards around the place to educate people and particularly children so that they can get close to nature and get close to the butterflies and the bees.”
 
