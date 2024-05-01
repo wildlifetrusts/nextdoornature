@@ -4,6 +4,12 @@ who: Staff at Jamie’s Computers
 location: Bevois, Southampton
 postcode: SO14
 images:
+  - src: /images/uploads/20230915-bash-and-wendy-at-front.jpg
+    alt: Bashir and Wendy, staff members at Jamie's computers work on the front
+      garden
+    credit: Image Copyright / Jill Doubleday HIWWT
+    caption: Bashir and Wendy, staff members at Jamie's computers, work on their
+      front garden
   - src: /images/uploads/20230818-before-plastic-pile.jpg
     alt: "Jamie's Computers' backyard littered with rubbish before transforming the
       space. "
@@ -13,12 +19,6 @@ images:
     alt: Large repurposed containers used as planters
     credit: Image Copyright / Jill Doubleday HIWWT
     caption: "Repurposed plastic containers were used to create beds "
-  - src: /images/uploads/20230915-bash-and-wendy-at-front.jpg
-    alt: Bashir and Wendy, staff members at Jamie's computers work on the front
-      garden
-    credit: Image Copyright / Jill Doubleday HIWWT
-    caption: Bashir and Wendy, staff members at Jamie's computers, work on their
-      front garden
 summary: Mount Pleasant Industrial Estate in Southampton is starting to look a
   little bit wilder.
 pullQuote: It was a really good feeling when we came into work and saw
