@@ -19,6 +19,10 @@ images:
     credit: Image Copyright / Jill Doubleday HIWWT
     alt: Large repurposed containers used as planters
     caption: "Repurposed plastic containers were used to create beds "
+  - src: /images/uploads/20240308-gemma-and-andrew.jpg
+    alt: Jamie's Computers staff pose by their recently built planters.
+    credit: Image Copyright / Jill Doubleday HIWWT
+    caption: Gemma and Andrew from Jamie's Computers with their new repurposed beds
 summary: Mount Pleasant Industrial Estate in Southampton is starting to look a
   little bit wilder.
 pullQuote: It was a really good feeling when we came into work and saw
