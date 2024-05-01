@@ -20,7 +20,7 @@ images:
 summary: "How volunteers came together to build a beautiful butterfly garden "
 pullQuote: "Going wild is so important; biodiversity is so important. We must
   look after our wild areas and where we can, improve them. "
-customCall: Have you experience buildling a garden for wildlife?
+customCall: "Have you experience building a garden for wildlife? "
 ---
 A small, dedicated team of volunteers have come together to build a butterfly and moth garden at the Mountsorrel and Rothley Community Heritage Centre. 
 
