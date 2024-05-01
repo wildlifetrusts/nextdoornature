@@ -22,8 +22,7 @@ images:
 summary: Mount Pleasant Industrial Estate in Southampton is starting to look a
   little bit wilder.
 pullQuote: It was a really good feeling when we came into work and saw
-  everything flourish. It was an instant mood-lifter. There is a clear
-  connection between nature and feeling good.
+  everything flourish. It was an instant mood-lifter.
 customCall: "Have you transformed some green space at your workplace? "
 ---
 An industrial estate might not be the first place you would expect to find a wildlife garden, but thanks to staff at [Jamie’s Computers](https://jamies.org.uk/), Mount Pleasant Industrial Estate in Southampton is starting to look a little bit wilder. 
