@@ -54,7 +54,7 @@ The old containers have been transformed into huge planters which are already at
 
 Jamie’s Computer’s operations manager, Andrew said: “The backyard has always been a bit of a dump, unfortunately, and so we thought let’s finally get it done. We had lots of containers out there that we could use for flower beds, so we thought, why not?”
 
-Jill Doubleday of Hampshire & Isle of Wight Wildlife Trust, who supported the project said: “Andrew is really enthusiastic and clearly keen to provide his staff and volunteers with a lovely area to take a break in, as well as for wildlife.  He’s more than happy to roll up his sleeves and get involved."
+Jill Doubleday of [Hampshire & Isle of Wight Wildlife Trust](https://www.hiwwt.org.uk/), who supported the project said: “Andrew is really enthusiastic and clearly keen to provide his staff and volunteers with a lovely area to take a break in, as well as for wildlife.  He’s more than happy to roll up his sleeves and get involved."
 
 There is still more work to be done. For now, the green areas are enjoyed by Jamie’s Computers staff and volunteers, and eventually, they would like to open up the space to the Society of St James’ service users. 
 
