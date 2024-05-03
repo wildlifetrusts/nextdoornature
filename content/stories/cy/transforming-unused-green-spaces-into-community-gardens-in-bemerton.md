@@ -1,5 +1,5 @@
 ---
-title: "Transforming unused green spaces into community gardens in Bemerton  "
+title: "Transforming Unused Green Spaces into Community Gardens in Bemerton  "
 who: Residents in Bemerton Heath
 location: Pinewood Way, Bemerton, Salisbury
 images:
@@ -7,10 +7,10 @@ images:
     alt: "Volunteers at Bemerton building planters for their community garden. "
     credit: "Copyright / Zosia Durniat Wiltshire Wildlife Trust "
     caption: "Residents come together with local businesses, Wiltshire Council and
-      Wiltshire Wildlife Trust to build a community garden.  "
+      Wiltshire Wildlife Trust to build a community garden  "
   - src: /images/uploads/bemerton6.jpg
     caption: The hard-working idverde team finish building the gazebo area so that
-      all can enjoy the garden throughout the seasons.
+      all can enjoy the garden throughout the seasons
     credit: "Copyright / Zosia Durniat Wiltshire Wildlife Trust "
     alt: The Gazebo at Bemerton Community Garden
   - src: /images/uploads/bemerton1.jpg
@@ -18,12 +18,12 @@ images:
       "
     credit: "Copyright / Zosia Durniat Wiltshire Wildlife Trust "
     caption: "Naomi, Woodland Officer for Wiltshire Council, brought her Concertina
-      and ended the second day of the build with a well-timed wassail.  "
+      and ended the second day of the build with a well-timed wassail  "
 summary: In Bemerton Heath, a new project is transforming unused grass and green
   spaces into vibrant community gardens.
 pullQuote: We are looking forward to seeing the garden flourish this summer, and
   to helping more community members learn self-sufficiency, and skills in
-  growing healthy food.
+  growing healthy food
 customCall: "Do you have experience of building a community garden? "
 ---
 ### Welsh translation coming soon.
