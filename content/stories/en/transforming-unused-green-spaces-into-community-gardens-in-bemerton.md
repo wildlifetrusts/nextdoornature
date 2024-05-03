@@ -6,8 +6,8 @@ images:
   - src: /images/uploads/bemerton5.jpg
     alt: Volunteers at Bemerton building planters for their community garden
     credit: "Copyright / Zosia Durniat Wiltshire Wildlife Trust "
-    caption: "Residents come together with local businesses, Wiltshire Council and
-      Wiltshire Wildlife Trust to build a community garden "
+    caption: Residents come together with local businesses, Wiltshire Council and
+      Wiltshire Wildlife Trust to build a community garden
   - src: /images/uploads/bemerton6.jpg
     alt: The Gazebo at Bemerton Community Garden
     credit: "Copyright / Zosia Durniat Wiltshire Wildlife Trust "
@@ -15,7 +15,7 @@ images:
       all can enjoy the garden throughout the seasons
   - src: /images/uploads/bemerton1.jpg
     caption: "Naomi, Woodland Officer for Wiltshire Council, brought her Concertina
-      and ended the second day of the build with a well-timed wassail  "
+      and ended the second day of the build with a well-timed wassail "
     alt: "Naomi, Woodland Officer for Wiltshire Council playing consertina outside.
       "
     credit: "Copyright / Zosia Durniat Wiltshire Wildlife Trust "
