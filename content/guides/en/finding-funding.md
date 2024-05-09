@@ -34,6 +34,12 @@ Sign up for the free account at [My Funding Central.](https://www.myfundingcentr
 
 The website [Community Foundations](https://www.ukcommunityfoundations.org/our-network) covers most of the UK. Put your postcode in, and it’ll find your nearest Community Foundation. These are groups which help small organisations to find money.
 
+The [UK Democracy Network](https://resources.democracynetwork.org.uk/democracy-funding) offers an open directory of funding and grants. The database covers areas including environmental causes, community organising, heritage and voluntary groups. 
+
+The UK Democracy Network contributes to the upkeep and promotion of a UK-wide funding and grants directory, an open database of funding organisations and grants supporting a better and healthier democracy in the United Kingdom.
+
+<!--EndFragment-->
+
 ## Lists of funders
 
 If you prefer to look at a book, you can use *The Directory of Grant Making Trusts*. It’s published every year by The Directory of Social Change, and it’ll usually be in your local library.
