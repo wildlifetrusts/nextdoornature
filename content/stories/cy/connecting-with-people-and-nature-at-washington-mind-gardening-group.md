@@ -24,9 +24,9 @@ images:
     caption: Ruth yn sefyll yn falch gydag un o'i gwelyau llysiau llewyrchus
 summary: "Washington Mind Gardening Group is helping local people connect with
   nature, meet new friends and manage their mental health. "
-pullQuote: I'm outdoors connecting with nature and connecting with other people.
-  That's why I started initially, and then like-minded people started to come
-  in. You make great friendships in the garden.
+pullQuote: Rydw i yn yr awyr agored yn cysylltu â byd natur ac yn cysylltu â
+  phobl eraill. Dyna pam wnes i ddechrau arni, ac wedyn fe ddechreuodd pobl
+  debyg i mi ddod i mewn. Rydych chi'n gwneud ffrindiau da yn yr ardd.
 customCall: Ydych chi wedi sefydlu gardd gymunedol?
 ---
 Roedd y grŵp yn llawn angerdd ond doedd ganddo ddim cyrhaeddiad nac adnoddau i dyfu. Y cyfan oedd ei angen oedd help llaw. Fe gysylltodd Mind Washington y grŵp gyda Swyddog Natur Drws Nesaf Ymddiriedolaeth Natur Durham, Tom Parkin, wnaeth eu cefnogi nhw i wneud cais i’r Cynllun Gerddi Cenedlaethol.
@@ -40,7 +40,9 @@ Fe dalodd y gwaith caled ar ei ganfed. Ym mis Ebrill 2023, dyfarnwyd £5,000 i�
 ### Trwyn ar y Maen
 
 Ers hynny, mae'r prosiect wedi cydio. Mae'r gwelyau uchel oedd mewn cyflwr gwael wedi'u clirio a'u llenwi gyda blodau gwyllt, coed ffrwythau a llysiau. Mae rhannau eraill o'r gofod wedi'u datgan yn ardaloedd dim torri glaswellt er mwyn caniatáu i amrywiaeth o bryfed a larfa ddefnyddio'r darnau o ddanadl poethion.
+
 Pan mae’n barod i'w gynaeafu, mae'r cynnyrch yn cael ei gludo adref gan y gwirfoddolwyr a'i ddefnyddio yng Nghaffi Mind Washington. Dydi’r danadl poethion ddim yn mynd yn wastraff hyd yn oed. Pan ddaw'r gwanwyn, mae'r dail ifanc yn cael eu casglu a'u gwneud yn gawl danadl poethion maethlon a the blasus.
+
 “Mae llawer o'r aelodau yma'n arddwyr brwd iawn felly mae'r cyfan yn cael ei arwain gan gyfeillion ac rydyn ni i gyd yn dysgu oddi wrth ein gilydd, sy'n wych,” meddai Sue, aelod o staff Mind Washington a chyfranogwr cyson yn yr ardd. “Rydyn ni’n tyfu’r cynnyrch ac rydyn ni’n ei fwyta, sy’n wych.”
 Tyfu’r Prosiect
 Wrth i’r ardd dyfu, felly hefyd y gefnogaeth. Mae’r grŵp cymunedol wedi ehangu gydag aelodau newydd yn ymuno o’r gymuned leol a busnesau’n cynnig eu cefnogaeth. Mae un o’r trigolion lleol wedi cyfrannu coed hyd yn oed am nad oedd ganddi le ar eu cyfer mwyach.
