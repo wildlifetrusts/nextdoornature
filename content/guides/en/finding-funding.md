@@ -34,11 +34,11 @@ Sign up for the free account at [My Funding Central.](https://www.myfundingcentr
 
 The website [Community Foundations](https://www.ukcommunityfoundations.org/our-network) covers most of the UK. Put your postcode in, and it’ll find your nearest Community Foundation. These are groups which help small organisations to find money.
 
-The [UK Democracy Network](https://resources.democracynetwork.org.uk/democracy-funding) offers an open directory of funding and grants. The database covers areas including environmental causes, community organising, heritage and voluntary groups. 
+The [UK Democracy Network](https://resources.democracynetwork.org.uk/democracy-funding) offers an open directory of funding and grants supporting a better and healthier democracy in the United Kingdom. The database covers areas including environmental causes, community organising, heritage and voluntary groups. 
 
-The UK Democracy Network contributes to the upkeep and promotion of a UK-wide funding and grants directory, an open database of funding organisations and grants supporting a better and healthier democracy in the United Kingdom.
+Co-operatives UK has an accessible [Finance Guide](https://www.uk.coop/resources/community-shares-finance-guide-cs) for directors, trustees and staff of a co-operative, community benefit or charitable community benefit society.
 
-<!--EndFragment-->
+A co-op is a business or organisation that’s owned and controlled by its members who all have a say in how the co-op is run. [Learn more about co-ops](https://www.uk.coop/understanding-co-ops/what-co-op).
 
 ## Lists of funders
 
@@ -46,7 +46,7 @@ If you prefer to look at a book, you can use *The Directory of Grant Making Trus
 
 [Grants Online](https://www.grantsonline.org.uk/news/community-development/) lists new grants available across the UK. The list updates every day.
 
-[GrantFinder](https://www.grantfinder.co.uk/funding-highlights/funds/community-development/) also lists funding across the UK. That link goes to their community development grants, but also look at other sections. These might be:
+[GrantFinder](https://www.grantfinder.co.uk/funding-highlights/funds/community-development/) also lists fundinwhog across the UK. That link goes to their community development grants, but also look at other sections. These might be:
 
 * Arts, Culture and Heritage Funding.
 * Environmental Grants, Grants for Children.
