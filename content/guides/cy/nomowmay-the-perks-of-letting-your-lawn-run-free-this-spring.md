@@ -1,7 +1,7 @@
 ---
-title: "#NoMowMay: The perks of letting your lawn run free this spring  "
-summary: "Make the most of No Mow May this year by letting your garden grow a
-  little wild. "
+title: "#MaiDiDor: Manteision gadael i’ch lawnt dyfu’n wyllt y gwanwyn yma           "
+summary: Manteisiwch i’r eithaf ar Fai Di Dor eleni a gadael i’ch gardd dyfu
+  fymryn yn wyllt.
 image:
   src: /images/uploads/wild-gardening-c-paul-harris-2020-vision.jpg
   alt: "Widflowers grow in  a back garden. "
@@ -11,55 +11,55 @@ relatedGuides:
   - Things You Can Do About Climate Change
 relatedStories:
   - '"Going Wild": Building a Wildlife Haven in the Back Garden'
-customCall: "Have you tried #NoMowMay?"
+customCall: "Ydych chi wedi rhoi cynnig ar #MaiDiDor?"
 ---
-Before you reach for the lawnmower this spring, consider letting your grass grow longer throughout May.  
+Cyn i chi estyn am y peiriant torri glaswellt y gwanwyn yma, ystyriwch adael i'ch glaswellt dyfu'n dalach drwy gydol mis Mai.
 
-Why, you ask? Because allowing your lawn to grow a little wild and unkempt during this time of year can work wonders for backyard biodiversity and wildlife.  
+Pam, meddech chi? Oherwydd gall gadael i'ch lawnt dyfu ychydig yn wyllt ac yn flêr yn ystod yr adeg yma o'r flwyddyn wneud rhyfeddodau i fioamrywiaeth a bywyd gwyllt yr iard gefn.
 
-This is all part of the #NoMowMay movement. A simple concept, it calls on households to avoid mowing for the entire month and allow the grass, flowers and other plants to shoot up. In doing so, you're providing a much-needed early-season feast and habitat for [bees](https://www.wildlifetrusts.org/actions/how-attract-bumblebees-your-garden), [butterflies](https://www.wildlifetrusts.org/actions/how-attract-butterflies-your-garden) and other important pollinators.  
+Mae hyn i gyd yn rhan o fudiad #MaiDiDor. Cysyniad syml sy'n galw ar bobl i osgoi torri eu glaswellt am y mis cyfan a gadael i'r glaswellt, y blodau a phlanhigion eraill saethu i fyny. Drwy wneud hynny, rydych chi'n darparu gwledd a chynefin y mae eu gwir angen yn gynnar yn ystod y tymor ar wenyn, glöynnod byw a phryfed peillio pwysig eraill.
 
-### The benefits of long grass
+### Manteision glaswellt ta
 
-A new [UK study](https://www.theguardian.com/environment/2024/apr/19/letting-grass-grow-long-boosts-butterfly-numbers-uk-study-proves) has revealed just how impactful this lazy gardening approach can be. Analysing butterfly sightings across 600 gardens over 6 years, researchers found that yards with long grass had up to 93% more butterflies fluttering around and a greater variety of species.  
+Mae [astudiaeth newydd yn y DU](https://www.theguardian.com/environment/2024/apr/19/letting-grass-grow-long-boosts-butterfly-numbers-uk-study-proves) wedi datgelu pa mor effeithiol y gall y garddio diog yma fod. Wrth ddadansoddi’r glöynnod byw a welwyd ar draws 600 o erddi dros 6 blynedd, canfu ymchwilwyr bod gan iardiau gyda glaswellt tal hyd at 93% yn fwy o löynnod byw yn hedfan o gwmpas a mwy o amrywiaeth o rywogaethau.
 
-The long grass creates breeding territory and food sources that attract species like meadow browns, gatekeepers and ringlets whose caterpillar offspring munch on grasses and wildflowers. 
+Mae'r glaswellt tal yn creu tir magu a ffynonellau bwyd sy'n denu rhywogaethau fel gweirlöyn y ddôl, gweirlöyn y perthi a gweirlöyn y glaw y mae eu lindys yn bwydo ar laswelltau a blodau gwyllt.
 
-And it’s not just butterflies that thrive when you skip the mow. Common flowers like dandelions, clovers and daisies popping up are crucial for hungry pollinators like bees.  
+Ac nid dim ond glöynnod byw sy'n ffynnu pan fyddwch chi'n stopio torri. Mae blodau cyffredin fel dant y llew, meillion a llygad y dydd yn ymddangos ac yn hanfodol ar gyfer pryfed peillio llwglyd fel gwenyn.
 
-One survey from the charity, [Garden Organic](https://www.gardenorganic.org.uk/expert-advice/garden-management/wildlife-gardening/no-mow-may?gad_source=1&gclid=CjwKCAjwoPOwBhAeEiwAJuXRh9uuqOj3hxzyeh6gqpFxLA4YPVPnTNgPFgdlb06yDOz9tjeOwkxTrBoC-iwQAvD_BwE), found that an average unmown lawn can produce a massive 23kg of nectar sugar daily - enough to support over 2 million honeybees.  
+Canfu un arolwg gan yr elusen Garden Organic y gall lawnt sydd heb ei thorri gynhyrchu swm enfawr o 23kg o siwgr neithdar bob dydd ar gyfartaledd - digon i gynnal mwy na 2 filiwn o wenyn mêl.
 
-When May comes to an end, you can go back to mowing as and when you need to. A monthly trim will keep things tidy while also supporting biodiversity. To make the biggest impact, try leaving a few patches of grass completely wild for the entire summer.  
+Pan ddaw mis Mai i ben, gallwch fynd yn ôl i dorri’r glaswellt yn ôl yr angen. Bydd trimio misol yn cadw pethau'n daclus a hefyd yn cefnogi bioamrywiaeth. I gael yr effaith orau, ceisiwch adael darnau o laswellt yn gwbl wyllt am yr haf cyfan.
 
-### Go a step further and plant a wildflower meadow
+### Mynd gam ymhellach a phlannu dôl o flodau gwyllt
 
-If you want to go the extra mile for nature, consider growing your lawn into a wildlife-friendly meadow, rich in wildflowers.  
+Os ydych chi eisiau mynd yr ail filltir ar gyfer byd natur, ystyriwch dyfu eich lawnt yn ddôl sy’n gyfeillgar i fywyd gwyllt ac yn gyfoethog mewn blodau gwyllt.
 
-There are several factors to consider before planting a wildflower meadow if you want the best chance of success. 
+Mae sawl ffactor i’w hystyried cyn plannu dôl o flodau gwyllt os ydych chi eisiau’r siawns orau o lwyddo. 
 
-* First, get to know your soil. Most wildflowers prefer nutrient-poor soil with low fertility. This helps them compete against plants and other “problem plants” like nettle, thistle and dock. Head to [this resource by Plantlife](https://meadows.plantlife.org.uk/making-meadows/principles-of-meadow-making/soil/) to learn how to check your soil.  
-* You will also want to look at the plants you already have on your lawn. If you can spot more than four wildflower species, you may just need to sit back and let your meadow restore itself naturally.  
-* To do this, you will need to put away the mower for the entirety of spring and summer. You can clear patches of grass if you want to create a path or small play area, but the majority of your grass should be kept long until the flowers have set seeds.  
-* At this point, fire up the mower, cut the lawn down to a few inches and remove the clippings. You can leave patches of longer grass to house invertebrates, but the majority should be kept at ankle height throughout the winter months.  
+* I ddechrau, rhaid i chi ddod i adnabod eich pridd. Mae'n well gan y rhan fwyaf o flodau gwyllt bridd sy'n brin o faethynnau gyda ffrwythlondeb isel. Mae hyn yn eu helpu i gystadlu yn erbyn planhigion a “phlanhigion problemus” eraill fel danadl poethion, ysgall a thafol. Ewch i’r [adnodd yma gan Plantlife](https://meadows.plantlife.org.uk/making-meadows/principles-of-meadow-making/soil/) i ddysgu sut i wirio eich pridd.
+* Byddwch hefyd eisiau edrych ar y planhigion sydd gennych chi eisoes ar eich lawnt. Os gallwch chi weld mwy na phedair rhywogaeth o flodau gwyllt, efallai y bydd angen i chi eistedd yn ôl a gadael i'ch dôl adfer ei hun yn naturiol.
+* I wneud hyn, bydd angen i chi gadw'r peiriant torri glaswellt am y gwanwyn a'r haf cyfan. Gallwch glirio darnau o laswellt os ydych chi eisiau creu llwybr neu ardal chwarae fechan, ond dylech gadw’r rhan fwyaf o’ch glaswellt yn dal nes bod y blodau wedi bwrw had.
+* Ar y pwynt yma, taniwch y peiriant torri glaswellt, torrwch y lawnt i ychydig fodfeddi a symud y glaswellt sydd wedi’i dorri. Gallwch adael darnau o laswellt talach yn gartref i infertebrata, ond dylech gadw'r mwyafrif ar uchder ffêr drwy gydol misoedd y gaeaf.
 
-If your lawn is lacking in plant diversity, you may need to start from scratch. This process starts in late summer or Autumn. Read all about creating a new wildflower meadow in this handy [PDF guide from Plantlife](https://www.plantlife.org.uk/wp-content/uploads/2024/04/How_to_make_a_meadow_with_native_wildflowers.pdf).  
+Os ydi eich lawnt chi’n brin o amrywiaeth o blanhigion, efallai y bydd angen i chi ddechrau o'r dechrau. Mae'r broses yma’n dechrau ar ddiwedd yr haf neu yn yr hydref. Darllenwch y cyfan am greu dôl newydd o flodau gwyllt yn y canllaw [PDF defnyddiol yma gan Plantlife](https://www.plantlife.org.uk/wp-content/uploads/2024/04/How_to_make_a_meadow_with_native_wildflowers.pdf).
 
-If you do decide to sow seeds, it is always best to plant species that are native to your area. This provides the best possible habitat for local insects and birds.  
+Os byddwch chi’n penderfynu hau hadau, mae bob amser yn well plannu rhywogaethau sy'n frodorol i'ch ardal chi. Mae hyn yn darparu'r cynefin gorau posibl i bryfed ac adar lleol.
 
-Your local Wildlife Trust or other conservation organisations may be able to advise you on the best plants to sow in your area or refer to online resources like this comprehensive article from Plantlife on the [principles of meadow making](https://meadows.plantlife.org.uk/making-meadows/principles-of-meadow-making/).  
+Efallai y bydd eich Ymddiriedolaeth Natur leol neu sefydliadau cadwraeth eraill yn gallu eich cynghori chi ar y planhigion gorau i’w hau yn eich ardal neu eich cyfeirio at adnoddau ar-lein fel yr erthygl gynhwysfawr yma gan Plantlife ar [egwyddorion creu dôl](https://meadows.plantlife.org.uk/making-meadows/principles-of-meadow-making/).
 
-If you’re thinking about planting wildflowers somewhere other than your garden, be sure to read our [guide to growing wild plants here](https://nextdoornaturehub.org.uk/guides/the-importance-of-local-species).  
+Os ydych chi’n meddwl am blannu blodau gwyllt yn rhywle heblaw am eich gardd, cofiwch ddarllen ein [canllaw i dyfu planhigion gwyllt yma](https://nextdoornaturehub.org.uk/guides/the-importance-of-local-species).
 
-### Why do we love lawns so much, anyway?
+### Pam ydyn ni’n hoffi lawntiau gymaint, beth bynnag?
 
-The concept of a neatly kept grass lawn can be traced back to the early 18th century. At this time, grass was a vital source of food for grazing livestock, so employing skilled labourers to cut and dispose of such a valuable resource was a luxury reserved only for the elite.  
+Mae posib olrhain y cysyniad o lawnt laswellt wedi'i chadw'n daclus yn ôl i ddechrau'r 18fed ganrif. Bryd hynny, roedd glaswellt yn ffynhonnell hanfodol o fwyd i dda byw yn pori, felly roedd cyflogi gweithwyr medrus i dorri a chael gwared ar adnodd mor werthfawr yn foethusrwydd ar gyfer pobl elitaidd yn unig.
 
-As a result, a well-maintained lawn became something of a status symbol. This meant that when the mechanical lawn mower was invented in 1830, the middle classes were eager to replicate the aristocrats’ pristine gardens on their own land.    
+O ganlyniad, fe ddaeth lawnt yn cael ei chynnal a'i chadw'n dda yn symbol o statws. Roedd hyn yn golygu, pan ddyfeisiwyd y peiriant torri lawnt mecanyddol yn 1830, bod y dosbarthiadau canol yn awyddus i efelychu gerddi taclus yr aristocratiaid ar eu tir eu hunain.
 
-By the 20th century, the grass lawn had become one of the most prominent landscape features in gardens across the country.  
+Erbyn yr 20fed ganrif, roedd y lawnt laswellt wedi dod yn un o’r nodweddion tirwedd amlycaf mewn gerddi ledled y wlad.
 
-Sadly, this trend in garden management was detrimental to wildlife. Regular mowing prevented other plants like wildflowers from growing and the resulting decline in insect and invertebrate populations meant less food for animals like birds, frogs and hedgehogs.  
+Yn anffodus, roedd y duedd yma o ran rheoli gerddi yn niweidiol i fywyd gwyllt. Roedd torri glaswellt yn rheolaidd yn atal planhigion eraill fel blodau gwyllt rhag tyfu ac roedd y dirywiad dilynol mewn poblogaethau o bryfed ac infertebrata yn golygu llai o fwyd i anifeiliaid fel adar, brogaod a draenogod.
 
-Thankfully, it doesn’t take much to start bringing wildlife back to your garden. In fact, the lazier you are with your lawn the better! Just let your lawn grow free and start looking out for the return of nature to your back garden.  
+Diolch byth, nid yw’n cymryd llawer o amser i ddechrau dod â bywyd gwyllt yn ôl i’ch gardd. Yn wir, gorau po fwyaf diog ydych chi gyda'ch lawnt! Gadewch i'ch lawnt dyfu'n rhydd a dechreuwch gadw llygad am fyd natur yn dychwelyd i'ch gardd gefn.
 
-Don’t forget to [register your participation](https://www.plantlife.org.uk/campaigns/no-mow-may-registration-2024/) in the #NoMowMay movement!
+Cofiwch [gofrestru eich cyfranogiad](https://www.plantlife.org.uk/campaigns/no-mow-may-registration-2024/) gyda mudiad #MaiDiDor!
