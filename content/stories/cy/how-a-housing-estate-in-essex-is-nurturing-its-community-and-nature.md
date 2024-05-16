@@ -1,6 +1,6 @@
 ---
-title: "How a Housing Estate in Essex is Nurturing its Community and Nature  "
-who: Residents of Clayburn Gardens
+title: Sut Mae Stad Dai yn Essex yn Meithrin ei Chymuned a Byd Natur
+who: Trigolion Clayburn Gardens
 location: Thurrock, Essex
 images:
   - src: /images/uploads/clayburn-raised-beds.jpg
