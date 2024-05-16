@@ -1,7 +1,7 @@
 ---
-title: Connecting with people and nature at Washington Mind Gardening Group
-who: "Ruth and the Washington Mind Gardening Group "
-location: Washington, County Durham
+title: "Cysylltu â phobl a byd natur yng Ngrŵp Garddio Mind Washington  "
+who: "Ruth a Grŵp Garddio Mind Washington "
+location: Washington, Swydd Durham
 images:
   - src: /images/uploads/recent-group-image-washington-mind.jpg
     alt: Washington Mind Gardening Group in their community garden
@@ -9,81 +9,80 @@ images:
     caption: Ruth (second from right), Tom (far right) and members of the Washington
       Mind Community Group
   - src: /images/uploads/chrissy-and-steve-fruit-trees.jpg
-    caption: "Volunteers Chrissy and Steve get ready to plant fruit trees in the
-      garden "
+    caption: Y gwirfoddolwyr Chrissy a Steve yn paratoi i blannu coed ffrwythau yn
+      yr ardd
     credit: Photo copyright Tom Parkin/Durham Wildlife Trust 2023
     alt: Washington Mind Gardening Group prepare to plant fruit trees
   - src: /images/uploads/washington-mind-8.jpeg
-    alt: No mow zone at Washington Mind Community Garden
+    alt: Cyhoeddi parth dim torri glaswellt yng Ngardd Gymunedol Mind Washington.
     credit: Photo copyright Tom Parkin/Durham Wildlife Trust 2023
     caption: A no mow zone is declared at Washington Mind Community Garden
   - src: /images/uploads/washington-mind-2.jpg
     alt: "A proud Ruth stands with one of her thriving vegetable beds at Washington
       Mind Community Garden. "
     credit: Photo copyright Tom Parkin/Durham Wildlife Trust 2023
-    caption: "A proud Ruth stands with one of her thriving vegetable beds "
+    caption: Ruth yn sefyll yn falch gydag un o'i gwelyau llysiau llewyrchus
 summary: "Washington Mind Gardening Group is helping local people connect with
   nature, meet new friends and manage their mental health. "
-pullQuote: I'm outdoors connecting with nature and connecting with other people.
-  That's why I started initially, and then like-minded people started to come
-  in. You make great friendships in the garden.
-customCall: "Have you set up your own communal garden? "
+pullQuote: Rydw i yn yr awyr agored yn cysylltu â byd natur ac yn cysylltu â
+  phobl eraill. Dyna pam wnes i ddechrau arni, ac wedyn fe ddechreuodd pobl
+  debyg i mi ddod i mewn. Rydych chi'n gwneud ffrindiau da yn yr ardd.
+customCall: Ydych chi wedi sefydlu gardd gymunedol?
 ---
-#### W﻿elsh translation coming soon.
+Mae grŵp garddio bychan yn gweithio gydag Ymddiriedolaeth Natur Durham i adeiladu gardd gymunedol sy’n gyfeillgar i fyd natur. Mae’r grŵp yn gysylltiedig â’r elusen iechyd meddwl leol, Mind Washington, ac yn cael ei arwain gan un o’i ddefnyddwyr gwasanaeth, Ruth.
 
-A small gardening group is working with Durham Wildlife Trust to build a nature-friendly community garden. The group is connected to the local mental health charity, Washington Mind and is led by one of its service users, Ruth. 
+Roedd gan Ruth uchelgais i ehangu’r grŵp garddio i gynnwys aelodau o’r [gymuned ehangach](https://nextdoornaturehub.org.uk/guides/reaching-people-in-your-community) a hefyd gwneud gwell defnydd o’u gofod i dyfu ffrwythau a llysiau y gellid eu cludo adref a’u gwerthu i [godi arian](https://nextdoornaturehub.org.uk/guides/how-to-run-a-fundraising-event). 
 
-Ruth had the ambition to expand the gardening group to include members of the wider community while also making better use of their space to grow fruit and vegetables that could be taken home and sold for fundraising. 
-“I started the gardening group initially for my mental health,” said Ruth. “I've been here as a service user and volunteer for 11 years now. Getting my hands in the soil was just great for me.
+“Fe wnes i ddechrau’r grŵp garddio ar gyfer fy iechyd meddwl i,” meddai Ruth. “Rydw i wedi bod yma fel defnyddiwr gwasanaeth a gwirfoddolwr ers 11 mlynedd bellach. Roedd cael fy nwylo yn y pridd yn wych i mi.
 
-“I'm outdoors connecting with nature and connecting with other people. That's why I started initially, and then like-minded people started to come in. You make great friendships in the garden.” 
+“Rydw i yn yr awyr agored yn cysylltu â byd natur ac yn cysylltu â phobl eraill. Dyna pam wnes i ddechrau arni, ac wedyn fe ddechreuodd pobl debyg i mi ddod i mewn. Rydych chi'n gwneud ffrindiau da yn yr ardd.”
 
-### Bringing in Support
+### Sicrhau Cefnogaeth
 
-The group was full of passion but lacked the reach and resources to grow. All they needed was a helping hand. Washington Mind connected the group with Durham Wildlife Trust’s Nextdoor Nature Officer, Tom Parkin, who supported them in applying to the National Garden Scheme.
+Roedd y grŵp yn llawn angerdd ond doedd ganddo ddim cyrhaeddiad nac adnoddau i dyfu. Y cyfan oedd ei angen oedd help llaw. Fe gysylltodd Mind Washington y grŵp gyda Swyddog Natur Drws Nesaf [Ymddiriedolaeth Natur Durham](https://www.durhamwt.com/nextdoor-nature), Tom Parkin, wnaeth eu cefnogi nhw i wneud cais i’r [Cynllun Gerddi Cenedlaethol](https://ngs.org.uk/?gad_source=1&gclid=CjwKCAjww_iwBhApEiwAuG6ccPdYRnhGksfst-WFVnBaZgvbAzqjx3sEaNkFkMtEm90m6A0TkGLMWhoCFp4QAvD_BwE).
 
-Ruth met with Tom weekly, building her skills in collecting evidence, using spreadsheets and gathering stories to support the bid. 
+Fe wnaeth Ruth gyfarfod â Tom yn wythnosol, gan feithrin ei sgiliau casglu tystiolaeth, defnyddio taenlenni a chasglu straeon i gefnogi’r cais.
 
-The hard work paid off. In April 2023, the group was awarded £5,000 from the National Garden Scheme. It allowed them to buy the plants, tools and equipment they needed to transform the space and achieve their vision. 
+Fe dalodd y gwaith caled ar ei ganfed. Ym mis Ebrill 2023, dyfarnwyd £5,000 i’r grŵp gan y Cynllun Gerddi Cenedlaethol. Roedd posib iddyn nhw brynu'r planhigion, y celfi a'r offer roedd arnyn nhw eu hangen i drawsnewid y gofod a chyflawni eu gweledigaeth.
 
-“When I started out, there were only three of us,” Ruth said. “We didn't really have very much and then Tom came along and helped us get funding and taught us about how to bring wildlife into the area. It's been fabulous; we've learned so much.”
+> “Pan wnes i ddechrau, dim ond tri ohonon ni oedd yma,” meddai Ruth. “Doedd gennym ni ddim llawer iawn ac wedyn fe ddaeth Tom draw i’n helpu ni i gael [arian](https://nextdoornaturehub.org.uk/guides/finding-funding) a’n dysgu ni sut i ddenu bywyd gwyllt i’r ardal. Mae wedi bod yn wych; rydyn ni wedi dysgu cymaint.”
 
-### Getting to Work
+### Trwyn ar y Maen
 
-Since then, the project has taken off. The rundown raised beds have been cleared and filled with wildflowers, fruit trees and vegetables. Other sections of the space have been declared no-mow zones to allow a range of insects and larvae to make use of the nettle patches. 
+Ers hynny, mae'r prosiect wedi cydio. Mae'r gwelyau uchel oedd mewn cyflwr gwael wedi'u clirio a'u llenwi gyda blodau gwyllt, coed ffrwythau a llysiau. Mae rhannau eraill o'r gofod wedi'u datgan yn ardaloedd dim torri glaswellt er mwyn caniatáu i amrywiaeth o bryfed a larfa ddefnyddio'r darnau o ddanadl poethion.
 
-When ready to harvest, the produce is taken home by volunteers and used in the Washington Mind Café. Even the nettles don’t go to waste. When Spring comes around, the young leaves are picked and made into a hearty nettle soup. 
+Pan mae’n barod i'w gynaeafu, mae'r cynnyrch yn cael ei gludo adref gan y gwirfoddolwyr a'i ddefnyddio yng Nghaffi Mind Washington. Dydi’r danadl poethion ddim yn mynd yn wastraff hyd yn oed. Pan ddaw'r gwanwyn, mae'r dail ifanc yn cael eu casglu a'u gwneud yn gawl danadl poethion maethlon a the blasus.
 
-“A lot of the members here are very keen gardeners so it's all very peer-led and we all learn from each other, which is just fabulous,” said Sue, a staff member at Washington Mind and regular participant in the garden. “We're growing the produce and we're eating it, which is fantastic.”
+> “Mae llawer o'r aelodau yma'n arddwyr brwd iawn felly mae'r cyfan yn cael ei arwain gan gyfeillion ac rydyn ni i gyd yn dysgu oddi wrth ein gilydd, sy'n wych,” meddai Sue, aelod o staff Mind Washington a chyfranogwr cyson yn yr ardd. “Rydyn ni’n tyfu’r cynnyrch ac rydyn ni’n ei fwyta, sy’n wych.”
 
-### Growing the Project
+### Tyfu’r Prosiect
 
-As the garden has grown, so too has the support. The group has expanded with new members joining from the local community and businesses offering their support. A local resident has even donated trees that she no longer had space for.
+Wrth i’r ardd dyfu, felly hefyd y gefnogaeth. Mae’r [grŵp cymunedol](https://nextdoornaturehub.org.uk/guides/setting-up-a-basic-community-group) wedi ehangu gydag aelodau newydd yn ymuno o’r gymuned leol a busnesau’n cynnig eu cefnogaeth. Mae un o’r trigolion lleol wedi cyfrannu coed hyd yn oed am nad oedd ganddi le ar eu cyfer mwyach.
 
-Jim, a regular volunteer, said he started attending the group to learn more about gardening. “I've got a large garden at home, and I do enjoy it but I’ve never really known what I've been doing for most of the time. It's just potluck. I'm enjoying everything that we're doing here; the landscaping aspects and even shovelling the manure today.”
+> Dywedodd Jim, sy'n wirfoddolwr rheolaidd, iddo ddechrau mynychu'r grŵp i ddysgu mwy am arddio. “Mae gen i ardd fawr gartref, ac rydw i'n ei mwynhau ond dydw i erioed wedi gwybod yn iawn beth rydw i wedi bod yn ei wneud y rhan fwyaf o'r amser. Dim ond mentro gyda phethau. Rydw i'n mwynhau popeth rydyn ni’n ei wneud yma; yr agweddau tirlunio a hyd yn oed rhawio’r tail heddiw.”
 
-Vicky, another volunteer, originally came to the group for the social connection but since then has enjoyed learning about nature-friendly gardening techniques. 
+Fe ddaeth Vicky, gwirfoddolwr arall, i’r grŵp yn wreiddiol ar gyfer y cysylltiad cymdeithasol ond ers hynny mae hi wedi mwynhau dysgu am dechnegau garddio natur-gyfeillgar.
 
-“My initial reason for joining was because I hadn't worked for a while and I feel like I've been out of connection with people. I wanted to see that I was going to be all right around people.
+“Fy rheswm i dros ymuno i ddechrau oedd oherwydd nad oeddwn i wedi gweithio ers tro ac rydw i'n teimlo fy mod i wedi bod allan o gysylltiad â phobl. Roeddwn i eisiau gweld fy mod i’n mynd i fod yn iawn yng nghwmni pobl.
 
-“I loved gardening, but I think my approach used to be neat paths and neat everything, so learning about all the wild stuff has been great.”
+“Roeddwn i wrth fy modd yn garddio, ond rydw i’n meddwl bod fy null i’n arfer bod yn llwybrau taclus a phopeth taclus, felly mae dysgu am yr holl bethau gwyllt wedi bod yn wych.”
 
-Doug has been part of the gardening group for the past year and is proud to see how the space has grown. For him, one of the most rewarding parts of the weekly sessions is the impact it has on people visiting and contributing to the garden.
+Mae Doug wedi bod yn rhan o’r grŵp garddio am y flwyddyn ddiwethaf ac mae’n falch o weld sut mae’r gofod wedi tyfu. Iddo ef, un o elfennau mwyaf gwerth chweil y sesiynau wythnosol ydi’r effaith maen nhw’n ei chael ar y bobl sy’n ymweld â’r ardd ac yn cyfrannu ati.
 
-“It's about putting that little bit of effort into it and seeing other people gain things from what you've done,” Doug said. 
+“Mae'n ymwneud â gwneud ychydig bach o ymdrech a gweld pobl eraill yn elwa o'r hyn rydych chi wedi'i wneud,” meddai Doug.
 
-“All the people that come see the place and see it grow. They want to join in. It's nice to see them when they go away buzzing, having actually built something.”
+“Mae'r holl bobl sy'n dod yn gweld y lle ac yn ei weld yn tyfu. Maen nhw eisiau ymuno. Mae'n braf eu gweld nhw’n gadael yn llawn bwrlwm, ar ôl adeiladu rhywbeth.” 
 
-### The Impact
+### Yr Effaith
 
-The project is already having an impact, not least on Ruth’s confidence as a group leader, guiding the volunteers on tasks during weekly meetings.
+Mae’r prosiect yn cael effaith eisoes, ar hyder Ruth fel arweinydd grŵp yn sicr, wrth iddi arwain y gwirfoddolwyr ar dasgau yn ystod y cyfarfodydd wythnosol.
 
-Her commitment has enabled the group to grow and helped support those with additional needs. One member said they are "often stuck doing nothing but watching TV in the house, which is why this group and project are supporting \[me] so much". 
+Mae ei hymrwymiad hi wedi galluogi’r grŵp i dyfu ac wedi helpu i gefnogi pobl sydd ag anghenion ychwanegol. Dywedodd un aelod ei bod "yn aml yn styc yn y tŷ yn gwneud dim byd ond gwylio'r teledu, a dyna pam mae'r grŵp a'r prosiect yma’n cefnogi \[fi] gymaint".
 
-As Ruth communicates via lip-reading, many more people are becoming accustomed to adapting to her ways of communication, including learning some sign language. 
+Gan fod Ruth yn cyfathrebu drwy ddarllen gwefusau, mae llawer mwy o bobl yn dod yn gyfarwydd ag addasu i'w ffyrdd hi o gyfathrebu, gan gynnwys dysgu rhywfaint o iaith arwyddion.
 
-Not only has the group transformed the space into a thriving garden, but they have also built lasting friendships along the way. 
+Mae’r grŵp nid yn unig wedi trawsnewid y gofod yn ardd lewyrchus, ond mae hefyd wedi meithrin cyfeillgarwch parhaol ar hyd y ffordd.
 
-“It’s consistent,” Tom said. “There is a minimum of ten people here every week and it’s lovely to see this friendship group coming week on week knowing that everyone is going to be there. It’s a great community.” 
+“Mae'n gyson,” meddai Tom. “Mae deg o bobl yma bob wythnos o leiaf ac mae’n hyfryd gweld y grŵp cyfeillgarwch yma’n dod wythnos ar ôl wythnos gan wybod bod pawb yn mynd i fod yno. Mae’n gymuned wych.”
 
-Ruth added: “I always say people come here like tight little buds and they open up into beautiful flowers.”
+Ychwanegodd Ruth: “Rydw i bob amser yn dweud bod pobl yn dod yma fel blagur bach ar gau ac wedyn yn agor i fod yn flodau hardd.”
