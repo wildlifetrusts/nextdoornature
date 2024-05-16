@@ -1,70 +1,70 @@
 ---
-title: "How a Housing Estate in Essex is Nurturing its Community and Nature  "
-who: Residents of Clayburn Gardens
+title: Sut Mae Stad Dai yn Essex yn Meithrin ei Chymuned a Byd Natur
+who: Trigolion Clayburn Gardens
 location: Thurrock, Essex
 images:
   - src: /images/uploads/clayburn-raised-beds.jpg
     alt: Raised Beds in grass field at Clayburn Garden Housing Estate
     credit: Image Copyright / Maya Harvey-Mills Essex Wildlife Trust
-    caption: The completed raised beds at Clayburn Garden housing estate
+    caption: Y gwelyau uchel wedi'u cwblhau ar stad dai Clayburn Garden.
   - src: /images/uploads/clayburn-gardens.jpg
     alt: Four people from Clayburn Gardens in their community garden
     credit: Image Copyright / Maya Harvey-Mills Essex Wildlife Trust
   - src: /images/uploads/clayburn-gardens-tyre-beds.jpg
     alt: "Old tyres used to create small raised beds. "
     credit: Image Copyright / Maya Harvey-Mills Essex Wildlife Trust
-    caption: Old tyres were repurposed into mini raised beds
+    caption: "Hen deiars wedi’u hailbwrpasu yn welyau uchel bach.  "
   - src: /images/uploads/clayburn-garden-raised-beds.jpg
     alt: Raised beds at Clayburn Garden
     credit: Image Copyright / Maya Harvey-Mills Essex Wildlife Trust
-summary: "Read about a housing estate that came together to take over their
-  communal green space. "
-pullQuote: Coming home and watering the garden calms me down, because I have a
-  stressful job, it helps with my mental health.
-customCall: "Have you set up a green project near your home? "
+summary: Roedd trigolion Clayburn Gardens yn awyddus i ddod â’r gymuned at ei
+  gilydd a gwella eu gofod gwyrdd cymunedol gyda gardd newydd.
+pullQuote: Mae dod adref a dyfrio’r ardd yn fy nhawelu i, oherwydd bod gen i
+  swydd sy’n cynnwys llawer o straen, mae’n helpu gyda fy iechyd meddwl i.
+customCall: Ydych chi wedi sefydlu prosiect gwyrdd ger eich cartref chi?
 ---
-### Background 
+### Cefndir
 
-Residents of Clayburn Gardens, a housing estate in Essex, were keen to bring the community together and improve their communal [green space](https://nextdoornaturehub.org.uk/guides/taking-over-green-space-in-your-area) with a new garden.  
+Roedd trigolion Clayburn Gardens yn awyddus i ddod â’r gymuned at ei gilydd a gwella eu [gofod gwyrdd](https://nextdoornaturehub.org.uk/guides/taking-over-green-space-in-your-area) cymunedol gyda gardd newydd.
 
-Although the community was friendly with each other, there was very little interaction between neighbours. One resident said they would wave and say good morning, but the community spirit ended there.  
+Er bod y gymuned yn gyfeillgar â'i gilydd, ychydig iawn o ryngweithio oedd rhwng cymdogion. Dywedodd un o’r trigolion eu bod yn codi llaw ac yn dweud bore da, ond dyna ni wedyn o ran yr ysbryd cymunedol.
 
-Residents decided to take matters into their own hands. They got in touch with the Resident Engagement Housing team at Thurrock Council and asked for gardening facilities to be installed in the communal space.   
+Penderfynodd y trigolion fynd i’r afael â hyn. Fe wnaethon nhw gysylltu â’r tîm Tai Ymgysylltu â Phreswylwyr yng Nghyngor Thurrock a gofyn am i gyfleusterau garddio gael eu gosod yn y gofod cymunedol.
 
-### Getting the project off the ground 
+### Dechrau arni gyda’r prosiect
 
-At the residents’ request, the council installed raised beds, a greenhouse, [compost bins](https://nextdoornaturehub.org.uk/guides/how-to-make-your-own-compost) and a wormery. Two of the beds are used to grow vegetables, one grows herbs and three are home to pollinator-friendly plants.  
+Ar gais y trigolion, gosododd y cyngor [welyau uchel](https://nextdoornaturehub.org.uk/stories/how-school-pupils-brought-a-neglected-planter-back-to-life-1), tŷ gwydr, [biniau compost](https://nextdoornaturehub.org.uk/guides/how-to-make-your-own-compost) ac abwydfa yn eu lle. Mae dau o'r gwelyau’n cael eu defnyddio i dyfu llysiau, mae un yn cynnwys perlysiau ac mae tri yn gartref i blanhigion sy'n gyfeillgar i bryfed peillio.
 
-The council also connected the group with Essex Wildlife Trust who provided additional support and advice. 
+Fe gysylltodd y cyngor y grŵp hefyd ag Ymddiriedolaeth Natur Essex a roddodd gefnogaeth a chyngor ychwanegol.
 
-The same individual who asked the council for equipment also asked Forestry England to supply 200 saplings to plant a hedgerow.  
+Gofynnodd yr un unigolyn a ofynnodd i'r cyngor am offer hefyd i Forestry England gyflenwi 200 o goed ifanc i blannu gwrych.
 
-Then, in April 2023 a group of residents came together to launch the community garden project with a hedgerow planting event, inviting everyone from the estate through leafletting.  
+Ym mis Ebrill 2023, daeth grŵp o drigolion at ei gilydd i lansio’r prosiect gardd gymunedol gyda digwyddiad plannu gwrych, gan wahodd pawb ar y stad drwy ddosbarthu taflenni.
 
-### Support and progress 
+### Cefnogaeth a chynnydd
 
-With the infrastructure installed by the council, a committed group of around six people continued maintaining Clayburn Gardens, growing vegetables and feeling empowered to rewild areas. This includes a stunning wildflower meadow planted by the residents.  
+Gyda'r seilwaith wedi'i osod gan y cyngor, fe wnaeth grŵp ymroddedig o tua chwech o bobl ddal ati i gynnal a chadw Clayburn Gardens, tyfu llysiau a theimlo eu bod wedi'u grymuso i ailwylltio ardaloedd. Mae hyn yn cynnwys dôl drawiadol o flodau gwyllt a blannwyd gan y trigolion.
 
-Checking back in with Essex Wildlife Trust later in the year, the group requested regular meetings to benefit from the Trust’s advice, including guidance on how to provide an area for hedgehogs to live.  
+Gan gysylltu eto gydag [Ymddiriedolaeth Natur Essex](https://www.essexwt.org.uk/) yn nes ymlaen yn ystod y flwyddyn, gofynnodd y grŵp am gyfarfodydd rheolaidd i elwa ar gyngor yr Ymddiriedolaeth, gan gynnwys canllawiau ar sut i ddarparu ardal i ddraenogod fyw ynddi.
 
-The Trust’s new Wilder Communities Officer, Maya helped the group develop ideas including a homemade hedgehog hotel, creating habitats such as leaf and stick piles and installing a log pile. 
+Fe wnaeth Swyddog Cymunedau Gwylltach newydd yr Ymddiriedolaeth, Maya, helpu’r grŵp i ddatblygu syniadau gan gynnwys gwesty draenogod cartref, creu cynefinoedd fel pentyrrau dail a brigau a gosod pentwr o foncyffion yn ei le.
 
-Meanwhile, the Trust’s Wilder Community Organiser, Helen went along to the hedge planting day with resources including spotter sheets as a conversation starter. She was able to talk to attendees about the sort of wildlife seen in the area, neighbourhood issues such as dog fouling and local opinions on the garden ambitions. 
+Yn y cyfamser, aeth Helen, Trefnydd Cymunedau Gwylltach yr Ymddiriedolaeth, i’r diwrnod plannu gwrych gydag adnoddau gan gynnwys taflenni adnabod fel sbardun i ddechrau sgwrs. Roedd hi’n gallu siarad gyda phobl oedd yn bresennol am y math o fywyd gwyllt sydd i’w weld yn yr ardal, problemau yn y gymdogaeth fel baw cŵn a’r farn yn lleol am yr uchelgeisiau ar gyfer yr ardd.
 
-### Challenges 
+### Heriau 
 
-Sadly, it was found that the hedge planted in spring had been cut down by council contractors in late 2023. The area where saplings were planted had been mowed. This was a blow to the group, but options are being explored for replacing the hedgerow. 
+Yn anffodus, canfuwyd bod y gwrych a gafodd ei blannu yn y gwanwyn wedi cael ei dorri i lawr gan gontractwyr y cyngor ar ddiwedd 2023. Roedd yr ardal lle cafodd y coed ifanc eu plannu wedi cael ei thorri. Roedd hon yn ergyd i'r grŵp, ond mae opsiynau'n cael eu hystyried ar gyfer plannu gwrych newydd yn lle'r hen wrych.
 
-### The word has spread 
+### Y gair ar led
 
-The initial spring planting event was a real success and inspired residents opposite the Clayburn estate. The Trust is now supporting them to develop and deliver a similar project (if this is what the community wants to do!). 
+Roedd y digwyddiad plannu cychwynnol yn y gwanwyn yn llwyddiant mawr ac fe ysbrydolodd y trigolion gyferbyn â stad Clayburn. Mae'r Ymddiriedolaeth bellach yn eu cefnogi nhw i ddatblygu a chyflwyno prosiect tebyg (os mai dyma beth mae'r gymuned eisiau ei wneud).
 
-The garden has had lots of benefits for people and wildlife alike. Residents have seen an increase in insects including bees, butterflies and ladybirds around the flower meadow. Other wildlife spotted in and around the garden include smooth newts, hedgehogs, foxes, muntjack, owls, woodpeckers, jays, sparrow hawks, small songbirds, magpies, grey squirrels and badgers. 
+Mae’r ardd wedi cynnig llawer o fanteision i bobl a [bywyd gwyllt](https://nextdoornaturehub.org.uk/guides/the-importance-of-local-species) fel ei gilydd. Mae’r trigolion wedi gweld cynnydd mewn pryfed gan gynnwys [gwenyn](https://www.wildlifetrusts.org/actions/best-plants-bees-and-pollinators), glöynnod byw a buchod coch cwta o amgylch y ddôl o flodau. Mae’r bywyd gwyllt arall sydd i’w weld yn yr ardd ac o’i chwmpas yn cynnwys madfallod dŵr cyffredin, draenogod, llwynogod, ceirw mwntjac, tylluanod, cnocell y coed, sgrech y coed, gwalch glas, adar cân bach, pïod, gwiwerod llwyd a moch daear.
 
-The vegetables and herbs, meanwhile, are eaten by residents, helping them save money on their food shop and all the while, a sense of community is forming around the garden. Friendships are being made between neighbours between neighbours and it’s having a positive impact on people’s wellbeing: 
+Mae'r llysiau a'r perlysiau, yn y cyfamser, yn cael eu bwyta gan y trigolion, gan eu helpu i arbed arian ar eu siopa bwyd. Drwy hyn i gyd, mae ymdeimlad o gymuned yn ffurfio o amgylch yr ardd. Mae cyfeillgarwch yn cael ei ffurfio rhwng cymdogion ac mae’n cael effaith gadarnhaol ar les pobl.
 
-One member of the Clayburn Community Garden Gardening Group said: "Coming home and watering the garden calms me down, because I have a stressful job, it helps with my mental health.”   
+Dywedodd un aelod o Grŵp Garddio Gardd Gymunedol Clayburn: “Mae dod adref a dyfrio’r ardd yn fy nhawelu i, oherwydd bod gen i swydd sy’n cynnwys llawer o straen, mae’n helpu gyda fy iechyd meddwl i."
 
-### Next steps 
+### Y camau nesaf
 
-In addition to a corner of the garden being dedicated to hedgehogs, the group is now thinking about creating a safe space for newts, which have also been spotted around the estate.
+Yn ogystal â chornel o’r ardd yn cael ei chadw ar gyfer draenogod, mae’r grŵp bellach yn meddwl am greu man diogel i fadfallod dŵr cyffredin, sydd hefyd wedi’u gweld o amgylch y stad.
