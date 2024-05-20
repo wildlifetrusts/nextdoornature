@@ -1,55 +1,55 @@
 ---
-title: "Transforming Unused Green Spaces into Community Gardens in Bemerton  "
-who: Residents in Bemerton Heath
-location: Pinewood Way, Bemerton, Salisbury
+title: Trawsnewid gofod gwyrdd sydd ddim yn cael ei ddefnyddio yn erddi
+  cymunedol yn Bemerton
+who: "Trigolion Bemerton Heath  "
+location: Pinewood Way, Bemerton, Caersallog
 images:
   - src: /images/uploads/bemerton5.jpg
     alt: "Volunteers at Bemerton building planters for their community garden. "
     credit: "Copyright / Zosia Durniat Wiltshire Wildlife Trust "
-    caption: "Residents come together with local businesses, Wiltshire Council and
-      Wiltshire Wildlife Trust to build a community garden  "
+    caption: Y trigolion wedi dod at ei gilydd gyda busnesau lleol, Cyngor Swydd
+      Wilt ac Ymddiriedolaeth Natur Swydd Wilt i adeiladu gardd gymunedol
   - src: /images/uploads/bemerton6.jpg
-    caption: The hard-working idverde team finish building the gazebo area so that
-      all can enjoy the garden throughout the seasons
+    caption: Tîm gweithgar idverde yn gorffen adeiladu'r ardal gasebo fel bod pawb
+      yn gallu mwynhau'r ardd drwy gydol y tymhorau
     credit: "Copyright / Zosia Durniat Wiltshire Wildlife Trust "
     alt: The Gazebo at Bemerton Community Garden
   - src: /images/uploads/bemerton1.jpg
     alt: "Naomi, Woodland Officer for Wiltshire Council playing consertina outside.
       "
     credit: "Copyright / Zosia Durniat Wiltshire Wildlife Trust "
-    caption: "Naomi, Woodland Officer for Wiltshire Council, brought her Concertina
-      and ended the second day of the build with a well-timed wassail  "
-summary: In Bemerton Heath, a new project is transforming unused grass and green
-  spaces into vibrant community gardens.
-pullQuote: We are looking forward to seeing the garden flourish this summer, and
-  to helping more community members learn self-sufficiency, and skills in
-  growing healthy food
-customCall: "Do you have experience of building a community garden? "
+    caption: Daeth Naomi, Swyddog Coetiroedd Cyngor Swydd Wilt, â’i chonsertina gyda
+      hi a daeth yr ail ddiwrnod o waith adeiladu i ben gydag ychydig o ganu
+      cwbl amserol
+summary: "Yn Bemerton Heath, mae prosiect newydd yn trawsnewid glaswellt oedd
+  ddim yn cael ei ddefnyddio a gofod gwyrdd yn erddi cymunedol bywiog. "
+pullQuote: Rydyn ni’n edrych ymlaen at weld yr ardd yn ffynnu yr haf yma, ac at
+  helpu mwy o aelodau’r gymuned i ddysgu am hunangynhaliaeth, a sgiliau tyfu
+  bwyd iach.
+customCall: Oes gennych chi brofiad o adeiladu gardd gymunedol?
 ---
-### Welsh translation coming soon.
+Yn Bemerton Heath, mae prosiect newydd yn trawsnewid glaswellt oedd ddim yn cael ei ddefnyddio a [gofod gwyrdd](https://nextdoornaturehub.org.uk/guides/taking-over-green-space-in-your-area) yn erddi cymunedol bywiog. Daeth y cyntaf o’r gerddi yma’n fyw yn Pinewood Way ar ôl i wirfoddolwyr dreulio misoedd o waith caled yn cynllunio, codi arian a chael caniatadau amrywiol. 
 
-In Bemerton Heath, a new project is transforming unused grass and green spaces into vibrant community gardens. The first of these gardens came to life at Pinewood Way after volunteers spent months of hard work planning, fundraising and obtaining various permissions. 
+### Dod â thrigolion, elusennau a busnesau at ei gilydd
 
-### Bringing together residents, charities and businesses 
+Datblygodd trigolion Bemerton y cynllun gardd gwreiddiol a thros gyfnod o ddau ddiwrnod ym mis Ionawr, daeth tîm ymroddedig o wirfoddolwyr at ei gilydd ar gyfer y gwaith adeiladu.
 
-Bemerton residents developed the original garden plan and over the course of two days in January, a dedicated team of volunteers came together for the build.  
+Roedd hyn yn cynnwys gwirfoddolwyr o Beautiful Bemerton a'r fenter bwyd cymunedol yng Nghaersallog, The F3 Project. Cynorthwywyd y gwirfoddolwyr gan weithwyr prosiect o wahanol bartneriaid gan gynnwys Cyngor Swydd Wilt, Ymddiriedolaeth Natur Swydd Wilt a chwmni rheoli tirweddau, idverde.
 
-This included volunteers from Beautiful Bemerton and the Salisbury-based community food initiative, The F3 Project. The volunteers were assisted by project workers from various partners including the Wiltshire Council, Wiltshire Wildlife Trust and landscape management company, idverde.   
+Galwodd y grŵp hefyd am help [busnesau](https://nextdoornaturehub.org.uk/guides/businesses-how-they-can-help-you-and-how-you-can-help-them) i ddarparu rhai o’r deunyddiau. Rhoddodd Travis Perkins y gwelyau uchel a’r trawstiau, a rhoddwyd cardfwrdd, tail a [chompost ](https://nextdoornaturehub.org.uk/guides/how-to-make-your-own-compost)gan Hills Recycling.
 
-The group also called on the help of businesses to provide some of the materials. Travis Perkins donated the raised beds and sleepers, while cardboard, manure and compost were gifted by Hills Recycling.  
+### Dod â phobl yn nes at ei gilydd
 
-### Bringing people closer
+Mae'r ardd yn cael ei defnyddio'n dda eisoes. Ym mis Chwefror, daeth y trigolion at ei gilydd ar gyfer digwyddiad cyfnewid hadau a phlannu, gyda phlant lleol yn plannu hadau mewn potiau eco i fynd adref gyda nhw. Bydd yr hadau yn cael eu cludo’n ôl i dyfu yn y gwelyau gardd newydd yn fuan.
 
-The garden is already being put to good use. In February, residents came together for a seed swap and planting event, where local children planted seeds in eco pots to take home. The seeds will soon be brought back to grow in the new garden beds. 
+Plannodd rhai amrywiaeth ar hap o hadau yn y gwelyau mewn arddull garddio gerila. Mae'r gwelyau cymysg yma’n ffordd wych o wneud garddio'n gyfeillgar i fywyd gwyllt! Mae'r grŵp hefyd yn bwriadu garddio mewn arddull dim cloddio, dull sy'n osgoi tarfu ar y ddaear i hyrwyddo ecosystem iach, rhoi hwb i gyflwr y pridd a sicrhau cynhaeaf mwy cynhyrchiol gobeithio.
 
-Some planted a random variety of seeds in the beds in a guerilla gardening style. These mixed beds are a great way to make gardening wildlife-friendly! The group also plans to garden in a no-dig style, a method that avoids disturbing the ground to promote a healthy ecosystem, boost soil health and hopefully generate a more productive harvest. 
+Mae'r gwelyau yn hygyrch i ddefnyddwyr cadeiriau olwyn a byddant yn cael eu llenwi â ffrwythau, llysiau a pherlysiau organig a fydd yn cael eu dewis gan y gymuned. Y gobaith yw y bydd yr ardd yma a’r gofod coed Pinewood o’i hamgylch yn helpu’r gymuned i ddysgu hunangynhaliaeth a’r sgiliau i dyfu bwyd iach, boed o’r ardd yma neu gartref.
 
-The beds are accessible for wheelchair users and will be filled with organic fruits, vegetables and herbs chosen by the community. The hope is that this garden and the Pinewood trees space surrounding it will help the community learn self-sufficiency and the skills to grow healthy food, whether from this garden or at home.  
+### Dysgu mwy, cymryd rhan neu ddechrau eich grŵp cymunedol eich hun
 
-### Learn more, get involved or start your own community group! 
+I ddarllen y stori lawn, ewch i wefan [Ymddiriedolaeth Natur Swydd Wilt](https://www.wiltshirewildlife.org/blog/staff/grow-food-not-grass).
 
-To read the full story, head to the Wiltshire Wildlife Trust website.  
+Eisiau gweithredu dros fyd natur yn ardal Swydd Wilt? Mae Ymddiriedolaeth Natur Swydd Wilt yn darparu cyngor a chefnogaeth i unrhyw un sydd eisiau helpu byd natur i ffynnu yn eu hamgylcheddau lleol.
 
-Want to take action for nature in the Wiltshire area? Wiltshire Wildlife Trust is providing advice and support to anyone who wants to help nature flourish in their local environments.  
-
-Whether you have a project in mind already or have no idea where to start, get in touch with Zosia on 07821 667144 or email zosiad@wiltshirewildlife.org.
+Os oes gennych chi brosiect mewn golwg yn barod neu ddim syniad ble i ddechrau, cysylltwch â Zosia ar 07821 667144 neu e-bostiwch zosiad@wiltshirewildlife.org.
