@@ -1,5 +1,5 @@
 ---
-title: Creating a Wildlife Garden in an Industrial Estate
+title: "Jamie's Computers: Creating a Wildlife Garden in an Industrial Estate"
 who: Staff at Jamie’s Computers
 location: Bevois, Southampton
 postcode: SO14

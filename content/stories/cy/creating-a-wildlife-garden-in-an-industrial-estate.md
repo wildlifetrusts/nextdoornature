@@ -1,6 +1,6 @@
 ---
-title: Creating a Wildlife Garden in an Industrial Estate
-who: Staff at Jamie’s Computers
+title: "Jamie's Computers: Creu Gardd Bywyd Gwyllt ar Stad Ddiwydiannol"
+who: Staff yn Jamie’s Computers
 location: Bevois, Southampton
 postcode: SO14
 images:
@@ -8,55 +8,59 @@ images:
     alt: Bashir and Wendy, staff members at Jamie's computers work on the front
       garden
     credit: Image Copyright / Jill Doubleday HIWWT
-    caption: Bashir and Wendy, staff members at Jamie's computers, work on their
-      front garden
+    caption: Bashir a Wendy, aelodau o staff Jamie's computers, yn gweithio ar eu
+      gardd ffrynt.
   - src: /images/uploads/20230818-before-plastic-pile.jpg
     alt: "Jamie's Computers' backyard littered with rubbish before transforming the
       space. "
     credit: Image Copyright / Jill Doubleday HIWWT
-    caption: Jamie's Computers backyard before staff transformed the space
+    caption: Iard gefn Jamie's Computers cyn i staff drawsnewid y gofod.
   - src: /images/uploads/20230918_145005.jpg
-    alt: Large repurposed containers used as planters
+    alt: Jamie's Computers staff pose by their recently built planters.
     credit: Image Copyright / Jill Doubleday HIWWT
-    caption: "Repurposed plastic containers were used to create beds "
-summary: Mount Pleasant Industrial Estate in Southampton is starting to look a
-  little bit wilder.
-pullQuote: It was a really good feeling when we came into work and saw
-  everything flourish. It was an instant mood-lifter.
-customCall: "Have you transformed some green space at your workplace? "
+    caption: Defnyddiwyd cynwysyddion plastig wedi'u hailbwrpasu i greu gwelyau.
+  - src: /images/uploads/20240308-gemma-and-andrew.jpg
+    caption: "Gemma ac Andrew o Jamie's Computers gyda'u gwelyau newydd wedi'u
+      hailbwrpasu. "
+    credit: Image Copyright / Jill Doubleday HIWWT
+summary: Diolch i staff yn Jamie’s Computers, mae Stad Ddiwydiannol Mount
+  Pleasant yn Southampton yn dechrau edrych ychydig yn wylltach.
+pullQuote: Roedd yn deimlad da iawn pan ddaethon ni i'r gwaith a gweld popeth yn
+  ffynnu. Roedd yn codi hwyliau ar unwaith.
+customCall: Ydych chi wedi trawsnewid gofod gwyrdd yn eich gweithle?
 ---
-An industrial estate might not be the first place you would expect to find a wildlife garden, but thanks to staff at [Jamie’s Computers](https://jamies.org.uk/), Mount Pleasant Industrial Estate in Southampton is starting to look a little bit wilder. 
+Efallai nad stad ddiwydiannol ydi’r lle cyntaf y byddech chi’n disgwyl dod o hyd i ardd bywyd gwyllt, ond diolch i staff yn [Jamie’s Computers](https://jamies.org.uk/), mae Stad Ddiwydiannol Mount Pleasant yn Southampton yn dechrau edrych ychydig yn wylltach.
 
-### The context
+### Y cyd-destun
 
-Jamie’s Computers is a social enterprise that takes in, refurbishes and recycles IT equipment from around Hampshire. It was set up by the Society of St James, a charity that exists to tackle homelessness and “to help vulnerable people overcome challenges in their lives”.
+Mae Jamie’s Computers yn fenter gymdeithasol sy’n derbyn, yn adnewyddu ac yn ailgylchu offer TG o ardal Hampshire. Fe’i sefydlwyd gan Gymdeithas St James, elusen sy’n bodoli i fynd i’r afael â digartrefedd ac i “helpu pobl fregus i oresgyn heriau yn eu bywydau”.
 
-Their offices are located in Bevois, a Southampton ward that is generally lacking in [green spaces](https://nextdoornaturehub.org.uk/guides/taking-over-green-space-in-your-area) and trees. The industrial estate can also be noisy, with a cement factory, railway line and construction site nearby. 
+Mae eu swyddfeydd wedi’u lleoli yn Bevois, ward yn Southampton sydd yn gyffredinol brin o [ofod gwyrdd](https://nextdoornaturehub.org.uk/guides/taking-over-green-space-in-your-area) a choed. Gall y stad ddiwydiannol fod yn swnllyd hefyd, gyda ffatri sment, lein reilffordd a safle adeiladu gerllaw.
 
-### Getting started
+### Dechrau arni
 
-Two staff members, Wendy and Bashir, had noticed the lack of green spaces so led efforts to build a [planter ](https://nextdoornaturehub.org.uk/stories/how-school-pupils-brought-a-neglected-planter-back-to-life-1)at the front of the building. 
+Roedd dau aelod o staff, Wendy a Bashir, wedi sylwi ar y diffyg gofod gwyrdd ac felly fe aethon nhw ati i arwain ymdrechion i adeiladu cynhwysydd [plannu](https://nextdoornaturehub.org.uk/stories/how-school-pupils-brought-a-neglected-planter-back-to-life-1) o flaen yr adeilad.
 
-Wendy said: “A few years ago, it was just full of weeds. It looked really uninviting like this, so we decided to plant a little garden and it was really beautiful.”
+Dywedodd Wendy: “Ychydig flynyddoedd yn ôl, roedd yn llawn chwyn. Roedd yn edrych yn hyll iawn fel hyn, felly fe wnaethon ni benderfynu plannu gardd fechan ac roedd yn brydferth iawn.”
 
-Unfortunately, the garden was damaged by passers-by, but last year, the pair decided to start planting again, including lavender, creepers and a few little shrubs.
+Yn anffodus, fe gafodd yr ardd ei difrodi gan bobl oedd yn mynd heibio, ond y llynedd, penderfynodd y ddau ddechrau plannu eto, gan gynnwys lafant, planhigion dringo ac ychydig o lwyni bach.
 
-“This year everything just blossomed beautifully,” Wendy said. “The most beautiful lavender with a lot of bees and bumblebees. It was amazing to stand and watch.”
+“Eleni fe flodeuodd popeth yn hyfryd,” meddai Wendy. “Y lafant harddaf gyda llawer o wenyn a chacwn. Roedd yn anhygoel sefyll a gwylio.”
 
-Bashir added: “It was a really good feeling when we came into work and saw everything flourish. It was an instant mood-lifter. There is a clear connection between nature and feeling good.”
+Ychwanegodd Bashir: “Roedd yn deimlad da iawn pan ddaethon ni i’r gwaith a gweld popeth yn ffynnu. Roedd yn codi hwyliau ar unwaith. Mae cysylltiad amlwg rhwng byd natur a theimlo’n dda.”
 
-### Growing the green space
+### Tyfu’r gofod gwyrdd
 
-Now, Jamie’s Computers is creating a similar green space at the back of the building. It was too expensive to remove all of the rubbish that had built up over the years so instead, the staff repurposed materials and containers to build the garden. 
+Nawr, mae Jamie’s Computers yn creu gofod gwyrdd tebyg yng nghefn yr adeilad. Roedd yn rhy ddrud cael gwared ar yr holl sbwriel oedd wedi cronni dros y blynyddoedd felly, yn lle hynny, fe wnaeth y staff ailbwrpasu’r deunyddiau a’r cynwysyddion i adeiladu'r ardd.
 
-The old containers have been transformed into huge planters which are already attracting insects like pill bugs, worms and spiders. 
+Mae'r hen gynwysyddion wedi cael eu trawsnewid yn botiau plannu enfawr sydd eisoes yn denu pryfed, mwydod a phryfed cop.
 
-Jamie’s Computer’s operations manager, Andrew said: “The backyard has always been a bit of a dump, unfortunately, and so we thought let’s finally get it done. We had lots of containers out there that we could use for flower beds, so we thought, why not?”
+Dywedodd Andrew, rheolwr gweithrediadau Jamie’s Computer: “Mae’r iard gefn wedi bod yn dipyn o ddymp erioed, yn anffodus, ac felly fe wnaethon ni feddwl cyflawni hyn o’r diwedd. Roedd gennym ni lawer o gynwysyddion allan yna y gallen ni eu defnyddio ar gyfer gwelyau blodau, felly fe wnaethon ni feddwl, pam lai?”
 
-Jill Doubleday of Hampshire & Isle of Wight Wildlife Trust, who supported the project said: “Andrew is really enthusiastic and clearly keen to provide his staff and volunteers with a lovely area to take a break in, as well as for wildlife.  He’s more than happy to roll up his sleeves and get involved."
+Dywedodd Jill Doubleday o [Ymddiriedolaeth Natur Hampshire ac Ynys Wyth](https://www.hiwwt.org.uk/), a gefnogodd y prosiect: “Mae Andrew wir yn frwdfrydig ac yn amlwg yn awyddus i ddarparu ardal hyfryd i’w staff a’i wirfoddolwyr gymryd seibiant ynddi, yn ogystal ag ar gyfer bywyd gwyllt. Mae’n fwy na pharod i dorchi ei lewys a chymryd rhan.”
 
-There is still more work to be done. For now, the green areas are enjoyed by Jamie’s Computers staff and volunteers, and eventually, they would like to open up the space to the Society of St James’ service users. 
+Mae mwy o waith i'w wneud eto. Am y tro, mae staff a gwirfoddolwyr Jamie’s Computers yn mwynhau’r ardaloedd gwyrdd, ac yn y pen draw, fe hoffen nhw agor y gofod i ddefnyddwyr gwasanaethau Cymdeithas St James.
 
-Jamie’s Computers isn’t the first green project on the industrial estate. Next to it is SCRATCH, another charity, which already has a garden with wildlife-friendly areas. 
+Nid Jamie’s Computers yw’r prosiect gwyrdd cyntaf ar y stad ddiwydiannol. Wrth ei ymyl mae SCRATCH, elusen arall, sydd eisoes â gardd gydag ardaloedd sy’n gyfeillgar i fywyd gwyllt.
 
-As the estate is located right on the River Itchen, it can be seen by cyclists and pedestrians using the boardwalk and footpath alongside the river, mainly to commute, or to get to St Mary’s stadium, home of Southampton FC.
+Gan fod y stad wedi’i lleoli ar lan Afon Itchen, mae beicwyr a cherddwyr sy’n defnyddio’r llwybr pren a’r llwybr troed ar hyd yr afon, yn bennaf i gymudo, neu i gyrraedd stadiwm St Mary’s, cartref CPD Southampton, yn gallu ei gweld.
