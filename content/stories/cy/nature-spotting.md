@@ -1,37 +1,40 @@
 ---
-title: "Taking action for nature through photography and nature spotting "
+title: "Gweithredu dros fyd natur drwy ffotograffiaeth ac adnabod byd natur "
 who: Kevin Ford
-location: Nuneaton, Warwickshire
+location: "Nuneaton, Swydd Warwick "
 images:
   - src: /images/uploads/redfox~1.jpg
     alt: Fox walks across meadow carrying large fish in its mouth
     credit: Photo Copyright / Kevin Ford
-    caption: " A remarkable photograph Kevin took shows a Fox carrying a large pike. "
+    caption: Mae un llun nodedig a dynnwyd gan Kevin yn dangos llwynog yn cario
+      penhwyad mawr
   - src: /images/uploads/foxesb~1.jpg
     alt: "A fox and its cub photographed in a grass meadow. "
     credit: Photo Copyright / Kevin Ford
-    caption: "Another incredible shot shows another fox with its cub. "
-summary: Spotting wildlife is a great way to take action for nature.
-pullQuote: Reporting your local sightings or sharing your wildlife photos online
-  can help build up a snapshot of what wildlife is around and where it lives.
-customCall: "Have you tried wildlife spotting? "
+    caption: Llun anhygoel arall yn dangos llwynog arall gyda'i genau bach
+summary: "Does dim angen cit ffotograffiaeth drud, sbienddrych na thelesgopau i
+  weld bywyd gwyllt. "
+pullQuote: Gall rhoi gwybod am weld bywyd gwyllt yn lleol neu rannu eich lluniau
+  bywyd gwyllt ar-lein helpu i greu darlun o'r bywyd gwyllt sydd o'ch cwmpas chi
+  a ble mae'n byw.
+customCall: Ydych chi wedi rhoi cynnig ar adnabod bywyd gwyllt?
 ---
-Nuneaton resident Kevin Ford has been photographing local wildlife for many years on his early morning walks around Attleborough.  The Coventry and Ashby Canals have produced some incredible mammal sightings including difficult-to-spot species like water voles, stoats, weasels and otters. Foxes are regular sightings, along with birds such as grey heron and buzzard. 
+Mae un o drigolion Nuneaton, Kevin Ford, wedi bod yn tynnu lluniau bywyd gwyllt lleol ers blynyddoedd lawer ar ei deithiau cerdded ben bore o amgylch Attleborough. Mae Camlesi Coventry ac Ashby wedi cynhyrchu rhai golygfeydd anhygoel o famaliaid gan gynnwys rhywogaethau anodd eu gweld fel llygod pengrwn y dŵr, carlymod, bronwennod a dyfrgwn. Mae llwynogod yn cael eu gweld yn rheolaidd, ynghyd ag adar fel y crëyr glas a’r bwncath.
 
-An early start on a crisp sunny morning is one of the best times for photographing wildlife when it’s still quiet on the waterways and there’s no one else up and about. Kevin waits at a suitable vantage point often using his favourite canal bridge as a “hide”. 
+Dechrau cynnar ar fore heulog oer yw un o’r adegau gorau ar gyfer tynnu lluniau o fywyd gwyllt pan mae’n dal yn dawel ar y dyfrffyrdd a neb arall wedi codi allan. Mae Kevin yn aros mewn man gwylio addas yn aml gan ddefnyddio ei hoff bont gamlas fel “cuddfan”.
 
-Sitting motionless and waiting patiently in a good spot often pays off rather than chasing around trying to find the wildlife. Fieldcraft is important; too much noise and sudden movements will spook wildlife and they will quickly take cover never to be seen again.
+Mae eistedd yn llonydd ac aros yn amyneddgar mewn llecyn da yn talu ar ei ganfed yn aml, yn hytrach na cheisio dilyn a mynd ar ôl bywyd gwyllt i ddod o hyd iddo. Mae crefft maes yn bwysig; bydd gormod o sŵn a symudiadau sydyn yn dychryn bywyd gwyllt a byddant yn mynd i guddio yn syth ac ni fydd posib eu gweld eto.
 
-One remarkable photograph Kevin took shows a Fox carrying a large pike. The fox is wet on its chest suggesting it might have caught the fish in the water. It is possible, however, that it found the fish already dead or perhaps wrestled it from a Heron or snaffled it from an unsuspecting Angler’s keepnet!
+Mae un ffotograff hynod a dynnodd Kevin yn dangos llwynog yn cario penhwyad mawr. Mae'r llwynog yn wlyb ar ei frest sy'n awgrymu ei fod wedi dal y pysgodyn yn y dŵr efallai. Mae’n bosibl, fodd bynnag, ei fod wedi dod o hyd i’r pysgodyn wedi marw eisoes neu efallai ei fod wedi ei ddwyn oddi ar grëyr glas neu wedi ei fachu o rwyd pysgotwr diarwybod.
 
-The first officially recorded account of a Red Fox fishing came from Spain in 2016 in this case Carp was the prey. According to Science News, “Foxes are just the second type of canid – the group that includes Wolves and dogs – known to hunt fish”. 
+Daeth y cofnod swyddogol cyntaf o lwynog coch yn pysgota o Sbaen yn 2016 ac, yn yr achos yma, carp oedd yr ysglyfaeth. Yn ôl Science News, “Foxes are just the second type of canid – the group that includes Wolves and dogs – known to hunt fish”.
 
-Reporting your local sightings or sharing your wildlife photos online can help build up a snapshot of what wildlife is around and where it lives so we can take the best possible action for nature. 
+Gall rhoi gwybod am weld bywyd gwyllt yn lleol neu rannu eich lluniau bywyd gwyllt ar-lein helpu i greu darlun o'r bywyd gwyllt sydd o’ch cwmpas chi a ble mae'n byw er mwyn i ni allu cymryd y camau gorau posibl er budd byd natur.
 
-Several local people have reported foxes and hedgehogs visiting their gardens and some have photographic evidence or have seen droppings that can identify the mammals. Speaking with residents, it appears that hedgehogs are doing well in Attleborough with reports of them visiting gardens in Roxburgh Road and nearby Waverley Avenue where the houses back onto the railway line which provides a welcome wildlife corridor for Hedgehogs to wander around searching for food. 
+Mae nifer o bobl leol wedi rhoi gwybod am lwynogod a draenogod yn ymweld â'u gerddi ac mae gan rai dystiolaeth ffotograffig neu maen nhw wedi gweld tail sy'n galluogi adnabod y mamaliaid. Wrth siarad â’r trigolion, mae’n ymddangos bod draenogod yn gwneud yn dda yn Attleborough gydag adroddiadau eu bod yn ymweld â gerddi yn Roxburgh Road a Waverley Avenue gerllaw lle mae’r tai â’u cefnau at y rheilffordd, sy’n darparu coridor bywyd gwyllt i’w groesawu i ddraenogod grwydro o gwmpas i chwilio am fwyd.
 
-Some residents provide water and food to give the Hedgehogs a helping hand. You can provide some fresh water and meaty cat or dog food, but don't try to feed the hedgehog directly. Please don’t leave milk out for Hedgehogs as they are Lactose intolerant so this drink is not suitable and can cause them to be very ill. Contrary to popular belief, bread is not suitable for Hedgehogs or birds. 
+Mae rhai trigolion yn darparu dŵr a bwyd i roi help llaw i'r draenogod. Gallwch ddarparu rhywfaint o ddŵr ffres a bwyd cath neu gi cigog, ond peidiwch â cheisio bwydo draenogod yn uniongyrchol. Peidiwch â gadael llaeth allan ar gyfer draenogod – dydyn nhw ddim yn gallu bwyta lactos felly dydi llaeth ddim yn addas ac fe all achosi iddyn nhw fod yn sâl iawn. Yn groes i'r gred gyffredin, dydi bara ddim yn addas ar gyfer draenogod nac adar.
 
-Gardens, hedgerows, woodlands, grasslands, parks, and cemeteries are all important hedgehog habitats, and adult hedgehogs travel between 1-2km per night over home ranges between 10-20 hectares in size searching for food and mates – that’s entire housing estates and neighbourhoods!
+Mae gerddi, gwrychoedd, coetiroedd, glaswelltiroedd, parciau a mynwentydd i gyd yn gynefinoedd pwysig i ddraenogod, ac mae draenogod yn eu llawn dwf yn teithio rhwng 1 a 2km y noson dros ystodau cartref sydd rhwng 10 ac 20 hectar o faint i chwilio am fwyd a chymar – mae hynny’n stadau tai a chymdogaethau cyfan!
 
-You don’t need expensive photography kit, binoculars or telescopes to see wildlife! You can just look with your eyes and enjoy the moment. And if you create the right habitats in your garden, you can watch wildlife without leaving the comfort of your armchair.
+Does dim angen cit ffotograffiaeth drud, sbienddrych na thelesgopau i weld bywyd gwyllt! Fe allwch chi edrych gyda'ch llygaid a mwynhau'r foment. Ac os byddwch chi'n creu'r cynefinoedd addas yn eich gardd, gallwch wylio bywyd gwyllt heb adael cysur eich cadair freichiau.

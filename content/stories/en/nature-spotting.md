@@ -22,7 +22,7 @@ An early start on a crisp sunny morning is one of the best times for photographi
 
 Sitting motionless and waiting patiently in a good spot often pays off rather than chasing around trying to find the wildlife. Fieldcraft is important; too much noise and sudden movements will spook wildlife and they will quickly take cover never to be seen again.
 
-One remarkable photograph Kevin took shows a Fox carrying a large pike. The fox is wet on its chest suggesting it might have caught the fish in the water. It is possible, however, that it found the fish already dead or perhaps wrestled it from a Heron or snaffled it from an unsuspecting Angler’s keepnet!
+One remarkable photograph Kevin took shows a Fox carrying a large pike. The fox is wet on its chest suggesting it might have caught the fish in the water. It is possible, however, that it found the fish already dead or perhaps wrestled it from a Heron or snaffled it from an unsuspecting Angler’s keepnet.
 
 The first officially recorded account of a Red Fox fishing came from Spain in 2016 in this case Carp was the prey. According to Science News, “Foxes are just the second type of canid – the group that includes Wolves and dogs – known to hunt fish”. 
 
@@ -32,6 +32,6 @@ Several local people have reported foxes and hedgehogs visiting their gardens an
 
 Some residents provide water and food to give the Hedgehogs a helping hand. You can provide some fresh water and meaty cat or dog food, but don't try to feed the hedgehog directly. Please don’t leave milk out for Hedgehogs as they are Lactose intolerant so this drink is not suitable and can cause them to be very ill. Contrary to popular belief, bread is not suitable for Hedgehogs or birds. 
 
-Gardens, hedgerows, woodlands, grasslands, parks, and cemeteries are all important hedgehog habitats, and adult hedgehogs travel between 1-2km per night over home ranges between 10-20 hectares in size searching for food and mates – that’s entire housing estates and neighbourhoods!
+Gardens, hedgerows, woodlands, grasslands, parks, and cemeteries are all important hedgehog habitats, and adult hedgehogs travel between 1-2km per night over home ranges between 10-20 hectares in size searching for food and mates – that’s entire housing estates and neighbourhoods. 
 
-You don’t need expensive photography kit, binoculars or telescopes to see wildlife! You can just look with your eyes and enjoy the moment. And if you create the right habitats in your garden, you can watch wildlife without leaving the comfort of your armchair.
+You don’t need expensive photography kit, binoculars or telescopes to see wildlife. You can just look with your eyes and enjoy the moment. And if you create the right habitats in your garden, you can watch wildlife without leaving the comfort of your armchair.
