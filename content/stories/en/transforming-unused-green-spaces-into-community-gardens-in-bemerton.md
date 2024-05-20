@@ -28,7 +28,7 @@ customCall: "Do you have experience of building a community garden? "
 ---
 In Bemerton Heath, a new project is transforming unused grass and [green spaces ](https://nextdoornaturehub.org.uk/guides/taking-over-green-space-in-your-area)into vibrant community gardens. The first of these gardens came to life at Pinewood Way after volunteers spent months of hard work planning, fundraising and obtaining various permissions.  
 
-### Bringing together residents, charities and businesses 
+### Bringing together residents, charities and businesses
 
 Bemerton residents developed the original garden plan and over the course of two days in January, a dedicated team of volunteers came together for the build.  
 
@@ -44,7 +44,7 @@ Some planted a random variety of seeds in the beds in a guerilla gardening style
 
 The beds are accessible for wheelchair users and will be filled with organic fruits, vegetables and herbs chosen by the community. The hope is that this garden and the Pinewood trees space surrounding it will help the community learn self-sufficiency and the skills to grow healthy food, whether from this garden or at home.  
 
-### Learn more, get involved or start your own community group! 
+### Learn more, get involved or start your own community group
 
 To read the full story, head to the [Wiltshire Wildlife Trust website](https://www.wiltshirewildlife.org/blog/staff/grow-food-not-grass).  
 
