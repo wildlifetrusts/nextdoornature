@@ -1,47 +1,47 @@
 ---
-title: Building a Butterfly and Moth Garden in a Disused Quarry
-who: Volunteers at Mountsorrel and Rothley Community Heritage Centre
-location: "Mountsorrel, Leicestershire "
+title: Adeiladu Gardd Glöynnod Byw a Gwyfynod mewn Chwarel Segur
+who: Gwirfoddolwyr yng Nghanolfan Treftadaeth Gymunedol Mountsorrel a Rothley
+location: Mountsorrel, Swydd Gaerlŷr
 images:
   - src: /images/uploads/butterfly-and-moth-garden-opening.jpg
     credit: Image Copyright / Jean Ramsell
-    caption: "Volunteers from Mountsorrel and Rothley Community Heritage Centre on
-      the opening day of the Butterfly Garden. "
+    caption: Gwirfoddolwyr o Ganolfan Treftadaeth Gymunedol Mountsorrel a Rothley ar
+      ddiwrnod agoriadol yr Ardd Glöynnod Byw
     alt: "Volunteers stand with the Butterfly Garden sign. "
   - src: /images/uploads/butterfly-garden-planting.jpg
-    caption: Planting day at the disused quarry at the Community Heritage Centre
+    caption: Diwrnod plannu yn y chwarel segur yn y Ganolfan Treftadaeth Gymunedol
     alt: Volunteers planting flowers and plants in the Butterfly Garden
     credit: Image Copyright / Jean Ramsell
   - src: /images/uploads/butterfly-and-moth-garden-digging.jpg
-    caption: Before the team could plant, they had to dig in two tonnes of topsoil
-      to provide the right environment for wildflowers to thrive
+    caption: Cyn i’r tîm allu plannu, roedd rhaid iddyn nhw gloddio dwy dunnell o
+      bridd i ddarparu’r amgylchedd addas i flodau gwyllt ffynnu
     alt: Volunteers lay down soil for the Butterfly Garden
     credit: Image Copyright / Jean Ramsell
-summary: "How volunteers came together to build a beautiful butterfly garden "
-pullQuote: "Going wild is so important; biodiversity is so important. We must
-  look after our wild areas and where we can, improve them. "
+summary: "Mae tîm bychan, ymroddedig o wirfoddolwyr wedi dod at ei gilydd i
+  adeiladu gardd glöynnod "
+pullQuote: Mae mynd yn wyllt mor bwysig; mae bioamrywiaeth mor bwysig. Rhaid i
+  ni ofalu am ein hardaloedd gwyllt a’u gwe.lla nhw pan mae hynny’n bosib.
 customCall: Have you experience building a garden for wildlife?
 ---
-### W﻿elsh Translation coming soon.
+Mae tîm bychan, ymroddedig o wirfoddolwyr wedi dod at ei gilydd i adeiladu gardd glöynnod byw a gwyfynod yng Nghanolfan Treftadaeth Gymunedol Mountsorrel a Rothley.
 
-For years, the centre has been a haven for wildlife. It started off as an abandoned old railway line that ran into the village of Mountsorrel in Leicestershire. The railway line has since been restored and over the years, the surrounding area has also been brought back to life, including a small woodland, a spinney, and a disused quarry. The quarry floor now holds gardens with native pollinator borders and wild soil banks. 
+Ers blynyddoedd, mae'r ganolfan wedi bod yn hafan i fywyd gwyllt. Fe ddechreuodd fel hen lein reilffordd segur oedd yn rhedeg i mewn i bentref Mountsorrel yn Swydd Gaerlŷr. Mae'r lein reilffordd wedi cael ei hadfer ers hynny a thros y blynyddoedd, mae'r ardal gyfagos wedi dod yn fyw unwaith eto hefyd, gan gynnwys coetir bychan, prysglwyn, a chwarel segur. Mae llawr y chwarel bellach yn cynnwys gerddi gyda borderi pryfed peillio brodorol a chloddiau pridd gwyllt.
 
-The volunteer group wanted to take things a step further by growing a butterfly and moth garden, or ‘Cafe’ as they call it. They started by carefully removing a small area of bramble before getting to work on building a meadow of wildflowers to attract butterflies, moths, bees and other insects. 
+Roedd y grŵp gwirfoddol eisiau mynd â phethau gam ymhellach drwy dyfu gardd glöynnod byw a gwyfynod, neu ‘Caffi’ fel maen nhw’n ei alw. Fe wnaethon nhw ddechrau drwy dynnu darn bach o fieri yn ofalus cyn mynd ati i adeiladu dôl o flodau gwyllt i ddenu glöynnod byw, gwyfynod, gwenyn a phryfed eraill.
 
-The existing ground consisted of heavy clay. Wildflowers need a lighter soil to thrive so the group hauled a couple of tonnes of topsoil to cover the ground before scattering the seeds. They also built a path running through the garden so that visitors can see the butterflies and moths at close quarters. 
+Roedd y tir ar y pryd yn cynnwys clai trwm. Mae blodau gwyllt angen pridd ysgafnach i ffynnu felly fe wnaeth y grŵp gludo ychydig o dunelli o bridd i orchuddio'r ddaear cyn plannu. Fe wnaethon nhw hefyd adeiladu llwybr yn rhedeg drwy'r ardd fel bod ymwelwyr yn gallu gweld y glöynnod byw a'r gwyfynod yn agos.
 
-“We've always tried to be on the education side,” Jean said. “We've got lots of information boards around the place to educate people and particularly children so that they can get close to nature and get close to the butterflies and the bees.”
+“Rydyn ni bob amser wedi ceisio bod ar yr ochr addysg,” meddai Jean. “Mae gennym ni lawer o fyrddau gwybodaeth o gwmpas y lle i addysgu pobl ac yn enwedig plant fel eu bod nhw’n gallu dod yn agos at natur a dod yn agos at y glöynnod byw a’r gwenyn.”
 
-There are now over 200 plant species in the garden which is attracting a host of different insects. 
+Bellach mae mwy na 200 o rywogaethau o blanhigion yn yr ardd sy’n denu llu o wahanol bryfed.
 
-Jean is the ecology team leader at the Community Heritage Centre. A volunteer for 11 years, she leads a team of 16 other volunteers who maintain and improve the biodiversity across the site. 
+Jean yw arweinydd tîm ecoleg y Ganolfan Treftadaeth Gymunedol. Yn wirfoddolwr am 11 mlynedd, mae hi’n arwain tîm o 16 o wirfoddolwyr eraill sy’n cynnal a gwella bioamrywiaeth ar draws y safle.
 
-Jean said one of the biggest challenges has been covering such a large area with a small team of volunteers. 
+Dywedodd Jean mai un o'r heriau mwyaf oedd gofalu am ardal mor fawr gyda thîm bychan o wirfoddolwyr.
+Ond er bod y tîm yn brin o niferoedd, mae ei ymroddiad yn enfawr. Er gwaethaf tywydd gwlyb gwaeth nag unrhyw gofnod dros fisoedd y gaeaf, llwyddodd y grŵp i greu gardd hardd 40 metr sgwâr a hefyd llwybrau ac arwyddion addysgol.
 
-But what the team lacks in numbers it more than makes up for in dedication. Despite record-breaking wet weather over the winter months, the group were able to create a beautiful 40 square-metre garden complete with paths and educational signs. 
+Fel sefydliad hunangyllido, mae arian yn gallu bod yn her hefyd. Mae gan y Ganolfan gaffi sydd wedi bod yn brif gyllidwr ar gyfer ei gwaith, ond gyda chostau cynnal a chadw wedi cynyddu dros y flwyddyn ddiwethaf, mae bellach yn codi tâl mynediad. Yn benderfynol o gadw’r safle’n hygyrch, mae’r tâl mynediad mor isel â phosibl: £2 i oedolion a £1 i blant.
 
-As a self-funded organisation, finances can also be a challenge. The Centre has a cafe which has been the primary funder for its work, but with maintenance costs increasing over the last year, it now charges an entrance fee. Determined to keep the site accessible, the entry cost is kept as low as possible: £2 for adults and £1 for children. 
+Mae Jean a’i thîm bob amser yn chwilio am ffyrdd o wella bioamrywiaeth ar draws y safle ac addysgu pobl leol am bwysigrwydd a gwerth byd natur.
 
-Jean and her team are always looking for ways to improve biodiversity across the site and educate local people about the importance and value of nature. 
-
-“Education is a big thing for us, especially now,” Jean said “We need to get it out there that that going wild is so important; biodiversity is so important. We must look after our wild areas and where we can, improve them.”
+“Mae addysg yn beth mawr i ni, yn enwedig nawr,” meddai Jean “Mae angen i ni gyfleu’r neges bod mynd yn wyllt mor bwysig; mae bioamrywiaeth mor bwysig. Rhaid i ni ofalu am ein hardaloedd gwyllt a’u gwella nhw pan mae hynny’n bosib.”
