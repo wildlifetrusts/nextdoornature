@@ -1,5 +1,5 @@
 ---
-title: "St Mark’s church group plant 1,000 square metres of wildflowers "
+title: "St Mark’s Church Group Plant 1,000 Square Metres of Wildflowers "
 who: St Mark’s church group
 location: "Netherton, Merseyside "
 images:
