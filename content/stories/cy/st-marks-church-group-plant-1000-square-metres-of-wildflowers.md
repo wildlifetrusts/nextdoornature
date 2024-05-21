@@ -2,6 +2,24 @@
 title: "St Mark's Church Group Plant 1,000 Square Metres of Wildflowers "
 who: St Mark’s Church Group
 location: "Netherton, Merseyside "
+images:
+  - src: /images/uploads/st-marks-meadow-14-may-24a.jpg
+    alt: St Mark's Church with wildflower meadow in the foreground
+    credit: Image Copyright / Fiona Sunners, Lancashire Wildlife Trust
+    caption: After planting the meadow in Autumn, wildflower blossom started to
+      emerge the following Spring
+  - src: /images/uploads/st-marks-meadow-before-fsunners-a.jpg
+    caption: The church grounds at St Mark's before planting the wildflower meadow
+    alt: "Mowed grass at St Mark's Church grounds before planting "
+    credit: Image Copyright / Fiona Sunners, Lancashire Wildlife Trust
+  - src: /images/uploads/st-marks-meadow-prep-fsunners-a.jpg
+    caption: A local farmer came to prepare the ground ahead of the planting day
+    alt: "Tractor turns soil at St Mark's, preparing the land for planting. "
+    credit: Image Copyright / Fiona Sunners, Lancashire Wildlife Trust
+  - src: /images/uploads/st-marks-meadow-sowing-photo-consented-fsunners-b.jpg
+    alt: Children plant seeds at the planting day at St Mark's Church
+    credit: Image Copyright / Fiona Sunners, Lancashire Wildlife Trust
+    caption: Children scatter seeds at the planting day
 ---
 ### W﻿elsh Translation coming soon. 
 
