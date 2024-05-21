@@ -89,7 +89,7 @@ contentDictDecoder flags =
         Err _ ->
             --let
             --    e =
-            --        Debug.log "Flag decode ERROR" error
+            --       Debug.log "Flag decode ERROR" error
             --in
             { guides = { cy = Dict.empty, en = Dict.empty }
             , pages = { cy = Dict.empty, en = Dict.empty }
