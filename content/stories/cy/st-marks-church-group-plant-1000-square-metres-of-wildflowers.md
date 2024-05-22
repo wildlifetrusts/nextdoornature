@@ -20,8 +20,14 @@ images:
     alt: Children plant seeds at the planting day at St Mark's Church
     credit: Image Copyright / Fiona Sunners, Lancashire Wildlife Trust
     caption: Children scatter seeds at the planting day
+summary: "St Mark’s Church in Merseyside has turned a large unused green space
+  outside the church into a 1,000-square-metre wildflower meadow. "
+pullQuote: It’s such a good use of this piece of land and a good start to lots
+  of art projects that could happen in the future. Being involved with the
+  environment is a really rich source of life for everyone.
+customCall: "Have you experience planting a wildflower meadow? "
 ---
-### W﻿elsh Translation coming soon. 
+### W﻿elsh Translation coming soon.
 
 St Mark’s Church in Merseyside has turned a large unused green space outside the church into a 1,000-square-metre wildflower meadow. The seeds were sown in Autumn 2023 and by Spring the flowers were already beginning to come to life. 
 
