@@ -29,7 +29,7 @@ customCall: "Have you experience planting a wildflower meadow? "
 ---
 St Mark’s Church in Merseyside has turned a large unused green space outside the church into a 1,000-square-metre wildflower meadow. The seeds were sown in Autumn 2023 and by Spring the flowers were already beginning to come to life. 
 
-### From idea to action 
+### From idea to action
 
 The church is surrounded by a large area of grass which they wanted to turn into a [wildflower meadow](https://nextdoornaturehub.org.uk/guides/nomowmay-the-perks-of-letting-your-lawn-run-free-this-spring). The group had no idea where to start and felt they lacked the knowledge and confidence to turn the idea into action. But with a helping hand, the group discovered they could create something that supported nature and bring their community together. 
 
@@ -46,8 +46,6 @@ The group were thrilled to see over 60 people come along to take part in the day
 By the end of the day, the community had planted a 1,000-square-metre area of native flowers and plants. David, a member of the art group at St Mark’s, said: “It was just grassland beforehand and now it’s got so much potential. Hopefully it’ll be attractive to wildlife and look nice from the road as well.”
 
 Fellow art group member, Richard added: “It’s such a good use of this piece of land and a good start to lots of art projects that could happen in the future. Being involved with the environment is a really rich source of life for everyone.”
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/rfPa9el0AC8?si=lqF3qP1VkpMjUMXj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ### The impact
 
