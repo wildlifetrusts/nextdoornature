@@ -47,7 +47,9 @@ By the end of the day, the community had planted a 1,000-square-metre area of na
 
 Fellow art group member, Richard added: “It’s such a good use of this piece of land and a good start to lots of art projects that could happen in the future. Being involved with the environment is a really rich source of life for everyone.”
 
-### The impact
+[W﻿atch the video of volunteers and local residents coming together for the planting day](https://www.youtube.com/watch?v=rfPa9el0AC8)
+
+### [](https://www.youtube.com/watch?v=rfPa9el0AC8)The impact
 
 Many people in the area surrounding St Mark’s Church do not have access to open countryside. But, as a historically rural area, this hasn’t always been the case in Netherton.
 
