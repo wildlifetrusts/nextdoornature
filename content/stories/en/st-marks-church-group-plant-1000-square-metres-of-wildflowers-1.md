@@ -11,7 +11,7 @@ images:
   - src: /images/uploads/st-marks-meadow-before-fsunners-a.jpg
     alt: "Mowed grass at St Mark's Church grounds before planting "
     credit: Image Copyright / Fiona Sunners, Lancashire Wildlife Trust
-    caption: "The church grounds at St Mark's before planting the wildflower meadow.  "
+    caption: "The church grounds at St Mark's before planting the wildflower meadow  "
   - src: /images/uploads/st-marks-meadow-prep-fsunners-a.jpg
     alt: "Tractor turns soil at St Mark's, preparing the land for planting. "
     credit: Image Copyright / Fiona Sunners, Lancashire Wildlife Trust
