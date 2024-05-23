@@ -5,13 +5,13 @@ location: Carlisle
 images:
   - src: /images/uploads/outgoing-school-council-with-trowels-2.jpg
     alt: Pupils at Brook Street School restore rundown raised bed
-    caption: "Pupils at Brook Street Primary School get ready for a day of gardening. "
+    caption: Pupils at Brook Street Primary School get ready for a day of gardening
     credit: Photo copyright Ruth Alcroft/Cumbria Wildlife Trust
   - src: /images/uploads/men-s-diaspora-refreshments.jpg
     alt: Local group, Men's Disaspora, volunteer with Cumbria Wildlife Trust
     credit: Photo copyright Ruth Alcroft/Cumbria Wildlife Trust
-    caption: "Volunteers from the Men’s Diaspora group take a break from clearing
-      and cleaning the planter. "
+    caption: Volunteers from the Men’s Diaspora group take a break from clearing and
+      cleaning the planter
 summary: "Pupils at Brook Street Primary School have transformed a rundown
   raised bed into a beautiful bed of vegetables and plants. "
 pullQuote: I would love for this to grow and for people to see what they could
