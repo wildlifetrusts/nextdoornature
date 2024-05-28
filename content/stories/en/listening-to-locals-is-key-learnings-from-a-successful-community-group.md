@@ -1,5 +1,5 @@
 ---
-title: "Listening to Locals is Key Learnings from a Successful Community Group "
+title: "'Listening to Locals is Key': Learnings from a Successful Community Group "
 who: Grow Batheaston Community Group
 location: "Bristol "
 images:
