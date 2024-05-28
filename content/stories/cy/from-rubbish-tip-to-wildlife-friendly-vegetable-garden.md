@@ -47,3 +47,7 @@ The project has received additional support from the Bath & North East Somerset 
 The community garden at The Red Lion is just the start of a wider mission to create more spaces for [growing food](https://nextdoornaturehub.org.uk/stories/growing-food-with-communities-in-crewe) and supporting wildlife in and around the village. It will be used as a demonstration space for wildlife friendly actions. The first of which will be a pond workshop. Residents are invited to come along and help [build a pond](https://www.wildlifetrusts.org/actions/how-create-mini-pond), learning how to make one in their own garden at the same time. 
 
 Avon Wildlife Trust’s Team Wilder ecologist visited the garden and other places in Paulton and after listening to residents’ needs created a report for the groups to follow. The report recommended creating a [composting area](https://nextdoornaturehub.org.uk/guides/how-to-make-your-own-compost) as well as an edible hedge, both of which have already been completed by the eager group who meet every two weeks.
+
+You can watch a [short video about the project here](https://www.youtube.com/watch?v=13uJd2uAIws). 
+
+You can watch a [short video about the project here](https://www.youtube.com/watch?v=13uJd2uAIws).
