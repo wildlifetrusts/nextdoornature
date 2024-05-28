@@ -31,3 +31,5 @@ The Centre has befitted from the support of Avon Wildlife Trust, who helped them
 “It’s enabled us to get further out into the community,” Amber said. “We have a bed that we maintain and populate in the park as well and that’s got loads more people from the community involved in gardening with us.” 
 
 If you’re based in Bristol and want to get involved with the community garden, please speak to Amber or Jack. [Contact details can be found here](https://thebeehivebristol.co.uk/contact/).
+
+Watch a[ short video about the project here](https://www.youtube.com/watch?v=WnlF7e6L5lM&t=1s).
