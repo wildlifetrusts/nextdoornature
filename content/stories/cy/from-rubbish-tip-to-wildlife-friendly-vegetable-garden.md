@@ -1,5 +1,5 @@
 ---
-title: From Rubbish Tip to Wildlife-friendly Vegetable Garden
+title: From Rubbish Tip to Wildlife-Friendly Vegetable Garden
 who: Residents of Paulton
 location: "Somerset "
 images:
