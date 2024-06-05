@@ -8,9 +8,16 @@ image:
   src: /images/uploads/image-copyright-ben-hall-2020vision-2018.jpg
   alt: Photo of houses surrounded by trees.
   credit: Image copyright Ben Hall / 2020Vision 2018
+video:
+  id: JET0xhM9SMU
+  title: ""
+  description: "In this video, we explain how you can have your say on local
+    planning developments. "
 relatedGuides:
   - Speaking to Councils, Councillors and People in Authority
   - All About Councils and Local Authorities
+relatedStories:
+  - Investigating the Impact of a Housing Development on Local Wildlife
 customCall: Have you ever commented on a local planning development?
 ---
 ## Housing, people and nature
