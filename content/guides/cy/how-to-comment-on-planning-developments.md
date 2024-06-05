@@ -14,6 +14,8 @@ video:
 relatedGuides:
   - Speaking to Councils, Councillors and People in Authority
   - All About Councils and Local Authorities
+relatedStories:
+  - Investigating the Impact of a Housing Development on Local Wildlife
 customCall: Ydych chi wedi gwneud sylw ar ddatblygiad cynllunio lleol erioed?
 ---
 ### Tai, pobl a byd natur
