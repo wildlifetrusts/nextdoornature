@@ -9,6 +9,9 @@ image:
   alt: Planting wildlife-friendly plants at the Langriggs; Cumbernauld; overcast
     with occasional drizzle; afternoon; 26.06.2011
   credit: Image copyright Katrina Martin/2020VISION
+video:
+  id: MjW5Ccrkrm0
+  description: "This video explains how you can claim Gift Aid as a charity. "
 relatedGuides:
   - Types of Community Group (England and Wales)
   - Should our Group be Constituted?

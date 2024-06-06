@@ -8,7 +8,8 @@ image:
   alt: Plannu planhigion sy'n gyfeillgar i fywyd gwyllt yn y Langriggs;
     Cumbernauld; cymylog gyda glaw mân nawr ac yn y man; prynhawn; 26.06.2011
   credit: Image copyright Katrina Martin/2020VISION
-video: null
+video:
+  id: MjW5Ccrkrm0
 relatedGuides:
   - Types of Community Group (England and Wales)
   - Should our Group be Constituted?
