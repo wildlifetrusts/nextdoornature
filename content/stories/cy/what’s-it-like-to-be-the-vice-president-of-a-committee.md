@@ -1,5 +1,5 @@
 ---
-title: "What’s it like to be the vice president of a committee? "
+title: "What’s It Like to be the Vice President of a Committee? "
 who: Marie and the Friends of Chances Park
 location: Carlisle
 images:
