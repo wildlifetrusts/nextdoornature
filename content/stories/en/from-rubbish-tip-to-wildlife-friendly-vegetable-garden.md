@@ -31,7 +31,7 @@ At the Red Lion Community Garden in Paulton, a group of passionate volunteers ar
 
 The project was supported by [Avon Wildlife Trust](https://www.avonwildlifetrust.org.uk/). After having many conversations with the community, the Trust invited residents of Paulton to the Red Lion Pub to solidify their ideas for a wildlife project in their village. 
 
-Residents shared their ideas for a community led wildlife project in their village and together we prioritised the idea to create a community garden behind the pub. A date was chosen and the first event was [publicised locally](https://nextdoornaturehub.org.uk/guides/how-to-write-a-press-release).
+Residents shared their ideas for a community led wildlife project in their village and together they prioritised the idea to create a community garden behind the pub. A date was chosen and the first event was [publicised locally](https://nextdoornaturehub.org.uk/guides/how-to-write-a-press-release).
 It became clear that other people in the area were interested in connecting with people and making the village a little bit greener.  
 
 One volunteer noted that there was interest around the village but a project like this had struggled to get off the ground. “It is really encouraging that so many people have turned up,” she said. “This is an opportunity to galvanise all that interest in one single project.”
