@@ -1,6 +1,7 @@
 ---
 title: "The Beehive Centre: Building a vegetable and wildlife garden for the
   community "
+who: The Beehive Centre
 location: The Beehive Centre
 postcode: Bristol
 images:
