@@ -1,5 +1,5 @@
 ---
-title: A wildlife haven in central Southampton
+title: A wildlife refuge in central Southampton
 who: Bedford Place and Polygon Residents Association
 location: Southampton
 images:
