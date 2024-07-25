@@ -6,6 +6,7 @@ images:
   - src: /images/uploads/polygon-orchard-whole.jpg
     alt: "Polygon Orchard with path and plants pictured "
     credit: Image Copyright / Jill Doubleday HIWWT
+    caption: ""
   - src: /images/uploads/emily-digging-up-the-tcl.jpg
     alt: Volunteer digs in the community garden
     credit: Image Copyright / Jill Doubleday HIWWT

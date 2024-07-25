@@ -2,6 +2,11 @@
 title: A wildlife refuge in central Southampton
 who: Bedford Place and Polygon Residents Association
 location: Southampton
+images:
+  - src: /images/uploads/polygon-orchard-whole.jpg
+    alt: "Polygon Orchard with path and plants pictured "
+    credit: Image Copyright / Jill Doubleday HIWWT
+    caption: ""
 summary: "A group of residents have created a welcome garden to attract local
   people to the Rollesbrook Greenway, a site of heritage and ecological
   importance. "
