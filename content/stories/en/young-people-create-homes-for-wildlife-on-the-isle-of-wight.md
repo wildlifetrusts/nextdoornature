@@ -41,13 +41,19 @@ It offered participants the opportunity to build their confidence through team c
 
 Under the guidance of Trust staff, the young people worked on:  
 
-•	Digging and creating a new [wildlife pond](https://www.wildlifetrusts.org/actions/how-create-mini-pond) 
-•	Building an enormous [bug hotel](https://www.wildlifetrusts.org/actions/how-build-bug-mansion), which was creatively named the ‘The Critz’\
+•	Digging and creating a new [wildlife pond](https://www.wildlifetrusts.org/actions/how-create-mini-pond)
+
+•	Building an enormous [bug hotel](https://www.wildlifetrusts.org/actions/how-build-bug-mansion), which was creatively named the ‘The Critz’
+
 •	Building a stumpery providing habitats for insect larvae such as stag beetles 
-•	Creating a hibernaculum – a winter refuge for hibernating reptiles and amphibians 
-•	Assembling hazel dormouse boxes. 
+
+•	Creating a hibernaculum – a winter refuge for hibernating reptiles and amphibians
+
+•	Assembling hazel dormouse boxes
+
 •	Building a bespoke trough planter planted with native herbs for pollinators 
-•	Designing and illustrating some beautiful signage for each of the nature stations 
+
+•	Designing and illustrating some beautiful signage for each of the nature stations
 
 Natural materials, timber and logs from the reserve and recycled materials were used as much as possible. 
 
