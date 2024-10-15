@@ -1,5 +1,5 @@
 ---
-title: Quick small changes anyone can do to help nature
+title: Short snippets about people helping nature
 who: Everyone can do one of these things
 location: All around the UK
 images:
@@ -19,6 +19,8 @@ I have created a wildlife hedge in my garden which is 20 ft long. It includes lo
 My main reason for sending this is to give a hint for helping insects. If, like me, you use a garden recycle bin, after filling it leave a stick under the lip of the bin, in order for any insects trapped in the bin to escape.
 
 I have to use my bin for conifers, which won't compost, and I have a large conifer hedge which I trim every year. You would be amazed at the number of ladybirds that come out of my bin. ***– Dave***
+
+Most of Wolverton's housing stock is Victorian and has been populated by swifts for many years. As in the rest of the UK the population has dropped significantly. In 2020 we set up a Facebook group and within 2 years had, through the support of residents, installed 150 swift boxes and 30 house martin cups. In the meantime we've learned so much about these amazing birds, had some experience with rehabbing and shared with local communities. There are now 4 similar facebook groups across Milton Keynes with similar aims and superb grant support from town/parish councils. **\- Paul**
 
 When we moved into our new house, the garden was eerily quiet—no buzzing insects or chirping birds. So, we decided to liven things up. We set up bird feeders, crafted two ponds (one in the ground and another in a barrel), and planted flowers that attract pollinators. After a few years, our efforts paid off. Now, the garden buzzes with bird songs, welcomes swallows yearly, and is a hive of activity in warmer months.
 
